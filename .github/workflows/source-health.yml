@@ -1,20 +1,23 @@
 name: Source health
 
 on:
-  schedule:
-    - cron: "15 20 * * *"
   workflow_dispatch:
+  schedule:
+    - cron: "47 1 * * *"
 
 permissions:
   contents: read
 
 jobs:
-  source-health:
+  health:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Check public source routes
-        run: python scripts/source_health.py
+      - name: Verify public upstream input routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://raw.githubusercontent.com/ElectIndex/26_us_forecast_data/main"
+          for file in races.csv historical.csv gcb_polls.csv race_polls.csv; do
+            curl --fail --silent --show-error --location --max-time 30 "$base/$file" >/dev/null
+            echo "healthy: $file"
+          done
