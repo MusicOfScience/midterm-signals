@@ -7,5 +7,5 @@
   // and makes aria-label prohibited under the ARIA role model.
   patched=patched.replace('class="race-grid" role="list"','class="race-grid"').replaceAll(' role="listitem" aria-label=',' aria-label=');
   const blob=URL.createObjectURL(new Blob([patched],{type:'text/javascript'}));
-  try{await import(blob)}finally{URL.revokeObjectURL(blob);delete globalThis.__MIDTERM_CORE__}
+  try{await import(blob);await import('/enhancements.mjs')}finally{URL.revokeObjectURL(blob);delete globalThis.__MIDTERM_CORE__}
 })().catch(err=>{console.error(err);const main=document.querySelector('#content');if(main)main.innerHTML='<div class="error-state"><h2>Application failed to load</h2><p>The static shell is available, but an interactive module could not be loaded. Production data remain available from the Data links.</p></div>'});
