@@ -1,348 +1,287 @@
 #!/usr/bin/env python3
-"""Build the deterministic MIDTERM SIGNALS v0.1 forecast snapshot.
+"""Build MIDTERM SIGNALS' 2026 House/Senate baseline forecast.
 
-The script consumes checked-in, dated observations. It performs no network access and
-never silently substitutes missing observations. Output is deterministic for the same
-inputs, model version and seed.
+This model deliberately consumes *inputs*, not another forecaster's probabilities.
+The upstream data mirror is ElectIndex's public 2026 input repository.  We pin
+all reads to one upstream git SHA, then apply our own documented transformation,
+poll aggregation and Monte Carlo simulation.
 """
 from __future__ import annotations
 
+import csv
 import hashlib
+import io
 import json
 import math
 import random
+import statistics
+import urllib.request
+from collections import defaultdict
+from datetime import date, datetime, timezone
 from pathlib import Path
-from statistics import NormalDist
 
 ROOT = Path(__file__).resolve().parents[1]
-SNAPSHOT = "2026-10-12"
-MODEL_VERSION = "0.1.0"
-SEED = 20261012
-SIMULATIONS = 100_000
-
-INPUT_DIR = ROOT / "data" / "raw" / SNAPSHOT
-REF_DIR = ROOT / "data" / "reference"
-OUT_DIR = ROOT / "public" / "data"
-HISTORY_DIR = OUT_DIR / "history"
-
-RATING_PRIORS = {
-    "Solid D": 0.995,
-    "Likely D": 0.90,
-    "Lean D": 0.70,
-    "Toss Up": 0.50,
-    "Lean R": 0.30,
-    "Likely R": 0.10,
-    "Solid R": 0.005,
-}
-
-NORMAL = NormalDist()
+OUT = ROOT / "public" / "data" / "forecast.json"
+STATUS = ROOT / "public" / "data" / "status.json"
+HIST = ROOT / "public" / "data" / "history"
+UPSTREAM_REPO = "ElectIndex/26_us_forecast_data"
+API_COMMIT = f"https://api.github.com/repos/{UPSTREAM_REPO}/commits/main"
+RAW = "https://raw.githubusercontent.com/{repo}/{sha}/{name}"
+USER_AGENT = "MIDTERM-SIGNALS/0.2 (+https://github.com/MusicOfScience/midterm-signals)"
+ELECTION_DATE = date(2026, 11, 3)
+NAT_PRES = {2016: 2.09, 2020: 4.46, 2024: -1.47}
+CURRENT_SENATE = {"DEM": 47, "REP": 53}
 
 
-def read_json(path: Path):
-    with path.open("r", encoding="utf-8") as fh:
-        return json.load(fh)
+def fetch(url: str) -> bytes:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(req, timeout=45) as r:
+        return r.read()
 
 
-def canonical_hash(path: Path) -> str:
-    data = json.dumps(read_json(path), sort_keys=True, separators=(",", ":"), ensure_ascii=False)
-    return hashlib.sha256(data.encode("utf-8")).hexdigest()
+def csv_rows(data: bytes) -> list[dict[str, str]]:
+    return list(csv.DictReader(io.StringIO(data.decode("utf-8-sig"))))
 
 
-def clamp(p: float, lo: float = 0.005, hi: float = 0.995) -> float:
-    return max(lo, min(hi, p))
+def f(row: dict[str, str], key: str, default: float = 0.0) -> float:
+    try:
+        v = row.get(key, "")
+        return float(v) if v not in (None, "") else default
+    except (TypeError, ValueError):
+        return default
 
 
-def logit(p: float) -> float:
-    p = clamp(p)
-    return math.log(p / (1.0 - p))
+def parse_day(s: str) -> date | None:
+    try:
+        return date.fromisoformat(s)
+    except Exception:
+        return None
 
 
-def inv_logit(x: float) -> float:
-    return 1.0 / (1.0 + math.exp(-x))
+def normal_cdf(z: float) -> float:
+    return 0.5 * (1.0 + math.erf(z / math.sqrt(2.0)))
 
 
-def normal_cdf(x: float) -> float:
-    return 0.5 * (1.0 + math.erf(x / math.sqrt(2.0)))
+def clamp(x: float, lo: float, hi: float) -> float:
+    return max(lo, min(hi, x))
 
 
-def quantile(sorted_values: list[int], q: float) -> int:
-    if not sorted_values:
-        raise ValueError("empty distribution")
-    i = int(round((len(sorted_values) - 1) * q))
-    return sorted_values[max(0, min(len(sorted_values) - 1, i))]
+def surname(name: str) -> str:
+    if not name or name.startswith("("):
+        return ""
+    bits = [b.strip(".,'") for b in name.lower().replace("-", " ").split()]
+    return bits[-1] if bits else ""
 
 
-def ols(xs: list[float], ys: list[float]) -> tuple[float, float, float]:
-    if len(xs) != len(ys) or len(xs) < 3:
-        raise ValueError("insufficient calibration sample")
-    xbar = sum(xs) / len(xs)
-    ybar = sum(ys) / len(ys)
-    sxx = sum((x - xbar) ** 2 for x in xs)
-    if sxx == 0:
-        raise ValueError("zero calibration variance")
-    beta = sum((x - xbar) * (y - ybar) for x, y in zip(xs, ys)) / sxx
-    alpha = ybar - beta * xbar
-    residuals = [y - (alpha + beta * x) for x, y in zip(xs, ys)]
-    sigma = math.sqrt(sum(r * r for r in residuals) / max(1, len(xs) - 2))
-    return alpha, beta, sigma
+def candidate_match(poll_name: str, race_name: str) -> bool:
+    if not poll_name or not race_name:
+        return False
+    p = poll_name.lower()
+    if "generic" in p:
+        return True
+    s = surname(race_name)
+    return bool(s and s in p)
 
 
-def senate_race_probability(row: dict) -> dict:
-    rating = row["rating"]
-    prior = RATING_PRIORS[rating]
-    margin = row.get("dem_poll_margin")
-    n = int(row.get("poll_count") or 0)
+def poll_weight(row: dict[str, str], latest: date, half_life: float) -> float:
+    d = parse_day(row.get("end_date", ""))
+    if not d:
+        return 0.0
+    age = max(0, (latest - d).days)
+    rating = clamp(f(row, "rating", 1.3), 0.75, 3.0)
+    n = max(250.0, f(row, "n", 800.0))
+    sponsor = row.get("lean", "").strip().upper()
+    sponsor_mult = 0.68 if sponsor in {"D", "R"} else 1.0
+    return math.exp(-math.log(2) * age / half_life) * (rating / 1.5) ** 1.15 * math.sqrt(n / 1000.0) * sponsor_mult
 
-    # Nebraska has an independent, not a Democratic, principal challenger.
-    # We estimate the non-Republican upset chance but assign zero Democratic-
-    # control credit until a caucus/organization commitment is documented.
-    is_ne_independent = row["state"] == "NE" and not row.get("dem_candidate")
 
-    if margin is None:
-        race_p = prior
-        poll_p = None
-        weight = 0.0
+def aggregate_gcb(rows: list[dict[str, str]], asof: date) -> tuple[float, list[dict], int]:
+    usable = []
+    for r in rows:
+        d = parse_day(r.get("end_date", ""))
+        if d and d <= asof and (asof - d).days <= 35:
+            usable.append(r)
+    if not usable:
+        raise RuntimeError("No recent generic-ballot polls")
+    latest = max(parse_day(r["end_date"]) for r in usable if parse_day(r["end_date"]))
+    num = den = 0.0
+    for r in usable:
+        w = poll_weight(r, latest, 11.0)
+        num += w * (f(r, "dem") - f(r, "rep"))
+        den += w
+    avg = num / den
+    recent = sorted(usable, key=lambda r: r["end_date"], reverse=True)[:14]
+    shown = [{
+        "pollster": r["pollster"], "end_date": r["end_date"],
+        "dem": round(f(r, "dem"), 1), "rep": round(f(r, "rep"), 1),
+        "margin": round(f(r, "dem") - f(r, "rep"), 1),
+        "n": int(f(r, "n", 0)), "rating": round(f(r, "rating", 0), 1),
+        "sponsor_lean": r.get("lean", "") or None,
+    } for r in recent]
+    return avg, shown, len(usable)
+
+
+def race_poll_average(rows: list[dict[str, str]], race: dict[str, str], asof: date) -> tuple[float | None, float, int, str | None]:
+    code = race["race_code"]
+    chosen = []
+    for r in rows:
+        if r.get("race_code") != code:
+            continue
+        d = parse_day(r.get("end_date", ""))
+        if not d or d > asof or (asof - d).days > 55:
+            continue
+        if race.get("dem_name") and not candidate_match(r.get("dem_name", ""), race.get("dem_name", "")):
+            continue
+        if race.get("rep_name") and not candidate_match(r.get("rep_name", ""), race.get("rep_name", "")):
+            continue
+        chosen.append(r)
+    if not chosen:
+        return None, 0.0, 0, None
+    latest = max(parse_day(r["end_date"]) for r in chosen if parse_day(r["end_date"]))
+    num = den = 0.0
+    for r in chosen:
+        w = poll_weight(r, latest, 13.0)
+        num += w * f(r, "margin")
+        den += w
+    if not den:
+        return None, 0.0, 0, None
+    avg = num / den
+    blend = clamp(0.27 * math.sqrt(len(chosen)), 0.20, 0.86)
+    freshness = math.exp(-max(0, (asof - latest).days) / 28.0)
+    blend *= 0.75 + 0.25 * freshness
+    return avg, blend, len(chosen), latest.isoformat()
+
+
+def rating(p: float) -> str:
+    q = max(p, 1 - p)
+    side = "D" if p >= 0.5 else "R"
+    if q < 0.55:
+        return "Toss-up"
+    if q < 0.70:
+        return f"Lean {side}"
+    if q < 0.90:
+        return f"Likely {side}"
+    return f"Safe {side}"
+
+
+def relative_lean(h: dict[str, str]) -> float:
+    m16 = f(h, "margin_2016") - NAT_PRES[2016]
+    m20 = f(h, "margin_2020") - NAT_PRES[2020]
+    m24 = f(h, "margin_2024") - NAT_PRES[2024]
+    return 0.05 * m16 + 0.20 * m20 + 0.75 * m24
+
+
+def race_model(race: dict[str, str], hist: dict[str, dict[str, str]], poll_rows: list[dict[str, str]], gcb: float, asof: date) -> dict:
+    code = race["race_code"]
+    h = hist.get(code)
+    if not h:
+        h = hist.get(race.get("state", ""))
+    if not h:
+        raise RuntimeError(f"No historical baseline for {code}")
+    lean = relative_lean(h)
+    inc = race.get("incumbent_party", "").upper()
+    inc_adj = 1.0 if inc == "DEM" else -1.0 if inc == "REP" else 0.0
+    if race.get("race_type") == "senate":
+        inc_adj *= 1.15
+    prior = lean + gcb + inc_adj
+    poll_margin, pweight, pcount, plast = race_poll_average(poll_rows, race, asof)
+    margin = prior if poll_margin is None else (1 - pweight) * prior + pweight * poll_margin
+    dem_name = race.get("dem_name", "")
+    rep_name = race.get("rep_name", "")
+    ind_name = race.get("ind_name", "")
+    ind_caucus = race.get("ind_caucus", "").upper()
+    aligned_ind = bool(ind_name and ind_caucus == "DEM" and (not dem_name or dem_name.startswith("(No Democrat)")))
+    dem_display = ind_name if aligned_ind else dem_name
+    same_party = race.get("same_party", "").upper()
+    if same_party == "DEM":
+        p_dem = 0.999; margin = 50.0
+    elif same_party == "REP":
+        p_dem = 0.001; margin = -50.0
+    elif (not dem_name or dem_name.startswith("(No Democrat)")) and not aligned_ind:
+        p_dem = 0.001; margin = min(margin, -35.0)
+    elif not rep_name or rep_name.startswith("(No Republican)"):
+        p_dem = 0.999; margin = max(margin, 35.0)
     else:
-        # 5-point effective margin error is intentionally wider than a single
-        # poll's sampling error and represents aggregate/model uncertainty.
-        poll_p = clamp(normal_cdf(float(margin) / 5.0))
-        # Poll evidence gains weight slowly and is capped; ratings and polling
-        # are deliberately not treated as independent certainty machines.
-        weight = min(0.65, 0.18 + 0.10 * math.log1p(max(n, 0)))
-        race_p = inv_logit((1.0 - weight) * logit(prior) + weight * logit(poll_p))
+        base_sigma = 6.3 if race.get("race_type") == "house" else 7.2
+        sigma = max(3.1, base_sigma * (1 - 0.42 * pweight))
+        p_dem = clamp(normal_cdf(margin / sigma), 0.001, 0.999)
+    dshare = clamp(50 + margin / 2, 1.0, 99.0)
+    return {
+        "race_code": code, "race_type": race["race_type"], "state": race.get("state"), "district": race.get("district"),
+        "dem_candidate": dem_display or None, "rep_candidate": rep_name or None, "incumbent_party": inc or None,
+        "seat_holder": race.get("seat_holder") or None, "dem_probability": round(p_dem, 4), "rep_probability": round(1-p_dem, 4),
+        "forecast_margin_d_minus_r": round(margin, 2), "dem_two_party_vote": round(dshare, 1), "rep_two_party_vote": round(100-dshare, 1),
+        "rating": rating(p_dem), "relative_partisan_lean_d_minus_r": round(lean, 2), "prior_margin": round(prior, 2),
+        "poll_average_margin": round(poll_margin, 2) if poll_margin is not None else None, "poll_weight": round(pweight, 3),
+        "poll_count": pcount, "latest_race_poll": plast, "presidential_margin_2024": round(f(h, "margin_2024"), 2),
+        "aligned_independent": aligned_ind, "rcv": race.get("rcv", "").lower() == "true", "three_way": race.get("threeway", "").lower() == "true",
+        "same_party": same_party or None,
+    }
 
-    race_p = clamp(race_p)
-    control_p = 0.0 if is_ne_independent else race_p
-    result = dict(row)
-    result["rating_prior_dem_or_non_r"] = round(prior, 4)
-    result["poll_probability_dem_or_non_r"] = None if poll_p is None else round(poll_p, 4)
-    result["poll_weight"] = round(weight, 4)
-    result["forecast_probability_dem_or_non_r"] = round(race_p, 4)
-    result["democratic_control_credit_probability"] = round(control_p, 4)
-    result["probability_type"] = "non_republican_win" if is_ne_independent else "democratic_win"
-    return result
+
+def quantile(vals: list[int], q: float) -> int:
+    vals = sorted(vals)
+    if not vals: return 0
+    return vals[int(round((len(vals)-1)*q))]
+
+
+def simulate(house: list[dict], senate: list[dict], senate_up_holders: dict[str, int], n: int = 30000) -> tuple[dict, dict]:
+    rng = random.Random(20261103)
+    house_counts=[]; senate_counts=[]; house_control=senate_control=0
+    fixed_d = CURRENT_SENATE["DEM"] - senate_up_holders.get("DEM", 0)
+    for _ in range(n):
+        national_house=rng.gauss(0,2.7); national_senate=rng.gauss(0,2.4)
+        hd=sum(1 for r in house if r["forecast_margin_d_minus_r"] + national_house + rng.gauss(0,4.7) > 0)
+        sd=fixed_d
+        for r in senate:
+            m=r["forecast_margin_d_minus_r"] + national_senate + rng.gauss(0,5.0)
+            if r.get("same_party") == "DEM": sd += 1
+            elif r.get("same_party") == "REP": pass
+            elif m > 0: sd += 1
+        house_counts.append(hd); senate_counts.append(sd)
+        house_control += hd >= 218; senate_control += sd >= 51
+    hmean=statistics.fmean(house_counts); smean=statistics.fmean(senate_counts)
+    return ({"dem_control_probability":round(house_control/n,4),"rep_control_probability":round(1-house_control/n,4),"expected_dem_seats":round(hmean,1),"expected_rep_seats":round(435-hmean,1),"dem_seats_80_interval":[quantile(house_counts,.10),quantile(house_counts,.90)],"simulations":n,"control_threshold_dem":218},
+            {"dem_control_probability":round(senate_control/n,4),"rep_control_probability":round(1-senate_control/n,4),"expected_dem_seats":round(smean,1),"expected_rep_seats":round(100-smean,1),"dem_seats_80_interval":[quantile(senate_counts,.10),quantile(senate_counts,.90)],"simulations":n,"control_threshold_dem":51,"fixed_not_up_dem_seats":fixed_d})
 
 
 def main() -> None:
-    national_path = INPUT_DIR / "national.json"
-    house_path = INPUT_DIR / "house_ratings.json"
-    senate_path = INPUT_DIR / "senate.json"
-    calibration_path = REF_DIR / "house_midterm_calibration.json"
+    now=datetime.now(timezone.utc); asof=min(now.date(),ELECTION_DATE)
+    commit_meta=json.loads(fetch(API_COMMIT)); sha=commit_meta["sha"]
+    names=["races.csv","historical.csv","gcb_polls.csv","race_polls.csv"]
+    raw={name:fetch(RAW.format(repo=UPSTREAM_REPO,sha=sha,name=name)) for name in names}
+    inputs_hash=hashlib.sha256(b"".join(raw[n] for n in names)).hexdigest()
+    races=csv_rows(raw["races.csv"]); historical=csv_rows(raw["historical.csv"]); gcbs=csv_rows(raw["gcb_polls.csv"]); race_polls=csv_rows(raw["race_polls.csv"])
+    hist={r["code"]:r for r in historical}
+    gcb,recent_gcb,gcb_count=aggregate_gcb(gcbs,asof)
+    target=[r for r in races if r.get("race_type") in {"house","senate"}]
+    modeled=[race_model(r,hist,race_polls,gcb,asof) for r in target]
+    house=[r for r in modeled if r["race_type"]=="house"]; senate=[r for r in modeled if r["race_type"]=="senate"]
+    if len(house)!=435: raise RuntimeError(f"Expected 435 House races, got {len(house)}")
+    if len(senate)<33: raise RuntimeError(f"Expected at least 33 Senate races, got {len(senate)}")
+    senate_up_holders=defaultdict(int)
+    for r in races:
+        if r.get("race_type")=="senate" and r.get("seat_holder") in {"DEM","REP"}: senate_up_holders[r["seat_holder"]]+=1
+    hsum,ssum=simulate(house,senate,dict(senate_up_holders))
+    all_competitive=sorted(modeled,key=lambda r:abs(r["dem_probability"]-.5))
+    tipping=[r for r in all_competitive if r["race_type"]=="house"][:15]
+    sen_battles=[r for r in all_competitive if r["race_type"]=="senate"][:12]
+    previous=None
+    if OUT.exists():
+        try: previous=json.loads(OUT.read_text())
+        except Exception: previous=None
+    deltas=None
+    if previous and previous.get("summary"):
+        try:
+            deltas={"house_expected_dem":round(hsum["expected_dem_seats"]-previous["summary"]["house"]["expected_dem_seats"],1),"senate_expected_dem":round(ssum["expected_dem_seats"]-previous["summary"]["senate"]["expected_dem_seats"],1),"generic_ballot_margin":round(gcb-previous["national_environment"]["generic_ballot_d_minus_r"],1)}
+        except Exception: deltas=None
+    out={"schema_version":"0.2.0","model":"MIDTERM SIGNALS baseline-v0.2","production_forecast":"published","generated_at":now.isoformat().replace("+00:00","Z"),"election_date":ELECTION_DATE.isoformat(),"days_to_election":max(0,(ELECTION_DATE-now.date()).days),"summary":{"house":hsum,"senate":ssum},"national_environment":{"generic_ballot_d_minus_r":round(gcb,2),"polls_in_35_day_window":gcb_count,"recent_polls":recent_gcb,"historical_2024_presidential_d_minus_r":NAT_PRES[2024]},"tipping_point_house":tipping,"senate_battlegrounds":sen_battles,"races":modeled,"change_since_previous_run":deltas,"methodology":{"partisan_lean":"5% 2016 + 20% 2020 + 75% 2024 district/state presidential margin, each centred on that year's national D-R margin","national_environment":"35-day generic-ballot poll average with exponential recency decay, sample-size and pollster-quality weighting; partisan-sponsored polls downweighted","incumbency":"+1.0 D / -1.0 R House; 1.15x in Senate","race_polling":"nominee-matched polls from the last 55 days blended with the prior; weight rises sub-linearly with poll count and is capped","probabilities":"normal-error race model plus 30,000 correlated Monte Carlo chamber simulations","qualitative_news":"not an input to numerical probabilities","senate_control":"Democratic caucus requires 51 seats because the vice president is Republican"},"provenance":{"upstream_input_mirror":UPSTREAM_REPO,"upstream_commit":sha,"input_sha256":inputs_hash,"files":names,"note":"MIDTERM SIGNALS consumes factual/curated inputs from the upstream data repository, not its forecast outputs. Numerical transformations and simulations are performed here."},"limitations":["This is a transparent baseline model, not a claim of certainty.","Candidate-quality effects beyond incumbency are not yet separately estimated.","Third-party and ranked-choice transfer behaviour is simplified in the chamber model.","Race polls are used only when the poll matchup matches the current major-party nominees; missing polling remains missing.","The model can be wrong together across many races; correlated national error is therefore simulated explicitly."]}
+    OUT.parent.mkdir(parents=True,exist_ok=True); HIST.mkdir(parents=True,exist_ok=True)
+    text=json.dumps(out,indent=2)+"\n"; OUT.write_text(text)
+    STATUS.write_text(json.dumps({"schema_version":2,"project":"MIDTERM SIGNALS","election_date":ELECTION_DATE.isoformat(),"generated_at":out["generated_at"],"production_forecast":"published","publication_label":"LIVE BASELINE · MODEL v0.2","model":out["model"],"simulations":out["summary"]["house"]["simulations"],"house_all_435_accounted_for":len(house)==435,"senate_contests_accounted_for":len(senate),"upstream_commit":sha,"input_sha256":inputs_hash,"qualitative_news_changes_probabilities":False,"limitations":out["limitations"]},indent=2)+"\n")
+    stamp=now.strftime("%Y-%m-%dT%H%M%SZ"); (HIST/f"{stamp}.json").write_text(text)
+    snapshots=sorted([x.name for x in HIST.glob("*.json") if x.name!="index.json"],reverse=True)
+    (HIST/"index.json").write_text(json.dumps({"snapshots":snapshots[:120]},indent=2)+"\n")
+    print(f"Built {len(house)} House + {len(senate)} Senate races; GCB D-R {gcb:+.2f}; upstream {sha[:10]}")
 
-    national = read_json(national_path)
-    house = read_json(house_path)
-    senate = read_json(senate_path)
-    calibration = read_json(calibration_path)
-
-    if national["snapshot_date"] != SNAPSHOT or senate["snapshot_date"] != SNAPSHOT:
-        raise ValueError("snapshot date mismatch")
-    if sum(house["rating_counts"].values()) != 435:
-        raise ValueError("House rating counts do not sum to 435")
-    if len(house["competitive_races"]) != 76:
-        raise ValueError("expected 76 non-Solid House races in current snapshot")
-    if len(senate["races"]) != 35:
-        raise ValueError("Senate contest universe must contain 35 races")
-
-    # HOUSE
-    xs = [float(x["dem_margin"]) for x in calibration["elections"]]
-    ys = [float(x["dem_seats"]) for x in calibration["elections"]]
-    alpha, beta, residual_sigma = ols(xs, ys)
-
-    gb_margin = float(national["generic_ballot"]["dem_margin"])
-    rating_map_expected = sum(
-        int(house["rating_counts"][rating]) * RATING_PRIORS[rating]
-        for rating in RATING_PRIORS
-    )
-
-    # Predeclared v0.1 blend. The national vote/seat leg is 65%; the current
-    # categorical map prior is 35%. The blend is documented and versioned.
-    house_weights = {"national_vote_seat_leg": 0.65, "current_map_prior_leg": 0.35}
-    generic_margin_sigma = 3.0
-    map_prior_sigma_seats = 8.0
-
-    # SENATE
-    senate_races = [senate_race_probability(row) for row in senate["races"]]
-    senate_control_ps = {
-        row["state"]: float(row["democratic_control_credit_probability"])
-        for row in senate_races
-    }
-
-    # JOINT MONTE CARLO
-    # One shared national latent shock ties House vote environment and Senate
-    # race errors together. The Senate latent correlation is deliberately
-    # modest (rho=.20); race-specific errors remain dominant.
-    rho = 0.20
-    rng = random.Random(SEED)
-    house_seats: list[int] = []
-    senate_dem_caucus_seats: list[int] = []
-    joint = {"dem_both": 0, "dem_house_rep_senate": 0, "rep_house_dem_senate": 0, "rep_both": 0}
-
-    for _ in range(SIMULATIONS):
-        shared = rng.gauss(0.0, 1.0)
-
-        simulated_margin = gb_margin + generic_margin_sigma * shared
-        national_leg = alpha + beta * simulated_margin + rng.gauss(0.0, residual_sigma)
-        map_leg = rng.gauss(rating_map_expected, map_prior_sigma_seats)
-        d_house = round(
-            house_weights["national_vote_seat_leg"] * national_leg
-            + house_weights["current_map_prior_leg"] * map_leg
-        )
-        d_house = max(0, min(435, d_house))
-        house_seats.append(d_house)
-
-        d_up = 0
-        for state, p in senate_control_ps.items():
-            if p <= 0.0:
-                continue
-            if p >= 1.0:
-                d_up += 1
-                continue
-            threshold = NORMAL.inv_cdf(1.0 - p)
-            score = math.sqrt(rho) * shared + math.sqrt(1.0 - rho) * rng.gauss(0.0, 1.0)
-            if score > threshold:
-                d_up += 1
-
-        d_senate = int(senate["not_up"]["democratic_caucus"]) + d_up
-        senate_dem_caucus_seats.append(d_senate)
-
-        dh = d_house >= 218
-        ds = d_senate >= 51
-        if dh and ds:
-            joint["dem_both"] += 1
-        elif dh and not ds:
-            joint["dem_house_rep_senate"] += 1
-        elif (not dh) and ds:
-            joint["rep_house_dem_senate"] += 1
-        else:
-            joint["rep_both"] += 1
-
-    house_sorted = sorted(house_seats)
-    senate_sorted = sorted(senate_dem_caucus_seats)
-
-    house_expected = sum(house_seats) / SIMULATIONS
-    senate_expected = sum(senate_dem_caucus_seats) / SIMULATIONS
-    house_d_control = sum(v >= 218 for v in house_seats) / SIMULATIONS
-    senate_d_control = sum(v >= 51 for v in senate_dem_caucus_seats) / SIMULATIONS
-
-    house_detail = []
-    for row in house["competitive_races"]:
-        house_detail.append({
-            "race_id": row["race_id"],
-            "rating": row["rating"],
-            "map_prior_probability_dem": RATING_PRIORS[row["rating"]],
-            "probability_type": "categorical_map_prior",
-        })
-    house_detail.sort(key=lambda r: (abs(r["map_prior_probability_dem"] - 0.5), r["race_id"]))
-    senate_races.sort(key=lambda r: (abs(r["forecast_probability_dem_or_non_r"] - 0.5), r["state"]))
-
-    inputs = {
-        "national": canonical_hash(national_path),
-        "house_ratings": canonical_hash(house_path),
-        "senate": canonical_hash(senate_path),
-        "house_calibration": canonical_hash(calibration_path),
-    }
-
-    forecast = {
-        "schema_version": 1,
-        "model_version": MODEL_VERSION,
-        "publication_state": "published_provisional",
-        "as_of": SNAPSHOT,
-        "election_date": national["election_date"],
-        "seed": SEED,
-        "simulations": SIMULATIONS,
-        "input_sha256": inputs,
-        "national_environment": {
-            "generic_ballot": national["generic_ballot"],
-            "presidential_approval": national["presidential_approval"],
-        },
-        "house": {
-            "total_seats": 435,
-            "majority": 218,
-            "all_seats_accounted_for": True,
-            "expected_democratic_seats": round(house_expected, 2),
-            "expected_republican_seats": round(435 - house_expected, 2),
-            "median_democratic_seats": quantile(house_sorted, 0.50),
-            "democratic_control_probability": round(house_d_control, 4),
-            "republican_control_probability": round(1.0 - house_d_control, 4),
-            "interval_80_democratic_seats": [quantile(house_sorted, 0.10), quantile(house_sorted, 0.90)],
-            "interval_90_democratic_seats": [quantile(house_sorted, 0.05), quantile(house_sorted, 0.95)],
-            "rating_counts": house["rating_counts"],
-            "map_prior_expected_democratic_seats": round(rating_map_expected, 3),
-            "competitive_race_count": len(house_detail),
-            "solid_races_aggregated": house["rating_counts"]["Solid D"] + house["rating_counts"]["Solid R"],
-            "competitive_races": house_detail,
-            "national_vote_seat_model": {
-                "intercept": round(alpha, 6),
-                "slope_seats_per_dem_margin_point": round(beta, 6),
-                "residual_sigma_seats": round(residual_sigma, 6),
-                "generic_ballot_sigma_points": generic_margin_sigma,
-                "map_prior_sigma_seats": map_prior_sigma_seats,
-                "blend_weights": house_weights,
-                "historical_cycles": [r["year"] for r in calibration["elections"]],
-            },
-        },
-        "senate": {
-            "total_seats": 100,
-            "majority_for_democratic_control": 51,
-            "not_up": senate["not_up"],
-            "contested_seats": 35,
-            "expected_democratic_caucus_seats": round(senate_expected, 2),
-            "median_democratic_caucus_seats": quantile(senate_sorted, 0.50),
-            "democratic_control_probability": round(senate_d_control, 4),
-            "non_democratic_control_probability": round(1.0 - senate_d_control, 4),
-            "interval_80_democratic_caucus_seats": [quantile(senate_sorted, 0.10), quantile(senate_sorted, 0.90)],
-            "interval_90_democratic_caucus_seats": [quantile(senate_sorted, 0.05), quantile(senate_sorted, 0.95)],
-            "shared_race_error_correlation": rho,
-            "races": senate_races,
-            "control_note": "A 50-50 Senate is treated as Republican control because the Republican vice president breaks ties. Nebraska independent Dan Osborn is assigned no Democratic-control credit absent a documented caucus/organization commitment.",
-        },
-        "joint_control": {key: round(value / SIMULATIONS, 4) for key, value in joint.items()},
-        "source_registry": [
-            national["generic_ballot"]["source"],
-            national["presidential_approval"]["source"],
-            house["source"],
-            senate["rating_source"],
-            senate["poll_source"],
-            {"name": "U.S. House historical election statistics", "url": calibration["source_url"], "use": "House national vote-to-seat calibration"},
-        ],
-        "limitations": [
-            "Model v0.1 is a transparent provisional production baseline, not a final fully backtested district model.",
-            "House current-map information enters through categorical ratings; the 359 Solid seats are aggregated rather than republished as a proprietary all-seat table.",
-            "House race-level entries are categorical map priors, not individualized district polling forecasts.",
-            "Senate polling probabilities use a deliberately conservative effective margin-error scale and capped evidence weight.",
-            "Candidate quality, fundraising and qualitative campaign intelligence do not silently alter numerical probabilities.",
-            "Presidential approval is descriptive only in v0.1 and has a numerical coefficient of zero.",
-        ],
-    }
-
-    status = {
-        "schema_version": 1,
-        "project": "MIDTERM SIGNALS",
-        "election_date": national["election_date"],
-        "as_of": SNAPSHOT,
-        "production_forecast": "published",
-        "publication_label": "LIVE BASELINE · MODEL v0.1",
-        "model_version": MODEL_VERSION,
-        "simulations": SIMULATIONS,
-        "input_sha256": inputs,
-        "house_all_435_accounted_for": True,
-        "senate_all_35_contests_accounted_for": True,
-        "warnings": forecast["limitations"],
-    }
-
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    HISTORY_DIR.mkdir(parents=True, exist_ok=True)
-    forecast_text = json.dumps(forecast, indent=2, ensure_ascii=False) + "\n"
-    status_text = json.dumps(status, indent=2, ensure_ascii=False) + "\n"
-    (OUT_DIR / "forecast.json").write_text(forecast_text, encoding="utf-8")
-    (OUT_DIR / "status.json").write_text(status_text, encoding="utf-8")
-    (HISTORY_DIR / f"{SNAPSHOT}.json").write_text(forecast_text, encoding="utf-8")
-    (HISTORY_DIR / "index.json").write_text(
-        json.dumps({"schema_version": 1, "snapshots": [{"as_of": SNAPSHOT, "model_version": MODEL_VERSION, "path": f"./{SNAPSHOT}.json"}]}, indent=2) + "\n",
-        encoding="utf-8",
-    )
-    print(f"House D expected {house_expected:.2f}; P(control)={house_d_control:.3f}. Senate D-caucus expected {senate_expected:.2f}; P(control)={senate_d_control:.3f}.")
-
-
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()
