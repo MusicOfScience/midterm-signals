@@ -39,18 +39,26 @@ def _summary(snapshot: dict, filename: str) -> dict:
     }
 
 
+def _usable_summary(row: dict) -> bool:
+    return bool(row.get("file") and row.get("generated_at") and isinstance(row.get("house"), (int, float)) and isinstance(row.get("senate"), (int, float)))
+
+
 def merge_history_summaries(index_path: Path, current: dict, filename: str, limit: int = 240) -> list[dict]:
-    """Return compact summaries including current, newest first."""
+    """Return compact valid production summaries including current, newest first."""
     index = _read_json(index_path, {})
-    existing = [x for x in index.get("summaries", []) if isinstance(x, dict)]
+    existing = [x for x in index.get("summaries", []) if isinstance(x, dict) and _usable_summary(x)]
     if not existing:
         hist_dir = index_path.parent
         for path in sorted((p for p in hist_dir.glob("*.json") if p.name not in {"index.json", "race-series.json"}), reverse=True)[:36]:
             snap = _read_json(path, None)
             if isinstance(snap, dict):
-                existing.append(_summary(snap, path.name))
-    merged: dict[str, dict] = {x.get("file"): x for x in existing if x.get("file")}
-    merged[filename] = _summary(current, filename)
+                row = _summary(snap, path.name)
+                if _usable_summary(row):
+                    existing.append(row)
+    merged: dict[str, dict] = {x.get("file"): x for x in existing if _usable_summary(x)}
+    current_row = _summary(current, filename)
+    if _usable_summary(current_row):
+        merged[filename] = current_row
     rows = sorted(merged.values(), key=lambda x: (x.get("generated_at") or "", x.get("file") or ""), reverse=True)
     return rows[:limit]
 
@@ -60,7 +68,7 @@ def _seed_race_series(hist_dir: Path, max_snapshots: int = 36) -> dict[str, list
     paths = sorted((p for p in hist_dir.glob("*.json") if p.name not in {"index.json", "race-series.json"}), key=lambda p: p.name)[-max_snapshots:]
     for path in paths:
         snap = _read_json(path, None)
-        if not isinstance(snap, dict):
+        if not isinstance(snap, dict) or not snap.get("generated_at"):
             continue
         generated_at = snap.get("generated_at")
         for race in snap.get("races", []):
@@ -88,8 +96,8 @@ def write_history_artifacts(hist_dir: Path, current: dict, filename: str, summar
         "schema_version": 2,
         "generated_at": current.get("generated_at"),
         "snapshots": snapshots,
-        "summaries": summaries[:snapshot_limit],
-        "note": "Full snapshot files are immutable; summaries are derivative navigation metadata.",
+        "summaries": [x for x in summaries[:snapshot_limit] if _usable_summary(x)],
+        "note": "Full snapshot files are immutable; summaries are derivative navigation metadata. Legacy/non-production files may remain listed as snapshots but are excluded from the comparison summaries.",
     }
     (hist_dir / "index.json").write_text(json.dumps(index, indent=2) + "\n", encoding="utf-8")
 

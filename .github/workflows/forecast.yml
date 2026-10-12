@@ -5,7 +5,7 @@ on:
   schedule:
     - cron: "17 0,12 * * *"
   push:
-    branches: [main, prod-v1]
+    branches: [main]
     paths-ignore:
       - "public/data/forecast.json"
       - "public/data/status.json"
@@ -62,5 +62,5 @@ jobs:
             echo "No forecast change"
             exit 0
           fi
-          git commit -m "data: PROD v1.0 forecast refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -m "data: forecast refresh $(date -u +%Y-%m-%dT%H:%MZ)"
           git push

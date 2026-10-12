@@ -1,0 +1,12 @@
+/* Accessibility hardening for controls created by the base SPA.
+   Visible labels are preferable; these names are a redundant programmatic
+   fallback for compact toolbars where visible option text is already present. */
+const v1ControlLabels={
+  raceQ:'Search races or candidates',raceChamber:'Race chamber',raceState:'Race state',raceComp:'Race competitiveness',raceParty:'Seat holder or model-favoured flip',racePolling:'Race polling availability',
+  mapChamber:'Map chamber',mapLayer:'Map data layer',candidateQ:'Search candidates',candidateParty:'Candidate party',
+  scG:'Generic ballot shift in Democratic minus Republican points',scH:'House national swing in Democratic minus Republican points',scS:'Senate national swing in Democratic minus Republican points',
+  globalSearch:'Search MIDTERM SIGNALS'
+};
+function enhanceA11yLabels(){for(const [id,label] of Object.entries(v1ControlLabels)){const el=document.getElementById(id);if(el&&!el.getAttribute('aria-label')&&!el.getAttribute('aria-labelledby'))el.setAttribute('aria-label',label)}}
+new MutationObserver(enhanceA11yLabels).observe(document.body,{childList:true,subtree:true});
+enhanceA11yLabels();

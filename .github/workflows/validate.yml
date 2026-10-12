@@ -30,7 +30,7 @@ jobs:
 
   browser:
     runs-on: ubuntu-latest
-    timeout-minutes: 18
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -39,8 +39,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install browser test dependencies
-        run: npm install --no-save playwright@1.49.1 axe-core@4.10.2
+      - name: Install browser and quality dependencies
+        run: npm install --no-save playwright@1.64.0 axe-core@4.14.0 lighthouse@13.5.0
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
       - name: Start static production server
@@ -59,6 +59,10 @@ jobs:
           BASE_URL: http://127.0.0.1:4173
           TEST_ARTIFACT_DIR: test-artifacts
         run: node tests/e2e.mjs
+      - name: Lighthouse quality measurement
+        run: |
+          npx lighthouse http://127.0.0.1:4173/ --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=test-artifacts/lighthouse.json
+          node tests/lighthouse-threshold.mjs test-artifacts/lighthouse.json
       - name: Upload browser inspection artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -79,7 +83,7 @@ jobs:
         with:
           node-version: "22"
       - name: Install live browser dependencies
-        run: npm install --no-save playwright@1.49.1 axe-core@4.10.2
+        run: npm install --no-save playwright@1.64.0 axe-core@4.14.0
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
       - name: Resolve and wait for Cloudflare Pages URL
