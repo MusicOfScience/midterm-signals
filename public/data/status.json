@@ -1,18 +1,26 @@
 {
+  "schema_version": 1,
   "project": "MIDTERM SIGNALS",
   "election_date": "2026-11-03",
-  "production_forecast": "withheld",
-  "house": {
-    "majority": 218,
-    "state": "not_publishable"
+  "as_of": "2026-10-12",
+  "production_forecast": "published",
+  "publication_label": "LIVE BASELINE · MODEL v0.1",
+  "model_version": "0.1.0",
+  "simulations": 100000,
+  "input_sha256": {
+    "national": "01e5aab688bb2d07ed6b24a1c29f994eb744f52dff2817444ed6ea9c4ddf5e2f",
+    "house_ratings": "252b366c3f94b520cc6a13f55b864cea75fcc004b5288ffb06ceedcda9306450",
+    "senate": "f3d182cb07cee9e4710b96c83748de158ead95ac7f484e58cb4079d52c5671c0",
+    "house_calibration": "5961b1b85a847fcce96b07f70cdb2eb58fe2797ea91111ebfccb93b993024d42"
   },
-  "senate": {
-    "total_seats": 100,
-    "state": "not_publishable"
-  },
-  "generic_ballot": null,
-  "presidential_approval": null,
-  "race_roster_verified": false,
-  "external_forecasters_imported": false,
-  "reason": "Awaiting verified 2026 inputs, model-specification acceptance and complete historical replays."
+  "house_all_435_accounted_for": true,
+  "senate_all_35_contests_accounted_for": true,
+  "warnings": [
+    "Model v0.1 is a transparent provisional production baseline, not a final fully backtested district model.",
+    "House current-map information enters through categorical ratings; the 359 Solid seats are aggregated rather than republished as a proprietary all-seat table.",
+    "House race-level entries are categorical map priors, not individualized district polling forecasts.",
+    "Senate polling probabilities use a deliberately conservative effective margin-error scale and capped evidence weight.",
+    "Candidate quality, fundraising and qualitative campaign intelligence do not silently alter numerical probabilities.",
+    "Presidential approval is descriptive only in v0.1 and has a numerical coefficient of zero."
+  ]
 }

@@ -1,0 +1,1147 @@
+{
+  "schema_version": 1,
+  "model_version": "0.1.0",
+  "publication_state": "published_provisional",
+  "as_of": "2026-10-12",
+  "election_date": "2026-11-03",
+  "seed": 20261012,
+  "simulations": 100000,
+  "input_sha256": {
+    "national": "01e5aab688bb2d07ed6b24a1c29f994eb744f52dff2817444ed6ea9c4ddf5e2f",
+    "house_ratings": "252b366c3f94b520cc6a13f55b864cea75fcc004b5288ffb06ceedcda9306450",
+    "senate": "f3d182cb07cee9e4710b96c83748de158ead95ac7f484e58cb4079d52c5671c0",
+    "house_calibration": "5961b1b85a847fcce96b07f70cdb2eb58fe2797ea91111ebfccb93b993024d42"
+  },
+  "national_environment": {
+    "generic_ballot": {
+      "dem_pct": 49.3,
+      "rep_pct": 40.7,
+      "dem_margin": 8.7,
+      "polls_in_average": 11,
+      "polls_on_file": 526,
+      "source": {
+        "name": "Track the Vote",
+        "url": "https://www.trackthevote.net/generic-ballot",
+        "observed_date": "2026-10-12"
+      }
+    },
+    "presidential_approval": {
+      "net_approval": -22.5,
+      "model_coefficient": 0.0,
+      "source": {
+        "name": "Track the Vote",
+        "url": "https://www.trackthevote.net/",
+        "observed_date": "2026-10-12"
+      },
+      "note": "Descriptive only in model v0.1; it does not alter forecast probabilities."
+    }
+  },
+  "house": {
+    "total_seats": 435,
+    "majority": 218,
+    "all_seats_accounted_for": true,
+    "expected_democratic_seats": 231.1,
+    "expected_republican_seats": 203.9,
+    "median_democratic_seats": 231,
+    "democratic_control_probability": 0.9742,
+    "republican_control_probability": 0.0258,
+    "interval_80_democratic_seats": [
+      222,
+      240
+    ],
+    "interval_90_democratic_seats": [
+      220,
+      243
+    ],
+    "rating_counts": {
+      "Solid D": 185,
+      "Likely D": 16,
+      "Lean D": 12,
+      "Toss Up": 21,
+      "Lean R": 9,
+      "Likely R": 18,
+      "Solid R": 174
+    },
+    "map_prior_expected_democratic_seats": 222.745,
+    "competitive_race_count": 76,
+    "solid_races_aggregated": 359,
+    "competitive_races": [
+      {
+        "race_id": "AZ-06",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "CA-22",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "CO-08",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "FL-14",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "FL-22",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "FL-25",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "IA-02",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "MI-04",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "MI-07",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "MI-10",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NC-01",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NC-11",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NY-17",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "OH-07",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "OH-09",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "PA-08",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "TX-15",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "TX-34",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "VA-01",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "VA-02",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "WI-03",
+        "rating": "Toss Up",
+        "map_prior_probability_dem": 0.5,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "AZ-01",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "CA-13",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "CA-48",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "IA-01",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "IA-03",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NJ-07",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NM-02",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "OH-01",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "PA-07",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "PA-10",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "TX-28",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "WA-03",
+        "rating": "Lean D",
+        "map_prior_probability_dem": 0.7,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "CO-05",
+        "rating": "Lean R",
+        "map_prior_probability_dem": 0.3,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "FL-13",
+        "rating": "Lean R",
+        "map_prior_probability_dem": 0.3,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "FL-27",
+        "rating": "Lean R",
+        "map_prior_probability_dem": 0.3,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "KY-06",
+        "rating": "Lean R",
+        "map_prior_probability_dem": 0.3,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "ME-02",
+        "rating": "Lean R",
+        "map_prior_probability_dem": 0.3,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "MT-01",
+        "rating": "Lean R",
+        "map_prior_probability_dem": 0.3,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "PA-01",
+        "rating": "Lean R",
+        "map_prior_probability_dem": 0.3,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "TX-35",
+        "rating": "Lean R",
+        "map_prior_probability_dem": 0.3,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "WI-01",
+        "rating": "Lean R",
+        "map_prior_probability_dem": 0.3,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "AK-AL",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "AL-02",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "AR-02",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "AZ-02",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "CA-21",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "CA-45",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "CO-03",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "FL-07",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "FL-09",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "IN-01",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "IN-05",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "MI-08",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "MN-01",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "MN-02",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "MO-02",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NE-02",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NH-01",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NJ-09",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NV-01",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NV-02",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NV-03",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NV-04",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NY-03",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NY-04",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NY-19",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "NY-21",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "OH-10",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "OH-13",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "OH-15",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "SC-01",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "TX-09",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "TX-23",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "VA-05",
+        "rating": "Likely R",
+        "map_prior_probability_dem": 0.1,
+        "probability_type": "categorical_map_prior"
+      },
+      {
+        "race_id": "VA-07",
+        "rating": "Likely D",
+        "map_prior_probability_dem": 0.9,
+        "probability_type": "categorical_map_prior"
+      }
+    ],
+    "national_vote_seat_model": {
+      "intercept": 213.797796,
+      "slope_seats_per_dem_margin_point": 2.511714,
+      "residual_sigma_seats": 6.39683,
+      "generic_ballot_sigma_points": 3.0,
+      "map_prior_sigma_seats": 8.0,
+      "blend_weights": {
+        "national_vote_seat_leg": 0.65,
+        "current_map_prior_leg": 0.35
+      },
+      "historical_cycles": [
+        1994,
+        1998,
+        2002,
+        2006,
+        2010,
+        2014,
+        2018,
+        2022
+      ]
+    }
+  },
+  "senate": {
+    "total_seats": 100,
+    "majority_for_democratic_control": 51,
+    "not_up": {
+      "democratic_caucus": 34,
+      "republican": 31
+    },
+    "contested_seats": 35,
+    "expected_democratic_caucus_seats": 50.84,
+    "median_democratic_caucus_seats": 51,
+    "democratic_control_probability": 0.5781,
+    "non_democratic_control_probability": 0.4219,
+    "interval_80_democratic_caucus_seats": [
+      48,
+      54
+    ],
+    "interval_90_democratic_caucus_seats": [
+      47,
+      54
+    ],
+    "shared_race_error_correlation": 0.2,
+    "races": [
+      {
+        "state": "AK",
+        "rating": "Toss Up",
+        "dem_candidate": "Mary Peltola",
+        "rep_candidate": "Dan Sullivan",
+        "dem_poll_margin": 0.2,
+        "poll_count": 15,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.5,
+        "poll_probability_dem_or_non_r": 0.516,
+        "poll_weight": 0.4573,
+        "forecast_probability_dem_or_non_r": 0.5073,
+        "democratic_control_credit_probability": 0.5073,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "IA",
+        "rating": "Toss Up",
+        "dem_candidate": "Josh Turek",
+        "rep_candidate": "Ashley Hinson",
+        "dem_poll_margin": 1.2,
+        "poll_count": 17,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.5,
+        "poll_probability_dem_or_non_r": 0.5948,
+        "poll_weight": 0.469,
+        "forecast_probability_dem_or_non_r": 0.5449,
+        "democratic_control_credit_probability": 0.5449,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "KS",
+        "rating": "Toss Up",
+        "dem_candidate": "Adam Hamilton",
+        "rep_candidate": "Roger Marshall",
+        "dem_poll_margin": 2.0,
+        "poll_count": 3,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.5,
+        "poll_probability_dem_or_non_r": 0.6554,
+        "poll_weight": 0.3186,
+        "forecast_probability_dem_or_non_r": 0.551,
+        "democratic_control_credit_probability": 0.551,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "ME",
+        "rating": "Toss Up",
+        "dem_candidate": "Troy Jackson",
+        "rep_candidate": "Susan Collins",
+        "dem_poll_margin": 2.2,
+        "poll_count": 13,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.5,
+        "poll_probability_dem_or_non_r": 0.67,
+        "poll_weight": 0.4439,
+        "forecast_probability_dem_or_non_r": 0.578,
+        "democratic_control_credit_probability": 0.578,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "TX",
+        "rating": "Toss Up",
+        "dem_candidate": "James Talarico",
+        "rep_candidate": "Ken Paxton",
+        "dem_poll_margin": 2.2,
+        "poll_count": 37,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.5,
+        "poll_probability_dem_or_non_r": 0.67,
+        "poll_weight": 0.5438,
+        "forecast_probability_dem_or_non_r": 0.5951,
+        "democratic_control_credit_probability": 0.5951,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "MI",
+        "rating": "Toss Up",
+        "dem_candidate": "Abdul El-Sayed",
+        "rep_candidate": "Mike Rogers",
+        "dem_poll_margin": 3.5,
+        "poll_count": 35,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.5,
+        "poll_probability_dem_or_non_r": 0.758,
+        "poll_weight": 0.5384,
+        "forecast_probability_dem_or_non_r": 0.649,
+        "democratic_control_credit_probability": 0.649,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "OH",
+        "rating": "Toss Up",
+        "dem_candidate": "Sherrod Brown",
+        "rep_candidate": "Jon Husted",
+        "dem_poll_margin": 4.4,
+        "poll_count": 22,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.5,
+        "poll_probability_dem_or_non_r": 0.8106,
+        "poll_weight": 0.4935,
+        "forecast_probability_dem_or_non_r": 0.6721,
+        "democratic_control_credit_probability": 0.6721,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "NH",
+        "rating": "Lean D",
+        "dem_candidate": "Chris Pappas",
+        "rep_candidate": "John Sununu",
+        "dem_poll_margin": 5.9,
+        "poll_count": 19,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.7,
+        "poll_probability_dem_or_non_r": 0.881,
+        "poll_weight": 0.4796,
+        "forecast_probability_dem_or_non_r": 0.8023,
+        "democratic_control_credit_probability": 0.8023,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "SC",
+        "rating": "Likely R",
+        "dem_candidate": "Annie Andrews",
+        "rep_candidate": "Darline Graham",
+        "dem_poll_margin": -1.2,
+        "poll_count": 2,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.1,
+        "poll_probability_dem_or_non_r": 0.4052,
+        "poll_weight": 0.2899,
+        "forecast_probability_dem_or_non_r": 0.1582,
+        "democratic_control_credit_probability": 0.1582,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "MN",
+        "rating": "Likely D",
+        "dem_candidate": "Peggy Flanagan",
+        "rep_candidate": "Michele Tafoya",
+        "dem_poll_margin": 3.1,
+        "poll_count": 6,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.9,
+        "poll_probability_dem_or_non_r": 0.7324,
+        "poll_weight": 0.3746,
+        "forecast_probability_dem_or_non_r": 0.8521,
+        "democratic_control_credit_probability": 0.8521,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "NE",
+        "rating": "Likely R",
+        "dem_candidate": null,
+        "rep_candidate": "Pete Ricketts",
+        "dem_poll_margin": -2.0,
+        "poll_count": 1,
+        "note": "Dan Osborn is an independent challenger; his non-Republican win probability is reported separately and is not credited to Democratic control absent a caucus commitment.",
+        "rating_prior_dem_or_non_r": 0.1,
+        "poll_probability_dem_or_non_r": 0.3446,
+        "poll_weight": 0.2493,
+        "forecast_probability_dem_or_non_r": 0.1407,
+        "democratic_control_credit_probability": 0.0,
+        "probability_type": "non_republican_win"
+      },
+      {
+        "state": "GA",
+        "rating": "Likely D",
+        "dem_candidate": "Jon Ossoff",
+        "rep_candidate": "Mike Collins",
+        "dem_poll_margin": 9.4,
+        "poll_count": 14,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.9,
+        "poll_probability_dem_or_non_r": 0.9699,
+        "poll_weight": 0.4508,
+        "forecast_probability_dem_or_non_r": 0.9412,
+        "democratic_control_credit_probability": 0.9412,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "NC",
+        "rating": "Likely D",
+        "dem_candidate": "Roy Cooper",
+        "rep_candidate": "Michael Whatley",
+        "dem_poll_margin": 9.2,
+        "poll_count": 36,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.9,
+        "poll_probability_dem_or_non_r": 0.9671,
+        "poll_weight": 0.5411,
+        "forecast_probability_dem_or_non_r": 0.9447,
+        "democratic_control_credit_probability": 0.9447,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "FL",
+        "rating": "Solid R",
+        "dem_candidate": "Angie Nixon",
+        "rep_candidate": "Ashley Moody",
+        "dem_poll_margin": -6.0,
+        "poll_count": 13,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": 0.1151,
+        "poll_weight": 0.4439,
+        "forecast_probability_dem_or_non_r": 0.0209,
+        "democratic_control_credit_probability": 0.0209,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "ID",
+        "rating": "Solid R",
+        "dem_candidate": "Todd Achilles",
+        "rep_candidate": "Jim Risch",
+        "dem_poll_margin": -4.0,
+        "poll_count": 1,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": 0.2119,
+        "poll_weight": 0.2493,
+        "forecast_probability_dem_or_non_r": 0.0134,
+        "democratic_control_credit_probability": 0.0134,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "MS",
+        "rating": "Solid R",
+        "dem_candidate": "Scott Colom",
+        "rep_candidate": "Cindy Hyde-Smith",
+        "dem_poll_margin": -9.0,
+        "poll_count": 2,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": 0.0359,
+        "poll_weight": 0.2899,
+        "forecast_probability_dem_or_non_r": 0.0089,
+        "democratic_control_credit_probability": 0.0089,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "AR",
+        "rating": "Solid R",
+        "dem_candidate": "Hallie Shoffner",
+        "rep_candidate": "Tom Cotton",
+        "dem_poll_margin": -11.5,
+        "poll_count": 3,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": 0.0107,
+        "poll_weight": 0.3186,
+        "forecast_probability_dem_or_non_r": 0.0064,
+        "democratic_control_credit_probability": 0.0064,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "AL",
+        "rating": "Solid R",
+        "dem_candidate": "Everett Wess",
+        "rep_candidate": "Barry Moore",
+        "dem_poll_margin": -18.0,
+        "poll_count": 2,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": 0.005,
+        "poll_weight": 0.2899,
+        "forecast_probability_dem_or_non_r": 0.005,
+        "democratic_control_credit_probability": 0.005,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "CO",
+        "rating": "Solid D",
+        "dem_candidate": "John Hickenlooper",
+        "rep_candidate": null,
+        "dem_poll_margin": null,
+        "poll_count": 0,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.995,
+        "poll_probability_dem_or_non_r": null,
+        "poll_weight": 0.0,
+        "forecast_probability_dem_or_non_r": 0.995,
+        "democratic_control_credit_probability": 0.995,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "DE",
+        "rating": "Solid D",
+        "dem_candidate": "Chris Coons",
+        "rep_candidate": null,
+        "dem_poll_margin": null,
+        "poll_count": 0,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.995,
+        "poll_probability_dem_or_non_r": null,
+        "poll_weight": 0.0,
+        "forecast_probability_dem_or_non_r": 0.995,
+        "democratic_control_credit_probability": 0.995,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "IL",
+        "rating": "Solid D",
+        "dem_candidate": "Juliana Stratton",
+        "rep_candidate": "Don Tracy",
+        "dem_poll_margin": 13.0,
+        "poll_count": 1,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.995,
+        "poll_probability_dem_or_non_r": 0.995,
+        "poll_weight": 0.2493,
+        "forecast_probability_dem_or_non_r": 0.995,
+        "democratic_control_credit_probability": 0.995,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "KY",
+        "rating": "Solid R",
+        "dem_candidate": null,
+        "rep_candidate": null,
+        "dem_poll_margin": null,
+        "poll_count": 0,
+        "note": "Open seat; no usable public polling average in the snapshot.",
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": null,
+        "poll_weight": 0.0,
+        "forecast_probability_dem_or_non_r": 0.005,
+        "democratic_control_credit_probability": 0.005,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "LA",
+        "rating": "Solid R",
+        "dem_candidate": null,
+        "rep_candidate": null,
+        "dem_poll_margin": null,
+        "poll_count": 0,
+        "note": "Open seat; no usable public polling average in the snapshot.",
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": null,
+        "poll_weight": 0.0,
+        "forecast_probability_dem_or_non_r": 0.005,
+        "democratic_control_credit_probability": 0.005,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "MA",
+        "rating": "Solid D",
+        "dem_candidate": "Ed Markey",
+        "rep_candidate": "John Deaton",
+        "dem_poll_margin": 23.3,
+        "poll_count": 10,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.995,
+        "poll_probability_dem_or_non_r": 0.995,
+        "poll_weight": 0.4198,
+        "forecast_probability_dem_or_non_r": 0.995,
+        "democratic_control_credit_probability": 0.995,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "MT",
+        "rating": "Solid R",
+        "dem_candidate": "Seth Bodnar",
+        "rep_candidate": "Kurt Alme",
+        "dem_poll_margin": -14.8,
+        "poll_count": 10,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": 0.005,
+        "poll_weight": 0.4198,
+        "forecast_probability_dem_or_non_r": 0.005,
+        "democratic_control_credit_probability": 0.005,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "NJ",
+        "rating": "Solid D",
+        "dem_candidate": "Cory Booker",
+        "rep_candidate": null,
+        "dem_poll_margin": null,
+        "poll_count": 0,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.995,
+        "poll_probability_dem_or_non_r": null,
+        "poll_weight": 0.0,
+        "forecast_probability_dem_or_non_r": 0.995,
+        "democratic_control_credit_probability": 0.995,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "NM",
+        "rating": "Solid D",
+        "dem_candidate": "Ben Ray Luján",
+        "rep_candidate": "Larry Marker",
+        "dem_poll_margin": 17.7,
+        "poll_count": 2,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.995,
+        "poll_probability_dem_or_non_r": 0.995,
+        "poll_weight": 0.2899,
+        "forecast_probability_dem_or_non_r": 0.995,
+        "democratic_control_credit_probability": 0.995,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "OK",
+        "rating": "Solid R",
+        "dem_candidate": null,
+        "rep_candidate": null,
+        "dem_poll_margin": null,
+        "poll_count": 0,
+        "note": "Open seat; no usable public polling average in the snapshot.",
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": null,
+        "poll_weight": 0.0,
+        "forecast_probability_dem_or_non_r": 0.005,
+        "democratic_control_credit_probability": 0.005,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "OR",
+        "rating": "Solid D",
+        "dem_candidate": "Jeff Merkley",
+        "rep_candidate": null,
+        "dem_poll_margin": null,
+        "poll_count": 0,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.995,
+        "poll_probability_dem_or_non_r": null,
+        "poll_weight": 0.0,
+        "forecast_probability_dem_or_non_r": 0.995,
+        "democratic_control_credit_probability": 0.995,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "RI",
+        "rating": "Solid D",
+        "dem_candidate": "Jack Reed",
+        "rep_candidate": "Raymond McKay",
+        "dem_poll_margin": 20.0,
+        "poll_count": 3,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.995,
+        "poll_probability_dem_or_non_r": 0.995,
+        "poll_weight": 0.3186,
+        "forecast_probability_dem_or_non_r": 0.995,
+        "democratic_control_credit_probability": 0.995,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "SD",
+        "rating": "Solid R",
+        "dem_candidate": null,
+        "rep_candidate": "Mike Rounds",
+        "dem_poll_margin": null,
+        "poll_count": 0,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": null,
+        "poll_weight": 0.0,
+        "forecast_probability_dem_or_non_r": 0.005,
+        "democratic_control_credit_probability": 0.005,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "TN",
+        "rating": "Solid R",
+        "dem_candidate": "Marquita Bradshaw",
+        "rep_candidate": "Bill Hagerty",
+        "dem_poll_margin": -20.0,
+        "poll_count": 1,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": 0.005,
+        "poll_weight": 0.2493,
+        "forecast_probability_dem_or_non_r": 0.005,
+        "democratic_control_credit_probability": 0.005,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "VA",
+        "rating": "Solid D",
+        "dem_candidate": "Mark Warner",
+        "rep_candidate": "Mark Moran",
+        "dem_poll_margin": 44.0,
+        "poll_count": 1,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.995,
+        "poll_probability_dem_or_non_r": 0.995,
+        "poll_weight": 0.2493,
+        "forecast_probability_dem_or_non_r": 0.995,
+        "democratic_control_credit_probability": 0.995,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "WV",
+        "rating": "Solid R",
+        "dem_candidate": null,
+        "rep_candidate": "Shelley Moore Capito",
+        "dem_poll_margin": null,
+        "poll_count": 0,
+        "note": null,
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": null,
+        "poll_weight": 0.0,
+        "forecast_probability_dem_or_non_r": 0.005,
+        "democratic_control_credit_probability": 0.005,
+        "probability_type": "democratic_win"
+      },
+      {
+        "state": "WY",
+        "rating": "Solid R",
+        "dem_candidate": null,
+        "rep_candidate": null,
+        "dem_poll_margin": null,
+        "poll_count": 0,
+        "note": "Open seat; no usable public polling average in the snapshot.",
+        "rating_prior_dem_or_non_r": 0.005,
+        "poll_probability_dem_or_non_r": null,
+        "poll_weight": 0.0,
+        "forecast_probability_dem_or_non_r": 0.005,
+        "democratic_control_credit_probability": 0.005,
+        "probability_type": "democratic_win"
+      }
+    ],
+    "control_note": "A 50-50 Senate is treated as Republican control because the Republican vice president breaks ties. Nebraska independent Dan Osborn is assigned no Democratic-control credit absent a documented caucus/organization commitment."
+  },
+  "joint_control": {
+    "dem_both": 0.5755,
+    "dem_house_rep_senate": 0.3987,
+    "rep_house_dem_senate": 0.0026,
+    "rep_both": 0.0232
+  },
+  "source_registry": [
+    {
+      "name": "Track the Vote",
+      "url": "https://www.trackthevote.net/generic-ballot",
+      "observed_date": "2026-10-12"
+    },
+    {
+      "name": "Track the Vote",
+      "url": "https://www.trackthevote.net/",
+      "observed_date": "2026-10-12"
+    },
+    {
+      "name": "Cook Political Report",
+      "url": "https://www.cookpolitical.com/ratings/house-race-ratings",
+      "observed_date": "2026-10-09",
+      "use": "Current public rating snapshot used as an explicit map prior. No automated scraping is performed."
+    },
+    {
+      "name": "Cook Political Report",
+      "url": "https://www.cookpolitical.com/ratings/senate-race-ratings",
+      "observed_date": "2026-10-06",
+      "note": "Public current rating categories only; no subscriber-only analysis is reproduced."
+    },
+    {
+      "name": "Track the Vote",
+      "url": "https://www.trackthevote.net/senate",
+      "observed_date": "2026-10-12",
+      "note": "Margins are the public race polling averages as shown on the source; poll_count is the source's displayed total poll count."
+    },
+    {
+      "name": "U.S. House historical election statistics",
+      "url": "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/",
+      "use": "House national vote-to-seat calibration"
+    }
+  ],
+  "limitations": [
+    "Model v0.1 is a transparent provisional production baseline, not a final fully backtested district model.",
+    "House current-map information enters through categorical ratings; the 359 Solid seats are aggregated rather than republished as a proprietary all-seat table.",
+    "House race-level entries are categorical map priors, not individualized district polling forecasts.",
+    "Senate polling probabilities use a deliberately conservative effective margin-error scale and capped evidence weight.",
+    "Candidate quality, fundraising and qualitative campaign intelligence do not silently alter numerical probabilities.",
+    "Presidential approval is descriptive only in v0.1 and has a numerical coefficient of zero."
+  ]
+}
