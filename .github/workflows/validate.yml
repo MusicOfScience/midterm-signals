@@ -20,9 +20,9 @@ jobs:
         with:
           node-version: "22"
       - name: Python syntax
-        run: python -m py_compile scripts/build_forecast.py scripts/validate_forecast.py
+        run: python -m py_compile scripts/build_forecast.py scripts/history_support.py scripts/validate_forecast.py
       - name: JavaScript syntax
-        run: node --check public/app.js && node --check public/core.mjs
+        run: node --check public/app.js && node --check public/core.mjs && node --check public/enhancements.mjs
       - name: Unit tests
         run: node tests/core.test.mjs && python -m unittest tests.test_model
       - name: Static publication checks
@@ -30,7 +30,7 @@ jobs:
 
   browser:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 18
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -46,7 +46,7 @@ jobs:
       - name: Start static production server
         run: |
           python -m http.server 4173 --directory public > /tmp/midterm-server.log 2>&1 &
-          for i in {1..20}; do
+          for i in {1..30}; do
             if curl --fail --silent http://127.0.0.1:4173/ >/dev/null; then
               exit 0
             fi
@@ -54,7 +54,62 @@ jobs:
           done
           cat /tmp/midterm-server.log
           exit 1
-      - name: Browser, mobile and accessibility tests
+      - name: Browser, mobile, accessibility and exploration tests
         env:
           BASE_URL: http://127.0.0.1:4173
+          TEST_ARTIFACT_DIR: test-artifacts
         run: node tests/e2e.mjs
+      - name: Upload browser inspection artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-inspection-${{ github.run_id }}
+          path: test-artifacts/
+          if-no-files-found: ignore
+          retention-days: 14
+
+  live:
+    if: ${{ github.event_name == 'push' && (github.ref_name == 'main' || github.ref_name == 'prod-v1') }}
+    needs: [core, browser]
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install live browser dependencies
+        run: npm install --no-save playwright@1.49.1 axe-core@4.10.2
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Resolve and wait for Cloudflare Pages URL
+        id: liveurl
+        shell: bash
+        run: |
+          if [[ "$GITHUB_REF_NAME" == "main" ]]; then
+            URL="https://midterm-signals.pages.dev"
+          else
+            URL="https://prod-v1.midterm-signals.pages.dev"
+          fi
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          for i in {1..36}; do
+            if curl --fail --silent --location "$URL/data/status.json" >/dev/null; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Cloudflare Pages URL did not become healthy: $URL" >&2
+          exit 1
+      - name: Inspect live Cloudflare deployment
+        env:
+          BASE_URL: ${{ steps.liveurl.outputs.url }}
+          TEST_ARTIFACT_DIR: live-artifacts
+        run: node tests/live-smoke.mjs
+      - name: Upload live inspection artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-inspection-${{ github.run_id }}
+          path: live-artifacts/
+          if-no-files-found: ignore
+          retention-days: 14
