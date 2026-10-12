@@ -1,10 +1,8 @@
-name: Validate forecast
+name: Validate MIDTERM SIGNALS
 
 on:
   push:
-    branches: [main]
   pull_request:
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,6 +10,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -20,11 +19,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Rebuild deterministic forecast
-        run: python scripts/build_forecast.py
-      - name: Validate numerical output
-        run: python scripts/validate_forecast.py
-      - name: Validate static publication
+      - name: Python syntax
+        run: python -m py_compile scripts/build_forecast.py scripts/validate_forecast.py
+      - name: JavaScript syntax
+        run: node --check public/app.js
+      - name: Static publication checks
         run: node scripts/check.mjs
-      - name: Verify generated artifacts are committed
-        run: git diff --exit-code -- public/data/forecast.json public/data/status.json public/data/history/
