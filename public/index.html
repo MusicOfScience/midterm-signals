@@ -2,245 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="MIDTERM SIGNALS: open, auditable probabilistic analysis for the 2026 United States midterm elections.">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#f3efe6">
+  <meta name="description" content="MIDTERM SIGNALS: open, auditable probabilistic forecasting for the 2026 United States midterm elections.">
   <title>MIDTERM SIGNALS · 2026 forecast</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <a class="skip" href="#analysis">Skip to analysis</a>
-  <header class="site-header">
-    <div class="brand-wrap">
-      <div class="mark" aria-hidden="true">M/S</div>
-      <div>
-        <div class="brand">MIDTERM SIGNALS</div>
-        <div class="strap">OPEN MODEL · PUBLIC EVIDENCE · AUDITABLE UNCERTAINTY</div>
-      </div>
-    </div>
-    <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Explore</button>
-    <nav id="nav" aria-label="Primary">
-      <button class="nav-link active" data-view="overview">Overview</button>
-      <button class="nav-link" data-view="house">House</button>
-      <button class="nav-link" data-view="senate">Senate</button>
-      <button class="nav-link" data-view="races">Race explorer</button>
-      <button class="nav-link" data-view="polls">Polling</button>
-      <button class="nav-link" data-view="history">Forecast history</button>
-      <button class="nav-link" data-view="methodology">Methodology</button>
-      <button class="nav-link" data-view="provenance">Provenance</button>
-      <button class="nav-link" data-view="briefing">Briefing</button>
-    </nav>
-  </header>
-
-  <main id="analysis">
-    <div id="load-error" class="alert hidden" role="alert"></div>
-
-    <section class="hero panel" data-panel="overview">
-      <div class="hero-top">
-        <p class="eyebrow">EVIDENCE, UNCERTAINTY, ACCOUNTABILITY</p>
-        <span class="live-badge" id="model-badge">LOADING MODEL</span>
-      </div>
-      <div class="hero-grid">
-        <div>
-          <h1>2026 MIDTERM FORECAST</h1>
-          <p class="date">Election day · 3 November 2026 · <span id="as-of">data loading…</span></p>
-        </div>
-        <div class="countdown" aria-live="polite">
-          <span id="days">—</span>
-          <small>DAYS TO ELECTION</small>
-        </div>
-      </div>
-      <div class="gate live">
-        <span class="gate-label">PROVISIONAL PRODUCTION BASELINE</span>
-        <p>Model v0.1 is live. It publishes probabilities rather than certainties, preserves source provenance, and keeps qualitative campaign intelligence outside the numerical model unless a future version explicitly specifies otherwise.</p>
-      </div>
-    </section>
-
-    <section class="chambers" data-panel="overview">
-      <article class="metric-card chamber-card">
-        <div class="metric-head"><span>HOUSE</span><span>218 FOR A MAJORITY</span></div>
-        <div class="seat-line"><strong id="house-d-seats">—</strong><span>D</span><i>·</i><strong id="house-r-seats">—</strong><span>R</span></div>
-        <div class="probability-row"><span>Democratic control</span><strong id="house-control">—</strong></div>
-        <div class="prob-track" aria-hidden="true"><span id="house-control-bar"></span></div>
-        <p id="house-range">Loading uncertainty interval…</p>
-      </article>
-      <article class="metric-card chamber-card">
-        <div class="metric-head"><span>SENATE</span><span>51 FOR DEMOCRATIC CONTROL</span></div>
-        <div class="seat-line"><strong id="senate-d-seats">—</strong><span>D-caucus</span><i>·</i><strong id="senate-other-seats">—</strong><span>other/R</span></div>
-        <div class="probability-row"><span>Democratic control</span><strong id="senate-control">—</strong></div>
-        <div class="prob-track" aria-hidden="true"><span id="senate-control-bar"></span></div>
-        <p id="senate-range">Loading uncertainty interval…</p>
-      </article>
-    </section>
-
-    <section class="grid" data-panel="overview">
-      <article class="card">
-        <span class="kicker">Congress</span>
-        <h2 id="joint-headline">Loading joint-control simulation…</h2>
-        <div id="joint-list" class="mini-list"></div>
-      </article>
-      <article class="card">
-        <span class="kicker">National environment</span>
-        <h2 id="generic-headline">—</h2>
-        <p>Generic congressional ballot · D−R. Used as the national House vote proxy, with uncertainty.</p>
-      </article>
-      <article class="card">
-        <span class="kicker">Presidential approval</span>
-        <h2 id="approval-headline">—</h2>
-        <p>Context only. Its numerical coefficient is deliberately zero in model v0.1.</p>
-      </article>
-      <article class="card wide">
-        <span class="kicker">House map prior</span>
-        <h2>All 435 seats accounted for</h2>
-        <div id="house-rating-stack" class="rating-stack" aria-label="House rating distribution"></div>
-        <div id="house-rating-legend" class="legend"></div>
-        <p>359 Solid seats are aggregated; 76 non-Solid races are shown individually. This avoids presenting categorical ratings as more granular race forecasts than the inputs support.</p>
-      </article>
-      <article class="card">
-        <span class="kicker">Senate leverage</span>
-        <h2 id="senate-tipping-headline">—</h2>
-        <div id="senate-tipping" class="mini-list"></div>
-      </article>
-      <article class="card">
-        <span class="kicker">What changed?</span>
-        <h2>Baseline activated</h2>
-        <p id="change-copy">Loading run metadata…</p>
-      </article>
-      <article class="card">
-        <span class="kicker">Model status</span>
-        <h2>Live, provisional, reproducible</h2>
-        <p><span id="simulation-count">—</span> Monte Carlo runs. Every numerical input is checked in with a date and SHA-256 hash.</p>
-      </article>
-    </section>
-
-    <section class="panel content-panel hidden" data-panel="house">
-      <div class="section-heading">
-        <div><p class="eyebrow">HOUSE</p><h1>National environment meets the map</h1></div>
-        <div class="big-stat"><span id="house-control-2">—</span><small>D CONTROL</small></div>
-      </div>
-      <p>The House baseline blends a historical national vote-to-seat relationship with the current categorical race-rating footprint. The national leg carries 65%; the map leg 35%. This is explicit, versioned and intentionally simple enough to audit.</p>
-      <div class="stats-row">
-        <div><small>EXPECTED D SEATS</small><strong id="house-exp">—</strong></div>
-        <div><small>MEDIAN D SEATS</small><strong id="house-med">—</strong></div>
-        <div><small>80% RANGE</small><strong id="house-80">—</strong></div>
-        <div><small>90% RANGE</small><strong id="house-90">—</strong></div>
-      </div>
-      <h2 class="subhead">Current rating footprint</h2>
-      <div id="house-rating-grid" class="rating-grid"></div>
-      <p class="note">Race-level values below are <strong>map priors</strong> translated from categorical ratings, not individualized district polling probabilities. The chamber forecast is the model output.</p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>District</th><th>Current rating</th><th>D map prior</th></tr></thead>
-          <tbody id="house-table"></tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="panel content-panel hidden" data-panel="senate">
-      <div class="section-heading">
-        <div><p class="eyebrow">SENATE</p><h1>Thirty-five contests, one control threshold</h1></div>
-        <div class="big-stat"><span id="senate-control-2">—</span><small>D CONTROL</small></div>
-      </div>
-      <p>Model v0.1 blends a categorical map prior with public polling on the log-odds scale. Poll evidence gains weight gradually and is capped. Race errors share a modest national component so outcomes are not simulated as independent coin flips.</p>
-      <div class="stats-row">
-        <div><small>EXPECTED D-CAUCUS</small><strong id="senate-exp">—</strong></div>
-        <div><small>MEDIAN D-CAUCUS</small><strong id="senate-med">—</strong></div>
-        <div><small>80% RANGE</small><strong id="senate-80">—</strong></div>
-        <div><small>90% RANGE</small><strong id="senate-90">—</strong></div>
-      </div>
-      <p class="note" id="senate-control-note"></p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>State</th><th>Match-up</th><th>Rating</th><th>Poll avg</th><th>Model D / non-R</th></tr></thead>
-          <tbody id="senate-table"></tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="panel content-panel hidden" data-panel="races">
-      <p class="eyebrow">RACE EXPLORER</p>
-      <h1>The uncertainty lives here</h1>
-      <p>Search the 76 non-Solid House races and all 35 Senate contests. House entries show current map priors; Senate entries show the polling-plus-rating model where polling exists.</p>
-      <div class="controls">
-        <label>Search <input id="race-search" type="search" placeholder="e.g. PA-10, Texas, Alaska"></label>
-        <label>Chamber
-          <select id="race-chamber"><option value="all">All</option><option value="House">House</option><option value="Senate">Senate</option></select>
-        </label>
-        <label>Band
-          <select id="race-band"><option value="all">All</option><option value="close">Closest first / ≤60%</option><option value="toss">Toss Ups only</option></select>
-        </label>
-      </div>
-      <div id="race-cards" class="race-cards"></div>
-    </section>
-
-    <section class="panel content-panel hidden" data-panel="polls">
-      <p class="eyebrow">POLLING</p>
-      <h1>Observations are not forecasts</h1>
-      <div class="poll-hero">
-        <div><small>GENERIC BALLOT</small><strong id="poll-generic">—</strong><span id="poll-generic-detail">—</span></div>
-        <div><small>TRUMP NET APPROVAL</small><strong id="poll-approval">—</strong><span>Descriptive; zero model weight</span></div>
-      </div>
-      <h2 class="subhead">Senate public polling averages</h2>
-      <div id="poll-races" class="race-cards"></div>
-    </section>
-
-    <section class="panel content-panel hidden" data-panel="history">
-      <p class="eyebrow">FORECAST HISTORY</p>
-      <h1>Published runs are snapshots, not overwritten memory</h1>
-      <p>The first production baseline is now archived. Future runs should append immutable snapshots so model movement can be decomposed into new evidence versus model-version change.</p>
-      <div id="history-list" class="history-list"><div class="empty-state">Loading archive…</div></div>
-    </section>
-
-    <section class="panel content-panel hidden" data-panel="methodology">
-      <p class="eyebrow">METHODOLOGY</p>
-      <h1>Simple enough to audit, explicit enough to argue with</h1>
-      <div class="method-grid">
-        <article><b>01 · House national leg</b><p>Eight post-1990 midterms calibrate Democratic House seats against the national D−R House vote margin. The current generic ballot is used as a noisy proxy for that margin.</p></article>
-        <article><b>02 · House map leg</b><p>Current categorical House ratings are translated to fixed predeclared priors: 99.5/90/70/50/30/10/0.5% D from Solid D through Solid R.</p></article>
-        <article><b>03 · House blend</b><p>65% national seat-vote leg + 35% current map leg. Generic-ballot uncertainty, historical residual error and map uncertainty are simulated rather than suppressed.</p></article>
-        <article><b>04 · Senate race model</b><p>Ratings set the prior. Public polling margins are converted through a deliberately broad five-point effective error distribution and blended on the log-odds scale with capped weight.</p></article>
-        <article><b>05 · Correlated election</b><p>A shared national latent shock links House and Senate and induces 0.20 correlation among Senate race errors. Local errors remain dominant.</p></article>
-        <article><b>06 · Guardrail</b><p>Qualitative news, LLM judgement and presidential approval cannot silently alter numerical probabilities. Any future coefficient or override must be source-controlled and documented.</p></article>
-      </div>
-      <div class="formula">
-        <code>House D seats = 0.65 × national seat-vote draw + 0.35 × map-prior draw</code>
-        <code>Senate race p = logistic[(1-w)·logit(rating prior) + w·logit(poll evidence)]</code>
-      </div>
-      <p class="note">This is model v0.1: an operational baseline, not the endpoint. Its weaknesses are published alongside its outputs.</p>
-    </section>
-
-    <section class="panel content-panel hidden" data-panel="provenance">
-      <p class="eyebrow">DATA PROVENANCE</p>
-      <h1>Every material number has a lineage</h1>
-      <div id="source-list" class="source-list"></div>
-      <h2 class="subhead">Publication contract</h2>
-      <div class="rules">
-        <p><strong>Raw observations</strong> are dated and separated from derived outputs.</p>
-        <p><strong>Polling aggregation</strong> remains distinct from election forecasting.</p>
-        <p><strong>Input hashes</strong> are stored with each published run.</p>
-        <p><strong>Missing values</strong> remain missing; they are not converted to zero.</p>
-        <p><strong>Historical snapshots</strong> are appended rather than silently overwritten.</p>
-        <p><strong>Model changes</strong> require a new version and documented rationale.</p>
-      </div>
-      <details class="hashes"><summary>Input SHA-256 hashes</summary><pre id="input-hashes"></pre></details>
-    </section>
-
-    <section class="panel content-panel hidden" data-panel="briefing">
-      <p class="eyebrow">DAILY BRIEFING</p>
-      <h1>What the baseline says now</h1>
-      <div id="briefing-body" class="briefing"></div>
-    </section>
-  </main>
-
-  <footer>
-    <div><strong>MIDTERM SIGNALS / 2026</strong><br>Observations ≠ forecasts ≠ scenarios ≠ results</div>
-    <div class="footer-links">
-      <button data-view="methodology">Methodology</button>
-      <button data-view="provenance">Data provenance</button>
-      <a href="./data/status.json">Run report</a>
-      <a href="./data/forecast.json">Forecast JSON</a>
-    </div>
-  </footer>
-  <script src="./app.js" defer></script>
+<a class="skip" href="#main">Skip to analysis</a>
+<header class="topbar">
+  <a class="brand" href="#overview" data-view="overview" aria-label="MIDTERM SIGNALS overview"><span class="mark">MS</span><span>MIDTERM SIGNALS</span></a>
+  <div class="status-pill" id="liveStatus"><span class="dot"></span><span>Loading forecast</span></div>
+  <button class="menu" id="menuButton" type="button" aria-expanded="false" aria-controls="nav">Explore</button>
+  <nav id="nav" aria-label="Primary">
+    <button data-view="overview" class="active">Overview</button><button data-view="house">House</button><button data-view="senate">Senate</button><button data-view="polls">Polls</button><button data-view="races">Race explorer</button><button data-view="history">Forecast history</button><button data-view="methodology">Methodology</button><button data-view="provenance">Data provenance</button><button data-view="briefing">Daily briefing</button>
+  </nav>
+</header>
+<main id="main">
+<section class="view" data-panel="overview">
+<section class="hero panel"><div class="eyebrow">EVIDENCE · UNCERTAINTY · ACCOUNTABILITY</div><div class="hero-grid"><div><h1>2026<br>MIDTERM<br>FORECAST</h1><p class="election-date">Election day · 3 November 2026</p></div><div class="countdown"><strong id="daysToElection">—</strong><span>DAYS TO ELECTION</span></div></div><div class="production-line"><strong>PRODUCTION BASELINE</strong><p>Live probabilistic forecast. Polling and public election inputs feed a transparent numerical model; qualitative news does not.</p></div></section>
+<section class="headline-grid"><article class="forecast-card panel house-accent"><div class="card-kicker">HOUSE · 218 FOR CONTROL</div><div class="control-row"><div><span class="party-label dem">DEM</span><strong id="houseDemProb">—</strong><small>control probability</small></div><div class="vs">/</div><div><span class="party-label rep">REP</span><strong id="houseRepProb">—</strong><small>control probability</small></div></div><div class="seat-bar"><span class="dem-fill" id="houseSeatBar"></span></div><div class="seat-summary"><span><b id="houseDemSeats">—</b> expected D seats</span><span><b id="houseRange">—</b> 80% range</span></div></article><article class="forecast-card panel senate-accent"><div class="card-kicker">SENATE · 51 FOR DEMOCRATIC CONTROL</div><div class="control-row"><div><span class="party-label dem">DEM</span><strong id="senateDemProb">—</strong><small>control probability</small></div><div class="vs">/</div><div><span class="party-label rep">REP</span><strong id="senateRepProb">—</strong><small>control probability</small></div></div><div class="seat-bar"><span class="dem-fill" id="senateSeatBar"></span></div><div class="seat-summary"><span><b id="senateDemSeats">—</b> expected D seats</span><span><b id="senateRange">—</b> 80% range</span></div></article></section>
+<section class="signal-grid"><article class="signal panel"><span>National environment</span><strong id="gcb">—</strong><small>generic congressional ballot · D−R</small></article><article class="signal panel"><span>Model coverage</span><strong id="coverage">—</strong><small>House + Senate contests modelled</small></article><article class="signal panel"><span>Simulation</span><strong id="simulationCount">—</strong><small>correlated chamber simulations</small></article><article class="signal panel"><span>Last model run</span><strong class="small-strong" id="generatedAt">—</strong><small>UTC · inputs pinned to a git commit</small></article></section>
+<section class="split-grid"><article class="panel section-card"><div class="section-head"><div><span class="eyebrow">HOUSE</span><h2>Tipping-point races</h2></div><button class="text-button" data-view="house">All 435 →</button></div><div id="tippingList" class="race-stack loading-lines"></div></article><article class="panel section-card"><div class="section-head"><div><span class="eyebrow">SENATE</span><h2>Control battlegrounds</h2></div><button class="text-button" data-view="senate">All contests →</button></div><div id="senateBattles" class="race-stack loading-lines"></div></article></section>
+<section class="panel brief-card"><div class="section-head"><div><span class="eyebrow">WHAT CHANGED?</span><h2 id="briefHeadline">First production run loading</h2></div><button class="text-button" data-view="briefing">Briefing →</button></div><p id="briefText">The forecast refresh is assembling the first published baseline.</p></section>
+</section>
+<section class="view hidden" data-panel="house"><header class="page-head"><span class="eyebrow">HOUSE</span><h1>All 435 districts</h1><p>Each row is a modelled probability and estimated two-party vote, not a categorical call. Search, sort and inspect the full field.</p></header><div class="panel chamber-strip" id="houseStrip"></div><div class="panel table-shell"><div class="table-tools"><input id="houseSearch" type="search" placeholder="Search district or candidate" aria-label="Search House races"><select id="houseFilter" aria-label="Filter House races"><option value="all">All races</option><option value="competitive">Competitive (30–70%)</option><option value="tossup">Toss-up</option><option value="dem">Democratic edge</option><option value="rep">Republican edge</option></select></div><div id="houseTable" class="race-table"></div></div></section>
+<section class="view hidden" data-panel="senate"><header class="page-head"><span class="eyebrow">SENATE · CLASS II + SPECIAL ELECTIONS</span><h1>Every 2026 Senate contest</h1><p>Control probability accounts for seats not up this cycle and the Republican vice president's tie-break.</p></header><div class="panel chamber-strip" id="senateStrip"></div><div class="panel table-shell"><div class="table-tools"><input id="senateSearch" type="search" placeholder="Search state or candidate" aria-label="Search Senate races"><select id="senateFilter" aria-label="Filter Senate races"><option value="all">All races</option><option value="competitive">Competitive (30–70%)</option><option value="tossup">Toss-up</option><option value="dem">Democratic edge</option><option value="rep">Republican edge</option></select></div><div id="senateTable" class="race-table"></div></div></section>
+<section class="view hidden" data-panel="polls"><header class="page-head"><span class="eyebrow">POLLING</span><h1>The national environment</h1><p>Polling aggregation is an observation layer. It influences the model but is not itself the forecast.</p></header><section class="headline-grid single-wide"><article class="forecast-card panel"><div class="card-kicker">35-DAY WEIGHTED GENERIC BALLOT</div><div class="giant-number" id="pollGcb">—</div><p id="pollCountText">—</p></article></section><section class="panel section-card"><div class="section-head"><div><span class="eyebrow">RECENT INPUTS</span><h2>Generic-ballot polls</h2></div></div><div id="pollList" class="poll-list"></div></section></section>
+<section class="view hidden" data-panel="races"><header class="page-head"><span class="eyebrow">RACE EXPLORER</span><h1>House + Senate</h1><p>One searchable surface for every federal legislative contest in the model.</p></header><div class="panel table-shell"><div class="table-tools"><input id="allSearch" type="search" placeholder="Search race, state or candidate" aria-label="Search all races"><select id="allFilter" aria-label="Filter all races"><option value="all">All races</option><option value="competitive">Competitive (30–70%)</option><option value="tossup">Toss-up</option><option value="house">House only</option><option value="senate">Senate only</option></select></div><div id="allTable" class="race-table"></div></div></section>
+<section class="view hidden" data-panel="history"><header class="page-head"><span class="eyebrow">FORECAST HISTORY</span><h1>Snapshots, not overwritten memory</h1><p>Each numerical refresh is archived in Git. The latest snapshots are listed below with their chamber probabilities and national environment.</p></header><section class="panel section-card"><div id="historyList" class="history-list"><p class="muted">Loading snapshot index…</p></div></section></section>
+<section class="view hidden" data-panel="methodology"><header class="page-head"><span class="eyebrow">METHODOLOGY</span><h1>How the numbers are made</h1><p>No hidden editorial thumb on the scale. The model is intentionally legible.</p></header><section class="method-grid" id="methodGrid"></section><section class="panel section-card caveat"><span class="eyebrow">LIMITATIONS</span><h2>What this model does not know perfectly</h2><ul id="limitations"></ul></section></section>
+<section class="view hidden" data-panel="provenance"><header class="page-head"><span class="eyebrow">DATA PROVENANCE</span><h1>Every run leaves receipts</h1><p>Inputs are pinned to a specific upstream git commit before the model runs. The data mirror supplies factual/curated inputs, not probabilities from another forecast.</p></header><section class="panel provenance-card"><dl id="provenanceList"></dl></section></section>
+<section class="view hidden" data-panel="briefing"><header class="page-head"><span class="eyebrow">DAILY BRIEFING</span><h1>What moved</h1><p>Numerical movement is calculated from successive model snapshots. Campaign/news intelligence remains a separate qualitative layer.</p></header><section class="panel section-card"><div id="briefingBody"></div></section></section>
+</main>
+<footer><div><strong>MIDTERM SIGNALS / 2026</strong><br><span>Observations ≠ forecasts ≠ scenarios ≠ results</span></div><div class="footer-links"><button data-view="methodology">Methodology</button><button data-view="provenance">Provenance</button><a href="./data/forecast.json">Raw forecast JSON</a></div></footer>
+<script src="./app.js" defer></script>
 </body>
 </html>
