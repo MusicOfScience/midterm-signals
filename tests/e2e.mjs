@@ -40,7 +40,8 @@ try{
   await page.addScriptTag({content:axe.source});
   const a11y=await page.evaluate(async()=>await axe.run(document,{rules:{'color-contrast':{enabled:false}}}));
   const severe=a11y.violations.filter(v=>['serious','critical'].includes(v.impact));
-  assert.equal(severe.length,0,`serious/critical axe violations: ${severe.map(v=>v.id).join(', ')}`);
+  const detail=severe.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>({target:n.target,html:n.html,failureSummary:n.failureSummary}))}));
+  assert.equal(severe.length,0,`serious/critical axe violations: ${JSON.stringify(detail)}`);
 
   const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
   await mobile.goto(base,{waitUntil:'networkidle'});
