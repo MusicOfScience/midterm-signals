@@ -26,3 +26,5 @@ jobs:
         run: python scripts/validate_forecast.py
       - name: Validate static publication
         run: node scripts/check.mjs
+      - name: Verify generated artifacts are committed
+        run: git diff --exit-code -- public/data/forecast.json public/data/status.json public/data/history/
