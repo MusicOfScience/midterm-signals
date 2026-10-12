@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T22:04:46.519203Z",
+  "generated_at": "2026-10-12T22:06:33.543187Z",
   "sources": [
     {
       "id": "upstream_input_mirror",
@@ -7,7 +7,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-10-12T22:04:46.519203Z",
+      "last_success": "2026-10-12T22:06:33.543187Z",
       "note": "Pinned by commit before each model run."
     },
     {
