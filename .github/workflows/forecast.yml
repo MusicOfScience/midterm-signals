@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths-ignore:
       - "public/data/forecast.json"
+      - "public/data/bootstrap.json"
       - "public/data/status.json"
       - "public/data/source-status.json"
       - "public/data/search.json"
@@ -45,7 +46,9 @@ jobs:
         with:
           node-version: "22"
       - name: Build forecast snapshot and public routes
-        run: python scripts/build_forecast.py
+        run: |
+          python scripts/build_forecast.py
+          python scripts/make_bootstrap.py
       - name: Validate numerical forecast
         run: python scripts/validate_forecast.py
       - name: Unit tests

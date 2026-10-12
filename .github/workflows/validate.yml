@@ -19,8 +19,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Python syntax
-        run: python -m py_compile scripts/build_forecast.py scripts/history_support.py scripts/validate_forecast.py
+      - name: Python syntax and browser projection
+        run: |
+          python -m py_compile scripts/build_forecast.py scripts/history_support.py scripts/make_bootstrap.py scripts/validate_forecast.py
+          python scripts/make_bootstrap.py
       - name: JavaScript syntax
         run: node --check public/app.js && node --check public/core.mjs && node --check public/enhancements.mjs
       - name: Unit tests
@@ -43,6 +45,8 @@ jobs:
         run: npm install --no-save playwright@1.64.0 axe-core@4.14.0 lighthouse@13.5.0
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
+      - name: Build compact browser projection
+        run: python scripts/make_bootstrap.py
       - name: Start static production server
         run: |
           python -m http.server 4173 --directory public > /tmp/midterm-server.log 2>&1 &
