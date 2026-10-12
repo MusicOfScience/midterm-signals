@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 import json
+import os
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -58,7 +59,8 @@ def main()->None:
         if not any(r.get('external_forecasters') for r in races): fail('external source count configured without race data')
     if not STATUS.exists(): fail('status.json missing')
     status=json.loads(STATUS.read_text())
-    if status.get('release')!='PROD v1.0': fail('status release not v1.0')
-    print(f"MIDTERM SIGNALS forecast validation passed: {len(house)} House + {len(senate)} Senate races; model {f.get('model')}")
+    expected_release='PROD v1.0 RC' if os.environ.get('GITHUB_REF_NAME')=='prod-v1' else 'PROD v1.0'
+    if status.get('release')!=expected_release: fail(f"status release {status.get('release')!r} != {expected_release!r}")
+    print(f"MIDTERM SIGNALS forecast validation passed: {len(house)} House + {len(senate)} Senate races; model {f.get('model')}; release {expected_release}")
 
 if __name__=='__main__': main()
