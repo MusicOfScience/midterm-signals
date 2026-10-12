@@ -1,48 +1,46 @@
 #!/usr/bin/env python3
-"""Fail-closed validation for published MIDTERM SIGNALS artifacts."""
+"""Fail-closed numerical validation for MIDTERM SIGNALS v0.2 output."""
 from __future__ import annotations
 import json
+import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-FORECAST = ROOT / "public" / "data" / "forecast.json"
-STATUS = ROOT / "public" / "data" / "status.json"
+P = ROOT / 'public' / 'data' / 'forecast.json'
 
-def load(path):
-    with path.open("r", encoding="utf-8") as fh:
-        return json.load(fh)
+def assert_prob(x, label):
+    if not isinstance(x, (int, float)) or not math.isfinite(x) or not (0 <= x <= 1):
+        raise AssertionError(f'{label}: invalid probability {x!r}')
 
-def assert_prob(value, label):
-    if not 0 <= float(value) <= 1:
-        raise AssertionError(f"{label} outside [0,1]: {value}")
+def main():
+    data = json.loads(P.read_text())
+    assert data['schema_version'] == '0.2.0'
+    assert data['production_forecast'] == 'published'
+    assert data['election_date'] == '2026-11-03'
+    races = data['races']
+    house = [r for r in races if r['race_type'] == 'house']
+    senate = [r for r in races if r['race_type'] == 'senate']
+    assert len(house) == 435, len(house)
+    assert len({r['race_code'] for r in house}) == 435
+    assert len(senate) >= 33, len(senate)
+    assert len({r['race_code'] for r in senate}) == len(senate)
+    for r in races:
+        assert_prob(r['dem_probability'], r['race_code'])
+        m = r['forecast_margin_d_minus_r']
+        assert isinstance(m, (int, float)) and math.isfinite(m)
+    for chamber in ('house', 'senate'):
+        s = data['summary'][chamber]
+        assert_prob(s['dem_control_probability'], f'{chamber} D control')
+        assert_prob(s['rep_control_probability'], f'{chamber} R control')
+        assert abs(s['dem_control_probability'] + s['rep_control_probability'] - 1) < 1e-6
+        assert s['dem_seats_80_interval'][0] <= s['expected_dem_seats'] <= s['dem_seats_80_interval'][1]
+        assert s['simulations'] >= 10_000
+    assert data['summary']['house']['control_threshold_dem'] == 218
+    assert data['summary']['senate']['control_threshold_dem'] == 51
+    assert data['national_environment']['polls_in_35_day_window'] > 0
+    assert data['provenance']['upstream_commit']
+    assert data['provenance']['input_sha256']
+    print(f"Forecast valid: 435 House, {len(senate)} Senate, {data['summary']['house']['simulations']:,} simulations")
 
-f = load(FORECAST)
-s = load(STATUS)
-assert f["election_date"] == "2026-11-03"
-assert f["publication_state"] == "published_provisional"
-assert s["production_forecast"] == "published"
-assert f["house"]["total_seats"] == 435
-assert sum(f["house"]["rating_counts"].values()) == 435
-assert f["house"]["competitive_race_count"] == 76
-assert len(f["house"]["competitive_races"]) == 76
-assert f["house"]["solid_races_aggregated"] == 359
-assert f["senate"]["total_seats"] == 100
-assert f["senate"]["contested_seats"] == 35
-assert len(f["senate"]["races"]) == 35
-assert f["senate"]["not_up"]["democratic_caucus"] + f["senate"]["not_up"]["republican"] == 65
-assert_prob(f["house"]["democratic_control_probability"], "House D control")
-assert_prob(f["senate"]["democratic_control_probability"], "Senate D control")
-for k, v in f["joint_control"].items(): assert_prob(v, f"joint {k}")
-if abs(sum(f["joint_control"].values()) - 1) > 0.001: raise AssertionError("joint control probabilities do not sum to 1")
-house_ids = [r["race_id"] for r in f["house"]["competitive_races"]]
-if len(set(house_ids)) != len(house_ids): raise AssertionError("duplicate House race ID")
-senate_states = [r["state"] for r in f["senate"]["races"]]
-if len(set(senate_states)) != 35: raise AssertionError("duplicate/missing Senate states")
-for row in f["house"]["competitive_races"]: assert_prob(row["map_prior_probability_dem"], f"House {row['race_id']}")
-for row in f["senate"]["races"]:
-    assert_prob(row["forecast_probability_dem_or_non_r"], f"Senate {row['state']}")
-    assert_prob(row["democratic_control_credit_probability"], f"Senate control {row['state']}")
-if f["national_environment"]["presidential_approval"]["model_coefficient"] != 0.0: raise AssertionError("presidential approval must remain descriptive in v0.1")
-for name, digest in f["input_sha256"].items():
-    if len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest): raise AssertionError(f"invalid SHA-256 for {name}")
-print("MIDTERM SIGNALS forecast validation passed.")
+if __name__ == '__main__':
+    main()
