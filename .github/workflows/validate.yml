@@ -1,9 +1,10 @@
-name: Validate static publication
+name: Validate forecast
 
 on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -13,7 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
-      - run: npm run check
+          node-version: "22"
+      - name: Rebuild deterministic forecast
+        run: python scripts/build_forecast.py
+      - name: Validate numerical output
+        run: python scripts/validate_forecast.py
+      - name: Validate static publication
+        run: node scripts/check.mjs

@@ -1,10 +1,11 @@
 {
   "name": "midterm-signals",
-  "version": "0.1.0",
   "private": true,
-  "description": "Open, auditable analysis infrastructure for the 2026 United States midterm elections.",
+  "version": "0.1.0",
   "scripts": {
     "check": "node scripts/check.mjs",
-    "dev": "python -m http.server 8000 --directory public"
+    "build:forecast": "python3 scripts/build_forecast.py",
+    "validate:forecast": "python3 scripts/validate_forecast.py",
+    "test": "python3 scripts/build_forecast.py && python3 scripts/validate_forecast.py && node scripts/check.mjs"
   }
 }
