@@ -1,56 +1,64 @@
-const election = new Date('2026-11-03T20:00:00-05:00');
-const $ = (sel, root = document) => root.querySelector(sel);
-const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+let MODEL=null;
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const pct=v=>`${(100*v).toFixed(v>0.995||v<0.005?1:0)}%`;
+const signed=v=>`${v>=0?'D +':'R +'}${Math.abs(v).toFixed(1)}`;
 
-function pct(v, digits = 0) { return `${(Number(v) * 100).toFixed(digits)}%`; }
-function signed(v, digits = 1) { const n = Number(v); return `${n >= 0 ? '+' : '−'}${Math.abs(n).toFixed(digits)}`; }
-function setText(sel, value) { const el = $(sel); if (el) el.textContent = value; }
-function updateCountdown() { const ms = election - new Date(); setText('#days', ms <= 0 ? '0' : Math.ceil(ms / 86400000).toString()); }
-updateCountdown();
-
-const nav = $('#nav');
-const menu = $('.menu');
-menu?.addEventListener('click', () => { const open = nav.classList.toggle('open'); menu.setAttribute('aria-expanded', String(open)); });
-function show(view) {
-  $$('[data-panel]').forEach(el => el.classList.toggle('hidden', el.dataset.panel !== view));
-  $$('.nav-link').forEach(el => el.classList.toggle('active', el.dataset.view === view));
-  nav.classList.remove('open'); menu?.setAttribute('aria-expanded', 'false'); history.replaceState(null, '', `#${view}`); window.scrollTo({ top: 0, behavior: 'smooth' });
+function setView(view){
+  $$('[data-panel]').forEach(x=>x.classList.toggle('hidden',x.dataset.panel!==view));
+  $$('#nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===view));
+  $('#nav').classList.remove('open'); $('#menuButton').setAttribute('aria-expanded','false');
+  history.replaceState(null,'',`#${view}`); window.scrollTo({top:0,behavior:'smooth'});
+  if(view==='history') loadHistory();
 }
-document.addEventListener('click', event => { const target = event.target.closest('[data-view]'); if (!target) return; event.preventDefault(); show(target.dataset.view); });
+document.addEventListener('click',e=>{const t=e.target.closest('[data-view]');if(t){e.preventDefault();setView(t.dataset.view)}});
+$('#menuButton').addEventListener('click',()=>{const open=$('#nav').classList.toggle('open');$('#menuButton').setAttribute('aria-expanded',String(open))});
 
-const ratingOrder = ['Solid D','Likely D','Lean D','Toss Up','Lean R','Likely R','Solid R'];
-const ratingClass = rating => ({'Solid D':'d-solid','Likely D':'d-likely','Lean D':'d-lean','Toss Up':'toss','Lean R':'r-lean','Likely R':'r-likely','Solid R':'r-solid'}[rating] || 'toss');
-let model = null; let raceRows = [];
-
-function renderRatingStack(counts) {
-  const total = Object.values(counts).reduce((a,b) => a+b,0), stack=$('#house-rating-stack'), legend=$('#house-rating-legend'); stack.innerHTML=''; legend.innerHTML='';
-  ratingOrder.forEach(rating => { const count=counts[rating]||0, seg=document.createElement('span'); seg.className=`stack-seg ${ratingClass(rating)}`; seg.style.width=`${count/total*100}%`; seg.title=`${rating}: ${count}`; stack.appendChild(seg); const item=document.createElement('span'); item.innerHTML=`<i class="${ratingClass(rating)}"></i>${rating} <b>${count}</b>`; legend.appendChild(item); });
+function miniRace(r){
+ const p=r.dem_probability; const lead=p>=.5?'D':'R'; const win=Math.max(p,1-p);
+ return `<div class="race-mini"><div class="race-code">${r.race_code}</div><div class="race-names"><b>${r.dem_candidate||'—'} <span class="muted">vs</span> ${r.rep_candidate||'—'}</b><small>${r.rating} · model margin ${signed(r.forecast_margin_d_minus_r)}</small></div><div class="race-prob ${lead==='D'?'margin-pos':'margin-neg'}">${pct(win)}<small>${lead} WIN</small></div></div>`;
 }
-function renderHouseGrid(house) { const grid=$('#house-rating-grid'); grid.innerHTML=''; ratingOrder.forEach(rating=>{ const div=document.createElement('div'); div.className='rating-cell'; div.innerHTML=`<span class="rating-dot ${ratingClass(rating)}"></span><small>${rating}</small><strong>${house.rating_counts[rating]}</strong>`; grid.appendChild(div); }); }
-function renderHouseTable(rows) { $('#house-table').innerHTML=rows.map(r=>`<tr><td><strong>${r.race_id}</strong></td><td><span class="rating-pill ${ratingClass(r.rating)}">${r.rating}</span></td><td>${pct(r.map_prior_probability_dem)}</td></tr>`).join(''); }
-function matchup(r) { if(r.state==='NE') return `Dan Osborn (I) vs ${r.rep_candidate||'Republican'}`; return `${r.dem_candidate?`${r.dem_candidate} (D)`:'Democratic nominee'} vs ${r.rep_candidate?`${r.rep_candidate} (R)`:'Republican nominee'}`; }
-function pollLabel(r) { if(r.dem_poll_margin===null||r.dem_poll_margin===undefined) return 'No usable avg'; if(r.state==='NE') return `R +${Math.abs(Number(r.dem_poll_margin)).toFixed(1)} · ${r.poll_count} poll${r.poll_count===1?'':'s'}`; const m=Number(r.dem_poll_margin); return `${m>=0?'D':'R'} +${Math.abs(m).toFixed(1)} · ${r.poll_count} poll${r.poll_count===1?'':'s'}`; }
-function senateProbLabel(r) { return `${pct(r.forecast_probability_dem_or_non_r)} ${r.state==='NE'?'non-R':'D'}`; }
-function renderSenateTable(rows) { $('#senate-table').innerHTML=rows.map(r=>`<tr><td><strong>${r.state}</strong></td><td>${matchup(r)}</td><td><span class="rating-pill ${ratingClass(r.rating)}">${r.rating}</span></td><td>${pollLabel(r)}</td><td><div class="prob-cell"><strong>${senateProbLabel(r)}</strong><span class="microbar"><i style="width:${r.forecast_probability_dem_or_non_r*100}%"></i></span></div></td></tr>`).join(''); }
-function renderSenateTipping(rows) { const close=rows.filter(r=>r.state!=='NE').slice().sort((a,b)=>Math.abs(a.forecast_probability_dem_or_non_r-.5)-Math.abs(b.forecast_probability_dem_or_non_r-.5)).slice(0,5); setText('#senate-tipping-headline',close.map(r=>r.state).join(' · ')); $('#senate-tipping').innerHTML=close.map(r=>`<div><span>${r.state} · ${pollLabel(r)}</span><strong>${pct(r.forecast_probability_dem_or_non_r)} D</strong></div>`).join(''); }
-function buildRaceRows(forecast) { const h=forecast.house.competitive_races.map(r=>({chamber:'House',key:r.race_id,label:r.race_id,rating:r.rating,p:r.map_prior_probability_dem,detail:'Categorical map prior',search:`${r.race_id} ${r.rating}`})); const s=forecast.senate.races.map(r=>({chamber:'Senate',key:r.state,label:`${r.state} Senate`,rating:r.rating,p:r.forecast_probability_dem_or_non_r,detail:`${matchup(r)} · ${pollLabel(r)}`,search:`${r.state} ${matchup(r)} ${r.rating} ${pollLabel(r)}`})); return [...s,...h]; }
-function renderRaceExplorer() { if(!model)return; const q=($('#race-search')?.value||'').trim().toLowerCase(), chamber=$('#race-chamber')?.value||'all', band=$('#race-band')?.value||'all'; let rows=raceRows.filter(r=>{ if(chamber!=='all'&&r.chamber!==chamber)return false; if(q&&!r.search.toLowerCase().includes(q))return false; if(band==='close'&&Math.max(r.p,1-r.p)>.60)return false; if(band==='toss'&&r.rating!=='Toss Up')return false; return true; }); rows.sort((a,b)=>Math.abs(a.p-.5)-Math.abs(b.p-.5)||a.key.localeCompare(b.key)); $('#race-cards').innerHTML=rows.map(r=>`<article class="race-card"><div class="race-top"><span>${r.chamber}</span><span class="rating-pill ${ratingClass(r.rating)}">${r.rating}</span></div><h3>${r.label}</h3><p>${r.detail}</p><div class="race-prob"><span>${r.chamber==='House'?'D map prior':(r.key==='NE'?'Non-R model':'D model')}</span><strong>${pct(r.p)}</strong></div><div class="prob-track"><span style="width:${r.p*100}%"></span></div></article>`).join('')||'<div class="empty-state">No races match those filters.</div>'; }
-function renderPollCards(rows) { const polled=rows.filter(r=>r.dem_poll_margin!==null&&r.dem_poll_margin!==undefined); $('#poll-races').innerHTML=polled.map(r=>`<article class="race-card compact"><div class="race-top"><span>${r.state} Senate</span><span>${r.poll_count} poll${r.poll_count===1?'':'s'}</span></div><h3>${pollLabel(r).split(' · ')[0]}</h3><p>${matchup(r)}</p></article>`).join(''); }
-function renderSources(forecast) { $('#source-list').innerHTML=forecast.source_registry.map(s=>`<article class="source-card"><span class="kicker">${s.observed_date||'REFERENCE'}</span><h3>${s.name}</h3><p>${s.use||s.note||'Model input / provenance source'}</p><a href="${s.url}" target="_blank" rel="noreferrer">Open source ↗</a></article>`).join(''); $('#input-hashes').textContent=Object.entries(forecast.input_sha256).map(([k,v])=>`${k}\n${v}`).join('\n\n'); }
-function renderHistory(f) { $('#history-list').innerHTML=`<article class="history-row"><div><span class="kicker">${f.as_of}</span><h3>Model v${f.model_version} · first production baseline</h3></div><div><strong>House ${f.house.median_democratic_seats} D</strong><span>${pct(f.house.democratic_control_probability)} D control</span></div><div><strong>Senate ${f.senate.median_democratic_caucus_seats} D-caucus</strong><span>${pct(f.senate.democratic_control_probability)} D control</span></div><a href="./data/history/${f.as_of}.json">Snapshot JSON</a></article>`; }
-function renderBriefing(f) { const close=f.senate.races.filter(r=>r.state!=='NE').slice().sort((a,b)=>Math.abs(a.forecast_probability_dem_or_non_r-.5)-Math.abs(b.forecast_probability_dem_or_non_r-.5)).slice(0,5).map(r=>r.state).join(', '); $('#briefing-body').innerHTML=`<p><strong>The House:</strong> the baseline centers on <b>${f.house.median_democratic_seats} Democratic seats</b>, with a ${pct(f.house.democratic_control_probability)} chance of Democratic control and an 80% range of ${f.house.interval_80_democratic_seats[0]}–${f.house.interval_80_democratic_seats[1]} D seats.</p><p><strong>The Senate:</strong> the strict caucus-control model centers on <b>${f.senate.median_democratic_caucus_seats} Democratic-caucus seats</b>, with ${pct(f.senate.democratic_control_probability)} probability of reaching 51. The highest-leverage modeled contests are ${close}.</p><p><strong>The environment:</strong> the generic congressional ballot is D ${signed(f.national_environment.generic_ballot.dem_margin)}; Trump net approval is ${signed(f.national_environment.presidential_approval.net_approval)}. Approval is contextual only and does not move v0.1.</p><p><strong>The epistemic warning:</strong> this is the first operational baseline. House race detail is still category-level; the next major model upgrade should ingest licensed/public district polling, candidate and redistricting baselines, then run historical replays before changing the versioned specification.</p>`; }
-function render(f) {
-  model=f; const h=f.house,s=f.senate,j=f.joint_control,n=f.national_environment; setText('#model-badge',`LIVE BASELINE · MODEL v${f.model_version}`); setText('#as-of',`inputs through ${f.as_of}`); setText('#simulation-count',Number(f.simulations).toLocaleString());
-  setText('#house-d-seats',Math.round(h.expected_democratic_seats)); setText('#house-r-seats',Math.round(h.expected_republican_seats)); setText('#house-control',pct(h.democratic_control_probability)); $('#house-control-bar').style.width=`${h.democratic_control_probability*100}%`; setText('#house-range',`80% interval: ${h.interval_80_democratic_seats[0]}–${h.interval_80_democratic_seats[1]} Democratic seats · 90%: ${h.interval_90_democratic_seats[0]}–${h.interval_90_democratic_seats[1]}.`);
-  const sm=s.median_democratic_caucus_seats; setText('#senate-d-seats',sm); setText('#senate-other-seats',100-sm); setText('#senate-control',pct(s.democratic_control_probability)); $('#senate-control-bar').style.width=`${s.democratic_control_probability*100}%`; setText('#senate-range',`80% interval: ${s.interval_80_democratic_caucus_seats[0]}–${s.interval_80_democratic_caucus_seats[1]} Democratic-caucus seats · 50–50 counts as non-D control.`);
-  setText('#joint-headline',`${pct(j.dem_both)} chance Democrats control both chambers`); $('#joint-list').innerHTML=`<div><span>D House · D Senate</span><strong>${pct(j.dem_both)}</strong></div><div><span>D House · non-D Senate</span><strong>${pct(j.dem_house_rep_senate)}</strong></div><div><span>non-D House · D Senate</span><strong>${pct(j.rep_house_dem_senate)}</strong></div><div><span>non-D both</span><strong>${pct(j.rep_both)}</strong></div>`;
-  setText('#generic-headline',`D ${signed(n.generic_ballot.dem_margin)}`); setText('#approval-headline',signed(n.presidential_approval.net_approval)); setText('#change-copy',`Initial production baseline from ${f.as_of}: House median ${h.median_democratic_seats} D; Senate median ${s.median_democratic_caucus_seats} D-caucus. Nothing has been retroactively tuned to make those outputs look comfortable.`);
-  renderRatingStack(h.rating_counts); renderHouseGrid(h); renderHouseTable(h.competitive_races); renderSenateTable(s.races); renderSenateTipping(s.races);
-  setText('#house-control-2',pct(h.democratic_control_probability)); setText('#house-exp',h.expected_democratic_seats.toFixed(1)); setText('#house-med',h.median_democratic_seats); setText('#house-80',h.interval_80_democratic_seats.join('–')); setText('#house-90',h.interval_90_democratic_seats.join('–'));
-  setText('#senate-control-2',pct(s.democratic_control_probability)); setText('#senate-exp',s.expected_democratic_caucus_seats.toFixed(1)); setText('#senate-med',s.median_democratic_caucus_seats); setText('#senate-80',s.interval_80_democratic_caucus_seats.join('–')); setText('#senate-90',s.interval_90_democratic_caucus_seats.join('–')); setText('#senate-control-note',s.control_note);
-  setText('#poll-generic',`D ${signed(n.generic_ballot.dem_margin)}`); setText('#poll-generic-detail',`${n.generic_ballot.dem_pct.toFixed(1)}% D · ${n.generic_ballot.rep_pct.toFixed(1)}% R · ${n.generic_ballot.polls_in_average} polls in current average`); setText('#poll-approval',signed(n.presidential_approval.net_approval));
-  raceRows=buildRaceRows(f); renderRaceExplorer(); renderPollCards(s.races); renderSources(f); renderHistory(f); renderBriefing(f);
+function raceRows(rows){
+ const body=rows.map(r=>{const p=r.dem_probability;return `<div class="race-row" data-p="${p}" data-type="${r.race_type}"><div class="race-code">${r.race_code}</div><div class="candidate"><span class="party-label dem">D</span>${r.dem_candidate||'—'}</div><div class="candidate"><span class="party-label rep">R</span>${r.rep_candidate||'—'}</div><div class="probcell"><strong class="${p>=.5?'margin-pos':'margin-neg'}">${pct(Math.max(p,1-p))}</strong><div class="rating">${p>=.5?'D':'R'} win</div></div><div class="${r.forecast_margin_d_minus_r>=0?'margin-pos':'margin-neg'}">${signed(r.forecast_margin_d_minus_r)}</div><div class="rating">${r.rating}</div></div>`}).join('');
+ return `<div class="race-row header"><div>RACE</div><div>DEMOCRAT / ALIGNED</div><div>REPUBLICAN</div><div>WIN PROB.</div><div>MARGIN</div><div>RATING</div></div>${body}`;
 }
-['#race-search','#race-chamber','#race-band'].forEach(sel=>{ document.addEventListener('input',e=>{if(e.target.matches(sel))renderRaceExplorer();}); document.addEventListener('change',e=>{if(e.target.matches(sel))renderRaceExplorer();}); });
-async function boot(){ try{ const response=await fetch('./data/forecast.json',{cache:'no-store'}); if(!response.ok)throw new Error(`forecast.json returned ${response.status}`); const data=await response.json(); render(data); const requested=location.hash.replace('#',''); if(requested&&$(`[data-panel="${CSS.escape(requested)}"]`))show(requested); }catch(err){ const box=$('#load-error'); box.textContent=`Forecast data failed to load: ${err.message}. The static publication has failed closed rather than displaying stale invented values.`; box.classList.remove('hidden'); console.error(err); } }
+function chamberStrip(ch){return `<div class="strip-stat"><strong>${pct(ch.dem_control_probability)}</strong><span>Dem control</span></div><div class="strip-stat"><strong>${ch.expected_dem_seats}</strong><span>Expected Dem seats</span></div><div class="strip-stat"><strong>${ch.dem_seats_80_interval[0]}–${ch.dem_seats_80_interval[1]}</strong><span>80% Dem seat range</span></div><div class="strip-stat"><strong>${ch.simulations.toLocaleString()}</strong><span>Simulations</span></div>`}
+function fillSummary(m){
+ if(m.schema_version!=='0.2.0') throw new Error(`Waiting for v0.2 forecast; found ${m.schema_version}`);
+ const h=m.summary.house,s=m.summary.senate;
+ $('#daysToElection').textContent=m.days_to_election;
+ $('#houseDemProb').textContent=pct(h.dem_control_probability); $('#houseRepProb').textContent=pct(h.rep_control_probability);
+ $('#houseDemSeats').textContent=h.expected_dem_seats; $('#houseRange').textContent=`${h.dem_seats_80_interval[0]}–${h.dem_seats_80_interval[1]}`; $('#houseSeatBar').style.width=`${h.expected_dem_seats/435*100}%`;
+ $('#senateDemProb').textContent=pct(s.dem_control_probability); $('#senateRepProb').textContent=pct(s.rep_control_probability);
+ $('#senateDemSeats').textContent=s.expected_dem_seats; $('#senateRange').textContent=`${s.dem_seats_80_interval[0]}–${s.dem_seats_80_interval[1]}`; $('#senateSeatBar').style.width=`${s.expected_dem_seats}%`;
+ $('#gcb').textContent=signed(m.national_environment.generic_ballot_d_minus_r); $('#pollGcb').textContent=signed(m.national_environment.generic_ballot_d_minus_r);
+ $('#coverage').textContent=m.races.length.toString(); $('#simulationCount').textContent=h.simulations.toLocaleString();
+ $('#generatedAt').textContent=new Date(m.generated_at).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short',timeZone:'UTC'})+' UTC';
+ $('#pollCountText').textContent=`${m.national_environment.polls_in_35_day_window} polls in the current 35-day aggregation window.`;
+ $('#tippingList').innerHTML=m.tipping_point_house.slice(0,10).map(miniRace).join(''); $('#senateBattles').innerHTML=m.senate_battlegrounds.slice(0,10).map(miniRace).join('');
+ $('#houseStrip').innerHTML=chamberStrip(h); $('#senateStrip').innerHTML=chamberStrip(s);
+ const house=m.races.filter(r=>r.race_type==='house').sort((a,b)=>Math.abs(a.dem_probability-.5)-Math.abs(b.dem_probability-.5));
+ const senate=m.races.filter(r=>r.race_type==='senate').sort((a,b)=>Math.abs(a.dem_probability-.5)-Math.abs(b.dem_probability-.5));
+ $('#houseTable').innerHTML=raceRows(house); $('#senateTable').innerHTML=raceRows(senate); $('#allTable').innerHTML=raceRows([...house,...senate].sort((a,b)=>Math.abs(a.dem_probability-.5)-Math.abs(b.dem_probability-.5)));
+ $('#pollList').innerHTML=m.national_environment.recent_polls.map(p=>`<div class="poll-row"><div><b>${p.pollster}</b><br><small>${p.end_date}${p.sponsor_lean?` · sponsor lean ${p.sponsor_lean}`:''}</small></div><div class="poll-n"><small>n=${p.n||'—'}</small></div><div><small>D ${p.dem} / R ${p.rep}</small></div><strong class="${p.margin>=0?'margin-pos':'margin-neg'}">${signed(p.margin)}</strong></div>`).join('');
+ $('#methodGrid').innerHTML=Object.entries(m.methodology).map(([k,v])=>`<article class="panel method-card"><span class="eyebrow">${k.replaceAll('_',' ')}</span><h2>${k.replaceAll('_',' ')}</h2><p>${v}</p></article>`).join('');
+ $('#limitations').innerHTML=m.limitations.map(x=>`<li>${x}</li>`).join('');
+ $('#provenanceList').innerHTML=Object.entries(m.provenance).map(([k,v])=>`<dt>${k.replaceAll('_',' ')}</dt><dd>${Array.isArray(v)?v.join(', '):v}</dd>`).join('');
+ const d=m.change_since_previous_run;
+ if(d){const bits=[];bits.push(`House expected Democratic seats ${d.house_expected_dem>0?'rose':'fell'} ${Math.abs(d.house_expected_dem).toFixed(1)}`);bits.push(`Senate ${d.senate_expected_dem>0?'rose':'fell'} ${Math.abs(d.senate_expected_dem).toFixed(1)}`);bits.push(`generic ballot moved ${d.generic_ballot_margin>=0?'D':'R'} ${Math.abs(d.generic_ballot_margin).toFixed(1)}`);$('#briefHeadline').textContent='Model movement since the previous run';$('#briefText').textContent=bits.join(' · ')+'.';$('#briefingBody').innerHTML=`<h2>${$('#briefHeadline').textContent}</h2><p>${$('#briefText').textContent}</p>`}else{$('#briefHeadline').textContent='Production baseline';$('#briefText').textContent=`House: ${pct(h.dem_control_probability)} Democratic control. Senate: ${pct(s.dem_control_probability)} Democratic control. National generic ballot: ${signed(m.national_environment.generic_ballot_d_minus_r)}.`;$('#briefingBody').innerHTML=`<h2>Production baseline</h2><p>${$('#briefText').textContent}</p>`}
+ $('#liveStatus').classList.add('live'); $('#liveStatus span:last-child').textContent='Forecast live';
+}
+function setupFilter(inputId,selectId,tableId){
+ const run=()=>{const q=$(`#${inputId}`).value.trim().toLowerCase(),mode=$(`#${selectId}`).value;$$(`#${tableId} .race-row:not(.header)`).forEach(row=>{const p=Number(row.dataset.p),type=row.dataset.type;let ok=!q||row.textContent.toLowerCase().includes(q);if(mode==='competitive')ok=ok&&p>=.3&&p<=.7;if(mode==='tossup')ok=ok&&p>=.45&&p<=.55;if(mode==='dem')ok=ok&&p>.5;if(mode==='rep')ok=ok&&p<.5;if(mode==='house'||mode==='senate')ok=ok&&type===mode;row.classList.toggle('hidden',!ok)})};
+ $(`#${inputId}`).addEventListener('input',run);$(`#${selectId}`).addEventListener('change',run);
+}
+setupFilter('houseSearch','houseFilter','houseTable');setupFilter('senateSearch','senateFilter','senateTable');setupFilter('allSearch','allFilter','allTable');
+async function loadHistory(){
+ const box=$('#historyList'); if(box.dataset.loaded)return; box.dataset.loaded='1';
+ try{const idx=await fetch('./data/history/index.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(r.status));const files=idx.snapshots.slice(0,12);const snaps=await Promise.all(files.map(f=>fetch(`./data/history/${f}`,{cache:'no-store'}).then(r=>r.json()).catch(()=>null)));box.innerHTML=snaps.filter(s=>s?.summary).map(s=>`<div class="history-item"><div><strong>${new Date(s.generated_at).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'})}</strong><br><small>${s.model}</small></div><div><small>House D control</small><br><strong>${pct(s.summary.house.dem_control_probability)}</strong></div><div><small>Senate D control</small><br><strong>${pct(s.summary.senate.dem_control_probability)}</strong></div><div><small>Generic ballot</small><br><strong>${signed(s.national_environment.generic_ballot_d_minus_r)}</strong></div></div>`).join('')||'<p class="muted">No v0.2 snapshots yet.</p>'}catch(e){box.innerHTML='<p class="muted">History index will appear after the first forecast refresh.</p>'}
+}
+async function boot(){
+ try{const r=await fetch('./data/forecast.json',{cache:'no-store'});if(!r.ok)throw new Error(`HTTP ${r.status}`);MODEL=await r.json();fillSummary(MODEL)}catch(e){console.error(e);$('#liveStatus span:last-child').textContent='Forecast refresh pending';$('#briefHeadline').textContent='v0.2 production refresh running';$('#briefText').textContent='The all-race model is refreshing in GitHub Actions. This page will populate automatically when the v0.2 snapshot lands.'}
+ const v=location.hash.slice(1); if(v&&$(`[data-panel="${v}"]`))setView(v);
+}
 boot();
