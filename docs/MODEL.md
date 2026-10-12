@@ -1,35 +1,25 @@
-# MIDTERM SIGNALS model v0.1
+# Model v0.2
 
-**Status:** published provisional baseline  
-**Snapshot:** 2026-10-12  
-**Election:** 2026-11-03
+MIDTERM SIGNALS v0.2 is a transparent House/Senate baseline intended to make every numerical transformation inspectable.
 
-Model v0.1 is deliberately compact: it gets a reproducible baseline into production without smuggling judgement into probabilities.
+## National environment
 
-## House
+Generic-ballot polls ending in the most recent 35 days are averaged with exponential recency decay (11-day half-life), pollster-quality weighting and square-root sample-size weighting. Polls carrying a partisan sponsor flag are downweighted. Missing polls are never imputed.
 
-Eight post-1990 midterms provide a coarse calibration between national Democratic-minus-Republican House vote margin and Democratic seats: `D seats = alpha + beta × D-R margin + residual error`. Coefficients are fitted from `data/reference/house_midterm_calibration.json`. The current generic ballot is treated as a noisy proxy for eventual national House vote margin with a predeclared 3-point standard deviation.
+## Race prior
 
-The current-map leg translates public rating categories to fixed priors: Solid D 99.5%, Likely D 90%, Lean D 70%, Toss Up 50%, Lean R 30%, Likely R 10%, Solid R 0.5%. Its draw has an 8-seat standard deviation.
+For each 2026 House district or Senate state, presidential D-R margins are converted into *relative* partisan lean by subtracting the national D-R result in that year. The race prior uses 5% of 2016, 20% of 2020 and 75% of 2024 relative lean, then adds the current generic-ballot environment and a modest incumbency term.
 
-The chamber forecast is `0.65 × national vote-to-seat draw + 0.35 × current-map draw`. Weights are versioned and are not changed because an output is aesthetically surprising. House race rows in the UI are **categorical map priors**, not individualized district polling probabilities.
+## Race polling
 
-## Senate
+Nominee-matched polls ending within 55 days are aggregated with similar recency/quality/sample weighting. Their influence rises sub-linearly with poll count and is capped, so a small number of polls cannot erase the structural prior.
 
-Each of 35 contests gets a categorical rating prior. Where public polling exists, the Democratic polling margin is converted through a Normal distribution with a 5-point effective margin-error scale; poll evidence weight rises slowly with poll count and is capped at 0.65; prior and poll evidence are combined on the log-odds scale:
+## Probability and chamber simulation
 
-`p = logistic[(1-w) × logit(prior) + w × logit(poll evidence)]`
+Race margins are mapped to Democratic win probability with a normal-error model. House and Senate chamber control are estimated with 30,000 deterministic Monte Carlo draws. Each draw contains both a common national shock and race-specific error so uncertainty can move many races together.
 
-Senate errors share a national latent component with `rho = 0.20`; local error remains dominant. The same national shock affects the House generic-ballot draw, giving joint-control simulations correlated election conditions.
+House control requires 218 seats. Democratic Senate control is defined as 51 caucus seats because the vice president is Republican; a 50-50 Senate therefore remains Republican-controlled for organizational/tie-breaking purposes.
 
-There are 34 Democratic-caucus and 31 Republican seats not up. Democrats need 51 because a 50-50 Senate is treated as Republican control under the Republican vice president's tie-breaking vote. Nebraska independent Dan Osborn receives a published non-Republican upset probability but **zero Democratic-control credit** absent a documented caucus/organization commitment.
+## Hard boundary
 
-## Excluded from v0.1
-
-LLM judgement; qualitative campaign/news text; presidential approval as a numerical input; hidden manual probability adjustments; fundraising/candidate-quality scores; proprietary subscriber-only narrative analysis.
-
-## Reproducibility and next tranche
-
-`python scripts/build_forecast.py` is deterministic for the same input files, seed and model version and stores SHA-256 input hashes. `python scripts/validate_forecast.py` fails on invalid universes, probabilities, hashes or publication rules.
-
-v0.1 is an operational baseline, not the finished system. Priority upgrades are licensed/public district polling with transparent pollster weighting; candidate/incumbency and fundraising inputs; redistricting-adjusted district baselines; full historical district-level replays/calibration; formal model-version comparison before coefficient changes.
+News text, endorsements, strategist commentary and LLM judgement are not numerical model inputs. A future feature may be admitted only through a documented, testable model-version change.
