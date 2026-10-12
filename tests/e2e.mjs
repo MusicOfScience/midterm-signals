@@ -41,7 +41,7 @@ try{
   await page.waitForTimeout(120);
   assert.match(await page.locator('#filterSummary').innerText(),/1 of|races shown/i);
   assert.match(page.url(),/q=MI-07/);
-  assert.match(await page.locator('#raceResults').innerText(),/POLL AVERAGE/i);
+  assert.match(await page.locator('#raceResults').innerText(),/POLL AVG/i);
   await page.locator('#raceQ').fill('');
   await page.locator('#raceSort').selectOption('movement');
   assert.match(page.url(),/sort=movement/);
