@@ -3,9 +3,9 @@
   globalThis.__MIDTERM_CORE__=await import('/core.mjs');
   const source=(await Promise.all(parts.map(async u=>{const r=await fetch(u);if(!r.ok)throw new Error(`Failed to load ${u}: ${r.status}`);return r.text()}))).join('');
   let patched=source.replace(/^import\s+\{([^}]+)\}\s+from\s+'\/core\.mjs';/, 'const {$1}=globalThis.__MIDTERM_CORE__;');
-  // Keep race tiles as native buttons. Overriding them to listitem removes button semantics
-  // and makes aria-label prohibited under the ARIA role model.
+  // Preserve native button semantics for race tiles and explicitly name visual seat-share bars.
   patched=patched.replace('class="race-grid" role="list"','class="race-grid"').replaceAll(' role="listitem" aria-label=',' aria-label=');
+  patched=patched.replaceAll('class="seat-track" aria-label=','class="seat-track" role="img" aria-label=');
   const blob=URL.createObjectURL(new Blob([patched],{type:'text/javascript'}));
   try{await import(blob);await import('/enhancements.mjs')}finally{URL.revokeObjectURL(blob);delete globalThis.__MIDTERM_CORE__}
 })().catch(err=>{console.error(err);const main=document.querySelector('#content');if(main)main.innerHTML='<div class="error-state"><h2>Application failed to load</h2><p>The static shell is available, but an interactive module could not be loaded. Production data remain available from the Data links.</p></div>'});
