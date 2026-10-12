@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MIDTERM SIGNALS: open, auditable analysis for the 2026 United States midterm elections.">
+  <title>MIDTERM SIGNALS · 2026</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#analysis">Skip to analysis</a>
+  <header class="site-header">
+    <div class="brand-wrap">
+      <div class="mark" aria-hidden="true">M∕S</div>
+      <div>
+        <div class="brand">MIDTERM SIGNALS</div>
+        <div class="strap">INDEPENDENT ANALYSIS · OPEN METHODS · PUBLIC EVIDENCE</div>
+      </div>
+    </div>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Explore</button>
+    <nav id="nav" aria-label="Primary">
+      <button class="nav-link active" data-view="overview">Overview</button>
+      <button class="nav-link" data-view="house">House</button>
+      <button class="nav-link" data-view="senate">Senate</button>
+      <button class="nav-link" data-view="polls">Polls</button>
+      <button class="nav-link" data-view="races">Race explorer</button>
+      <button class="nav-link" data-view="history">Forecast history</button>
+      <button class="nav-link" data-view="scenarios">Scenarios</button>
+      <button class="nav-link" data-view="forecasters">Forecaster comparison</button>
+      <button class="nav-link" data-view="methodology">Methodology</button>
+      <button class="nav-link" data-view="provenance">Data provenance</button>
+      <button class="nav-link" data-view="briefing">Daily briefing</button>
+    </nav>
+  </header>
+
+  <main id="analysis">
+    <section class="hero panel" data-panel="overview">
+      <p class="eyebrow">EVIDENCE, UNCERTAINTY, ACCOUNTABILITY</p>
+      <div class="hero-grid">
+        <div>
+          <h1>2026 MIDTERM FORECAST</h1>
+          <p class="date">Election day · 3 November 2026</p>
+        </div>
+        <div class="countdown" aria-live="polite">
+          <span id="days">—</span>
+          <small>DAYS TO ELECTION</small>
+        </div>
+      </div>
+      <div class="gate">
+        <span class="gate-label">PRODUCTION FORECAST WITHHELD</span>
+        <p>Awaiting verified 2026 inputs, model-specification acceptance and complete historical replays. No live election probabilities are being claimed.</p>
+      </div>
+    </section>
+
+    <section class="chambers" data-panel="overview">
+      <article class="metric-card">
+        <div class="metric-head"><span>HOUSE</span><span>218 FOR A MAJORITY</span></div>
+        <div class="metric-value muted">Not yet publishable</div>
+        <p>Verified inputs, model acceptance and historical validation are required.</p>
+      </article>
+      <article class="metric-card">
+        <div class="metric-head"><span>SENATE</span><span>100 TOTAL SEATS</span></div>
+        <div class="metric-value muted">Not yet publishable</div>
+        <p>Verified inputs, model acceptance and historical validation are required.</p>
+      </article>
+    </section>
+
+    <section class="grid" data-panel="overview">
+      <article class="card">
+        <span class="kicker">Congress</span>
+        <h2>Joint control unavailable</h2>
+        <p>No published baseline forecast.</p>
+      </article>
+      <article class="card">
+        <span class="kicker">National environment</span>
+        <h2>Unavailable</h2>
+        <p>Generic congressional ballot · D−R</p>
+      </article>
+      <article class="card">
+        <span class="kicker">Net presidential approval</span>
+        <h2>Unavailable</h2>
+        <p>Approval is descriptive. Its model coefficient is currently zero. Missing observations are not treated as zero.</p>
+      </article>
+      <article class="card wide">
+        <span class="kicker">Battleground index</span>
+        <h2>Map awaiting verified race roster</h2>
+        <div class="map-skeleton" aria-label="Map intentionally withheld pending verification">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <p>District boundaries and special elections must be checked before displaying real races.</p>
+      </article>
+      <article class="card">
+        <span class="kicker">Top 10 tipping-point races</span>
+        <h2>Awaiting baseline</h2>
+        <p>Tipping points come from simulations, not editorial selection.</p>
+      </article>
+      <article class="card">
+        <span class="kicker">What changed?</span>
+        <h2>No numerical briefing yet</h2>
+        <p>Source failures and publication blockers are available in the run report. No missing numbers have been filled in.</p>
+      </article>
+      <article class="card">
+        <span class="kicker">Forecaster disagreement</span>
+        <h2>No external ratings imported</h2>
+        <p>Cook, Inside Elections, Crystal Ball, Silver Bulletin and Decision Desk HQ remain separate sources. Missing ratings are not neutral ratings.</p>
+      </article>
+    </section>
+
+    <section class="panel content-panel hidden" data-panel="house">
+      <p class="eyebrow">HOUSE</p><h1>435 races, one publication gate</h1>
+      <p>The House model will publish seat probabilities, expected seats, control probability and simulation-derived tipping points only after the verified race roster and historical replay requirements pass.</p>
+      <div class="empty-state">No production House probabilities are published yet.</div>
+    </section>
+
+    <section class="panel content-panel hidden" data-panel="senate">
+      <p class="eyebrow">SENATE</p><h1>Class III and special-election coverage</h1>
+      <p>The Senate layer will keep incumbent/candidate observations, polling, fundamentals and simulation outputs separate. The seat universe must be verified before numerical publication.</p>
+      <div class="empty-state">No production Senate probabilities are published yet.</div>
+    </section>
+
+    <section class="panel content-panel hidden" data-panel="polls">
+      <p class="eyebrow">POLLING</p><h1>Aggregation is not forecasting</h1>
+      <p>Poll observations will retain pollster, sponsor, field dates, mode, sample frame, sample size and provenance. Aggregates will expose uncertainty and will remain distinct from the election forecast.</p>
+      <div class="empty-state">Verified 2026 poll inputs have not yet cleared the production gate.</div>
+    </section>
+
+    <section class="panel content-panel hidden" data-panel="races">
+      <p class="eyebrow">RACE EXPLORER</p><h1>Roster verification first</h1>
+      <p>District boundaries, special elections, candidate identities and ballot status must be checked before the application presents a race as real.</p>
+      <div class="empty-state">Race explorer withheld pending verified roster.</div>
+    </section>
+
+    <section class="panel content-panel hidden" data-panel="history">
+      <p class="eyebrow">FORECAST HISTORY</p><h1>Immutable snapshots, not overwritten memory</h1>
+      <p>Once production forecasting begins, every published run will be archived with timestamp, input hashes, model version and outputs so forecast evolution can be audited.</p>
+      <div class="empty-state">No production snapshots yet.</div>
+    </section>
+
+    <section class="panel content-panel hidden" data-panel="scenarios">
+      <p class="eyebrow">SCENARIOS</p><h1>Counterfactuals are not forecasts</h1>
+      <p>Scenario tools may vary assumptions explicitly, but scenario results will never overwrite the baseline forecast or masquerade as observed evidence.</p>
+      <div class="empty-state">Scenario engine staged for later activation.</div>
+    </section>
+
+    <section class="panel content-panel hidden" data-panel="forecasters">
+      <p class="eyebrow">FORECASTER COMPARISON</p><h1>Consensus without laundering disagreement</h1>
+      <p>External ratings and forecasts will be stored as third-party observations with their own provenance. Missing ratings will remain missing rather than being converted into neutral calls.</p>
+      <div class="empty-state">No external ratings imported.</div>
+    </section>
+
+    <section class="panel content-panel hidden" data-panel="methodology">
+      <p class="eyebrow">METHODOLOGY</p><h1>An explicit analytical contract</h1>
+      <div class="rules">
+        <p><strong>Raw observations</strong> remain separate from transformations.</p>
+        <p><strong>Polling aggregation</strong> remains separate from election forecasting.</p>
+        <p><strong>Qualitative intelligence</strong> cannot silently change numerical probabilities.</p>
+        <p><strong>Historical snapshots</strong> are immutable once published.</p>
+        <p><strong>Missing values</strong> are not zero and are never fabricated.</p>
+        <p><strong>Model changes</strong> require documented rationale and validation, not aesthetic discomfort with an output.</p>
+      </div>
+    </section>
+
+    <section class="panel content-panel hidden" data-panel="provenance">
+      <p class="eyebrow">DATA PROVENANCE</p><h1>Every material number needs a lineage</h1>
+      <p>Primary and public sources are preferred. Retrieval time, source URL, raw snapshot/hash, parser version and transformation lineage belong with the data rather than in an afterthought.</p>
+      <div class="empty-state">Source registry will appear here as verified adapters are promoted.</div>
+    </section>
+
+    <section class="panel content-panel hidden" data-panel="briefing">
+      <p class="eyebrow">DAILY BRIEFING</p><h1>What changed, and what did not</h1>
+      <p>The briefing layer will distinguish new observations, model movement, source failures and qualitative campaign intelligence. Until the numerical gate passes, there is no invented “horse-race” movement to report.</p>
+      <div class="empty-state">No numerical briefing yet.</div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>MIDTERM SIGNALS / 2026</strong><br>Observations ≠ forecasts ≠ scenarios ≠ results</div>
+    <div class="footer-links">
+      <button data-view="methodology">Methodology</button>
+      <button data-view="provenance">Data provenance</button>
+      <a href="./data/status.json">Run report</a>
+    </div>
+  </footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>

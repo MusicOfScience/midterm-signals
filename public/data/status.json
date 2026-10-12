@@ -1,0 +1,18 @@
+{
+  "project": "MIDTERM SIGNALS",
+  "election_date": "2026-11-03",
+  "production_forecast": "withheld",
+  "house": {
+    "majority": 218,
+    "state": "not_publishable"
+  },
+  "senate": {
+    "total_seats": 100,
+    "state": "not_publishable"
+  },
+  "generic_ballot": null,
+  "presidential_approval": null,
+  "race_roster_verified": false,
+  "external_forecasters_imported": false,
+  "reason": "Awaiting verified 2026 inputs, model-specification acceptance and complete historical replays."
+}
