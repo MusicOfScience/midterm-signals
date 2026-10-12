@@ -1,7 +1,13 @@
-# Backtesting status
+# Historical validation / backtesting
 
-Model v0.1 has a coarse national House seat-vote calibration but **has not yet completed full historical district-level replays**. That limitation is published in the UI and forecast JSON.
+The project reserves infrastructure for leakage-free replay and scoring but does not claim 2018 or 2022 validation metrics yet.
 
-The current baseline is allowed to publish because the model is simple, versioned, deterministic and its uncertainty is explicit. It should not be described as fully calibrated.
+Required future replay discipline:
 
-The next validation tranche should freeze historical district universes, race ratings/polls at fixed pre-election cutoffs and Senate candidate/rating/poll states, then score Brier score, log loss, calibration, seat-distribution coverage and chamber-control accuracy. No parameter should be retuned merely because 2026 outputs look surprising.
+- reconstruct only information genuinely available at each historical forecast timestamp;
+- pin historical poll/race metadata vintages;
+- run the contemporaneous model version without post-election edits;
+- store replay manifests and hashes;
+- score Brier, log loss, calibration, seat error and interval coverage only after reconstruction passes leakage review.
+
+Until then the public Model Health view reports those metrics as **unavailable**, not zero and not estimated from hindsight-contaminated data.

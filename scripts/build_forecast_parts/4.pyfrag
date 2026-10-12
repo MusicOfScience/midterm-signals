@@ -1,0 +1,59 @@
+                "2018":{"state":"unavailable","reason":"No leakage-free retrospective reconstruction yet."},
+                "2022":{"state":"unavailable","reason":"No leakage-free retrospective reconstruction yet."}
+            },
+            "metrics_reserved":["Brier score","log loss","calibration","seat-count error","interval coverage"]
+        },
+        "provenance": {
+            "upstream_input_mirror": UPSTREAM_REPO,
+            "upstream_commit": sha,
+            "input_sha256": inputs_hash,
+            "file_sha256": hashes,
+            "files": names,
+            "retrieved_at": now.isoformat().replace("+00:00","Z"),
+            "note":"MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
+        },
+        "limitations": [
+            "No leakage-free 2018/2022 production replays are available yet; historical Brier/log-loss metrics are therefore withheld.",
+            "Candidate-quality effects beyond incumbency are not separately estimated.",
+            "Third-party and ranked-choice transfer behaviour is simplified in the chamber model.",
+            "The current production input bundle does not include validated presidential-approval, economic, FEC or licensed external-forecaster feeds.",
+            "The nowcast and election-day forecast do not yet use a separate explicit time-evolution process.",
+            "Correlated national error is simulated, but cross-race correlation remains deliberately simple rather than a full geographic covariance model."
+        ],
+    }
+    out["change_summary"] = compare_summary(out, previous, hashes)
+    out["briefing"] = briefing(out)
+    errors, warnings = sanity_checks(out, previous)
+    if errors:
+        raise RuntimeError("Forecast validation failed before publication: " + "; ".join(errors))
+    write_csvs(modeled, national_polls)
+    SOURCE_STATUS.write_text(json.dumps({"generated_at":out["generated_at"],"sources":sources}, indent=2)+"\n", encoding="utf-8")
+    SEARCH.write_text(json.dumps({"generated_at":out["generated_at"],"records":search_index}, indent=2)+"\n", encoding="utf-8")
+    SIGNALS.write_text(json.dumps({"generated_at":out["generated_at"],"signals":[]}, indent=2)+"\n", encoding="utf-8")
+    RESULTS.write_text(json.dumps({"generated_at":out["generated_at"],"state":"unavailable","phase":"pre-election","source":None,"races":[]}, indent=2)+"\n", encoding="utf-8")
+    text = json.dumps(out, indent=2) + "\n"
+    OUT.write_text(text, encoding="utf-8")
+    STATUS.write_text(json.dumps({
+        "schema_version":3,"project":"MIDTERM SIGNALS","release":"PROD v1.0","election_date":ELECTION_DATE.isoformat(),"generated_at":out["generated_at"],
+        "production_forecast":"published","publication_label":"PROD v1.0 · LIVE BASELINE","model":MODEL_NAME,"simulations":SIMULATIONS,
+        "house_all_435_accounted_for":len(house)==435,"senate_contests_accounted_for":len(senate),"upstream_commit":sha,"input_sha256":inputs_hash,
+        "qualitative_news_changes_probabilities":False,"source_issues":sum(1 for s in sources if s["state"]!="current"),"limitations":out["limitations"]
+    }, indent=2)+"\n", encoding="utf-8")
+    stamp = now.strftime("%Y-%m-%dT%H%M%SZ")
+    (HIST / f"{stamp}.json").write_text(text, encoding="utf-8")
+    snapshots = sorted([x.name for x in HIST.glob("*.json") if x.name != "index.json"], reverse=True)
+    (HIST / "index.json").write_text(json.dumps({"snapshots":snapshots[:240]}, indent=2)+"\n", encoding="utf-8")
+    route_urls = generate_static_routes(modeled, national_polls + [p for r in modeled for p in r.get("polls", [])])
+    RUN_REPORT.write_text(json.dumps({
+        "generated_at":out["generated_at"],"model":MODEL_NAME,"upstream_commit":sha,"inputs_hash":inputs_hash,"checks":"passed","warnings":warnings,
+        "house_races":len(house),"senate_contests":len(senate),"generic_ballot_polls":gcb_count,"static_routes":len(route_urls),"source_states":Counter(s["state"] for s in sources)
+    }, indent=2, default=dict)+"\n", encoding="utf-8")
+    print(f"Built PROD v1.0: {len(house)} House + {len(senate)} Senate; GCB D-R {gcb:+.2f}; {len(route_urls)} static routes; upstream {sha[:10]}")
+    if warnings:
+        print("WARNINGS:")
+        for w in warnings:
+            print(f" - {w}")
+
+
+if __name__ == "__main__":
+    main()

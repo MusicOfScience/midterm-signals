@@ -1,13 +1,13 @@
 # Deployment
 
-MIDTERM SIGNALS is a static Cloudflare Pages site.
+MIDTERM SIGNALS is deployed as a static Cloudflare Pages project.
 
 - Repository: `MusicOfScience/midterm-signals`
-- Branch: `main`
+- Production branch: `main`
 - Output directory: `public`
-- Build command: none
-- Canonical Pages URL: https://midterm-signals.pages.dev
+- Cloudflare build command: none
+- Canonical URL: https://midterm-signals.pages.dev
 
-The numerical model is built before deployment. Cloudflare receives a complete static publication bundle without Python/model dependencies. GitHub Actions rebuilds the model from checked-in inputs, validates it and fails if committed derived artifacts differ from a deterministic rebuild.
+The GitHub `forecast.yml` workflow refreshes public data twice daily and on relevant pushes to `main`. It builds the model, validates numerical output, runs unit/static checks, generates immutable history and deep routes, and commits only after those gates pass.
 
-Manual fallback: `npx wrangler pages deploy public --project-name midterm-signals`. Authentication belongs in secret storage, never the repository.
+Cloudflare therefore receives a checked, self-contained static bundle. A failed upstream refresh leaves the last healthy deployment intact.

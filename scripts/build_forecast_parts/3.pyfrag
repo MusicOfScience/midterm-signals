@@ -1,0 +1,173 @@
+            old = {r["race_code"]: r for r in previous.get("races", [])}
+            for r in races:
+                if r["race_code"] in old:
+                    move = abs(r["dem_probability"] - old[r["race_code"]].get("dem_probability", r["dem_probability"]))
+                    if move > 0.15:
+                        warnings.append(f"{r['race_code']} probability moved {move*100:.1f}pp")
+        except Exception:
+            warnings.append("Previous snapshot not fully comparable")
+    if not out.get("provenance", {}).get("input_sha256"):
+        errors.append("Missing provenance input hash")
+    return errors, warnings
+
+
+def write_csvs(modeled: list[dict], national_polls: list[dict]) -> None:
+    DATA.mkdir(parents=True, exist_ok=True)
+    race_fields = ["race_code","race_type","state","district","dem_candidate","rep_candidate","incumbent_party","seat_holder","dem_probability","rep_probability","forecast_margin_d_minus_r","rating","relative_partisan_lean_d_minus_r","poll_average_margin","poll_count","latest_race_poll"]
+    with (DATA / "races.csv").open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=race_fields)
+        w.writeheader()
+        for r in modeled:
+            w.writerow({k:r.get(k) for k in race_fields})
+    poll_fields = ["kind","race_code","pollster","sponsor","sponsor_lean","start_date","end_date","publication_date","n","population","mode","dem","rep","margin","source","model_weight"]
+    with (DATA / "polls.csv").open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=poll_fields)
+        w.writeheader()
+        all_polls = national_polls + [p for r in modeled for p in r.get("polls", [])]
+        for p in all_polls:
+            w.writerow({k:p.get(k) for k in poll_fields})
+
+
+def route_shell(route: dict, title: str, description: str, canonical: str) -> str:
+    index = (PUBLIC / "index.html").read_text(encoding="utf-8")
+    index = index.replace("<title>MIDTERM SIGNALS · 2026 US Midterm Forecast</title>", f"<title>{html.escape(title)}</title>")
+    index = index.replace('content="MIDTERM SIGNALS — open, auditable probabilistic analysis of the 2026 United States midterm elections."', f'content="{html.escape(description, quote=True)}"')
+    index = index.replace('content="MIDTERM SIGNALS · 2026 US Midterm Forecast"', f'content="{html.escape(title, quote=True)}"')
+    index = index.replace('content="https://midterm-signals.pages.dev/"', f'content="{html.escape(canonical, quote=True)}"')
+    index = index.replace('href="https://midterm-signals.pages.dev/"', f'href="{html.escape(canonical, quote=True)}"')
+    payload = json.dumps(route, separators=(",", ":"))
+    index = index.replace('<script type="module" src="/app.js"></script>', f'<script>window.__MIDTERM_ROUTE__={payload};</script>\n<script type="module" src="/app.js"></script>')
+    return index
+
+
+def generate_static_routes(modeled: list[dict], polls: list[dict]) -> list[str]:
+    for dirname in ("races", "candidates", "pollsters"):
+        path = PUBLIC / dirname
+        if path.exists():
+            shutil.rmtree(path)
+        path.mkdir(parents=True, exist_ok=True)
+    urls = ["https://midterm-signals.pages.dev/"]
+    candidate_done = set()
+    for r in modeled:
+        competitive = 0.05 < r["dem_probability"] < 0.95 or r["race_type"] == "senate"
+        if not competitive:
+            continue
+        race_dir = PUBLIC / "races" / r["race_code"]
+        race_dir.mkdir(parents=True, exist_ok=True)
+        title = f"2026 {r['state']} Senate Election Forecast, Polls & Candidates" if r["race_type"] == "senate" else f"2026 {r['race_code']} House Election Forecast & Polls"
+        canonical = f"https://midterm-signals.pages.dev/races/{quote(r['race_code'])}/"
+        desc = f"MIDTERM SIGNALS forecast, polling, candidates, fundamentals and provenance for {r['race_code']}."
+        (race_dir / "index.html").write_text(route_shell({"view":"race","id":r["race_code"]}, title, desc, canonical), encoding="utf-8")
+        urls.append(canonical)
+        for name in (r.get("dem_candidate"), r.get("rep_candidate")):
+            if not name or name in candidate_done:
+                continue
+            candidate_done.add(name)
+            slug = "-".join("".join(c.lower() if c.isalnum() else " " for c in name).split())
+            cdir = PUBLIC / "candidates" / slug
+            cdir.mkdir(parents=True, exist_ok=True)
+            ctitle = f"{name} · 2026 Candidate Profile · MIDTERM SIGNALS"
+            ccanon = f"https://midterm-signals.pages.dev/candidates/{quote(slug)}/"
+            (cdir / "index.html").write_text(route_shell({"view":"candidate","id":name}, ctitle, f"Sourced 2026 election profile, polling and race forecast for {name}.", ccanon), encoding="utf-8")
+            urls.append(ccanon)
+    for pollster in sorted({p.get("pollster") for p in polls if p.get("pollster")}):
+        slug = "-".join("".join(c.lower() if c.isalnum() else " " for c in pollster).split())
+        pdir = PUBLIC / "pollsters" / slug
+        pdir.mkdir(parents=True, exist_ok=True)
+        pcanon = f"https://midterm-signals.pages.dev/pollsters/{quote(slug)}/"
+        (pdir / "index.html").write_text(route_shell({"view":"pollster","id":pollster}, f"{pollster} 2026 Polls · MIDTERM SIGNALS", f"Current-cycle polls from {pollster} recorded by MIDTERM SIGNALS.", pcanon), encoding="utf-8")
+        urls.append(pcanon)
+    (PUBLIC / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: https://midterm-signals.pages.dev/sitemap.xml\n", encoding="utf-8")
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    sm.extend(f"  <url><loc>{html.escape(u)}</loc></url>" for u in urls)
+    sm.append("</urlset>")
+    (PUBLIC / "sitemap.xml").write_text("\n".join(sm)+"\n", encoding="utf-8")
+    return urls
+
+
+def main() -> None:
+    now = datetime.now(timezone.utc)
+    asof = min(now.date(), ELECTION_DATE)
+    DATA.mkdir(parents=True, exist_ok=True)
+    HIST.mkdir(parents=True, exist_ok=True)
+    previous = latest_previous_snapshot()
+
+    commit_meta = json.loads(fetch(API_COMMIT))
+    sha = commit_meta["sha"]
+    names = ["races.csv", "historical.csv", "gcb_polls.csv", "race_polls.csv"]
+    raw = {name: fetch(RAW.format(repo=UPSTREAM_REPO, sha=sha, name=name)) for name in names}
+    hashes = input_hashes(raw)
+    inputs_hash = hashlib.sha256(b"".join(raw[n] for n in names)).hexdigest()
+    races = csv_rows(raw["races.csv"])
+    historical = csv_rows(raw["historical.csv"])
+    gcbs = csv_rows(raw["gcb_polls.csv"])
+    race_polls = csv_rows(raw["race_polls.csv"])
+    hist = {r["code"]: r for r in historical}
+    gcb, national_polls, gcb_count, latest_gcb = aggregate_gcb(gcbs, asof)
+    target = [r for r in races if r.get("race_type") in {"house", "senate"}]
+    modeled = [race_model(r, hist, race_polls, gcb, asof) for r in target]
+    apply_changes(modeled, previous)
+    house = [r for r in modeled if r["race_type"] == "house"]
+    senate = [r for r in modeled if r["race_type"] == "senate"]
+    senate_up_holders = defaultdict(int)
+    for r in races:
+        if r.get("race_type") == "senate" and r.get("seat_holder") in {"DEM", "REP"}:
+            senate_up_holders[r["seat_holder"]] += 1
+    hsum, ssum, joint = simulate(house, senate, dict(senate_up_holders))
+    all_competitive = sorted(modeled, key=lambda r: abs(r["dem_probability"] - 0.5))
+    sources = source_health(asof, latest_gcb, modeled, now)
+    external_sources = [
+        {"name":"Cook Political Report","state":"unavailable","note":"No licensed automated feed configured."},
+        {"name":"Inside Elections","state":"unavailable","note":"No licensed automated feed configured."},
+        {"name":"Sabato's Crystal Ball","state":"unavailable","note":"No licensed automated feed configured."},
+        {"name":"Silver Bulletin","state":"unavailable","note":"No licensed automated feed configured."},
+        {"name":"Decision Desk HQ","state":"unavailable","note":"No licensed automated feed configured."},
+    ]
+    search_index = make_search_index(modeled, national_polls + [p for r in modeled for p in r.get("polls", [])])
+    out = {
+        "schema_version": SCHEMA_VERSION,
+        "model": MODEL_NAME,
+        "production_forecast": "published",
+        "generated_at": now.isoformat().replace("+00:00", "Z"),
+        "data_refreshed_at": now.isoformat().replace("+00:00", "Z"),
+        "election_date": ELECTION_DATE.isoformat(),
+        "days_to_election": max(0, (ELECTION_DATE - now.date()).days),
+        "summary": {"house": hsum, "senate": ssum, "joint_control": joint},
+        "nowcast": {"house": hsum, "senate": ssum},
+        "election_day_forecast": {"house": hsum, "senate": ssum},
+        "forecast_notes": {
+            "nowcast":"The production model does not yet estimate a separate time-evolution process. The nowcast therefore reports the current measured environment under the same uncertainty structure rather than inventing a distinct precision level.",
+            "election_day":"The official baseline is the election-outcome forecast under the current prospective model specification. Future political movement is represented through uncertainty, not an editorial trend adjustment."
+        },
+        "national_environment": {
+            "generic_ballot_d_minus_r": round(gcb, 2),
+            "polls_in_35_day_window": gcb_count,
+            "recent_polls": national_polls,
+            "historical_2024_presidential_d_minus_r": NAT_PRES[2024],
+            "presidential_approval": None,
+            "congressional_approval": None,
+            "special_elections": None,
+            "economy": None,
+        },
+        "polls": national_polls,
+        "tipping_point_house": [r for r in all_competitive if r["race_type"] == "house"][:15],
+        "senate_battlegrounds": [r for r in all_competitive if r["race_type"] == "senate"][:15],
+        "races": modeled,
+        "source_health": sources,
+        "external_forecasters": {"configured_count":0,"sources":external_sources},
+        "money": {"state":"unavailable","source":"FEC","records":[],"note":"Adapter boundary present; current API feed not configured."},
+        "campaign_signals": [],
+        "results": {"state":"unavailable","phase":"pre-election","source":None},
+        "search_index": search_index,
+        "methodology": {
+            "partisan_lean":"5% 2016 + 20% 2020 + 75% 2024 district/state presidential margin, each centred on that year's national D−R margin",
+            "national_environment":"35-day generic-ballot poll average with exponential recency decay, sample-size and upstream source-quality weighting; partisan-sponsored polls downweighted",
+            "incumbency":"+1.0 D / −1.0 R House; 1.15× in Senate",
+            "race_polling":"nominee-matched polls from the last 55 days blended with the prior; weight rises sub-linearly with poll count and is capped",
+            "race_probability":"normal-error conversion of expected two-party margin; uncertainty narrows only within the documented race-poll blend",
+            "probabilities":"30,000 correlated Monte Carlo chamber simulations with shared national and race-specific error",
+            "qualitative_news":"not an input to numerical probabilities",
+            "senate_control":"Democratic caucus requires 51 seats because the vice president is Republican",
+        },
+        "model_health": {
+            "historical_backtests": {

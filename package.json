@@ -1,11 +1,13 @@
 {
-  "name": "midterm-signals",
-  "private": true,
-  "version": "0.1.0",
-  "scripts": {
-    "check": "node scripts/check.mjs",
-    "build:forecast": "python3 scripts/build_forecast.py",
-    "validate:forecast": "python3 scripts/validate_forecast.py",
-    "test": "python3 scripts/build_forecast.py && python3 scripts/validate_forecast.py && node scripts/check.mjs"
+  "name":"midterm-signals",
+  "private":true,
+  "version":"1.0.0",
+  "description":"Open, auditable analysis and probabilistic forecasting for the 2026 United States midterm elections.",
+  "scripts":{
+    "check":"node scripts/check.mjs",
+    "test:core":"node tests/core.test.mjs && python -m unittest tests.test_model",
+    "build:forecast":"python scripts/build_forecast.py",
+    "validate:forecast":"python scripts/validate_forecast.py",
+    "test":"npm run test:core && npm run check"
   }
 }

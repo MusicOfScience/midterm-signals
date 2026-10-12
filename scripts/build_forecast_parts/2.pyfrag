@@ -1,0 +1,182 @@
+        "dem_seats_80_interval": interval(0.80),
+        "dem_seats_90_interval": interval(0.90),
+        "dem_seats_95_interval": interval(0.95),
+        "distribution": [{"seats": s, "probability": round(c / len(vals), 6)} for s, c in sorted(counts.items())],
+        "simulations": len(vals),
+        "control_threshold_dem": threshold,
+    }
+    out["rep_control_probability"] = round(1 - out["dem_control_probability"], 4)
+    if held_dem is not None:
+        out["net_change_dem"] = round(mean - held_dem, 1)
+    return out
+
+
+def simulate(house: list[dict], senate: list[dict], senate_up_holders: dict[str, int], n: int = SIMULATIONS) -> tuple[dict, dict, dict]:
+    # RNG ordering and error scales intentionally preserve the v0.2 production specification.
+    rng = random.Random(20261103)
+    house_counts, senate_counts = [], []
+    fixed_d = CURRENT_SENATE["DEM"] - senate_up_holders.get("DEM", 0)
+    joint = Counter()
+    for _ in range(n):
+        national_house = rng.gauss(0, 2.7)
+        national_senate = rng.gauss(0, 2.4)
+        hd = sum(1 for r in house if r["forecast_margin_d_minus_r"] + national_house + rng.gauss(0, 4.7) > 0)
+        sd = fixed_d
+        for r in senate:
+            m = r["forecast_margin_d_minus_r"] + national_senate + rng.gauss(0, 5.0)
+            if r.get("same_party") == "DEM":
+                sd += 1
+            elif r.get("same_party") == "REP":
+                pass
+            elif m > 0:
+                sd += 1
+        house_counts.append(hd)
+        senate_counts.append(sd)
+        joint[(hd >= 218, sd >= 51)] += 1
+    house_held_dem = sum(1 for r in house if r.get("seat_holder") == "DEM")
+    hsum = summarize_counts(house_counts, 435, 218, house_held_dem)
+    ssum = summarize_counts(senate_counts, 100, 51, CURRENT_SENATE["DEM"])
+    ssum["fixed_not_up_dem_seats"] = fixed_d
+    jsum = {
+        "dem_house_dem_senate": round(joint[(True, True)] / n, 4),
+        "dem_house_rep_senate": round(joint[(True, False)] / n, 4),
+        "rep_house_dem_senate": round(joint[(False, True)] / n, 4),
+        "rep_house_rep_senate": round(joint[(False, False)] / n, 4),
+    }
+    return hsum, ssum, jsum
+
+
+def latest_previous_snapshot() -> dict | None:
+    if OUT.exists():
+        try:
+            return json.loads(OUT.read_text())
+        except Exception:
+            pass
+    candidates = sorted([p for p in HIST.glob("*.json") if p.name != "index.json"], reverse=True)
+    for p in candidates:
+        try:
+            return json.loads(p.read_text())
+        except Exception:
+            continue
+    return None
+
+
+def input_hashes(raw: dict[str, bytes]) -> dict[str, str]:
+    return {name: hashlib.sha256(content).hexdigest() for name, content in raw.items()}
+
+
+def apply_changes(modeled: list[dict], previous: dict | None) -> dict:
+    change = {}
+    prev_races = {r.get("race_code"): r for r in (previous or {}).get("races", [])}
+    for race in modeled:
+        old = prev_races.get(race["race_code"])
+        race["change"] = {
+            "dem_probability": round(race["dem_probability"] - old.get("dem_probability", race["dem_probability"]), 4) if old else 0.0,
+            "margin": round(race["forecast_margin_d_minus_r"] - old.get("forecast_margin_d_minus_r", race["forecast_margin_d_minus_r"]), 2) if old else 0.0,
+        }
+    return change
+
+
+def source_health(asof: date, latest_gcb: date, modeled: list[dict], now: datetime) -> list[dict]:
+    latest_race = max((parse_day(r.get("latest_race_poll")) for r in modeled if r.get("latest_race_poll")), default=None)
+    def freshness(d: date | None, current_days: int, stale_days: int) -> str:
+        if not d:
+            return "unavailable"
+        age = (asof - d).days
+        return "current" if age <= current_days else "stale" if age <= stale_days else "unavailable"
+    return [
+        {"id":"upstream_input_mirror","label":"2026 election input mirror","kind":"public Git repository","state":"current","url":f"https://github.com/{UPSTREAM_REPO}","last_success":now.isoformat().replace("+00:00","Z"),"note":"Pinned by commit before each model run."},
+        {"id":"generic_ballot","label":"Generic ballot polls","kind":"poll observation feed","state":freshness(latest_gcb,7,21),"last_observation":latest_gcb.isoformat(),"note":"35-day weighted model input."},
+        {"id":"race_polls","label":"House & Senate race polls","kind":"poll observation feed","state":freshness(latest_race,10,30),"last_observation":latest_race.isoformat() if latest_race else None,"note":"Candidate-match validation; 55-day model window."},
+        {"id":"cook","label":"Cook Political Report","kind":"third-party forecast","state":"unavailable","note":"No licensed automated redistribution feed configured."},
+        {"id":"inside_elections","label":"Inside Elections","kind":"third-party forecast","state":"unavailable","note":"No licensed automated redistribution feed configured."},
+        {"id":"crystal_ball","label":"Sabato's Crystal Ball","kind":"third-party forecast","state":"unavailable","note":"No licensed automated redistribution feed configured."},
+        {"id":"silver_bulletin","label":"Silver Bulletin","kind":"third-party forecast","state":"unavailable","note":"No licensed automated redistribution feed configured."},
+        {"id":"ddhq","label":"Decision Desk HQ","kind":"third-party forecast","state":"unavailable","note":"No licensed automated redistribution feed configured."},
+        {"id":"fec","label":"Federal Election Commission","kind":"campaign finance","state":"unavailable","url":"https://www.fec.gov/data/","note":"Adapter boundary implemented; current API feed/credential not configured."},
+        {"id":"campaign_signals","label":"Campaign signals","kind":"qualitative intelligence","state":"unavailable","note":"No current structured signal import configured; model effect remains NONE."},
+        {"id":"results","label":"Election results","kind":"actual results","state":"unavailable","note":"Pre-election. No live results source is configured or implied."},
+    ]
+
+
+def make_search_index(modeled: list[dict], polls: list[dict]) -> list[dict]:
+    records, seen = [], set()
+    for r in modeled:
+        label = f"{r['state']} Senate" if r["race_type"] == "senate" else r["race_code"]
+        records.append({"type":"race","label":label,"subtitle":f"{r.get('dem_candidate') or '—'} vs {r.get('rep_candidate') or '—'}","key":r["race_code"],"terms":" ".join(str(x) for x in [r["race_code"],r.get("state"),r.get("dem_candidate"),r.get("rep_candidate")] if x)})
+        for party, name in (("D", r.get("dem_candidate")), ("R", r.get("rep_candidate"))):
+            if name and name not in seen:
+                seen.add(name)
+                records.append({"type":"candidate","label":name,"subtitle":f"{party} · {label}","key":name,"terms":f"{name} {r['race_code']} {r.get('state','')}"})
+    for p in sorted({p.get("pollster") for p in polls if p.get("pollster")}):
+        records.append({"type":"pollster","label":p,"subtitle":"Pollster","key":p,"terms":p})
+    for fcast in ["Cook Political Report","Inside Elections","Sabato's Crystal Ball","Silver Bulletin","Decision Desk HQ"]:
+        records.append({"type":"forecaster","label":fcast,"subtitle":"External forecaster · adapter not configured","key":fcast,"terms":fcast})
+    return records
+
+
+def compare_summary(current: dict, previous: dict | None, hashes: dict[str, str]) -> dict:
+    if not previous or not previous.get("summary"):
+        return {"comparable_previous_snapshot": False, "changed_inputs": []}
+    result = {"comparable_previous_snapshot": True}
+    try:
+        result.update({
+            "house_control_probability": round(current["summary"]["house"]["dem_control_probability"] - previous["summary"]["house"]["dem_control_probability"], 4),
+            "senate_control_probability": round(current["summary"]["senate"]["dem_control_probability"] - previous["summary"]["senate"]["dem_control_probability"], 4),
+            "house_expected_dem_seats": round(current["summary"]["house"]["expected_dem_seats"] - previous["summary"]["house"]["expected_dem_seats"], 1),
+            "senate_expected_dem_seats": round(current["summary"]["senate"]["expected_dem_seats"] - previous["summary"]["senate"]["expected_dem_seats"], 1),
+            "generic_ballot_d_minus_r": round(current["national_environment"]["generic_ballot_d_minus_r"] - previous["national_environment"]["generic_ballot_d_minus_r"], 2),
+        })
+    except Exception:
+        result["comparable_previous_snapshot"] = False
+    prev_hashes = previous.get("provenance", {}).get("file_sha256", {})
+    result["changed_inputs"] = [name for name, sha in hashes.items() if prev_hashes.get(name) not in (None, sha)]
+    result["previous_generated_at"] = previous.get("generated_at")
+    return result
+
+
+def briefing(out: dict) -> dict:
+    h, s = out["summary"]["house"], out["summary"]["senate"]
+    g = out["national_environment"]["generic_ballot_d_minus_r"]
+    read = (f"MIDTERM SIGNALS gives Democrats a {round(h['dem_control_probability']*100)}% probability of House control "
+            f"and a {round(s['dem_control_probability']*100)}% probability of Senate control. "
+            f"The current weighted generic congressional ballot is {'D' if g >= 0 else 'R'}+{abs(g):.1f}. "
+            f"The House 80% Democratic-seat interval is {h['dem_seats_80_interval'][0]}–{h['dem_seats_80_interval'][1]}; "
+            f"the Senate interval is {s['dem_seats_80_interval'][0]}–{s['dem_seats_80_interval'][1]}.")
+    return {"thirty_second_read": read}
+
+
+def sanity_checks(out: dict, previous: dict | None) -> tuple[list[str], list[str]]:
+    errors, warnings = [], []
+    races = out["races"]
+    house = [r for r in races if r["race_type"] == "house"]
+    senate = [r for r in races if r["race_type"] == "senate"]
+    codes = [r["race_code"] for r in races]
+    if len(house) != 435:
+        errors.append(f"Expected 435 House races, found {len(house)}")
+    if len(senate) < 33:
+        errors.append(f"Expected at least 33 Senate contests, found {len(senate)}")
+    if len(codes) != len(set(codes)):
+        errors.append("Duplicate race IDs")
+    for r in races:
+        if not 0 <= r["dem_probability"] <= 1:
+            errors.append(f"Impossible probability: {r['race_code']}")
+        if not -100 <= r["forecast_margin_d_minus_r"] <= 100:
+            errors.append(f"Impossible margin: {r['race_code']}")
+        for p in r.get("polls", []):
+            d = parse_day(p.get("end_date"))
+            if d and d > ELECTION_DATE:
+                errors.append(f"Future-dated poll beyond election: {r['race_code']} {d}")
+    for chamber in ("house", "senate"):
+        s = out["summary"][chamber]
+        total = 435 if chamber == "house" else 100
+        if abs((s["expected_dem_seats"] + s["expected_rep_seats"]) - total) > 0.2:
+            errors.append(f"Impossible {chamber} expected-seat total")
+    if previous and previous.get("summary"):
+        try:
+            hd = abs(out["summary"]["house"]["dem_control_probability"] - previous["summary"]["house"]["dem_control_probability"])
+            sd = abs(out["summary"]["senate"]["dem_control_probability"] - previous["summary"]["senate"]["dem_control_probability"])
+            if hd > 0.10:
+                warnings.append(f"House control probability moved {hd*100:.1f}pp; investigate changed inputs")
+            if sd > 0.10:
+                warnings.append(f"Senate control probability moved {sd*100:.1f}pp; investigate changed inputs")
