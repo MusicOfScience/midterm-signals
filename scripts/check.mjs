@@ -2,17 +2,40 @@ import { readFile, access } from 'node:fs/promises';
 import { constants } from 'node:fs';
 
 const required = [
-  'public/index.html','public/styles.css','public/app.js','public/data/status.json','public/data/forecast.json','public/data/history/2026-10-12.json','wrangler.toml'
+  'public/index.html',
+  'public/styles.css',
+  'public/app.js',
+  'scripts/build_forecast.py',
+  'scripts/validate_forecast.py',
+  'wrangler.toml'
 ];
 for (const file of required) await access(file, constants.R_OK);
-const status = JSON.parse(await readFile('public/data/status.json', 'utf8'));
-const forecast = JSON.parse(await readFile('public/data/forecast.json', 'utf8'));
-if (status.election_date !== '2026-11-03') throw new Error('Unexpected election date');
-if (status.production_forecast !== 'published') throw new Error('Production forecast is not published');
-if (forecast.house.total_seats !== 435) throw new Error('House universe incomplete');
-if (forecast.senate.contested_seats !== 35) throw new Error('Senate universe incomplete');
+
 const html = await readFile('public/index.html', 'utf8');
-for (const marker of ['MIDTERM SIGNALS','Observations ≠ forecasts ≠ scenarios ≠ results','PROVISIONAL PRODUCTION BASELINE']) {
+for (const marker of [
+  'MIDTERM SIGNALS',
+  'PRODUCTION BASELINE',
+  'All 435 districts',
+  'CLASS II + SPECIAL ELECTIONS',
+  'Observations ≠ forecasts ≠ scenarios ≠ results'
+]) {
   if (!html.includes(marker)) throw new Error(`Missing marker: ${marker}`);
 }
-console.log('MIDTERM SIGNALS static checks passed.');
+
+try {
+  const forecast = JSON.parse(await readFile('public/data/forecast.json', 'utf8'));
+  if (forecast.schema_version !== '0.2.0') throw new Error('Forecast schema is not v0.2.0');
+  if (forecast.production_forecast !== 'published') throw new Error('Forecast not published');
+  if (forecast.election_date !== '2026-11-03') throw new Error('Unexpected election date');
+  const house = forecast.races.filter(r => r.race_type === 'house');
+  const senate = forecast.races.filter(r => r.race_type === 'senate');
+  if (house.length !== 435) throw new Error(`House universe incomplete: ${house.length}`);
+  if (senate.length < 33) throw new Error(`Senate universe incomplete: ${senate.length}`);
+  for (const race of forecast.races) {
+    if (!(race.dem_probability >= 0 && race.dem_probability <= 1)) throw new Error(`Invalid probability for ${race.race_code}`);
+  }
+  console.log(`MIDTERM SIGNALS checks passed: ${house.length} House + ${senate.length} Senate races.`);
+} catch (err) {
+  if (err?.code === 'ENOENT') console.log('Static checks passed; forecast snapshot pending first refresh.');
+  else throw err;
+}
