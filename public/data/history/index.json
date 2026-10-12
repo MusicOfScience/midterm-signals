@@ -1,10 +1,6 @@
 {
-  "schema_version": 1,
   "snapshots": [
-    {
-      "as_of": "2026-10-12",
-      "model_version": "0.1.0",
-      "path": "./2026-10-12.json"
-    }
+    "2026-10-12T141140Z.json",
+    "2026-10-12.json"
   ]
 }
