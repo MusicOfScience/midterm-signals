@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-10-12T19:01:26.792775Z",
+  "sources": [
+    {
+      "id": "upstream_input_mirror",
+      "label": "2026 election input mirror",
+      "kind": "public Git repository",
+      "state": "current",
+      "url": "https://github.com/ElectIndex/26_us_forecast_data",
+      "last_success": "2026-10-12T19:01:26.792775Z",
+      "note": "Pinned by commit before each model run."
+    },
+    {
+      "id": "generic_ballot",
+      "label": "Generic ballot polls",
+      "kind": "poll observation feed",
+      "state": "current",
+      "last_observation": "2026-10-07",
+      "note": "35-day weighted model input."
+    },
+    {
+      "id": "race_polls",
+      "label": "House & Senate race polls",
+      "kind": "poll observation feed",
+      "state": "current",
+      "last_observation": "2026-10-10",
+      "note": "Candidate-match validation; 55-day model window."
+    },
+    {
+      "id": "cook",
+      "label": "Cook Political Report",
+      "kind": "third-party forecast",
+      "state": "unavailable",
+      "note": "No licensed automated redistribution feed configured."
+    },
+    {
+      "id": "inside_elections",
+      "label": "Inside Elections",
+      "kind": "third-party forecast",
+      "state": "unavailable",
+      "note": "No licensed automated redistribution feed configured."
+    },
+    {
+      "id": "crystal_ball",
+      "label": "Sabato's Crystal Ball",
+      "kind": "third-party forecast",
+      "state": "unavailable",
+      "note": "No licensed automated redistribution feed configured."
+    },
+    {
+      "id": "silver_bulletin",
+      "label": "Silver Bulletin",
+      "kind": "third-party forecast",
+      "state": "unavailable",
+      "note": "No licensed automated redistribution feed configured."
+    },
+    {
+      "id": "ddhq",
+      "label": "Decision Desk HQ",
+      "kind": "third-party forecast",
+      "state": "unavailable",
+      "note": "No licensed automated redistribution feed configured."
+    },
+    {
+      "id": "fec",
+      "label": "Federal Election Commission",
+      "kind": "campaign finance",
+      "state": "unavailable",
+      "url": "https://www.fec.gov/data/",
+      "note": "Adapter boundary implemented; current API feed/credential not configured."
+    },
+    {
+      "id": "campaign_signals",
+      "label": "Campaign signals",
+      "kind": "qualitative intelligence",
+      "state": "unavailable",
+      "note": "No current structured signal import configured; model effect remains NONE."
+    },
+    {
+      "id": "results",
+      "label": "Election results",
+      "kind": "actual results",
+      "state": "unavailable",
+      "note": "Pre-election. No live results source is configured or implied."
+    }
+  ]
+}
