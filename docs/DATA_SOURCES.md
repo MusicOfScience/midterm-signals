@@ -1,14 +1,14 @@
-# Data sources
+# Data sources and provenance
 
-MIDTERM SIGNALS prefers public, stable and attributable sources. Raw observations are dated and source-controlled before they can affect a forecast.
+The v0.2 production baseline reads four public, machine-readable input files from `ElectIndex/26_us_forecast_data`:
 
-## Current numerical inputs
+- `races.csv` — current 2026 House/Senate race definitions, candidates, incumbency and ballot structure;
+- `historical.csv` — 2016/2020/2024 presidential results mapped onto the 2026 districts/states;
+- `gcb_polls.csv` — generic congressional ballot observations;
+- `race_polls.csv` — race-specific polling observations.
 
-- **Track the Vote — generic congressional ballot**: https://www.trackthevote.net/generic-ballot. Snapshot 2026-10-12: D 49.3%, R 40.7%, D+8.7; 11 polls in current average. Used as a national House vote proxy.
-- **Track the Vote — Senate polling**: https://www.trackthevote.net/senate. Snapshot 2026-10-12. Public Senate polling margins; qualitative site text is not ingested.
-- **Track the Vote — presidential approval**: https://www.trackthevote.net/. Snapshot 2026-10-12: net approval −22.5. Descriptive only; model coefficient is zero.
-- **Cook Political Report — House ratings**: https://www.cookpolitical.com/ratings/house-race-ratings. Snapshot 2026-10-09. Public category counts and non-Solid race list form the current-map prior. No automated Cook scraping, subscriber-only analysis or all-seat proprietary PVI product is reproduced.
-- **Cook Political Report — Senate ratings**: https://www.cookpolitical.com/ratings/senate-race-ratings. Snapshot 2026-10-06. Public category information provides race priors.
-- **U.S. House historical election statistics**: https://history.house.gov/Institution/Election-Statistics/Election-Statistics/. Used for coarse historical House vote-to-seat calibration.
+At the start of each run MIDTERM SIGNALS resolves the upstream `main` branch to an exact Git commit SHA and performs all four reads against that immutable SHA. The combined raw bytes are hashed and written into `forecast.json`/`status.json`.
 
-A failed source check must never become a new observation. The last valid immutable snapshot remains identifiable and materially stale data becomes a publication warning rather than a silent zero.
+The upstream repository is used as a curated **input mirror**. MIDTERM SIGNALS does not import its forecast probabilities, Monte Carlo results or model code. Numerical transformations are defined in this repository.
+
+This architecture is deliberately replaceable: source-specific adapters can later promote primary FEC, Census, official candidate/ballot and pollster releases while preserving the same provenance contract.
