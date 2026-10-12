@@ -4,23 +4,29 @@ Open, auditable probabilistic analysis for the **2026 United States midterm elec
 
 **Live site:** https://midterm-signals.pages.dev
 
-## Current forecast
+## Production baseline
 
-Model **v0.1** is an operational, provisional production baseline using a dated **12 October 2026** evidence snapshot.
+MIDTERM SIGNALS v0.2 publishes a live numerical baseline for **all 435 House races** and every 2026 Senate contest. It produces race-level Democratic/Republican win probabilities, predicted two-party vote shares, chamber seat distributions, control probabilities, tipping-point races, battleground rankings and immutable forecast history.
 
-The published system includes House expected/median seats and control probability; Senate expected/median Democratic-caucus seats and control probability; correlated joint-control probabilities; all 435 House seats in chamber arithmetic; the 76 non-Solid House races as explicit map priors; all 35 Senate contests; polling observations, provenance, uncertainty intervals and immutable forecast history.
+The numerical pipeline consumes four public input tables from the `ElectIndex/26_us_forecast_data` repository: current race/candidate definitions, historical presidential results on the 2026 district map, generic-ballot polls and race polls. Every refresh pins those inputs to one upstream Git commit and records a combined SHA-256. MIDTERM SIGNALS does **not** consume that repository's forecast outputs or code.
 
-The model is intentionally explicit about its remaining limitation: this is **not yet the final district-level backtested model**. See `docs/MODEL.md` and `docs/BACKTESTING.md`.
+## Model contract
 
-## Analytical contract
+The v0.2 baseline combines:
 
-MIDTERM SIGNALS keeps raw observations, polling aggregation, election forecasting, third-party analysis, qualitative campaign/news intelligence, scenarios and actual results separate. Qualitative text and LLM judgement cannot silently alter numerical probabilities.
+- district/state partisan lean from 2016, 2020 and 2024 presidential results, centred on the national result;
+- a recency-, quality- and sample-weighted 35-day generic congressional ballot;
+- a modest incumbency term;
+- nominee-matched race polling from the last 55 days when available;
+- 30,000 Monte Carlo chamber simulations with correlated national error.
 
-Additional rules: reproducible inputs and deterministic model runs; explicit provenance and hashes; immutable published snapshots; no hidden manual probability adjustments; no retuning because an output feels surprising; missing observations remain missing; failed fetches create source-health information rather than fabricated observations; no paywall bypassing or reproduction of subscriber-only material.
+Raw observations, polling aggregation, election forecasting, third-party forecasts, qualitative campaign/news intelligence, scenarios and actual results remain separate. **Qualitative text and LLM judgement cannot silently alter numerical probabilities.**
 
-## Reproduce
+This is a transparent baseline, not an oracle. Candidate-quality effects beyond incumbency, third-party/RCV transfer behaviour and several structural variables remain candidates for separately validated future model versions rather than hidden hand-tuning.
 
-Requires Python 3.12+ and Node 22+; there are no third-party runtime packages.
+## Automation
+
+`.github/workflows/forecast.yml` refreshes twice daily and on relevant pushes. It builds and validates the forecast, then commits only derived JSON artifacts. Cloudflare Pages deploys `public/` automatically from `main`.
 
 ```bash
 python scripts/build_forecast.py
@@ -28,12 +34,18 @@ python scripts/validate_forecast.py
 node scripts/check.mjs
 ```
 
-or `npm test`.
+## Repository layout
+
+```text
+scripts/build_forecast.py      numerical model + pinned public inputs
+scripts/validate_forecast.py   fail-closed numerical invariants
+public/data/forecast.json      current production snapshot
+public/data/history/           immutable timestamped snapshots
+public/data/status.json        publication/run metadata
+public/                        static Cloudflare Pages application
+.github/workflows/             validation + scheduled forecast refresh
+```
 
 ## Deployment
 
-Cloudflare Pages deploys `public/` from production branch `main` with no build command. The numerical model is rebuilt and validated in GitHub Actions; derived artifacts are committed before the production UI consumes them.
-
-## Source boundary
-
-Current inputs use public snapshots from Track the Vote, public Cook Political Report ratings pages and public U.S. House historical election statistics. MIDTERM SIGNALS does **not** automate scraping Cook or reproduce subscriber-only analysis. See `docs/DATA_SOURCES.md`.
+Cloudflare Pages production branch: `main`; output directory: `public`; no build command is required.
