@@ -44,7 +44,16 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
       - name: Start static production server
-        run: python -m http.server 4173 --directory public > /tmp/midterm-server.log 2>&1 &
+        run: |
+          python -m http.server 4173 --directory public > /tmp/midterm-server.log 2>&1 &
+          for i in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:4173/ >/dev/null; then
+              exit 0
+            fi
+            sleep 0.25
+          done
+          cat /tmp/midterm-server.log
+          exit 1
       - name: Browser, mobile and accessibility tests
         env:
           BASE_URL: http://127.0.0.1:4173
