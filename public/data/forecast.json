@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-10-12T19:01:26.792775Z",
-  "data_refreshed_at": "2026-10-12T19:01:26.792775Z",
+  "generated_at": "2026-10-12T22:04:46.519203Z",
+  "data_refreshed_at": "2026-10-12T22:04:46.519203Z",
   "election_date": "2026-11-03",
   "days_to_election": 22,
   "summary": {
@@ -3697,8 +3697,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -3733,8 +3733,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -3830,8 +3830,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -3866,8 +3866,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -3983,8 +3983,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4120,7 +4120,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -4156,8 +4156,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4213,8 +4213,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4249,8 +4249,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4306,7 +4306,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -4342,8 +4342,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4419,7 +4419,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -4496,7 +4496,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -4553,7 +4553,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -4710,7 +4710,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     }
@@ -5209,7 +5209,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -5506,8 +5506,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5723,8 +5723,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0335,
-        "margin": 0.42
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -6120,7 +6120,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -6637,7 +6637,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -7334,8 +7334,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -7751,7 +7751,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -7908,7 +7908,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -8185,8 +8185,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.001,
-        "margin": 0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -8442,7 +8442,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -8756,8 +8756,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9050,8 +9050,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9467,8 +9467,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0037,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     }
   ],
@@ -9686,8 +9686,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0335,
-        "margin": 0.42
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9744,7 +9744,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -9821,7 +9821,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -9857,7 +9857,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -9893,7 +9893,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -10149,7 +10149,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -10883,7 +10883,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -10920,7 +10920,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -10977,7 +10977,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -11273,8 +11273,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11331,7 +11331,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -11387,8 +11387,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11485,7 +11485,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -11901,7 +11901,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -12598,8 +12598,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -12875,8 +12875,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.001,
-        "margin": 0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -12911,8 +12911,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -13049,7 +13049,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -13465,8 +13465,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0037,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -13522,8 +13522,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -13816,7 +13816,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -13852,7 +13852,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -14248,7 +14248,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -14285,7 +14285,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -14321,7 +14321,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -14554,7 +14554,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -14591,7 +14591,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -14668,7 +14668,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15184,7 +15184,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -15221,7 +15221,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15257,7 +15257,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15293,7 +15293,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15328,8 +15328,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15365,7 +15365,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15421,8 +15421,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15458,7 +15458,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15494,7 +15494,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15530,7 +15530,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15566,7 +15566,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15602,7 +15602,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15638,7 +15638,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15673,8 +15673,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15710,7 +15710,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15746,7 +15746,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15802,8 +15802,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15859,8 +15859,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15896,7 +15896,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15932,7 +15932,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -15967,8 +15967,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16003,8 +16003,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16040,7 +16040,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16075,8 +16075,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16112,7 +16112,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16148,7 +16148,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16184,7 +16184,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16220,7 +16220,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16291,8 +16291,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16328,7 +16328,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16400,7 +16400,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16436,7 +16436,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.02
+        "margin": 0.0
       }
     },
     {
@@ -16472,7 +16472,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16579,8 +16579,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16652,7 +16652,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16688,7 +16688,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16724,7 +16724,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16760,7 +16760,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16796,7 +16796,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16832,7 +16832,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16868,7 +16868,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -16903,8 +16903,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16939,8 +16939,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16976,7 +16976,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17012,7 +17012,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17048,7 +17048,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17084,7 +17084,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17120,7 +17120,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17192,7 +17192,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17228,7 +17228,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17264,7 +17264,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17300,7 +17300,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17372,7 +17372,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17408,7 +17408,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17480,7 +17480,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17516,7 +17516,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17588,7 +17588,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17624,7 +17624,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17660,7 +17660,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17696,7 +17696,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17732,7 +17732,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17768,7 +17768,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17804,7 +17804,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17880,8 +17880,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17917,7 +17917,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17953,7 +17953,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -17989,7 +17989,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18025,7 +18025,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18061,7 +18061,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18097,7 +18097,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18132,8 +18132,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18189,8 +18189,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18225,8 +18225,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18262,7 +18262,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18298,7 +18298,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18374,7 +18374,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -18411,7 +18411,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18447,7 +18447,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18483,7 +18483,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18519,7 +18519,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18555,7 +18555,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18591,7 +18591,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18627,7 +18627,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18662,8 +18662,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18699,7 +18699,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18734,8 +18734,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18771,7 +18771,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18807,7 +18807,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -18842,8 +18842,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18878,8 +18878,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18935,8 +18935,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18972,7 +18972,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -19007,8 +19007,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19043,8 +19043,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19140,8 +19140,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19176,8 +19176,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19212,8 +19212,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19289,7 +19289,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -19326,7 +19326,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -19361,8 +19361,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19398,7 +19398,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -19434,7 +19434,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -19469,8 +19469,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19546,7 +19546,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -19583,7 +19583,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -19619,7 +19619,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -19654,8 +19654,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19690,8 +19690,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19767,8 +19767,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19804,7 +19804,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -19839,8 +19839,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19876,7 +19876,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -19912,7 +19912,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -19948,7 +19948,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -19984,7 +19984,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20020,7 +20020,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20077,7 +20077,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20113,7 +20113,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20149,7 +20149,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20184,8 +20184,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20261,8 +20261,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20297,8 +20297,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20334,7 +20334,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20370,7 +20370,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20406,7 +20406,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20442,7 +20442,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20477,8 +20477,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20513,8 +20513,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20549,8 +20549,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20586,7 +20586,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20622,7 +20622,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20658,7 +20658,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20694,7 +20694,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20730,7 +20730,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20766,7 +20766,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20802,7 +20802,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20838,7 +20838,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20873,8 +20873,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20910,7 +20910,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20946,7 +20946,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -20982,7 +20982,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21018,7 +21018,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21054,7 +21054,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21090,7 +21090,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21126,7 +21126,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21162,7 +21162,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21198,7 +21198,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21234,7 +21234,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21270,7 +21270,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21305,8 +21305,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21342,7 +21342,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21378,7 +21378,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21414,7 +21414,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21449,8 +21449,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21486,7 +21486,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.02
+        "margin": 0.0
       }
     },
     {
@@ -21522,7 +21522,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21558,7 +21558,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21594,7 +21594,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21630,7 +21630,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21665,8 +21665,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21701,8 +21701,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21738,7 +21738,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21774,7 +21774,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21810,7 +21810,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21846,7 +21846,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21882,7 +21882,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -21918,7 +21918,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22054,7 +22054,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -22091,7 +22091,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22127,7 +22127,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22163,7 +22163,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22199,7 +22199,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22235,7 +22235,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22271,7 +22271,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22307,7 +22307,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22343,7 +22343,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22379,7 +22379,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22415,7 +22415,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22451,7 +22451,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22487,7 +22487,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22523,7 +22523,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22559,7 +22559,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22595,7 +22595,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22630,8 +22630,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22667,7 +22667,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22703,7 +22703,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22739,7 +22739,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22775,7 +22775,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22810,8 +22810,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22847,7 +22847,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22883,7 +22883,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -22940,7 +22940,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23056,8 +23056,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23093,7 +23093,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23129,7 +23129,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23164,8 +23164,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23221,7 +23221,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -23258,7 +23258,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23294,7 +23294,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23329,8 +23329,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23365,8 +23365,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23402,7 +23402,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23437,8 +23437,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23474,7 +23474,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23510,7 +23510,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23546,7 +23546,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23602,8 +23602,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23659,8 +23659,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23696,7 +23696,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23732,7 +23732,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23768,7 +23768,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23804,7 +23804,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23840,7 +23840,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23875,8 +23875,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23912,7 +23912,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -23988,7 +23988,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -24025,7 +24025,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24061,7 +24061,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24097,7 +24097,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24133,7 +24133,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24169,7 +24169,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24205,7 +24205,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24241,7 +24241,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24277,7 +24277,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24313,7 +24313,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24349,7 +24349,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24505,7 +24505,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -24563,7 +24563,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24719,7 +24719,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -24756,7 +24756,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24791,8 +24791,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24828,7 +24828,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -24863,8 +24863,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24899,8 +24899,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24996,8 +24996,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25032,8 +25032,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25089,8 +25089,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25125,8 +25125,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25202,7 +25202,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -25239,7 +25239,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -25274,8 +25274,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25310,8 +25310,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25347,7 +25347,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -25423,7 +25423,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -25480,8 +25480,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25517,7 +25517,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -25573,8 +25573,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25651,7 +25651,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -25687,7 +25687,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -25722,8 +25722,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25759,7 +25759,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -25795,7 +25795,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -25830,8 +25830,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25867,7 +25867,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -25923,8 +25923,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25960,7 +25960,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -25995,8 +25995,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26032,7 +26032,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26068,7 +26068,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26104,7 +26104,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26140,7 +26140,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26216,8 +26216,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0027,
-        "margin": -0.63
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26253,7 +26253,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.02
+        "margin": 0.0
       }
     },
     {
@@ -26288,8 +26288,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26365,8 +26365,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26401,8 +26401,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26438,7 +26438,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.02
+        "margin": 0.0
       }
     },
     {
@@ -26473,8 +26473,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26509,8 +26509,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26545,8 +26545,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26581,8 +26581,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26618,7 +26618,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26654,7 +26654,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26690,7 +26690,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26726,7 +26726,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26762,7 +26762,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26798,7 +26798,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26834,7 +26834,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26870,7 +26870,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26906,7 +26906,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26942,7 +26942,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -26978,7 +26978,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27014,7 +27014,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27090,8 +27090,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27167,7 +27167,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -27203,8 +27203,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27240,7 +27240,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27376,8 +27376,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27413,7 +27413,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27469,8 +27469,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27506,7 +27506,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27542,7 +27542,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27578,7 +27578,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27634,7 +27634,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -27671,7 +27671,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27707,7 +27707,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27743,7 +27743,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27779,7 +27779,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27815,7 +27815,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -27850,8 +27850,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27886,8 +27886,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27943,8 +27943,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27979,8 +27979,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28016,7 +28016,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28052,7 +28052,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28087,8 +28087,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28123,8 +28123,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28200,8 +28200,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28236,8 +28236,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28273,7 +28273,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28309,7 +28309,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28345,7 +28345,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28401,8 +28401,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28438,7 +28438,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28474,7 +28474,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28510,7 +28510,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28546,7 +28546,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28581,8 +28581,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28618,7 +28618,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28714,8 +28714,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0622,
-        "margin": 0.8
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28751,7 +28751,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28787,7 +28787,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28823,7 +28823,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28859,7 +28859,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28895,7 +28895,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -28951,7 +28951,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -28987,8 +28987,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29024,7 +29024,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29080,8 +29080,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29117,7 +29117,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29153,7 +29153,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29189,7 +29189,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29225,7 +29225,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29261,7 +29261,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29296,8 +29296,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29332,8 +29332,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29369,7 +29369,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29405,7 +29405,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29521,8 +29521,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29557,8 +29557,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29594,7 +29594,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29630,7 +29630,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29666,7 +29666,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29702,7 +29702,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29738,7 +29738,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29795,7 +29795,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29831,7 +29831,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29867,7 +29867,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29903,7 +29903,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -29939,7 +29939,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30015,7 +30015,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -30052,7 +30052,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30088,7 +30088,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30123,8 +30123,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30180,7 +30180,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -30217,7 +30217,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30310,7 +30310,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30346,7 +30346,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30381,8 +30381,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30418,7 +30418,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30454,7 +30454,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30490,7 +30490,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30546,8 +30546,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30603,8 +30603,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30640,7 +30640,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30676,7 +30676,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30712,7 +30712,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30748,7 +30748,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30844,8 +30844,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30881,7 +30881,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30917,7 +30917,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30953,7 +30953,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -30989,7 +30989,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31025,7 +31025,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31060,8 +31060,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31096,8 +31096,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31132,8 +31132,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31168,8 +31168,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31205,7 +31205,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31241,7 +31241,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31276,8 +31276,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31333,8 +31333,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31370,7 +31370,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31406,7 +31406,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31442,7 +31442,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31477,8 +31477,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31514,7 +31514,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31570,8 +31570,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31627,7 +31627,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -31664,7 +31664,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31700,7 +31700,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31735,8 +31735,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31793,7 +31793,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31890,7 +31890,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -31947,7 +31947,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32024,7 +32024,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32100,7 +32100,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -32136,8 +32136,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32173,7 +32173,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32209,7 +32209,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32305,8 +32305,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32398,8 +32398,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32435,7 +32435,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32471,7 +32471,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32507,7 +32507,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32543,7 +32543,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32640,7 +32640,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32676,7 +32676,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32712,7 +32712,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32768,8 +32768,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32804,8 +32804,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32840,8 +32840,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32877,7 +32877,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32913,7 +32913,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32949,7 +32949,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -32985,7 +32985,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -33021,7 +33021,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -33117,8 +33117,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33154,7 +33154,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -33189,8 +33189,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33226,7 +33226,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -33262,7 +33262,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -33297,8 +33297,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33333,8 +33333,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33369,8 +33369,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33406,7 +33406,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -33442,7 +33442,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -33478,7 +33478,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     }
   ],
@@ -33489,7 +33489,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-10-12T19:01:26.792775Z",
+      "last_success": "2026-10-12T22:04:46.519203Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -44218,7 +44218,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-10-12T19:01:26.792775Z",
+    "retrieved_at": "2026-10-12T22:04:46.519203Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -44231,15 +44231,69 @@
   ],
   "change_summary": {
     "comparable_previous_snapshot": true,
-    "house_control_probability": 0.0011,
-    "senate_control_probability": 0.0057,
-    "house_expected_dem_seats": 0.1,
+    "house_control_probability": 0.0,
+    "senate_control_probability": 0.0,
+    "house_expected_dem_seats": 0.0,
     "senate_expected_dem_seats": 0.0,
-    "generic_ballot_d_minus_r": 0.02,
+    "generic_ballot_d_minus_r": 0.0,
     "changed_inputs": [],
-    "previous_generated_at": "2026-10-12T14:11:40.059940Z"
+    "previous_generated_at": "2026-10-12T19:01:26.792775Z"
   },
   "briefing": {
     "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 92% probability of House control and a 69% probability of Senate control. The current weighted generic congressional ballot is D+7.7. The House 80% Democratic-seat interval is 219\u2013253; the Senate interval is 49\u201354."
-  }
+  },
+  "history_summaries": [
+    {
+      "file": "2026-10-12T220446Z.json",
+      "generated_at": "2026-10-12T22:04:46.519203Z",
+      "house": 0.9244,
+      "senate": 0.6938,
+      "house_seats": 235.4,
+      "senate_seats": 51.5,
+      "generic_ballot_d_minus_r": 7.73,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "c45b8d08a2e68c80c4fd858a82a61cb7dd1f80ac",
+      "input_sha256": "1c7c4442d5474aae875e8035f47d004aa969d6a8584f6b64cbf254e88148ebb3",
+      "changed_inputs": []
+    },
+    {
+      "file": "2026-10-12T190126Z.json",
+      "generated_at": "2026-10-12T19:01:26.792775Z",
+      "house": 0.9244,
+      "senate": 0.6938,
+      "house_seats": 235.4,
+      "senate_seats": 51.5,
+      "generic_ballot_d_minus_r": 7.73,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "c45b8d08a2e68c80c4fd858a82a61cb7dd1f80ac",
+      "input_sha256": "1c7c4442d5474aae875e8035f47d004aa969d6a8584f6b64cbf254e88148ebb3",
+      "changed_inputs": []
+    },
+    {
+      "file": "2026-10-12T141140Z.json",
+      "generated_at": "2026-10-12T14:11:40.059940Z",
+      "house": 0.9233,
+      "senate": 0.6881,
+      "house_seats": 235.3,
+      "senate_seats": 51.5,
+      "generic_ballot_d_minus_r": 7.71,
+      "model": "MIDTERM SIGNALS baseline-v0.2",
+      "upstream_commit": "825afc379e34d9f2cd0b0edc444ff3fa1cd63cd0",
+      "input_sha256": "cc10e71f1ab16a749f2f5c32427555746691bfc0cd05178b1f1db94123f5645e",
+      "changed_inputs": []
+    },
+    {
+      "file": "2026-10-12.json",
+      "generated_at": null,
+      "house": null,
+      "senate": null,
+      "house_seats": null,
+      "senate_seats": null,
+      "generic_ballot_d_minus_r": null,
+      "model": null,
+      "upstream_commit": null,
+      "input_sha256": null,
+      "changed_inputs": []
+    }
+  ]
 }
