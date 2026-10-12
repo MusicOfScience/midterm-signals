@@ -32,6 +32,8 @@ npm test
 python -m py_compile scripts/build_forecast.py scripts/validate_forecast.py
 ```
 
+GitHub Actions additionally runs Chromium end-to-end flows, a phone viewport check and automated accessibility checks before production promotion.
+
 A networked production refresh is run by GitHub Actions:
 
 ```bash
