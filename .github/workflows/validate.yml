@@ -70,6 +70,10 @@ jobs:
           BASE_URL: http://127.0.0.1:4173
           TEST_ARTIFACT_DIR: test-artifacts
         run: node tests/e2e.mjs
+      - name: Adversarial production-readiness checks
+        env:
+          BASE_URL: http://127.0.0.1:4173
+        run: node tests/adversarial.mjs
       - name: Lighthouse quality measurement
         run: |
           npx lighthouse http://127.0.0.1:4173/ --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=test-artifacts/lighthouse.json
