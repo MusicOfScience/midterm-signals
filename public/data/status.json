@@ -3,9 +3,9 @@
   "project": "MIDTERM SIGNALS",
   "release": "PROD v1.0",
   "election_date": "2026-11-03",
-  "generated_at": "2026-10-13T02:25:15.288854Z",
+  "generated_at": "2026-10-13T03:01:50.241617Z",
   "production_forecast": "published",
-  "publication_label": "PROD v1.0 \u00b7 LIVE BASELINE",
+  "publication_label": "PROD v1.0 · LIVE BASELINE",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "simulations": 30000,
   "house_all_435_accounted_for": true,
@@ -13,7 +13,7 @@
   "upstream_commit": "6c9f1f4d3f2b8379f64ab823f26c5271d4f73b15",
   "input_sha256": "3337df346ce0f0ae4ac163cb5e9352aec15656f398a8fcf5b7bcd1f414638822",
   "qualitative_news_changes_probabilities": false,
-  "source_issues": 8,
+  "source_issues": 1,
   "limitations": [
     "No leakage-free 2018/2022 production replays are available yet; historical Brier/log-loss metrics are therefore withheld.",
     "Candidate-quality effects beyond incumbency are not separately estimated.",
@@ -21,5 +21,11 @@
     "The current production input bundle does not include validated presidential-approval, economic, FEC or licensed external-forecaster feeds.",
     "The nowcast and election-day forecast do not yet use a separate explicit time-evolution process.",
     "Correlated national error is simulated, but cross-race correlation remains deliberately simple rather than a full geographic covariance model."
-  ]
+  ],
+  "enrichment_generated_at": "2026-10-13T03:01:59.686255Z",
+  "external_forecasters_automated": 1,
+  "external_forecasters_tracked": 5,
+  "fec_state": "current",
+  "campaign_signals": 120,
+  "source_constraints": 4
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T02:25:15.288854Z",
+  "generated_at": "2026-10-13T03:01:50.241617Z",
   "release": "PROD v1.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "upstream_commit": "6c9f1f4d3f2b8379f64ab823f26c5271d4f73b15",
@@ -10,9 +10,25 @@
   "senate_contests": 35,
   "generic_ballot_polls": 51,
   "static_routes": 482,
-  "history_summaries": 13,
+  "history_summaries": 14,
   "source_states": {
     "current": 3,
     "unavailable": 8
+  },
+  "enrichment": {
+    "checks": "passed",
+    "numerical_forecast_unchanged": true,
+    "inside_elections_state": "current",
+    "inside_elections_ratings": 470,
+    "fec_state": "current",
+    "fec_matched_candidates": 849,
+    "public_money_records": 202,
+    "campaign_signals": 120,
+    "access_constraints": [
+      "Cook Political Report",
+      "Sabato's Crystal Ball",
+      "Silver Bulletin",
+      "Decision Desk HQ"
+    ]
   }
 }

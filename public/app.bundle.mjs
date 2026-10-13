@@ -221,3 +221,94 @@ window.addEventListener('popstate',()=>setTimeout(__maybeLoadEnhancements,0));
 document.addEventListener('click',()=>setTimeout(__maybeLoadEnhancements,0),{capture:true,passive:true});
 document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;const nav=document.querySelector('#primaryNav'),toggle=document.querySelector('#navToggle');if(nav?.classList.contains('open')){nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false');toggle?.focus()}});
 globalThis.__MIDTERM_READY__=boot().then(()=>{document.querySelector('.site-footer')?.removeAttribute('hidden');setTimeout(__maybeLoadEnhancements,0);return true}).catch(err=>{console.error(err);const main=document.querySelector('#content');if(main)main.innerHTML='<div class="error-state"><h2>Application failed to load</h2><p>The static shell is available, but the interactive application could not be initialised.</p></div>';throw err});
+
+// PROD v1.0.1 contextual-data polish. These overrides operate only on
+// non-model layers: external forecasters, FEC finance and campaign signals.
+const __renderHomeBeforeEnrichment=renderHome;
+renderHome=function(){
+  __renderHomeBeforeEnrichment();
+  const ext=MODEL.external_forecasters||{};
+  const card=$$('#content article').find(x=>x.querySelector('.eyebrow')?.textContent?.trim()==='FORECASTER DISAGREEMENT');
+  if(card){
+    const automated=Number(ext.configured_count||0),manual=Number(ext.manual_count||0),ratings=Number(ext.race_ratings_count||0);
+    const h=card.querySelector('h2');
+    if(h)h.textContent=automated?`${automated} automated source${automated===1?'':'s'} · ${ratings} native race ratings`:`${ext.tracked_count||5} forecasters tracked`;
+    const p=card.querySelector('p');
+    if(p)p.textContent=`Native scales are preserved. ${manual} source${manual===1?'':'s'} remain manual/link boundaries; licensed sources are not scraped or reconstructed.`;
+  }
+  const signalCard=$$('#content article').find(x=>x.querySelector('.eyebrow')?.textContent?.trim()==='CAMPAIGN SIGNALS');
+  if(signalCard){
+    const all=MODEL.campaign_signals||[],latest=all[0]?.date;
+    const p=signalCard.querySelector('p');
+    if(p)p.textContent=all.length?`Structured polling, rating-change and FEC records; latest ${latest||'date unavailable'}. Every item declares its model effect.`:'No current structured records. No qualitative text is substituted.';
+  }
+};
+
+renderForecasterStatus=function(){
+  const list=MODEL.external_forecasters?.sources||[];
+  if(!list.length)return empty('No external-forecaster source catalogue is present in this snapshot.');
+  return `<div class="source-list">${list.map(s=>`<div class="source-item"><strong>${esc(s.name)}</strong><div><small>${esc(s.note||s.mode||'')}</small>${s.url?`<br><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`:''}${s.ratings_count!=null?`<br><small>${esc(s.ratings_count)} native race ratings · updated ${esc(s.last_updated||'date unavailable')}</small>`:''}</div>${sourceState({state:s.state||'unavailable'})}</div>`).join('')}</div>`;
+};
+
+renderRaceForecasters=function(ext){
+  const catalog=MODEL.external_forecasters?.sources||[];
+  const names=['Cook Political Report','Inside Elections',"Sabato's Crystal Ball",'Silver Bulletin','Decision Desk HQ'];
+  return `<div class="source-list">${names.map(name=>{
+    const x=ext?.[name]||{},cat=catalog.find(s=>s.name===name)||{};
+    const state=x.state||cat.state||(x.rating?'current':'unavailable');
+    const detail=x.rating?`${x.rating}${x.updated_at?` · ${x.updated_at}`:''}`:(cat.note||'No current redistributable race rating configured.');
+    const url=x.source||cat.url;
+    return `<div class="source-item"><strong>${esc(name)}</strong><div><small>${esc(detail)}</small>${url?`<br><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`:''}</div>${sourceState({state})}</div>`;
+  }).join('')}</div>`;
+};
+
+renderMoney=function(m){
+  const rows=m?.candidates||[];
+  if(!rows.length){
+    if(m?.receipts!=null)return `<div class="facts-grid"><div class="fact"><b>$${Number(m.receipts).toLocaleString()}</b><span>receipts</span></div><div class="fact"><b>${m.cash_on_hand!=null?`$${Number(m.cash_on_hand).toLocaleString()}`:'—'}</b><span>cash on hand</span></div><div class="fact"><b>${m.disbursements!=null?`$${Number(m.disbursements).toLocaleString()}`:'—'}</b><span>spending</span></div><div class="fact"><b>${esc(m.coverage_through||'—')}</b><span>reporting through</span></div></div>`;
+    return empty('No authoritative FEC summary is matched to the current candidates in this race. Missing finance data remain missing.');
+  }
+  return `<div class="source-list">${rows.map(x=>`<div class="source-item"><strong>${esc(x.candidate)} <span class="tag ${String(x.party||'').toLowerCase()}">${esc(x.party||'')}</span></strong><div><small>Receipts $${Number(x.receipts||0).toLocaleString()} · spending $${Number(x.disbursements||0).toLocaleString()} · cash $${Number(x.cash_on_hand||0).toLocaleString()} · through ${esc(x.coverage_through||'—')}</small>${x.source?`<br><a href="${esc(x.source)}" target="_blank" rel="noopener noreferrer">FEC record ↗</a>`:''}</div>${sourceState({state:m.state||'current'})}</div>`).join('')}${m.coverage_mismatch?'<p class="data-note">Reporting periods differ between candidates; dollar totals are not presented as a like-for-like comparison without this warning.</p>':''}</div>`;
+};
+
+renderMoneyCentre=function(){
+  const money=MODEL.money||{},configured=['current','stale'].includes(money.state),rows=money.records||[];
+  $('#content').innerHTML=`${pageHead('MONEY / FEC','Official campaign-finance summaries, reporting periods intact','MIDTERM SIGNALS now reads the Federal Election Commission public bulk data directly. Money remains contextual: it does not silently change forecast probabilities.')}
+  <section class="panel panel-pad"><div class="section-head"><div><div class="eyebrow">FEC ADAPTER</div><h2>${configured?`${rows.length} matched candidate records in the public battleground index`:'Official feed unavailable'}</h2><p>Latest reporting coverage: ${esc(money.latest_coverage||'Unavailable')} · source mode: ${esc(money.mode||'official bulk data')}</p></div>${sourceState({state:money.state||'unavailable'})}</div>${configured?renderMoneyTable(rows):empty('The official FEC bulk source is currently unavailable and no usable last-known-good snapshot is present.')}</section>
+  <section class="section panel panel-pad"><div class="eyebrow">COMPARABILITY RULE</div><h2>Coverage dates travel with every dollar figure.</h2><p class="prose">Candidates can have different filing schedules. MIDTERM SIGNALS therefore keeps each record’s coverage-through date visible and does not silently compare mismatched periods. The FEC itself cautions that current-campaign summaries can differ in timeliness and can include transfers between authorised committees.</p><p><a href="https://www.fec.gov/campaign-finance-data/current-campaigns-house-and-senate-file-description/" target="_blank" rel="noopener noreferrer">FEC file methodology ↗</a></p></section>`;
+};
+
+renderMoneyTable=function(rows){
+  if(!rows.length)return empty('No matched FEC records in the current public battleground index.');
+  return `<div class="source-list">${rows.map(x=>`<div class="source-item"><strong>${esc(x.race_code)} · ${esc(x.candidate)}</strong><div><small>Receipts $${Number(x.receipts||0).toLocaleString()} · spending $${Number(x.disbursements||0).toLocaleString()} · cash $${Number(x.cash_on_hand||0).toLocaleString()} · through ${esc(x.coverage_through||'—')}</small>${x.source?`<br><a href="${esc(x.source)}" target="_blank" rel="noopener noreferrer">FEC candidate record ↗</a>`:''}</div><span class="tag ${String(x.party||'').toLowerCase()}">${esc(x.party||'')}</span></div>`).join('')}</div>`;
+};
+
+renderSignals=function(signals=MODEL.campaign_signals||[]){
+  if(!signals.length)return empty('No structured campaign-signal records are present. No qualitative news is being substituted or smuggled into the probability model.');
+  return `<div class="signal-list">${signals.map(s=>`<div class="signal-item"><strong>${dayFmt(s.date)}</strong><div><b>${esc(s.category)}</b> · ${esc(s.geography||s.race_code||'National')}<br><small>${esc(s.description)}</small>${s.source?`<br><a href="${esc(s.source)}" target="_blank" rel="noopener noreferrer">${esc(s.source_name||'Source')} ↗</a>`:''}</div><span class="fresh ${s.model_effect&&s.model_effect!=='NONE'?'stale':'current'}">MODEL EFFECT: ${esc(s.model_effect||'NONE')}</span></div>`).join('')}</div>`;
+};
+
+renderSignalsPage=function(){
+  const all=MODEL.campaign_signals||[],categories=[...new Set(all.map(x=>x.category).filter(Boolean))].sort();
+  $('#content').innerHTML=`${pageHead('CAMPAIGN SIGNALS','Structured election intelligence, kept in its lane','Polling observations, external rating changes, FEC reporting and candidate-roster changes are recorded as sourced events. Qualitative/external context defaults to MODEL EFFECT: NONE.')}
+  <div class="toolbar"><input id="signalQ" type="search" placeholder="Search race, source or description"><select id="signalCategory"><option value="all">All categories</option>${categories.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('')}</select><select id="signalEffect"><option value="all">All model effects</option><option value="NONE">No model effect</option><option value="POLL INPUT">Quantitative poll input</option></select><div></div><button id="signalReset" class="button secondary" type="button">Reset</button></div>
+  <div id="signalSummary" class="filter-summary"></div><section class="panel panel-pad"><div id="signalResults"></div></section>`;
+  const q=$('#signalQ'),cat=$('#signalCategory'),effect=$('#signalEffect'),results=$('#signalResults'),summary=$('#signalSummary');
+  const run=()=>{const needle=q.value.trim().toLowerCase();const rows=all.filter(s=>(cat.value==='all'||s.category===cat.value)&&(effect.value==='all'||(s.model_effect||'NONE')===effect.value)&&(!needle||`${s.race_code||''} ${s.geography||''} ${s.source_name||''} ${s.description||''}`.toLowerCase().includes(needle)));summary.textContent=`Showing ${rows.length} of ${all.length} structured signals`;results.innerHTML=renderSignals(rows)};
+  [q,cat,effect].forEach(x=>x.addEventListener(x===q?'input':'change',run));$('#signalReset').addEventListener('click',()=>{q.value='';cat.value='all';effect.value='all';run()});run();
+};
+
+const __setupChromeBeforeEnrichment=setupChrome;
+setupChrome=function(){
+  __setupChromeBeforeEnrichment();
+  const source=MODEL.source_health||SOURCES?.sources||[];
+  const operational=source.filter(s=>['stale','unavailable','degraded'].includes(s.state||s.health));
+  const constrained=source.filter(s=>['restricted','manual'].includes(s.state||s.health));
+  const chip=$('#healthChip');
+  if(chip){
+    chip.classList.remove('current','degraded','unavailable');
+    chip.classList.add(operational.length?'degraded':'current');
+    const label=chip.querySelector('span:last-child');
+    if(label)label.textContent=operational.length?`${operational.length} data issue${operational.length===1?'':'s'}`:constrained.length?`Data current · ${constrained.length} access constraint${constrained.length===1?'':'s'}`:'Data current';
+  }
+};
