@@ -2,9 +2,19 @@ name: Admit historical 2018 corpus
 
 on:
   workflow_dispatch:
+  push:
+    branches: [historical-2018-admission]
+    paths:
+      - "scripts/acquire_historical_2018.py"
+      - "scripts/model_lab.py"
+      - ".github/workflows/historical-2018.yml"
 
 permissions:
   contents: write
+
+concurrency:
+  group: historical-2018-${{ github.ref_name }}
+  cancel-in-progress: false
 
 jobs:
   acquire:
@@ -40,7 +50,7 @@ jobs:
         run: |
           git config user.name "midterm-signals-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add historical/2018/ public/data/model-lab.json
+          git add historical/2018/cycle.json historical/2018/races.csv historical/2018/polls.csv historical/2018/results.csv public/data/model-lab.json
           if git diff --cached --quiet; then
             echo "No historical corpus change"
             exit 0
