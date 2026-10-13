@@ -6,6 +6,7 @@ on:
     branches: [historical-2022-admission]
     paths:
       - "scripts/acquire_historical_2022.py"
+      - "scripts/probe_2022_poll_archive.py"
       - ".github/workflows/historical-2022.yml"
 
 permissions:
@@ -24,7 +25,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Compile acquisition code
-        run: python -m py_compile scripts/acquire_historical_2022.py
-      - name: Probe 2022 block-level structural sources
-        run: python scripts/acquire_historical_2022.py --probe
+      - name: Compile acquisition probes
+        run: python -m py_compile scripts/acquire_historical_2022.py scripts/probe_2022_poll_archive.py
+      - name: Locate and verify election-week 2022 poll snapshots
+        run: python scripts/probe_2022_poll_archive.py
