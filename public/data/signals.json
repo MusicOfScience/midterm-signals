@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T04:20:58.253840Z",
+  "generated_at": "2026-10-13T05:54:04.021253Z",
   "signals": [
     {
       "id": "poll-national-Morning Consult-2026-10-11-6.5",
@@ -1087,6 +1087,20 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "fec-S4MI00595-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "MI-SEN",
+      "geography": "MI-SEN",
+      "description": "FEC summary through 2026-09-30 records $10.9m receipts, $6.7m spending and $4.4m cash on hand for Mike Rogers.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S4MI00595/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "fec-S6NM01186-2026-09-30",
       "date": "2026-09-30",
       "category": "FUNDRAISING",
@@ -1351,6 +1365,20 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "fec-H2GA12121-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "GA-12",
+      "geography": "GA-12",
+      "description": "FEC summary through 2026-09-30 records $1.2m receipts, $938k spending and $1.4m cash on hand for Rick Allen.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/H2GA12121/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "normal",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "fec-H6NC07196-2026-09-30",
       "date": "2026-09-30",
       "category": "FUNDRAISING",
@@ -1527,32 +1555,6 @@
       "race_code": "FL-14",
       "geography": "FL-14",
       "description": "Inside Elections changed FL-14 from Tilt Republican to Toss-up.",
-      "source_name": "Inside Elections",
-      "source": "https://insideelections.com/ratings/house/",
-      "provenance": "Inside Elections public ratings API",
-      "model_effect": "NONE",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "rating-inside-FL-27-2026-09-17-Lean Republican",
-      "date": "2026-09-17",
-      "category": "RATING CHANGE",
-      "race_code": "FL-27",
-      "geography": "FL-27",
-      "description": "Inside Elections changed FL-27 from Likely Republican to Lean Republican.",
-      "source_name": "Inside Elections",
-      "source": "https://insideelections.com/ratings/house/",
-      "provenance": "Inside Elections public ratings API",
-      "model_effect": "NONE",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "rating-inside-IA-02-2026-09-17-Tilt Republican",
-      "date": "2026-09-17",
-      "category": "RATING CHANGE",
-      "race_code": "IA-02",
-      "geography": "IA-02",
-      "description": "Inside Elections changed IA-02 from Lean Republican to Tilt Republican.",
       "source_name": "Inside Elections",
       "source": "https://insideelections.com/ratings/house/",
       "provenance": "Inside Elections public ratings API",

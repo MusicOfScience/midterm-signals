@@ -1,18 +1,43 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-13T05:40:00Z",
+  "generated_at": "2026-10-13T05:54:05.970907Z",
   "product": "MIDTERM SIGNALS MODEL LAB",
   "evaluation_only": true,
   "retuning_allowed": false,
   "model_contract": {
     "id": "baseline-v1.0-frozen",
     "origin": "v0.2 prospective coefficients, carried unchanged into PROD v1.0",
-    "structural_weights": [0.05, 0.2, 0.75],
-    "incumbency_margin": {"house": 1.0, "senate": 1.15},
-    "generic_ballot": {"window_days": 35, "half_life_days": 11.0},
-    "race_polls": {"window_days": 55, "half_life_days": 13.0, "blend_scale": 0.27, "blend_min": 0.2, "blend_max": 0.86, "freshness_days": 28.0},
-    "sigma": {"house": 6.3, "senate": 7.2, "poll_reduction": 0.42, "floor": 3.1},
-    "probability_clamp": [0.001, 0.999],
+    "structural_weights": [
+      0.05,
+      0.2,
+      0.75
+    ],
+    "incumbency_margin": {
+      "house": 1.0,
+      "senate": 1.15
+    },
+    "generic_ballot": {
+      "window_days": 35,
+      "half_life_days": 11.0
+    },
+    "race_polls": {
+      "window_days": 55,
+      "half_life_days": 13.0,
+      "blend_scale": 0.27,
+      "blend_min": 0.2,
+      "blend_max": 0.86,
+      "freshness_days": 28.0
+    },
+    "sigma": {
+      "house": 6.3,
+      "senate": 7.2,
+      "poll_reduction": 0.42,
+      "floor": 3.1
+    },
+    "probability_clamp": [
+      0.001,
+      0.999
+    ],
     "rule": "No replay result may alter this contract or the live forecast.",
     "state": "verified",
     "contract_fingerprint_sha256": "69ce024a0e487b6e963f8acf38bd315266f0fd3fca65ba8c60603a0a1c261da1",
@@ -20,7 +45,13 @@
     "missing_markers": [],
     "blocking": false
   },
-  "checkpoints_days_to_election": [60, 30, 14, 7, 1],
+  "checkpoints_days_to_election": [
+    60,
+    30,
+    14,
+    7,
+    1
+  ],
   "metric_definitions": {
     "brier": "Mean squared error of Democratic win probability against binary outcome; lower is better.",
     "log_loss": "Mean negative log likelihood; strongly penalises confident errors; lower is better.",
@@ -37,8 +68,41 @@
     "Replay output cannot mutate the live forecast or model contract."
   ],
   "cycles": [
-    {"cycle": 2018, "election_date": "2018-11-06", "corpus_state": "awaiting_verified_inputs", "provenance": [], "checkpoints": [], "state": "unavailable", "blocking_reasons": ["missing:races.csv", "missing:polls.csv", "missing:results.csv", "unverified_national_presidential_margins", "provenance_not_admitted"]},
-    {"cycle": 2022, "election_date": "2022-11-08", "corpus_state": "awaiting_verified_inputs", "provenance": [], "checkpoints": [], "state": "unavailable", "blocking_reasons": ["missing:races.csv", "missing:polls.csv", "missing:results.csv", "unverified_national_presidential_margins", "provenance_not_admitted"]}
+    {
+      "cycle": 2018,
+      "election_date": "2018-11-06",
+      "corpus_state": "awaiting_verified_inputs",
+      "provenance": [],
+      "checkpoints": [],
+      "state": "unavailable",
+      "blocking_reasons": [
+        "missing:races.csv",
+        "missing:polls.csv",
+        "missing:results.csv",
+        "unverified_national_presidential_margins",
+        "provenance_not_admitted"
+      ]
+    },
+    {
+      "cycle": 2022,
+      "election_date": "2022-11-08",
+      "corpus_state": "awaiting_verified_inputs",
+      "provenance": [],
+      "checkpoints": [],
+      "state": "unavailable",
+      "blocking_reasons": [
+        "missing:races.csv",
+        "missing:polls.csv",
+        "missing:results.csv",
+        "unverified_national_presidential_margins",
+        "provenance_not_admitted"
+      ]
+    }
   ],
-  "summary": {"state": "unscored", "scored_cycles": 0, "requested_cycles": 2, "message": "Historical performance remains unpublished until each cycle passes the leakage-free corpus gates."}
+  "summary": {
+    "state": "unscored",
+    "scored_cycles": 0,
+    "requested_cycles": 2,
+    "message": "Historical performance remains unpublished until each cycle passes the leakage-free corpus gates."
+  }
 }

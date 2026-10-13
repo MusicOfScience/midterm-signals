@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-10-13T04:20:48.561731Z",
-  "data_refreshed_at": "2026-10-13T04:20:48.561731Z",
+  "generated_at": "2026-10-13T05:53:57.888495Z",
+  "data_refreshed_at": "2026-10-13T05:53:57.888495Z",
   "election_date": "2026-11-03",
   "days_to_election": 21,
   "summary": {
@@ -13252,16 +13252,16 @@
             "party": "R",
             "fec_candidate_id": "S4MI00595",
             "fec_name": "ROGERS, MICHAEL J",
-            "receipts": 10898177.09,
-            "disbursements": 6680643.32,
-            "cash_on_hand": 4473237.49,
+            "receipts": 10903168.59,
+            "disbursements": 6743883.82,
+            "cash_on_hand": 4414988.49,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-07-15",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/S4MI00595/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -21955,16 +21955,16 @@
             "party": "R",
             "fec_candidate_id": "H6CA44210",
             "fec_name": "ANGEL, GENEVIEVE",
-            "receipts": 13897.97,
-            "disbursements": 5151.68,
-            "cash_on_hand": 8746.29,
+            "receipts": 21722.18,
+            "disbursements": 10632.91,
+            "cash_on_hand": 11089.27,
             "debts_owed_by": 3000.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6CA44210/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -27393,16 +27393,16 @@
             "party": "R",
             "fec_candidate_id": "H2GA12121",
             "fec_name": "ALLEN, RICHARD W",
-            "receipts": 993220.17,
-            "disbursements": 847218.81,
-            "cash_on_hand": 1320958.02,
+            "receipts": 1207040.8,
+            "disbursements": 937935.84,
+            "cash_on_hand": 1444061.62,
             "debts_owed_by": 1639945.28,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H2GA12121/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -34254,16 +34254,16 @@
             "party": "R",
             "fec_candidate_id": "H2MI12198",
             "fec_name": "HOOPER, JAMES D",
-            "receipts": 775.0,
-            "disbursements": 1410.81,
-            "cash_on_hand": 8381.09,
+            "receipts": 1450.0,
+            "disbursements": 3193.65,
+            "cash_on_hand": 7273.25,
             "debts_owed_by": 532.86,
-            "coverage_through": "2026-07-15",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H2MI12198/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -35678,11 +35678,11 @@
             "party": "D",
             "fec_candidate_id": "H6MO08183",
             "fec_name": "REICHARD, CHRISTOPHER",
-            "receipts": 5673.94,
-            "disbursements": 3732.06,
-            "cash_on_hand": 1941.88,
-            "debts_owed_by": 5195.97,
-            "coverage_through": "2026-07-15",
+            "receipts": 25212.49,
+            "disbursements": 12649.6,
+            "cash_on_hand": 12562.89,
+            "debts_owed_by": 9993.63,
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6MO08183/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -35701,7 +35701,7 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -38284,16 +38284,16 @@
             "party": "R",
             "fec_candidate_id": "H2NH02260",
             "fec_name": "WILLIAMS, LILY TANG",
-            "receipts": 1199750.37,
-            "disbursements": 683213.38,
-            "cash_on_hand": 646016.59,
+            "receipts": 1377169.85,
+            "disbursements": 844003.77,
+            "cash_on_hand": 662645.68,
             "debts_owed_by": 120000.0,
-            "coverage_through": "2026-08-19",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H2NH02260/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -39101,16 +39101,16 @@
             "party": "R",
             "fec_candidate_id": "H4NJ10135",
             "fec_name": "BUCCO, CARMEN",
-            "receipts": 2270.33,
-            "disbursements": 1252.27,
-            "cash_on_hand": 1018.06,
+            "receipts": 8656.33,
+            "disbursements": 3898.14,
+            "cash_on_hand": 4758.19,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H4NJ10135/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -40663,8 +40663,8 @@
             "fec_candidate_id": "H6NY10176",
             "fec_name": "LANDER, BRAD MR.",
             "receipts": 2455129.84,
-            "disbursements": 2399793.13,
-            "cash_on_hand": 55336.21,
+            "disbursements": 2400038.56,
+            "cash_on_hand": 55091.28,
             "debts_owed_by": 0.0,
             "coverage_through": "2026-06-30",
             "source": "https://www.fec.gov/data/candidate/H6NY10176/?cycle=2026&election_full=true",
@@ -42394,11 +42394,11 @@
             "party": "D",
             "fec_candidate_id": "H2OH03125",
             "fec_name": "BEATTY, JOYCE",
-            "receipts": 1201451.2,
-            "disbursements": 1137203.68,
-            "cash_on_hand": 2776821.02,
+            "receipts": 1447581.38,
+            "disbursements": 1406739.53,
+            "cash_on_hand": 2753415.35,
             "debts_owed_by": 2500.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H2OH03125/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
@@ -51034,11 +51034,11 @@
             "party": "D",
             "fec_candidate_id": "H6UT01160",
             "fec_name": "CROSBY, PETER",
-            "receipts": 60224.97,
-            "disbursements": 31698.28,
-            "cash_on_hand": 23283.12,
+            "receipts": 138381.77,
+            "disbursements": 84385.17,
+            "cash_on_hand": 48753.03,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6UT01160/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -51057,7 +51057,7 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -53127,16 +53127,16 @@
             "party": "R",
             "fec_candidate_id": "H6WA08167",
             "fec_name": "MELINE, SPENCER HARRISON",
-            "receipts": 126516.63,
-            "disbursements": 36654.73,
-            "cash_on_hand": 89861.9,
+            "receipts": 154328.63,
+            "disbursements": 53330.34,
+            "cash_on_hand": 100998.29,
             "debts_owed_by": 85000.0,
-            "coverage_through": "2026-07-15",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6WA08167/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -54249,7 +54249,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-10-13T04:20:48.561731Z",
+      "last_success": "2026-10-13T05:53:57.888495Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -54282,7 +54282,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-10-13T04:20:58.253840Z",
+      "last_success": "2026-10-13T05:54:04.021253Z",
       "last_observation": "2026-10-01",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -54316,7 +54316,7 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-10-13T04:21:01.491892Z",
+      "last_success": "2026-10-13T05:54:05.846474Z",
       "last_observation": "2026-09-30",
       "note": "Official bulk adapter; 849 candidate summaries matched to production candidates."
     },
@@ -54325,7 +54325,7 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-10-13T04:20:58.253840Z",
+      "last_success": "2026-10-13T05:54:04.021253Z",
       "last_observation": "2026-10-11",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
@@ -55192,11 +55192,11 @@
         "party": "R",
         "fec_candidate_id": "H2GA12121",
         "fec_name": "ALLEN, RICHARD W",
-        "receipts": 993220.17,
-        "disbursements": 847218.81,
-        "cash_on_hand": 1320958.02,
+        "receipts": 1207040.8,
+        "disbursements": 937935.84,
+        "cash_on_hand": 1444061.62,
         "debts_owed_by": 1639945.28,
-        "coverage_through": "2026-06-30",
+        "coverage_through": "2026-09-30",
         "source": "https://www.fec.gov/data/candidate/H2GA12121/?cycle=2026&election_full=true",
         "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
       },
@@ -55668,11 +55668,11 @@
         "party": "R",
         "fec_candidate_id": "S4MI00595",
         "fec_name": "ROGERS, MICHAEL J",
-        "receipts": 10898177.09,
-        "disbursements": 6680643.32,
-        "cash_on_hand": 4473237.49,
+        "receipts": 10903168.59,
+        "disbursements": 6743883.82,
+        "cash_on_hand": 4414988.49,
         "debts_owed_by": 0.0,
-        "coverage_through": "2026-07-15",
+        "coverage_through": "2026-09-30",
         "source": "https://www.fec.gov/data/candidate/S4MI00595/?cycle=2026&election_full=true",
         "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
       },
@@ -58321,6 +58321,20 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "fec-S4MI00595-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "MI-SEN",
+      "geography": "MI-SEN",
+      "description": "FEC summary through 2026-09-30 records $10.9m receipts, $6.7m spending and $4.4m cash on hand for Mike Rogers.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S4MI00595/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "fec-S6NM01186-2026-09-30",
       "date": "2026-09-30",
       "category": "FUNDRAISING",
@@ -58585,6 +58599,20 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "fec-H2GA12121-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "GA-12",
+      "geography": "GA-12",
+      "description": "FEC summary through 2026-09-30 records $1.2m receipts, $938k spending and $1.4m cash on hand for Rick Allen.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/H2GA12121/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "normal",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "fec-H6NC07196-2026-09-30",
       "date": "2026-09-30",
       "category": "FUNDRAISING",
@@ -58761,32 +58789,6 @@
       "race_code": "FL-14",
       "geography": "FL-14",
       "description": "Inside Elections changed FL-14 from Tilt Republican to Toss-up.",
-      "source_name": "Inside Elections",
-      "source": "https://insideelections.com/ratings/house/",
-      "provenance": "Inside Elections public ratings API",
-      "model_effect": "NONE",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "rating-inside-FL-27-2026-09-17-Lean Republican",
-      "date": "2026-09-17",
-      "category": "RATING CHANGE",
-      "race_code": "FL-27",
-      "geography": "FL-27",
-      "description": "Inside Elections changed FL-27 from Likely Republican to Lean Republican.",
-      "source_name": "Inside Elections",
-      "source": "https://insideelections.com/ratings/house/",
-      "provenance": "Inside Elections public ratings API",
-      "model_effect": "NONE",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "rating-inside-IA-02-2026-09-17-Tilt Republican",
-      "date": "2026-09-17",
-      "category": "RATING CHANGE",
-      "race_code": "IA-02",
-      "geography": "IA-02",
-      "description": "Inside Elections changed IA-02 from Lean Republican to Tilt Republican.",
       "source_name": "Inside Elections",
       "source": "https://insideelections.com/ratings/house/",
       "provenance": "Inside Elections public ratings API",
@@ -69402,7 +69404,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-10-13T04:20:48.561731Z",
+    "retrieved_at": "2026-10-13T05:53:57.888495Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -69421,12 +69423,25 @@
     "senate_expected_dem_seats": 0.0,
     "generic_ballot_d_minus_r": 0.0,
     "changed_inputs": [],
-    "previous_generated_at": "2026-10-13T03:18:59.459277Z"
+    "previous_generated_at": "2026-10-13T04:20:48.561731Z"
   },
   "briefing": {
     "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 92% probability of House control and a 69% probability of Senate control. The current weighted generic congressional ballot is D+7.5. The House 80% Democratic-seat interval is 219–252; the Senate interval is 49–54."
   },
   "history_summaries": [
+    {
+      "file": "2026-10-13T055357Z.json",
+      "generated_at": "2026-10-13T05:53:57.888495Z",
+      "house": 0.9172,
+      "senate": 0.6882,
+      "house_seats": 234.7,
+      "senate_seats": 51.5,
+      "generic_ballot_d_minus_r": 7.54,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "6c9f1f4d3f2b8379f64ab823f26c5271d4f73b15",
+      "input_sha256": "3337df346ce0f0ae4ac163cb5e9352aec15656f398a8fcf5b7bcd1f414638822",
+      "changed_inputs": []
+    },
     {
       "file": "2026-10-13T042048Z.json",
       "generated_at": "2026-10-13T04:20:48.561731Z",
