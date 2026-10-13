@@ -6,7 +6,7 @@ It is an audit system, not a tuning surface.
 
 ## The prohibition
 
-Historical results must never be used to silently alter the live 2026 probabilities. The official baseline remains the v0.2 prospective coefficient set preserved in PROD v1.0. Model Lab evaluates that contract. A future model revision must receive a new model identifier, a documented change rationale and a separate validation path.
+Historical results must never be used to silently alter the live 2026 probabilities. The official baseline remains `baseline-v1.0-frozen`, the prospective coefficient set preserved in PROD v1.0. Model Lab evaluates that contract. A future model revision must receive a new model identifier, a documented change rationale and a separate validation path.
 
 ## Replay protocol
 
@@ -21,28 +21,60 @@ At a cutoff:
 5. missing generic-ballot evidence remains missing rather than becoming a neutral zero;
 6. outcomes are loaded only after replay predictions exist and are passed only to scoring functions.
 
+## Admitted historical scope
+
+Two cycles are currently admitted and scored under the frozen contract:
+
+- **2018:** 435 House races and 35 Senate contests, scored at all five checkpoints.
+- **2022:** House-only. The fixed admitted sample is 416 House races at every checkpoint. Nineteen House races remain explicit scoreability exclusions. The 35 Senate contests are unavailable for scoring because the admitted retrospective Senate poll stream is not complete enough at the early checkpoints.
+
+Missing chamber evidence is always reported as unavailable, never zero.
+
 ## Corpus completeness
 
-Scoring a subset can create a flattering answer accidentally or deliberately. For that reason, a replay checkpoint is not scored when any replayed race lacks an admitted outcome. The public artefact reports the blocking reason rather than dropping the race silently.
+Scoring an opportunistic subset can produce a flattering answer accidentally or deliberately. A replay checkpoint is therefore not scored when any race in its fixed admitted sample lacks an admitted outcome. Race identifiers are canonicalized before scoreability, and checkpoint sample denominators are invariants.
 
-The 2018 and 2022 corpus directories are intentionally present before their data are admitted. Their `cycle.json` manifests currently declare `awaiting_verified_inputs`. That state is a feature: it makes the absence of leakage-free evidence visible and machine-readable.
+Historical results are outcome labels only. They are opened after checkpoint predictions have been generated and may not enter predictive code or the model contract.
 
-## Diagnostics
+## Fixed diagnostic contract
 
-For each complete checkpoint MODEL LAB computes:
+Diagnostic thresholds are fixed before inspecting their results. They are not model coefficients and do not change the live forecast.
 
-- **Brier score**: mean squared error of the Democratic win probability against the binary result. Lower is better.
-- **Log loss**: mean negative log likelihood. It imposes a much larger penalty on confident errors.
-- **Reliability / calibration bins**: average forecast probability versus observed Democratic win rate within probability bands.
-- **Calibration intercept and slope**: logistic recalibration diagnostics. An ideal calibrated system is near intercept 0 and slope 1. These diagnostics are descriptive only and are never fed back into the production model.
-- **Forensic misses**: wrong-side calls ranked by the eventual winner's forecast probability, so confident failures are inspectable rather than buried.
-- **Forecast evolution**: race probability at every admitted checkpoint.
+### Competitive-seat windows
+
+The public artefact reports four nested probability windows using Democratic win probability: 45–55%, 40–60%, 30–70% and 20–80%. It also reports the complement outside 20–80% as `safe-outside-20-80`. Because the competitive windows are nested, their counts are not additive. The 20–80 window plus its safe complement must equal the full scored checkpoint denominator.
+
+For each fixed window MODEL LAB reports n, Brier score, log loss, winner-call rate, mean Democratic probability, actual Democratic win rate and calibration error.
+
+### Calibration
+
+Reliability uses fixed 10-percentage-point probability bins. Empty bins are omitted from display, but every scored race must belong to exactly one occupied bin and the bin counts must sum to the checkpoint denominator. For each occupied bin the artefact records the mean forecast probability, actual Democratic win frequency, n and calibration residual (`actual - forecast`).
+
+The existing logistic calibration intercept and slope are retained. Ideal values are 0 and 1 respectively. Small-sample instability is exposed through n rather than hidden by adaptive binning.
+
+### Polled versus unpolled
+
+At every checkpoint races are partitioned by whether at least one eligible race-level poll contributes to that race at that cutoff. Both subsets receive the same proper-score and calibration summary. This is a conditional comparison, **not a causal A/B test**: races are polled partly because they are competitive.
+
+Forecast movement is also partitioned by polling status at the later checkpoint of each transition. Those movement partitions must sum to the common race sample.
+
+### Forecast movement
+
+For races present at all five checkpoints, MODEL LAB measures movement across 60→30, 30→14, 14→7 and 7→1 days. Certified outcomes are used only after probabilities are frozen to give movement a forensic sign: positive movement is toward the eventual winner, negative movement is away.
+
+A **strong move** is fixed at 10 percentage points. A **confident miss** is a wrong-side call where the model assigned at least 80% to the losing side. These thresholds are diagnostic only.
+
+### Chamber scope
+
+House and Senate metrics are computed separately whenever an admitted complete chamber replay exists. The 2022 Senate state remains explicitly unavailable. No metric silently drops missing chamber evidence.
+
+### Cross-cycle comparison
+
+Cross-cycle output is descriptive, not causal. The artefact reports aggregate trajectory, competitive-seat performance, polling partitions, calibration, confident misses and both 14→1 and true final-week 7→1 Brier changes. Candidate explanations such as late generic-ballot movement, polling composition, pollster mix, redistricting priors, systematic polling error and late overreaction remain hypotheses unless the admitted evidence identifies them.
 
 ## Model-contract drift guard
 
-`scripts/model_lab.py` contains an explicit, hashed evaluation contract and verifies critical markers in the production builder before scoring. The guard covers structural recency weights, incumbency, polling windows and half-lives, race-poll blending, uncertainty reduction and probability clamps.
-
-If those production markers change, `model_contract.state` becomes `drift_detected` and historical scoring is blocked. This prevents a changed model from inheriting old validation claims under the same label.
+`scripts/model_lab.py` contains an explicit, hashed evaluation contract and verifies critical markers in the production builder before scoring. If those production markers change, `model_contract.state` becomes `drift_detected` and historical scoring is blocked.
 
 ## Public states
 
@@ -50,8 +82,6 @@ If those production markers change, `model_contract.state` becomes `drift_detect
 - `partial`: at least one checkpoint is valid but the cycle is not complete.
 - `scored`: every fixed checkpoint has a complete replay and complete outcomes.
 
-Top-level Model Lab remains `unscored` until at least one cycle is genuinely scored. The public UI is designed to explain this state rather than replace it with placeholder metrics.
-
 ## Reproducibility
 
-The machine-readable public artefact is `public/data/model-lab.json`. It records the model contract, its SHA-256 fingerprint, the leakage guards, checkpoint definitions, cycle states and, when admitted, predictions and diagnostics. The builder is standard-library Python and the metric functions have known-vector tests.
+The machine-readable public artefact is `public/data/model-lab.json`. It records the model contract and fingerprint, diagnostic thresholds, leakage guards, checkpoint definitions, cycle states, fixed predictions and all derived diagnostics. Tests assert fixed denominators, calibration-bin counts, polled/unpolled and chamber partitions, all-checkpoint movement samples and contract integrity.
