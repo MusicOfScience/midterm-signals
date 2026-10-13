@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Verify a first-party FiveThirtyEight archive of the 2022 polling inputs.
+"""Verify the 2022 polling evidence chain without using outcome-derived fields.
 
-The 2023 pollster-ratings archive is retrospective, so this probe explicitly
-uses only fields that existed before the 2022 election. It separately pins the
-2021 pollster ratings for any quality weighting; 2022 outcomes/ratings are not
-allowed into the replay inputs.
+Race polls come from FiveThirtyEight's first-party pollster-ratings archive;
+the national generic ballot comes from a preserved 5 November 2022 snapshot
+of FiveThirtyEight's live generic-ballot CSV. Poll quality is bound only to
+FiveThirtyEight's 2021 grades, never post-election ratings.
 """
 from __future__ import annotations
 
@@ -20,6 +20,10 @@ UA = "MIDTERM-SIGNALS historical corpus audit/1.0 (+https://github.com/MusicOfSc
 FTE_COMMIT = "4c1ff5e3aef1816ae04af63218015066e186c147"
 RAW_POLLS = f"https://raw.githubusercontent.com/fivethirtyeight/data/{FTE_COMMIT}/pollster-ratings/2023/raw-polls.csv"
 PRE2022_RATINGS = f"https://raw.githubusercontent.com/fivethirtyeight/data/{FTE_COMMIT}/pollster-ratings/2021/pollster-ratings.csv"
+GENERIC_REPO = "kentoyamada100/election-analytics-2022-midterms"
+GENERIC_COMMIT = "3c9f718baf7fda26542b1d0542e5f032ca00db4f"
+GENERIC_PATH = "analysis_data/1105_538_generic_ballot_polls.csv"
+GENERIC_URL = f"https://raw.githubusercontent.com/{GENERIC_REPO}/{GENERIC_COMMIT}/{GENERIC_PATH}"
 
 
 def fetch(url: str) -> bytes:
@@ -63,7 +67,7 @@ def main() -> None:
     if missing:
         raise RuntimeError(f"first-party raw-polls archive missing columns: {missing}")
 
-    buckets: dict[str, list[dict]] = {"Sen-G": [], "House-G": [], "House-G-US": []}
+    buckets: dict[str, list[dict]] = {"Sen-G": [], "House-G": []}
     for row in reader:
         if str(row.get("year") or "").strip() != "2022":
             continue
@@ -103,12 +107,34 @@ def main() -> None:
                 for r in rows[-3:]
             ],
         }
-
-    for kind in ("Sen-G", "House-G"):
         if diagnostics[kind]["max_polldate"] < "2022-11-01":
             raise RuntimeError(f"2022 {kind} archive is truncated before election week: {diagnostics[kind]['max_polldate']}")
-    if diagnostics["House-G-US"]["max_polldate"] < "2022-11-01":
-        raise RuntimeError(f"2022 generic-ballot archive is truncated: {diagnostics['House-G-US']['max_polldate']}")
+
+    generic = fetch(GENERIC_URL)
+    gr = csv.DictReader(io.StringIO(generic.decode("utf-8-sig", errors="strict")))
+    gfields = set(gr.fieldnames or [])
+    grequired = {"poll_id", "display_name", "start_date", "end_date", "sample_size", "population", "cycle", "dem", "rep"}
+    gmissing = sorted(grequired - gfields)
+    if gmissing:
+        raise RuntimeError(f"generic-ballot snapshot missing columns: {gmissing}")
+    grows = [r for r in gr if str(r.get("cycle") or "").strip() == "2022"]
+    if not grows:
+        raise RuntimeError("dated generic-ballot snapshot contains no 2022 rows")
+    gdates = [parse_date(r.get("end_date", "")) for r in grows]
+    gdates = [d for d in gdates if d is not None]
+    if not gdates or max(gdates).strftime("%Y-%m-%d") < "2022-11-01":
+        raise RuntimeError("dated generic-ballot snapshot does not reach November 2022")
+    generic_diag = {
+        "rows": len(grows),
+        "unique_polls": len({r.get("poll_id") for r in grows}),
+        "min_end_date": min(gdates).strftime("%Y-%m-%d"),
+        "max_end_date": max(gdates).strftime("%Y-%m-%d"),
+        "pollsters": len({r.get("display_name") for r in grows}),
+        "sample": [
+            {k: r.get(k) for k in ("poll_id", "display_name", "start_date", "end_date", "sample_size", "population", "dem", "rep")}
+            for r in grows[:3]
+        ],
+    }
 
     ratings = fetch(PRE2022_RATINGS)
     rr = csv.DictReader(io.StringIO(ratings.decode("utf-8-sig", errors="strict")))
@@ -121,23 +147,34 @@ def main() -> None:
     matched = {p for p in all_pollsters if p in grade_by_name and grade_by_name[p]}
 
     print(json.dumps({
-        "source": {
+        "race_poll_source": {
             "repository": "fivethirtyeight/data",
             "commit": FTE_COMMIT,
-            "raw_polls_url": RAW_POLLS,
-            "raw_polls_sha256": sha(raw),
-            "raw_polls_bytes": len(raw),
-            "pre2022_ratings_url": PRE2022_RATINGS,
-            "pre2022_ratings_sha256": sha(ratings),
-            "pre2022_ratings_bytes": len(ratings),
+            "url": RAW_POLLS,
+            "sha256": sha(raw),
+            "bytes": len(raw),
+            "2022": diagnostics,
+            "caveat": "Retrospective pollster-rating archive; only pre-election poll fields are admitted. Outcome-derived fields are forbidden.",
         },
-        "2022": diagnostics,
+        "generic_ballot_source": {
+            "repository": GENERIC_REPO,
+            "commit": GENERIC_COMMIT,
+            "path": GENERIC_PATH,
+            "url": GENERIC_URL,
+            "sha256": sha(generic),
+            "bytes": len(generic),
+            "2022": generic_diag,
+            "snapshot_label": "FiveThirtyEight generic-ballot CSV preserved 2022-11-05",
+        },
         "pre2022_quality": {
-            "pollsters_in_2022_archive": len(all_pollsters),
+            "url": PRE2022_RATINGS,
+            "sha256": sha(ratings),
+            "bytes": len(ratings),
+            "pollsters_in_race_archive": len(all_pollsters),
             "matched_to_2021_grade": len(matched),
             "unmatched": sorted(all_pollsters - matched)[:50],
             "unmatched_count": len(all_pollsters - matched),
-            "rule": "Only 2021 FiveThirtyEight grades may weight 2022 replay polls; no post-election pollster grade is used.",
+            "rule": "Only 2021 FiveThirtyEight grades may weight 2022 replay race polls; no post-election pollster grade is used.",
         },
         "forbidden_retrospective_fields": ["cand1_actual", "cand2_actual", "margin_actual", "error", "bias", "rightcall"],
     }, indent=2))
