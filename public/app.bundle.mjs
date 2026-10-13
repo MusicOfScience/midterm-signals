@@ -312,3 +312,25 @@ setupChrome=function(){
     if(label)label.textContent=operational.length?`${operational.length} data issue${operational.length===1?'':'s'}`:constrained.length?`Data current · ${constrained.length} access constraint${constrained.length===1?'':'s'}`:'Data current';
   }
 };
+
+// Accessibility/provenance finish for the contextual-data layer.
+const __renderSignalsPageA11y=renderSignalsPage;
+renderSignalsPage=function(){
+  __renderSignalsPageA11y();
+  $('#signalQ')?.setAttribute('aria-label','Search campaign signals');
+  $('#signalCategory')?.setAttribute('aria-label','Filter campaign signals by category');
+  $('#signalEffect')?.setAttribute('aria-label','Filter campaign signals by model effect');
+};
+
+const __renderDataContextDownloads=renderData;
+renderData=function(){
+  __renderDataContextDownloads();
+  const grid=$('.download-grid');
+  if(grid){
+    grid.insertAdjacentHTML('beforeend',
+      `<a class="download-card" href="/data/external-forecasters.json"><strong>External forecasters JSON</strong><span>Native redistributable ratings plus explicit manual/licensing boundaries</span></a>`+
+      `<a class="download-card" href="/data/fec.json"><strong>FEC context JSON</strong><span>Official campaign-finance summaries with reporting periods</span></a>`+
+      `<a class="download-card" href="/data/signals.json"><strong>Campaign signals JSON</strong><span>Structured election-intelligence records and declared model effects</span></a>`
+    );
+  }
+};
