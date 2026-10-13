@@ -6,6 +6,7 @@ on:
     branches: [historical-2018-admission]
     paths:
       - "scripts/acquire_historical_2018.py"
+      - "scripts/run_historical_2018.py"
       - "scripts/model_lab.py"
       - ".github/workflows/historical-2018.yml"
 
@@ -27,10 +28,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Compile historical acquisition code
+        run: python -m py_compile scripts/acquire_historical_2018.py scripts/run_historical_2018.py scripts/model_lab.py
       - name: Install pinned historical reader
         run: python -m pip install --disable-pip-version-check pandas==2.3.3 pyreadr==0.5.7
       - name: Acquire pinned historical sources
-        run: python scripts/acquire_historical_2018.py
+        run: python scripts/run_historical_2018.py
       - name: Build Model Lab from admitted corpus
         run: python scripts/model_lab.py
       - name: Run Model Lab and production integrity tests
