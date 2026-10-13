@@ -20,6 +20,10 @@ MEDSL_PRES_URL = (
     "https://raw.githubusercontent.com/MEDSL/constituency-returns/"
     f"{MEDSL_PRES_COMMIT}/1976-2016-president.csv"
 )
+# States with a single U.S. House district in 2022. If DRA omits an older
+# presidential year for one of these states, the statewide result is exactly
+# the congressional-district result, so no geographic interpolation is needed.
+AT_LARGE_2022 = {"AK", "DE", "ND", "SD", "VT", "WY"}
 
 
 def strict_match_incumbents(row: dict, chamber: str, incumbents: dict) -> tuple[str, list[str], bool]:
@@ -67,44 +71,63 @@ def strict_match_incumbents(row: dict, chamber: str, incumbents: dict) -> tuple[
     return (next(iter(parties)) if len(parties) == 1 else ""), [n for n, _ in matched], ambiguous
 
 
-def alaska_2012_two_party() -> tuple[float, float]:
-    """Return exact Alaska 2012 Democratic/Republican presidential votes.
+def state_presidential_two_party() -> dict[str, dict[int, tuple[float, float]]]:
+    """Return exact state D/R presidential totals for 2012 and 2016.
 
-    Alaska is an at-large House district, so statewide presidential returns are
-    exactly the district return; no geographic remap is required.
+    These are used only as an at-large fallback where statewide and district
+    geography are identical. The source is never used to remap multi-district
+    states and therefore cannot smuggle current boundaries into older results.
     """
     data = impl.fetch("MEDSL 1976-2016 presidential state returns", MEDSL_PRES_URL)
-    dem = rep = 0.0
+    out: dict[str, dict[int, list[float]]] = defaultdict(lambda: defaultdict(lambda: [0.0, 0.0]))
     for row in csv.DictReader(io.StringIO(data.decode("utf-8-sig"))):
-        if str(row.get("year") or "") != "2012" or str(row.get("state_po") or "").upper() != "AK":
+        try:
+            year = int(str(row.get("year") or ""))
+        except ValueError:
+            continue
+        if year not in {2012, 2016}:
+            continue
+        st = str(row.get("state_po") or "").upper()
+        if st not in AT_LARGE_2022:
             continue
         p = str(row.get("party") or "").strip().lower()
         votes = impl.fnum(row.get("candidatevotes"), 0.0) or 0.0
         if p.startswith("democrat"):
-            dem += votes
+            out[st][year][0] += votes
         elif p.startswith("republican"):
-            rep += votes
-    if dem <= 0 or rep <= 0:
-        raise RuntimeError(f"MEDSL Alaska 2012 two-party vote unavailable: D={dem} R={rep}")
-    return dem, rep
+            out[st][year][1] += votes
+
+    clean: dict[str, dict[int, tuple[float, float]]] = {}
+    for st in AT_LARGE_2022:
+        clean[st] = {}
+        for year in (2012, 2016):
+            dem, rep = out[st][year]
+            if dem <= 0 or rep <= 0:
+                raise RuntimeError(f"MEDSL {st} {year} two-party vote unavailable: D={dem} R={rep}")
+            clean[st][year] = (dem, rep)
+    return clean
 
 
 def strict_structural_priors() -> dict:
     """Aggregate 2012/2016/2020 presidential returns onto 118th districts.
 
-    DRA block data remains canonical for redistricted geography. Alaska 2012 is
-    supplied from exact statewide MEDSL returns because Alaska is at-large and
-    its DRA archive lacks 2012 fields. Census non-district placeholders are
+    DRA block data is canonical for redistricted geography. For a 2022
+    at-large state only, a missing older DRA presidential field may be replaced
+    by the exact statewide MEDSL D/R total because statewide and district
+    geography are identical. Missing 2020 data or missing data in any
+    multi-district state fail closed. Census non-district placeholders are
     discarded before margin calculation; the final 435-district invariant
     ensures that no real congressional district can vanish silently.
     """
     refs = impl.latest_dra_refs()
-    ak12 = alaska_2012_two_party()
+    statewide = state_presidential_two_party()
     required_by_year = {
         12: ("E_12_PRES_Dem", "E_12_PRES_Rep"),
         16: ("E_16_PRES_Dem", "E_16_PRES_Rep"),
         20: ("E_20_PRES_Dem", "E_20_PRES_Rep"),
     }
+    year_full = {12: 2012, 16: 2016, 20: 2020}
+
     with tempfile.TemporaryDirectory() as td:
         paths = impl.split_bef(Path(td))
         districts = {}
@@ -113,6 +136,7 @@ def strict_structural_priors() -> dict:
             with paths[st].open(newline="") as fh:
                 for geoid, cd in csv.reader(fh):
                     mapping[geoid] = cd
+
             _, url = refs[st]
             data = impl.fetch(f"DRA blocks {st}", url, timeout=600)
             with zipfile.ZipFile(io.BytesIO(data)) as z:
@@ -124,7 +148,12 @@ def strict_structural_priors() -> dict:
                 fields = set(reader.fieldnames or [])
                 available = {yr for yr, pair in required_by_year.items() if set(pair).issubset(fields)}
                 missing = sorted(set(required_by_year) - available)
-                if missing and not (st == "AK" and missing == [12]):
+
+                allowed_missing = []
+                if st in AT_LARGE_2022:
+                    allowed_missing = [yr for yr in missing if yr in {12, 16}]
+                disallowed = [yr for yr in missing if yr not in allowed_missing]
+                if disallowed:
                     raise RuntimeError(f"{st}: DRA presidential years unavailable: {missing}")
 
                 dsum = defaultdict(lambda: defaultdict(float))
@@ -143,16 +172,26 @@ def strict_structural_priors() -> dict:
                 if seen and joined / seen < 0.995:
                     raise RuntimeError(f"{st}: DRA/Census GEOID join only {joined}/{seen}")
 
-                for cd, vals in dsum.items():
+                # At-large states may have no rows accumulated for a missing
+                # historical year, so enumerate the actual Census district IDs.
+                cds = sorted({cd for cd in mapping.values() if impl.district_code(st, cd)})
+                if st in AT_LARGE_2022 and len(cds) != 1:
+                    raise RuntimeError(f"{st}: expected exactly one 2022 House district, got {cds}")
+
+                for cd in cds:
+                    vals = dsum[cd]
                     rc = impl.district_code(st, cd)
                     if not rc:
                         continue
                     margins = {}
                     for yr, key in ((12, "earliest"), (16, "middle"), (20, "latest")):
-                        if st == "AK" and yr == 12:
-                            d, r = ak12
-                        else:
+                        if yr in available:
                             d, r = vals[f"{yr}d"], vals[f"{yr}r"]
+                        else:
+                            full_year = year_full[yr]
+                            if st not in AT_LARGE_2022 or full_year not in statewide[st]:
+                                raise RuntimeError(f"{rc}: no lawful fallback for missing {full_year} presidential data")
+                            d, r = statewide[st][full_year]
                         if d + r <= 0:
                             raise RuntimeError(f"{rc}: empty {yr} presidential denominator")
                         margins[key] = 100 * (d - r) / (d + r)
