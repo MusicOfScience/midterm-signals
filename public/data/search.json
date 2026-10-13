@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T13:47:29.918550Z",
+  "generated_at": "2026-10-13T17:23:20.032863Z",
   "records": [
     {
       "type": "race",
@@ -10468,6 +10468,13 @@
     },
     {
       "type": "pollster",
+      "label": "TrueDot",
+      "subtitle": "Pollster",
+      "key": "TrueDot",
+      "terms": "TrueDot"
+    },
+    {
+      "type": "pollster",
       "label": "Tulchin Research",
       "subtitle": "Pollster",
       "key": "Tulchin Research",
@@ -10493,6 +10500,13 @@
       "subtitle": "Pollster",
       "key": "Verasight",
       "terms": "Verasight"
+    },
+    {
+      "type": "pollster",
+      "label": "VoteNexus",
+      "subtitle": "Pollster",
+      "key": "VoteNexus",
+      "terms": "VoteNexus"
     },
     {
       "type": "pollster",
