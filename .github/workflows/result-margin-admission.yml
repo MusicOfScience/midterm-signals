@@ -41,9 +41,19 @@ jobs:
               raise SystemExit('result-margin evaluation contract broken')
           r18=list(csv.DictReader(open('historical/2018/result-margins.csv', newline='')))
           r22=list(csv.DictReader(open('historical/2022/result-margins.csv', newline='')))
-          if len(r18) != 470 or len(r22) != 435:
-              raise SystemExit(f'unexpected row counts 2018={len(r18)} 2022={len(r22)}')
-          print('certified margins admitted', len(r18), len(r22))
+          src22=p['cycles']['2022']['sources'][0]
+          unavailable=src22.get('margin_unavailable') or []
+          if len(r18) != 470:
+              raise SystemExit(f'unexpected 2018 margin rows {len(r18)}')
+          if int(src22.get('source_districts_classified') or 0) != 435:
+              raise SystemExit('2022 source did not classify all 435 districts')
+          if len(r22) + len(unavailable) != 435:
+              raise SystemExit(f'2022 numeric/unavailable partition drift: {len(r22)} + {len(unavailable)}')
+          if any(float(r['dem_votes']) <= 0 or float(r['rep_votes']) <= 0 for r in r22):
+              raise SystemExit('numeric 2022 margin emitted without both major-party vote totals')
+          if not unavailable:
+              raise SystemExit('expected explicit non-two-party unavailable rows in 2022')
+          print('certified margins admitted', len(r18), len(r22), 'unavailable', len(unavailable))
           PY
       - name: Commit normalized outcome margins if changed
         shell: bash
