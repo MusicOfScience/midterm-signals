@@ -103,7 +103,28 @@ def existing_winners(year: int) -> dict[str, str]:
         return {r["race_code"]: r["winner_party"] for r in csv.DictReader(fh)}
 
 
-def side_for_candidate(code: str, candidate: str, parties: set[str]) -> str:
+def roster_sides(year: int) -> dict[str, dict[str, str]]:
+    """Map pre-election roster candidate identity to D/R side, fail-closed on collisions."""
+    candidates: dict[str, dict[str, set[str]]] = defaultdict(lambda: defaultdict(set))
+    with (HIST / str(year) / "races.csv").open(newline="", encoding="utf-8-sig") as fh:
+        for row in csv.DictReader(fh):
+            code = (row.get("race_code") or "").strip()
+            if not code:
+                continue
+            for field, side in (("dem_name", "DEM"), ("rep_name", "REP")):
+                name = str(row.get(field) or "").strip()
+                if not name or name.lower().startswith("(no "):
+                    continue
+                key = norm_name(name)
+                if key:
+                    candidates[code][key].add(side)
+    out: dict[str, dict[str, str]] = {}
+    for code, names in candidates.items():
+        out[code] = {name: next(iter(sides)) for name, sides in names.items() if len(sides) == 1}
+    return out
+
+
+def side_for_candidate(code: str, candidate: str, parties: set[str], roster: dict[str, dict[str, str]] | None = None) -> str:
     major = parties & {"DEM", "REP"}
     if len(major) > 1:
         raise RuntimeError(f"candidate appears on both major-party lines: {code} {candidate} {sorted(parties)}")
@@ -112,13 +133,15 @@ def side_for_candidate(code: str, candidate: str, parties: set[str]) -> str:
     aligned = ALIGNED_INDEPENDENTS.get(code)
     if aligned and aligned in norm_name(candidate):
         return "DEM"
+    if roster:
+        return roster.get(code, {}).get(norm_name(candidate), "OTHER")
     return "OTHER"
 
 
-def normalized_margin_row(year: int, code: str, candidates: dict[str, dict], vote_key: str = "votes") -> dict:
+def normalized_margin_row(year: int, code: str, candidates: dict[str, dict], vote_key: str = "votes", roster: dict[str, dict[str, str]] | None = None) -> dict:
     totals = {"DEM": 0.0, "REP": 0.0}
     for record in candidates.values():
-        side = side_for_candidate(code, record["candidate"], record["parties"])
+        side = side_for_candidate(code, record["candidate"], record["parties"], roster)
         if side in totals:
             totals[side] += float(record[vote_key])
     den = totals["DEM"] + totals["REP"]
@@ -148,6 +171,7 @@ def source_from_cycle_2018(name: str) -> dict:
 
 def admit_2018() -> tuple[list[dict], list[dict]]:
     winners = existing_winners(2018)
+    roster = roster_sides(2018)
     groups: dict[str, dict[str, dict]] = defaultdict(dict)
     provenance = []
     for chamber, source_name in (("house", "house_results"), ("senate", "senate_results")):
@@ -181,7 +205,7 @@ def admit_2018() -> tuple[list[dict], list[dict]]:
     for code in sorted(winners):
         if code not in groups:
             raise RuntimeError(f"2018 certified result rows missing {code}")
-        out = normalized_margin_row(2018, code, groups[code])
+        out = normalized_margin_row(2018, code, groups[code], roster=roster)
         if out["winner_party_from_margin"] != winners[code]:
             raise RuntimeError(f"2018 margin winner mismatch {code}: {out['winner_party_from_margin']} != {winners[code]}")
         rows.append(out)
@@ -294,7 +318,7 @@ def main() -> None:
             "2018": {"rows": len(rows18), "output": "historical/2018/result-margins.csv", "output_sha256": sha18, "sources": prov18},
             "2022": {"rows": len(rows22), "output": "historical/2022/result-margins.csv", "output_sha256": sha22, "sources": prov22},
         },
-        "transformation": "Candidate/fusion lines are collapsed within race; Democratic and Republican certified votes are summed; margin is 100*(D-R)/(D+R). 2018 Angus King and Bernie Sanders are mapped to the model's predeclared Democratic-aligned control side. 2022 uses certified runoff votes when the FEC sheet reports a House runoff, otherwise certified general-election votes.",
+        "transformation": "Candidate/fusion lines are collapsed within race; Democratic and Republican certified votes are summed; margin is 100*(D-R)/(D+R). A 2018 result line without a usable party label may inherit D/R only from an unambiguous normalized candidate match in the pre-election roster. Angus King and Bernie Sanders retain the model's predeclared Democratic-aligned control side. 2022 uses certified runoff votes when the FEC sheet reports a House runoff, otherwise certified general-election votes.",
     }
     (HIST / "result-margin-provenance.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"2018_rows": len(rows18), "2022_rows": len(rows22), "2018_sha": sha18, "2022_sha": sha22}, indent=2))
