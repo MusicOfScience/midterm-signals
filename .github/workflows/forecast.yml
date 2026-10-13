@@ -57,13 +57,13 @@ jobs:
           python scripts/build_forecast.py
           python scripts/run_enrichment.py
           python scripts/make_bootstrap.py
-          python scripts/model_lab.py
+          python scripts/build_model_lab.py
           python scripts/augment_model_lab.py
           python scripts/build_browser.py
       - name: Validate numerical forecast
         run: python scripts/validate_forecast.py
       - name: Unit tests
-        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_augmentation
+        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_builder tests.test_model_lab_augmentation
       - name: Validate static publication
         run: node scripts/check.mjs
       - name: Commit forecast and generated browser assets if changed
