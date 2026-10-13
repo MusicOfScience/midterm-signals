@@ -15,6 +15,92 @@ class ModelLabAugmentationTests(unittest.TestCase):
         self.assertAlmostEqual(m.prior_probability(house), 0.5)
         self.assertAlmostEqual(m.prior_probability(senate), 0.5)
 
+    def test_structural_decomposition_reconstructs_pre_generic_stage(self):
+        preds = [{
+            "race_code": "A",
+            "race_type": "house",
+            "dem_candidate": "Dem Candidate",
+            "rep_candidate": "Rep Candidate",
+            "prior_margin": 2.0,
+            "dem_probability": 0.8,
+            "poll_count": 2,
+        }]
+        score = m.structural_decomposition(preds, {"A": 1}, 4.0)
+        self.assertEqual(score["state"], "scored")
+        self.assertEqual(score["n"], 1)
+        structural_p = m.margin_probability(-2.0, "house")
+        prior_p = m.margin_probability(2.0, "house")
+        self.assertAlmostEqual(score["structural_plus_incumbency"]["brier"], (structural_p - 1) ** 2, places=7)
+        self.assertAlmostEqual(score["structural_plus_generic_ballot"]["brier"], (prior_p - 1) ** 2, places=7)
+        self.assertLess(score["brier_delta_generic_minus_structural"], 0)
+        self.assertLess(score["brier_delta_full_minus_prior"], 0)
+
+    def test_structural_decomposition_excludes_non_two_party_contests(self):
+        preds = [
+            {
+                "race_code": "A",
+                "race_type": "house",
+                "dem_candidate": "Dem Candidate",
+                "rep_candidate": "Rep Candidate",
+                "prior_margin": 0.0,
+                "dem_probability": 0.5,
+                "poll_count": 0,
+            },
+            {
+                "race_code": "B",
+                "race_type": "house",
+                "dem_candidate": "(No Democrat)",
+                "rep_candidate": "Rep Candidate",
+                "prior_margin": -20.0,
+                "dem_probability": 0.001,
+                "poll_count": 0,
+            },
+        ]
+        score = m.structural_decomposition(preds, {"A": 1, "B": 0}, 0.0)
+        self.assertEqual(score["n"], 1)
+
+    def test_structural_competitive_filter_is_fixed_20_80(self):
+        preds = [
+            {
+                "race_code": "A",
+                "race_type": "house",
+                "dem_candidate": "D A",
+                "rep_candidate": "R A",
+                "prior_margin": 0.0,
+                "dem_probability": 0.6,
+                "poll_count": 1,
+            },
+            {
+                "race_code": "B",
+                "race_type": "house",
+                "dem_candidate": "D B",
+                "rep_candidate": "R B",
+                "prior_margin": 20.0,
+                "dem_probability": 0.9,
+                "poll_count": 1,
+            },
+        ]
+        score = m.structural_decomposition(
+            preds, {"A": 1, "B": 1}, 0.0, structural_competitive_only=True
+        )
+        self.assertEqual(score["n"], 1)
+        self.assertEqual(score["sample"], "structural_20_80")
+
+    def test_structural_confident_miss_is_exposed_not_removed(self):
+        preds = [{
+            "race_code": "A",
+            "race_type": "house",
+            "dem_candidate": "D A",
+            "rep_candidate": "R A",
+            "prior_margin": -10.0,
+            "dem_probability": 0.3,
+            "poll_count": 1,
+        }]
+        score = m.structural_decomposition(preds, {"A": 1}, 0.0)
+        self.assertEqual(len(score["confident_structural_misses"]), 1)
+        self.assertEqual(score["confident_structural_misses"][0]["race_code"], "A")
+        self.assertLess(score["confident_structural_misses"][0]["winner_probability_structural"], 0.2)
+
     def test_paired_component_test_detects_improvement(self):
         preds = [
             {"race_code": "A", "race_type": "house", "prior_margin": 0.0, "dem_probability": 0.8, "poll_count": 2},

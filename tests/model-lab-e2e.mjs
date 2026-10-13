@@ -25,6 +25,12 @@ try{
   if(data.diagnostic_contract?.paired_polling_component_test?.model_effect!=='NONE'){
     throw new Error('Paired polling diagnostic must be evaluation-only');
   }
+  if(data.diagnostic_contract?.structural_decomposition?.model_effect!=='NONE'){
+    throw new Error('Structural decomposition must be evaluation-only');
+  }
+  if(data.diagnostic_contract?.structural_decomposition?.redistricting_identified!==false){
+    throw new Error('Structural diagnostic must not claim redistricting is identified');
+  }
 
   const requested=Number(data.summary?.requested_cycles ?? 0);
   const scored=Number(data.summary?.scored_cycles ?? 0);
@@ -67,6 +73,9 @@ try{
       const pollN=Number(cp.score?.polling?.polled?.n||0)+Number(cp.score?.polling?.unpolled?.n||0);
       if(pollN!==cp.score?.n)throw new Error(`${year} ${cp.days_to_election}d polling partition drift`);
       if(cp.score?.polling?.paired_component_test?.state!=='scored')throw new Error(`${year} ${cp.days_to_election}d paired polling diagnostic missing`);
+      if(cp.score?.structural_decomposition?.state!=='scored')throw new Error(`${year} ${cp.days_to_election}d structural decomposition missing`);
+      if(cp.score?.structural_decomposition_20_80?.state!=='scored')throw new Error(`${year} ${cp.days_to_election}d structural competitive decomposition missing`);
+      if(Number(cp.score?.structural_decomposition?.n||0)<=0)throw new Error(`${year} ${cp.days_to_election}d structural denominator empty`);
       const calN=(cp.score?.calibration||[]).reduce((sum,b)=>sum+Number(b.count||0),0);
       if(calN!==cp.score?.n)throw new Error(`${year} ${cp.days_to_election}d calibration denominator drift`);
     }
@@ -84,6 +93,7 @@ try{
   if(await page.locator('#competitivePanel').getByText('45-55',{exact:false}).count()===0)throw new Error('Competitive diagnostics not rendered');
   if(await page.locator('#pollingPanel').getByText('Not a causal A/B test.',{exact:false}).count()===0)throw new Error('Polling caveat not rendered');
   await page.locator('#pairedPollingPanel').getByText('Same-race component test',{exact:false}).waitFor();
+  await page.locator('#structuralAuditPanel').getByText('Where does forecast skill enter?',{exact:false}).waitFor();
   await page.locator('#movementPollingPanel').getByText('Movement by polling status',{exact:false}).waitFor();
   if(await page.locator('#comparisonPanel').getByText('2018',{exact:false}).count()===0)throw new Error('Cross-cycle diagnostics not rendered');
 
@@ -93,6 +103,8 @@ try{
   if(!selectedText.includes('2018')||!selectedText.includes('14 days'))throw new Error('Diagnostic controls did not update panels');
   const pairedText=await page.locator('#pairedPollingPanel').innerText();
   if(!pairedText.includes('2018')||!pairedText.includes('14d'))throw new Error('Paired polling panel did not follow controls');
+  const structuralText=await page.locator('#structuralAuditPanel').innerText();
+  if(!structuralText.includes('2018')||!structuralText.includes('14d'))throw new Error('Structural panel did not follow controls');
 
   const body=await page.locator('body').innerText();
   if(!body.match(/Brier\s+0\.\d+/))throw new Error('Scored historical Brier metric is not rendered');
@@ -102,7 +114,7 @@ try{
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2);
   if(overflow)throw new Error('Model Lab has horizontal page overflow at phone viewport');
   if(consoleErrors.length)throw new Error(`Model Lab browser errors: ${consoleErrors.join(' | ')}`);
-  console.log(`MODEL LAB browser checks passed: desktop + mobile + ${scored}/${requested} cycles scored; 2018 n=468; 2022 n=416; scoreability gate verified.`);
+  console.log(`MODEL LAB browser checks passed: desktop + mobile + ${scored}/${requested} cycles scored; 2018 n=468; 2022 n=416; scoreability + structural audit verified.`);
 } finally {
   await browser.close();
 }
