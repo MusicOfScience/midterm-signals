@@ -1,15 +1,31 @@
 #!/usr/bin/env python3
-"""Run the 2018 historical acquisition with audited MEDSL state priors.
+"""Run the 2018 historical acquisition with audited source-normalisation fixes.
 
 FEC is the sole authority for the frozen national presidential centring
 constants. MEDSL is used only to reconstruct state two-party D-R margins for
 Senate structural priors. Its archived candidate totals differ slightly from
 later certified FEC national totals, so admission checks completeness and a
 broad sanity bound rather than asserting false byte-level equivalence.
+
+Some historical MEDSL CSVs contain legacy Windows-1252 characters in candidate
+names. Decoding therefore uses an explicit UTF-8 -> CP1252 -> Latin-1 fallback;
+no numeric fields are altered by this text-encoding rule.
 """
 from collections import defaultdict
+import csv
+import io
 
 import acquire_historical_2018 as acquisition
+
+
+def csv_rows(data: bytes) -> list[dict]:
+    last_error = None
+    for encoding in ("utf-8-sig", "cp1252", "latin-1"):
+        try:
+            return list(csv.DictReader(io.StringIO(data.decode(encoding))))
+        except UnicodeDecodeError as exc:
+            last_error = exc
+    raise RuntimeError(f"Unable to decode historical CSV: {last_error}")
 
 
 def presidential_margins(president_rows: list[dict]) -> tuple[dict[int, float], dict[str, dict[int, float]]]:
@@ -38,8 +54,6 @@ def presidential_margins(president_rows: list[dict]) -> tuple[dict[int, float], 
         r = sum(v["REP"] for v in by_state.values())
         total = sum(v["TOTAL"] for v in by_state.values())
         national[year] = 100 * (d - r) / total
-        # This is a sanity guard only. FEC, not MEDSL, supplies the model's
-        # national centring constant; archived source revisions can differ.
         if abs(national[year] - acquisition.FEC_NATIONAL_MARGINS[year]) > 0.5:
             raise RuntimeError(
                 f"MEDSL presidential archive is implausibly far from FEC in {year}: "
@@ -57,6 +71,7 @@ def presidential_margins(president_rows: list[dict]) -> tuple[dict[int, float], 
     return national, dict(states)
 
 
+acquisition.csv_rows = csv_rows
 acquisition.presidential_margins = presidential_margins
 
 if __name__ == "__main__":
