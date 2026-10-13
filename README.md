@@ -25,20 +25,28 @@ The v1.0 public application adds an integrated Forecast Centre, House/Senate cen
 
 The official numerical baseline preserves the v0.2 prospective coefficients. v1.0 expands outputs and transparency rather than retuning to external conventional wisdom.
 
+## MODEL LAB
+
+`/model-lab/` is the historical evaluation boundary: leakage-free replay, calibration and forecast-failure forensics for the frozen baseline. It uses fixed checkpoints at 60, 30, 14, 7 and 1 day before Election Day, verifies the production model contract before scoring, and keeps election outcomes outside all modelling functions.
+
+The 2018 and 2022 cycles currently remain deliberately **UNSCORED**. Their Brier scores, log loss and calibration diagnostics will not be published until an as-of historical corpus with explicit provenance passes the replay gates. See `docs/MODEL_LAB.md` and `historical/README.md`.
+
 ## Local checks
 
 ```bash
 npm test
-python -m py_compile scripts/build_forecast.py scripts/validate_forecast.py
+python -m py_compile scripts/build_forecast.py scripts/validate_forecast.py scripts/model_lab.py
+python scripts/model_lab.py
 ```
 
-GitHub Actions additionally runs Chromium end-to-end flows, a phone viewport check and automated accessibility checks before production promotion.
+GitHub Actions additionally runs Chromium end-to-end flows, a phone viewport check, Model Lab browser checks and automated accessibility checks before production promotion.
 
 A networked production refresh is run by GitHub Actions:
 
 ```bash
 python scripts/build_forecast.py
 python scripts/validate_forecast.py
+python scripts/model_lab.py
 ```
 
 ## Key public files
@@ -47,8 +55,10 @@ python scripts/validate_forecast.py
 - `public/data/races.csv`
 - `public/data/polls.csv`
 - `public/data/source-status.json`
+- `public/data/model-lab.json`
 - `public/data/history/`
 - `docs/METHODOLOGY.md`
+- `docs/MODEL_LAB.md`
 - `docs/DATA_PROVENANCE.md`
 - `docs/MODEL_CHANGELOG.md`
 - `docs/SOURCE_STATUS.md`

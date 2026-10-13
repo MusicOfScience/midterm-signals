@@ -16,9 +16,10 @@ Publication/model-output additions:
 - race-level change fields against the previous snapshot;
 - source-health states;
 - run warnings for large unexplained probability movement;
-- explicit `unavailable` historical-validation state for 2018/2022.
+- explicit `unavailable` historical-validation state for 2018/2022;
+- MODEL LAB historical replay/calibration infrastructure, with scoring blocked until leakage-free 2018/2022 corpora are admitted.
 
-The shared/random error scales, partisan baseline, poll-weight formula, incumbency coefficients, race-poll blend and 30,000-simulation baseline are unchanged from v0.2.
+The shared/random error scales, partisan baseline, poll-weight formula, incumbency coefficients, race-poll blend and 30,000-simulation baseline are unchanged from v0.2. MODEL LAB is evaluation-only and introduces no numerical change to the 2026 forecast.
 
 ## baseline-v0.2
 

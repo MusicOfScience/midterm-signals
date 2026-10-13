@@ -1,0 +1,13 @@
+{
+  "cycle": 2018,
+  "election_date": "2018-11-06",
+  "corpus_state": "awaiting_verified_inputs",
+  "baseline_presidential_years": [2008, 2012, 2016],
+  "national_presidential_margins": {
+    "earliest": null,
+    "middle": null,
+    "latest": null
+  },
+  "provenance": [],
+  "note": "No performance metric may be published until a leakage-free as-of corpus and verified national baselines are admitted."
+}

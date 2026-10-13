@@ -5,8 +5,9 @@
   "description":"Open, auditable analysis and probabilistic forecasting for the 2026 United States midterm elections.",
   "scripts":{
     "check":"node scripts/check.mjs",
-    "test:core":"node tests/core.test.mjs && python -m unittest tests.test_model",
+    "test:core":"node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab",
     "build:forecast":"python scripts/build_forecast.py",
+    "build:model-lab":"python scripts/model_lab.py",
     "validate:forecast":"python scripts/validate_forecast.py",
     "test":"npm run test:core && npm run check"
   }

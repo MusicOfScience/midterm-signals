@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f2eee4">
+  <meta name="description" content="MIDTERM SIGNALS Model Lab — leakage-free historical replay, calibration and forecast forensics.">
+  <link rel="canonical" href="https://midterm-signals.pages.dev/model-lab/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/model-lab/model-lab.css">
+  <title>MODEL LAB · MIDTERM SIGNALS</title>
+</head>
+<body class="lab-body">
+<a class="skip" href="#labContent">Skip to Model Lab</a>
+<header class="lab-header">
+  <a class="lab-brand" href="/"><span class="brand-mark">M∕S</span><span>MIDTERM SIGNALS</span></a>
+  <nav aria-label="Model Lab"><a href="/">Forecast</a><a href="#replay">Replay</a><a href="#calibration">Calibration</a><a href="#failures">Failures</a><a href="#methodology">Methodology</a></nav>
+</header>
+<main id="labContent" class="lab-shell" tabindex="-1">
+  <section class="lab-hero">
+    <div class="eyebrow">MODEL LAB / AUDIT SYSTEM</div>
+    <h1>Can the probabilities survive contact with history?</h1>
+    <p class="lab-deck">Historical replay, calibration and failure analysis for the frozen MIDTERM SIGNALS baseline. Evaluation only. No historical result is permitted to retune the live forecast.</p>
+    <div id="labState" class="lab-state" aria-live="polite">Reading the audit artefact…</div>
+  </section>
+
+  <section class="lab-principle" aria-label="Model Lab rule">
+    <span>THE RULE</span>
+    <strong>Replay may judge the model. Replay may not rewrite the model.</strong>
+  </section>
+
+  <section id="replay" class="lab-section">
+    <div class="lab-section-head"><div><div class="eyebrow">01 / REPLAY</div><h2>The time machine</h2></div><p>Five fixed snapshots per election: 60, 30, 14, 7 and 1 day before voting.</p></div>
+    <div id="cycleGrid" class="cycle-grid"><div class="lab-card skeleton">Loading historical cycle states…</div></div>
+  </section>
+
+  <section id="calibration" class="lab-section">
+    <div class="lab-section-head"><div><div class="eyebrow">02 / CALIBRATION</div><h2>When we said 70%, did 70% happen?</h2></div><p>Brier score, log loss and reliability are published only after a complete leakage-free replay clears the gates.</p></div>
+    <div id="calibrationPanel" class="lab-card"><p class="muted">Loading calibration state…</p></div>
+  </section>
+
+  <section id="failures" class="lab-section">
+    <div class="lab-section-head"><div><div class="eyebrow">03 / FAILURES</div><h2>Show us the wreckage</h2></div><p>Confident misses belong on the front bench, not under the carpet.</p></div>
+    <div id="failurePanel" class="lab-card"><p class="muted">Loading failure analysis…</p></div>
+  </section>
+
+  <section id="methodology" class="lab-section">
+    <div class="lab-section-head"><div><div class="eyebrow">04 / METHODOLOGY</div><h2>Anti-leakage architecture</h2></div><p>The replay is valid only if the information boundary is valid.</p></div>
+    <div id="guardGrid" class="guard-grid"></div>
+    <div class="lab-card contract-card"><h3>Frozen model contract</h3><dl id="contractDetails"></dl><p><a href="https://github.com/MusicOfScience/midterm-signals/blob/main/docs/MODEL_LAB.md">Read the full protocol on GitHub ↗</a></p></div>
+  </section>
+</main>
+<footer class="lab-footer"><a href="/">← MIDTERM SIGNALS forecast</a><a href="/data/model-lab.json">Machine-readable Model Lab JSON</a><span>Facts ≠ forecasts ≠ validation</span></footer>
+<script type="module" src="/model-lab/model-lab.js"></script>
+</body>
+</html>
