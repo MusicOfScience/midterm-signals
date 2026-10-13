@@ -38,6 +38,13 @@ try{
   if((stabilityContract?.fixed_range_bands_pp||[]).length!==4||stabilityContract?.high_instability_threshold_pp!==10){
     throw new Error('Baseline stability fixed thresholds drifted');
   }
+  const pollErrorContract=data.diagnostic_contract?.polling_error_decomposition;
+  if(pollErrorContract?.model_effect!=='NONE'||pollErrorContract?.outcomes_visible_only_after_forecasts!==true){
+    throw new Error('Polling-error decomposition must remain post-forecast and evaluation-only');
+  }
+  if(!String(pollErrorContract?.result_margin_source||'').includes('result-margin-provenance.json')){
+    throw new Error('Polling-error certified margin provenance missing');
+  }
 
   const requested=Number(data.summary?.requested_cycles ?? 0);
   const scored=Number(data.summary?.scored_cycles ?? 0);
@@ -47,6 +54,9 @@ try{
   }
   if(requested!==2||scored!==2||expectedState!=='scored'){
     throw new Error(`Expected both historical cycles scored, got: ${JSON.stringify(data.summary)}`);
+  }
+  if(data.polling_error_cross_cycle?.state!=='scored'||(data.polling_error_cross_cycle?.cycles||[]).length!==2){
+    throw new Error('House-only cross-cycle polling-error comparison missing');
   }
 
   const state=(await page.locator('#labState').innerText()).trim().toUpperCase();
@@ -80,6 +90,13 @@ try{
       const pollN=Number(cp.score?.polling?.polled?.n||0)+Number(cp.score?.polling?.unpolled?.n||0);
       if(pollN!==cp.score?.n)throw new Error(`${year} ${cp.days_to_election}d polling partition drift`);
       if(cp.score?.polling?.paired_component_test?.state!=='scored')throw new Error(`${year} ${cp.days_to_election}d paired polling diagnostic missing`);
+      const pollError=cp.score?.polling_error;
+      if(pollError?.state!=='scored'||pollError?.outcome_margin_used_only_for_scoring!==true){
+        throw new Error(`${year} ${cp.days_to_election}d polling-error diagnostic missing or leaked`);
+      }
+      if(Number(pollError?.all_polled?.n||0)<=0||pollError?.all_polled?.raw_race_poll_aggregate?.state!=='scored'){
+        throw new Error(`${year} ${cp.days_to_election}d raw polling-error sample empty`);
+      }
       if(cp.score?.structural_decomposition?.state!=='scored')throw new Error(`${year} ${cp.days_to_election}d structural decomposition missing`);
       if(cp.score?.structural_decomposition_20_80?.state!=='scored')throw new Error(`${year} ${cp.days_to_election}d structural competitive decomposition missing`);
       if(Number(cp.score?.structural_decomposition?.n||0)<=0)throw new Error(`${year} ${cp.days_to_election}d structural denominator empty`);
@@ -107,6 +124,7 @@ try{
   if(await page.locator('#competitivePanel').getByText('45-55',{exact:false}).count()===0)throw new Error('Competitive diagnostics not rendered');
   if(await page.locator('#pollingPanel').getByText('Not a causal A/B test.',{exact:false}).count()===0)throw new Error('Polling caveat not rendered');
   await page.locator('#pairedPollingPanel').getByText('Same-race component test',{exact:false}).waitFor();
+  await page.locator('#pollErrorPanel').getByText('Poll → result → model',{exact:false}).waitFor();
   await page.locator('#structuralAuditPanel').getByText('Where does forecast skill enter?',{exact:false}).waitFor();
   await page.locator('#baselineStabilityPanel').getByText('Did unstable structural history fail more often?',{exact:false}).waitFor();
   await page.locator('#movementPollingPanel').getByText('Movement by polling status',{exact:false}).waitFor();
@@ -118,6 +136,8 @@ try{
   if(!selectedText.includes('2018')||!selectedText.includes('14 days'))throw new Error('Diagnostic controls did not update panels');
   const pairedText=await page.locator('#pairedPollingPanel').innerText();
   if(!pairedText.includes('2018')||!pairedText.includes('14d'))throw new Error('Paired polling panel did not follow controls');
+  const pollErrorText=await page.locator('#pollErrorPanel').innerText();
+  if(!pollErrorText.includes('2018')||!pollErrorText.includes('14d'))throw new Error('Polling-error panel did not follow controls');
   const structuralText=await page.locator('#structuralAuditPanel').innerText();
   if(!structuralText.includes('2018')||!structuralText.includes('14d'))throw new Error('Structural panel did not follow controls');
   const stabilityText=await page.locator('#baselineStabilityPanel').innerText();
@@ -131,7 +151,7 @@ try{
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2);
   if(overflow)throw new Error('Model Lab has horizontal page overflow at phone viewport');
   if(consoleErrors.length)throw new Error(`Model Lab browser errors: ${consoleErrors.join(' | ')}`);
-  console.log(`MODEL LAB browser checks passed: desktop + mobile + ${scored}/${requested} cycles scored; scoreability + structural + baseline-stability audits verified.`);
+  console.log(`MODEL LAB browser checks passed: desktop + mobile + ${scored}/${requested} cycles scored; scoreability + structural + baseline-stability + polling-error audits verified.`);
 } finally {
   await browser.close();
 }

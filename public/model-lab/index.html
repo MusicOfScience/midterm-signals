@@ -51,9 +51,10 @@
   </section>
 
   <section id="polling" class="lab-section">
-    <div class="lab-section-head"><div><div class="eyebrow">04 / POLLING & CHAMBERS</div><h2>What changed when races had polls?</h2></div><p>Polled versus unpolled and House versus Senate diagnostics, with missing chamber evidence labelled explicitly.</p></div>
+    <div class="lab-section-head"><div><div class="eyebrow">04 / POLLING & CHAMBERS</div><h2>What changed when races had polls?</h2></div><p>Polled versus unpolled, same-race component tests and certified margin-error diagnostics, with missing evidence labelled explicitly.</p></div>
     <div id="pollingPanel" class="lab-card"><p class="muted">Loading polling partitions…</p></div>
     <div id="pairedPollingPanel" class="lab-card"><p class="muted">Loading paired polling-component test…</p></div>
+    <div id="pollErrorPanel" class="lab-card"><p class="muted">Loading raw polling-error decomposition…</p></div>
   </section>
 
   <section id="structural" class="lab-section">
@@ -87,5 +88,6 @@
 <footer class="lab-footer"><a href="/">← MIDTERM SIGNALS forecast</a><a href="/data/model-lab.json">Machine-readable Model Lab JSON</a><span>Facts ≠ forecasts ≠ validation</span></footer>
 <script type="module" src="/model-lab/model-lab.js"></script>
 <script type="module" src="/model-lab/paired-diagnostics.js"></script>
+<script type="module" src="/model-lab/polling-error-panel.js"></script>
 </body>
 </html>

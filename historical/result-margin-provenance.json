@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0.0",
+  "evaluation_only": true,
+  "model_effect": "NONE",
+  "rule": "Certified outcome margins may score polling error but may never enter a forecast probability. A numeric D/R margin is unavailable, never imputed, when the certified result lacks either major-party vote total.",
+  "cycles": {
+    "2018": {
+      "rows": 470,
+      "output": "historical/2018/result-margins.csv",
+      "output_sha256": "3251f8d82490511edb2ad2e305f5b455bb0a14e7cf3e4ba343aa29460d071b48",
+      "sources": [
+        {
+          "name": "house_results",
+          "url": "https://raw.githubusercontent.com/MEDSL/constituency-returns/fe67c056502fc09ddb1ace2ff8f87c53233a744e/1976-2018-house.csv",
+          "sha256": "e7fc0f913c16d1f143f4b425f4722de2fb5f1d8781d2391096d76c9651a6ce2a"
+        },
+        {
+          "name": "senate_results",
+          "url": "https://raw.githubusercontent.com/MEDSL/constituency-returns/fe67c056502fc09ddb1ace2ff8f87c53233a744e/1976-2018-senate.csv",
+          "sha256": "8ab824d9acca70ad54dc69f9b191c5cea604cd5bbda2f8777e968cf25bada50e"
+        }
+      ]
+    },
+    "2022": {
+      "rows": 397,
+      "output": "historical/2022/result-margins.csv",
+      "output_sha256": "bd956268f3bd3de584dd79a0d3fd600ff0f1cca7c61cd5db69260c6bffc092a5",
+      "sources": [
+        {
+          "name": "FEC Federal Elections 2022",
+          "url": "https://www.fec.gov/documents/5676/federalelections2022.xlsx",
+          "sha256": "cdb258ea23803e50d752bcea19faa39b3c201eb960094bcb556c3a38c2350897",
+          "sheet": "8. US House Results by State",
+          "source_districts_classified": 435,
+          "numeric_two_major_party_margins": 397,
+          "margin_unavailable": [
+            {
+              "race_code": "AL-01",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 140592
+            },
+            {
+              "race_code": "AL-06",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 154233
+            },
+            {
+              "race_code": "AZ-08",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 197555
+            },
+            {
+              "race_code": "AZ-09",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 192796
+            },
+            {
+              "race_code": "CA-02",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 308749,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "CA-10",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 198415,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "CA-15",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 194874,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "CA-16",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 241007,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "CA-29",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 119435,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "CA-30",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 211068,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "CA-34",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 121467,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "CA-37",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 131880,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "FL-05",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "FL-06",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 226548
+            },
+            {
+              "race_code": "FL-18",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 167429
+            },
+            {
+              "race_code": "IL-07",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 167650,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "LA-04",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "LA-06",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 205219
+            },
+            {
+              "race_code": "MA-04",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 201882,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "MI-04",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 183936
+            },
+            {
+              "race_code": "ND-01",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 148399
+            },
+            {
+              "race_code": "NY-09",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 116970,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "NY-13",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 116589,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "PA-03",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 251115,
+              "rep_votes": 0
+            },
+            {
+              "race_code": "PA-13",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 260345
+            },
+            {
+              "race_code": "PA-14",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 230865
+            },
+            {
+              "race_code": "PA-15",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 213417
+            },
+            {
+              "race_code": "SC-03",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 189971
+            },
+            {
+              "race_code": "SC-04",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 165607
+            },
+            {
+              "race_code": "SD-01",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 253821
+            },
+            {
+              "race_code": "TX-06",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 149321
+            },
+            {
+              "race_code": "TX-11",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 151066
+            },
+            {
+              "race_code": "TX-19",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 152321
+            },
+            {
+              "race_code": "TX-25",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 185270
+            },
+            {
+              "race_code": "TX-26",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 183639
+            },
+            {
+              "race_code": "TX-31",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 183185
+            },
+            {
+              "race_code": "WI-06",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 239231
+            },
+            {
+              "race_code": "WI-08",
+              "reason": "certified_result_lacks_both_major_party_vote_totals",
+              "dem_votes": 0,
+              "rep_votes": 223981
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "transformation": "Candidate/fusion lines are collapsed within race; Democratic and Republican certified votes are summed; margin is 100*(D-R)/(D+R). A 2018 result line without a usable party label may inherit D/R only from an unambiguous pre-election roster match or an identity fallback already admitted in the 2018 cycle manifest. 2022 uses certified runoff votes when present, otherwise certified general-election votes, and emits no numeric margin when either D or R certified votes are absent."
+}
