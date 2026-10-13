@@ -21,7 +21,7 @@ jobs:
           node-version: "22"
       - name: Python syntax and browser projection
         run: |
-          python -m py_compile scripts/build_forecast.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py
+          python -m py_compile scripts/build_forecast.py scripts/enrich_outputs.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py
           python scripts/make_bootstrap.py
           python scripts/build_browser.py
       - name: JavaScript syntax
@@ -31,7 +31,7 @@ jobs:
           node --check public/core.mjs
           node --check public/enhancements.bundle.mjs
       - name: Unit tests
-        run: node tests/core.test.mjs && python -m unittest tests.test_model
+        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment
       - name: Static publication checks
         run: node scripts/check.mjs
 
