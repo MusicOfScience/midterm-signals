@@ -3,7 +3,7 @@
 
 Predictive inputs and scoreability come from ``admit_historical_2022_strict``.
 This final layer replaces the brittle Harvard Dataverse results download with
-FEC's own Federal Elections 2022 workbook.  The workbook is fetched only after
+FEC's own Federal Elections 2022 workbook. The workbook is fetched only after
 all predictive inputs and admission decisions have been constructed by the
 underlying pipeline.
 """
@@ -62,13 +62,32 @@ def _district_number(value: str) -> str:
     return ""
 
 
+def _resolved_party(parties: set[str], *, state: str, district: str, candidate: str) -> str:
+    """Resolve a candidate's certified fusion lines to the D/R control target."""
+    major = parties & {"DEM", "REP"}
+    if len(major) > 1:
+        raise RuntimeError(
+            f"FEC candidate appears on both D and R lines for {state}-{district}: "
+            f"{candidate!r} parties={sorted(parties)}"
+        )
+    if major:
+        return next(iter(major))
+    return "OTHER"
+
+
 def fec_house_winners_csv(workbook: bytes) -> bytes:
     """Convert the certified FEC House sheet to the minimal result schema.
 
-    Winner markers are preferred.  If a district has no explicit marker, the
-    certified runoff vote is used when present, otherwise the certified general
-    vote.  Only the final winner row is emitted, because Model Lab scoring needs
-    party control, not candidate vote margins.
+    FEC can list one candidate on several ballot/fusion-party lines (for
+    example, a Democratic winner can also appear on a Working Families line),
+    and repeats the winner marker on those lines. We therefore collapse rows to
+    a candidate within each district before selecting the winner. This prevents
+    ballot lines from being misread as distinct winning candidates.
+
+    Winner markers are preferred after candidate-level collapse. If a district
+    has no explicit marker, certified runoff votes are used when present,
+    otherwise certified general-election votes. Model Lab needs party control,
+    not the candidate vote margin, so only one final winner row is emitted.
     """
     digest = hashlib.sha256(workbook).hexdigest()
     if digest != FEC_RESULTS_SHA256:
@@ -101,7 +120,8 @@ def fec_house_winners_csv(workbook: bytes) -> bytes:
         )
     runoff_col = runoff_cols[0]
 
-    groups: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    # District -> normalized candidate -> candidate-level certified record.
+    groups: dict[tuple[str, str], dict[str, dict]] = defaultdict(dict)
     for values in iterator:
         def get(name):
             pos = index[name]
@@ -119,16 +139,23 @@ def fec_house_winners_csv(workbook: bytes) -> bytes:
             else:
                 continue
         candidate = _text(get("CANDIDATE NAME"))
-        party = _party_family(get("PARTY"))
-        if not candidate or not _text(get("PARTY")):
+        raw_party = _text(get("PARTY"))
+        if not candidate or not raw_party:
             continue
-        groups[(state, district)].append({
+        key = impl.norm_name(candidate)
+        if not key:
+            continue
+        record = groups[(state, district)].setdefault(key, {
             "candidate": candidate,
-            "party": party,
-            "general": _number(get("GENERAL VOTES")),
-            "runoff": _number(get(runoff_col)),
-            "winner": _text(get("GE WINNER INDICATOR")).upper() == "W",
+            "parties": set(),
+            "general": 0.0,
+            "runoff": 0.0,
+            "winner": False,
         })
+        record["parties"].add(_party_family(raw_party))
+        record["general"] += _number(get("GENERAL VOTES"))
+        record["runoff"] += _number(get(runoff_col))
+        record["winner"] = record["winner"] or _text(get("GE WINNER INDICATOR")).upper() == "W"
 
     if len(groups) != 435:
         raise RuntimeError(f"FEC certified House sheet classified {len(groups)} districts, expected 435")
@@ -141,25 +168,35 @@ def fec_house_winners_csv(workbook: bytes) -> bytes:
     )
     writer.writeheader()
     nonmajor = []
-    for (state, district), rows in sorted(groups.items(), key=lambda item: (item[0][0], int(item[0][1]))):
+    for (state, district), candidates in sorted(groups.items(), key=lambda item: (item[0][0], int(item[0][1]))):
+        rows = list(candidates.values())
         marked = [row for row in rows if row["winner"]]
         if len(marked) == 1:
             winner = marked[0]
         elif len(marked) > 1:
-            raise RuntimeError(f"FEC marks multiple general-election winners for {state}-{district}: {marked}")
+            raise RuntimeError(
+                f"FEC marks multiple distinct general-election winners for {state}-{district}: "
+                f"{[row['candidate'] for row in marked]}"
+            )
         else:
             use_runoff = any(row["runoff"] > 0 for row in rows)
-            key = "runoff" if use_runoff else "general"
-            winner = max(rows, key=lambda row: row[key])
-        if winner["party"] not in {"DEM", "REP"}:
-            nonmajor.append(f"{state}-{district}:{winner['candidate']}:{winner['party']}")
+            vote_key = "runoff" if use_runoff else "general"
+            winner = max(rows, key=lambda row: row[vote_key])
+
+        party = _resolved_party(
+            winner["parties"], state=state, district=district, candidate=winner["candidate"]
+        )
+        if party not in {"DEM", "REP"}:
+            nonmajor.append(
+                f"{state}-{district}:{winner['candidate']}:{sorted(winner['parties'])}"
+            )
         writer.writerow({
             "year": 2022,
             "stage": "GEN",
             "state_po": state,
             "district": district,
             "candidate": winner["candidate"],
-            "party": winner["party"],
+            "party": party,
             "candidatevotes": 1,
         })
     if nonmajor:
