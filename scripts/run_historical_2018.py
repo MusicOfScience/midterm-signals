@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Run the 2018 historical acquisition with the audited MEDSL denominator fix.
+"""Run the 2018 historical acquisition with audited MEDSL state priors.
 
-MEDSL repeats each state's official totalvotes value on every presidential
-candidate row. National D-R margins must therefore use that state total once,
-not the sum of candidate rows, which can omit residual/write-in votes.
+FEC is the sole authority for the frozen national presidential centring
+constants. MEDSL is used only to reconstruct state two-party D-R margins for
+Senate structural priors. Its archived candidate totals differ slightly from
+later certified FEC national totals, so admission checks completeness and a
+broad sanity bound rather than asserting false byte-level equivalence.
 """
 from collections import defaultdict
 
@@ -27,25 +29,28 @@ def presidential_margins(president_rows: list[dict]) -> tuple[dict[int, float], 
             side = acquisition.party(row.get("party"))
             if side in {"DEM", "REP"}:
                 by_state[st][side] += votes
+        if len(by_state) != 51:
+            raise RuntimeError(f"Expected 51 presidential jurisdictions in {year}, got {len(by_state)}")
+        incomplete = [st for st, values in by_state.items() if not values["DEM"] or not values["REP"] or not values["TOTAL"]]
+        if incomplete:
+            raise RuntimeError(f"Incomplete MEDSL presidential returns {year}: {incomplete}")
         d = sum(v["DEM"] for v in by_state.values())
         r = sum(v["REP"] for v in by_state.values())
         total = sum(v["TOTAL"] for v in by_state.values())
-        if not d or not r or not total:
-            raise RuntimeError(f"Missing presidential returns for {year}")
         national[year] = 100 * (d - r) / total
+        # This is a sanity guard only. FEC, not MEDSL, supplies the model's
+        # national centring constant; archived source revisions can differ.
+        if abs(national[year] - acquisition.FEC_NATIONAL_MARGINS[year]) > 0.5:
+            raise RuntimeError(
+                f"MEDSL presidential archive is implausibly far from FEC in {year}: "
+                f"{national[year]:.3f} vs {acquisition.FEC_NATIONAL_MARGINS[year]:.2f}"
+            )
         for st, values in by_state.items():
             two_party = values["DEM"] + values["REP"]
-            if two_party > 0:
-                states[st][year] = 100 * (values["DEM"] - values["REP"]) / two_party
-    for year, official in acquisition.FEC_NATIONAL_MARGINS.items():
-        if abs(national[year] - official) > 0.08:
-            raise RuntimeError(
-                f"MEDSL/FEC national margin disagreement {year}: "
-                f"{national[year]:.3f} vs {official:.2f}"
-            )
+            states[st][year] = 100 * (values["DEM"] - values["REP"]) / two_party
     missing = [
         st for st, values in states.items()
-        if st != "DC" and any(year not in values for year in (2008, 2012, 2016))
+        if any(year not in values for year in (2008, 2012, 2016))
     ]
     if missing:
         raise RuntimeError(f"State presidential baseline incomplete: {missing}")
