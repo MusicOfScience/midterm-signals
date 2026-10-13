@@ -8,6 +8,7 @@ on:
       - "scripts/acquire_historical_2022.py"
       - "scripts/run_historical_2022.py"
       - "scripts/admit_historical_2022.py"
+      - "scripts/admit_historical_2022_strict.py"
       - "scripts/probe_2022_poll_archive.py"
       - "scripts/probe_2022_results.py"
       - "scripts/probe_2022_roster.py"
@@ -33,7 +34,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Compile historical acquisition code
-        run: python -m py_compile scripts/acquire_historical_2022.py scripts/run_historical_2022.py scripts/admit_historical_2022.py scripts/probe_2022_poll_archive.py scripts/probe_2022_results.py scripts/probe_2022_roster.py scripts/model_lab.py
+        run: python -m py_compile scripts/acquire_historical_2022.py scripts/run_historical_2022.py scripts/admit_historical_2022.py scripts/admit_historical_2022_strict.py scripts/probe_2022_poll_archive.py scripts/probe_2022_results.py scripts/probe_2022_roster.py scripts/model_lab.py
       - name: Install pinned historical dependencies
         run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
       - name: Verify 2022 poll evidence chain
@@ -43,7 +44,7 @@ jobs:
       - name: Classify dated roster scoreability
         run: python scripts/probe_2022_roster.py
       - name: Build scoreability ledger and admitted corpus
-        run: python scripts/admit_historical_2022.py
+        run: python scripts/admit_historical_2022_strict.py
       - name: Build Model Lab from admitted corpus
         run: python scripts/model_lab.py
       - name: Run Model Lab and production integrity tests
