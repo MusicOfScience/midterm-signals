@@ -59,7 +59,9 @@ def main()->None:
         if not any(r.get('external_forecasters') for r in races): fail('external source count configured without race data')
     if not STATUS.exists(): fail('status.json missing')
     status=json.loads(STATUS.read_text())
-    expected_release='PROD v1.0 RC' if os.environ.get('GITHUB_REF_NAME')=='prod-v1' else 'PROD v1.0'
+    github_actions=os.environ.get('GITHUB_ACTIONS')=='true'
+    ref_name=os.environ.get('GITHUB_REF_NAME')
+    expected_release='PROD v1.0' if (not github_actions or ref_name=='main') else 'PROD v1.0 RC'
     if status.get('release')!=expected_release: fail(f"status release {status.get('release')!r} != {expected_release!r}")
     print(f"MIDTERM SIGNALS forecast validation passed: {len(house)} House + {len(senate)} Senate races; model {f.get('model')}; release {expected_release}")
 
