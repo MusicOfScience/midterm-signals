@@ -73,6 +73,8 @@ def build_app() -> str:
 
     # Enhancement code is not part of the homepage critical path. All other
     # analytical routes may opt into the richer v1 controls after first render.
+    # Keep the small mobile-navigation Escape behaviour in the base bundle so
+    # accessibility does not depend on loading the enhancement module.
     lazy = r'''let __ENHANCEMENTS_PROMISE=null;
 function __maybeLoadEnhancements(){
   const view=routeFromLocation().view;
@@ -81,6 +83,7 @@ function __maybeLoadEnhancements(){
 }
 window.addEventListener('popstate',()=>setTimeout(__maybeLoadEnhancements,0));
 document.addEventListener('click',()=>setTimeout(__maybeLoadEnhancements,0),{capture:true,passive:true});
+document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;const nav=document.querySelector('#primaryNav'),toggle=document.querySelector('#navToggle');if(nav?.classList.contains('open')){nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false');toggle?.focus()}});
 boot().then(()=>{document.querySelector('.site-footer')?.removeAttribute('hidden');setTimeout(__maybeLoadEnhancements,0)}).catch(err=>{console.error(err);const main=document.querySelector('#content');if(main)main.innerHTML='<div class="error-state"><h2>Application failed to load</h2><p>The static shell is available, but the interactive application could not be initialised.</p></div>'});
 '''
     source = replace_required(source, "boot();\n", lazy, "boot invocation")
