@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-10-13T03:18:59.459277Z",
-  "data_refreshed_at": "2026-10-13T03:18:59.459277Z",
+  "generated_at": "2026-10-13T04:20:48.561731Z",
+  "data_refreshed_at": "2026-10-13T04:20:48.561731Z",
   "election_date": "2026-11-03",
   "days_to_election": 21,
   "summary": {
@@ -54249,7 +54249,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-10-13T03:18:59.459277Z",
+      "last_success": "2026-10-13T04:20:48.561731Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -54282,7 +54282,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-10-13T03:19:04.943890Z",
+      "last_success": "2026-10-13T04:20:58.253840Z",
       "last_observation": "2026-10-01",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -54316,7 +54316,7 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-10-13T03:19:07.561150Z",
+      "last_success": "2026-10-13T04:21:01.491892Z",
       "last_observation": "2026-09-30",
       "note": "Official bulk adapter; 849 candidate summaries matched to production candidates."
     },
@@ -54325,7 +54325,7 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-10-13T03:19:04.943890Z",
+      "last_success": "2026-10-13T04:20:58.253840Z",
       "last_observation": "2026-10-11",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
@@ -69402,7 +69402,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-10-13T03:18:59.459277Z",
+    "retrieved_at": "2026-10-13T04:20:48.561731Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -69421,12 +69421,25 @@
     "senate_expected_dem_seats": 0.0,
     "generic_ballot_d_minus_r": 0.0,
     "changed_inputs": [],
-    "previous_generated_at": "2026-10-13T03:10:23.073569Z"
+    "previous_generated_at": "2026-10-13T03:18:59.459277Z"
   },
   "briefing": {
     "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 92% probability of House control and a 69% probability of Senate control. The current weighted generic congressional ballot is D+7.5. The House 80% Democratic-seat interval is 219–252; the Senate interval is 49–54."
   },
   "history_summaries": [
+    {
+      "file": "2026-10-13T042048Z.json",
+      "generated_at": "2026-10-13T04:20:48.561731Z",
+      "house": 0.9172,
+      "senate": 0.6882,
+      "house_seats": 234.7,
+      "senate_seats": 51.5,
+      "generic_ballot_d_minus_r": 7.54,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "6c9f1f4d3f2b8379f64ab823f26c5271d4f73b15",
+      "input_sha256": "3337df346ce0f0ae4ac163cb5e9352aec15656f398a8fcf5b7bcd1f414638822",
+      "changed_inputs": []
+    },
     {
       "file": "2026-10-13T022515Z.json",
       "generated_at": "2026-10-13T02:25:15.288854Z",
