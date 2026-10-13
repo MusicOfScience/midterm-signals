@@ -2,9 +2,10 @@
 """Acquire and normalize the 2022 Model Lab corpus.
 
 This starts in fail-closed probe mode. It verifies the actual block-level
-schema and Census 118th-Congress geography before national normalization is
-allowed to run. No result data are opened and no historical score is produced
-in probe mode.
+schema, Census 118th-Congress geography, dated FiveThirtyEight roster/poll
+schemas, and MEDSL result schema before national normalization is allowed to
+run. No result data are used for prediction and no historical score is
+produced in probe mode.
 """
 from __future__ import annotations
 
@@ -16,12 +17,16 @@ import json
 import re
 import urllib.request
 import zipfile
+from collections import Counter
 
 UA = "MIDTERM-SIGNALS historical corpus audit/1.0 (+https://github.com/MusicOfScience/midterm-signals)"
-DRA_COMMIT = "d631d7430242b40e4a35e761449b23062da56da9"  # placeholder is never fetched; see DRA_PIN below
-DRA_PIN = "main"
+DRA_COMMIT = "7f29db811844c02ab726ffec9bb34865c73ef342"
 DRA_REPO = "dra2020/block_data"
 CENSUS_BEF = "https://www2.census.gov/programs-surveys/decennial/rdo/mapping-files/2023/118-congressional-district-bef/cd118.zip"
+FTE_2022 = "https://projects.fivethirtyeight.com/2022-general-election-forecast-data"
+FTE_POLLS = "https://projects.fivethirtyeight.com/polls-page/data"
+MEDSL_COMMIT = "a8126c5790b8d1f438a3e63c3506cdcdc7406d9f"
+MEDSL_AL = f"https://raw.githubusercontent.com/MEDSL/2022-elections-official/{MEDSL_COMMIT}/individual_states/2022-al-local-precinct-general.zip"
 
 
 def fetch(url: str) -> bytes:
@@ -41,16 +46,8 @@ def github_json(url: str):
     return json.loads(fetch(url).decode("utf-8"))
 
 
-def resolve_dra_commit() -> str:
-    obj = github_json(f"https://api.github.com/repos/{DRA_REPO}/commits/{DRA_PIN}")
-    value = obj.get("sha") or ""
-    if not re.fullmatch(r"[0-9a-f]{40}", value):
-        raise RuntimeError("could not resolve DRA commit")
-    return value
-
-
-def latest_election_md(commit: str, state: str) -> tuple[str, str]:
-    tree = github_json(f"https://api.github.com/repos/{DRA_REPO}/git/trees/{commit}?recursive=1")
+def latest_election_md(state: str) -> tuple[str, str]:
+    tree = github_json(f"https://api.github.com/repos/{DRA_REPO}/git/trees/{DRA_COMMIT}?recursive=1")
     pat = re.compile(rf"^2020_Geography/{state}/Election_Data_Block_{state}\.v(\d+)\.md$")
     matches = []
     for item in tree.get("tree", []):
@@ -60,7 +57,7 @@ def latest_election_md(commit: str, state: str) -> tuple[str, str]:
     if not matches:
         raise RuntimeError(f"no DRA election block reference for {state}")
     _, path = max(matches)
-    md = fetch(f"https://raw.githubusercontent.com/{DRA_REPO}/{commit}/{path}").decode("utf-8")
+    md = fetch(f"https://raw.githubusercontent.com/{DRA_REPO}/{DRA_COMMIT}/{path}").decode("utf-8")
     m = re.search(r"https://data\.dra2020\.net/[^)\s]+\.zip", md)
     if not m:
         raise RuntimeError(f"no download URL in {path}")
@@ -80,6 +77,47 @@ def zip_csv_header(data: bytes) -> tuple[list[str], list[str], str]:
     return names, header, name
 
 
+def zip_csv_rows(data: bytes, limit: int | None = None) -> tuple[list[str], list[dict], str]:
+    with zipfile.ZipFile(io.BytesIO(data)) as z:
+        names = z.namelist()
+        csvs = [n for n in names if n.lower().endswith(".csv") and not n.startswith("__MACOSX/")]
+        if not csvs:
+            raise RuntimeError(f"zip has no CSV: {names[:20]}")
+        name = csvs[0]
+        raw = z.read(name)
+    rows = []
+    reader = csv.DictReader(io.StringIO(raw.decode("utf-8-sig", errors="replace")))
+    for i, row in enumerate(reader):
+        rows.append(row)
+        if limit is not None and i + 1 >= limit:
+            break
+    return names, rows, name
+
+
+def csv_probe(data: bytes, sample: int = 6) -> dict:
+    text = data.decode("utf-8-sig", errors="replace")
+    reader = csv.DictReader(io.StringIO(text))
+    rows = []
+    for i, row in enumerate(reader):
+        rows.append(row)
+        if i + 1 >= sample:
+            break
+    return {"columns": reader.fieldnames or [], "sample": rows}
+
+
+def csv_cycle_count(data: bytes, cycle: str = "2022") -> tuple[list[str], int, list[dict]]:
+    text = data.decode("utf-8-sig", errors="replace")
+    reader = csv.DictReader(io.StringIO(text))
+    count = 0
+    sample = []
+    for row in reader:
+        if str(row.get("cycle") or "").strip() == cycle:
+            count += 1
+            if len(sample) < 4:
+                sample.append(row)
+    return reader.fieldnames or [], count, sample
+
+
 def bef_header(data: bytes) -> tuple[list[str], list[str], str, str]:
     with zipfile.ZipFile(io.BytesIO(data)) as z:
         names = z.namelist()
@@ -97,9 +135,8 @@ def bef_header(data: bytes) -> tuple[list[str], list[str], str, str]:
     return names, header, name, delim
 
 
-def probe() -> None:
-    commit = resolve_dra_commit()
-    md_path, dra_url = latest_election_md(commit, "AL")
+def probe_structural() -> dict:
+    md_path, dra_url = latest_election_md("AL")
     dra = fetch(dra_url)
     dra_names, dra_header, dra_csv = zip_csv_header(dra)
     required = [
@@ -111,14 +148,16 @@ def probe() -> None:
     geoid_candidates = [x for x in dra_header if "geoid" in x.lower() or "block" in x.lower()]
     if missing:
         raise RuntimeError(f"DRA Alabama missing required fields: {missing}")
-    if not geoid_candidates:
-        raise RuntimeError("DRA Alabama exposes no obvious block identifier")
+    if geoid_candidates != ["GEOID"]:
+        raise RuntimeError(f"unexpected DRA block identifier: {geoid_candidates}")
 
     bef = fetch(CENSUS_BEF)
     bef_names, bef_cols, bef_file, bef_delim = bef_header(bef)
-    print(json.dumps({
+    if not {"GEOID", "CDFP"}.issubset(bef_cols):
+        raise RuntimeError(f"Census BEF missing required columns: {bef_cols}")
+    return {
         "state": "AL",
-        "dra_commit": commit,
+        "dra_commit": DRA_COMMIT,
         "dra_reference": md_path,
         "dra_url": dra_url,
         "dra_sha256": sha(dra),
@@ -133,6 +172,71 @@ def probe() -> None:
         "census_candidate_file": bef_file,
         "census_columns": bef_cols,
         "census_delimiter": bef_delim,
+    }
+
+
+def probe_fte() -> dict:
+    outputs = {}
+    for name in ("house_district_toplines_2022.csv", "senate_state_toplines_2022.csv"):
+        url = f"{FTE_2022}/{name}"
+        data = fetch(url)
+        p = csv_probe(data, sample=5)
+        required = {"cycle", "branch", "expression", "forecastdate", "district", "name_D1", "name_R1"}
+        missing = sorted(required - set(p["columns"]))
+        if missing:
+            raise RuntimeError(f"{name} missing roster columns: {missing}")
+        outputs[name] = {"url": url, "sha256": sha(data), "bytes": len(data), **p}
+
+    for name in ("house_polls_historical.csv", "senate_polls_historical.csv", "generic_ballot_polls_historical.csv"):
+        url = f"{FTE_POLLS}/{name}"
+        data = fetch(url)
+        cols, count, sample = csv_cycle_count(data)
+        if count == 0:
+            raise RuntimeError(f"{name} contains no cycle=2022 rows")
+        outputs[name] = {"url": url, "sha256": sha(data), "bytes": len(data), "columns": cols, "cycle_2022_rows": count, "sample": sample}
+    return outputs
+
+
+def probe_medsl() -> dict:
+    data = fetch(MEDSL_AL)
+    names, rows, member = zip_csv_rows(data, limit=4000)
+    if not rows:
+        raise RuntimeError("MEDSL Alabama archive contains no rows")
+    cols = list(rows[0])
+    required = {"office", "party_simplified", "votes", "candidate", "district", "stage", "special", "state_po", "date"}
+    missing = sorted(required - set(cols))
+    if missing:
+        raise RuntimeError(f"MEDSL Alabama missing result columns: {missing}")
+    federal = [r for r in rows if (r.get("office") or "").upper() in {"US HOUSE", "US SENATE"}]
+    signature = Counter(((r.get("office") or ""), (r.get("district") or ""), (r.get("stage") or ""), (r.get("special") or ""), (r.get("date") or "")) for r in federal)
+    examples = []
+    seen = set()
+    for row in federal:
+        key = (row.get("office"), row.get("district"), row.get("stage"), row.get("special"), row.get("date"), row.get("candidate"), row.get("party_simplified"))
+        if key in seen:
+            continue
+        seen.add(key)
+        examples.append({k: row.get(k) for k in ("office", "district", "stage", "special", "date", "candidate", "party_simplified", "mode", "votes")})
+        if len(examples) >= 12:
+            break
+    return {
+        "commit": MEDSL_COMMIT,
+        "url": MEDSL_AL,
+        "sha256": sha(data),
+        "bytes": len(data),
+        "zip_members": names,
+        "csv_member": member,
+        "columns": cols,
+        "federal_signature_examples": [{"signature": list(k), "rows_in_probe": v} for k, v in signature.most_common(12)],
+        "federal_row_examples": examples,
+    }
+
+
+def probe() -> None:
+    print(json.dumps({
+        "structural": probe_structural(),
+        "fivethirtyeight": probe_fte(),
+        "medsl": probe_medsl(),
     }, indent=2))
 
 
