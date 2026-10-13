@@ -149,26 +149,10 @@ def build_app() -> str:
     source = source.replace('class="race-grid" role="list"', 'class="race-grid"')
     source = source.replace(' role="listitem" aria-label=', ' aria-label=')
     source = source.replace('class="seat-track" aria-label=', 'class="seat-track" role="img" aria-label=')
-
     source = replace_required(source, 'let MODEL=null,STATUS=null,SOURCES=null,HISTORY_INDEX=null,SEARCH=[];', 'let MODEL=null,STATUS=null,SOURCES=null,HISTORY_INDEX=null,SEARCH=[],FULL_MODEL_PROMISE=null;', "model state")
-    source = replace_required(
-        source,
-        'function renderRoute(route){if(!MODEL)return;activeNav(route.view);',
-        "function renderRoute(route){if(!MODEL)return;if(MODEL.__bootstrap&&['race','polls','pollster','candidate'].includes(route.view)){activeNav(route.view);$('#content').innerHTML='<div class=\"loading-screen\"><div class=\"eyebrow\">DEEP DATA</div><h1>Loading underlying observations</h1><p>Fetching the full immutable forecast snapshot for this detail view.</p></div>';if(!FULL_MODEL_PROMISE)FULL_MODEL_PROMISE=loadJSON('/data/forecast.json').then(full=>{if(full){MODEL=full;SEARCH=searchRecords(MODEL)}return full});FULL_MODEL_PROMISE.then(full=>{if(full)renderRoute(routeFromLocation());else $('#content').innerHTML='<div class=\"error-state\"><h2>Detailed data unavailable</h2><p>The compact forecast remains available, but the full observation bundle could not be loaded.</p></div>'});return}activeNav(route.view);",
-        "deep data hydration",
-    )
-    source = replace_required(
-        source,
-        "[MODEL,STATUS,SOURCES]=await Promise.all([loadJSON('/data/forecast.json'),loadJSON('/data/status.json',{}),loadJSON('/data/source-status.json',null)]);",
-        "const initialRoute=routeFromLocation(),needsFull=['race','polls','pollster','candidate'].includes(initialRoute.view);[MODEL,STATUS,SOURCES]=await Promise.all([(needsFull?loadJSON('/data/forecast.json'):loadJSON('/data/bootstrap.json').then(x=>x||loadJSON('/data/forecast.json'))),loadJSON('/data/status.json',{}),loadJSON('/data/source-status.json',null)]);",
-        "bootstrap loading",
-    )
-    source = replace_required(
-        source,
-        'SEARCH=searchRecords(MODEL);setupChrome();setupSearch();renderRoute(routeFromLocation());',
-        "SEARCH=searchRecords(MODEL);for(const name of MODEL.pollster_names||[])if(!SEARCH.some(r=>r.type==='pollster'&&r.key===name))SEARCH.push({type:'pollster',label:name,subtitle:'Pollster',key:name,terms:name});setupChrome();setupSearch();renderRoute(routeFromLocation());",
-        "search hydration",
-    )
+    source = replace_required(source, 'function renderRoute(route){if(!MODEL)return;activeNav(route.view);', "function renderRoute(route){if(!MODEL)return;if(MODEL.__bootstrap&&['race','polls','pollster','candidate'].includes(route.view)){activeNav(route.view);$('#content').innerHTML='<div class=\"loading-screen\"><div class=\"eyebrow\">DEEP DATA</div><h1>Loading underlying observations</h1><p>Fetching the full immutable forecast snapshot for this detail view.</p></div>';if(!FULL_MODEL_PROMISE)FULL_MODEL_PROMISE=loadJSON('/data/forecast.json').then(full=>{if(full){MODEL=full;SEARCH=searchRecords(MODEL)}return full});FULL_MODEL_PROMISE.then(full=>{if(full)renderRoute(routeFromLocation());else $('#content').innerHTML='<div class=\"error-state\"><h2>Detailed data unavailable</h2><p>The compact forecast remains available, but the full observation bundle could not be loaded.</p></div>'});return}activeNav(route.view);", "deep data hydration")
+    source = replace_required(source, "[MODEL,STATUS,SOURCES]=await Promise.all([loadJSON('/data/forecast.json'),loadJSON('/data/status.json',{}),loadJSON('/data/source-status.json',null)]);", "const initialRoute=routeFromLocation(),needsFull=['race','polls','pollster','candidate'].includes(initialRoute.view);[MODEL,STATUS,SOURCES]=await Promise.all([(needsFull?loadJSON('/data/forecast.json'):loadJSON('/data/bootstrap.json').then(x=>x||loadJSON('/data/forecast.json'))),loadJSON('/data/status.json',{}),loadJSON('/data/source-status.json',null)]);", "bootstrap loading")
+    source = replace_required(source, 'SEARCH=searchRecords(MODEL);setupChrome();setupSearch();renderRoute(routeFromLocation());', "SEARCH=searchRecords(MODEL);for(const name of MODEL.pollster_names||[])if(!SEARCH.some(r=>r.type==='pollster'&&r.key===name))SEARCH.push({type:'pollster',label:name,subtitle:'Pollster',key:name,terms:name});setupChrome();setupSearch();renderRoute(routeFromLocation());", "search hydration")
 
     lazy = r'''let __ENHANCEMENTS_PROMISE=null;
 function __maybeLoadEnhancements(){
@@ -179,7 +163,7 @@ function __maybeLoadEnhancements(){
 window.addEventListener('popstate',()=>setTimeout(__maybeLoadEnhancements,0));
 document.addEventListener('click',()=>setTimeout(__maybeLoadEnhancements,0),{capture:true,passive:true});
 document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;const nav=document.querySelector('#primaryNav'),toggle=document.querySelector('#navToggle');if(nav?.classList.contains('open')){nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false');toggle?.focus()}});
-boot().then(()=>{document.querySelector('.site-footer')?.removeAttribute('hidden');setTimeout(__maybeLoadEnhancements,0)}).catch(err=>{console.error(err);const main=document.querySelector('#content');if(main)main.innerHTML='<div class="error-state"><h2>Application failed to load</h2><p>The static shell is available, but the interactive application could not be initialised.</p></div>'});
+globalThis.__MIDTERM_READY__=boot().then(()=>{document.querySelector('.site-footer')?.removeAttribute('hidden');setTimeout(__maybeLoadEnhancements,0);return true}).catch(err=>{console.error(err);const main=document.querySelector('#content');if(main)main.innerHTML='<div class="error-state"><h2>Application failed to load</h2><p>The static shell is available, but the interactive application could not be initialised.</p></div>';throw err});
 '''
     source = replace_required(source, "boot();\n", lazy, "boot invocation")
     return source
@@ -187,14 +171,14 @@ boot().then(()=>{document.querySelector('.site-footer')?.removeAttribute('hidden
 
 def build_home_loader() -> str:
     return r'''const route=()=>{const p=new URLSearchParams(location.search);return location.pathname!=='/'||[...p.keys()].some(k=>['view','race','candidate','pollster'].includes(k))};
-let full=null;const load=()=>full??=import('/app.bundle.mjs');
+let full=null;const load=()=>full??=import('/app.bundle.mjs');const hydrate=async()=>{await load();if(globalThis.__MIDTERM_READY__)await globalThis.__MIDTERM_READY__};
 if(route()||!document.querySelector('[data-ssr-home]')){load()}else{
   document.querySelector('.site-footer')?.removeAttribute('hidden');
   const nav=document.querySelector('#primaryNav'),toggle=document.querySelector('#navToggle');
   toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open))});
-  document.addEventListener('keydown',async e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false');toggle?.focus();return}if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)){e.preventDefault();await load();setTimeout(()=>document.querySelector('#openSearch')?.click(),0)}});
+  document.addEventListener('keydown',async e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false');toggle?.focus();return}if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)){e.preventDefault();await hydrate();document.querySelector('#openSearch')?.click()}});
   document.querySelector('#healthChip')?.addEventListener('click',()=>{location.href='/?view=data'});
-  const search=document.querySelector('#openSearch');search?.addEventListener('click',async e=>{e.preventDefault();await load();setTimeout(()=>document.querySelector('#openSearch')?.click(),0)},{once:true});
+  const search=document.querySelector('#openSearch');search?.addEventListener('click',async e=>{e.preventDefault();await hydrate();document.querySelector('#openSearch')?.click()},{once:true});
   const bar=document.querySelector('#contextBar');if(bar)bar.innerHTML='<span><strong>PROD v1</strong> · current forecast rendered at build time · open any analytical section for full interactive exploration</span>';
   fetch('/data/source-status.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(x=>{if(!x)return;const src=x.sources||[],bad=src.filter(s=>(s.state||s.health)!=='current').length,chip=document.querySelector('#healthChip');if(chip){chip.classList.add(bad?'degraded':'current');const label=chip.querySelector('span:last-child');if(label)label.textContent=bad?`${bad} source issue${bad===1?'':'s'}`:'Data current'}}).catch(()=>{});
 }
@@ -204,8 +188,7 @@ if(route()||!document.querySelector('[data-ssr-home]')){load()}else{
 def render_index(model: dict) -> None:
     path = PUBLIC / "index.html"
     text = path.read_text(encoding="utf-8")
-    home = render_home(model)
-    replacement = f'<main id="content" tabindex="-1">{home}</main>'
+    replacement = f'<main id="content" tabindex="-1">{render_home(model)}</main>'
     text, count = re.subn(r'<main id="content" tabindex="-1">.*?</main>', replacement, text, count=1, flags=re.S)
     if count != 1:
         raise RuntimeError("Could not replace homepage main content")
@@ -217,25 +200,16 @@ def main() -> None:
     if not forecast_path.exists():
         raise RuntimeError("forecast.json is required before browser asset build")
     model = json.loads(forecast_path.read_text(encoding="utf-8"))
-
     app = build_app()
     enhancements = joined("enhancement-parts", ".jsfrag")
     css = "\n".join(p.read_text(encoding="utf-8") for p in numbered_parts(PUBLIC / "styles-parts", ".css")) + "\n"
     loader = build_home_loader()
-
     (PUBLIC / "app.bundle.mjs").write_text(app, encoding="utf-8")
     (PUBLIC / "enhancements.bundle.mjs").write_text(enhancements, encoding="utf-8")
     (PUBLIC / "app.js").write_text(loader, encoding="utf-8")
     (PUBLIC / "styles.css").write_text(css, encoding="utf-8")
     render_index(model)
-
-    print(
-        "browser assets:",
-        f"home loader {len(loader.encode('utf-8')):,} B;",
-        f"app {len(app.encode('utf-8')):,} B;",
-        f"enhancements {len(enhancements.encode('utf-8')):,} B;",
-        f"css {len(css.encode('utf-8')):,} B",
-    )
+    print("browser assets:", f"home loader {len(loader.encode('utf-8')):,} B;", f"app {len(app.encode('utf-8')):,} B;", f"enhancements {len(enhancements.encode('utf-8')):,} B;", f"css {len(css.encode('utf-8')):,} B")
 
 
 if __name__ == "__main__":
