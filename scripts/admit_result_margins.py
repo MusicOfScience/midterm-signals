@@ -104,7 +104,7 @@ def existing_winners(year: int) -> dict[str, str]:
 
 
 def roster_sides(year: int) -> dict[str, dict[str, str]]:
-    """Map pre-election roster candidate identity to D/R side, fail-closed on collisions."""
+    """Map pre-election candidate identity to D/R, including already-admitted fallbacks."""
     candidates: dict[str, dict[str, set[str]]] = defaultdict(lambda: defaultdict(set))
     with (HIST / str(year) / "races.csv").open(newline="", encoding="utf-8-sig") as fh:
         for row in csv.DictReader(fh):
@@ -118,6 +118,13 @@ def roster_sides(year: int) -> dict[str, dict[str, str]]:
                 key = norm_name(name)
                 if key:
                     candidates[code][key].add(side)
+    cfg = json.loads((HIST / str(year) / "cycle.json").read_text(encoding="utf-8"))
+    for row in cfg.get("admission", {}).get("result_party_fallbacks", []):
+        code = str(row.get("race_code") or "").strip()
+        name = norm_name(row.get("winner_name"))
+        side = str(row.get("resolved_side") or "").strip().upper()
+        if code and name and side in {"DEM", "REP"}:
+            candidates[code][name].add(side)
     out: dict[str, dict[str, str]] = {}
     for code, names in candidates.items():
         out[code] = {name: next(iter(sides)) for name, sides in names.items() if len(sides) == 1}
@@ -318,7 +325,7 @@ def main() -> None:
             "2018": {"rows": len(rows18), "output": "historical/2018/result-margins.csv", "output_sha256": sha18, "sources": prov18},
             "2022": {"rows": len(rows22), "output": "historical/2022/result-margins.csv", "output_sha256": sha22, "sources": prov22},
         },
-        "transformation": "Candidate/fusion lines are collapsed within race; Democratic and Republican certified votes are summed; margin is 100*(D-R)/(D+R). A 2018 result line without a usable party label may inherit D/R only from an unambiguous normalized candidate match in the pre-election roster. Angus King and Bernie Sanders retain the model's predeclared Democratic-aligned control side. 2022 uses certified runoff votes when the FEC sheet reports a House runoff, otherwise certified general-election votes.",
+        "transformation": "Candidate/fusion lines are collapsed within race; Democratic and Republican certified votes are summed; margin is 100*(D-R)/(D+R). A 2018 result line without a usable party label may inherit D/R only from an unambiguous normalized candidate match in the pre-election roster or from an identity fallback already admitted and recorded in the 2018 cycle manifest. Angus King and Bernie Sanders retain the model's predeclared Democratic-aligned control side. 2022 uses certified runoff votes when the FEC sheet reports a House runoff, otherwise certified general-election votes.",
     }
     (HIST / "result-margin-provenance.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"2018_rows": len(rows18), "2022_rows": len(rows22), "2018_sha": sha18, "2022_sha": sha22}, indent=2))
