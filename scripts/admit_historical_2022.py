@@ -11,6 +11,7 @@ import io
 import json
 import re
 import tempfile
+import urllib.error
 import zipfile
 from collections import defaultdict
 from pathlib import Path
@@ -145,7 +146,12 @@ def archived_dra_year(state: str, short_year: int, mapping: dict[str, str], late
         match = re.search(r"https://data\.dra2020\.net/[^)\s]+\.zip", md)
         if not match:
             continue
-        data = impl.fetch(f"DRA archived blocks {state} v{version:02d}", match.group(0), timeout=600)
+        try:
+            data = impl.fetch(f"DRA archived blocks {state} v{version:02d}", match.group(0), timeout=600)
+        except urllib.error.HTTPError as exc:
+            if exc.code == 404:
+                continue
+            raise
         with zipfile.ZipFile(io.BytesIO(data)) as z:
             members = [n for n in z.namelist() if n.lower().endswith(".csv") and not n.startswith("__MACOSX/")]
             if not members:
@@ -180,7 +186,8 @@ def strict_structural_priors() -> dict:
     at-large states may use exact statewide values for missing older years;
     multi-district states may use an older DRA release only when it is still on
     2020 blocks. If neither exists, all districts in that state are explicitly
-    excluded from replay.
+    excluded from replay. A broken source URL is also treated as unavailable
+    evidence, never as permission to interpolate.
     """
     global _PRIOR_CACHE
     if _PRIOR_CACHE is not None:
@@ -211,11 +218,20 @@ def strict_structural_priors() -> dict:
                 raise RuntimeError(f"{st}: expected exactly one 2022 House district, got {cds}")
 
             latest_path, url = refs[st]
-            data = impl.fetch(f"DRA blocks {st}", url, timeout=600)
+            try:
+                data = impl.fetch(f"DRA blocks {st}", url, timeout=600)
+            except urllib.error.HTTPError as exc:
+                if exc.code != 404:
+                    raise
+                STRUCTURAL_EXCLUSIONS.update(state_codes)
+                STRUCTURAL_FAILURES[st] = f"latest DRA block-data URL returned HTTP 404: {url}"
+                continue
             with zipfile.ZipFile(io.BytesIO(data)) as z:
                 members = [n for n in z.namelist() if n.lower().endswith(".csv") and not n.startswith("__MACOSX/")]
                 if not members:
-                    raise RuntimeError(f"{st}: DRA zip has no CSV")
+                    STRUCTURAL_EXCLUSIONS.update(state_codes)
+                    STRUCTURAL_FAILURES[st] = "latest DRA archive contained no CSV"
+                    continue
                 text = io.TextIOWrapper(z.open(members[0]), encoding="utf-8-sig", errors="replace", newline="")
                 reader = csv.DictReader(text)
                 fields = set(reader.fieldnames or [])
@@ -331,3 +347,10 @@ impl.build_scoreability = scoreability_with_structural
 
 if __name__ == "__main__":
     impl.main()
+    # Preserve the state-level structural evidence failures in the cycle
+    # manifest. They are diagnostics only; admission itself was decided before
+    # outcomes were fetched and is already encoded row-by-row in the ledger.
+    cfg_path = impl.OUT / "cycle.json"
+    cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+    cfg.setdefault("scoreability", {})["structural_prior_failures"] = dict(sorted(STRUCTURAL_FAILURES.items()))
+    cfg_path.write_text(json.dumps(cfg, indent=2) + "\n", encoding="utf-8")
