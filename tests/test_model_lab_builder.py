@@ -1,11 +1,15 @@
 import importlib.util
 import inspect
+import sys
 from datetime import date
 from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-P = ROOT / "scripts" / "build_model_lab.py"
+SCRIPTS = ROOT / "scripts"
+if str(SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS))
+P = SCRIPTS / "build_model_lab.py"
 spec = importlib.util.spec_from_file_location("build_model_lab", P)
 m = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)
