@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1.1",
-  "generated_at": "2026-10-13T12:35:23.209582Z",
+  "generated_at": "2026-10-13T13:01:33.937834Z",
   "product": "MIDTERM SIGNALS MODEL LAB",
   "evaluation_only": true,
   "retuning_allowed": false,
@@ -90,6 +90,18 @@
       "competitive_subset": "prior probability 20-80%",
       "model_effect": "NONE"
     },
+    "structural_decomposition": {
+      "stages": [
+        "structural presidential relative lean + incumbency",
+        "+ checkpoint generic ballot",
+        "+ admitted race-poll blend / published full forecast"
+      ],
+      "sample": "two-major-party contests only",
+      "competitive_subset": "structural-stage Democratic probability 20-80%",
+      "confident_miss_threshold": 0.8,
+      "redistricting_identified": false,
+      "model_effect": "NONE"
+    },
     "roster_transition_policy": {
       "rule": "preserve frozen probability; label candidate-pair changes separately in movement diagnostics",
       "model_effect": "NONE"
@@ -107,6 +119,7 @@
     "winner_directed_movement": "Probability change signed so positive movement is toward the eventual winner. Outcomes are used only after predictions are frozen.",
     "scoreability_exclusion": "Evaluation-only exclusion decided from predictive roster evidence before outcomes are opened. It changes the scored historical sample, never a forecast probability.",
     "paired_polling_component_test": "For races with eligible race-level polls, compares the published checkpoint probability with that same race's frozen structural + generic-ballot prior before the race-poll blend. Negative Brier/log-loss delta means the race-poll component improved the paired forecasts. Outcomes are used only after both probabilities exist.",
+    "structural_decomposition": "On the same two-major-party race sample, scores the admitted structural presidential relative-lean plus incumbency stage, then the structural + generic-ballot prior, then the published full forecast. The structural stage is reconstructed as prior_margin minus the checkpoint generic-ballot margin. Negative deltas mean the later stage improved the same sample.",
     "roster_transition": "A change in the admitted candidate pair between fixed checkpoints. These information-state changes remain in the frozen historical forecast but are labelled separately in movement forensics."
   },
   "leakage_guards": [
@@ -120,7 +133,8 @@
     "Missing generic-ballot input is missing, never zero.",
     "Replay output cannot mutate the live forecast or model contract.",
     "Competitive, polling and chamber diagnostics reuse the frozen checkpoint predictions; they do not create alternative forecasts.",
-    "Paired polling-component diagnostics are computed only after the published checkpoint probabilities are frozen; certified outcomes are used solely to score the frozen full and prior probabilities."
+    "Paired polling-component diagnostics are computed only after the published checkpoint probabilities are frozen; certified outcomes are used solely to score the frozen full and prior probabilities.",
+    "Structural-stage diagnostics reconstruct structural+incumbency probability only from already-frozen checkpoint prior_margin and generic-ballot margin; no post-election district or result field enters the predictive stage."
   ],
   "cycles": [
     {
@@ -8665,7 +8679,414 @@
               }
             ],
             "confident_miss_threshold": 0.8,
-            "confident_miss_count": 9
+            "confident_miss_count": 9,
+            "structural_decomposition": {
+              "state": "scored",
+              "n": 426,
+              "sample": "two_major_party_contests",
+              "structural_plus_incumbency": {
+                "brier": 0.07846446,
+                "log_loss": 0.28626405,
+                "accuracy": 0.896714
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.04401173,
+                "log_loss": 0.16700238,
+                "accuracy": 0.938967
+              },
+              "published_full_forecast": {
+                "brier": 0.04152198,
+                "log_loss": 0.15356672,
+                "accuracy": 0.946009
+              },
+              "brier_delta_generic_minus_structural": -0.03445273,
+              "brier_delta_full_minus_prior": -0.00248975,
+              "brier_delta_full_minus_structural": -0.03694248,
+              "log_loss_delta_generic_minus_structural": -0.11926167,
+              "log_loss_delta_full_minus_prior": -0.01343566,
+              "log_loss_delta_full_minus_structural": -0.13269733,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 117,
+                "away_from_eventual_winner": 100,
+                "unchanged": 209,
+                "mean_winner_directed_probability_change": 0.029341
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 95,
+                "away_from_eventual_winner": 97,
+                "unchanged": 234,
+                "mean_winner_directed_probability_change": 0.001559
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 119,
+                "away_from_eventual_winner": 98,
+                "unchanged": 209,
+                "mean_winner_directed_probability_change": 0.0309
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [
+                {
+                  "race_code": "MN-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001,
+                  "dem_probability_structural": 0.001,
+                  "dem_probability_after_generic": 0.001,
+                  "dem_probability_full": 0.001,
+                  "structural_margin_d_minus_r": -28.275,
+                  "generic_winner_directed_change": 0.0,
+                  "poll_winner_directed_change": 0.0,
+                  "total_winner_directed_change": 0.0
+                },
+                {
+                  "race_code": "WV-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001,
+                  "dem_probability_structural": 0.001,
+                  "dem_probability_after_generic": 0.001,
+                  "dem_probability_full": 0.002921,
+                  "structural_margin_d_minus_r": -40.932,
+                  "generic_winner_directed_change": 0.0,
+                  "poll_winner_directed_change": 0.001921,
+                  "total_winner_directed_change": 0.001921
+                },
+                {
+                  "race_code": "OK-05",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001209,
+                  "dem_probability_structural": 0.001209,
+                  "dem_probability_after_generic": 0.027149,
+                  "dem_probability_full": 0.027152,
+                  "structural_margin_d_minus_r": -19.11,
+                  "generic_winner_directed_change": 0.02594,
+                  "poll_winner_directed_change": 3e-06,
+                  "total_winner_directed_change": 0.025943
+                },
+                {
+                  "race_code": "MT-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001656,
+                  "dem_probability_structural": 0.001656,
+                  "dem_probability_after_generic": 0.024595,
+                  "dem_probability_full": 0.243854,
+                  "structural_margin_d_minus_r": -21.148,
+                  "generic_winner_directed_change": 0.022939,
+                  "poll_winner_directed_change": 0.219259,
+                  "total_winner_directed_change": 0.242198
+                },
+                {
+                  "race_code": "UT-04",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.003324,
+                  "dem_probability_structural": 0.003324,
+                  "dem_probability_after_generic": 0.054238,
+                  "dem_probability_full": 0.05079,
+                  "structural_margin_d_minus_r": -17.098,
+                  "generic_winner_directed_change": 0.050914,
+                  "poll_winner_directed_change": -0.003448,
+                  "total_winner_directed_change": 0.047466
+                },
+                {
+                  "race_code": "SC-01",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.003351,
+                  "dem_probability_structural": 0.003351,
+                  "dem_probability_after_generic": 0.054536,
+                  "dem_probability_full": 0.049031,
+                  "structural_margin_d_minus_r": -17.081,
+                  "generic_winner_directed_change": 0.051185,
+                  "poll_winner_directed_change": -0.005505,
+                  "total_winner_directed_change": 0.04568
+                },
+                {
+                  "race_code": "NY-22",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.005281,
+                  "dem_probability_structural": 0.005281,
+                  "dem_probability_after_generic": 0.073817,
+                  "dem_probability_full": 0.129283,
+                  "structural_margin_d_minus_r": -16.108,
+                  "generic_winner_directed_change": 0.068536,
+                  "poll_winner_directed_change": 0.055466,
+                  "total_winner_directed_change": 0.124002
+                },
+                {
+                  "race_code": "NM-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.026979,
+                  "dem_probability_structural": 0.026979,
+                  "dem_probability_after_generic": 0.206606,
+                  "dem_probability_full": 0.206592,
+                  "structural_margin_d_minus_r": -12.141,
+                  "generic_winner_directed_change": 0.179627,
+                  "poll_winner_directed_change": -1.4e-05,
+                  "total_winner_directed_change": 0.179613
+                },
+                {
+                  "race_code": "VA-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.036053,
+                  "dem_probability_structural": 0.036053,
+                  "dem_probability_after_generic": 0.245247,
+                  "dem_probability_full": 0.245243,
+                  "structural_margin_d_minus_r": -11.33,
+                  "generic_winner_directed_change": 0.209194,
+                  "poll_winner_directed_change": -4e-06,
+                  "total_winner_directed_change": 0.20919
+                },
+                {
+                  "race_code": "NY-11",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.039403,
+                  "dem_probability_structural": 0.039403,
+                  "dem_probability_after_generic": 0.258256,
+                  "dem_probability_full": 0.179932,
+                  "structural_margin_d_minus_r": -11.073,
+                  "generic_winner_directed_change": 0.218853,
+                  "poll_winner_directed_change": -0.078324,
+                  "total_winner_directed_change": 0.140529
+                },
+                {
+                  "race_code": "GA-06",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.054392,
+                  "dem_probability_structural": 0.054392,
+                  "dem_probability_after_generic": 0.310384,
+                  "dem_probability_full": 0.307415,
+                  "structural_margin_d_minus_r": -10.103,
+                  "generic_winner_directed_change": 0.255992,
+                  "poll_winner_directed_change": -0.002969,
+                  "total_winner_directed_change": 0.253023
+                },
+                {
+                  "race_code": "ME-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.065863,
+                  "dem_probability_structural": 0.065863,
+                  "dem_probability_after_generic": 0.345163,
+                  "dem_probability_full": 0.351617,
+                  "structural_margin_d_minus_r": -9.496,
+                  "generic_winner_directed_change": 0.2793,
+                  "poll_winner_directed_change": 0.006454,
+                  "total_winner_directed_change": 0.285754
+                },
+                {
+                  "race_code": "MI-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.082163,
+                  "dem_probability_structural": 0.082163,
+                  "dem_probability_after_generic": 0.389069,
+                  "dem_probability_full": 0.325785,
+                  "structural_margin_d_minus_r": -8.761,
+                  "generic_winner_directed_change": 0.306906,
+                  "poll_winner_directed_change": -0.063284,
+                  "total_winner_directed_change": 0.243622
+                },
+                {
+                  "race_code": "IL-14",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.110656,
+                  "dem_probability_structural": 0.110656,
+                  "dem_probability_after_generic": 0.454569,
+                  "dem_probability_full": 0.454567,
+                  "structural_margin_d_minus_r": -7.705,
+                  "generic_winner_directed_change": 0.343913,
+                  "poll_winner_directed_change": -2e-06,
+                  "total_winner_directed_change": 0.343911
+                },
+                {
+                  "race_code": "TX-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.112799,
+                  "dem_probability_structural": 0.112799,
+                  "dem_probability_after_generic": 0.459038,
+                  "dem_probability_full": 0.459035,
+                  "structural_margin_d_minus_r": -7.634,
+                  "generic_winner_directed_change": 0.346239,
+                  "poll_winner_directed_change": -3e-06,
+                  "total_winner_directed_change": 0.346236
+                },
+                {
+                  "race_code": "NJ-03",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.116394,
+                  "dem_probability_structural": 0.116394,
+                  "dem_probability_after_generic": 0.466415,
+                  "dem_probability_full": 0.502307,
+                  "structural_margin_d_minus_r": -7.517,
+                  "generic_winner_directed_change": 0.35002,
+                  "poll_winner_directed_change": 0.035892,
+                  "total_winner_directed_change": 0.385913
+                },
+                {
+                  "race_code": "NY-19",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.12386,
+                  "dem_probability_structural": 0.12386,
+                  "dem_probability_after_generic": 0.481263,
+                  "dem_probability_full": 0.398339,
+                  "structural_margin_d_minus_r": -7.282,
+                  "generic_winner_directed_change": 0.357403,
+                  "poll_winner_directed_change": -0.082924,
+                  "total_winner_directed_change": 0.274479
+                },
+                {
+                  "race_code": "VA-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.130372,
+                  "dem_probability_structural": 0.130372,
+                  "dem_probability_after_generic": 0.493731,
+                  "dem_probability_full": 0.493744,
+                  "structural_margin_d_minus_r": -7.085,
+                  "generic_winner_directed_change": 0.363359,
+                  "poll_winner_directed_change": 1.3e-05,
+                  "total_winner_directed_change": 0.363372
+                },
+                {
+                  "race_code": "AZ-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.138893,
+                  "dem_probability_structural": 0.138893,
+                  "dem_probability_after_generic": 0.454223,
+                  "dem_probability_full": 0.513259,
+                  "structural_margin_d_minus_r": -7.814,
+                  "generic_winner_directed_change": 0.315329,
+                  "poll_winner_directed_change": 0.059036,
+                  "total_winner_directed_change": 0.374366
+                },
+                {
+                  "race_code": "MI-11",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.145216,
+                  "dem_probability_structural": 0.145216,
+                  "dem_probability_after_generic": 0.520634,
+                  "dem_probability_full": 0.670408,
+                  "structural_margin_d_minus_r": -6.66,
+                  "generic_winner_directed_change": 0.375419,
+                  "poll_winner_directed_change": 0.149774,
+                  "total_winner_directed_change": 0.525192
+                },
+                {
+                  "race_code": "OH-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.161488,
+                  "dem_probability_structural": 0.161488,
+                  "dem_probability_after_generic": 0.492797,
+                  "dem_probability_full": 0.565863,
+                  "structural_margin_d_minus_r": -7.116,
+                  "generic_winner_directed_change": 0.331309,
+                  "poll_winner_directed_change": 0.073066,
+                  "total_winner_directed_change": 0.404375
+                },
+                {
+                  "race_code": "PA-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.178488,
+                  "dem_probability_structural": 0.178488,
+                  "dem_probability_after_generic": 0.574475,
+                  "dem_probability_full": 0.574495,
+                  "structural_margin_d_minus_r": -5.803,
+                  "generic_winner_directed_change": 0.395987,
+                  "poll_winner_directed_change": 2e-05,
+                  "total_winner_directed_change": 0.396007
+                },
+                {
+                  "race_code": "PA-17",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.190584,
+                  "dem_probability_structural": 0.190584,
+                  "dem_probability_after_generic": 0.592187,
+                  "dem_probability_full": 0.868149,
+                  "structural_margin_d_minus_r": -5.517,
+                  "generic_winner_directed_change": 0.401603,
+                  "poll_winner_directed_change": 0.275962,
+                  "total_winner_directed_change": 0.677565
+                },
+                {
+                  "race_code": "TX-32",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.192228,
+                  "dem_probability_structural": 0.192228,
+                  "dem_probability_after_generic": 0.594527,
+                  "dem_probability_full": 0.551082,
+                  "structural_margin_d_minus_r": -5.479,
+                  "generic_winner_directed_change": 0.402299,
+                  "poll_winner_directed_change": -0.043445,
+                  "total_winner_directed_change": 0.358854
+                }
+              ],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "structural_decomposition_20_80": {
+              "state": "scored",
+              "n": 48,
+              "sample": "structural_20_80",
+              "structural_plus_incumbency": {
+                "brier": 0.26568338,
+                "log_loss": 0.73207479,
+                "accuracy": 0.583333
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.09172051,
+                "log_loss": 0.32569318,
+                "accuracy": 0.916667
+              },
+              "published_full_forecast": {
+                "brier": 0.07650013,
+                "log_loss": 0.27064398,
+                "accuracy": 0.916667
+              },
+              "brier_delta_generic_minus_structural": -0.17396287,
+              "brier_delta_full_minus_prior": -0.01522038,
+              "brier_delta_full_minus_structural": -0.18918325,
+              "log_loss_delta_generic_minus_structural": -0.40638161,
+              "log_loss_delta_full_minus_prior": -0.0550492,
+              "log_loss_delta_full_minus_structural": -0.46143081,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 44,
+                "away_from_eventual_winner": 4,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.271365
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 28,
+                "away_from_eventual_winner": 20,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.015864
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 45,
+                "away_from_eventual_winner": 3,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.28723
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            }
           }
         },
         {
@@ -17097,7 +17518,414 @@
               }
             ],
             "confident_miss_threshold": 0.8,
-            "confident_miss_count": 6
+            "confident_miss_count": 6,
+            "structural_decomposition": {
+              "state": "scored",
+              "n": 426,
+              "sample": "two_major_party_contests",
+              "structural_plus_incumbency": {
+                "brier": 0.07846377,
+                "log_loss": 0.28626236,
+                "accuracy": 0.896714
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.04344101,
+                "log_loss": 0.16542372,
+                "accuracy": 0.946009
+              },
+              "published_full_forecast": {
+                "brier": 0.03628489,
+                "log_loss": 0.12831659,
+                "accuracy": 0.957746
+              },
+              "brier_delta_generic_minus_structural": -0.03502276,
+              "brier_delta_full_minus_prior": -0.00715612,
+              "brier_delta_full_minus_structural": -0.04217888,
+              "log_loss_delta_generic_minus_structural": -0.12083864,
+              "log_loss_delta_full_minus_prior": -0.03710713,
+              "log_loss_delta_full_minus_structural": -0.15794577,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 117,
+                "away_from_eventual_winner": 102,
+                "unchanged": 207,
+                "mean_winner_directed_probability_change": 0.02955
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 102,
+                "away_from_eventual_winner": 90,
+                "unchanged": 234,
+                "mean_winner_directed_probability_change": 0.008037
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 119,
+                "away_from_eventual_winner": 101,
+                "unchanged": 206,
+                "mean_winner_directed_probability_change": 0.037587
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [
+                {
+                  "race_code": "MN-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001,
+                  "dem_probability_structural": 0.001,
+                  "dem_probability_after_generic": 0.001,
+                  "dem_probability_full": 0.016893,
+                  "structural_margin_d_minus_r": -28.275,
+                  "generic_winner_directed_change": 0.0,
+                  "poll_winner_directed_change": 0.015893,
+                  "total_winner_directed_change": 0.015893
+                },
+                {
+                  "race_code": "WV-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001,
+                  "dem_probability_structural": 0.001,
+                  "dem_probability_after_generic": 0.001,
+                  "dem_probability_full": 0.099488,
+                  "structural_margin_d_minus_r": -40.932,
+                  "generic_winner_directed_change": 0.0,
+                  "poll_winner_directed_change": 0.098488,
+                  "total_winner_directed_change": 0.098488
+                },
+                {
+                  "race_code": "OK-05",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001209,
+                  "dem_probability_structural": 0.001209,
+                  "dem_probability_after_generic": 0.030271,
+                  "dem_probability_full": 0.010126,
+                  "structural_margin_d_minus_r": -19.11,
+                  "generic_winner_directed_change": 0.029062,
+                  "poll_winner_directed_change": -0.020145,
+                  "total_winner_directed_change": 0.008917
+                },
+                {
+                  "race_code": "MT-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001656,
+                  "dem_probability_structural": 0.001656,
+                  "dem_probability_after_generic": 0.027097,
+                  "dem_probability_full": 0.47447,
+                  "structural_margin_d_minus_r": -21.148,
+                  "generic_winner_directed_change": 0.025442,
+                  "poll_winner_directed_change": 0.447373,
+                  "total_winner_directed_change": 0.472814
+                },
+                {
+                  "race_code": "UT-04",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.003324,
+                  "dem_probability_structural": 0.003324,
+                  "dem_probability_after_generic": 0.059681,
+                  "dem_probability_full": 0.060904,
+                  "structural_margin_d_minus_r": -17.098,
+                  "generic_winner_directed_change": 0.056357,
+                  "poll_winner_directed_change": 0.001223,
+                  "total_winner_directed_change": 0.05758
+                },
+                {
+                  "race_code": "SC-01",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.003351,
+                  "dem_probability_structural": 0.003351,
+                  "dem_probability_after_generic": 0.060001,
+                  "dem_probability_full": 0.054174,
+                  "structural_margin_d_minus_r": -17.081,
+                  "generic_winner_directed_change": 0.05665,
+                  "poll_winner_directed_change": -0.005827,
+                  "total_winner_directed_change": 0.050823
+                },
+                {
+                  "race_code": "NY-22",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.005281,
+                  "dem_probability_structural": 0.005281,
+                  "dem_probability_after_generic": 0.080709,
+                  "dem_probability_full": 0.12927,
+                  "structural_margin_d_minus_r": -16.108,
+                  "generic_winner_directed_change": 0.075428,
+                  "poll_winner_directed_change": 0.048561,
+                  "total_winner_directed_change": 0.123989
+                },
+                {
+                  "race_code": "NM-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.026979,
+                  "dem_probability_structural": 0.026979,
+                  "dem_probability_after_generic": 0.220462,
+                  "dem_probability_full": 0.266256,
+                  "structural_margin_d_minus_r": -12.141,
+                  "generic_winner_directed_change": 0.193483,
+                  "poll_winner_directed_change": 0.045794,
+                  "total_winner_directed_change": 0.239277
+                },
+                {
+                  "race_code": "VA-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.036053,
+                  "dem_probability_structural": 0.036053,
+                  "dem_probability_after_generic": 0.260468,
+                  "dem_probability_full": 0.375368,
+                  "structural_margin_d_minus_r": -11.33,
+                  "generic_winner_directed_change": 0.224414,
+                  "poll_winner_directed_change": 0.1149,
+                  "total_winner_directed_change": 0.339315
+                },
+                {
+                  "race_code": "NY-11",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.039403,
+                  "dem_probability_structural": 0.039403,
+                  "dem_probability_after_generic": 0.273883,
+                  "dem_probability_full": 0.203563,
+                  "structural_margin_d_minus_r": -11.073,
+                  "generic_winner_directed_change": 0.23448,
+                  "poll_winner_directed_change": -0.07032,
+                  "total_winner_directed_change": 0.16416
+                },
+                {
+                  "race_code": "GA-06",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.054392,
+                  "dem_probability_structural": 0.054392,
+                  "dem_probability_after_generic": 0.327386,
+                  "dem_probability_full": 0.322364,
+                  "structural_margin_d_minus_r": -10.103,
+                  "generic_winner_directed_change": 0.272994,
+                  "poll_winner_directed_change": -0.005022,
+                  "total_winner_directed_change": 0.267972
+                },
+                {
+                  "race_code": "ME-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.065863,
+                  "dem_probability_structural": 0.065863,
+                  "dem_probability_after_generic": 0.362872,
+                  "dem_probability_full": 0.2605,
+                  "structural_margin_d_minus_r": -9.496,
+                  "generic_winner_directed_change": 0.297009,
+                  "poll_winner_directed_change": -0.102372,
+                  "total_winner_directed_change": 0.194637
+                },
+                {
+                  "race_code": "MI-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.082163,
+                  "dem_probability_structural": 0.082163,
+                  "dem_probability_after_generic": 0.407443,
+                  "dem_probability_full": 0.328369,
+                  "structural_margin_d_minus_r": -8.761,
+                  "generic_winner_directed_change": 0.32528,
+                  "poll_winner_directed_change": -0.079074,
+                  "total_winner_directed_change": 0.246206
+                },
+                {
+                  "race_code": "IL-14",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.110656,
+                  "dem_probability_structural": 0.110656,
+                  "dem_probability_after_generic": 0.473487,
+                  "dem_probability_full": 0.473488,
+                  "structural_margin_d_minus_r": -7.705,
+                  "generic_winner_directed_change": 0.362831,
+                  "poll_winner_directed_change": 1e-06,
+                  "total_winner_directed_change": 0.362832
+                },
+                {
+                  "race_code": "TX-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.112799,
+                  "dem_probability_structural": 0.112799,
+                  "dem_probability_after_generic": 0.477974,
+                  "dem_probability_full": 0.517358,
+                  "structural_margin_d_minus_r": -7.634,
+                  "generic_winner_directed_change": 0.365176,
+                  "poll_winner_directed_change": 0.039384,
+                  "total_winner_directed_change": 0.404559
+                },
+                {
+                  "race_code": "NJ-03",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.116394,
+                  "dem_probability_structural": 0.116394,
+                  "dem_probability_after_generic": 0.485375,
+                  "dem_probability_full": 0.873121,
+                  "structural_margin_d_minus_r": -7.517,
+                  "generic_winner_directed_change": 0.368981,
+                  "poll_winner_directed_change": 0.387746,
+                  "total_winner_directed_change": 0.756727
+                },
+                {
+                  "race_code": "NY-19",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.12386,
+                  "dem_probability_structural": 0.12386,
+                  "dem_probability_after_generic": 0.500253,
+                  "dem_probability_full": 0.581921,
+                  "structural_margin_d_minus_r": -7.282,
+                  "generic_winner_directed_change": 0.376393,
+                  "poll_winner_directed_change": 0.081668,
+                  "total_winner_directed_change": 0.458061
+                },
+                {
+                  "race_code": "VA-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.130372,
+                  "dem_probability_structural": 0.130372,
+                  "dem_probability_after_generic": 0.512726,
+                  "dem_probability_full": 0.252162,
+                  "structural_margin_d_minus_r": -7.085,
+                  "generic_winner_directed_change": 0.382354,
+                  "poll_winner_directed_change": -0.260564,
+                  "total_winner_directed_change": 0.12179
+                },
+                {
+                  "race_code": "AZ-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.138893,
+                  "dem_probability_structural": 0.138893,
+                  "dem_probability_after_generic": 0.47077,
+                  "dem_probability_full": 0.675718,
+                  "structural_margin_d_minus_r": -7.814,
+                  "generic_winner_directed_change": 0.331877,
+                  "poll_winner_directed_change": 0.204948,
+                  "total_winner_directed_change": 0.536825
+                },
+                {
+                  "race_code": "MI-11",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.145216,
+                  "dem_probability_structural": 0.145216,
+                  "dem_probability_after_generic": 0.539576,
+                  "dem_probability_full": 0.857985,
+                  "structural_margin_d_minus_r": -6.66,
+                  "generic_winner_directed_change": 0.39436,
+                  "poll_winner_directed_change": 0.318409,
+                  "total_winner_directed_change": 0.712769
+                },
+                {
+                  "race_code": "OH-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.161488,
+                  "dem_probability_structural": 0.161488,
+                  "dem_probability_after_generic": 0.509419,
+                  "dem_probability_full": 0.974415,
+                  "structural_margin_d_minus_r": -7.116,
+                  "generic_winner_directed_change": 0.347931,
+                  "poll_winner_directed_change": 0.464996,
+                  "total_winner_directed_change": 0.812927
+                },
+                {
+                  "race_code": "PA-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.178488,
+                  "dem_probability_structural": 0.178488,
+                  "dem_probability_after_generic": 0.59305,
+                  "dem_probability_full": 0.593074,
+                  "structural_margin_d_minus_r": -5.803,
+                  "generic_winner_directed_change": 0.414562,
+                  "poll_winner_directed_change": 2.4e-05,
+                  "total_winner_directed_change": 0.414586
+                },
+                {
+                  "race_code": "PA-17",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.190584,
+                  "dem_probability_structural": 0.190584,
+                  "dem_probability_after_generic": 0.610566,
+                  "dem_probability_full": 0.610547,
+                  "structural_margin_d_minus_r": -5.517,
+                  "generic_winner_directed_change": 0.419982,
+                  "poll_winner_directed_change": -1.9e-05,
+                  "total_winner_directed_change": 0.419963
+                },
+                {
+                  "race_code": "TX-32",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.192228,
+                  "dem_probability_structural": 0.192228,
+                  "dem_probability_after_generic": 0.612877,
+                  "dem_probability_full": 0.581823,
+                  "structural_margin_d_minus_r": -5.479,
+                  "generic_winner_directed_change": 0.420649,
+                  "poll_winner_directed_change": -0.031054,
+                  "total_winner_directed_change": 0.389595
+                }
+              ],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "structural_decomposition_20_80": {
+              "state": "scored",
+              "n": 48,
+              "sample": "structural_20_80",
+              "structural_plus_incumbency": {
+                "brier": 0.26567739,
+                "log_loss": 0.73206019,
+                "accuracy": 0.583333
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.08950958,
+                "log_loss": 0.3202734,
+                "accuracy": 0.916667
+              },
+              "published_full_forecast": {
+                "brier": 0.05736715,
+                "log_loss": 0.2092516,
+                "accuracy": 0.9375
+              },
+              "brier_delta_generic_minus_structural": -0.17616781,
+              "brier_delta_full_minus_prior": -0.03214243,
+              "brier_delta_full_minus_structural": -0.20831024,
+              "log_loss_delta_generic_minus_structural": -0.41178679,
+              "log_loss_delta_full_minus_prior": -0.1110218,
+              "log_loss_delta_full_minus_structural": -0.52280859,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 44,
+                "away_from_eventual_winner": 4,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.279511
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 35,
+                "away_from_eventual_winner": 13,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.046172
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 45,
+                "away_from_eventual_winner": 3,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.325683
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            }
           }
         },
         {
@@ -25469,7 +26297,414 @@
               }
             ],
             "confident_miss_threshold": 0.8,
-            "confident_miss_count": 7
+            "confident_miss_count": 7,
+            "structural_decomposition": {
+              "state": "scored",
+              "n": 426,
+              "sample": "two_major_party_contests",
+              "structural_plus_incumbency": {
+                "brier": 0.07846355,
+                "log_loss": 0.28626282,
+                "accuracy": 0.896714
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.04207946,
+                "log_loss": 0.16199865,
+                "accuracy": 0.955399
+              },
+              "published_full_forecast": {
+                "brier": 0.03438664,
+                "log_loss": 0.12514718,
+                "accuracy": 0.962441
+              },
+              "brier_delta_generic_minus_structural": -0.03638409,
+              "brier_delta_full_minus_prior": -0.00769282,
+              "brier_delta_full_minus_structural": -0.04407691,
+              "log_loss_delta_generic_minus_structural": -0.12426417,
+              "log_loss_delta_full_minus_prior": -0.03685147,
+              "log_loss_delta_full_minus_structural": -0.16111564,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 117,
+                "away_from_eventual_winner": 114,
+                "unchanged": 195,
+                "mean_winner_directed_probability_change": 0.029114
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 113,
+                "away_from_eventual_winner": 89,
+                "unchanged": 224,
+                "mean_winner_directed_probability_change": 0.009435
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 120,
+                "away_from_eventual_winner": 114,
+                "unchanged": 192,
+                "mean_winner_directed_probability_change": 0.038548
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [
+                {
+                  "race_code": "MN-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001,
+                  "dem_probability_structural": 0.001,
+                  "dem_probability_after_generic": 0.001,
+                  "dem_probability_full": 0.022465,
+                  "structural_margin_d_minus_r": -28.276,
+                  "generic_winner_directed_change": 0.0,
+                  "poll_winner_directed_change": 0.021465,
+                  "total_winner_directed_change": 0.021465
+                },
+                {
+                  "race_code": "WV-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001,
+                  "dem_probability_structural": 0.001,
+                  "dem_probability_after_generic": 0.001,
+                  "dem_probability_full": 0.421101,
+                  "structural_margin_d_minus_r": -40.933,
+                  "generic_winner_directed_change": 0.0,
+                  "poll_winner_directed_change": 0.420101,
+                  "total_winner_directed_change": 0.420101
+                },
+                {
+                  "race_code": "OK-05",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.00121,
+                  "dem_probability_structural": 0.00121,
+                  "dem_probability_after_generic": 0.04798,
+                  "dem_probability_full": 0.006084,
+                  "structural_margin_d_minus_r": -19.11,
+                  "generic_winner_directed_change": 0.046771,
+                  "poll_winner_directed_change": -0.041896,
+                  "total_winner_directed_change": 0.004874
+                },
+                {
+                  "race_code": "MT-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001655,
+                  "dem_probability_structural": 0.001655,
+                  "dem_probability_after_generic": 0.040942,
+                  "dem_probability_full": 0.510635,
+                  "structural_margin_d_minus_r": -21.149,
+                  "generic_winner_directed_change": 0.039286,
+                  "poll_winner_directed_change": 0.469693,
+                  "total_winner_directed_change": 0.50898
+                },
+                {
+                  "race_code": "UT-04",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.003325,
+                  "dem_probability_structural": 0.003325,
+                  "dem_probability_after_generic": 0.089249,
+                  "dem_probability_full": 0.178731,
+                  "structural_margin_d_minus_r": -17.098,
+                  "generic_winner_directed_change": 0.085924,
+                  "poll_winner_directed_change": 0.089482,
+                  "total_winner_directed_change": 0.175406
+                },
+                {
+                  "race_code": "SC-01",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.00335,
+                  "dem_probability_structural": 0.00335,
+                  "dem_probability_after_generic": 0.089659,
+                  "dem_probability_full": 0.077743,
+                  "structural_margin_d_minus_r": -17.082,
+                  "generic_winner_directed_change": 0.086309,
+                  "poll_winner_directed_change": -0.011916,
+                  "total_winner_directed_change": 0.074393
+                },
+                {
+                  "race_code": "NY-22",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.00528,
+                  "dem_probability_structural": 0.00528,
+                  "dem_probability_after_generic": 0.117335,
+                  "dem_probability_full": 0.088453,
+                  "structural_margin_d_minus_r": -16.109,
+                  "generic_winner_directed_change": 0.112055,
+                  "poll_winner_directed_change": -0.028882,
+                  "total_winner_directed_change": 0.083173
+                },
+                {
+                  "race_code": "NM-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.026975,
+                  "dem_probability_structural": 0.026975,
+                  "dem_probability_after_generic": 0.288173,
+                  "dem_probability_full": 0.458937,
+                  "structural_margin_d_minus_r": -12.142,
+                  "generic_winner_directed_change": 0.261198,
+                  "poll_winner_directed_change": 0.170764,
+                  "total_winner_directed_change": 0.431962
+                },
+                {
+                  "race_code": "VA-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.036048,
+                  "dem_probability_structural": 0.036048,
+                  "dem_probability_after_generic": 0.333598,
+                  "dem_probability_full": 0.410411,
+                  "structural_margin_d_minus_r": -11.331,
+                  "generic_winner_directed_change": 0.29755,
+                  "poll_winner_directed_change": 0.076813,
+                  "total_winner_directed_change": 0.374363
+                },
+                {
+                  "race_code": "NY-11",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.039398,
+                  "dem_probability_structural": 0.039398,
+                  "dem_probability_after_generic": 0.348562,
+                  "dem_probability_full": 0.262543,
+                  "structural_margin_d_minus_r": -11.074,
+                  "generic_winner_directed_change": 0.309164,
+                  "poll_winner_directed_change": -0.086019,
+                  "total_winner_directed_change": 0.223145
+                },
+                {
+                  "race_code": "GA-06",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.054385,
+                  "dem_probability_structural": 0.054385,
+                  "dem_probability_after_generic": 0.407012,
+                  "dem_probability_full": 0.351949,
+                  "structural_margin_d_minus_r": -10.104,
+                  "generic_winner_directed_change": 0.352627,
+                  "poll_winner_directed_change": -0.055063,
+                  "total_winner_directed_change": 0.297564
+                },
+                {
+                  "race_code": "ME-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.065854,
+                  "dem_probability_structural": 0.065854,
+                  "dem_probability_after_generic": 0.444769,
+                  "dem_probability_full": 0.515585,
+                  "structural_margin_d_minus_r": -9.497,
+                  "generic_winner_directed_change": 0.378914,
+                  "poll_winner_directed_change": 0.070816,
+                  "total_winner_directed_change": 0.449731
+                },
+                {
+                  "race_code": "MI-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.082154,
+                  "dem_probability_structural": 0.082154,
+                  "dem_probability_after_generic": 0.491135,
+                  "dem_probability_full": 0.371888,
+                  "structural_margin_d_minus_r": -8.762,
+                  "generic_winner_directed_change": 0.408982,
+                  "poll_winner_directed_change": -0.119247,
+                  "total_winner_directed_change": 0.289734
+                },
+                {
+                  "race_code": "IL-14",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.110644,
+                  "dem_probability_structural": 0.110644,
+                  "dem_probability_after_generic": 0.557801,
+                  "dem_probability_full": 0.471455,
+                  "structural_margin_d_minus_r": -7.706,
+                  "generic_winner_directed_change": 0.447157,
+                  "poll_winner_directed_change": -0.086346,
+                  "total_winner_directed_change": 0.360811
+                },
+                {
+                  "race_code": "TX-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.112787,
+                  "dem_probability_structural": 0.112787,
+                  "dem_probability_after_generic": 0.562246,
+                  "dem_probability_full": 0.57603,
+                  "structural_margin_d_minus_r": -7.635,
+                  "generic_winner_directed_change": 0.44946,
+                  "poll_winner_directed_change": 0.013784,
+                  "total_winner_directed_change": 0.463243
+                },
+                {
+                  "race_code": "NJ-03",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.116382,
+                  "dem_probability_structural": 0.116382,
+                  "dem_probability_after_generic": 0.569554,
+                  "dem_probability_full": 0.754833,
+                  "structural_margin_d_minus_r": -7.518,
+                  "generic_winner_directed_change": 0.453172,
+                  "poll_winner_directed_change": 0.185279,
+                  "total_winner_directed_change": 0.638451
+                },
+                {
+                  "race_code": "NY-19",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.12388,
+                  "dem_probability_structural": 0.12388,
+                  "dem_probability_after_generic": 0.584219,
+                  "dem_probability_full": 0.562557,
+                  "structural_margin_d_minus_r": -7.282,
+                  "generic_winner_directed_change": 0.460339,
+                  "poll_winner_directed_change": -0.021662,
+                  "total_winner_directed_change": 0.438677
+                },
+                {
+                  "race_code": "VA-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.130392,
+                  "dem_probability_structural": 0.130392,
+                  "dem_probability_after_generic": 0.596372,
+                  "dem_probability_full": 0.352786,
+                  "structural_margin_d_minus_r": -7.085,
+                  "generic_winner_directed_change": 0.46598,
+                  "poll_winner_directed_change": -0.243586,
+                  "total_winner_directed_change": 0.222394
+                },
+                {
+                  "race_code": "AZ-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.138912,
+                  "dem_probability_structural": 0.138912,
+                  "dem_probability_after_generic": 0.544676,
+                  "dem_probability_full": 0.643675,
+                  "structural_margin_d_minus_r": -7.814,
+                  "generic_winner_directed_change": 0.405765,
+                  "poll_winner_directed_change": 0.098999,
+                  "total_winner_directed_change": 0.504763
+                },
+                {
+                  "race_code": "MI-11",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.145201,
+                  "dem_probability_structural": 0.145201,
+                  "dem_probability_after_generic": 0.622202,
+                  "dem_probability_full": 0.88598,
+                  "structural_margin_d_minus_r": -6.661,
+                  "generic_winner_directed_change": 0.477001,
+                  "poll_winner_directed_change": 0.263778,
+                  "total_winner_directed_change": 0.740779
+                },
+                {
+                  "race_code": "OH-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.161508,
+                  "dem_probability_structural": 0.161508,
+                  "dem_probability_after_generic": 0.582841,
+                  "dem_probability_full": 0.988279,
+                  "structural_margin_d_minus_r": -7.116,
+                  "generic_winner_directed_change": 0.421333,
+                  "poll_winner_directed_change": 0.405438,
+                  "total_winner_directed_change": 0.826771
+                },
+                {
+                  "race_code": "PA-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.178513,
+                  "dem_probability_structural": 0.178513,
+                  "dem_probability_after_generic": 0.672729,
+                  "dem_probability_full": 0.909065,
+                  "structural_margin_d_minus_r": -5.803,
+                  "generic_winner_directed_change": 0.494216,
+                  "poll_winner_directed_change": 0.236336,
+                  "total_winner_directed_change": 0.730552
+                },
+                {
+                  "race_code": "PA-17",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.190567,
+                  "dem_probability_structural": 0.190567,
+                  "dem_probability_after_generic": 0.688887,
+                  "dem_probability_full": 0.914682,
+                  "structural_margin_d_minus_r": -5.518,
+                  "generic_winner_directed_change": 0.49832,
+                  "poll_winner_directed_change": 0.225795,
+                  "total_winner_directed_change": 0.724115
+                },
+                {
+                  "race_code": "TX-32",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.192254,
+                  "dem_probability_structural": 0.192254,
+                  "dem_probability_after_generic": 0.691071,
+                  "dem_probability_full": 0.63576,
+                  "structural_margin_d_minus_r": -5.479,
+                  "generic_winner_directed_change": 0.498817,
+                  "poll_winner_directed_change": -0.055311,
+                  "total_winner_directed_change": 0.443506
+                }
+              ],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "structural_decomposition_20_80": {
+              "state": "scored",
+              "n": 48,
+              "sample": "structural_20_80",
+              "structural_plus_incumbency": {
+                "brier": 0.26567548,
+                "log_loss": 0.73205437,
+                "accuracy": 0.583333
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.08279624,
+                "log_loss": 0.30544023,
+                "accuracy": 0.916667
+              },
+              "published_full_forecast": {
+                "brier": 0.0676173,
+                "log_loss": 0.24865811,
+                "accuracy": 0.9375
+              },
+              "brier_delta_generic_minus_structural": -0.18287924,
+              "brier_delta_full_minus_prior": -0.01517894,
+              "brier_delta_full_minus_structural": -0.19805818,
+              "log_loss_delta_generic_minus_structural": -0.42661414,
+              "log_loss_delta_full_minus_prior": -0.05678212,
+              "log_loss_delta_full_minus_structural": -0.48339626,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 44,
+                "away_from_eventual_winner": 4,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.311635
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 28,
+                "away_from_eventual_winner": 20,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.019226
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 45,
+                "away_from_eventual_winner": 3,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.33086
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            }
           }
         },
         {
@@ -33867,7 +35102,414 @@
               }
             ],
             "confident_miss_threshold": 0.8,
-            "confident_miss_count": 4
+            "confident_miss_count": 4,
+            "structural_decomposition": {
+              "state": "scored",
+              "n": 426,
+              "sample": "two_major_party_contests",
+              "structural_plus_incumbency": {
+                "brier": 0.07846438,
+                "log_loss": 0.28626595,
+                "accuracy": 0.896714
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.04256422,
+                "log_loss": 0.16309925,
+                "accuracy": 0.955399
+              },
+              "published_full_forecast": {
+                "brier": 0.03143048,
+                "log_loss": 0.11454324,
+                "accuracy": 0.960094
+              },
+              "brier_delta_generic_minus_structural": -0.03590016,
+              "brier_delta_full_minus_prior": -0.01113374,
+              "brier_delta_full_minus_structural": -0.0470339,
+              "log_loss_delta_generic_minus_structural": -0.1231667,
+              "log_loss_delta_full_minus_prior": -0.04855601,
+              "log_loss_delta_full_minus_structural": -0.17172271,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 117,
+                "away_from_eventual_winner": 110,
+                "unchanged": 199,
+                "mean_winner_directed_probability_change": 0.02963
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 115,
+                "away_from_eventual_winner": 87,
+                "unchanged": 224,
+                "mean_winner_directed_probability_change": 0.012729
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 120,
+                "away_from_eventual_winner": 112,
+                "unchanged": 194,
+                "mean_winner_directed_probability_change": 0.04236
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [
+                {
+                  "race_code": "MN-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001,
+                  "dem_probability_structural": 0.001,
+                  "dem_probability_after_generic": 0.001,
+                  "dem_probability_full": 0.016942,
+                  "structural_margin_d_minus_r": -28.276,
+                  "generic_winner_directed_change": 0.0,
+                  "poll_winner_directed_change": 0.015942,
+                  "total_winner_directed_change": 0.015942
+                },
+                {
+                  "race_code": "WV-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001,
+                  "dem_probability_structural": 0.001,
+                  "dem_probability_after_generic": 0.001,
+                  "dem_probability_full": 0.303019,
+                  "structural_margin_d_minus_r": -40.932,
+                  "generic_winner_directed_change": 0.0,
+                  "poll_winner_directed_change": 0.302019,
+                  "total_winner_directed_change": 0.302019
+                },
+                {
+                  "race_code": "OK-05",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.00121,
+                  "dem_probability_structural": 0.00121,
+                  "dem_probability_after_generic": 0.037681,
+                  "dem_probability_full": 0.00564,
+                  "structural_margin_d_minus_r": -19.11,
+                  "generic_winner_directed_change": 0.036472,
+                  "poll_winner_directed_change": -0.032041,
+                  "total_winner_directed_change": 0.00443
+                },
+                {
+                  "race_code": "MT-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001655,
+                  "dem_probability_structural": 0.001655,
+                  "dem_probability_after_generic": 0.032945,
+                  "dem_probability_full": 0.574318,
+                  "structural_margin_d_minus_r": -21.149,
+                  "generic_winner_directed_change": 0.03129,
+                  "poll_winner_directed_change": 0.541373,
+                  "total_winner_directed_change": 0.572663
+                },
+                {
+                  "race_code": "UT-04",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.003325,
+                  "dem_probability_structural": 0.003325,
+                  "dem_probability_after_generic": 0.072298,
+                  "dem_probability_full": 0.340054,
+                  "structural_margin_d_minus_r": -17.098,
+                  "generic_winner_directed_change": 0.068973,
+                  "poll_winner_directed_change": 0.267756,
+                  "total_winner_directed_change": 0.336729
+                },
+                {
+                  "race_code": "SC-01",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.00335,
+                  "dem_probability_structural": 0.00335,
+                  "dem_probability_after_generic": 0.072648,
+                  "dem_probability_full": 0.072654,
+                  "structural_margin_d_minus_r": -17.082,
+                  "generic_winner_directed_change": 0.069298,
+                  "poll_winner_directed_change": 6e-06,
+                  "total_winner_directed_change": 0.069304
+                },
+                {
+                  "race_code": "NY-22",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.00528,
+                  "dem_probability_structural": 0.00528,
+                  "dem_probability_after_generic": 0.096474,
+                  "dem_probability_full": 0.145412,
+                  "structural_margin_d_minus_r": -16.109,
+                  "generic_winner_directed_change": 0.091195,
+                  "poll_winner_directed_change": 0.048938,
+                  "total_winner_directed_change": 0.140132
+                },
+                {
+                  "race_code": "NM-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.026974,
+                  "dem_probability_structural": 0.026974,
+                  "dem_probability_after_generic": 0.250721,
+                  "dem_probability_full": 0.441196,
+                  "structural_margin_d_minus_r": -12.142,
+                  "generic_winner_directed_change": 0.223747,
+                  "poll_winner_directed_change": 0.190475,
+                  "total_winner_directed_change": 0.414222
+                },
+                {
+                  "race_code": "VA-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.036047,
+                  "dem_probability_structural": 0.036047,
+                  "dem_probability_after_generic": 0.293396,
+                  "dem_probability_full": 0.526639,
+                  "structural_margin_d_minus_r": -11.331,
+                  "generic_winner_directed_change": 0.257349,
+                  "poll_winner_directed_change": 0.233243,
+                  "total_winner_directed_change": 0.490592
+                },
+                {
+                  "race_code": "NY-11",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.039397,
+                  "dem_probability_structural": 0.039397,
+                  "dem_probability_after_generic": 0.307588,
+                  "dem_probability_full": 0.341689,
+                  "structural_margin_d_minus_r": -11.074,
+                  "generic_winner_directed_change": 0.268191,
+                  "poll_winner_directed_change": 0.034101,
+                  "total_winner_directed_change": 0.302292
+                },
+                {
+                  "race_code": "GA-06",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.054383,
+                  "dem_probability_structural": 0.054383,
+                  "dem_probability_after_generic": 0.363646,
+                  "dem_probability_full": 0.328205,
+                  "structural_margin_d_minus_r": -10.104,
+                  "generic_winner_directed_change": 0.309263,
+                  "poll_winner_directed_change": -0.035441,
+                  "total_winner_directed_change": 0.273822
+                },
+                {
+                  "race_code": "ME-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.065852,
+                  "dem_probability_structural": 0.065852,
+                  "dem_probability_after_generic": 0.400373,
+                  "dem_probability_full": 0.48697,
+                  "structural_margin_d_minus_r": -9.497,
+                  "generic_winner_directed_change": 0.334521,
+                  "poll_winner_directed_change": 0.086597,
+                  "total_winner_directed_change": 0.421118
+                },
+                {
+                  "race_code": "MI-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.082151,
+                  "dem_probability_structural": 0.082151,
+                  "dem_probability_after_generic": 0.446024,
+                  "dem_probability_full": 0.353842,
+                  "structural_margin_d_minus_r": -8.762,
+                  "generic_winner_directed_change": 0.363872,
+                  "poll_winner_directed_change": -0.092182,
+                  "total_winner_directed_change": 0.271691
+                },
+                {
+                  "race_code": "IL-14",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.110641,
+                  "dem_probability_structural": 0.110641,
+                  "dem_probability_after_generic": 0.512726,
+                  "dem_probability_full": 0.44007,
+                  "structural_margin_d_minus_r": -7.706,
+                  "generic_winner_directed_change": 0.402085,
+                  "poll_winner_directed_change": -0.072656,
+                  "total_winner_directed_change": 0.329429
+                },
+                {
+                  "race_code": "TX-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.112784,
+                  "dem_probability_structural": 0.112784,
+                  "dem_probability_after_generic": 0.517219,
+                  "dem_probability_full": 0.458693,
+                  "structural_margin_d_minus_r": -7.635,
+                  "generic_winner_directed_change": 0.404435,
+                  "poll_winner_directed_change": -0.058526,
+                  "total_winner_directed_change": 0.345909
+                },
+                {
+                  "race_code": "NJ-03",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.116379,
+                  "dem_probability_structural": 0.116379,
+                  "dem_probability_after_generic": 0.524617,
+                  "dem_probability_full": 0.666281,
+                  "structural_margin_d_minus_r": -7.518,
+                  "generic_winner_directed_change": 0.408239,
+                  "poll_winner_directed_change": 0.141664,
+                  "total_winner_directed_change": 0.549902
+                },
+                {
+                  "race_code": "NY-19",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.123876,
+                  "dem_probability_structural": 0.123876,
+                  "dem_probability_after_generic": 0.539513,
+                  "dem_probability_full": 0.747951,
+                  "structural_margin_d_minus_r": -7.282,
+                  "generic_winner_directed_change": 0.415636,
+                  "poll_winner_directed_change": 0.208438,
+                  "total_winner_directed_change": 0.624075
+                },
+                {
+                  "race_code": "VA-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.130389,
+                  "dem_probability_structural": 0.130389,
+                  "dem_probability_after_generic": 0.551905,
+                  "dem_probability_full": 0.353458,
+                  "structural_margin_d_minus_r": -7.085,
+                  "generic_winner_directed_change": 0.421516,
+                  "poll_winner_directed_change": -0.198447,
+                  "total_winner_directed_change": 0.223069
+                },
+                {
+                  "race_code": "AZ-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.138909,
+                  "dem_probability_structural": 0.138909,
+                  "dem_probability_after_generic": 0.505153,
+                  "dem_probability_full": 0.688597,
+                  "structural_margin_d_minus_r": -7.814,
+                  "generic_winner_directed_change": 0.366244,
+                  "poll_winner_directed_change": 0.183444,
+                  "total_winner_directed_change": 0.549688
+                },
+                {
+                  "race_code": "MI-11",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.145198,
+                  "dem_probability_structural": 0.145198,
+                  "dem_probability_after_generic": 0.578391,
+                  "dem_probability_full": 0.862789,
+                  "structural_margin_d_minus_r": -6.661,
+                  "generic_winner_directed_change": 0.433193,
+                  "poll_winner_directed_change": 0.284398,
+                  "total_winner_directed_change": 0.717591
+                },
+                {
+                  "race_code": "OH-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.161505,
+                  "dem_probability_structural": 0.161505,
+                  "dem_probability_after_generic": 0.54374,
+                  "dem_probability_full": 0.992137,
+                  "structural_margin_d_minus_r": -7.116,
+                  "generic_winner_directed_change": 0.382235,
+                  "poll_winner_directed_change": 0.448397,
+                  "total_winner_directed_change": 0.830632
+                },
+                {
+                  "race_code": "PA-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.178509,
+                  "dem_probability_structural": 0.178509,
+                  "dem_probability_after_generic": 0.630798,
+                  "dem_probability_full": 0.884346,
+                  "structural_margin_d_minus_r": -5.803,
+                  "generic_winner_directed_change": 0.45229,
+                  "poll_winner_directed_change": 0.253548,
+                  "total_winner_directed_change": 0.705837
+                },
+                {
+                  "race_code": "PA-17",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.190562,
+                  "dem_probability_structural": 0.190562,
+                  "dem_probability_after_generic": 0.647733,
+                  "dem_probability_full": 0.894451,
+                  "structural_margin_d_minus_r": -5.518,
+                  "generic_winner_directed_change": 0.45717,
+                  "poll_winner_directed_change": 0.246718,
+                  "total_winner_directed_change": 0.703889
+                },
+                {
+                  "race_code": "TX-32",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.19225,
+                  "dem_probability_structural": 0.19225,
+                  "dem_probability_after_generic": 0.650028,
+                  "dem_probability_full": 0.609966,
+                  "structural_margin_d_minus_r": -5.479,
+                  "generic_winner_directed_change": 0.457778,
+                  "poll_winner_directed_change": -0.040062,
+                  "total_winner_directed_change": 0.417716
+                }
+              ],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "structural_decomposition_20_80": {
+              "state": "scored",
+              "n": 48,
+              "sample": "structural_20_80",
+              "structural_plus_incumbency": {
+                "brier": 0.26568101,
+                "log_loss": 0.73206699,
+                "accuracy": 0.583333
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.0858124,
+                "log_loss": 0.31156359,
+                "accuracy": 0.916667
+              },
+              "published_full_forecast": {
+                "brier": 0.0606951,
+                "log_loss": 0.21146505,
+                "accuracy": 0.9375
+              },
+              "brier_delta_generic_minus_structural": -0.17986861,
+              "brier_delta_full_minus_prior": -0.0251173,
+              "brier_delta_full_minus_structural": -0.20498591,
+              "log_loss_delta_generic_minus_structural": -0.4205034,
+              "log_loss_delta_full_minus_prior": -0.10009854,
+              "log_loss_delta_full_minus_structural": -0.52060194,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 44,
+                "away_from_eventual_winner": 4,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.295275
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 30,
+                "away_from_eventual_winner": 18,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.031307
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 45,
+                "away_from_eventual_winner": 3,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.326582
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            }
           }
         },
         {
@@ -42227,7 +43869,414 @@
               }
             ],
             "confident_miss_threshold": 0.8,
-            "confident_miss_count": 4
+            "confident_miss_count": 4,
+            "structural_decomposition": {
+              "state": "scored",
+              "n": 426,
+              "sample": "two_major_party_contests",
+              "structural_plus_incumbency": {
+                "brier": 0.07846399,
+                "log_loss": 0.28626376,
+                "accuracy": 0.896714
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.04278064,
+                "log_loss": 0.16365537,
+                "accuracy": 0.953052
+              },
+              "published_full_forecast": {
+                "brier": 0.02902296,
+                "log_loss": 0.1149751,
+                "accuracy": 0.967136
+              },
+              "brier_delta_generic_minus_structural": -0.03568335,
+              "brier_delta_full_minus_prior": -0.01375768,
+              "brier_delta_full_minus_structural": -0.04944103,
+              "log_loss_delta_generic_minus_structural": -0.12260839,
+              "log_loss_delta_full_minus_prior": -0.04868027,
+              "log_loss_delta_full_minus_structural": -0.17128866,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 117,
+                "away_from_eventual_winner": 109,
+                "unchanged": 200,
+                "mean_winner_directed_probability_change": 0.029657
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 118,
+                "away_from_eventual_winner": 83,
+                "unchanged": 225,
+                "mean_winner_directed_probability_change": 0.016229
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 119,
+                "away_from_eventual_winner": 109,
+                "unchanged": 198,
+                "mean_winner_directed_probability_change": 0.045887
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [
+                {
+                  "race_code": "MN-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001,
+                  "dem_probability_structural": 0.001,
+                  "dem_probability_after_generic": 0.001,
+                  "dem_probability_full": 0.001,
+                  "structural_margin_d_minus_r": -28.276,
+                  "generic_winner_directed_change": 0.0,
+                  "poll_winner_directed_change": 0.0,
+                  "total_winner_directed_change": 0.0
+                },
+                {
+                  "race_code": "WV-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001,
+                  "dem_probability_structural": 0.001,
+                  "dem_probability_after_generic": 0.001,
+                  "dem_probability_full": 0.399875,
+                  "structural_margin_d_minus_r": -40.933,
+                  "generic_winner_directed_change": 0.0,
+                  "poll_winner_directed_change": 0.398875,
+                  "total_winner_directed_change": 0.398875
+                },
+                {
+                  "race_code": "OK-05",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.00121,
+                  "dem_probability_structural": 0.00121,
+                  "dem_probability_after_generic": 0.035345,
+                  "dem_probability_full": 0.007091,
+                  "structural_margin_d_minus_r": -19.11,
+                  "generic_winner_directed_change": 0.034136,
+                  "poll_winner_directed_change": -0.028254,
+                  "total_winner_directed_change": 0.005881
+                },
+                {
+                  "race_code": "MT-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.001655,
+                  "dem_probability_structural": 0.001655,
+                  "dem_probability_after_generic": 0.03111,
+                  "dem_probability_full": 0.715469,
+                  "structural_margin_d_minus_r": -21.149,
+                  "generic_winner_directed_change": 0.029455,
+                  "poll_winner_directed_change": 0.684359,
+                  "total_winner_directed_change": 0.713814
+                },
+                {
+                  "race_code": "UT-04",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.003325,
+                  "dem_probability_structural": 0.003325,
+                  "dem_probability_after_generic": 0.068363,
+                  "dem_probability_full": 0.250413,
+                  "structural_margin_d_minus_r": -17.098,
+                  "generic_winner_directed_change": 0.065038,
+                  "poll_winner_directed_change": 0.18205,
+                  "total_winner_directed_change": 0.247088
+                },
+                {
+                  "race_code": "SC-01",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.00335,
+                  "dem_probability_structural": 0.00335,
+                  "dem_probability_after_generic": 0.068698,
+                  "dem_probability_full": 0.068701,
+                  "structural_margin_d_minus_r": -17.082,
+                  "generic_winner_directed_change": 0.065348,
+                  "poll_winner_directed_change": 3e-06,
+                  "total_winner_directed_change": 0.065351
+                },
+                {
+                  "race_code": "NY-22",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.00528,
+                  "dem_probability_structural": 0.00528,
+                  "dem_probability_after_generic": 0.091576,
+                  "dem_probability_full": 0.131656,
+                  "structural_margin_d_minus_r": -16.109,
+                  "generic_winner_directed_change": 0.086296,
+                  "poll_winner_directed_change": 0.04008,
+                  "total_winner_directed_change": 0.126376
+                },
+                {
+                  "race_code": "NM-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.026975,
+                  "dem_probability_structural": 0.026975,
+                  "dem_probability_after_generic": 0.241518,
+                  "dem_probability_full": 0.413007,
+                  "structural_margin_d_minus_r": -12.142,
+                  "generic_winner_directed_change": 0.214543,
+                  "poll_winner_directed_change": 0.171489,
+                  "total_winner_directed_change": 0.386032
+                },
+                {
+                  "race_code": "VA-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.036048,
+                  "dem_probability_structural": 0.036048,
+                  "dem_probability_after_generic": 0.283424,
+                  "dem_probability_full": 0.509133,
+                  "structural_margin_d_minus_r": -11.331,
+                  "generic_winner_directed_change": 0.247376,
+                  "poll_winner_directed_change": 0.225709,
+                  "total_winner_directed_change": 0.473085
+                },
+                {
+                  "race_code": "NY-11",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.039398,
+                  "dem_probability_structural": 0.039398,
+                  "dem_probability_after_generic": 0.297396,
+                  "dem_probability_full": 0.327893,
+                  "structural_margin_d_minus_r": -11.074,
+                  "generic_winner_directed_change": 0.257998,
+                  "poll_winner_directed_change": 0.030497,
+                  "total_winner_directed_change": 0.288495
+                },
+                {
+                  "race_code": "GA-06",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.054385,
+                  "dem_probability_structural": 0.054385,
+                  "dem_probability_after_generic": 0.352739,
+                  "dem_probability_full": 0.639277,
+                  "structural_margin_d_minus_r": -10.104,
+                  "generic_winner_directed_change": 0.298354,
+                  "poll_winner_directed_change": 0.286538,
+                  "total_winner_directed_change": 0.584892
+                },
+                {
+                  "race_code": "ME-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.065854,
+                  "dem_probability_structural": 0.065854,
+                  "dem_probability_after_generic": 0.38913,
+                  "dem_probability_full": 0.502368,
+                  "structural_margin_d_minus_r": -9.497,
+                  "generic_winner_directed_change": 0.323276,
+                  "poll_winner_directed_change": 0.113238,
+                  "total_winner_directed_change": 0.436514
+                },
+                {
+                  "race_code": "MI-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.082154,
+                  "dem_probability_structural": 0.082154,
+                  "dem_probability_after_generic": 0.434503,
+                  "dem_probability_full": 0.719146,
+                  "structural_margin_d_minus_r": -8.762,
+                  "generic_winner_directed_change": 0.35235,
+                  "poll_winner_directed_change": 0.284643,
+                  "total_winner_directed_change": 0.636992
+                },
+                {
+                  "race_code": "IL-14",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.110644,
+                  "dem_probability_structural": 0.110644,
+                  "dem_probability_after_generic": 0.501077,
+                  "dem_probability_full": 0.668888,
+                  "structural_margin_d_minus_r": -7.706,
+                  "generic_winner_directed_change": 0.390433,
+                  "poll_winner_directed_change": 0.167811,
+                  "total_winner_directed_change": 0.558244
+                },
+                {
+                  "race_code": "TX-07",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.112787,
+                  "dem_probability_structural": 0.112787,
+                  "dem_probability_after_generic": 0.505572,
+                  "dem_probability_full": 0.455159,
+                  "structural_margin_d_minus_r": -7.635,
+                  "generic_winner_directed_change": 0.392786,
+                  "poll_winner_directed_change": -0.050413,
+                  "total_winner_directed_change": 0.342372
+                },
+                {
+                  "race_code": "NJ-03",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.116382,
+                  "dem_probability_structural": 0.116382,
+                  "dem_probability_after_generic": 0.512979,
+                  "dem_probability_full": 0.644328,
+                  "structural_margin_d_minus_r": -7.518,
+                  "generic_winner_directed_change": 0.396597,
+                  "poll_winner_directed_change": 0.131349,
+                  "total_winner_directed_change": 0.527946
+                },
+                {
+                  "race_code": "NY-19",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.12388,
+                  "dem_probability_structural": 0.12388,
+                  "dem_probability_after_generic": 0.527903,
+                  "dem_probability_full": 0.650494,
+                  "structural_margin_d_minus_r": -7.282,
+                  "generic_winner_directed_change": 0.404024,
+                  "poll_winner_directed_change": 0.122591,
+                  "total_winner_directed_change": 0.526614
+                },
+                {
+                  "race_code": "VA-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.130392,
+                  "dem_probability_structural": 0.130392,
+                  "dem_probability_after_generic": 0.540332,
+                  "dem_probability_full": 0.363607,
+                  "structural_margin_d_minus_r": -7.085,
+                  "generic_winner_directed_change": 0.40994,
+                  "poll_winner_directed_change": -0.176725,
+                  "total_winner_directed_change": 0.233215
+                },
+                {
+                  "race_code": "AZ-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.138912,
+                  "dem_probability_structural": 0.138912,
+                  "dem_probability_after_generic": 0.494958,
+                  "dem_probability_full": 0.488814,
+                  "structural_margin_d_minus_r": -7.814,
+                  "generic_winner_directed_change": 0.356046,
+                  "poll_winner_directed_change": -0.006144,
+                  "total_winner_directed_change": 0.349902
+                },
+                {
+                  "race_code": "MI-11",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.145201,
+                  "dem_probability_structural": 0.145201,
+                  "dem_probability_after_generic": 0.566933,
+                  "dem_probability_full": 0.850255,
+                  "structural_margin_d_minus_r": -6.661,
+                  "generic_winner_directed_change": 0.421732,
+                  "poll_winner_directed_change": 0.283322,
+                  "total_winner_directed_change": 0.705054
+                },
+                {
+                  "race_code": "OH-S1",
+                  "race_type": "senate",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.161508,
+                  "dem_probability_structural": 0.161508,
+                  "dem_probability_after_generic": 0.533593,
+                  "dem_probability_full": 0.987371,
+                  "structural_margin_d_minus_r": -7.116,
+                  "generic_winner_directed_change": 0.372085,
+                  "poll_winner_directed_change": 0.453778,
+                  "total_winner_directed_change": 0.825863
+                },
+                {
+                  "race_code": "PA-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.178513,
+                  "dem_probability_structural": 0.178513,
+                  "dem_probability_after_generic": 0.619726,
+                  "dem_probability_full": 0.937752,
+                  "structural_margin_d_minus_r": -5.803,
+                  "generic_winner_directed_change": 0.441213,
+                  "poll_winner_directed_change": 0.318026,
+                  "total_winner_directed_change": 0.759239
+                },
+                {
+                  "race_code": "PA-17",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.190567,
+                  "dem_probability_structural": 0.190567,
+                  "dem_probability_after_generic": 0.636831,
+                  "dem_probability_full": 0.885466,
+                  "structural_margin_d_minus_r": -5.518,
+                  "generic_winner_directed_change": 0.446264,
+                  "poll_winner_directed_change": 0.248635,
+                  "total_winner_directed_change": 0.694899
+                },
+                {
+                  "race_code": "TX-32",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.192254,
+                  "dem_probability_structural": 0.192254,
+                  "dem_probability_after_generic": 0.639151,
+                  "dem_probability_full": 0.864534,
+                  "structural_margin_d_minus_r": -5.479,
+                  "generic_winner_directed_change": 0.446897,
+                  "poll_winner_directed_change": 0.225383,
+                  "total_winner_directed_change": 0.67228
+                }
+              ],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "structural_decomposition_20_80": {
+              "state": "scored",
+              "n": 48,
+              "sample": "structural_20_80",
+              "structural_plus_incumbency": {
+                "brier": 0.26567939,
+                "log_loss": 0.73206267,
+                "accuracy": 0.583333
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.08679413,
+                "log_loss": 0.31380444,
+                "accuracy": 0.916667
+              },
+              "published_full_forecast": {
+                "brier": 0.05370461,
+                "log_loss": 0.19572769,
+                "accuracy": 0.9375
+              },
+              "brier_delta_generic_minus_structural": -0.17888526,
+              "brier_delta_full_minus_prior": -0.03308952,
+              "brier_delta_full_minus_structural": -0.21197478,
+              "log_loss_delta_generic_minus_structural": -0.41825823,
+              "log_loss_delta_full_minus_prior": -0.11807675,
+              "log_loss_delta_full_minus_structural": -0.53633498,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 44,
+                "away_from_eventual_winner": 4,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.290751
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 29,
+                "away_from_eventual_winner": 19,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.044825
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 45,
+                "away_from_eventual_winner": 3,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.335576
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            }
           }
         }
       ],
@@ -64622,7 +66671,206 @@
               }
             ],
             "confident_miss_threshold": 0.8,
-            "confident_miss_count": 7
+            "confident_miss_count": 7,
+            "structural_decomposition": {
+              "state": "scored",
+              "n": 381,
+              "sample": "two_major_party_contests",
+              "structural_plus_incumbency": {
+                "brier": 0.03870659,
+                "log_loss": 0.12161367,
+                "accuracy": 0.947507
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.03862374,
+                "log_loss": 0.12578881,
+                "accuracy": 0.947507
+              },
+              "published_full_forecast": {
+                "brier": 0.03625407,
+                "log_loss": 0.11866601,
+                "accuracy": 0.952756
+              },
+              "brier_delta_generic_minus_structural": -8.285e-05,
+              "brier_delta_full_minus_prior": -0.00236967,
+              "brier_delta_full_minus_structural": -0.00245252,
+              "log_loss_delta_generic_minus_structural": 0.00417514,
+              "log_loss_delta_full_minus_prior": -0.0071228,
+              "log_loss_delta_full_minus_structural": -0.00294766,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 78,
+                "away_from_eventual_winner": 74,
+                "unchanged": 229,
+                "mean_winner_directed_probability_change": 0.001504
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 66,
+                "away_from_eventual_winner": 78,
+                "unchanged": 237,
+                "mean_winner_directed_probability_change": 0.001322
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 80,
+                "away_from_eventual_winner": 72,
+                "unchanged": 229,
+                "mean_winner_directed_probability_change": 0.002826
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [
+                {
+                  "race_code": "NY-04",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.050514,
+                  "dem_probability_structural": 0.949486,
+                  "dem_probability_after_generic": 0.977826,
+                  "dem_probability_full": 0.977827,
+                  "structural_margin_d_minus_r": 10.331,
+                  "generic_winner_directed_change": -0.028341,
+                  "poll_winner_directed_change": -1e-06,
+                  "total_winner_directed_change": -0.028341
+                },
+                {
+                  "race_code": "ME-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.07283,
+                  "dem_probability_structural": 0.07283,
+                  "dem_probability_after_generic": 0.139154,
+                  "dem_probability_full": 0.13917,
+                  "structural_margin_d_minus_r": -9.167,
+                  "generic_winner_directed_change": 0.066324,
+                  "poll_winner_directed_change": 1.6e-05,
+                  "total_winner_directed_change": 0.06634
+                },
+                {
+                  "race_code": "WA-03",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.078576,
+                  "dem_probability_structural": 0.078576,
+                  "dem_probability_after_generic": 0.148287,
+                  "dem_probability_full": 0.215838,
+                  "structural_margin_d_minus_r": -8.913,
+                  "generic_winner_directed_change": 0.069711,
+                  "poll_winner_directed_change": 0.067551,
+                  "total_winner_directed_change": 0.137262
+                },
+                {
+                  "race_code": "CA-22",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.079216,
+                  "dem_probability_structural": 0.920784,
+                  "dem_probability_after_generic": 0.962566,
+                  "dem_probability_full": 0.957527,
+                  "structural_margin_d_minus_r": 8.885,
+                  "generic_winner_directed_change": -0.041782,
+                  "poll_winner_directed_change": 0.005039,
+                  "total_winner_directed_change": -0.036743
+                },
+                {
+                  "race_code": "CA-13",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.116547,
+                  "dem_probability_structural": 0.883453,
+                  "dem_probability_after_generic": 0.941013,
+                  "dem_probability_full": 0.912649,
+                  "structural_margin_d_minus_r": 7.512,
+                  "generic_winner_directed_change": -0.05756,
+                  "poll_winner_directed_change": 0.028364,
+                  "total_winner_directed_change": -0.029196
+                },
+                {
+                  "race_code": "CA-27",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.145212,
+                  "dem_probability_structural": 0.854788,
+                  "dem_probability_after_generic": 0.923368,
+                  "dem_probability_full": 0.923376,
+                  "structural_margin_d_minus_r": 6.66,
+                  "generic_winner_directed_change": -0.06858,
+                  "poll_winner_directed_change": -8e-06,
+                  "total_winner_directed_change": -0.068588
+                },
+                {
+                  "race_code": "NY-17",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.146921,
+                  "dem_probability_structural": 0.853079,
+                  "dem_probability_after_generic": 0.922289,
+                  "dem_probability_full": 0.875442,
+                  "structural_margin_d_minus_r": 6.613,
+                  "generic_winner_directed_change": -0.06921,
+                  "poll_winner_directed_change": 0.046847,
+                  "total_winner_directed_change": -0.022363
+                },
+                {
+                  "race_code": "PA-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.162772,
+                  "dem_probability_structural": 0.162772,
+                  "dem_probability_after_generic": 0.270195,
+                  "dem_probability_full": 0.386796,
+                  "structural_margin_d_minus_r": -6.194,
+                  "generic_winner_directed_change": 0.107423,
+                  "poll_winner_directed_change": 0.116601,
+                  "total_winner_directed_change": 0.224024
+                }
+              ],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "structural_decomposition_20_80": {
+              "state": "scored",
+              "n": 34,
+              "sample": "structural_20_80",
+              "structural_plus_incumbency": {
+                "brier": 0.22711031,
+                "log_loss": 0.64533371,
+                "accuracy": 0.647059
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.2113445,
+                "log_loss": 0.60932012,
+                "accuracy": 0.647059
+              },
+              "published_full_forecast": {
+                "brier": 0.1967995,
+                "log_loss": 0.57611117,
+                "accuracy": 0.705882
+              },
+              "brier_delta_generic_minus_structural": -0.01576581,
+              "brier_delta_full_minus_prior": -0.014545,
+              "brier_delta_full_minus_structural": -0.03031081,
+              "log_loss_delta_generic_minus_structural": -0.03601359,
+              "log_loss_delta_full_minus_prior": -0.03320895,
+              "log_loss_delta_full_minus_structural": -0.06922254,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 23,
+                "away_from_eventual_winner": 11,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.040637
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 17,
+                "away_from_eventual_winner": 17,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.011086
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 24,
+                "away_from_eventual_winner": 10,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.051723
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            }
           }
         },
         {
@@ -72139,7 +74387,206 @@
               }
             ],
             "confident_miss_threshold": 0.8,
-            "confident_miss_count": 7
+            "confident_miss_count": 7,
+            "structural_decomposition": {
+              "state": "scored",
+              "n": 381,
+              "sample": "two_major_party_contests",
+              "structural_plus_incumbency": {
+                "brier": 0.0387066,
+                "log_loss": 0.12161342,
+                "accuracy": 0.947507
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.0386592,
+                "log_loss": 0.12600374,
+                "accuracy": 0.947507
+              },
+              "published_full_forecast": {
+                "brier": 0.03450254,
+                "log_loss": 0.11433133,
+                "accuracy": 0.952756
+              },
+              "brier_delta_generic_minus_structural": -4.74e-05,
+              "brier_delta_full_minus_prior": -0.00415666,
+              "brier_delta_full_minus_structural": -0.00420406,
+              "log_loss_delta_generic_minus_structural": 0.00439032,
+              "log_loss_delta_full_minus_prior": -0.01167241,
+              "log_loss_delta_full_minus_structural": -0.00728209,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 78,
+                "away_from_eventual_winner": 74,
+                "unchanged": 229,
+                "mean_winner_directed_probability_change": 0.001489
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 78,
+                "away_from_eventual_winner": 67,
+                "unchanged": 236,
+                "mean_winner_directed_probability_change": 0.003894
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 77,
+                "away_from_eventual_winner": 75,
+                "unchanged": 229,
+                "mean_winner_directed_probability_change": 0.005383
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [
+                {
+                  "race_code": "NY-04",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.050517,
+                  "dem_probability_structural": 0.949483,
+                  "dem_probability_after_generic": 0.978176,
+                  "dem_probability_full": 0.978178,
+                  "structural_margin_d_minus_r": 10.331,
+                  "generic_winner_directed_change": -0.028694,
+                  "poll_winner_directed_change": -2e-06,
+                  "total_winner_directed_change": -0.028695
+                },
+                {
+                  "race_code": "ME-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.072848,
+                  "dem_probability_structural": 0.072848,
+                  "dem_probability_after_generic": 0.140673,
+                  "dem_probability_full": 0.323621,
+                  "structural_margin_d_minus_r": -9.166,
+                  "generic_winner_directed_change": 0.067825,
+                  "poll_winner_directed_change": 0.182948,
+                  "total_winner_directed_change": 0.250773
+                },
+                {
+                  "race_code": "WA-03",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.078571,
+                  "dem_probability_structural": 0.078571,
+                  "dem_probability_after_generic": 0.149835,
+                  "dem_probability_full": 0.154858,
+                  "structural_margin_d_minus_r": -8.913,
+                  "generic_winner_directed_change": 0.071263,
+                  "poll_winner_directed_change": 0.005023,
+                  "total_winner_directed_change": 0.076287
+                },
+                {
+                  "race_code": "CA-22",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.079221,
+                  "dem_probability_structural": 0.920779,
+                  "dem_probability_after_generic": 0.963107,
+                  "dem_probability_full": 0.963108,
+                  "structural_margin_d_minus_r": 8.885,
+                  "generic_winner_directed_change": -0.042328,
+                  "poll_winner_directed_change": -1e-06,
+                  "total_winner_directed_change": -0.042329
+                },
+                {
+                  "race_code": "CA-13",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.116553,
+                  "dem_probability_structural": 0.883447,
+                  "dem_probability_after_generic": 0.941792,
+                  "dem_probability_full": 0.941801,
+                  "structural_margin_d_minus_r": 7.512,
+                  "generic_winner_directed_change": -0.058345,
+                  "poll_winner_directed_change": -9e-06,
+                  "total_winner_directed_change": -0.058354
+                },
+                {
+                  "race_code": "CA-27",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.145183,
+                  "dem_probability_structural": 0.854817,
+                  "dem_probability_after_generic": 0.924345,
+                  "dem_probability_full": 0.905054,
+                  "structural_margin_d_minus_r": 6.661,
+                  "generic_winner_directed_change": -0.069529,
+                  "poll_winner_directed_change": 0.019291,
+                  "total_winner_directed_change": -0.050237
+                },
+                {
+                  "race_code": "NY-17",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.146928,
+                  "dem_probability_structural": 0.853072,
+                  "dem_probability_after_generic": 0.923254,
+                  "dem_probability_full": 0.856381,
+                  "structural_margin_d_minus_r": 6.613,
+                  "generic_winner_directed_change": -0.070182,
+                  "poll_winner_directed_change": 0.066873,
+                  "total_winner_directed_change": -0.003309
+                },
+                {
+                  "race_code": "PA-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.162765,
+                  "dem_probability_structural": 0.162765,
+                  "dem_probability_after_generic": 0.272405,
+                  "dem_probability_full": 0.380781,
+                  "structural_margin_d_minus_r": -6.194,
+                  "generic_winner_directed_change": 0.10964,
+                  "poll_winner_directed_change": 0.108376,
+                  "total_winner_directed_change": 0.218016
+                }
+              ],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "structural_decomposition_20_80": {
+              "state": "scored",
+              "n": 34,
+              "sample": "structural_20_80",
+              "structural_plus_incumbency": {
+                "brier": 0.22711017,
+                "log_loss": 0.64533401,
+                "accuracy": 0.647059
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.21134291,
+                "log_loss": 0.60938334,
+                "accuracy": 0.647059
+              },
+              "published_full_forecast": {
+                "brier": 0.18245489,
+                "log_loss": 0.53661647,
+                "accuracy": 0.705882
+              },
+              "brier_delta_generic_minus_structural": -0.01576726,
+              "brier_delta_full_minus_prior": -0.02888802,
+              "brier_delta_full_minus_structural": -0.04465528,
+              "log_loss_delta_generic_minus_structural": -0.03595067,
+              "log_loss_delta_full_minus_prior": -0.07276687,
+              "log_loss_delta_full_minus_structural": -0.10871754,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 23,
+                "away_from_eventual_winner": 11,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.04129
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 22,
+                "away_from_eventual_winner": 12,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.034989
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 25,
+                "away_from_eventual_winner": 9,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.076279
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            }
           }
         },
         {
@@ -79656,7 +82103,206 @@
               }
             ],
             "confident_miss_threshold": 0.8,
-            "confident_miss_count": 5
+            "confident_miss_count": 5,
+            "structural_decomposition": {
+              "state": "scored",
+              "n": 381,
+              "sample": "two_major_party_contests",
+              "structural_plus_incumbency": {
+                "brier": 0.03870717,
+                "log_loss": 0.1216152,
+                "accuracy": 0.947507
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.03816026,
+                "log_loss": 0.12206113,
+                "accuracy": 0.947507
+              },
+              "published_full_forecast": {
+                "brier": 0.03383891,
+                "log_loss": 0.1106202,
+                "accuracy": 0.952756
+              },
+              "brier_delta_generic_minus_structural": -0.00054691,
+              "brier_delta_full_minus_prior": -0.00432135,
+              "brier_delta_full_minus_structural": -0.00486826,
+              "log_loss_delta_generic_minus_structural": 0.00044593,
+              "log_loss_delta_full_minus_prior": -0.01144093,
+              "log_loss_delta_full_minus_structural": -0.010995,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 78,
+                "away_from_eventual_winner": 73,
+                "unchanged": 230,
+                "mean_winner_directed_probability_change": 0.001406
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 78,
+                "away_from_eventual_winner": 68,
+                "unchanged": 235,
+                "mean_winner_directed_probability_change": 0.003859
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 78,
+                "away_from_eventual_winner": 74,
+                "unchanged": 229,
+                "mean_winner_directed_probability_change": 0.005265
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [
+                {
+                  "race_code": "NY-04",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.050508,
+                  "dem_probability_structural": 0.949492,
+                  "dem_probability_after_generic": 0.967625,
+                  "dem_probability_full": 0.96762,
+                  "structural_margin_d_minus_r": 10.332,
+                  "generic_winner_directed_change": -0.018133,
+                  "poll_winner_directed_change": 5e-06,
+                  "total_winner_directed_change": -0.018128
+                },
+                {
+                  "race_code": "ME-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.072839,
+                  "dem_probability_structural": 0.072839,
+                  "dem_probability_after_generic": 0.106027,
+                  "dem_probability_full": 0.3401,
+                  "structural_margin_d_minus_r": -9.166,
+                  "generic_winner_directed_change": 0.033188,
+                  "poll_winner_directed_change": 0.234073,
+                  "total_winner_directed_change": 0.267261
+                },
+                {
+                  "race_code": "WA-03",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.078585,
+                  "dem_probability_structural": 0.078585,
+                  "dem_probability_after_generic": 0.113597,
+                  "dem_probability_full": 0.116699,
+                  "structural_margin_d_minus_r": -8.912,
+                  "generic_winner_directed_change": 0.035011,
+                  "poll_winner_directed_change": 0.003102,
+                  "total_winner_directed_change": 0.038114
+                },
+                {
+                  "race_code": "CA-22",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.07923,
+                  "dem_probability_structural": 0.92077,
+                  "dem_probability_after_generic": 0.947093,
+                  "dem_probability_full": 0.947101,
+                  "structural_margin_d_minus_r": 8.885,
+                  "generic_winner_directed_change": -0.026323,
+                  "poll_winner_directed_change": -8e-06,
+                  "total_winner_directed_change": -0.026331
+                },
+                {
+                  "race_code": "CA-13",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.116534,
+                  "dem_probability_structural": 0.883466,
+                  "dem_probability_after_generic": 0.919172,
+                  "dem_probability_full": 0.919168,
+                  "structural_margin_d_minus_r": 7.513,
+                  "generic_winner_directed_change": -0.035706,
+                  "poll_winner_directed_change": 4e-06,
+                  "total_winner_directed_change": -0.035702
+                },
+                {
+                  "race_code": "CA-27",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.145198,
+                  "dem_probability_structural": 0.854802,
+                  "dem_probability_after_generic": 0.896936,
+                  "dem_probability_full": 0.906894,
+                  "structural_margin_d_minus_r": 6.661,
+                  "generic_winner_directed_change": -0.042134,
+                  "poll_winner_directed_change": -0.009958,
+                  "total_winner_directed_change": -0.052092
+                },
+                {
+                  "race_code": "NY-17",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.146906,
+                  "dem_probability_structural": 0.853094,
+                  "dem_probability_after_generic": 0.895592,
+                  "dem_probability_full": 0.723505,
+                  "structural_margin_d_minus_r": 6.614,
+                  "generic_winner_directed_change": -0.042498,
+                  "poll_winner_directed_change": 0.172087,
+                  "total_winner_directed_change": 0.129589
+                },
+                {
+                  "race_code": "PA-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.162749,
+                  "dem_probability_structural": 0.162749,
+                  "dem_probability_after_generic": 0.218818,
+                  "dem_probability_full": 0.321366,
+                  "structural_margin_d_minus_r": -6.194,
+                  "generic_winner_directed_change": 0.056069,
+                  "poll_winner_directed_change": 0.102548,
+                  "total_winner_directed_change": 0.158617
+                }
+              ],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "structural_decomposition_20_80": {
+              "state": "scored",
+              "n": 34,
+              "sample": "structural_20_80",
+              "structural_plus_incumbency": {
+                "brier": 0.22711365,
+                "log_loss": 0.64534034,
+                "accuracy": 0.647059
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.21435442,
+                "log_loss": 0.61551786,
+                "accuracy": 0.647059
+              },
+              "published_full_forecast": {
+                "brier": 0.18811621,
+                "log_loss": 0.55209625,
+                "accuracy": 0.705882
+              },
+              "brier_delta_generic_minus_structural": -0.01275923,
+              "brier_delta_full_minus_prior": -0.02623821,
+              "brier_delta_full_minus_structural": -0.03899744,
+              "log_loss_delta_generic_minus_structural": -0.02982248,
+              "log_loss_delta_full_minus_prior": -0.06342161,
+              "log_loss_delta_full_minus_structural": -0.09324409,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 23,
+                "away_from_eventual_winner": 11,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.023713
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 20,
+                "away_from_eventual_winner": 14,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.035384
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 26,
+                "away_from_eventual_winner": 8,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.059098
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            }
           }
         },
         {
@@ -87165,7 +89811,206 @@
               }
             ],
             "confident_miss_threshold": 0.8,
-            "confident_miss_count": 5
+            "confident_miss_count": 5,
+            "structural_decomposition": {
+              "state": "scored",
+              "n": 381,
+              "sample": "two_major_party_contests",
+              "structural_plus_incumbency": {
+                "brier": 0.03870661,
+                "log_loss": 0.12161386,
+                "accuracy": 0.947507
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.03823494,
+                "log_loss": 0.12128796,
+                "accuracy": 0.950131
+              },
+              "published_full_forecast": {
+                "brier": 0.03469974,
+                "log_loss": 0.11152527,
+                "accuracy": 0.952756
+              },
+              "brier_delta_generic_minus_structural": -0.00047167,
+              "brier_delta_full_minus_prior": -0.0035352,
+              "brier_delta_full_minus_structural": -0.00400687,
+              "log_loss_delta_generic_minus_structural": -0.0003259,
+              "log_loss_delta_full_minus_prior": -0.00976269,
+              "log_loss_delta_full_minus_structural": -0.01008859,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 78,
+                "away_from_eventual_winner": 72,
+                "unchanged": 231,
+                "mean_winner_directed_probability_change": 0.000986
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 73,
+                "away_from_eventual_winner": 72,
+                "unchanged": 236,
+                "mean_winner_directed_probability_change": 0.002639
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 75,
+                "away_from_eventual_winner": 76,
+                "unchanged": 230,
+                "mean_winner_directed_probability_change": 0.003625
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [
+                {
+                  "race_code": "NY-04",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.050512,
+                  "dem_probability_structural": 0.949488,
+                  "dem_probability_after_generic": 0.960756,
+                  "dem_probability_full": 0.960754,
+                  "structural_margin_d_minus_r": 10.331,
+                  "generic_winner_directed_change": -0.011268,
+                  "poll_winner_directed_change": 2e-06,
+                  "total_winner_directed_change": -0.011266
+                },
+                {
+                  "race_code": "ME-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.072832,
+                  "dem_probability_structural": 0.072832,
+                  "dem_probability_after_generic": 0.090873,
+                  "dem_probability_full": 0.30141,
+                  "structural_margin_d_minus_r": -9.167,
+                  "generic_winner_directed_change": 0.018041,
+                  "poll_winner_directed_change": 0.210537,
+                  "total_winner_directed_change": 0.228578
+                },
+                {
+                  "race_code": "WA-03",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.078578,
+                  "dem_probability_structural": 0.078578,
+                  "dem_probability_after_generic": 0.097646,
+                  "dem_probability_full": 0.102532,
+                  "structural_margin_d_minus_r": -8.913,
+                  "generic_winner_directed_change": 0.019068,
+                  "poll_winner_directed_change": 0.004886,
+                  "total_winner_directed_change": 0.023954
+                },
+                {
+                  "race_code": "CA-22",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.079214,
+                  "dem_probability_structural": 0.920786,
+                  "dem_probability_after_generic": 0.936992,
+                  "dem_probability_full": 0.936989,
+                  "structural_margin_d_minus_r": 8.885,
+                  "generic_winner_directed_change": -0.016205,
+                  "poll_winner_directed_change": 3e-06,
+                  "total_winner_directed_change": -0.016203
+                },
+                {
+                  "race_code": "CA-13",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.116544,
+                  "dem_probability_structural": 0.883456,
+                  "dem_probability_after_generic": 0.905251,
+                  "dem_probability_full": 0.905256,
+                  "structural_margin_d_minus_r": 7.512,
+                  "generic_winner_directed_change": -0.021794,
+                  "poll_winner_directed_change": -5e-06,
+                  "total_winner_directed_change": -0.0218
+                },
+                {
+                  "race_code": "CA-27",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.145209,
+                  "dem_probability_structural": 0.854791,
+                  "dem_probability_after_generic": 0.880367,
+                  "dem_probability_full": 0.893485,
+                  "structural_margin_d_minus_r": 6.66,
+                  "generic_winner_directed_change": -0.025576,
+                  "poll_winner_directed_change": -0.013118,
+                  "total_winner_directed_change": -0.038694
+                },
+                {
+                  "race_code": "NY-17",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.146917,
+                  "dem_probability_structural": 0.853083,
+                  "dem_probability_after_generic": 0.878872,
+                  "dem_probability_full": 0.710579,
+                  "structural_margin_d_minus_r": 6.613,
+                  "generic_winner_directed_change": -0.025789,
+                  "poll_winner_directed_change": 0.168293,
+                  "total_winner_directed_change": 0.142504
+                },
+                {
+                  "race_code": "PA-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.162776,
+                  "dem_probability_structural": 0.162776,
+                  "dem_probability_after_generic": 0.193933,
+                  "dem_probability_full": 0.463552,
+                  "structural_margin_d_minus_r": -6.194,
+                  "generic_winner_directed_change": 0.031157,
+                  "poll_winner_directed_change": 0.269619,
+                  "total_winner_directed_change": 0.300776
+                }
+              ],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "structural_decomposition_20_80": {
+              "state": "scored",
+              "n": 34,
+              "sample": "structural_20_80",
+              "structural_plus_incumbency": {
+                "brier": 0.22710987,
+                "log_loss": 0.64533284,
+                "accuracy": 0.647059
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.21846375,
+                "log_loss": 0.62506022,
+                "accuracy": 0.676471
+              },
+              "published_full_forecast": {
+                "brier": 0.20138821,
+                "log_loss": 0.58387102,
+                "accuracy": 0.705882
+              },
+              "brier_delta_generic_minus_structural": -0.00864612,
+              "brier_delta_full_minus_prior": -0.01707554,
+              "brier_delta_full_minus_structural": -0.02572166,
+              "log_loss_delta_generic_minus_structural": -0.02027262,
+              "log_loss_delta_full_minus_prior": -0.0411892,
+              "log_loss_delta_full_minus_structural": -0.06146182,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 23,
+                "away_from_eventual_winner": 11,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.013993
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 18,
+                "away_from_eventual_winner": 16,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.023501
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 23,
+                "away_from_eventual_winner": 11,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.037494
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            }
           }
         },
         {
@@ -94694,7 +97539,206 @@
               }
             ],
             "confident_miss_threshold": 0.8,
-            "confident_miss_count": 5
+            "confident_miss_count": 5,
+            "structural_decomposition": {
+              "state": "scored",
+              "n": 381,
+              "sample": "two_major_party_contests",
+              "structural_plus_incumbency": {
+                "brier": 0.03870659,
+                "log_loss": 0.12161367,
+                "accuracy": 0.947507
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.03834442,
+                "log_loss": 0.12121827,
+                "accuracy": 0.950131
+              },
+              "published_full_forecast": {
+                "brier": 0.03609306,
+                "log_loss": 0.11420016,
+                "accuracy": 0.947507
+              },
+              "brier_delta_generic_minus_structural": -0.00036217,
+              "brier_delta_full_minus_prior": -0.00225136,
+              "brier_delta_full_minus_structural": -0.00261353,
+              "log_loss_delta_generic_minus_structural": -0.0003954,
+              "log_loss_delta_full_minus_prior": -0.00701811,
+              "log_loss_delta_full_minus_structural": -0.00741351,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 78,
+                "away_from_eventual_winner": 72,
+                "unchanged": 231,
+                "mean_winner_directed_probability_change": 0.00071
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 67,
+                "away_from_eventual_winner": 82,
+                "unchanged": 232,
+                "mean_winner_directed_probability_change": 0.001374
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 70,
+                "away_from_eventual_winner": 81,
+                "unchanged": 230,
+                "mean_winner_directed_probability_change": 0.002084
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [
+                {
+                  "race_code": "NY-04",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.050514,
+                  "dem_probability_structural": 0.949486,
+                  "dem_probability_after_generic": 0.957255,
+                  "dem_probability_full": 0.957255,
+                  "structural_margin_d_minus_r": 10.331,
+                  "generic_winner_directed_change": -0.007769,
+                  "poll_winner_directed_change": -0.0,
+                  "total_winner_directed_change": -0.007769
+                },
+                {
+                  "race_code": "ME-02",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.07283,
+                  "dem_probability_structural": 0.07283,
+                  "dem_probability_after_generic": 0.084529,
+                  "dem_probability_full": 0.305769,
+                  "structural_margin_d_minus_r": -9.167,
+                  "generic_winner_directed_change": 0.011699,
+                  "poll_winner_directed_change": 0.22124,
+                  "total_winner_directed_change": 0.232939
+                },
+                {
+                  "race_code": "WA-03",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.078576,
+                  "dem_probability_structural": 0.078576,
+                  "dem_probability_after_generic": 0.090951,
+                  "dem_probability_full": 0.096452,
+                  "structural_margin_d_minus_r": -8.913,
+                  "generic_winner_directed_change": 0.012375,
+                  "poll_winner_directed_change": 0.005501,
+                  "total_winner_directed_change": 0.017876
+                },
+                {
+                  "race_code": "CA-22",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.079216,
+                  "dem_probability_structural": 0.920784,
+                  "dem_probability_after_generic": 0.931909,
+                  "dem_probability_full": 0.931908,
+                  "structural_margin_d_minus_r": 8.885,
+                  "generic_winner_directed_change": -0.011125,
+                  "poll_winner_directed_change": 1e-06,
+                  "total_winner_directed_change": -0.011124
+                },
+                {
+                  "race_code": "CA-13",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.116547,
+                  "dem_probability_structural": 0.883453,
+                  "dem_probability_after_generic": 0.898353,
+                  "dem_probability_full": 0.898362,
+                  "structural_margin_d_minus_r": 7.512,
+                  "generic_winner_directed_change": -0.0149,
+                  "poll_winner_directed_change": -9e-06,
+                  "total_winner_directed_change": -0.014909
+                },
+                {
+                  "race_code": "CA-27",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.145212,
+                  "dem_probability_structural": 0.854788,
+                  "dem_probability_after_generic": 0.872228,
+                  "dem_probability_full": 0.88676,
+                  "structural_margin_d_minus_r": 6.66,
+                  "generic_winner_directed_change": -0.01744,
+                  "poll_winner_directed_change": -0.014532,
+                  "total_winner_directed_change": -0.031972
+                },
+                {
+                  "race_code": "NY-17",
+                  "race_type": "house",
+                  "winner": "REP",
+                  "winner_probability_structural": 0.146921,
+                  "dem_probability_structural": 0.853079,
+                  "dem_probability_after_generic": 0.870662,
+                  "dem_probability_full": 0.764823,
+                  "structural_margin_d_minus_r": 6.613,
+                  "generic_winner_directed_change": -0.017583,
+                  "poll_winner_directed_change": 0.105839,
+                  "total_winner_directed_change": 0.088256
+                },
+                {
+                  "race_code": "PA-08",
+                  "race_type": "house",
+                  "winner": "DEM",
+                  "winner_probability_structural": 0.162772,
+                  "dem_probability_structural": 0.162772,
+                  "dem_probability_after_generic": 0.183175,
+                  "dem_probability_full": 0.402358,
+                  "structural_margin_d_minus_r": -6.194,
+                  "generic_winner_directed_change": 0.020402,
+                  "poll_winner_directed_change": 0.219183,
+                  "total_winner_directed_change": 0.239586
+                }
+              ],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "structural_decomposition_20_80": {
+              "state": "scored",
+              "n": 34,
+              "sample": "structural_20_80",
+              "structural_plus_incumbency": {
+                "brier": 0.22711031,
+                "log_loss": 0.64533371,
+                "accuracy": 0.647059
+              },
+              "structural_plus_generic_ballot": {
+                "brier": 0.22095009,
+                "log_loss": 0.63087936,
+                "accuracy": 0.676471
+              },
+              "published_full_forecast": {
+                "brier": 0.21454603,
+                "log_loss": 0.61302243,
+                "accuracy": 0.647059
+              },
+              "brier_delta_generic_minus_structural": -0.00616022,
+              "brier_delta_full_minus_prior": -0.00640406,
+              "brier_delta_full_minus_structural": -0.01256428,
+              "log_loss_delta_generic_minus_structural": -0.01445435,
+              "log_loss_delta_full_minus_prior": -0.01785693,
+              "log_loss_delta_full_minus_structural": -0.03231128,
+              "generic_ballot_effect": {
+                "toward_eventual_winner": 23,
+                "away_from_eventual_winner": 11,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.009418
+              },
+              "race_poll_effect": {
+                "toward_eventual_winner": 18,
+                "away_from_eventual_winner": 16,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.01203
+              },
+              "total_information_effect": {
+                "toward_eventual_winner": 19,
+                "away_from_eventual_winner": 15,
+                "unchanged": 0,
+                "mean_winner_directed_probability_change": 0.021448
+              },
+              "confident_structural_miss_threshold": 0.8,
+              "confident_structural_misses": [],
+              "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            }
           }
         }
       ],
@@ -107394,8 +110438,8 @@
       },
       {
         "id": "structural_priors_redistricting",
-        "state": "not_yet_identified",
-        "evidence": "requires structural-only counterfactual comparison"
+        "state": "structural_component_exposed_redistricting_not_identified",
+        "evidence": "Structural+incumbency, generic-ballot and full-forecast stages are now scored on the same frozen two-major-party races, including a fixed structural 20-80 subset and confident structural misses. This can diagnose structural weakness; it does not by itself identify redistricting as the cause."
       },
       {
         "id": "systematic_polling_error",
