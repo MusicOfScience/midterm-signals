@@ -21,11 +21,12 @@ jobs:
           node-version: "22"
       - name: Python syntax and browser projection
         run: |
-          python -m py_compile scripts/build_forecast.py scripts/enrich_outputs.py scripts/run_enrichment.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py scripts/model_lab.py scripts/build_model_lab.py scripts/augment_model_lab.py scripts/baseline_stability.py
+          python -m py_compile scripts/build_forecast.py scripts/enrich_outputs.py scripts/run_enrichment.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py scripts/model_lab.py scripts/build_model_lab.py scripts/augment_model_lab.py scripts/baseline_stability.py scripts/polling_error.py
           python scripts/make_bootstrap.py
           python scripts/build_model_lab.py
           python scripts/augment_model_lab.py
           python scripts/baseline_stability.py
+          python scripts/polling_error.py
           python scripts/build_browser.py
       - name: JavaScript syntax
         run: |
@@ -36,7 +37,7 @@ jobs:
           node --check public/model-lab/model-lab.js
           node --check public/model-lab/paired-diagnostics.js
       - name: Unit tests
-        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_builder tests.test_model_lab_augmentation tests.test_baseline_stability
+        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_builder tests.test_model_lab_augmentation tests.test_baseline_stability tests.test_polling_error
       - name: Static publication checks
         run: node scripts/check.mjs
       - name: Upload generated Model Lab audit artefact
@@ -69,6 +70,7 @@ jobs:
           python scripts/build_model_lab.py
           python scripts/augment_model_lab.py
           python scripts/baseline_stability.py
+          python scripts/polling_error.py
           python scripts/build_browser.py
       - name: Start static production server
         run: |
