@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import csv
 import io
+import json
+import re
 import tempfile
 import zipfile
 from collections import defaultdict
@@ -108,16 +110,90 @@ def state_presidential_two_party() -> dict[str, dict[int, tuple[float, float]]]:
     return clean
 
 
+_DRA_TREE_CACHE: dict | None = None
+
+
+def dra_version_paths(state: str) -> list[tuple[int, str]]:
+    """Return DRA election block reference files newest-first for a state."""
+    global _DRA_TREE_CACHE
+    if _DRA_TREE_CACHE is None:
+        raw = impl.fetch(
+            "DRA version tree for historical-layer recovery",
+            f"https://api.github.com/repos/{impl.DRA_REPO}/git/trees/{impl.DRA_COMMIT}?recursive=1",
+        )
+        _DRA_TREE_CACHE = json.loads(raw.decode("utf-8"))
+    pat = re.compile(rf"^2020_Geography/{state}/Election_Data_Block_{state}\.v(\d+)\.md$")
+    found = []
+    for item in _DRA_TREE_CACHE.get("tree", []):
+        m = pat.match(item.get("path", ""))
+        if m:
+            found.append((int(m.group(1)), item["path"]))
+    if not found:
+        raise RuntimeError(f"{state}: no versioned DRA election block references")
+    return sorted(found, reverse=True)
+
+
+def archived_dra_year(state: str, short_year: int, mapping: dict[str, str], latest_path: str) -> dict[str, tuple[float, float]]:
+    """Recover one missing historical layer from an older DRA block release.
+
+    The recovery remains on 2020 Census blocks and is joined to the same 118th
+    district equivalency file. It therefore changes source version, not
+    geography. The newest archived version containing the required fields wins.
+    """
+    dk, rk = (f"E_{short_year:02d}_PRES_Dem", f"E_{short_year:02d}_PRES_Rep")
+    for version, path in dra_version_paths(state):
+        if path == latest_path:
+            continue
+        md = impl.fetch(
+            f"DRA archived ref {state} v{version:02d}",
+            f"https://raw.githubusercontent.com/{impl.DRA_REPO}/{impl.DRA_COMMIT}/{path}",
+        ).decode("utf-8")
+        match = re.search(r"https://data\.dra2020\.net/[^)\s]+\.zip", md)
+        if not match:
+            continue
+        data = impl.fetch(f"DRA archived blocks {state} v{version:02d}", match.group(0), timeout=600)
+        with zipfile.ZipFile(io.BytesIO(data)) as z:
+            members = [n for n in z.namelist() if n.lower().endswith(".csv") and not n.startswith("__MACOSX/")]
+            if not members:
+                continue
+            text = io.TextIOWrapper(z.open(members[0]), encoding="utf-8-sig", errors="replace", newline="")
+            reader = csv.DictReader(text)
+            if not {dk, rk}.issubset(set(reader.fieldnames or [])):
+                continue
+            totals: dict[str, list[float]] = defaultdict(lambda: [0.0, 0.0])
+            seen = joined = 0
+            for row in reader:
+                geoid = str(row.get("GEOID") or "").strip()
+                seen += 1
+                cd = mapping.get(geoid)
+                if cd is None:
+                    continue
+                joined += 1
+                totals[cd][0] += impl.fnum(row.get(dk), 0.0) or 0.0
+                totals[cd][1] += impl.fnum(row.get(rk), 0.0) or 0.0
+            if seen and joined / seen < 0.995:
+                raise RuntimeError(
+                    f"{state}: archived DRA v{version:02d} Census GEOID join only {joined}/{seen}"
+                )
+            if not totals:
+                continue
+            return {cd: (vals[0], vals[1]) for cd, vals in totals.items()}
+    raise RuntimeError(
+        f"{state}: no archived DRA 2020-block release contains {2000 + short_year} presidential fields"
+    )
+
+
 def strict_structural_priors() -> dict:
     """Aggregate 2012/2016/2020 presidential returns onto 118th districts.
 
     DRA block data is canonical for redistricted geography. For a 2022
     at-large state only, a missing older DRA presidential field may be replaced
     by the exact statewide MEDSL D/R total because statewide and district
-    geography are identical. Missing 2020 data or missing data in any
-    multi-district state fail closed. Census non-district placeholders are
-    discarded before margin calculation; the final 435-district invariant
-    ensures that no real congressional district can vanish silently.
+    geography are identical. For a multi-district state, an older DRA 2020-block
+    release may supply only a missing historical year. Missing 2020 data always
+    fail closed. Census non-district placeholders are discarded before margin
+    calculation; the final 435-district invariant ensures that no real district
+    can vanish silently.
     """
     refs = impl.latest_dra_refs()
     statewide = state_presidential_two_party()
@@ -137,7 +213,7 @@ def strict_structural_priors() -> dict:
                 for geoid, cd in csv.reader(fh):
                     mapping[geoid] = cd
 
-            _, url = refs[st]
+            latest_path, url = refs[st]
             data = impl.fetch(f"DRA blocks {st}", url, timeout=600)
             with zipfile.ZipFile(io.BytesIO(data)) as z:
                 members = [n for n in z.namelist() if n.lower().endswith(".csv") and not n.startswith("__MACOSX/")]
@@ -149,12 +225,13 @@ def strict_structural_priors() -> dict:
                 available = {yr for yr, pair in required_by_year.items() if set(pair).issubset(fields)}
                 missing = sorted(set(required_by_year) - available)
 
-                allowed_missing = []
-                if st in AT_LARGE_2022:
-                    allowed_missing = [yr for yr in missing if yr in {12, 16}]
-                disallowed = [yr for yr in missing if yr not in allowed_missing]
-                if disallowed:
-                    raise RuntimeError(f"{st}: DRA presidential years unavailable: {missing}")
+                if 20 in missing:
+                    raise RuntimeError(f"{st}: latest DRA release lacks 2020 presidential data")
+                archived_layers = {}
+                for yr in missing:
+                    if st in AT_LARGE_2022 and yr in {12, 16}:
+                        continue
+                    archived_layers[yr] = archived_dra_year(st, yr, mapping, latest_path)
 
                 dsum = defaultdict(lambda: defaultdict(float))
                 seen = joined = 0
@@ -187,6 +264,10 @@ def strict_structural_priors() -> dict:
                     for yr, key in ((12, "earliest"), (16, "middle"), (20, "latest")):
                         if yr in available:
                             d, r = vals[f"{yr}d"], vals[f"{yr}r"]
+                        elif yr in archived_layers:
+                            if cd not in archived_layers[yr]:
+                                raise RuntimeError(f"{rc}: archived DRA layer missing district for {year_full[yr]}")
+                            d, r = archived_layers[yr][cd]
                         else:
                             full_year = year_full[yr]
                             if st not in AT_LARGE_2022 or full_year not in statewide[st]:
