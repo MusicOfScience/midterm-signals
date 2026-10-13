@@ -27,6 +27,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install pinned historical reader
+        run: python -m pip install --disable-pip-version-check pyreadr==0.5.7
       - name: Acquire pinned historical sources
         run: python scripts/acquire_historical_2018.py
       - name: Build Model Lab from admitted corpus
