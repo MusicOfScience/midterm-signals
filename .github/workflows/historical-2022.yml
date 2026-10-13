@@ -6,32 +6,88 @@ on:
     branches: [historical-2022-admission]
     paths:
       - "scripts/acquire_historical_2022.py"
+      - "scripts/run_historical_2022.py"
       - "scripts/probe_2022_poll_archive.py"
       - "scripts/probe_2022_results.py"
       - "scripts/probe_2022_roster.py"
+      - "scripts/model_lab.py"
       - ".github/workflows/historical-2022.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: historical-2022-${{ github.ref_name }}
   cancel-in-progress: false
 
 jobs:
-  source-probe:
+  admit:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Compile acquisition probes
-        run: python -m py_compile scripts/acquire_historical_2022.py scripts/probe_2022_poll_archive.py scripts/probe_2022_results.py scripts/probe_2022_roster.py
+      - name: Compile historical acquisition code
+        run: python -m py_compile scripts/acquire_historical_2022.py scripts/run_historical_2022.py scripts/probe_2022_poll_archive.py scripts/probe_2022_results.py scripts/probe_2022_roster.py scripts/model_lab.py
+      - name: Install pinned historical dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
       - name: Verify 2022 poll evidence chain
         run: python scripts/probe_2022_poll_archive.py
       - name: Probe difficult official-result identities
         run: python scripts/probe_2022_results.py
       - name: Classify dated roster scoreability
         run: python scripts/probe_2022_roster.py
+      - name: Build scoreability ledger and admitted corpus
+        run: python scripts/run_historical_2022.py
+      - name: Build Model Lab from admitted corpus
+        run: python scripts/model_lab.py
+      - name: Run Model Lab and production integrity tests
+        run: |
+          python -m unittest tests.test_model_lab tests.test_model
+          node scripts/check.mjs
+      - name: Inspect 2022 admission and fixed replay sample
+        run: |
+          python - <<'PY'
+          import csv, json
+          cfg=json.load(open('historical/2022/cycle.json'))
+          lab=json.load(open('public/data/model-lab.json'))
+          cycle=next(c for c in lab['cycles'] if c['cycle']==2022)
+          if cycle['state']!='scored':
+              raise SystemExit(f"2022 did not score: {cycle.get('blocking_reasons') or cycle.get('checkpoints')}")
+          cps=cycle['checkpoints']
+          if len(cps)!=5 or any(cp.get('score',{}).get('state')!='scored' for cp in cps):
+              raise SystemExit(f"Not all 2022 checkpoints scored: {cps}")
+          ns=[cp['score']['n'] for cp in cps]
+          expected=int(cfg['scoreability']['admitted_house'])
+          if len(set(ns))!=1 or ns[0]!=expected:
+              raise SystemExit(f"2022 sample drift: checkpoint n={ns}, expected={expected}")
+          ledger=list(csv.DictReader(open('historical/2022/scoreability-ledger.csv', newline='')))
+          if len(ledger)!=470:
+              raise SystemExit(f"scoreability ledger expected 470 races, got {len(ledger)}")
+          admitted=[r for r in ledger if r['admitted']=='true']
+          if any(r['race_type']!='house' for r in admitted):
+              raise SystemExit('Senate race entered admitted 2022 replay')
+          if len(admitted)!=expected:
+              raise SystemExit(f"ledger admitted {len(admitted)} but cycle.json says {expected}")
+          senate=[r for r in ledger if r['race_type']=='senate']
+          if len(senate)!=35 or any(r['admitted']=='true' for r in senate):
+              raise SystemExit(f"Senate exclusion gate failed: {len(senate)} rows")
+          print('2022 Model Lab scored', [(cp['days_to_election'], cp['score']['brier'], cp['score']['log_loss'], cp['score']['n']) for cp in cps])
+          print('Scoreability', cfg['scoreability'])
+          PY
+      - name: Commit immutable normalized corpus if changed
+        shell: bash
+        run: |
+          git config user.name "midterm-signals-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add historical/2022/cycle.json historical/2022/races.csv historical/2022/polls.csv historical/2022/results.csv historical/2022/scoreability-ledger.csv public/data/model-lab.json
+          if git diff --cached --quiet; then
+            echo "No historical corpus change"
+            exit 0
+          fi
+          git commit -m "data: admit scoreability-gated 2022 historical corpus"
+          git push
