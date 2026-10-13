@@ -2,11 +2,6 @@ name: Admit certified result margins
 
 on:
   workflow_dispatch:
-  push:
-    branches: [model-lab-polling-error]
-    paths:
-      - "scripts/admit_result_margins.py"
-      - ".github/workflows/result-margin-admission.yml"
 
 permissions:
   contents: write
