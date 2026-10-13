@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1.1",
-  "generated_at": "2026-10-13T13:01:33.937834Z",
+  "generated_at": "2026-10-13T13:18:59.448938Z",
   "product": "MIDTERM SIGNALS MODEL LAB",
   "evaluation_only": true,
   "retuning_allowed": false,
@@ -105,6 +105,20 @@
     "roster_transition_policy": {
       "rule": "preserve frozen probability; label candidate-pair changes separately in movement diagnostics",
       "model_effect": "NONE"
+    },
+    "baseline_stability": {
+      "scope": "House races with both Democratic and Republican candidates in the admitted fixed sample",
+      "inputs": "three already-admitted presidential district margins minus the cycle's frozen national presidential margins",
+      "fixed_range_bands_pp": [
+        "0-5",
+        ">5-10",
+        ">10-15",
+        ">15"
+      ],
+      "high_instability_threshold_pp": 10.0,
+      "band_assignment_uses_outcomes": false,
+      "model_effect": "NONE",
+      "causal_boundary": "Baseline instability may indicate non-stationarity or realignment. It is not a redistricting indicator and must not be interpreted as one without separately admitted boundary-change evidence."
     }
   },
   "metric_definitions": {
@@ -120,7 +134,8 @@
     "scoreability_exclusion": "Evaluation-only exclusion decided from predictive roster evidence before outcomes are opened. It changes the scored historical sample, never a forecast probability.",
     "paired_polling_component_test": "For races with eligible race-level polls, compares the published checkpoint probability with that same race's frozen structural + generic-ballot prior before the race-poll blend. Negative Brier/log-loss delta means the race-poll component improved the paired forecasts. Outcomes are used only after both probabilities exist.",
     "structural_decomposition": "On the same two-major-party race sample, scores the admitted structural presidential relative-lean plus incumbency stage, then the structural + generic-ballot prior, then the published full forecast. The structural stage is reconstructed as prior_margin minus the checkpoint generic-ballot margin. Negative deltas mean the later stage improved the same sample.",
-    "roster_transition": "A change in the admitted candidate pair between fixed checkpoints. These information-state changes remain in the frozen historical forecast but are labelled separately in movement forensics."
+    "roster_transition": "A change in the admitted candidate pair between fixed checkpoints. These information-state changes remain in the frozen historical forecast but are labelled separately in movement forensics.",
+    "baseline_stability_range": "Range, in percentage points, of the three pre-election presidential relative leans after subtracting each election's frozen national Democratic-minus-Republican margin. Smaller means the structural history was more internally stable."
   },
   "leakage_guards": [
     "Corpus state must be explicitly admitted before replay or scoring can run.",
@@ -134,7 +149,8 @@
     "Replay output cannot mutate the live forecast or model contract.",
     "Competitive, polling and chamber diagnostics reuse the frozen checkpoint predictions; they do not create alternative forecasts.",
     "Paired polling-component diagnostics are computed only after the published checkpoint probabilities are frozen; certified outcomes are used solely to score the frozen full and prior probabilities.",
-    "Structural-stage diagnostics reconstruct structural+incumbency probability only from already-frozen checkpoint prior_margin and generic-ballot margin; no post-election district or result field enters the predictive stage."
+    "Structural-stage diagnostics reconstruct structural+incumbency probability only from already-frozen checkpoint prior_margin and generic-ballot margin; no post-election district or result field enters the predictive stage.",
+    "Baseline-stability bands are assigned from admitted presidential structural inputs before certified outcomes are consulted; outcomes are used only to score already-frozen structural and published probabilities within those bands."
   ],
   "cycles": [
     {
@@ -9086,6 +9102,333 @@
               "confident_structural_miss_threshold": 0.8,
               "confident_structural_misses": [],
               "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "baseline_stability": {
+              "state": "scored",
+              "n": 392,
+              "scope": "house_two_major_party_contests",
+              "band_assignment_uses_outcomes": false,
+              "fixed_high_instability_threshold_pp": 10.0,
+              "high_instability_n": 176,
+              "high_instability_share": 0.44898,
+              "bands": [
+                {
+                  "band": "stable_0_5",
+                  "lower_exclusive_pp": null,
+                  "upper_inclusive_pp": 5.0,
+                  "state": "scored",
+                  "n": 69,
+                  "mean_range_pp": 4.052157,
+                  "mean_absolute_trend_pp": 2.005969,
+                  "structural_plus_incumbency": {
+                    "brier": 0.05239735,
+                    "log_loss": 0.14738953,
+                    "accuracy": 0.913043
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.02543312,
+                    "log_loss": 0.09711745,
+                    "accuracy": 0.971014
+                  },
+                  "brier_delta_full_minus_structural": -0.02696423,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "moderate_5_10",
+                  "lower_exclusive_pp": 5.0,
+                  "upper_inclusive_pp": 10.0,
+                  "state": "scored",
+                  "n": 147,
+                  "mean_range_pp": 7.235829,
+                  "mean_absolute_trend_pp": 5.271562,
+                  "structural_plus_incumbency": {
+                    "brier": 0.08267317,
+                    "log_loss": 0.29814758,
+                    "accuracy": 0.897959
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.05126176,
+                    "log_loss": 0.1639799,
+                    "accuracy": 0.92517
+                  },
+                  "brier_delta_full_minus_structural": -0.03141141,
+                  "structural_confident_misses": 9,
+                  "full_confident_misses": 4
+                },
+                {
+                  "band": "high_10_15",
+                  "lower_exclusive_pp": 10.0,
+                  "upper_inclusive_pp": 15.0,
+                  "state": "scored",
+                  "n": 78,
+                  "mean_range_pp": 12.625086,
+                  "mean_absolute_trend_pp": 10.738492,
+                  "structural_plus_incumbency": {
+                    "brier": 0.05133089,
+                    "log_loss": 0.17943884,
+                    "accuracy": 0.935897
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.02109912,
+                    "log_loss": 0.07491795,
+                    "accuracy": 0.974359
+                  },
+                  "brier_delta_full_minus_structural": -0.03023177,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "very_high_gt_15",
+                  "lower_exclusive_pp": 15.0,
+                  "upper_inclusive_pp": null,
+                  "state": "scored",
+                  "n": 98,
+                  "mean_range_pp": 19.73605,
+                  "mean_absolute_trend_pp": 17.313314,
+                  "structural_plus_incumbency": {
+                    "brier": 0.08690432,
+                    "log_loss": 0.32132327,
+                    "accuracy": 0.877551
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.04261621,
+                    "log_loss": 0.18205361,
+                    "accuracy": 0.94898
+                  },
+                  "brier_delta_full_minus_structural": -0.04428811,
+                  "structural_confident_misses": 7,
+                  "full_confident_misses": 2
+                }
+              ],
+              "top_unstable": [
+                {
+                  "race_code": "OH-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 32.094489,
+                  "trend_earliest_to_latest_pp": -28.32905,
+                  "relative_leans_d_minus_r": [
+                    -18.13595,
+                    -14.370511,
+                    -46.465
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "WV-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.431355,
+                  "trend_earliest_to_latest_pp": -20.291288,
+                  "relative_leans_d_minus_r": [
+                    -33.155706,
+                    -25.015638,
+                    -53.446994
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "MO-08",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.174011,
+                  "trend_earliest_to_latest_pp": -20.806753,
+                  "relative_leans_d_minus_r": [
+                    -37.714783,
+                    -30.347524,
+                    -58.521535
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 27.556074,
+                  "trend_earliest_to_latest_pp": 27.556074,
+                  "relative_leans_d_minus_r": [
+                    -28.181639,
+                    -23.77992,
+                    -0.625565
+                  ],
+                  "winner_probability_structural": 0.112799,
+                  "winner_probability_full": 0.459035,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "IL-15",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.984341,
+                  "trend_earliest_to_latest_pp": -19.540529,
+                  "relative_leans_d_minus_r": [
+                    -31.078883,
+                    -23.63507,
+                    -50.619412
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.461705,
+                  "trend_earliest_to_latest_pp": 26.461705,
+                  "relative_leans_d_minus_r": [
+                    -62.452414,
+                    -49.129017,
+                    -35.990709
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "VA-08",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.119086,
+                  "trend_earliest_to_latest_pp": 26.119086,
+                  "relative_leans_d_minus_r": [
+                    27.511252,
+                    32.419548,
+                    53.630339
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "GA-06",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.892506,
+                  "trend_earliest_to_latest_pp": 25.892506,
+                  "relative_leans_d_minus_r": [
+                    -29.559793,
+                    -24.375362,
+                    -3.667287
+                  ],
+                  "winner_probability_structural": 0.054392,
+                  "winner_probability_full": 0.307415,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "UT-04",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.830958,
+                  "trend_earliest_to_latest_pp": 25.830958,
+                  "relative_leans_d_minus_r": [
+                    -37.291587,
+                    -28.189325,
+                    -11.460629
+                  ],
+                  "winner_probability_structural": 0.003324,
+                  "winner_probability_full": 0.05079,
+                  "poll_count": 2
+                },
+                {
+                  "race_code": "MI-10",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.915825,
+                  "trend_earliest_to_latest_pp": -21.839035,
+                  "relative_leans_d_minus_r": [
+                    -14.003586,
+                    -10.926796,
+                    -35.842621
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "MN-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.686982,
+                  "trend_earliest_to_latest_pp": -21.332989,
+                  "relative_leans_d_minus_r": [
+                    -13.946667,
+                    -10.592673,
+                    -35.279655
+                  ],
+                  "winner_probability_structural": 0.001,
+                  "winner_probability_full": 0.001,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-29",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.461993,
+                  "trend_earliest_to_latest_pp": 24.461993,
+                  "relative_leans_d_minus_r": [
+                    20.80552,
+                    26.666316,
+                    45.267513
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "IN-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.4526,
+                  "trend_earliest_to_latest_pp": -18.009848,
+                  "relative_leans_d_minus_r": [
+                    -26.456598,
+                    -20.013846,
+                    -44.466446
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "ND-01",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.231852,
+                  "trend_earliest_to_latest_pp": -18.843195,
+                  "relative_leans_d_minus_r": [
+                    -22.898221,
+                    -17.509564,
+                    -41.741416
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "PA-15",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.182248,
+                  "trend_earliest_to_latest_pp": -17.806442,
+                  "relative_leans_d_minus_r": [
+                    -29.247213,
+                    -22.871407,
+                    -47.053655
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                }
+              ],
+              "interpretation": "The stability band is assigned from pre-election variation in the three admitted presidential relative leans on the cycle's own district geography. Outcomes only score frozen probabilities after assignment. High instability can reflect realignment or baseline non-stationarity; it does not by itself identify redistricting as the cause."
             }
           }
         },
@@ -17925,6 +18268,333 @@
               "confident_structural_miss_threshold": 0.8,
               "confident_structural_misses": [],
               "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "baseline_stability": {
+              "state": "scored",
+              "n": 392,
+              "scope": "house_two_major_party_contests",
+              "band_assignment_uses_outcomes": false,
+              "fixed_high_instability_threshold_pp": 10.0,
+              "high_instability_n": 176,
+              "high_instability_share": 0.44898,
+              "bands": [
+                {
+                  "band": "stable_0_5",
+                  "lower_exclusive_pp": null,
+                  "upper_inclusive_pp": 5.0,
+                  "state": "scored",
+                  "n": 69,
+                  "mean_range_pp": 4.052157,
+                  "mean_absolute_trend_pp": 2.005969,
+                  "structural_plus_incumbency": {
+                    "brier": 0.05239686,
+                    "log_loss": 0.14738841,
+                    "accuracy": 0.913043
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.02198262,
+                    "log_loss": 0.08565465,
+                    "accuracy": 0.971014
+                  },
+                  "brier_delta_full_minus_structural": -0.03041424,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 0
+                },
+                {
+                  "band": "moderate_5_10",
+                  "lower_exclusive_pp": 5.0,
+                  "upper_inclusive_pp": 10.0,
+                  "state": "scored",
+                  "n": 147,
+                  "mean_range_pp": 7.235829,
+                  "mean_absolute_trend_pp": 5.271562,
+                  "structural_plus_incumbency": {
+                    "brier": 0.08267317,
+                    "log_loss": 0.29814758,
+                    "accuracy": 0.897959
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.04440142,
+                    "log_loss": 0.1541941,
+                    "accuracy": 0.945578
+                  },
+                  "brier_delta_full_minus_structural": -0.03827175,
+                  "structural_confident_misses": 9,
+                  "full_confident_misses": 2
+                },
+                {
+                  "band": "high_10_15",
+                  "lower_exclusive_pp": 10.0,
+                  "upper_inclusive_pp": 15.0,
+                  "state": "scored",
+                  "n": 78,
+                  "mean_range_pp": 12.625086,
+                  "mean_absolute_trend_pp": 10.738492,
+                  "structural_plus_incumbency": {
+                    "brier": 0.05132895,
+                    "log_loss": 0.17943387,
+                    "accuracy": 0.935897
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.01682641,
+                    "log_loss": 0.06460922,
+                    "accuracy": 0.987179
+                  },
+                  "brier_delta_full_minus_structural": -0.03450254,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "very_high_gt_15",
+                  "lower_exclusive_pp": 15.0,
+                  "upper_inclusive_pp": null,
+                  "state": "scored",
+                  "n": 98,
+                  "mean_range_pp": 19.73605,
+                  "mean_absolute_trend_pp": 17.313314,
+                  "structural_plus_incumbency": {
+                    "brier": 0.08690357,
+                    "log_loss": 0.32132171,
+                    "accuracy": 0.877551
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.041003,
+                    "log_loss": 0.14811678,
+                    "accuracy": 0.959184
+                  },
+                  "brier_delta_full_minus_structural": -0.04590057,
+                  "structural_confident_misses": 7,
+                  "full_confident_misses": 2
+                }
+              ],
+              "top_unstable": [
+                {
+                  "race_code": "OH-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 32.094489,
+                  "trend_earliest_to_latest_pp": -28.32905,
+                  "relative_leans_d_minus_r": [
+                    -18.13595,
+                    -14.370511,
+                    -46.465
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "WV-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.431355,
+                  "trend_earliest_to_latest_pp": -20.291288,
+                  "relative_leans_d_minus_r": [
+                    -33.155706,
+                    -25.015638,
+                    -53.446994
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 4
+                },
+                {
+                  "race_code": "MO-08",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.174011,
+                  "trend_earliest_to_latest_pp": -20.806753,
+                  "relative_leans_d_minus_r": [
+                    -37.714783,
+                    -30.347524,
+                    -58.521535
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 27.556074,
+                  "trend_earliest_to_latest_pp": 27.556074,
+                  "relative_leans_d_minus_r": [
+                    -28.181639,
+                    -23.77992,
+                    -0.625565
+                  ],
+                  "winner_probability_structural": 0.112799,
+                  "winner_probability_full": 0.517358,
+                  "poll_count": 3
+                },
+                {
+                  "race_code": "IL-15",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.984341,
+                  "trend_earliest_to_latest_pp": -19.540529,
+                  "relative_leans_d_minus_r": [
+                    -31.078883,
+                    -23.63507,
+                    -50.619412
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.461705,
+                  "trend_earliest_to_latest_pp": 26.461705,
+                  "relative_leans_d_minus_r": [
+                    -62.452414,
+                    -49.129017,
+                    -35.990709
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 2
+                },
+                {
+                  "race_code": "VA-08",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.119086,
+                  "trend_earliest_to_latest_pp": 26.119086,
+                  "relative_leans_d_minus_r": [
+                    27.511252,
+                    32.419548,
+                    53.630339
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "GA-06",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.892506,
+                  "trend_earliest_to_latest_pp": 25.892506,
+                  "relative_leans_d_minus_r": [
+                    -29.559793,
+                    -24.375362,
+                    -3.667287
+                  ],
+                  "winner_probability_structural": 0.054392,
+                  "winner_probability_full": 0.322364,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "UT-04",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.830958,
+                  "trend_earliest_to_latest_pp": 25.830958,
+                  "relative_leans_d_minus_r": [
+                    -37.291587,
+                    -28.189325,
+                    -11.460629
+                  ],
+                  "winner_probability_structural": 0.003324,
+                  "winner_probability_full": 0.060904,
+                  "poll_count": 4
+                },
+                {
+                  "race_code": "MI-10",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.915825,
+                  "trend_earliest_to_latest_pp": -21.839035,
+                  "relative_leans_d_minus_r": [
+                    -14.003586,
+                    -10.926796,
+                    -35.842621
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "MN-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.686982,
+                  "trend_earliest_to_latest_pp": -21.332989,
+                  "relative_leans_d_minus_r": [
+                    -13.946667,
+                    -10.592673,
+                    -35.279655
+                  ],
+                  "winner_probability_structural": 0.001,
+                  "winner_probability_full": 0.016893,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "TX-29",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.461993,
+                  "trend_earliest_to_latest_pp": 24.461993,
+                  "relative_leans_d_minus_r": [
+                    20.80552,
+                    26.666316,
+                    45.267513
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "IN-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.4526,
+                  "trend_earliest_to_latest_pp": -18.009848,
+                  "relative_leans_d_minus_r": [
+                    -26.456598,
+                    -20.013846,
+                    -44.466446
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "ND-01",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.231852,
+                  "trend_earliest_to_latest_pp": -18.843195,
+                  "relative_leans_d_minus_r": [
+                    -22.898221,
+                    -17.509564,
+                    -41.741416
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 6
+                },
+                {
+                  "race_code": "PA-15",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.182248,
+                  "trend_earliest_to_latest_pp": -17.806442,
+                  "relative_leans_d_minus_r": [
+                    -29.247213,
+                    -22.871407,
+                    -47.053655
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                }
+              ],
+              "interpretation": "The stability band is assigned from pre-election variation in the three admitted presidential relative leans on the cycle's own district geography. Outcomes only score frozen probabilities after assignment. High instability can reflect realignment or baseline non-stationarity; it does not by itself identify redistricting as the cause."
             }
           }
         },
@@ -26704,6 +27374,333 @@
               "confident_structural_miss_threshold": 0.8,
               "confident_structural_misses": [],
               "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "baseline_stability": {
+              "state": "scored",
+              "n": 392,
+              "scope": "house_two_major_party_contests",
+              "band_assignment_uses_outcomes": false,
+              "fixed_high_instability_threshold_pp": 10.0,
+              "high_instability_n": 176,
+              "high_instability_share": 0.44898,
+              "bands": [
+                {
+                  "band": "stable_0_5",
+                  "lower_exclusive_pp": null,
+                  "upper_inclusive_pp": 5.0,
+                  "state": "scored",
+                  "n": 69,
+                  "mean_range_pp": 4.052157,
+                  "mean_absolute_trend_pp": 2.005969,
+                  "structural_plus_incumbency": {
+                    "brier": 0.05239673,
+                    "log_loss": 0.14738737,
+                    "accuracy": 0.913043
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.0287178,
+                    "log_loss": 0.10654324,
+                    "accuracy": 0.971014
+                  },
+                  "brier_delta_full_minus_structural": -0.02367893,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "moderate_5_10",
+                  "lower_exclusive_pp": 5.0,
+                  "upper_inclusive_pp": 10.0,
+                  "state": "scored",
+                  "n": 147,
+                  "mean_range_pp": 7.235829,
+                  "mean_absolute_trend_pp": 5.271562,
+                  "structural_plus_incumbency": {
+                    "brier": 0.08267399,
+                    "log_loss": 0.29815259,
+                    "accuracy": 0.897959
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.04282256,
+                    "log_loss": 0.16107936,
+                    "accuracy": 0.945578
+                  },
+                  "brier_delta_full_minus_structural": -0.03985143,
+                  "structural_confident_misses": 9,
+                  "full_confident_misses": 3
+                },
+                {
+                  "band": "high_10_15",
+                  "lower_exclusive_pp": 10.0,
+                  "upper_inclusive_pp": 15.0,
+                  "state": "scored",
+                  "n": 78,
+                  "mean_range_pp": 12.625086,
+                  "mean_absolute_trend_pp": 10.738492,
+                  "structural_plus_incumbency": {
+                    "brier": 0.05132769,
+                    "log_loss": 0.17943213,
+                    "accuracy": 0.935897
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.01787216,
+                    "log_loss": 0.06852855,
+                    "accuracy": 0.987179
+                  },
+                  "brier_delta_full_minus_structural": -0.03345553,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "very_high_gt_15",
+                  "lower_exclusive_pp": 15.0,
+                  "upper_inclusive_pp": null,
+                  "state": "scored",
+                  "n": 98,
+                  "mean_range_pp": 19.73605,
+                  "mean_absolute_trend_pp": 17.313314,
+                  "structural_plus_incumbency": {
+                    "brier": 0.08690195,
+                    "log_loss": 0.32131662,
+                    "accuracy": 0.877551
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.03376208,
+                    "log_loss": 0.12126939,
+                    "accuracy": 0.969388
+                  },
+                  "brier_delta_full_minus_structural": -0.05313987,
+                  "structural_confident_misses": 7,
+                  "full_confident_misses": 2
+                }
+              ],
+              "top_unstable": [
+                {
+                  "race_code": "OH-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 32.094489,
+                  "trend_earliest_to_latest_pp": -28.32905,
+                  "relative_leans_d_minus_r": [
+                    -18.13595,
+                    -14.370511,
+                    -46.465
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "WV-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.431355,
+                  "trend_earliest_to_latest_pp": -20.291288,
+                  "relative_leans_d_minus_r": [
+                    -33.155706,
+                    -25.015638,
+                    -53.446994
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.996569,
+                  "poll_count": 9
+                },
+                {
+                  "race_code": "MO-08",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.174011,
+                  "trend_earliest_to_latest_pp": -20.806753,
+                  "relative_leans_d_minus_r": [
+                    -37.714783,
+                    -30.347524,
+                    -58.521535
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 27.556074,
+                  "trend_earliest_to_latest_pp": 27.556074,
+                  "relative_leans_d_minus_r": [
+                    -28.181639,
+                    -23.77992,
+                    -0.625565
+                  ],
+                  "winner_probability_structural": 0.112787,
+                  "winner_probability_full": 0.57603,
+                  "poll_count": 3
+                },
+                {
+                  "race_code": "IL-15",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.984341,
+                  "trend_earliest_to_latest_pp": -19.540529,
+                  "relative_leans_d_minus_r": [
+                    -31.078883,
+                    -23.63507,
+                    -50.619412
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.461705,
+                  "trend_earliest_to_latest_pp": 26.461705,
+                  "relative_leans_d_minus_r": [
+                    -62.452414,
+                    -49.129017,
+                    -35.990709
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 2
+                },
+                {
+                  "race_code": "VA-08",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.119086,
+                  "trend_earliest_to_latest_pp": 26.119086,
+                  "relative_leans_d_minus_r": [
+                    27.511252,
+                    32.419548,
+                    53.630339
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "GA-06",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.892506,
+                  "trend_earliest_to_latest_pp": 25.892506,
+                  "relative_leans_d_minus_r": [
+                    -29.559793,
+                    -24.375362,
+                    -3.667287
+                  ],
+                  "winner_probability_structural": 0.054385,
+                  "winner_probability_full": 0.351949,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "UT-04",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.830958,
+                  "trend_earliest_to_latest_pp": 25.830958,
+                  "relative_leans_d_minus_r": [
+                    -37.291587,
+                    -28.189325,
+                    -11.460629
+                  ],
+                  "winner_probability_structural": 0.003325,
+                  "winner_probability_full": 0.178731,
+                  "poll_count": 4
+                },
+                {
+                  "race_code": "MI-10",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.915825,
+                  "trend_earliest_to_latest_pp": -21.839035,
+                  "relative_leans_d_minus_r": [
+                    -14.003586,
+                    -10.926796,
+                    -35.842621
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "MN-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.686982,
+                  "trend_earliest_to_latest_pp": -21.332989,
+                  "relative_leans_d_minus_r": [
+                    -13.946667,
+                    -10.592673,
+                    -35.279655
+                  ],
+                  "winner_probability_structural": 0.001,
+                  "winner_probability_full": 0.022465,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "TX-29",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.461993,
+                  "trend_earliest_to_latest_pp": 24.461993,
+                  "relative_leans_d_minus_r": [
+                    20.80552,
+                    26.666316,
+                    45.267513
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "IN-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.4526,
+                  "trend_earliest_to_latest_pp": -18.009848,
+                  "relative_leans_d_minus_r": [
+                    -26.456598,
+                    -20.013846,
+                    -44.466446
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "ND-01",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.231852,
+                  "trend_earliest_to_latest_pp": -18.843195,
+                  "relative_leans_d_minus_r": [
+                    -22.898221,
+                    -17.509564,
+                    -41.741416
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 6
+                },
+                {
+                  "race_code": "PA-15",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.182248,
+                  "trend_earliest_to_latest_pp": -17.806442,
+                  "relative_leans_d_minus_r": [
+                    -29.247213,
+                    -22.871407,
+                    -47.053655
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                }
+              ],
+              "interpretation": "The stability band is assigned from pre-election variation in the three admitted presidential relative leans on the cycle's own district geography. Outcomes only score frozen probabilities after assignment. High instability can reflect realignment or baseline non-stationarity; it does not by itself identify redistricting as the cause."
             }
           }
         },
@@ -35509,6 +36506,333 @@
               "confident_structural_miss_threshold": 0.8,
               "confident_structural_misses": [],
               "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "baseline_stability": {
+              "state": "scored",
+              "n": 392,
+              "scope": "house_two_major_party_contests",
+              "band_assignment_uses_outcomes": false,
+              "fixed_high_instability_threshold_pp": 10.0,
+              "high_instability_n": 176,
+              "high_instability_share": 0.44898,
+              "bands": [
+                {
+                  "band": "stable_0_5",
+                  "lower_exclusive_pp": null,
+                  "upper_inclusive_pp": 5.0,
+                  "state": "scored",
+                  "n": 69,
+                  "mean_range_pp": 4.052157,
+                  "mean_absolute_trend_pp": 2.005969,
+                  "structural_plus_incumbency": {
+                    "brier": 0.05239736,
+                    "log_loss": 0.14738917,
+                    "accuracy": 0.913043
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.02265814,
+                    "log_loss": 0.09034823,
+                    "accuracy": 0.971014
+                  },
+                  "brier_delta_full_minus_structural": -0.02973922,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 0
+                },
+                {
+                  "band": "moderate_5_10",
+                  "lower_exclusive_pp": 5.0,
+                  "upper_inclusive_pp": 10.0,
+                  "state": "scored",
+                  "n": 147,
+                  "mean_range_pp": 7.235829,
+                  "mean_absolute_trend_pp": 5.271562,
+                  "structural_plus_incumbency": {
+                    "brier": 0.08267493,
+                    "log_loss": 0.29815638,
+                    "accuracy": 0.897959
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.03847627,
+                    "log_loss": 0.14243628,
+                    "accuracy": 0.952381
+                  },
+                  "brier_delta_full_minus_structural": -0.04419866,
+                  "structural_confident_misses": 9,
+                  "full_confident_misses": 2
+                },
+                {
+                  "band": "high_10_15",
+                  "lower_exclusive_pp": 10.0,
+                  "upper_inclusive_pp": 15.0,
+                  "state": "scored",
+                  "n": 78,
+                  "mean_range_pp": 12.625086,
+                  "mean_absolute_trend_pp": 10.738492,
+                  "structural_plus_incumbency": {
+                    "brier": 0.05132831,
+                    "log_loss": 0.17943443,
+                    "accuracy": 0.935897
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.01592396,
+                    "log_loss": 0.06082364,
+                    "accuracy": 0.987179
+                  },
+                  "brier_delta_full_minus_structural": -0.03540435,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "very_high_gt_15",
+                  "lower_exclusive_pp": 15.0,
+                  "upper_inclusive_pp": null,
+                  "state": "scored",
+                  "n": 98,
+                  "mean_range_pp": 19.73605,
+                  "mean_absolute_trend_pp": 17.313314,
+                  "structural_plus_incumbency": {
+                    "brier": 0.08690277,
+                    "log_loss": 0.32131976,
+                    "accuracy": 0.877551
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.03299538,
+                    "log_loss": 0.11978774,
+                    "accuracy": 0.94898
+                  },
+                  "brier_delta_full_minus_structural": -0.05390739,
+                  "structural_confident_misses": 7,
+                  "full_confident_misses": 1
+                }
+              ],
+              "top_unstable": [
+                {
+                  "race_code": "OH-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 32.094489,
+                  "trend_earliest_to_latest_pp": -28.32905,
+                  "relative_leans_d_minus_r": [
+                    -18.13595,
+                    -14.370511,
+                    -46.465
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "WV-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.431355,
+                  "trend_earliest_to_latest_pp": -20.291288,
+                  "relative_leans_d_minus_r": [
+                    -33.155706,
+                    -25.015638,
+                    -53.446994
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.998561,
+                  "poll_count": 9
+                },
+                {
+                  "race_code": "MO-08",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.174011,
+                  "trend_earliest_to_latest_pp": -20.806753,
+                  "relative_leans_d_minus_r": [
+                    -37.714783,
+                    -30.347524,
+                    -58.521535
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 27.556074,
+                  "trend_earliest_to_latest_pp": 27.556074,
+                  "relative_leans_d_minus_r": [
+                    -28.181639,
+                    -23.77992,
+                    -0.625565
+                  ],
+                  "winner_probability_structural": 0.112784,
+                  "winner_probability_full": 0.458693,
+                  "poll_count": 5
+                },
+                {
+                  "race_code": "IL-15",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.984341,
+                  "trend_earliest_to_latest_pp": -19.540529,
+                  "relative_leans_d_minus_r": [
+                    -31.078883,
+                    -23.63507,
+                    -50.619412
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.461705,
+                  "trend_earliest_to_latest_pp": 26.461705,
+                  "relative_leans_d_minus_r": [
+                    -62.452414,
+                    -49.129017,
+                    -35.990709
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "VA-08",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.119086,
+                  "trend_earliest_to_latest_pp": 26.119086,
+                  "relative_leans_d_minus_r": [
+                    27.511252,
+                    32.419548,
+                    53.630339
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "GA-06",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.892506,
+                  "trend_earliest_to_latest_pp": 25.892506,
+                  "relative_leans_d_minus_r": [
+                    -29.559793,
+                    -24.375362,
+                    -3.667287
+                  ],
+                  "winner_probability_structural": 0.054383,
+                  "winner_probability_full": 0.328205,
+                  "poll_count": 2
+                },
+                {
+                  "race_code": "UT-04",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.830958,
+                  "trend_earliest_to_latest_pp": 25.830958,
+                  "relative_leans_d_minus_r": [
+                    -37.291587,
+                    -28.189325,
+                    -11.460629
+                  ],
+                  "winner_probability_structural": 0.003325,
+                  "winner_probability_full": 0.340054,
+                  "poll_count": 7
+                },
+                {
+                  "race_code": "MI-10",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.915825,
+                  "trend_earliest_to_latest_pp": -21.839035,
+                  "relative_leans_d_minus_r": [
+                    -14.003586,
+                    -10.926796,
+                    -35.842621
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "MN-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.686982,
+                  "trend_earliest_to_latest_pp": -21.332989,
+                  "relative_leans_d_minus_r": [
+                    -13.946667,
+                    -10.592673,
+                    -35.279655
+                  ],
+                  "winner_probability_structural": 0.001,
+                  "winner_probability_full": 0.016942,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "TX-29",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.461993,
+                  "trend_earliest_to_latest_pp": 24.461993,
+                  "relative_leans_d_minus_r": [
+                    20.80552,
+                    26.666316,
+                    45.267513
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "IN-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.4526,
+                  "trend_earliest_to_latest_pp": -18.009848,
+                  "relative_leans_d_minus_r": [
+                    -26.456598,
+                    -20.013846,
+                    -44.466446
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "ND-01",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.231852,
+                  "trend_earliest_to_latest_pp": -18.843195,
+                  "relative_leans_d_minus_r": [
+                    -22.898221,
+                    -17.509564,
+                    -41.741416
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 6
+                },
+                {
+                  "race_code": "PA-15",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.182248,
+                  "trend_earliest_to_latest_pp": -17.806442,
+                  "relative_leans_d_minus_r": [
+                    -29.247213,
+                    -22.871407,
+                    -47.053655
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                }
+              ],
+              "interpretation": "The stability band is assigned from pre-election variation in the three admitted presidential relative leans on the cycle's own district geography. Outcomes only score frozen probabilities after assignment. High instability can reflect realignment or baseline non-stationarity; it does not by itself identify redistricting as the cause."
             }
           }
         },
@@ -44276,6 +45600,333 @@
               "confident_structural_miss_threshold": 0.8,
               "confident_structural_misses": [],
               "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "baseline_stability": {
+              "state": "scored",
+              "n": 392,
+              "scope": "house_two_major_party_contests",
+              "band_assignment_uses_outcomes": false,
+              "fixed_high_instability_threshold_pp": 10.0,
+              "high_instability_n": 176,
+              "high_instability_share": 0.44898,
+              "bands": [
+                {
+                  "band": "stable_0_5",
+                  "lower_exclusive_pp": null,
+                  "upper_inclusive_pp": 5.0,
+                  "state": "scored",
+                  "n": 69,
+                  "mean_range_pp": 4.052157,
+                  "mean_absolute_trend_pp": 2.005969,
+                  "structural_plus_incumbency": {
+                    "brier": 0.05239673,
+                    "log_loss": 0.14738739,
+                    "accuracy": 0.913043
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.02158603,
+                    "log_loss": 0.08630837,
+                    "accuracy": 0.971014
+                  },
+                  "brier_delta_full_minus_structural": -0.0308107,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 0
+                },
+                {
+                  "band": "moderate_5_10",
+                  "lower_exclusive_pp": 5.0,
+                  "upper_inclusive_pp": 10.0,
+                  "state": "scored",
+                  "n": 147,
+                  "mean_range_pp": 7.235829,
+                  "mean_absolute_trend_pp": 5.271562,
+                  "structural_plus_incumbency": {
+                    "brier": 0.08267415,
+                    "log_loss": 0.29815294,
+                    "accuracy": 0.897959
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.03520751,
+                    "log_loss": 0.13434804,
+                    "accuracy": 0.965986
+                  },
+                  "brier_delta_full_minus_structural": -0.04746664,
+                  "structural_confident_misses": 9,
+                  "full_confident_misses": 2
+                },
+                {
+                  "band": "high_10_15",
+                  "lower_exclusive_pp": 10.0,
+                  "upper_inclusive_pp": 15.0,
+                  "state": "scored",
+                  "n": 78,
+                  "mean_range_pp": 12.625086,
+                  "mean_absolute_trend_pp": 10.738492,
+                  "structural_plus_incumbency": {
+                    "brier": 0.05132908,
+                    "log_loss": 0.17943514,
+                    "accuracy": 0.935897
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.01598143,
+                    "log_loss": 0.06018207,
+                    "accuracy": 0.987179
+                  },
+                  "brier_delta_full_minus_structural": -0.03534765,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "very_high_gt_15",
+                  "lower_exclusive_pp": 15.0,
+                  "upper_inclusive_pp": null,
+                  "state": "scored",
+                  "n": 98,
+                  "mean_range_pp": 19.73605,
+                  "mean_absolute_trend_pp": 17.313314,
+                  "structural_plus_incumbency": {
+                    "brier": 0.08690195,
+                    "log_loss": 0.32131662,
+                    "accuracy": 0.877551
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.0285784,
+                    "log_loss": 0.13812494,
+                    "accuracy": 0.969388
+                  },
+                  "brier_delta_full_minus_structural": -0.05832355,
+                  "structural_confident_misses": 7,
+                  "full_confident_misses": 1
+                }
+              ],
+              "top_unstable": [
+                {
+                  "race_code": "OH-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 32.094489,
+                  "trend_earliest_to_latest_pp": -28.32905,
+                  "relative_leans_d_minus_r": [
+                    -18.13595,
+                    -14.370511,
+                    -46.465
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "WV-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.431355,
+                  "trend_earliest_to_latest_pp": -20.291288,
+                  "relative_leans_d_minus_r": [
+                    -33.155706,
+                    -25.015638,
+                    -53.446994
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 8
+                },
+                {
+                  "race_code": "MO-08",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.174011,
+                  "trend_earliest_to_latest_pp": -20.806753,
+                  "relative_leans_d_minus_r": [
+                    -37.714783,
+                    -30.347524,
+                    -58.521535
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 27.556074,
+                  "trend_earliest_to_latest_pp": 27.556074,
+                  "relative_leans_d_minus_r": [
+                    -28.181639,
+                    -23.77992,
+                    -0.625565
+                  ],
+                  "winner_probability_structural": 0.112787,
+                  "winner_probability_full": 0.455159,
+                  "poll_count": 5
+                },
+                {
+                  "race_code": "IL-15",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.984341,
+                  "trend_earliest_to_latest_pp": -19.540529,
+                  "relative_leans_d_minus_r": [
+                    -31.078883,
+                    -23.63507,
+                    -50.619412
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.461705,
+                  "trend_earliest_to_latest_pp": 26.461705,
+                  "relative_leans_d_minus_r": [
+                    -62.452414,
+                    -49.129017,
+                    -35.990709
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "VA-08",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.119086,
+                  "trend_earliest_to_latest_pp": 26.119086,
+                  "relative_leans_d_minus_r": [
+                    27.511252,
+                    32.419548,
+                    53.630339
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "GA-06",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.892506,
+                  "trend_earliest_to_latest_pp": 25.892506,
+                  "relative_leans_d_minus_r": [
+                    -29.559793,
+                    -24.375362,
+                    -3.667287
+                  ],
+                  "winner_probability_structural": 0.054385,
+                  "winner_probability_full": 0.639277,
+                  "poll_count": 5
+                },
+                {
+                  "race_code": "UT-04",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.830958,
+                  "trend_earliest_to_latest_pp": 25.830958,
+                  "relative_leans_d_minus_r": [
+                    -37.291587,
+                    -28.189325,
+                    -11.460629
+                  ],
+                  "winner_probability_structural": 0.003325,
+                  "winner_probability_full": 0.250413,
+                  "poll_count": 5
+                },
+                {
+                  "race_code": "MI-10",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.915825,
+                  "trend_earliest_to_latest_pp": -21.839035,
+                  "relative_leans_d_minus_r": [
+                    -14.003586,
+                    -10.926796,
+                    -35.842621
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "MN-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.686982,
+                  "trend_earliest_to_latest_pp": -21.332989,
+                  "relative_leans_d_minus_r": [
+                    -13.946667,
+                    -10.592673,
+                    -35.279655
+                  ],
+                  "winner_probability_structural": 0.001,
+                  "winner_probability_full": 0.001,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-29",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.461993,
+                  "trend_earliest_to_latest_pp": 24.461993,
+                  "relative_leans_d_minus_r": [
+                    20.80552,
+                    26.666316,
+                    45.267513
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "IN-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.4526,
+                  "trend_earliest_to_latest_pp": -18.009848,
+                  "relative_leans_d_minus_r": [
+                    -26.456598,
+                    -20.013846,
+                    -44.466446
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "ND-01",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.231852,
+                  "trend_earliest_to_latest_pp": -18.843195,
+                  "relative_leans_d_minus_r": [
+                    -22.898221,
+                    -17.509564,
+                    -41.741416
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 8
+                },
+                {
+                  "race_code": "PA-15",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.182248,
+                  "trend_earliest_to_latest_pp": -17.806442,
+                  "relative_leans_d_minus_r": [
+                    -29.247213,
+                    -22.871407,
+                    -47.053655
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                }
+              ],
+              "interpretation": "The stability band is assigned from pre-election variation in the three admitted presidential relative leans on the cycle's own district geography. Outcomes only score frozen probabilities after assignment. High instability can reflect realignment or baseline non-stationarity; it does not by itself identify redistricting as the cause."
             }
           }
         }
@@ -66870,6 +68521,333 @@
               "confident_structural_miss_threshold": 0.8,
               "confident_structural_misses": [],
               "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "baseline_stability": {
+              "state": "scored",
+              "n": 381,
+              "scope": "house_two_major_party_contests",
+              "band_assignment_uses_outcomes": false,
+              "fixed_high_instability_threshold_pp": 10.0,
+              "high_instability_n": 165,
+              "high_instability_share": 0.433071,
+              "bands": [
+                {
+                  "band": "stable_0_5",
+                  "lower_exclusive_pp": null,
+                  "upper_inclusive_pp": 5.0,
+                  "state": "scored",
+                  "n": 84,
+                  "mean_range_pp": 3.349033,
+                  "mean_absolute_trend_pp": 2.319521,
+                  "structural_plus_incumbency": {
+                    "brier": 0.06389158,
+                    "log_loss": 0.1963076,
+                    "accuracy": 0.916667
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.05870232,
+                    "log_loss": 0.19302451,
+                    "accuracy": 0.916667
+                  },
+                  "brier_delta_full_minus_structural": -0.00518926,
+                  "structural_confident_misses": 4,
+                  "full_confident_misses": 4
+                },
+                {
+                  "band": "moderate_5_10",
+                  "lower_exclusive_pp": 5.0,
+                  "upper_inclusive_pp": 10.0,
+                  "state": "scored",
+                  "n": 132,
+                  "mean_range_pp": 7.516028,
+                  "mean_absolute_trend_pp": 5.655667,
+                  "structural_plus_incumbency": {
+                    "brier": 0.03335134,
+                    "log_loss": 0.10663844,
+                    "accuracy": 0.954545
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.031147,
+                    "log_loss": 0.10503382,
+                    "accuracy": 0.962121
+                  },
+                  "brier_delta_full_minus_structural": -0.00220434,
+                  "structural_confident_misses": 1,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "high_10_15",
+                  "lower_exclusive_pp": 10.0,
+                  "upper_inclusive_pp": 15.0,
+                  "state": "scored",
+                  "n": 80,
+                  "mean_range_pp": 12.538382,
+                  "mean_absolute_trend_pp": 10.380187,
+                  "structural_plus_incumbency": {
+                    "brier": 0.01546517,
+                    "log_loss": 0.05425467,
+                    "accuracy": 0.9875
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.01935863,
+                    "log_loss": 0.06697284,
+                    "accuracy": 0.975
+                  },
+                  "brier_delta_full_minus_structural": 0.00389346,
+                  "structural_confident_misses": 1,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "very_high_gt_15",
+                  "lower_exclusive_pp": 15.0,
+                  "upper_inclusive_pp": null,
+                  "state": "scored",
+                  "n": 85,
+                  "mean_range_pp": 19.745056,
+                  "mean_absolute_trend_pp": 18.355019,
+                  "structural_plus_incumbency": {
+                    "brier": 0.04400857,
+                    "log_loss": 0.13445085,
+                    "accuracy": 0.929412
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.03790251,
+                    "log_loss": 0.11500472,
+                    "accuracy": 0.952941
+                  },
+                  "brier_delta_full_minus_structural": -0.00610606,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 1
+                }
+              ],
+              "top_unstable": [
+                {
+                  "race_code": "UT-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 33.24701,
+                  "trend_earliest_to_latest_pp": 33.24701,
+                  "relative_leans_d_minus_r": [
+                    -58.071183,
+                    -29.83856,
+                    -24.824173
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "OH-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 33.073135,
+                  "trend_earliest_to_latest_pp": -33.073135,
+                  "relative_leans_d_minus_r": [
+                    -0.507183,
+                    -27.743147,
+                    -33.580318
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "GA-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.389589,
+                  "trend_earliest_to_latest_pp": 28.389589,
+                  "relative_leans_d_minus_r": [
+                    -6.707608,
+                    12.451593,
+                    21.681981
+                  ],
+                  "winner_probability_structural": 0.998972,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-01",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.106942,
+                  "trend_earliest_to_latest_pp": 26.257195,
+                  "relative_leans_d_minus_r": [
+                    -51.169754,
+                    -23.062812,
+                    -24.912559
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "GA-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.005114,
+                  "trend_earliest_to_latest_pp": 28.005114,
+                  "relative_leans_d_minus_r": [
+                    -47.461115,
+                    -29.995553,
+                    -19.456001
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-24",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 27.027181,
+                  "trend_earliest_to_latest_pp": 27.027181,
+                  "relative_leans_d_minus_r": [
+                    -44.034427,
+                    -27.325556,
+                    -17.007246
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.998775,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-04",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.808736,
+                  "trend_earliest_to_latest_pp": 26.808736,
+                  "relative_leans_d_minus_r": [
+                    -58.383207,
+                    -32.394255,
+                    -31.574471
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.629803,
+                  "trend_earliest_to_latest_pp": 21.97466,
+                  "relative_leans_d_minus_r": [
+                    3.712167,
+                    29.34197,
+                    25.686827
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "OH-02",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.305832,
+                  "trend_earliest_to_latest_pp": -25.305832,
+                  "relative_leans_d_minus_r": [
+                    -25.129624,
+                    -47.3065,
+                    -50.435456
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "FL-28",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.020802,
+                  "trend_earliest_to_latest_pp": -17.588404,
+                  "relative_leans_d_minus_r": [
+                    6.610525,
+                    14.042923,
+                    -10.977879
+                  ],
+                  "winner_probability_structural": 0.833331,
+                  "winner_probability_full": 0.724559,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "FL-26",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.306477,
+                  "trend_earliest_to_latest_pp": -17.336472,
+                  "relative_leans_d_minus_r": [
+                    -5.103766,
+                    1.866239,
+                    -22.440238
+                  ],
+                  "winner_probability_structural": 0.997534,
+                  "winner_probability_full": 0.992667,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-38",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.196385,
+                  "trend_earliest_to_latest_pp": 24.196385,
+                  "relative_leans_d_minus_r": [
+                    -47.037172,
+                    -30.162354,
+                    -22.840787
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-37",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.86451,
+                  "trend_earliest_to_latest_pp": 23.86451,
+                  "relative_leans_d_minus_r": [
+                    25.491834,
+                    46.655226,
+                    49.356344
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-02",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.800775,
+                  "trend_earliest_to_latest_pp": 23.800775,
+                  "relative_leans_d_minus_r": [
+                    -46.061177,
+                    -22.941722,
+                    -22.260402
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.713213,
+                  "trend_earliest_to_latest_pp": 23.713213,
+                  "relative_leans_d_minus_r": [
+                    -42.816465,
+                    -29.787456,
+                    -19.103252
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                }
+              ],
+              "interpretation": "The stability band is assigned from pre-election variation in the three admitted presidential relative leans on the cycle's own district geography. Outcomes only score frozen probabilities after assignment. High instability can reflect realignment or baseline non-stationarity; it does not by itself identify redistricting as the cause."
             }
           }
         },
@@ -74586,6 +76564,333 @@
               "confident_structural_miss_threshold": 0.8,
               "confident_structural_misses": [],
               "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "baseline_stability": {
+              "state": "scored",
+              "n": 381,
+              "scope": "house_two_major_party_contests",
+              "band_assignment_uses_outcomes": false,
+              "fixed_high_instability_threshold_pp": 10.0,
+              "high_instability_n": 165,
+              "high_instability_share": 0.433071,
+              "bands": [
+                {
+                  "band": "stable_0_5",
+                  "lower_exclusive_pp": null,
+                  "upper_inclusive_pp": 5.0,
+                  "state": "scored",
+                  "n": 84,
+                  "mean_range_pp": 3.349033,
+                  "mean_absolute_trend_pp": 2.319521,
+                  "structural_plus_incumbency": {
+                    "brier": 0.0638913,
+                    "log_loss": 0.19630622,
+                    "accuracy": 0.916667
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.0546507,
+                    "log_loss": 0.18655205,
+                    "accuracy": 0.928571
+                  },
+                  "brier_delta_full_minus_structural": -0.0092406,
+                  "structural_confident_misses": 4,
+                  "full_confident_misses": 5
+                },
+                {
+                  "band": "moderate_5_10",
+                  "lower_exclusive_pp": 5.0,
+                  "upper_inclusive_pp": 10.0,
+                  "state": "scored",
+                  "n": 132,
+                  "mean_range_pp": 7.516028,
+                  "mean_absolute_trend_pp": 5.655667,
+                  "structural_plus_incumbency": {
+                    "brier": 0.03335171,
+                    "log_loss": 0.10663917,
+                    "accuracy": 0.954545
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.02938483,
+                    "log_loss": 0.10106584,
+                    "accuracy": 0.962121
+                  },
+                  "brier_delta_full_minus_structural": -0.00396688,
+                  "structural_confident_misses": 1,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "high_10_15",
+                  "lower_exclusive_pp": 10.0,
+                  "upper_inclusive_pp": 15.0,
+                  "state": "scored",
+                  "n": 80,
+                  "mean_range_pp": 12.538382,
+                  "mean_absolute_trend_pp": 10.380187,
+                  "structural_plus_incumbency": {
+                    "brier": 0.01546571,
+                    "log_loss": 0.05425696,
+                    "accuracy": 0.9875
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.01923358,
+                    "log_loss": 0.06496753,
+                    "accuracy": 0.975
+                  },
+                  "brier_delta_full_minus_structural": 0.00376787,
+                  "structural_confident_misses": 1,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "very_high_gt_15",
+                  "lower_exclusive_pp": 15.0,
+                  "upper_inclusive_pp": null,
+                  "state": "scored",
+                  "n": 85,
+                  "mean_range_pp": 19.745056,
+                  "mean_absolute_trend_pp": 18.355019,
+                  "structural_plus_incumbency": {
+                    "brier": 0.04400781,
+                    "log_loss": 0.13444781,
+                    "accuracy": 0.929412
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.03690971,
+                    "log_loss": 0.11002083,
+                    "accuracy": 0.941176
+                  },
+                  "brier_delta_full_minus_structural": -0.0070981,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 0
+                }
+              ],
+              "top_unstable": [
+                {
+                  "race_code": "UT-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 33.24701,
+                  "trend_earliest_to_latest_pp": 33.24701,
+                  "relative_leans_d_minus_r": [
+                    -58.071183,
+                    -29.83856,
+                    -24.824173
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "OH-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 33.073135,
+                  "trend_earliest_to_latest_pp": -33.073135,
+                  "relative_leans_d_minus_r": [
+                    -0.507183,
+                    -27.743147,
+                    -33.580318
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "GA-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.389589,
+                  "trend_earliest_to_latest_pp": 28.389589,
+                  "relative_leans_d_minus_r": [
+                    -6.707608,
+                    12.451593,
+                    21.681981
+                  ],
+                  "winner_probability_structural": 0.998972,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-01",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.106942,
+                  "trend_earliest_to_latest_pp": 26.257195,
+                  "relative_leans_d_minus_r": [
+                    -51.169754,
+                    -23.062812,
+                    -24.912559
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "GA-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.005114,
+                  "trend_earliest_to_latest_pp": 28.005114,
+                  "relative_leans_d_minus_r": [
+                    -47.461115,
+                    -29.995553,
+                    -19.456001
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-24",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 27.027181,
+                  "trend_earliest_to_latest_pp": 27.027181,
+                  "relative_leans_d_minus_r": [
+                    -44.034427,
+                    -27.325556,
+                    -17.007246
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.998748,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-04",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.808736,
+                  "trend_earliest_to_latest_pp": 26.808736,
+                  "relative_leans_d_minus_r": [
+                    -58.383207,
+                    -32.394255,
+                    -31.574471
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "TX-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.629803,
+                  "trend_earliest_to_latest_pp": 21.97466,
+                  "relative_leans_d_minus_r": [
+                    3.712167,
+                    29.34197,
+                    25.686827
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "OH-02",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.305832,
+                  "trend_earliest_to_latest_pp": -25.305832,
+                  "relative_leans_d_minus_r": [
+                    -25.129624,
+                    -47.3065,
+                    -50.435456
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "FL-28",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.020802,
+                  "trend_earliest_to_latest_pp": -17.588404,
+                  "relative_leans_d_minus_r": [
+                    6.610525,
+                    14.042923,
+                    -10.977879
+                  ],
+                  "winner_probability_structural": 0.833299,
+                  "winner_probability_full": 0.817403,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "FL-26",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.306477,
+                  "trend_earliest_to_latest_pp": -17.336472,
+                  "relative_leans_d_minus_r": [
+                    -5.103766,
+                    1.866239,
+                    -22.440238
+                  ],
+                  "winner_probability_structural": 0.997534,
+                  "winner_probability_full": 0.99253,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-38",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.196385,
+                  "trend_earliest_to_latest_pp": 24.196385,
+                  "relative_leans_d_minus_r": [
+                    -47.037172,
+                    -30.162354,
+                    -22.840787
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-37",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.86451,
+                  "trend_earliest_to_latest_pp": 23.86451,
+                  "relative_leans_d_minus_r": [
+                    25.491834,
+                    46.655226,
+                    49.356344
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-02",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.800775,
+                  "trend_earliest_to_latest_pp": 23.800775,
+                  "relative_leans_d_minus_r": [
+                    -46.061177,
+                    -22.941722,
+                    -22.260402
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "TX-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.713213,
+                  "trend_earliest_to_latest_pp": 23.713213,
+                  "relative_leans_d_minus_r": [
+                    -42.816465,
+                    -29.787456,
+                    -19.103252
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                }
+              ],
+              "interpretation": "The stability band is assigned from pre-election variation in the three admitted presidential relative leans on the cycle's own district geography. Outcomes only score frozen probabilities after assignment. High instability can reflect realignment or baseline non-stationarity; it does not by itself identify redistricting as the cause."
             }
           }
         },
@@ -82302,6 +84607,333 @@
               "confident_structural_miss_threshold": 0.8,
               "confident_structural_misses": [],
               "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "baseline_stability": {
+              "state": "scored",
+              "n": 381,
+              "scope": "house_two_major_party_contests",
+              "band_assignment_uses_outcomes": false,
+              "fixed_high_instability_threshold_pp": 10.0,
+              "high_instability_n": 165,
+              "high_instability_share": 0.433071,
+              "bands": [
+                {
+                  "band": "stable_0_5",
+                  "lower_exclusive_pp": null,
+                  "upper_inclusive_pp": 5.0,
+                  "state": "scored",
+                  "n": 84,
+                  "mean_range_pp": 3.349033,
+                  "mean_absolute_trend_pp": 2.319521,
+                  "structural_plus_incumbency": {
+                    "brier": 0.06389092,
+                    "log_loss": 0.19630796,
+                    "accuracy": 0.916667
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.05351783,
+                    "log_loss": 0.17574944,
+                    "accuracy": 0.928571
+                  },
+                  "brier_delta_full_minus_structural": -0.01037309,
+                  "structural_confident_misses": 4,
+                  "full_confident_misses": 3
+                },
+                {
+                  "band": "moderate_5_10",
+                  "lower_exclusive_pp": 5.0,
+                  "upper_inclusive_pp": 10.0,
+                  "state": "scored",
+                  "n": 132,
+                  "mean_range_pp": 7.516028,
+                  "mean_absolute_trend_pp": 5.655667,
+                  "structural_plus_incumbency": {
+                    "brier": 0.03335358,
+                    "log_loss": 0.10664243,
+                    "accuracy": 0.954545
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.03000535,
+                    "log_loss": 0.10060567,
+                    "accuracy": 0.962121
+                  },
+                  "brier_delta_full_minus_structural": -0.00334823,
+                  "structural_confident_misses": 1,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "high_10_15",
+                  "lower_exclusive_pp": 10.0,
+                  "upper_inclusive_pp": 15.0,
+                  "state": "scored",
+                  "n": 80,
+                  "mean_range_pp": 12.538382,
+                  "mean_absolute_trend_pp": 10.380187,
+                  "structural_plus_incumbency": {
+                    "brier": 0.01546626,
+                    "log_loss": 0.05425817,
+                    "accuracy": 0.9875
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.01767789,
+                    "log_loss": 0.06248914,
+                    "accuracy": 0.975
+                  },
+                  "brier_delta_full_minus_structural": 0.00221163,
+                  "structural_confident_misses": 1,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "very_high_gt_15",
+                  "lower_exclusive_pp": 15.0,
+                  "upper_inclusive_pp": null,
+                  "state": "scored",
+                  "n": 85,
+                  "mean_range_pp": 19.745056,
+                  "mean_absolute_trend_pp": 18.355019,
+                  "structural_plus_incumbency": {
+                    "brier": 0.04400732,
+                    "log_loss": 0.13444786,
+                    "accuracy": 0.929412
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.03555519,
+                    "log_loss": 0.10710897,
+                    "accuracy": 0.941176
+                  },
+                  "brier_delta_full_minus_structural": -0.00845213,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 0
+                }
+              ],
+              "top_unstable": [
+                {
+                  "race_code": "UT-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 33.24701,
+                  "trend_earliest_to_latest_pp": 33.24701,
+                  "relative_leans_d_minus_r": [
+                    -58.071183,
+                    -29.83856,
+                    -24.824173
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "OH-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 33.073135,
+                  "trend_earliest_to_latest_pp": -33.073135,
+                  "relative_leans_d_minus_r": [
+                    -0.507183,
+                    -27.743147,
+                    -33.580318
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "GA-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.389589,
+                  "trend_earliest_to_latest_pp": 28.389589,
+                  "relative_leans_d_minus_r": [
+                    -6.707608,
+                    12.451593,
+                    21.681981
+                  ],
+                  "winner_probability_structural": 0.998972,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-01",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.106942,
+                  "trend_earliest_to_latest_pp": 26.257195,
+                  "relative_leans_d_minus_r": [
+                    -51.169754,
+                    -23.062812,
+                    -24.912559
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "GA-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.005114,
+                  "trend_earliest_to_latest_pp": 28.005114,
+                  "relative_leans_d_minus_r": [
+                    -47.461115,
+                    -29.995553,
+                    -19.456001
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-24",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 27.027181,
+                  "trend_earliest_to_latest_pp": 27.027181,
+                  "relative_leans_d_minus_r": [
+                    -44.034427,
+                    -27.325556,
+                    -17.007246
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-04",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.808736,
+                  "trend_earliest_to_latest_pp": 26.808736,
+                  "relative_leans_d_minus_r": [
+                    -58.383207,
+                    -32.394255,
+                    -31.574471
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "TX-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.629803,
+                  "trend_earliest_to_latest_pp": 21.97466,
+                  "relative_leans_d_minus_r": [
+                    3.712167,
+                    29.34197,
+                    25.686827
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "OH-02",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.305832,
+                  "trend_earliest_to_latest_pp": -25.305832,
+                  "relative_leans_d_minus_r": [
+                    -25.129624,
+                    -47.3065,
+                    -50.435456
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "FL-28",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.020802,
+                  "trend_earliest_to_latest_pp": -17.588404,
+                  "relative_leans_d_minus_r": [
+                    6.610525,
+                    14.042923,
+                    -10.977879
+                  ],
+                  "winner_probability_structural": 0.833315,
+                  "winner_probability_full": 0.849618,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "FL-26",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.306477,
+                  "trend_earliest_to_latest_pp": -17.336472,
+                  "relative_leans_d_minus_r": [
+                    -5.103766,
+                    1.866239,
+                    -22.440238
+                  ],
+                  "winner_probability_structural": 0.997534,
+                  "winner_probability_full": 0.995399,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-38",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.196385,
+                  "trend_earliest_to_latest_pp": 24.196385,
+                  "relative_leans_d_minus_r": [
+                    -47.037172,
+                    -30.162354,
+                    -22.840787
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-37",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.86451,
+                  "trend_earliest_to_latest_pp": 23.86451,
+                  "relative_leans_d_minus_r": [
+                    25.491834,
+                    46.655226,
+                    49.356344
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-02",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.800775,
+                  "trend_earliest_to_latest_pp": 23.800775,
+                  "relative_leans_d_minus_r": [
+                    -46.061177,
+                    -22.941722,
+                    -22.260402
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "TX-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.713213,
+                  "trend_earliest_to_latest_pp": 23.713213,
+                  "relative_leans_d_minus_r": [
+                    -42.816465,
+                    -29.787456,
+                    -19.103252
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                }
+              ],
+              "interpretation": "The stability band is assigned from pre-election variation in the three admitted presidential relative leans on the cycle's own district geography. Outcomes only score frozen probabilities after assignment. High instability can reflect realignment or baseline non-stationarity; it does not by itself identify redistricting as the cause."
             }
           }
         },
@@ -90010,6 +92642,333 @@
               "confident_structural_miss_threshold": 0.8,
               "confident_structural_misses": [],
               "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "baseline_stability": {
+              "state": "scored",
+              "n": 381,
+              "scope": "house_two_major_party_contests",
+              "band_assignment_uses_outcomes": false,
+              "fixed_high_instability_threshold_pp": 10.0,
+              "high_instability_n": 165,
+              "high_instability_share": 0.433071,
+              "bands": [
+                {
+                  "band": "stable_0_5",
+                  "lower_exclusive_pp": null,
+                  "upper_inclusive_pp": 5.0,
+                  "state": "scored",
+                  "n": 84,
+                  "mean_range_pp": 3.349033,
+                  "mean_absolute_trend_pp": 2.319521,
+                  "structural_plus_incumbency": {
+                    "brier": 0.06389159,
+                    "log_loss": 0.19630837,
+                    "accuracy": 0.916667
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.0571849,
+                    "log_loss": 0.18070875,
+                    "accuracy": 0.928571
+                  },
+                  "brier_delta_full_minus_structural": -0.00670669,
+                  "structural_confident_misses": 4,
+                  "full_confident_misses": 3
+                },
+                {
+                  "band": "moderate_5_10",
+                  "lower_exclusive_pp": 5.0,
+                  "upper_inclusive_pp": 10.0,
+                  "state": "scored",
+                  "n": 132,
+                  "mean_range_pp": 7.516028,
+                  "mean_absolute_trend_pp": 5.655667,
+                  "structural_plus_incumbency": {
+                    "brier": 0.03335198,
+                    "log_loss": 0.10663986,
+                    "accuracy": 0.954545
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.03305312,
+                    "log_loss": 0.10664855,
+                    "accuracy": 0.94697
+                  },
+                  "brier_delta_full_minus_structural": -0.00029886,
+                  "structural_confident_misses": 1,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "high_10_15",
+                  "lower_exclusive_pp": 10.0,
+                  "upper_inclusive_pp": 15.0,
+                  "state": "scored",
+                  "n": 80,
+                  "mean_range_pp": 12.538382,
+                  "mean_absolute_trend_pp": 10.380187,
+                  "structural_plus_incumbency": {
+                    "brier": 0.0154654,
+                    "log_loss": 0.05425573,
+                    "accuracy": 0.9875
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.01712179,
+                    "log_loss": 0.06059095,
+                    "accuracy": 0.9875
+                  },
+                  "brier_delta_full_minus_structural": 0.00165639,
+                  "structural_confident_misses": 1,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "very_high_gt_15",
+                  "lower_exclusive_pp": 15.0,
+                  "upper_inclusive_pp": null,
+                  "state": "scored",
+                  "n": 85,
+                  "mean_range_pp": 19.745056,
+                  "mean_absolute_trend_pp": 18.355019,
+                  "structural_plus_incumbency": {
+                    "brier": 0.04400742,
+                    "log_loss": 0.13444773,
+                    "accuracy": 0.929412
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.03158015,
+                    "log_loss": 0.09866714,
+                    "accuracy": 0.952941
+                  },
+                  "brier_delta_full_minus_structural": -0.01242727,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 0
+                }
+              ],
+              "top_unstable": [
+                {
+                  "race_code": "UT-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 33.24701,
+                  "trend_earliest_to_latest_pp": 33.24701,
+                  "relative_leans_d_minus_r": [
+                    -58.071183,
+                    -29.83856,
+                    -24.824173
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "OH-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 33.073135,
+                  "trend_earliest_to_latest_pp": -33.073135,
+                  "relative_leans_d_minus_r": [
+                    -0.507183,
+                    -27.743147,
+                    -33.580318
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "GA-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.389589,
+                  "trend_earliest_to_latest_pp": 28.389589,
+                  "relative_leans_d_minus_r": [
+                    -6.707608,
+                    12.451593,
+                    21.681981
+                  ],
+                  "winner_probability_structural": 0.998972,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-01",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.106942,
+                  "trend_earliest_to_latest_pp": 26.257195,
+                  "relative_leans_d_minus_r": [
+                    -51.169754,
+                    -23.062812,
+                    -24.912559
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "GA-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.005114,
+                  "trend_earliest_to_latest_pp": 28.005114,
+                  "relative_leans_d_minus_r": [
+                    -47.461115,
+                    -29.995553,
+                    -19.456001
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-24",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 27.027181,
+                  "trend_earliest_to_latest_pp": 27.027181,
+                  "relative_leans_d_minus_r": [
+                    -44.034427,
+                    -27.325556,
+                    -17.007246
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-04",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.808736,
+                  "trend_earliest_to_latest_pp": 26.808736,
+                  "relative_leans_d_minus_r": [
+                    -58.383207,
+                    -32.394255,
+                    -31.574471
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "TX-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.629803,
+                  "trend_earliest_to_latest_pp": 21.97466,
+                  "relative_leans_d_minus_r": [
+                    3.712167,
+                    29.34197,
+                    25.686827
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "OH-02",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.305832,
+                  "trend_earliest_to_latest_pp": -25.305832,
+                  "relative_leans_d_minus_r": [
+                    -25.129624,
+                    -47.3065,
+                    -50.435456
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "FL-28",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.020802,
+                  "trend_earliest_to_latest_pp": -17.588404,
+                  "relative_leans_d_minus_r": [
+                    6.610525,
+                    14.042923,
+                    -10.977879
+                  ],
+                  "winner_probability_structural": 0.833327,
+                  "winner_probability_full": 0.86556,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "FL-26",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.306477,
+                  "trend_earliest_to_latest_pp": -17.336472,
+                  "relative_leans_d_minus_r": [
+                    -5.103766,
+                    1.866239,
+                    -22.440238
+                  ],
+                  "winner_probability_structural": 0.997533,
+                  "winner_probability_full": 0.996447,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-38",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.196385,
+                  "trend_earliest_to_latest_pp": 24.196385,
+                  "relative_leans_d_minus_r": [
+                    -47.037172,
+                    -30.162354,
+                    -22.840787
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-37",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.86451,
+                  "trend_earliest_to_latest_pp": 23.86451,
+                  "relative_leans_d_minus_r": [
+                    25.491834,
+                    46.655226,
+                    49.356344
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-02",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.800775,
+                  "trend_earliest_to_latest_pp": 23.800775,
+                  "relative_leans_d_minus_r": [
+                    -46.061177,
+                    -22.941722,
+                    -22.260402
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "TX-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.713213,
+                  "trend_earliest_to_latest_pp": 23.713213,
+                  "relative_leans_d_minus_r": [
+                    -42.816465,
+                    -29.787456,
+                    -19.103252
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                }
+              ],
+              "interpretation": "The stability band is assigned from pre-election variation in the three admitted presidential relative leans on the cycle's own district geography. Outcomes only score frozen probabilities after assignment. High instability can reflect realignment or baseline non-stationarity; it does not by itself identify redistricting as the cause."
             }
           }
         },
@@ -97738,6 +100697,333 @@
               "confident_structural_miss_threshold": 0.8,
               "confident_structural_misses": [],
               "interpretation": "Negative score deltas mean the later stage improved the same frozen race sample. Structural means the admitted presidential relative-lean baseline plus the frozen incumbency term; generic ballot and race-poll stages are added sequentially. This exposes model-component performance but does not identify redistricting as a cause."
+            },
+            "baseline_stability": {
+              "state": "scored",
+              "n": 381,
+              "scope": "house_two_major_party_contests",
+              "band_assignment_uses_outcomes": false,
+              "fixed_high_instability_threshold_pp": 10.0,
+              "high_instability_n": 165,
+              "high_instability_share": 0.433071,
+              "bands": [
+                {
+                  "band": "stable_0_5",
+                  "lower_exclusive_pp": null,
+                  "upper_inclusive_pp": 5.0,
+                  "state": "scored",
+                  "n": 84,
+                  "mean_range_pp": 3.349033,
+                  "mean_absolute_trend_pp": 2.319521,
+                  "structural_plus_incumbency": {
+                    "brier": 0.06389158,
+                    "log_loss": 0.1963076,
+                    "accuracy": 0.916667
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.06138523,
+                    "log_loss": 0.18966185,
+                    "accuracy": 0.904762
+                  },
+                  "brier_delta_full_minus_structural": -0.00250635,
+                  "structural_confident_misses": 4,
+                  "full_confident_misses": 3
+                },
+                {
+                  "band": "moderate_5_10",
+                  "lower_exclusive_pp": 5.0,
+                  "upper_inclusive_pp": 10.0,
+                  "state": "scored",
+                  "n": 132,
+                  "mean_range_pp": 7.516028,
+                  "mean_absolute_trend_pp": 5.655667,
+                  "structural_plus_incumbency": {
+                    "brier": 0.03335134,
+                    "log_loss": 0.10663844,
+                    "accuracy": 0.954545
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.03417513,
+                    "log_loss": 0.10859464,
+                    "accuracy": 0.954545
+                  },
+                  "brier_delta_full_minus_structural": 0.00082379,
+                  "structural_confident_misses": 1,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "high_10_15",
+                  "lower_exclusive_pp": 10.0,
+                  "upper_inclusive_pp": 15.0,
+                  "state": "scored",
+                  "n": 80,
+                  "mean_range_pp": 12.538382,
+                  "mean_absolute_trend_pp": 10.380187,
+                  "structural_plus_incumbency": {
+                    "brier": 0.01546517,
+                    "log_loss": 0.05425467,
+                    "accuracy": 0.9875
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.01674065,
+                    "log_loss": 0.05934698,
+                    "accuracy": 0.9875
+                  },
+                  "brier_delta_full_minus_structural": 0.00127548,
+                  "structural_confident_misses": 1,
+                  "full_confident_misses": 1
+                },
+                {
+                  "band": "very_high_gt_15",
+                  "lower_exclusive_pp": 15.0,
+                  "upper_inclusive_pp": null,
+                  "state": "scored",
+                  "n": 85,
+                  "mean_range_pp": 19.745056,
+                  "mean_absolute_trend_pp": 18.355019,
+                  "structural_plus_incumbency": {
+                    "brier": 0.04400857,
+                    "log_loss": 0.13445085,
+                    "accuracy": 0.929412
+                  },
+                  "published_full_forecast": {
+                    "brier": 0.0322909,
+                    "log_loss": 0.09995781,
+                    "accuracy": 0.941176
+                  },
+                  "brier_delta_full_minus_structural": -0.01171767,
+                  "structural_confident_misses": 2,
+                  "full_confident_misses": 0
+                }
+              ],
+              "top_unstable": [
+                {
+                  "race_code": "UT-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 33.24701,
+                  "trend_earliest_to_latest_pp": 33.24701,
+                  "relative_leans_d_minus_r": [
+                    -58.071183,
+                    -29.83856,
+                    -24.824173
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "OH-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 33.073135,
+                  "trend_earliest_to_latest_pp": -33.073135,
+                  "relative_leans_d_minus_r": [
+                    -0.507183,
+                    -27.743147,
+                    -33.580318
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "GA-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.389589,
+                  "trend_earliest_to_latest_pp": 28.389589,
+                  "relative_leans_d_minus_r": [
+                    -6.707608,
+                    12.451593,
+                    21.681981
+                  ],
+                  "winner_probability_structural": 0.998972,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-01",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.106942,
+                  "trend_earliest_to_latest_pp": 26.257195,
+                  "relative_leans_d_minus_r": [
+                    -51.169754,
+                    -23.062812,
+                    -24.912559
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "GA-06",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 28.005114,
+                  "trend_earliest_to_latest_pp": 28.005114,
+                  "relative_leans_d_minus_r": [
+                    -47.461115,
+                    -29.995553,
+                    -19.456001
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-24",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 27.027181,
+                  "trend_earliest_to_latest_pp": 27.027181,
+                  "relative_leans_d_minus_r": [
+                    -44.034427,
+                    -27.325556,
+                    -17.007246
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-04",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 26.808736,
+                  "trend_earliest_to_latest_pp": 26.808736,
+                  "relative_leans_d_minus_r": [
+                    -58.383207,
+                    -32.394255,
+                    -31.574471
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "TX-07",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.629803,
+                  "trend_earliest_to_latest_pp": 21.97466,
+                  "relative_leans_d_minus_r": [
+                    3.712167,
+                    29.34197,
+                    25.686827
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "OH-02",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.305832,
+                  "trend_earliest_to_latest_pp": -25.305832,
+                  "relative_leans_d_minus_r": [
+                    -25.129624,
+                    -47.3065,
+                    -50.435456
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "FL-28",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 25.020802,
+                  "trend_earliest_to_latest_pp": -17.588404,
+                  "relative_leans_d_minus_r": [
+                    6.610525,
+                    14.042923,
+                    -10.977879
+                  ],
+                  "winner_probability_structural": 0.833331,
+                  "winner_probability_full": 0.872253,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "FL-26",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.306477,
+                  "trend_earliest_to_latest_pp": -17.336472,
+                  "relative_leans_d_minus_r": [
+                    -5.103766,
+                    1.866239,
+                    -22.440238
+                  ],
+                  "winner_probability_structural": 0.997534,
+                  "winner_probability_full": 0.996849,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-38",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 24.196385,
+                  "trend_earliest_to_latest_pp": 24.196385,
+                  "relative_leans_d_minus_r": [
+                    -47.037172,
+                    -30.162354,
+                    -22.840787
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "TX-37",
+                  "winner": "DEM",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.86451,
+                  "trend_earliest_to_latest_pp": 23.86451,
+                  "relative_leans_d_minus_r": [
+                    25.491834,
+                    46.655226,
+                    49.356344
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                },
+                {
+                  "race_code": "UT-02",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.800775,
+                  "trend_earliest_to_latest_pp": 23.800775,
+                  "relative_leans_d_minus_r": [
+                    -46.061177,
+                    -22.941722,
+                    -22.260402
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 1
+                },
+                {
+                  "race_code": "TX-03",
+                  "winner": "REP",
+                  "band": "very_high_gt_15",
+                  "range_pp": 23.713213,
+                  "trend_earliest_to_latest_pp": 23.713213,
+                  "relative_leans_d_minus_r": [
+                    -42.816465,
+                    -29.787456,
+                    -19.103252
+                  ],
+                  "winner_probability_structural": 0.999,
+                  "winner_probability_full": 0.999,
+                  "poll_count": 0
+                }
+              ],
+              "interpretation": "The stability band is assigned from pre-election variation in the three admitted presidential relative leans on the cycle's own district geography. Outcomes only score frozen probabilities after assignment. High instability can reflect realignment or baseline non-stationarity; it does not by itself identify redistricting as the cause."
             }
           }
         }
