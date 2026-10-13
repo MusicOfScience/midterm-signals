@@ -1,13 +1,154 @@
 {
   "cycle": 2018,
   "election_date": "2018-11-06",
-  "corpus_state": "awaiting_verified_inputs",
-  "baseline_presidential_years": [2008, 2012, 2016],
+  "corpus_state": "admitted",
+  "baseline_presidential_years": [
+    2008,
+    2012,
+    2016
+  ],
   "national_presidential_margins": {
-    "earliest": null,
-    "middle": null,
-    "latest": null
+    "earliest": 7.28,
+    "middle": 3.86,
+    "latest": 2.09
   },
-  "provenance": [],
-  "note": "No performance metric may be published until a leakage-free as-of corpus and verified national baselines are admitted."
+  "provenance": [
+    {
+      "name": "house_forecast",
+      "url": "https://raw.githubusercontent.com/k5cents/models-markets/47fd763f01de196586ca6e8f2ecb221e873b62ed/data/raw/models/house_district_forecast.csv",
+      "sha256": "475ef683acfcb0557997c04dbbeb659ca9bf6226ab2dff2c51456f6d9aa6858d",
+      "bytes": 20848160
+    },
+    {
+      "name": "senate_forecast",
+      "url": "https://raw.githubusercontent.com/k5cents/models-markets/47fd763f01de196586ca6e8f2ecb221e873b62ed/data/raw/models/senate_seat_forecast.csv",
+      "sha256": "e03eb657c120c1da91c7d3aa753caf7568408231abab3de8e18a22cfec0365e0",
+      "bytes": 2052296
+    },
+    {
+      "name": "winner_crosscheck",
+      "url": "https://raw.githubusercontent.com/k5cents/models-markets/47fd763f01de196586ca6e8f2ecb221e873b62ed/data/new/results.csv",
+      "sha256": "0107ae4264b0fd428393a5b20cad1750ab529856607694ab83b4def5f728773a",
+      "bytes": 5381
+    },
+    {
+      "name": "house_polls",
+      "url": "https://raw.githubusercontent.com/markjrieke/2022-midterm-forecasts/fe795fa790446b9c478de4b21a1df488ef8d1bf3/data/polls/src/fte/house_polls_historical.csv",
+      "sha256": "03a97addfe5d133f5e1eacc816d5d9e80ef4976541229e1c6f3b547323c3be23",
+      "bytes": 1030866
+    },
+    {
+      "name": "senate_polls",
+      "url": "https://raw.githubusercontent.com/markjrieke/2022-midterm-forecasts/fe795fa790446b9c478de4b21a1df488ef8d1bf3/data/polls/src/fte/senate_polls_historical.csv",
+      "sha256": "808c2f315b74e41a181848d23233cf413d139c2856a4d1de1fb87ddf72bf0855",
+      "bytes": 1667847
+    },
+    {
+      "name": "generic_polls",
+      "url": "https://raw.githubusercontent.com/markjrieke/2022-midterm-forecasts/fe795fa790446b9c478de4b21a1df488ef8d1bf3/data/polls/src/fte/generic_ballot_polls_historical.csv",
+      "sha256": "fa0b9ede2df415b8a83f41d618f79602faec150c1b0d61d338dd318f80b0b10b",
+      "bytes": 726864
+    },
+    {
+      "name": "house_results",
+      "url": "https://raw.githubusercontent.com/MEDSL/constituency-returns/fe67c056502fc09ddb1ace2ff8f87c53233a744e/1976-2018-house.csv",
+      "sha256": "e7fc0f913c16d1f143f4b425f4722de2fb5f1d8781d2391096d76c9651a6ce2a",
+      "bytes": 3870744
+    },
+    {
+      "name": "senate_results",
+      "url": "https://raw.githubusercontent.com/MEDSL/constituency-returns/fe67c056502fc09ddb1ace2ff8f87c53233a744e/1976-2018-senate.csv",
+      "sha256": "8ab824d9acca70ad54dc69f9b191c5cea604cd5bbda2f8777e968cf25bada50e",
+      "bytes": 464907
+    },
+    {
+      "name": "president_results",
+      "url": "https://raw.githubusercontent.com/MEDSL/constituency-returns/fe67c056502fc09ddb1ace2ff8f87c53233a744e/1976-2016-president.csv",
+      "sha256": "429f6c4864491f2f5d4ce5ccadf87005fabf22755b53e3dfd45de7baf4cc1b9b",
+      "bytes": 400481
+    },
+    {
+      "name": "district_structural",
+      "url": "https://raw.githubusercontent.com/kuriwaki/ccesMRPprep/e4482502dbebc00ca4060c29c7e532272d4b03c6/data/cd_info_2018.rda",
+      "sha256": "596a1bf3f9ae20b8b9f3081dee41d8370d2caf8212e17246a7c81dbf9f87d52a",
+      "bytes": 23195
+    },
+    {
+      "name": "ccesMRPprep cd_info_2018 documentation",
+      "url": "https://github.com/kuriwaki/ccesMRPprep/blob/e4482502dbebc00ca4060c29c7e532272d4b03c6/man/cd_info.Rd",
+      "role": "documents 435 contemporaneous 2018 districts and two-party McCain/Romney/Trump shares; Park-Egan fills Daily Kos 2008 gaps"
+    },
+    {
+      "name": "ccesMRPprep license",
+      "url": "https://github.com/kuriwaki/ccesMRPprep/blob/e4482502dbebc00ca4060c29c7e532272d4b03c6/LICENSE",
+      "license": "MIT"
+    },
+    {
+      "name": "FEC official election reports",
+      "urls": {
+        "2008": "https://www.fec.gov/resources/cms-content/documents/federalelections2008.pdf",
+        "2012": "https://www.fec.gov/resources/cms-content/documents/federalelections2012.pdf",
+        "2016": "https://www.fec.gov/resources/cms-content/documents/federalelections2016.pdf",
+        "2018": "https://www.fec.gov/resources/cms-content/documents/federalelections2018.pdf"
+      },
+      "role": "official cross-check and frozen national D-R centring constants"
+    }
+  ],
+  "admission": {
+    "unique_house_races": 435,
+    "unique_senate_races": 35,
+    "roster_versions": 483,
+    "poll_rows": 3429,
+    "result_rows": 470,
+    "medsl_national_margin_crosscheck": {
+      "2008": 7.39999,
+      "2012": 3.935187,
+      "2016": 2.181943
+    },
+    "transformations": {
+      "district_presidential": "ccesMRPprep Republican two-party shares converted to D-R margin as 100 - 2*R share; this matches the two-party district margin convention in the live upstream historical.csv.",
+      "state_presidential": "MEDSL D and R candidate votes converted to D-R two-party state margin for Senate structural priors.",
+      "national_centring": "Frozen FEC all-vote D-R national margins, matching the production model constants even though district/state structural margins are two-party margins.",
+      "poll_quality": "FiveThirtyEight letter grades converted to a predeclared monotone 0.75-3.0 scale; missing grade=1.3. No election outcomes are used.",
+      "poll_availability": "created_at is used only when it falls 0-14 days after poll end; otherwise publication_date is blank and Model Lab falls back to end_date.",
+      "multi_candidate_polls": "Questions with multiple candidates on the same D/R side are excluded from binary race-poll blending.",
+      "aligned_independents": "Angus King (ME-S1) and Bernie Sanders (VT-S1) are treated as Democratic-aligned for chamber-control outcome while raw incumbent party remains IND.",
+      "missing_result_party": "When MEDSL party is neither DEM nor REP, the winner must match an unambiguous pre-election historical roster candidate; otherwise admission fails."
+    },
+    "notes": [
+      "FiveThirtyEight forecast probabilities and vote-share forecasts are never imported as MIDTERM SIGNALS predictive inputs.",
+      "Roster known_date comes from first appearance or subsequent candidate-set change in the archived daily FiveThirtyEight deluxe forecast.",
+      "MEDSL constituency returns supply machine-readable scoring outcomes and are checked against an independently preserved 2018 winner map.",
+      "The structural source is a pinned MIT-licensed academic data object whose documentation explicitly records contemporaneous 2018 geography and the source used to fill missing 2008 Daily Kos values."
+    ],
+    "result_party_fallbacks": [
+      {
+        "race_code": "AL-05",
+        "winner_name": "MO BROOKS",
+        "medsl_parties": [
+          "NA"
+        ],
+        "resolved_side": "REP",
+        "resolution_source": "pre-election FiveThirtyEight historical roster"
+      },
+      {
+        "race_code": "NJ-04",
+        "winner_name": "CHRISTOPHER H. SMITH",
+        "medsl_parties": [
+          "NA"
+        ],
+        "resolved_side": "REP",
+        "resolution_source": "pre-election FiveThirtyEight historical roster"
+      },
+      {
+        "race_code": "WI-08",
+        "winner_name": "MIKE GALLAGHER",
+        "medsl_parties": [
+          "NA"
+        ],
+        "resolved_side": "REP",
+        "resolution_source": "pre-election FiveThirtyEight historical roster"
+      }
+    ]
+  }
 }

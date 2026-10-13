@@ -1,0 +1,64 @@
+name: Admit historical 2018 corpus
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [historical-2018-admission]
+    paths:
+      - "scripts/acquire_historical_2018.py"
+      - "scripts/run_historical_2018.py"
+      - "scripts/model_lab.py"
+      - ".github/workflows/historical-2018.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: historical-2018-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile historical acquisition code
+        run: python -m py_compile scripts/acquire_historical_2018.py scripts/run_historical_2018.py scripts/model_lab.py
+      - name: Install pinned historical reader
+        run: python -m pip install --disable-pip-version-check pandas==2.3.3 pyreadr==0.5.7
+      - name: Acquire pinned historical sources
+        run: python scripts/run_historical_2018.py
+      - name: Build Model Lab from admitted corpus
+        run: python scripts/model_lab.py
+      - name: Run Model Lab and production integrity tests
+        run: |
+          python -m unittest tests.test_model_lab tests.test_model
+          node scripts/check.mjs
+      - name: Inspect admission state
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('public/data/model-lab.json'))
+          c=next(c for c in d['cycles'] if c['cycle']==2018)
+          if c['state']!='scored':
+              raise SystemExit(f"2018 did not score: {c.get('blocking_reasons') or c.get('checkpoints')}")
+          print('2018 Model Lab scored', [(x['days_to_election'], x.get('score',{}).get('brier')) for x in c['checkpoints']])
+          PY
+      - name: Commit immutable normalized corpus if changed
+        shell: bash
+        run: |
+          git config user.name "midterm-signals-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add historical/2018/cycle.json historical/2018/races.csv historical/2018/polls.csv historical/2018/results.csv public/data/model-lab.json
+          if git diff --cached --quiet; then
+            echo "No historical corpus change"
+            exit 0
+          fi
+          git commit -m "data: admit leakage-gated 2018 historical corpus"
+          git push
