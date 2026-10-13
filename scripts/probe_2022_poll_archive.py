@@ -48,14 +48,18 @@ def parse_date(value: str) -> datetime | None:
 def main() -> None:
     raw = fetch(RAW_POLLS)
     reader = csv.DictReader(io.StringIO(raw.decode("utf-8-sig", errors="strict")))
+    fields = set(reader.fieldnames or [])
+    poll_id_field = "pollno" if "pollno" in fields else "poll_id" if "poll_id" in fields else None
+    if not poll_id_field:
+        raise RuntimeError("first-party raw-polls archive exposes neither pollno nor poll_id")
     required = {
-        "pollno", "race", "year", "location", "type_simple", "pollster",
+        "race", "year", "location", "type_simple", "pollster",
         "methodology", "partisan", "polldate", "samplesize",
         "cand1_name", "cand1_party", "cand1_pct",
         "cand2_name", "cand2_party", "cand2_pct", "margin_poll",
         "electiondate",
     }
-    missing = sorted(required - set(reader.fieldnames or []))
+    missing = sorted(required - fields)
     if missing:
         raise RuntimeError(f"first-party raw-polls archive missing columns: {missing}")
 
@@ -77,7 +81,8 @@ def main() -> None:
             raise RuntimeError(f"2022 {kind} rows have no parseable poll dates")
         diagnostics[kind] = {
             "rows": len(rows),
-            "unique_polls": len({r.get("pollno") for r in rows}),
+            "unique_polls": len({r.get(poll_id_field) for r in rows}),
+            "poll_id_field": poll_id_field,
             "min_polldate": min(dates).strftime("%Y-%m-%d"),
             "max_polldate": max(dates).strftime("%Y-%m-%d"),
             "locations": len({r.get("location") for r in rows}),
@@ -86,18 +91,19 @@ def main() -> None:
                 f"{r.get('cand1_party','')}|{r.get('cand2_party','')}" for r in rows
             ).most_common(8),
             "sample": [
-                {k: r.get(k) for k in (
-                    "pollno", "race", "location", "type_simple", "pollster",
-                    "polldate", "samplesize", "cand1_name", "cand1_party",
-                    "cand1_pct", "cand2_name", "cand2_party", "cand2_pct",
-                    "margin_poll", "electiondate",
-                )}
+                {
+                    "poll_id": r.get(poll_id_field),
+                    **{k: r.get(k) for k in (
+                        "race", "location", "type_simple", "pollster",
+                        "polldate", "samplesize", "cand1_name", "cand1_party",
+                        "cand1_pct", "cand2_name", "cand2_party", "cand2_pct",
+                        "margin_poll", "electiondate",
+                    )},
+                }
                 for r in rows[-3:]
             ],
         }
 
-    # Race-specific archives must reach election week. Generic ballot may end a
-    # day or two earlier; anything before November is rejected.
     for kind in ("Sen-G", "House-G"):
         if diagnostics[kind]["max_polldate"] < "2022-11-01":
             raise RuntimeError(f"2022 {kind} archive is truncated before election week: {diagnostics[kind]['max_polldate']}")
