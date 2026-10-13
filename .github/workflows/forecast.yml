@@ -13,6 +13,8 @@ on:
       - "public/data/source-status.json"
       - "public/data/search.json"
       - "public/data/signals.json"
+      - "public/data/external-forecasters.json"
+      - "public/data/fec.json"
       - "public/data/results.json"
       - "public/data/run-report.json"
       - "public/data/races.csv"
@@ -49,15 +51,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Build forecast snapshot, routes and browser assets
+      - name: Build forecast snapshot, enrich context and build browser assets
         run: |
           python scripts/build_forecast.py
+          python scripts/enrich_outputs.py
           python scripts/make_bootstrap.py
           python scripts/build_browser.py
       - name: Validate numerical forecast
         run: python scripts/validate_forecast.py
       - name: Unit tests
-        run: node tests/core.test.mjs && python -m unittest tests.test_model
+        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment
       - name: Validate static publication
         run: node scripts/check.mjs
       - name: Commit forecast and generated browser assets if changed
