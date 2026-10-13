@@ -16,7 +16,7 @@
             "No leakage-free 2018/2022 production replays are available yet; historical Brier/log-loss metrics are therefore withheld.",
             "Candidate-quality effects beyond incumbency are not separately estimated.",
             "Third-party and ranked-choice transfer behaviour is simplified in the chamber model.",
-            "The current production input bundle does not include validated presidential-approval, economic, FEC or licensed external-forecaster feeds.",
+            "Presidential-approval and economic-context feeds are not yet validated production inputs; FEC finance and external-forecaster data are displayed only in the separate non-model context layer.",
             "The nowcast and election-day forecast do not yet use a separate explicit time-evolution process.",
             "Correlated national error is simulated, but cross-race correlation remains deliberately simple rather than a full geographic covariance model."
         ],
