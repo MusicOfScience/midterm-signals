@@ -53,11 +53,13 @@
   <section id="polling" class="lab-section">
     <div class="lab-section-head"><div><div class="eyebrow">04 / POLLING & CHAMBERS</div><h2>What changed when races had polls?</h2></div><p>Polled versus unpolled and House versus Senate diagnostics, with missing chamber evidence labelled explicitly.</p></div>
     <div id="pollingPanel" class="lab-card"><p class="muted">Loading polling partitions…</p></div>
+    <div id="pairedPollingPanel" class="lab-card"><p class="muted">Loading paired polling-component test…</p></div>
   </section>
 
   <section id="movement" class="lab-section">
     <div class="lab-section-head"><div><div class="eyebrow">05 / MOVEMENT</div><h2>Did new information move us toward the winner?</h2></div><p>Probability movement is tracked across the same races from 60 to 1 day, including large late swings and moves away from the eventual winner.</p></div>
     <div id="movementPanel" class="lab-card"><p class="muted">Loading forecast movement…</p></div>
+    <div id="movementPollingPanel" class="lab-card"><p class="muted">Loading movement by polling status…</p></div>
   </section>
 
   <section id="comparison" class="lab-section">
@@ -78,5 +80,6 @@
 </main>
 <footer class="lab-footer"><a href="/">← MIDTERM SIGNALS forecast</a><a href="/data/model-lab.json">Machine-readable Model Lab JSON</a><span>Facts ≠ forecasts ≠ validation</span></footer>
 <script type="module" src="/model-lab/model-lab.js"></script>
+<script type="module" src="/model-lab/paired-diagnostics.js"></script>
 </body>
 </html>
