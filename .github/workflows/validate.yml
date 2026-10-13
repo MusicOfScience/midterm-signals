@@ -21,9 +21,10 @@ jobs:
           node-version: "22"
       - name: Python syntax and browser projection
         run: |
-          python -m py_compile scripts/build_forecast.py scripts/enrich_outputs.py scripts/run_enrichment.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py scripts/model_lab.py
+          python -m py_compile scripts/build_forecast.py scripts/enrich_outputs.py scripts/run_enrichment.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py scripts/model_lab.py scripts/model_lab_diagnostics.py
           python scripts/make_bootstrap.py
           python scripts/model_lab.py
+          python scripts/model_lab_diagnostics.py
           python scripts/build_browser.py
       - name: JavaScript syntax
         run: |
@@ -33,7 +34,7 @@ jobs:
           node --check public/enhancements.bundle.mjs
           node --check public/model-lab/model-lab.js
       - name: Unit tests
-        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab
+        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_diagnostics
       - name: Static publication checks
         run: node scripts/check.mjs
 
@@ -56,6 +57,7 @@ jobs:
         run: |
           python scripts/make_bootstrap.py
           python scripts/model_lab.py
+          python scripts/model_lab_diagnostics.py
           python scripts/build_browser.py
       - name: Start static production server
         run: |
@@ -83,6 +85,11 @@ jobs:
         run: |
           npx lighthouse http://127.0.0.1:4173/ --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=test-artifacts/lighthouse.json
           node tests/lighthouse-threshold.mjs test-artifacts/lighthouse.json
+      - name: Preserve Model Lab diagnostic artefact
+        if: always()
+        run: |
+          mkdir -p test-artifacts
+          cp public/data/model-lab.json test-artifacts/model-lab.json
       - name: Upload browser inspection artifacts
         if: always()
         uses: actions/upload-artifact@v4
