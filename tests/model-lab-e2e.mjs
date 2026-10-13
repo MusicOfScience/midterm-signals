@@ -15,6 +15,10 @@ try{
   const data=await page.evaluate(async()=>await (await fetch('/data/model-lab.json',{cache:'no-store'})).json());
   if(data.retuning_allowed!==false||data.evaluation_only!==true)throw new Error('Model Lab evaluation contract broken in browser');
   if(data.model_contract?.state!=='verified')throw new Error(`Production contract not verified: ${data.model_contract?.state}`);
+  if(data.schema_version!=='1.1.0')throw new Error(`Unexpected Model Lab schema ${data.schema_version}`);
+  if(data.diagnostic_contract?.movement_threshold!==0.10||data.diagnostic_contract?.confident_miss_threshold!==0.80){
+    throw new Error('Fixed diagnostic thresholds drifted');
+  }
 
   const requested=Number(data.summary?.requested_cycles ?? 0);
   const scored=Number(data.summary?.scored_cycles ?? 0);
@@ -22,7 +26,6 @@ try{
   if(data.summary?.state!==expectedState){
     throw new Error(`Model Lab summary state/count mismatch: ${JSON.stringify(data.summary)}`);
   }
-  // This branch admits 2022 alongside the already-admitted 2018 corpus.
   if(requested!==2||scored!==2||expectedState!=='scored'){
     throw new Error(`Expected both historical cycles scored, got: ${JSON.stringify(data.summary)}`);
   }
@@ -42,11 +45,29 @@ try{
     if(cycle?.checkpoints?.length!==5||cycle.checkpoints.some(c=>c.state!=='scored'||c.score?.state!=='scored')){
       throw new Error(`${year} does not expose five fully scored checkpoints`);
     }
+    if(cycle.movement?.state!=='scored')throw new Error(`${year} movement diagnostics missing`);
+    for(const cp of cycle.checkpoints){
+      if((cp.score?.competitive_bands||[]).length!==5)throw new Error(`${year} ${cp.days_to_election}d competitive diagnostics missing`);
+      const pollN=Number(cp.score?.polling?.polled?.n||0)+Number(cp.score?.polling?.unpolled?.n||0);
+      if(pollN!==cp.score?.n)throw new Error(`${year} ${cp.days_to_election}d polling partition drift`);
+      const calN=(cp.score?.calibration||[]).reduce((sum,b)=>sum+Number(b.count||0),0);
+      if(calN!==cp.score?.n)throw new Error(`${year} ${cp.days_to_election}d calibration denominator drift`);
+    }
   }
 
   const c2022=data.cycles?.find(c=>c.cycle===2022);
   const n2022=[...new Set((c2022?.checkpoints||[]).map(c=>c.score?.n))];
   if(n2022.length!==1||n2022[0]!==416)throw new Error(`2022 fixed replay sample drifted: ${JSON.stringify(n2022)}`);
+  if(c2022?.chamber_scope?.senate?.state!=='unavailable')throw new Error('2022 Senate must be explicitly unavailable');
+
+  if(await page.locator('#competitivePanel').getByText('45-55',{exact:false}).count()===0)throw new Error('Competitive diagnostics not rendered');
+  if(await page.locator('#pollingPanel').getByText('Not a causal A/B test.',{exact:false}).count()===0)throw new Error('Polling caveat not rendered');
+  if(await page.locator('#comparisonPanel').getByText('2018',{exact:false}).count()===0)throw new Error('Cross-cycle diagnostics not rendered');
+
+  await page.selectOption('#diagCycle','2018');
+  await page.selectOption('#diagCheckpoint','14');
+  const selectedText=await page.locator('#competitivePanel').innerText();
+  if(!selectedText.includes('2018')||!selectedText.includes('14 days'))throw new Error('Diagnostic controls did not update panels');
 
   const body=await page.locator('body').innerText();
   if(!body.match(/Brier\s+0\.\d+/))throw new Error('Scored historical Brier metric is not rendered');
@@ -56,7 +77,7 @@ try{
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2);
   if(overflow)throw new Error('Model Lab has horizontal page overflow at phone viewport');
   if(consoleErrors.length)throw new Error(`Model Lab browser errors: ${consoleErrors.join(' | ')}`);
-  console.log(`MODEL LAB browser checks passed: desktop + mobile + ${scored}/${requested} historical cycles scored; 2022 n=416.`);
+  console.log(`MODEL LAB browser checks passed: desktop + mobile + ${scored}/${requested} historical cycles scored; diagnostics rendered; 2022 n=416.`);
 } finally {
   await browser.close();
 }
