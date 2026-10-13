@@ -1,13 +1,743 @@
 {
   "cycle": 2022,
   "election_date": "2022-11-08",
-  "corpus_state": "awaiting_verified_inputs",
-  "baseline_presidential_years": [2012, 2016, 2020],
+  "corpus_state": "admitted",
+  "scope": "House races passing the fixed five-checkpoint scoreability ledger; Senate excluded pending complete early historical poll stream.",
+  "baseline_presidential_years": [
+    2012,
+    2016,
+    2020
+  ],
   "national_presidential_margins": {
-    "earliest": null,
-    "middle": null,
-    "latest": null
+    "earliest": 3.86,
+    "middle": 2.09,
+    "latest": 4.46
   },
-  "provenance": [],
-  "note": "No performance metric may be published until a leakage-free as-of corpus and verified national baselines are admitted."
+  "scoreability": {
+    "universe": 470,
+    "admitted_house": 416,
+    "excluded_house": 19,
+    "excluded_senate": 35,
+    "fixed_sample_across_checkpoints": true,
+    "ledger": "scoreability-ledger.csv",
+    "structural_prior_failures": {
+      "MT": "MT: no archived DRA 2020-block release contains 2012 presidential fields",
+      "NJ": "latest DRA block-data URL returned HTTP 404: https://data.dra2020.net/file/dra-block-data/Election_Data_Block_NJ.v07.zip"
+    }
+  },
+  "poll_archive_rules": {
+    "house_race_polls": "raw FiveThirtyEight election-eve snapshot committed 2022-11-07",
+    "generic_ballot": "Pinned 2022-11-05 pre-election snapshot only; latest admitted poll ended 2022-11-04 and was published by 2022-11-04. No retrospective supplement admitted.",
+    "forbidden_retrospective_fields": [
+      "cand1_actual",
+      "cand2_actual",
+      "margin_actual",
+      "error",
+      "bias",
+      "rightcall"
+    ],
+    "senate": "excluded: admitted archive does not cover the 60- and 30-day checkpoints completely",
+    "generic_freshness_rule": "Replay uses the frozen model's 35-day generic-ballot window. It does not require a poll to end on election eve."
+  },
+  "provenance": [
+    {
+      "label": "2022 dated House roster",
+      "url": "https://raw.githubusercontent.com/stephensond/election-night-2022/83f2c9867f319b921fa10ad04bc256d8106bc8f4/input/house_district_toplines_2022.csv",
+      "sha256": "898124bcd7e664664f5f729d551a342e3410b1b5c38fb4eccd25b81c25dcf881",
+      "bytes": 74579773
+    },
+    {
+      "label": "2022 dated Senate roster",
+      "url": "https://raw.githubusercontent.com/stephensond/election-night-2022/83f2c9867f319b921fa10ad04bc256d8106bc8f4/input/senate_state_toplines_2022.csv",
+      "sha256": "8b1b7c28438ce2f57fefc33447d064382f7316e1d362bd57b5debb13e9027101",
+      "bytes": 6404405
+    },
+    {
+      "label": "pre-election congressional membership",
+      "url": "https://raw.githubusercontent.com/unitedstates/congress-legislators/0d7d64369f9b01dc924415d570285e2dffe642ee/legislators-current.yaml",
+      "sha256": "b73d3cb43813ad9b711f4c57c574f299d4badef7f11bf1d10434728ea7e27980",
+      "bytes": 1055873
+    },
+    {
+      "label": "DRA tree",
+      "url": "https://api.github.com/repos/dra2020/block_data/git/trees/7f29db811844c02ab726ffec9bb34865c73ef342?recursive=1",
+      "sha256": "8cd6f58f1cf44d391efbf6d86dd35665205fe276122d1d0260b795e66bba6284",
+      "bytes": 117624
+    },
+    {
+      "label": "DRA ref AL",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/AL/Election_Data_Block_AL.v07.md",
+      "sha256": "44d229031557bcf12619ea1fa7237f92de732e9de90663404f9d8551bdd9d4b3",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref AK",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/AK/Election_Data_Block_AK.v07.md",
+      "sha256": "a433473928217f5c204193ce888b8fc64e8a52d336ade1a33429a839d552397f",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref AZ",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/AZ/Election_Data_Block_AZ.v07.md",
+      "sha256": "9a1bf6d89f42e2af936fb5e35986a7779b4ae8d1372b06d0d6d8c87e09d7bc6b",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref AR",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/AR/Election_Data_Block_AR.v06.md",
+      "sha256": "52bf3ae4d987fb28845413e74cc0b73cf95e416fbbc944fc6da89fed2f47fcc7",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref CA",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/CA/Election_Data_Block_CA.v07.md",
+      "sha256": "9c4787fcefae088c6893675a0cf63cd09dd3637fd0fc15b29dc3889550afe360",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref CO",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/CO/Election_Data_Block_CO.v07.md",
+      "sha256": "8a3947f7f1822421f96417f5a36b4e634f2e344872e9114e3452b6351ab0f7c8",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref CT",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/CT/Election_Data_Block_CT.v06.md",
+      "sha256": "804732c3f0240f05ec445cfeb4a360302df889ef586eb783bd3af5274f9c3b9f",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref DE",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/DE/Election_Data_Block_DE.v06.md",
+      "sha256": "d2daea1dc6d7a4c587f0c684b2ab2ac4afb2b46bd3b522dfc96994b62bf52fe1",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref FL",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/FL/Election_Data_Block_FL.v07.md",
+      "sha256": "146f93c772180b42314b06f2e5ca2a45feb205bac7060461ab782d1ff07403b2",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref GA",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/GA/Election_Data_Block_GA.v07.md",
+      "sha256": "f8df4ebe0ae95e5b51795af8868f4e03212aad86142f0a4223cdd815c7a5e896",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref HI",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/HI/Election_Data_Block_HI.v07.md",
+      "sha256": "cc3be6155de58c006676b13eb1cd8ea5682c5d8abcf75f0b3ade0ffcbfe91448",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref ID",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/ID/Election_Data_Block_ID.v06.md",
+      "sha256": "b2e1a1f95a13c80778ce9fe58607f71bdae95d2196ccbb27577a9dbc8fa3b6d7",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref IL",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/IL/Election_Data_Block_IL.v07.md",
+      "sha256": "40cee76fea1351b41ec8950c548567c0a15145b1049962e77b35f1162e77d452",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref IN",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/IN/Election_Data_Block_IN.v07.md",
+      "sha256": "2dfdcb8ef25e98c896ce0144d8d16347d39b4033dac53fd5fc2c559744d8d0e6",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref IA",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/IA/Election_Data_Block_IA.v06.md",
+      "sha256": "9bd2e0c2325ad292efe95f1f45fd04bf52f1dcb32333aa5b23b2113e013b96e2",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref KS",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/KS/Election_Data_Block_KS.v07.md",
+      "sha256": "d75c6cb6acd01d9c604344815aad9fba42d303b0814a3b1f07d51f66978e224c",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref KY",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/KY/Election_Data_Block_KY.v07.md",
+      "sha256": "a9f3e2253e909089c442dac5869931dbfae369099057789ba4e2fc7b83647700",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref LA",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/LA/Election_Data_Block_LA.v07.md",
+      "sha256": "1319e8269123f35a5145e832df05cde96423b609a026e532d836dec340b8e2b8",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref ME",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/ME/Election_Data_Block_ME.v07.md",
+      "sha256": "dea4a9ecbc1c08659a5ed8e59425905da489dbf87f734cf7c444b8604eb761ad",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref MD",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/MD/Election_Data_Block_MD.v07.md",
+      "sha256": "2f46d9eb46587e127ce93663a03006adf2d366141491d0a3b9d2319d38057137",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref MA",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/MA/Election_Data_Block_MA.v07.md",
+      "sha256": "0276f9810797123fe163f366236f34e2082261fb570395c9186e22b8a641ace0",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref MI",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/MI/Election_Data_Block_MI.v06.md",
+      "sha256": "236106457138a1548eac05c8b9413df56031f84b3e3d338631756458e7c90c58",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref MN",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/MN/Election_Data_Block_MN.v07.md",
+      "sha256": "05b18e3e8ea183501311d9ad607c5c01219f7b97bc670070d5ad1281d58ce903",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref MS",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/MS/Election_Data_Block_MS.v07.md",
+      "sha256": "2d27049e97e37d037d02840c4d1bbd2b3cfba3a675e04e78e148acb440b64cd2",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref MO",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/MO/Election_Data_Block_MO.v07.md",
+      "sha256": "b169ae415241e6120169c52ab5f690c432a86834ec11d7bea18c6dd58ee67dc1",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref MT",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/MT/Election_Data_Block_MT.v07.md",
+      "sha256": "5a11f2c7462843ceb2773e25ee6d19ba36f43c679c1bd5fb6847a2ab7b5b748e",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref NE",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/NE/Election_Data_Block_NE.v07.md",
+      "sha256": "a0db49478bc12212a5a5c5c948132ade4a28a3a88849f90ef2a930145deff12c",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref NV",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/NV/Election_Data_Block_NV.v07.md",
+      "sha256": "1ab186af432c563fdffb623fa9210cbb27d7a1fd72b12077934162cb6395d176",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref NH",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/NH/Election_Data_Block_NH.v07.md",
+      "sha256": "a7c2bc4f3493895a262016258a9c53a588b5e9628a311b72e779f823af0e9a4e",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref NJ",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/NJ/Election_Data_Block_NJ.v07.md",
+      "sha256": "38f9171224ca77e2a6e4e68dc7b4b5ce24fe4c89b4ce01b64bfa0522c231df6e",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref NM",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/NM/Election_Data_Block_NM.v07.md",
+      "sha256": "d833e128befe8aa37c96fca6f5d01e20de7969ccdbd105d71038c5b725c26213",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref NY",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/NY/Election_Data_Block_NY.v07.md",
+      "sha256": "7874941baf9656aa8127266e4275d42cf4f46399a613a05dae535295d6834215",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref NC",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/NC/Election_Data_Block_NC.v07.md",
+      "sha256": "368edbd7ebdb3521fa7ba4acda030f81878ab21dc8d99100d3f3ab51f1489bd5",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref ND",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/ND/Election_Data_Block_ND.v06.md",
+      "sha256": "739fcec72a77b31913324945bca91db73baa91996a2a5b34c0cc2ecd5dc6df5c",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref OH",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/OH/Election_Data_Block_OH.v07.md",
+      "sha256": "36b3e32f0f71126d81074c6da7111a03b0306f2f9da4d4f1915b8b7b89a99276",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref OK",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/OK/Election_Data_Block_OK.v07.md",
+      "sha256": "e9e50be385ab6d190e1243abab6a50b3570900f571d91de29c2535333c424e7a",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref OR",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/OR/Election_Data_Block_OR.v06.md",
+      "sha256": "07979682025056e1f6637fa48a0104af6748966460180eb47243afc74acdc52f",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref PA",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/PA/Election_Data_Block_PA.v07.md",
+      "sha256": "85c2ebb39414315611bc48f1ac68e9cab5ccbf19571fefb35e8d2dd24b00d067",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref RI",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/RI/Election_Data_Block_RI.v07.md",
+      "sha256": "b6f335b905d4644f6a5058d1fd7b40d0d04130946b2040abb78899c6cf59dda7",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref SC",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/SC/Election_Data_Block_SC.v07.md",
+      "sha256": "8963907b9190d3f43afe310d8f6913d0bba003d201f8b90697e70d207164f624",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref SD",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/SD/Election_Data_Block_SD.v06.md",
+      "sha256": "50fc8463d9d7770a0b6df1593f1913cf9eabaca0d0348c2f9e79e52a33fd4966",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref TN",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/TN/Election_Data_Block_TN.v07.md",
+      "sha256": "47b07dc03f7a74dbbe77cba0c555f2ffb9286cffede50b437f66da7822f27bfa",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref TX",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/TX/Election_Data_Block_TX.v07.md",
+      "sha256": "142c435426a211846a560678762fe606ce992cb2fd8eb24088fb168d85d3ed50",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref UT",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/UT/Election_Data_Block_UT.v07.md",
+      "sha256": "acfd99868c90775d3cf91b99fc4b0d88e461373c912a58e0d89c3d4e3f5efb48",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref VT",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/VT/Election_Data_Block_VT.v07.md",
+      "sha256": "4d3b9a09ec397f783ce6c383461e09df68e89e09da28b0a8e1994415d187b689",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref VA",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/VA/Election_Data_Block_VA.v07.md",
+      "sha256": "02a82bb3b968b0c4a5a547bc35bfa6d76903efc3f6739e67656deb54f61d1811",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref WA",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/WA/Election_Data_Block_WA.v07.md",
+      "sha256": "4f6eb44ea41573925bcd89ff45dda07bfffbb8b0781d757509322b2de36fc036",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref WV",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/WV/Election_Data_Block_WV.v07.md",
+      "sha256": "b43c7024cf2dda2eafbfbb970cceae94793e2bb8de80638bdf0006ba8f683e06",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref WI",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/WI/Election_Data_Block_WI.v07.md",
+      "sha256": "3fd12c737fd0c39aa1acd1707e9c354705d722ab0bf3b0309699e1028bd1bfe5",
+      "bytes": 388
+    },
+    {
+      "label": "DRA ref WY",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/WY/Election_Data_Block_WY.v06.md",
+      "sha256": "55972c4b569a78f7406e3262287b0a44b9f7d71b057239b36794e9247a47ab3d",
+      "bytes": 388
+    },
+    {
+      "label": "MEDSL 1976-2016 presidential state returns",
+      "url": "https://raw.githubusercontent.com/MEDSL/constituency-returns/fe67c056502fc09ddb1ace2ff8f87c53233a744e/1976-2016-president.csv",
+      "sha256": "429f6c4864491f2f5d4ce5ccadf87005fabf22755b53e3dfd45de7baf4cc1b9b",
+      "bytes": 400481
+    },
+    {
+      "label": "Census 118th district block equivalency",
+      "url": "https://www2.census.gov/programs-surveys/decennial/rdo/mapping-files/2023/118-congressional-district-bef/cd118.zip",
+      "sha256": "a2f38d0dd7c207fa144a88b66df9f59f8a6e5c27e932fbd4a32d1bcf587c5763",
+      "bytes": 25922515
+    },
+    {
+      "label": "DRA blocks AK",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_AK.v07.zip",
+      "sha256": "6a7e67ebeba9f148a71e6ac2f6ac8400797c7d93833ac64e5313e3ca979fe5aa",
+      "bytes": 355727
+    },
+    {
+      "label": "DRA blocks AL",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_AL.v07.zip",
+      "sha256": "43218b8ba5fdd62edefb629c1468b2a6cf57aaa075786ab63d834d8cfec394df",
+      "bytes": 4144817
+    },
+    {
+      "label": "DRA blocks AR",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_AR.v06.zip",
+      "sha256": "9092f08d636509cc43ea64697bfa57fddc9d986475bbcbe4ebc146d2e77b8bd3",
+      "bytes": 1667663
+    },
+    {
+      "label": "DRA blocks AZ",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_AZ.v07.zip",
+      "sha256": "6b0e6ea9481df337fd6838849f87941a8e4cb513c9cf660527f1f91b9a68c31d",
+      "bytes": 4019182
+    },
+    {
+      "label": "DRA blocks CA",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_CA.v07.zip",
+      "sha256": "3f28f5085808bf0fbac689495c2980e0de65eaff6052156e9efe255433f5358b",
+      "bytes": 14852347
+    },
+    {
+      "label": "DRA blocks CO",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_CO.v07.zip",
+      "sha256": "d82c19971f4606aa60064dcd68e954ab401fbf9d245d551569eda0ec31ac637a",
+      "bytes": 2813822
+    },
+    {
+      "label": "DRA blocks CT",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_CT.v06.zip",
+      "sha256": "ae455eb1d02c09520572cf1a3d6bddc25dcfa4651844c2e9ffeb411ad6bd9f88",
+      "bytes": 990337
+    },
+    {
+      "label": "DRA blocks DE",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_DE.v06.zip",
+      "sha256": "5f820af2c288db84b9fb140ce3a39bd9a7a080152927c681a030270522578622",
+      "bytes": 435545
+    },
+    {
+      "label": "DRA blocks FL",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_FL.v07.zip",
+      "sha256": "e3ebf1d1e0b1e9faf4cc2d61010bb080c0d2c5ffea69e1b96e198f32091c3d60",
+      "bytes": 9734351
+    },
+    {
+      "label": "DRA blocks GA",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_GA.v07.zip",
+      "sha256": "08677c315e41f38d0f287ea1090dfe6dac9df784df588073c00eb6de0d825b17",
+      "bytes": 6140469
+    },
+    {
+      "label": "DRA blocks HI",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_HI.v07.zip",
+      "sha256": "31b6208572398547079bbd71f81c19ffd9ef7868c211c647dbfa16a1378b5996",
+      "bytes": 375801
+    },
+    {
+      "label": "DRA blocks IA",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_IA.v06.zip",
+      "sha256": "091584b30212e80119e2e2140ce345084d7a10e176d0315db29c1a9f43470716",
+      "bytes": 2350149
+    },
+    {
+      "label": "DRA blocks ID",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_ID.v06.zip",
+      "sha256": "4ab014ef63bb4cd9d1b758da72d0931fbb69934ad9684eecef64dd3b5f4685cb",
+      "bytes": 970104
+    },
+    {
+      "label": "DRA blocks IL",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_IL.v07.zip",
+      "sha256": "4f63bf6e61c5e371193e085a526ae3480c2c4265c53ca2e41cc75f60d629eb69",
+      "bytes": 9379587
+    },
+    {
+      "label": "DRA blocks IN",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_IN.v07.zip",
+      "sha256": "cc2ac5282e0ad5fb7e8d8cf19b28501a62b0cc35b8f52a545219ad43efbcd596",
+      "bytes": 5467092
+    },
+    {
+      "label": "DRA blocks KS",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_KS.v07.zip",
+      "sha256": "cd40df93973106df04205ac509c880050290e69a9f75f275b9d54e7f54a426e5",
+      "bytes": 2638526
+    },
+    {
+      "label": "DRA blocks KY",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_KY.v07.zip",
+      "sha256": "c4810e554505b9b6ee9495e379bc28dabf59d8d93c7ed4a106420e6c91c73ace",
+      "bytes": 2321464
+    },
+    {
+      "label": "DRA blocks LA",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_LA.v07.zip",
+      "sha256": "01a30f78111e7f8ca9949997d719428e4ed56fc4f9f3c82c3f00ea3364e31b19",
+      "bytes": 4387210
+    },
+    {
+      "label": "DRA blocks MA",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_MA.v07.zip",
+      "sha256": "73eb1dac35c6111bc74c4397cee1dbec6a811fb3fadde6374dedb2bf60f1f521",
+      "bytes": 3024749
+    },
+    {
+      "label": "DRA blocks MD",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_MD.v07.zip",
+      "sha256": "d5983370da921d284ac5fad75eedf4775c606d883c1196e12ec626c87d225625",
+      "bytes": 2034017
+    },
+    {
+      "label": "DRA blocks ME",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_ME.v07.zip",
+      "sha256": "124c3b3bb3a85d74dcf91f5157399395fb937bfcb4c4fa8404993b70fd04a8ea",
+      "bytes": 580702
+    },
+    {
+      "label": "DRA blocks MI",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_MI.v06.zip",
+      "sha256": "628b39304c9cfed40e84d60a708a8a1c57fe9c7b4502f9935cb9cf2d09358e5d",
+      "bytes": 4082864
+    },
+    {
+      "label": "DRA blocks MN",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_MN.v07.zip",
+      "sha256": "74ad87c7c736b14d9f3d7365376907665226d963d77a522d8857d064cdec14e6",
+      "bytes": 5377058
+    },
+    {
+      "label": "DRA blocks MO",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_MO.v07.zip",
+      "sha256": "c28efd8a7b23084aa9d4c13e00c76880acf55ea09188a40096cfcfc228503d6b",
+      "bytes": 5561323
+    },
+    {
+      "label": "DRA blocks MS",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_MS.v07.zip",
+      "sha256": "f3a24b095e8a8b58bdb94c3feabf5298248eca24edc1d48cd4f2d69c5f39597b",
+      "bytes": 2680180
+    },
+    {
+      "label": "DRA blocks MT",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_MT.v07.zip",
+      "sha256": "bd3dbb9e8070d912967d15a4387fc0eb52f11f38a3f3d9189d0056ff84bcacbf",
+      "bytes": 1206775
+    },
+    {
+      "label": "DRA version tree for historical-layer recovery",
+      "url": "https://api.github.com/repos/dra2020/block_data/git/trees/7f29db811844c02ab726ffec9bb34865c73ef342?recursive=1",
+      "sha256": "8cd6f58f1cf44d391efbf6d86dd35665205fe276122d1d0260b795e66bba6284",
+      "bytes": 117624
+    },
+    {
+      "label": "DRA archived ref MT v06",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/MT/Election_Data_Block_MT.v06.md",
+      "sha256": "5a85c277801a8a8c4c2e1d154dc4ed2810748acf0f359f5d0f368de16e82598b",
+      "bytes": 388
+    },
+    {
+      "label": "DRA archived blocks MT v06",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_MT.v06.zip",
+      "sha256": "3c35eb6f57c111ace2e98dd1cf87303811b227792cfb47e1aa1043dc02d6e32b",
+      "bytes": 1100285
+    },
+    {
+      "label": "DRA archived ref MT v02",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/MT/Election_Data_Block_MT.v02.md",
+      "sha256": "4aa5a46b06a9cf04fa20bda05caac4eacd6a33e8713601490120d429c772604b",
+      "bytes": 388
+    },
+    {
+      "label": "DRA archived blocks MT v02",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_MT.v02.zip",
+      "sha256": "f25dca2e56210563361be9c9ea0d6ea9e70d6288c49e09da2084e0e9f6a3c163",
+      "bytes": 980718
+    },
+    {
+      "label": "DRA archived ref MT v01",
+      "url": "https://raw.githubusercontent.com/dra2020/block_data/7f29db811844c02ab726ffec9bb34865c73ef342/2020_Geography/MT/Election_Data_Block_MT.v01.md",
+      "sha256": "a1fd510aa849df616346d4763892efda56f7461b99c42150cf3cf4af88ec0c74",
+      "bytes": 388
+    },
+    {
+      "label": "DRA archived blocks MT v01",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_MT.v01.zip",
+      "sha256": "7efd6354f608ada597cf85491d7c36966e3581a45cda3f8a05daa696e97b8519",
+      "bytes": 900461
+    },
+    {
+      "label": "DRA blocks NC",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_NC.v07.zip",
+      "sha256": "87ac258e7c090685d81ce1e1fd362dee24caf5290d7c461523cc6a00dacd726a",
+      "bytes": 9086055
+    },
+    {
+      "label": "DRA blocks ND",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_ND.v06.zip",
+      "sha256": "044705a978237b16f5de897a7bf068fc5a106092e273a3744672567603e39d0b",
+      "bytes": 736098
+    },
+    {
+      "label": "DRA blocks NE",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_NE.v07.zip",
+      "sha256": "dbdd51e005fdf9fbdc99444f1134d2cdde22f879fe1784bf7ac4b6ea928deb71",
+      "bytes": 1585890
+    },
+    {
+      "label": "DRA blocks NH",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_NH.v07.zip",
+      "sha256": "eb3fc2f064eb6d9073c32f98840c2da7d4c7a46954e7c9ea88c640d11f3e6ff1",
+      "bytes": 673718
+    },
+    {
+      "label": "DRA blocks NM",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_NM.v07.zip",
+      "sha256": "d940cb539f4ac6f79df93b388db016291d42b097e648c605273ff25c77866338",
+      "bytes": 1965819
+    },
+    {
+      "label": "DRA blocks NV",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_NV.v07.zip",
+      "sha256": "79cb7496b0b9ce7387c04fb84200c78c392534494afd91a9ac27367371e98e56",
+      "bytes": 1789912
+    },
+    {
+      "label": "DRA blocks NY",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_NY.v07.zip",
+      "sha256": "f34fbda3422091a049c677a5a54ec51c628efd83e133d18fb95c1c9a556ce44c",
+      "bytes": 9185860
+    },
+    {
+      "label": "DRA blocks OH",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_OH.v07.zip",
+      "sha256": "6b5735c0a8a362635f78324adf91340cc64759a074a64e16f9a674cd817efe8a",
+      "bytes": 9642072
+    },
+    {
+      "label": "DRA blocks OK",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_OK.v07.zip",
+      "sha256": "4d08f1cc62cd11a352661190eab0ee25d220fafff866bd4dd230a2a335d3ef61",
+      "bytes": 2414742
+    },
+    {
+      "label": "DRA blocks OR",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_OR.v06.zip",
+      "sha256": "b9be5207370c8ed3bc1aea3cd6cd1673a0cffe9ec88e73e492d666640aae981f",
+      "bytes": 2098007
+    },
+    {
+      "label": "DRA blocks PA",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_PA.v07.zip",
+      "sha256": "540eb6160479b5c849c5e97acdea1eb1f72f59d6ac67098d301a664035fd6502",
+      "bytes": 7157061
+    },
+    {
+      "label": "DRA blocks RI",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_RI.v07.zip",
+      "sha256": "4277bb0ed80e6cffd3e6b76e04b7c7f27bf4d29cd5f6c86b85a9f67a78d6e4cb",
+      "bytes": 584370
+    },
+    {
+      "label": "DRA blocks SC",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_SC.v07.zip",
+      "sha256": "e612688de938c8044ec636384bbb4b71a7f0305ecb5a1b2e5f3ad10d4b1e3c1f",
+      "bytes": 3674262
+    },
+    {
+      "label": "DRA blocks SD",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_SD.v06.zip",
+      "sha256": "51a7219d792d58245090e4a1c0c81b81d12d6ceb5dc3cdbac99aa0b83dc912b7",
+      "bytes": 633562
+    },
+    {
+      "label": "DRA blocks TN",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_TN.v07.zip",
+      "sha256": "161da7f1d12ff20aeb530f5bbcfc12812c3c429d35a2cb4983cf7c00db23d080",
+      "bytes": 2745010
+    },
+    {
+      "label": "DRA blocks TX",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_TX.v07.zip",
+      "sha256": "2af4478cca7eeb2b0b533e28e6e5ce06317c2a34c2b8401ae52e322717c2e696",
+      "bytes": 18493156
+    },
+    {
+      "label": "DRA blocks UT",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_UT.v07.zip",
+      "sha256": "59392239dd45fc87129ae8155d7d6907e8dfb0dae447ca2950bca7db1ef7893c",
+      "bytes": 2219750
+    },
+    {
+      "label": "DRA blocks VA",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_VA.v07.zip",
+      "sha256": "de091ea2a40902a7edbd77d5b65d90e7404a2f8bb17cd4390ed142310a595ffa",
+      "bytes": 4056486
+    },
+    {
+      "label": "DRA blocks VT",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_VT.v07.zip",
+      "sha256": "ca6b0c12399c904a7588d48133ee94dc5f7b53f088589c016a6a2a74837dae73",
+      "bytes": 757038
+    },
+    {
+      "label": "DRA blocks WA",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_WA.v07.zip",
+      "sha256": "ac2e479d94bf602d6def49eb1e6f173360edf792cef55c703a9c383d7adb3b7c",
+      "bytes": 7034930
+    },
+    {
+      "label": "DRA blocks WI",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_WI.v07.zip",
+      "sha256": "3ec34a6dcf2ccef653e30035a6e8b7f9e5e28e8d7365fd28daf0472e1e0d9129",
+      "bytes": 5211691
+    },
+    {
+      "label": "DRA blocks WV",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_WV.v07.zip",
+      "sha256": "d151de153d2037bbc25c75deac619d9a85790381c3aae23dcd1e05cb91dc4649",
+      "bytes": 1401649
+    },
+    {
+      "label": "DRA blocks WY",
+      "url": "https://data.dra2020.net/file/dra-block-data/Election_Data_Block_WY.v06.zip",
+      "sha256": "fd39f3ee57091b0d16f646f3c317b83e2970fa7a10f90e43f9de148d97a2ff69",
+      "bytes": 476711
+    },
+    {
+      "label": "FiveThirtyEight House polls election-eve mirror",
+      "url": "https://raw.githubusercontent.com/SRMG-Labs/us-election-data/700713b32b30529331a95206bb06040b9ea62df3/house_polls.csv",
+      "sha256": "a36644f787cd42dbebc31efae604d2715ab616427ff8baae3e5c1b49eb2d9cee",
+      "bytes": 315932
+    },
+    {
+      "label": "FiveThirtyEight generic ballot 2022-11-05 snapshot",
+      "url": "https://raw.githubusercontent.com/kentoyamada100/election-analytics-2022-midterms/3c9f718baf7fda26542b1d0542e5f032ca00db4f/analysis_data/1105_538_generic_ballot_polls.csv",
+      "sha256": "a3642b3643d044d2e3885a352c6da465f64e328feb2f1fe0996abd41ca84a4a9",
+      "bytes": 389213
+    },
+    {
+      "label": "FEC Federal Elections 2022 certified House results workbook",
+      "url": "https://www.fec.gov/documents/5676/federalelections2022.xlsx",
+      "sha256": "cdb258ea23803e50d752bcea19faa39b3c201eb960094bcb556c3a38c2350897",
+      "bytes": 3179722
+    }
+  ],
+  "note": "Historical evaluation only. No replay result may alter the frozen 2026 model contract.",
+  "result_source": {
+    "authority": "Federal Election Commission",
+    "publication": "Federal Elections 2022",
+    "sheet": "8. US House Results by State",
+    "url": "https://www.fec.gov/documents/5676/federalelections2022.xlsx",
+    "sha256": "cdb258ea23803e50d752bcea19faa39b3c201eb960094bcb556c3a38c2350897",
+    "role": "outcomes only; fetched after predictive inputs and scoreability decisions"
+  }
 }

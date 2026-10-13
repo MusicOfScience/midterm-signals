@@ -1,0 +1,503 @@
+race_code,race_type,state,district,known_date,dem_name,rep_name,ind_name,ind_caucus,incumbent_party,same_party,margin_earliest,margin_middle,margin_latest
+AL-01,house,AL,01,2022-06-01,(No Democrat),Jerry Carl,,,REP,REP,-24.433241,-30.095241,-28.593319
+AL-02,house,AL,02,2022-06-01,Phyllis Harvey-Hall,Barry Moore,,,REP,,-27.643198,-33.480592,-29.731334
+AL-03,house,AL,03,2022-06-01,Lin Veasey,Mike Rogers,,,REP,,-26.77262,-35.708912,-34.449327
+AL-04,house,AL,04,2022-06-01,Rick Neighbors,Robert Aderholt,,,REP,,-49.598856,-62.820885,-62.405745
+AL-05,house,AL,05,2022-06-01,Kathy Warner-Stanton,Dale Strong,,,,,-30.213842,-34.866711,-27.550236
+AL-06,house,AL,06,2022-06-01,(No Democrat),Gary Palmer,,,REP,REP,-43.569333,-40.184242,-30.374081
+AL-07,house,AL,07,2022-06-01,Terrycina Sewell,Beatrice Nichols,,,DEM,,34.732202,31.375352,32.39985
+AR-01,house,AR,01,2022-06-01,Monte Hodges,Rick Crawford,,,REP,,-25.600439,-36.677946,-42.14724
+AR-02,house,AR,02,2022-06-01,Quintessa Hathaway,French Hill,,,,,-16.734247,-15.989655,-13.48167
+AR-03,house,AR,03,2022-06-01,Lauren Mallett-Hays,Steve Womack,,,REP,,-33.089928,-31.02687,-24.140583
+AR-04,house,AR,04,2022-06-01,John White,Bruce Westerman,,,REP,,-24.540978,-31.857401,-36.243379
+AZ-01,house,AZ,01,2022-06-01,Jevin Hodge,David Schweikert,,,REP,,-17.335524,-4.558458,1.494654
+AZ-02,house,AZ,02,2022-06-01,Tom O'Halleran,Walter “Walt” Blackman,,,DEM,,-9.226724,-10.994299,-8.003596
+AZ-02,house,AZ,02,2022-08-03,Tom O'Halleran,Eli Crane,,,DEM,,-9.226724,-10.994299,-8.003596
+AZ-03,house,AZ,03,2022-06-01,Ruben Gallego,Jeff Zink,,,DEM,,47.823662,53.777181,51.453989
+AZ-04,house,AZ,04,2022-06-01,Greg Stanton,Tanya Contreras Wheeless,,,DEM,,-7.396684,2.707519,10.491435
+AZ-04,house,AZ,04,2022-08-04,Greg Stanton,Kelly Cooper,,,DEM,,-7.396684,2.707519,10.491435
+AZ-05,house,AZ,05,2022-06-01,Javier Ramos,Andy Biggs,,,REP,,-28.316949,-23.143484,-16.624448
+AZ-06,house,AZ,06,2022-06-01,Daniel Hernandez,Juan Ciscomani,,,,,-11.010049,-5.677191,0.071249
+AZ-06,house,AZ,06,2022-08-03,Kirsten Engel,Juan Ciscomani,,,,,-11.010049,-5.677191,0.071249
+AZ-07,house,AZ,07,2022-06-01,Raúl Grijalva,Luis Pozzolo,,,DEM,,26.618245,36.019078,33.258332
+AZ-08,house,AZ,08,2022-06-01,(No Democrat),Debbie Lesko,,,REP,REP,-23.682505,-20.261541,-13.72988
+AZ-09,house,AZ,09,2022-06-01,(No Democrat),Paul Gosar,,,REP,REP,-28.381839,-31.003523,-26.130538
+CA-01,house,CA,01,2022-06-01,Max Steiner,Doug LaMalfa,,,REP,,-18.605175,-23.437235,-19.474907
+CA-02,house,CA,02,2022-06-01,Jared Huffman,Douglas Brower,,,DEM,,43.846035,49.24439,50.71217
+CA-03,house,CA,03,2022-06-01,Kermit Jones,Kevin Kiley,,,,,-14.011263,-8.456184,-1.828969
+CA-04,house,CA,04,2022-06-01,Mike Thompson,Matt Brock,,,DEM,,32.612137,36.900083,37.479896
+CA-05,house,CA,05,2022-06-01,Michael J. “Mike” Barkley,Tom McClintock,,,REP,,-16.778836,-16.229965,-12.614166
+CA-06,house,CA,06,2022-06-01,Ami Bera,Tamika Hamilton,,,DEM,,13.412143,18.12055,18.934638
+CA-07,house,CA,07,2022-06-01,Doris Matsui,Max Semenenko,,,DEM,,33.181095,41.077912,38.044249
+CA-08,house,CA,08,2022-06-01,John Garamendi,Rudy Recile,,,DEM,,55.550978,59.032139,55.153881
+CA-09,house,CA,09,2022-06-01,Josh Harder,Tom Patti,,,DEM,,12.658038,13.806737,12.885672
+CA-10,house,CA,10,2022-06-01,Mark DeSaulnier,(No Republican),,,DEM,DEM,24.108772,38.547688,40.211191
+CA-11,house,CA,11,2022-06-01,Nancy Pelosi,John Dennis,,,DEM,,73.088802,81.29016,76.06244
+CA-12,house,CA,12,2022-06-01,Barbara Lee,Stephen Slauson,,,DEM,,82.16184,86.216691,82.417961
+CA-13,house,CA,13,2022-06-01,Adam Gray,John Duarte,,,,,10.387377,13.170524,11.08679
+CA-14,house,CA,14,2022-06-01,Eric Swalwell,Alison Hayden,,,DEM,,42.56594,50.098323,46.439088
+CA-15,house,CA,15,2022-06-01,Kevin Mullin,(No Republican),,,,DEM,52.429718,62.447194,58.453559
+CA-16,house,CA,16,2022-06-01,Anna G. Eshoo,(No Republican),,,DEM,DEM,42.347309,58.306199,54.206145
+CA-17,house,CA,17,2022-06-01,Ro Khanna,Ritesh Tandon,,,DEM,,47.763679,57.087203,48.377134
+CA-18,house,CA,18,2022-06-01,Zoe Lofgren,Peter Hernandez,,,DEM,,47.337905,51.816895,45.021132
+CA-19,house,CA,19,2022-06-01,Jimmy Panetta,Jeff Gorman,,,DEM,,34.824782,42.126602,40.519682
+CA-20,house,CA,20,2022-06-01,Marisa Wood,Kevin McCarthy,,,REP,,-33.92784,-32.593198,-25.464955
+CA-21,house,CA,21,2022-06-01,Jim Costa,Michael Maher,,,DEM,,18.712625,22.98126,20.698656
+CA-22,house,CA,22,2022-06-01,Rudy Salas,David G. Valadao,,,REP,,11.373952,16.822194,13.210772
+CA-23,house,CA,23,2022-06-01,Derek Marshall,Jay Obernolte,,,REP,,-15.447023,-15.760246,-10.068501
+CA-24,house,CA,24,2022-06-01,Salud Carbajal,Brad Allen,,,DEM,,16.099643,27.02409,29.763888
+CA-25,house,CA,25,2022-06-01,Raul Ruiz,Brian E. Hawkins,,,DEM,,11.898865,18.280352,15.6132
+CA-26,house,CA,26,2022-06-01,Julia Brownley,Matt Jacobs,,,DEM,,5.226557,18.353243,20.40173
+CA-27,house,CA,27,2022-06-01,Christy Smith,Mike Garcia,,,REP,,1.330685,10.352607,12.639416
+CA-28,house,CA,28,2022-06-01,Judy Chu,Wes Hallman,,,DEM,,24.40831,36.539677,34.555283
+CA-29,house,CA,29,2022-06-01,Tony Cardenas,(No Republican),,,,DEM,57.978906,64.822449,52.471453
+CA-30,house,CA,30,2022-06-01,Adam B. Schiff,(No Republican),,,DEM,DEM,49.33306,55.988243,47.082812
+CA-31,house,CA,31,2022-06-01,Grace F. Napolitano,Daniel Bocic Martinez,,,DEM,,31.465667,39.432627,31.691501
+CA-32,house,CA,32,2022-06-01,Brad Sherman,Lucie Lapointe Volotzky,,,DEM,,33.314744,47.480366,41.484266
+CA-33,house,CA,33,2022-06-01,Pete Aguilar,John Mark Porter,,,DEM,,27.915686,31.638177,25.930277
+CA-34,house,CA,34,2022-06-01,Jimmy Gomez,(No Republican),,,DEM,DEM,72.274867,78.140323,65.788995
+CA-35,house,CA,35,2022-06-01,Norma J. Torres,Mike Cargile,,,DEM,,30.704896,36.605164,28.585034
+CA-36,house,CA,36,2022-06-01,Ted W. Lieu,Joe E. Collins III,,,DEM,,28.979761,47.2182,45.054934
+CA-37,house,CA,37,2022-06-01,Sydney Kamlager,(No Republican),,,,DEM,82.952169,84.743845,74.690712
+CA-38,house,CA,38,2022-06-01,Linda T. Sánchez,Eric J. Ching,,,DEM,,28.056314,38.02564,30.823871
+CA-39,house,CA,39,2022-06-01,Mark Takano,Aja Smith,,,DEM,,26.316548,30.588412,26.713982
+CA-40,house,CA,40,2022-06-01,Asif Mahmood,Young Kim,,,REP,,-19.362083,-4.56929,1.908189
+CA-41,house,CA,41,2022-06-01,Will Rollins,Ken Calvert,,,REP,,-9.926647,-6.36041,-1.112778
+CA-42,house,CA,42,2022-06-01,Robert Garcia,John Briscoe,,,,,44.671496,53.983945,46.94727
+CA-43,house,CA,43,2022-06-01,Maxine Waters,Omar Navarro,,,DEM,,73.85399,76.175707,65.22061
+CA-44,house,CA,44,2022-06-01,Nanette Diaz Barragan,Paul Jones,,,,,54.170757,59.734199,49.366071
+CA-45,house,CA,45,2022-06-01,Jay F. Chen,Michelle Steel,,,REP,,-0.224948,14.058189,6.304506
+CA-46,house,CA,46,2022-06-01,Lou Correa,Christopher J. Gonzales,,,,,27.449566,41.990977,31.0793
+CA-47,house,CA,47,2022-06-01,Katie Porter,Scott Baugh,,,DEM,,-8.023074,7.900943,11.320158
+CA-48,house,CA,48,2022-06-01,Stephen Houlahan,Darrell Issa,,,REP,,-26.922138,-21.043366,-12.613263
+CA-49,house,CA,49,2022-06-01,Mike Levin,Brian Maryott,,,DEM,,-8.306434,5.954435,11.671209
+CA-50,house,CA,50,2022-06-01,Scott Peters,Corey Gustafson,,,DEM,,12.217001,29.082712,33.902831
+CA-51,house,CA,51,2022-06-01,Sara Jacobs,Stan Caplan,,,DEM,,12.565165,24.522016,27.952865
+CA-52,house,CA,52,2022-06-01,Juan Vargas,Tyler Geffeney,,,DEM,,36.596372,49.162735,37.640976
+CO-01,house,CO,01,2022-06-01,Diana DeGette,Jennifer Qualteri,,,DEM,,50.394426,59.07304,62.719451
+CO-02,house,CO,02,2022-06-01,Joe Neguse,Marshall Dawson,,,DEM,,27.384399,33.339918,40.936778
+CO-03,house,CO,03,2022-06-01,Adam Frisch,Lauren Boebert,,,REP,,-7.302959,-15.288525,-8.453683
+CO-04,house,CO,04,2022-06-01,Ike McCorkle,Ken Buck,,,REP,,-27.798634,-29.919191,-19.025707
+CO-05,house,CO,05,2022-06-01,David Torres,Doug Lamborn,,,REP,,-20.491359,-24.195145,-10.498326
+CO-06,house,CO,06,2022-06-01,Jason Crow,Steven Monahan,,,DEM,,9.355006,14.441503,24.43002
+CO-07,house,CO,07,2022-06-01,Brittany Pettersen,Erik Aadland,,,,,2.637413,3.240738,14.578333
+CO-08,house,CO,08,2022-06-01,Yadira Caraveo,Barbara Kirkmeyer,,,,,7.810836,-1.921195,4.68343
+CT-01,house,CT,01,2022-06-01,John B. Larson,Larry Lazor,,,DEM,,28.626936,24.34285,28.509337
+CT-02,house,CT,02,2022-06-01,Joe Courtney,Mike France,,,DEM,,13.237742,3.575621,11.710054
+CT-03,house,CT,03,2022-06-01,Rosa L. DeLauro,Lesley DeNardis,,,DEM,,26.089605,14.459782,19.979381
+CT-04,house,CT,04,2022-06-01,Jim Himes,Jayme Stevenson,,,DEM,,11.723554,25.484087,31.642814
+CT-05,house,CT,05,2022-06-01,Jahana Hayes,George Logan,,,DEM,,8.571005,4.395612,10.906679
+DE-01,house,DE,01,2022-06-01,Lisa Blunt Rochester,Lee Murphy,,,DEM,,18.89391,11.920536,19.253488
+FL-01,house,FL,01,2022-06-01,Rebekah Jones,Matt Gaetz,,,REP,,-38.307982,-40.112724,-32.876531
+FL-01,house,FL,01,2022-08-05,Peggy Schiller,Matt Gaetz,,,REP,,-38.307982,-40.112724,-32.876531
+FL-01,house,FL,01,2022-08-24,Rebekah Jones,Matt Gaetz,,,REP,,-38.307982,-40.112724,-32.876531
+FL-03,house,FL,03,2022-06-01,Tom Wells,Kat Cammack,,,REP,,-11.36807,-15.356843,-14.239847
+FL-03,house,FL,03,2022-08-24,Danielle Hawk,Kat Cammack,,,REP,,-11.36807,-15.356843,-14.239847
+FL-04,house,FL,04,2022-06-01,Anthony “Tony” Hill,Aaron Bean,,,,,-8.615632,-10.926726,-6.784729
+FL-04,house,FL,04,2022-08-24,LaShonda “L.J.” Holloway,Aaron Bean,,,,,-8.615632,-10.926726,-6.784729
+FL-05,house,FL,05,2022-06-01,(No Democrat),John Rutherford,,,REP,REP,-28.084468,-23.008497,-15.982795
+FL-06,house,FL,06,2022-06-01,(No Democrat),Michael Waltz,,,REP,REP,-12.858764,-24.309414,-23.887359
+FL-07,house,FL,07,2022-06-01,Karen Green,Anthony Sabatini,,,,,-5.866541,-8.043505,-5.605169
+FL-07,house,FL,07,2022-08-15,Karen Green,Cory Mills,,,,,-5.866541,-8.043505,-5.605169
+FL-08,house,FL,08,2022-06-01,Joanne Terry,Bill Posey,,,REP,,-14.883483,-21.644157,-17.837864
+FL-09,house,FL,09,2022-06-01,Darren Soto,Scotty Moore,,,DEM,,24.517063,27.522932,17.602177
+FL-10,house,FL,10,2022-06-01,Maxwell Alejandro Frost,Willie Montague,,,,,26.742815,33.93506,32.148761
+FL-10,house,FL,10,2022-08-24,Maxwell Alejandro Frost,Calvin B. Wimbish,,,,,26.742815,33.93506,32.148761
+FL-11,house,FL,11,2022-06-01,Shante Munns,Daniel Webster,,,REP,,-15.848686,-15.529498,-10.964142
+FL-12,house,FL,12,2022-06-01,Kimberly Walker,Gus Michael Bilirakis,,,REP,,-10.247887,-29.577285,-29.005376
+FL-13,house,FL,13,2022-06-01,Eric Lynn,Anna Paulina Luna,,,,,-0.255431,-8.212618,-6.817163
+FL-14,house,FL,14,2022-06-01,Kathy Castor,James Judge,,,DEM,,22.669509,22.770265,19.377244
+FL-15,house,FL,15,2022-06-01,Alan M. Cohn,Jackie Toledo,,,,,-1.82104,-4.012182,-3.181658
+FL-15,house,FL,15,2022-08-24,Alan M. Cohn,Laurel Lee,,,,,-1.82104,-4.012182,-3.181658
+FL-16,house,FL,16,2022-06-01,Jan Schneider,Vern Buchanan,,,REP,,-10.854473,-13.217556,-8.988878
+FL-17,house,FL,17,2022-06-01,Andrea Doria Kale,Greg Steube,,,,,-9.403083,-17.175562,-16.075115
+FL-18,house,FL,18,2022-06-01,(No Democrat),Scott Franklin,,,,REP,-12.550395,-22.206354,-23.044924
+FL-19,house,FL,19,2022-06-01,Cindy Banyai,Byron Donalds,,,REP,,-23.630077,-23.888042,-21.172817
+FL-20,house,FL,20,2022-06-01,Sheila Cherfilus-McCormick,Drew Montez Clark,,,DEM,,61.781419,58.469295,52.678299
+FL-21,house,FL,21,2022-06-01,Corinna Balderramos Robinson,Brian Mast,,,REP,,-4.969846,-10.633711,-9.499884
+FL-22,house,FL,22,2022-06-01,Lois Frankel,Rod Dorilás,,,DEM,,22.431869,20.723545,17.720923
+FL-22,house,FL,22,2022-08-24,Lois Frankel,Dan Franzese,,,DEM,,22.431869,20.723545,17.720923
+FL-23,house,FL,23,2022-06-01,Jared Moskowitz,James “Jim” Pruden,,,,,11.666776,14.620811,13.282303
+FL-23,house,FL,23,2022-08-24,Jared Moskowitz,Joe Budd,,,,,11.666776,14.620811,13.282303
+FL-24,house,FL,24,2022-06-01,Frederica Wilson,Lavern Spicer,,,DEM,,66.696507,64.971499,49.315206
+FL-24,house,FL,24,2022-08-24,Frederica Wilson,Jesus G. Navarro,,,DEM,,66.696507,64.971499,49.315206
+FL-25,house,FL,25,2022-06-01,Debbie Wasserman Schultz,Carla Spalding,,,DEM,,26.65872,29.296595,20.037258
+FL-26,house,FL,26,2022-06-01,Christine Alexandria Olivo,Mario Diaz-Balart,,,REP,,-1.243766,3.956239,-17.980238
+FL-27,house,FL,27,2022-06-01,Annette Taddeo,Marìa Elvira Salazar,,,REP,,4.967916,17.922996,-0.356773
+FL-27,house,FL,27,2022-08-30,Annette Taddeo,María Elvira Salazar,,,REP,,4.967916,17.922996,-0.356773
+FL-28,house,FL,28,2022-06-01,Juan Paredes,Carlos A. Gimenez,,,REP,,10.470525,16.132923,-6.517879
+FL-28,house,FL,28,2022-08-24,Robert Asencio,Carlos A. Gimenez,,,REP,,10.470525,16.132923,-6.517879
+GA-01,house,GA,01,2022-06-01,Wade Herring,Earl L. “Buddy” Carter,,,REP,,-13.983732,-17.017781,-13.565883
+GA-02,house,GA,02,2022-06-01,Sanford Bishop,Chris West,,,DEM,,14.818436,9.271264,10.469183
+GA-03,house,GA,03,2022-06-01,Val Almonord,Drew Ferguson,,,,,-36.426074,-36.626494,-30.487157
+GA-04,house,GA,04,2022-06-01,Henry C. “Hank” Johnson Jr.,Jonathan Chavez,,,DEM,,45.601663,53.847215,58.346455
+GA-05,house,GA,05,2022-06-01,Nikema Williams,Christian Zimm,,,DEM,,56.579464,67.046631,67.324973
+GA-06,house,GA,06,2022-06-01,Bob Christian,Rich McCormick,,,,,-43.601115,-27.905553,-14.996001
+GA-07,house,GA,07,2022-06-01,Lucy McBath,Mark Gonsalves,,,DEM,,-2.847608,14.541593,26.141981
+GA-08,house,GA,08,2022-06-01,Darrius Butler,Austin Scott,,,REP,,-25.874889,-31.396186,-27.914345
+GA-09,house,GA,09,2022-06-01,Michael “Mike” Ford,Andrew Clyde,,,REP,,-51.028807,-47.019378,-38.379057
+GA-10,house,GA,10,2022-06-01,Tabitha Johnson-Green,Mike Collins,,,,,-30.115363,-29.792713,-23.725283
+GA-11,house,GA,11,2022-06-01,Antonio Daza,Barry Loudermilk,,,REP,,-34.328813,-25.853539,-15.546294
+GA-12,house,GA,12,2022-06-01,Elizabeth “Liz” Johnson,Rick W. Allen,,,REP,,-9.251933,-13.5265,-10.266945
+GA-13,house,GA,13,2022-06-01,David Scott,Caesar Gonzales,,,DEM,,50.379074,55.798539,60.958457
+GA-14,house,GA,14,2022-06-01,Marcus Flowers,Marjorie Taylor Greene,,,REP,,-40.567998,-44.635973,-37.905781
+HI-01,house,HI,01,2022-06-01,Ed Case,Conrad Kress,,,DEM,,41.374933,34.869989,29.930076
+HI-02,house,HI,02,2022-06-01,Jill N. Tokuda,Joe Akana,,,,,45.43096,34.89501,30.194491
+IA-01,house,IA,01,2022-06-01,Christina Bohannan,Mariannette Miller-Meeks,,,REP,,13.289906,-3.323944,-2.944587
+IA-02,house,IA,02,2022-06-01,Liz Mathis,Ashley Hinson,,,REP,,12.941366,-5.003407,-4.480235
+IA-03,house,IA,03,2022-06-01,Cindy Axne,Zach Nunn,,,DEM,,5.937347,-3.48156,-0.351886
+IA-04,house,IA,04,2022-06-01,Ryan Melton,Randy Feenstra,,,REP,,-9.252725,-29.483234,-26.477532
+ID-01,house,ID,01,2022-06-01,Kaylee Peterson,Russ Fulcher,,,REP,,-34.252041,-44.17085,-39.258142
+ID-02,house,ID,02,2022-06-01,Wendy Norman,Mike Simpson,,,REP,,-32.016454,-29.377417,-23.713498
+IL-01,house,IL,01,2022-06-01,Jonathan L. Jackson,Eric Carlson,,,,,55.817853,50.008124,42.967331
+IL-02,house,IL,02,2022-06-01,Robin Kelly,Shane Cultra,,,DEM,,47.455038,44.141177,40.575458
+IL-02,house,IL,02,2022-07-14,Robin Kelly,Thomas Lynch,,,DEM,,47.455038,44.141177,40.575458
+IL-03,house,IL,03,2022-06-01,Delia Ramirez,Justin Burau,,,,,38.295956,47.47234,42.272386
+IL-04,house,IL,04,2022-06-01,Jesus “Chuy” Garcia,James Falakos,,,,,43.398147,53.810645,47.276163
+IL-05,house,IL,05,2022-06-01,Mike Quigley,Tommy Hanson,,,DEM,,23.031237,41.150435,40.503988
+IL-06,house,IL,06,2022-06-01,Sean Casten,Keith Pekau,,,DEM,,1.291708,8.860264,11.081951
+IL-07,house,IL,07,2022-06-01,Danny K. Davis,(No Republican),,,DEM,DEM,76.074475,79.564597,74.000804
+IL-08,house,IL,08,2022-06-01,Raja Krishnamoorthi,Chris Dargis,,,DEM,,9.636524,16.735956,15.70203
+IL-09,house,IL,09,2022-06-01,Janice D. Schakowsky,Maxwell “Max” Rice,,,DEM,,32.697791,45.119135,42.058934
+IL-10,house,IL,10,2022-06-01,Brad Schneider,Joseph Severino,,,DEM,,10.770063,24.543255,26.363853
+IL-11,house,IL,11,2022-06-01,Bill Foster,Catalina Lauf,,,DEM,,1.773109,11.458523,15.629255
+IL-12,house,IL,12,2022-06-01,Homer “Chip” Markel,Mike Bost,,,REP,,-26.340101,-45.044427,-43.557392
+IL-13,house,IL,13,2022-06-01,Nikki Budzinski,Regan Deering,,,,,14.634207,8.932489,11.482566
+IL-14,house,IL,14,2022-06-01,Lauren Underwood,Scott R. Gryder,,,DEM,,8.578064,9.209681,11.694082
+IL-15,house,IL,15,2022-06-01,Paul J. Lange,Mary Miller,,,REP,,-24.366581,-40.964549,-39.558967
+IL-16,house,IL,16,2022-06-01,(No Democrat),Darin LaHood,,,REP,REP,-17.384627,-25.773208,-22.011161
+IL-16,house,IL,16,2022-08-04,Elizabeth Haderlein,Darin LaHood,,,REP,,-17.384627,-25.773208,-22.011161
+IL-17,house,IL,17,2022-06-01,Eric Sorensen,Esther Joy King,,,,,17.60808,7.161328,7.975581
+IN-01,house,IN,01,2022-06-01,Frank J. Mrvan,Jennifer-Ruth Green,,,DEM,,23.70173,12.541918,8.493043
+IN-02,house,IN,02,2022-06-01,Paul D. Steury,Jackie Walorski,,,,,-16.968395,-26.759922,-22.995489
+IN-02,house,IN,02,2022-08-22,Paul D. Steury,Rudolph Yakym,,,,,-16.968395,-26.759922,-22.995489
+IN-03,house,IN,03,2022-06-01,Gary L. Snyder,Jim Banks,,,REP,,-25.895938,-36.262613,-30.553042
+IN-04,house,IN,04,2022-06-01,Roger D. Day,Jim Baird,,,REP,,-27.867105,-36.489734,-29.813414
+IN-05,house,IN,05,2022-06-01,Jeannine Lee Lake,Victoria Spartz,,,REP,,-20.55072,-25.080867,-16.265217
+IN-06,house,IN,06,2022-06-01,Cynthia “Cinde” Wirth,Greg Pence,,,REP,,-29.012292,-39.737608,-32.619415
+IN-07,house,IN,07,2022-06-01,André D. Carson,Angela Grabovsky,,,DEM,,34.012098,38.030433,43.138155
+IN-08,house,IN,08,2022-06-01,Ray McCormick,Larry D. Bucshon,,,REP,,-19.491841,-36.01096,-33.447858
+IN-09,house,IN,09,2022-06-01,Matthew Fyfe,Erin Houchin,,,,,-15.319365,-29.934201,-27.898253
+KS-01,house,KS,01,2022-06-01,James “Jimmy” Beard,Tracey Mann,,,REP,,-34.193301,-36.395945,-30.248623
+KS-02,house,KS,02,2022-06-01,Patrick Schmidt,Jake LaTurner,,,REP,,-11.669531,-20.268618,-16.697021
+KS-03,house,KS,03,2022-06-01,Sharice Davids,Amanda L. Adkins,,,DEM,,-17.388509,-5.822318,4.547072
+KS-04,house,KS,04,2022-06-01,Bob Hernandez,Ron Estes,,,REP,,-26.15225,-29.29672,-22.261829
+KY-01,house,KY,01,2022-06-01,Jimmy C. Ausbrooks,James R. Comer,,,REP,,-32.512068,-46.048176,-43.423755
+KY-02,house,KY,02,2022-06-01,Hank Linderman,S. Brett Guthrie,,,,,-28.146952,-41.772637,-37.207245
+KY-03,house,KY,03,2022-06-01,Morgan McGarvey,Stuart N. Ray,,,,,13.787345,16.282729,22.776849
+KY-04,house,KY,04,2022-06-01,Matthew Lehman,Thomas Massie,,,REP,,-29.237813,-38.88594,-33.306737
+KY-05,house,KY,05,2022-06-01,Conor Halbleib,Harold “Hal” Rogers,,,REP,,-49.950134,-61.818573,-60.086363
+KY-06,house,KY,06,2022-06-01,Geoffrey M. “Geoff” Young,Andy Barr,,,REP,,-17.419645,-18.790344,-11.172694
+LA-01,house,LA,01,2022-06-01,(No Democrat),Steve Scalise,,,REP,REP,-46.619183,-45.352676,-40.282728
+LA-01,house,LA,01,2022-07-25,Kate Darling,Steve Scalise,,,REP,,-46.619183,-45.352676,-40.282728
+LA-02,house,LA,02,2022-06-01,Troy A. Carter,(No Republican),,,DEM,DEM,54.112027,54.067364,53.69429
+LA-02,house,LA,02,2022-07-25,Troy A. Carter,Dan Lux,,,DEM,,54.112027,54.067364,53.69429
+LA-04,house,LA,04,2022-06-01,(No Democrat),“Mike” Johnson,,,REP,REP,-18.726763,-23.975065,-24.454017
+LA-04,house,LA,04,2022-07-25,(No Democrat),“Mike” Johnson,,,REP,REP,-18.726763,-23.975065,-24.454017
+LA-06,house,LA,06,2022-06-01,(No Democrat),Garret Graves,,,REP,REP,-38.67603,-36.912387,-34.365646
+LA-06,house,LA,06,2022-07-25,(No Democrat),Garret Graves,,,REP,REP,-38.67603,-36.912387,-34.365646
+MA-01,house,MA,01,2022-06-01,Richard E. Neal,Dean James Martilli,,,DEM,,27.768761,18.939141,22.103684
+MA-02,house,MA,02,2022-06-01,James P. McGovern,Jeffrey A. Sossa-Paquette,,,DEM,,21.395074,25.902466,31.514317
+MA-03,house,MA,03,2022-06-01,Lori Loureiro Trahan,Dean A. Tran,,,DEM,,15.638023,23.144609,27.997347
+MA-04,house,MA,04,2022-06-01,Jake Auchincloss,(No Republican),,,DEM,DEM,18.596103,24.347652,29.000614
+MA-05,house,MA,05,2022-06-01,Katherine M. Clark,Caroline Colarusso,,,DEM,,33.367756,46.67957,51.987348
+MA-06,house,MA,06,2022-06-01,Seth Moulton,Bob May,,,DEM,,10.83041,19.611367,28.101657
+MA-07,house,MA,07,2022-06-01,Ayanna S. Pressley,Donnie Dionicio Palmer Jr.,,,DEM,,68.996616,75.505196,73.442661
+MA-08,house,MA,08,2022-06-01,Stephen F. Lynch,Hamilton Soares Rodrigues,,,DEM,,19.203492,29.591747,36.067154
+MA-08,house,MA,08,2022-09-07,Stephen F. Lynch,Robert G. Burke,,,DEM,,19.203492,29.591747,36.067154
+MA-09,house,MA,09,2022-06-01,Bill Keating,Jesse G. Brown,,,,,9.7643,10.664928,18.511629
+MD-01,house,MD,01,2022-06-01,Heather R. Mizeur,Andy Harris,,,REP,,-17.450029,-24.471761,-14.833545
+MD-02,house,MD,02,2022-06-01,C.A. Dutch Ruppersberger,Michael A. Geppi,,,DEM,,7.897435,11.841173,21.24836
+MD-02,house,MD,02,2022-07-20,C.A. Dutch Ruppersberger,Nicolee Ambrose,,,DEM,,7.897435,11.841173,21.24836
+MD-03,house,MD,03,2022-06-01,John Sarbanes,Yuripzy Morgan,,,DEM,,7.787065,14.71748,26.05752
+MD-04,house,MD,04,2022-06-01,Glenn F. Ivey,Jeff Warner,,,,,83.305827,84.653772,82.374465
+MD-05,house,MD,05,2022-06-01,Steny Hoyer,Chris Palombi,,,DEM,,27.741989,25.236404,37.101226
+MD-06,house,MD,06,2022-06-01,David J. Trone,Neil C. Parrott,,,DEM,,1.255987,1.282839,10.030639
+MD-07,house,MD,07,2022-06-01,Kweisi Mfume,Ray Bly,,,DEM,,67.813002,63.146635,64.508993
+MD-07,house,MD,07,2022-07-20,Kweisi Mfume,Scott M. Collier,,,DEM,,67.813002,63.146635,64.508993
+MD-08,house,MD,08,2022-06-01,Jamie Raskin,Gregory Thomas Coll,,,DEM,,46.212082,60.980597,63.596113
+ME-01,house,ME,01,2022-06-01,Chellie M. Pingree,Edwin Thelander,,,DEM,,21.757049,15.488986,23.469922
+ME-02,house,ME,02,2022-06-01,Jared Forrest Golden,Bruce Poliquin,,,DEM,,9.39351,-9.786376,-6.296908
+MI-01,house,MI,01,2022-06-01,Bob Lorinser,Jack Bergman,,,REP,,-9.014495,-24.628251,-20.088393
+MI-02,house,MI,02,2022-06-01,Jerry Hilliard,John Moolenaar,,,REP,,-10.159114,-29.863886,-28.701279
+MI-03,house,MI,03,2022-06-01,Hillary Scholten,Peter Meijer,,,,,-2.497349,0.158152,8.661849
+MI-03,house,MI,03,2022-08-03,Hillary Scholten,John Gibbs,,,,,-2.497349,0.158152,8.661849
+MI-04,house,MI,04,2022-06-01,(No Democrat),Bill Huizenga,,,REP,REP,-6.0144,-10.053194,-4.018562
+MI-04,house,MI,04,2022-08-24,Joseph Alfonso,Bill Huizenga,,,REP,,-6.0144,-10.053194,-4.018562
+MI-05,house,MI,05,2022-06-01,Bart Goldberg,Tim Walberg,,,REP,,-8.544903,-26.827281,-24.590164
+MI-06,house,MI,06,2022-06-01,Debbie Dingell,Whittney Williams,,,DEM,,19.25978,21.859188,27.027021
+MI-07,house,MI,07,2022-06-01,Elissa Slotkin,Tom Barrett,,,DEM,,2.557585,-4.025926,0.963786
+MI-08,house,MI,08,2022-06-01,Daniel T. Kildee,Paul Junge,,,DEM,,17.045539,1.114836,2.060524
+MI-09,house,MI,09,2022-06-01,Brian Jaye,Lisa McClain,,,REP,,-14.717579,-34.78451,-29.878594
+MI-10,house,MI,10,2022-06-01,Carl J. Marlinga,John James,,,,,6.621832,-5.642104,-0.992111
+MI-11,house,MI,11,2022-06-01,Haley Stevens,Matthew DenOtter,,,DEM,,13.349958,14.597215,20.103304
+MI-11,house,MI,11,2022-08-03,Haley Stevens,Mark Ambrose,,,DEM,,13.349958,14.597215,20.103304
+MI-12,house,MI,12,2022-06-01,Rashida Tlaib,Steven Elliott,,,DEM,,53.165161,48.97222,49.074101
+MI-13,house,MI,13,2022-06-01,Sharon McPhail,Martell D. Bivings,,,,,63.945907,53.096734,50.176053
+MI-13,house,MI,13,2022-08-03,Shri Thanedar,Martell D. Bivings,,,,,63.945907,53.096734,50.176053
+MN-01,house,MN,01,2022-06-01,Jeff Ettinger,Brad Finstad,,,REP,,1.888928,-15.247478,-9.40521
+MN-02,house,MN,02,2022-06-01,Angie Craig,Tyler Kistner,,,DEM,,-0.152237,-1.167675,7.330822
+MN-03,house,MN,03,2022-06-01,Dean Phillips,Tom Weiler,,,DEM,,3.213476,12.078822,21.39664
+MN-04,house,MN,04,2022-06-01,Betty McCollum,May Lor Xiong,,,DEM,,27.750126,34.19491,38.406543
+MN-05,house,MN,05,2022-06-01,Ilhan Omar,Cicely Davis,,,DEM,,51.457217,60.470436,64.412703
+MN-06,house,MN,06,2022-06-01,Jeanne Hendricks,Tom Emmer,,,REP,,-15.569564,-25.924827,-18.038903
+MN-07,house,MN,07,2022-06-01,Jill Abahsain,Michelle Fischbach,,,REP,,-13.313545,-36.739632,-33.831932
+MN-08,house,MN,08,2022-06-01,Jen Schultz,Pete Stauber,,,REP,,7.00522,-13.897903,-11.536522
+MO-01,house,MO,01,2022-06-01,Cori Bush,Andrew Jones,,,DEM,,56.196465,56.409898,59.326934
+MO-02,house,MO,02,2022-06-01,Trish Gunby,Ann Wagner,,,REP,,-19.38881,-17.322783,-7.890213
+MO-03,house,MO,03,2022-06-01,Jon Karlen,Blaine Luetkemeyer,,,REP,,-23.091891,-32.522796,-26.631271
+MO-03,house,MO,03,2022-08-03,Bethany Mann,Blaine Luetkemeyer,,,REP,,-23.091891,-32.522796,-26.631271
+MO-04,house,MO,04,2022-06-01,Jack Truman,Mark Alford,,,,,-28.657972,-43.921418,-40.406946
+MO-05,house,MO,05,2022-06-01,"Emanuel Cleaver, II",Jerry W Barham,,,DEM,,21.352507,21.555272,26.847019
+MO-05,house,MO,05,2022-08-03,"Emanuel Cleaver, II",Jacob Turk,,,DEM,,21.352507,21.555272,26.847019
+MO-06,house,MO,06,2022-06-01,Charles West,Sam Graves,,,REP,,-24.831069,-40.391057,-37.759224
+MO-06,house,MO,06,2022-08-03,Henry Martin,Sam Graves,,,REP,,-24.831069,-40.391057,-37.759224
+MO-07,house,MO,07,2022-06-01,John M. Woodman,Eric Burlison,,,,,-38.022109,-47.736038,-42.167907
+MO-07,house,MO,07,2022-08-03,Kristen Radaker-Sheafer,Eric Burlison,,,,,-38.022109,-47.736038,-42.167907
+MO-08,house,MO,08,2022-06-01,Randi McCallian,Jason Smith,,,REP,,-32.313084,-52.86849,-52.044732
+MS-01,house,MS,01,2022-06-01,Dianne Black,Trent Kelly,,,REP,,-26.030637,-34.478748,-32.161897
+MS-02,house,MS,02,2022-06-01,Bennie G. Thompson,Brian Flowers,,,DEM,,31.321211,26.235359,26.389378
+MS-03,house,MS,03,2022-06-01,Shuwaski A. Young,Michael Guest,,,REP,,-24.573995,-28.157373,-24.634244
+MS-04,house,MS,04,2022-06-01,Johnny L. DuPree,Mike Ezell,,,,,-37.225119,-42.378296,-38.562052
+NC-01,house,NC,01,2022-06-01,Don Davis,Sandy Smith,,,,,14.3922,10.110081,7.368264
+NC-02,house,NC,02,2022-06-01,Deborah K. Ross,Christine E. Villaverde,,,DEM,,11.227837,23.322514,29.231363
+NC-03,house,NC,03,2022-06-01,Barbara D. Gaskins,Greg Murphy,,,REP,,-20.6378,-26.942956,-25.702409
+NC-04,house,NC,04,2022-06-01,Valerie P. Foushee,Courtney Geels,,,,,29.99037,35.413955,35.501575
+NC-05,house,NC,05,2022-06-01,Kyle Parrish,Virginia Foxx,,,REP,,-18.550113,-23.444469,-21.549381
+NC-06,house,NC,06,2022-06-01,Kathy Manning,Christian Castelli,,,DEM,,9.478268,10.843515,12.552264
+NC-07,house,NC,07,2022-06-01,Charles Graham,David Rouzer,,,REP,,-5.292229,-13.376905,-12.891716
+NC-08,house,NC,08,2022-06-01,Scott Huffman,Dan Bishop,,,REP,,-29.884161,-37.476186,-34.460051
+NC-09,house,NC,09,2022-06-01,Ben Clark,Richard Hudson,,,REP,,-4.727149,-8.558486,-8.086468
+NC-10,house,NC,10,2022-06-01,Pam Genant,Patrick McHenry,,,REP,,-31.037776,-41.518124,-39.964468
+NC-11,house,NC,11,2022-06-01,Jasmine Beach-Ferrara,Chuck Edwards,,,,,-10.207323,-15.88486,-10.296869
+NC-12,house,NC,12,2022-06-01,Alma S. Adams,Tyler Lee,,,DEM,,24.100815,25.831968,30.596955
+NC-13,house,NC,13,2022-06-01,Wiley Nickel,Bo Hines,,,,,-2.987043,-2.442622,1.724129
+NC-14,house,NC,14,2022-06-01,Jeff Jackson,Pat Harrigan,,,,,1.706952,10.239671,16.645892
+ND-01,house,ND,01,2022-06-01,Mark Haugen,Kelly Armstrong,,,REP,,-20.222417,-39.618486,-34.410322
+ND-01,house,ND,01,2022-09-09,(No Democrat),Kelly Armstrong,,,REP,REP,-20.222417,-39.618486,-34.410322
+NE-01,house,NE,01,2022-06-01,Patty Pansing Brooks,Mike Flood,,,REP,,-16.112191,-19.587027,-11.331109
+NE-02,house,NE,02,2022-06-01,Tony Vargas,Don Bacon,,,REP,,-6.428533,-2.061946,6.445885
+NE-03,house,NE,03,2022-06-01,David J. Else,Adrian Smith,,,REP,,-43.062492,-56.579632,-52.898078
+NH-01,house,NH,01,2022-06-01,Chris Pappas,Matt Mowers,,,DEM,,1.42874,-1.780752,6.0244
+NH-01,house,NH,01,2022-09-14,Chris Pappas,Karoline Leavitt,,,DEM,,1.42874,-1.780752,6.0244
+NH-02,house,NH,02,2022-06-01,Ann McLane Kuster,Robert Burns,,,DEM,,9.860644,2.574486,8.981738
+NM-01,house,NM,01,2022-06-01,Melanie Ann Stansbury,Michelle Garcia Holmes,,,DEM,,7.337688,9.154953,14.823272
+NM-02,house,NM,02,2022-06-01,Gabriel Vasquez,Yvette Herrell,,,REP,,9.905176,6.759496,6.009471
+NM-03,house,NM,03,2022-06-01,Teresa Leger Fernandez,Alexis Martinez Johnson,,,DEM,,14.993941,11.641961,10.95924
+NV-01,house,NV,01,2022-06-01,Dina Titus,Mark Robertson,,,DEM,,14.474639,10.717911,8.705303
+NV-02,house,NV,02,2022-06-01,Elizabeth Mercedes Krause,Mark E. Amodei,,,REP,,-9.256315,-14.503563,-11.343512
+NV-03,house,NV,03,2022-06-01,Susie Lee,April Becker,,,DEM,,8.675551,7.174255,6.768099
+NV-04,house,NV,04,2022-06-01,Steven A. Horsford,Sam Peters,,,DEM,,17.781526,11.128306,8.451142
+NY-01,house,NY,01,2022-06-01,Bridget Fleming,Nicholas J. LaLota,,,,,-2.36951,-8.2474,0.216115
+NY-02,house,NY,02,2022-06-01,Jackie Gordon,Andrew R. Garbarino,,,REP,,9.693338,-6.839169,-1.517982
+NY-03,house,NY,03,2022-06-01,Joshua Alexander Lafazan,George A.D. Santos,,,,,5.378627,5.31122,8.251696
+NY-03,house,NY,03,2022-08-24,Robert P. Zimmerman,George A.D. Santos,,,,,5.378627,5.31122,8.251696
+NY-04,house,NY,04,2022-06-01,Laura Gillen,Anthony D'Esposito,,,,,15.386048,12.487238,14.694041
+NY-04,house,NY,04,2022-08-16,Laura A. Gillen,Anthony P. D'Esposito,,,,,15.386048,12.487238,14.694041
+NY-05,house,NY,05,2022-06-01,Gregory Meeks,Paul King,,,DEM,,78.481429,70.681847,62.852226
+NY-05,house,NY,05,2022-08-15,Gregory Meeks,(No Republican),,,DEM,DEM,78.481429,70.681847,62.852226
+NY-05,house,NY,05,2022-08-24,Gregory Meeks,Paul King,,,DEM,,78.481429,70.681847,62.852226
+NY-06,house,NY,06,2022-06-01,Grace Meng,Jesus Gonzalez,,,DEM,,43.463485,41.979898,30.5725
+NY-06,house,NY,06,2022-08-15,Grace Meng,Thomas Zmich,,,DEM,,43.463485,41.979898,30.5725
+NY-06,house,NY,06,2022-08-16,Grace Meng,Tom Zmich,,,DEM,,43.463485,41.979898,30.5725
+NY-07,house,NY,07,2022-06-01,Nydia Velazquez,Juan Pagan,,,DEM,,76.862696,75.313554,63.108342
+NY-07,house,NY,07,2022-08-16,Nydia M. Velazquez,Juan Pagan,,,DEM,,76.862696,75.313554,63.108342
+NY-07,house,NY,07,2022-08-31,Nydia M. Velázquez,Juan Pagán,,,DEM,,76.862696,75.313554,63.108342
+NY-08,house,NY,08,2022-06-01,Hakeem Jeffries,Yuri Dashevsky,,,DEM,,70.794655,62.00261,53.506411
+NY-08,house,NY,08,2022-08-16,Hakeem S. Jeffries,Yuri Dashevsky,,,DEM,,70.794655,62.00261,53.506411
+NY-09,house,NY,09,2022-06-01,Yvette Clarke,(No Republican),,,DEM,DEM,59.747819,61.019207,51.903236
+NY-09,house,NY,09,2022-08-15,Yvette Clarke,Menachem M. Raitport,,,DEM,,59.747819,61.019207,51.903236
+NY-09,house,NY,09,2022-08-29,Yvette Clarke,(No Republican),,,DEM,DEM,59.747819,61.019207,51.903236
+NY-10,house,NY,10,2022-06-01,Mondaire Jones,Benine Hamdan,,,,,70.625806,77.517237,71.959246
+NY-10,house,NY,10,2022-08-15,Daniel Goldman,Benine Hamdan,,,,,70.625806,77.517237,71.959246
+NY-11,house,NY,11,2022-06-01,Max Rose,Nicole Malliotakis,,,REP,,6.865789,-8.115309,-7.711704
+NY-11,house,NY,11,2022-08-16,Max N. Rose,Nicole Malliotakis,,,REP,,6.865789,-8.115309,-7.711704
+NY-12,house,NY,12,2022-06-01,Carolyn Maloney,Michael Zumbluskas,,,DEM,,55.156254,73.406099,72.093312
+NY-12,house,NY,12,2022-08-16,Carolyn B. Maloney,Michael Zumbluskas,,,DEM,,55.156254,73.406099,72.093312
+NY-12,house,NY,12,2022-08-24,Jerrold L. Nadler,Michael Zumbluskas,,,DEM,,55.156254,73.406099,72.093312
+NY-13,house,NY,13,2022-06-01,Adriano Espaillat,Gary Reuben Richards,,,DEM,,90.859145,89.17474,77.657747
+NY-13,house,NY,13,2022-08-29,Adriano Espaillat,(No Republican),,,DEM,DEM,90.859145,89.17474,77.657747
+NY-14,house,NY,14,2022-06-01,Alexandria Ocasio-Cortez,Tina Forte,,,DEM,,73.632154,68.371112,56.987682
+NY-15,house,NY,15,2022-06-01,Ritchie J. Torres,(No Republican),,,DEM,DEM,85.473153,83.398711,70.408768
+NY-15,house,NY,15,2022-07-20,Ritchie J. Torres,Stylo A. Sapaskis,,,DEM,,85.473153,83.398711,70.408768
+NY-16,house,NY,16,2022-06-01,Jamaal Bowman,Patrick Delices,,,DEM,,36.575584,44.548043,44.127873
+NY-16,house,NY,16,2022-08-02,Jamaal Bowman,John Ciampoli,,,DEM,,36.575584,44.548043,44.127873
+NY-16,house,NY,16,2022-09-19,Jamaal Bowman,Miriam L. Flisser,,,DEM,,36.575584,44.548043,44.127873
+NY-17,house,NY,17,2022-06-01,Sean Patrick Maloney,Michael V. Lawler,,,DEM,,5.222579,8.394405,10.172376
+NY-18,house,NY,18,2022-06-01,Pat Ryan,Colin J. Schmitt,,,DEM,,10.927767,0.873329,8.493002
+NY-19,house,NY,19,2022-06-01,Josh Riley,Marcus Molinaro,,,,,9.282645,-1.757478,4.724848
+NY-20,house,NY,20,2022-06-01,Paul D. Tonko,Elizabeth L. Joy,,,DEM,,19.400939,12.692779,19.566909
+NY-21,house,NY,21,2022-06-01,Matt Castelli,Elise M. Stefanik,,,REP,,4.744661,-16.831393,-12.624349
+NY-22,house,NY,22,2022-06-01,Francis Conole,Brandon M. Williams,,,,,12.596678,2.156284,7.618914
+NY-22,house,NY,22,2022-07-20,Francis Conole,Steven M. Wells,,,,,12.596678,2.156284,7.618914
+NY-22,house,NY,22,2022-08-02,Francis Conole,Steve Wells,,,,,12.596678,2.156284,7.618914
+NY-22,house,NY,22,2022-08-24,Francis Conole,Brandon M. Williams,,,,,12.596678,2.156284,7.618914
+NY-23,house,NY,23,2022-06-01,Max H. Della Pia,Carl P. Paladino,,,,,-9.487605,-25.514772,-17.55379
+NY-23,house,NY,23,2022-08-24,Max H. Della Pia,Nick Langworthy,,,,,-9.487605,-25.514772,-17.55379
+NY-24,house,NY,24,2022-06-01,Steven Holden,Claudia Tenney,,,REP,,-4.121293,-22.946956,-17.601849
+NY-25,house,NY,25,2022-06-01,Joseph D. Morelle,La'Ron D. Singletary,,,DEM,,17.532084,14.599572,20.130432
+NY-26,house,NY,26,2022-06-01,Brian Higgins,Steven L. Sams II,,,DEM,,26.171733,16.591612,23.81762
+OH-01,house,OH,01,2022-06-01,Greg Landsman,Steve Chabot,,,REP,,-0.028526,4.110218,8.589723
+OH-02,house,OH,02,2022-06-01,Samantha Meadows,Brad Wenstrup,,,REP,,-21.269624,-45.2165,-45.975456
+OH-03,house,OH,03,2022-06-01,Joyce Beatty,Lee R. Stahley,,,DEM,,32.204803,40.244396,44.426841
+OH-04,house,OH,04,2022-06-01,Tamie Wilson,Jim Jordan,,,REP,,-25.224324,-39.251884,-36.251394
+OH-05,house,OH,05,2022-06-01,Craig Swartz,Bob Latta,,,,,-7.348077,-26.328079,-27.218576
+OH-06,house,OH,06,2022-06-01,Louis G. Lyras,Bill Johnson,,,REP,,3.352817,-25.653147,-29.120318
+OH-07,house,OH,07,2022-06-01,Matthew Diemer,Max Miller,,,,,-3.459507,-11.987326,-9.338876
+OH-08,house,OH,08,2022-06-01,Vanessa Enoch,Warren Davidson,,,REP,,-22.536455,-27.05149,-22.349612
+OH-09,house,OH,09,2022-06-01,Marcy Kaptur,J.R. Majewski,,,DEM,,17.230152,-0.99194,-2.968851
+OH-10,house,OH,10,2022-06-01,David Esrati,Mike Turner,,,REP,,-0.064229,-6.384271,-3.580638
+OH-11,house,OH,11,2022-06-01,Shontel Brown,Eric J. Brewer,,,DEM,,63.572114,62.295933,58.208492
+OH-12,house,OH,12,2022-06-01,Amy Rippel-Elton,Troy Balderson,,,REP,,-12.328485,-30.81904,-31.334581
+OH-13,house,OH,13,2022-06-01,Emilia Sykes,Madison Gesiotto Gilbert,,,,,11.486508,2.200436,2.859369
+OH-14,house,OH,14,2022-06-01,Matt Kilboy,David P. Joyce,,,REP,,5.569313,-14.274455,-15.147825
+OH-15,house,OH,15,2022-06-01,Gary Josephson,Mike Carey,,,REP,,-3.946447,-10.885873,-6.871216
+OK-01,house,OK,01,2022-06-01,Adam Martin,Kevin Hern,,,REP,,-30.885569,-29.497221,-21.915605
+OK-02,house,OK,02,2022-06-01,Naomi Andrews,Avery Frix,,,,,-36.764611,-52.159884,-54.374792
+OK-02,house,OK,02,2022-08-24,Naomi Andrews,Josh Brecheen,,,,,-36.764611,-52.159884,-54.374792
+OK-03,house,OK,03,2022-06-01,Jeremiah A. Ross,Frank D. Lucas,,,REP,,-41.941473,-47.746193,-43.795859
+OK-04,house,OK,04,2022-06-01,Mary Brannon,Tom Cole,,,REP,,-32.152694,-37.582761,-31.674077
+OK-05,house,OK,05,2022-06-01,Joshua Harris-Till,Stephanie Bice,,,REP,,-28.550662,-26.514026,-18.94754
+OR-01,house,OR,01,2022-06-01,Suzanne Bonamici,Christopher A. Mann,,,DEM,,29.794087,36.702088,40.319021
+OR-02,house,OR,02,2022-06-01,Joe Yetter,Cliff S Bentz,,,REP,,-22.179226,-30.726188,-25.032474
+OR-02,house,OR,02,2022-08-26,Joe Yetter,Cliff S. Bentz,,,REP,,-22.179226,-30.726188,-25.032474
+OR-03,house,OR,03,2022-06-01,Earl Blumenauer,Joanna Harbour,,,DEM,,46.224072,48.05515,48.410546
+OR-04,house,OR,04,2022-06-01,Val Hoyle,Alek Skarlatos,,,,,14.037593,8.961862,13.063436
+OR-05,house,OR,05,2022-06-01,Jamie McLeod-Skinner,Lori Chavez-DeRemer,,,,,2.010889,3.217647,9.063213
+OR-06,house,OR,06,2022-06-01,Andrea Salinas,Mike Erickson,,,,,2.962701,7.570334,13.542296
+PA-01,house,PA,01,2022-06-01,Ashley Ehasz,Brian Fitzpatrick,,,REP,,0.768306,0.733465,4.689241
+PA-02,house,PA,02,2022-06-01,Brendan F. Boyle,Aaron Bashir,,,DEM,,56.181992,50.380909,43.015759
+PA-03,house,PA,03,2022-06-01,Dwight Evans,(No Republican),,,DEM,DEM,84.035377,83.613631,81.379558
+PA-04,house,PA,04,2022-06-01,Madeleine Dean,Christian Nascimento,,,DEM,,9.704789,14.49193,19.139471
+PA-05,house,PA,05,2022-06-01,Mary Gay Scanlon,David Galluch,,,DEM,,27.844884,29.924305,32.56073
+PA-06,house,PA,06,2022-06-01,Chrissy Houlahan,Guy Louis Ciarrocchi,,,DEM,,3.014754,9.261112,14.893399
+PA-07,house,PA,07,2022-06-01,Susan Wild,Lisa Scheller,,,DEM,,5.0059,-2.958515,0.628709
+PA-08,house,PA,08,2022-06-01,Matt Cartwright,Jim Bognet,,,DEM,,12.694276,-8.343116,-2.938792
+PA-09,house,PA,09,2022-06-01,Amanda R. Waldman,Dan Meuser,,,REP,,-21.57948,-41.184366,-37.064559
+PA-10,house,PA,10,2022-06-01,Shamaine Daniels,Scott Perry,,,REP,,-7.342001,-10.36777,-4.190656
+PA-11,house,PA,11,2022-06-01,Bob Hollister,Lloyd K. Smucker,,,REP,,-22.692085,-26.764028,-21.582386
+PA-12,house,PA,12,2022-06-01,Summer Lee,Mike Doyle,,,,,19.24241,18.09313,20.169738
+PA-13,house,PA,13,2022-06-01,(No Democrat),John Joyce,,,REP,REP,-34.5481,-47.974253,-45.767282
+PA-14,house,PA,14,2022-06-01,(No Democrat),Guy Reschenthaler,,,REP,REP,-18.901689,-33.156571,-31.849609
+PA-15,house,PA,15,2022-06-01,(No Democrat),Glenn “GT” Thompson,,,REP,REP,-24.873983,-37.915145,-37.525455
+PA-15,house,PA,15,2022-08-30,Michael Molesevich,Glenn “GT” Thompson,,,REP,,-24.873983,-37.915145,-37.525455
+PA-16,house,PA,16,2022-06-01,Dan Pastore,Mike Kelly,,,REP,,-7.935132,-23.090819,-20.910928
+PA-17,house,PA,17,2022-06-01,Chris Deluzio,Jeremy Shaffer,,,,,-0.829276,1.079466,5.90578
+RI-01,house,RI,01,2022-06-01,David N. Cicilline,Allen R. Waters,,,DEM,,34.401675,26.427138,29.527624
+RI-02,house,RI,02,2022-06-01,Seth M. Magaziner,Allan W. Fung,,,,,22.372457,7.865267,13.945557
+SC-01,house,SC,01,2022-06-01,Annie Andrews,Nancy Mace,,,REP,,-18.545491,-15.610949,-8.783258
+SC-02,house,SC,02,2022-06-01,Judd Larkins,Joe Wilson,,,REP,,-18.851778,-18.059288,-10.758041
+SC-03,house,SC,03,2022-06-01,(No Democrat),Jeff Duncan,,,REP,REP,-31.001092,-39.362385,-38.003663
+SC-04,house,SC,04,2022-06-01,Ken Hill,William Timmons,,,REP,,-24.652667,-25.220537,-18.890963
+SC-04,house,SC,04,2022-08-16,(No Democrat),William Timmons,,,REP,REP,-24.652667,-25.220537,-18.890963
+SC-05,house,SC,05,2022-06-01,Evangeline Hundley,Ralph Norman,,,REP,,-13.582873,-21.128227,-18.418308
+SC-06,house,SC,06,2022-06-01,James E. “Jim” Clyburn,Duke Buckner,,,DEM,,36.100023,32.898692,32.580725
+SC-07,house,SC,07,2022-06-01,Daryl W Scott,Russell Fry,,,,,-10.224277,-19.501522,-18.843918
+SC-07,house,SC,07,2022-08-10,Daryl W. Scott,Russell Fry,,,,,-10.224277,-19.501522,-18.843918
+SD-01,house,SD,01,2022-06-01,(No Democrat),Dusty Johnson,,,REP,REP,-18.436998,-31.94263,-26.86956
+TN-01,house,TN,01,2022-06-01,Cameron Parsons,Diana Lynn Harshbarger,,,REP,,-48.177106,-59.184264,-55.163457
+TN-02,house,TN,02,2022-06-01,Mark Harmon,Tim Burchett,,,REP,,-37.084401,-37.351186,-29.783709
+TN-03,house,TN,03,2022-06-01,Meg Gorman,Chuck Fleischmann,,,REP,,-29.738443,-37.046951,-32.500761
+TN-04,house,TN,04,2022-06-01,Arnold J. White,Scott DesJarlais,,,REP,,-32.341439,-43.01885,-38.446759
+TN-04,house,TN,04,2022-08-05,Wayne Steele,Scott DesJarlais,,,REP,,-32.341439,-43.01885,-38.446759
+TN-05,house,TN,05,2022-06-01,Heidi Campbell,Beth Harwell,,,,,-21.776298,-18.140837,-11.561268
+TN-05,house,TN,05,2022-08-05,Heidi Campbell,Andy Ogles,,,,,-21.776298,-18.140837,-11.561268
+TN-06,house,TN,06,2022-06-01,Clay Faircloth,John Rose,,,REP,,-24.428318,-33.279207,-29.698385
+TN-06,house,TN,06,2022-08-05,Randal Cooper,John Rose,,,REP,,-24.428318,-33.279207,-29.698385
+TN-07,house,TN,07,2022-06-01,Odessa Kelly,Mark E Green,,,REP,,-10.037241,-18.204487,-15.479991
+TN-07,house,TN,07,2022-08-26,Odessa Kelly,Mark E. Green,,,REP,,-10.037241,-18.204487,-15.479991
+TN-08,house,TN,08,2022-06-01,Tim McDonald,David Kustoff,,,REP,,-34.627891,-40.368228,-37.870571
+TN-08,house,TN,08,2022-08-05,Lynnette P. Williams,David Kustoff,,,REP,,-34.627891,-40.368228,-37.870571
+TN-09,house,TN,09,2022-06-01,Steve Cohen,Brown Dudley,,,DEM,,48.326126,48.564616,49.073028
+TN-09,house,TN,09,2022-08-05,Steve Cohen,Charlotte Bergmann,,,DEM,,48.326126,48.564616,49.073028
+TX-01,house,TX,01,2022-06-01,Jrmar “JJ” Jefferson,Nathaniel Moran,,,,,-44.389668,-49.2395,-46.413312
+TX-02,house,TX,02,2022-06-01,Robin Fulford,Dan Crenshaw,,,REP,,-45.481378,-33.307038,-23.091358
+TX-03,house,TX,03,2022-06-01,Sandeep Srivastava,Keith Self,,,,,-38.956465,-27.697456,-14.643252
+TX-04,house,TX,04,2022-06-01,Iro Omere,Pat Fallon,,,REP,,-41.201772,-36.006177,-26.292968
+TX-05,house,TX,05,2022-06-01,Tartisha Hill,Lance Gooden,,,REP,,-31.742118,-29.910701,-22.707121
+TX-06,house,TX,06,2022-06-01,(No Democrat),Jake Ellzey,,,REP,REP,-34.391178,-32.474312,-24.253497
+TX-07,house,TX,07,2022-06-01,Lizzie Fletcher,Johnny Teague,,,DEM,,7.572167,31.43197,30.146827
+TX-08,house,TX,08,2022-06-01,Laura Jones,Morgan Luttrell,,,,,-43.11144,-33.28179,-27.537999
+TX-09,house,TX,09,2022-06-01,Al Green,Jimmy I. Leon,,,DEM,,51.40867,58.977893,54.011125
+TX-10,house,TX,10,2022-06-01,Linda Nuno,Michael McCaul,,,REP,,-34.670329,-27.951046,-19.133349
+TX-11,house,TX,11,2022-06-01,(No Democrat),August Pfluger,,,REP,REP,-45.682409,-43.985753,-40.921376
+TX-12,house,TX,12,2022-06-01,Trey J. Hunt,Kay Granger,,,REP,,-31.690124,-27.065296,-18.435751
+TX-13,house,TX,13,2022-06-01,Kathleen Brown,Ronny Jackson,,,REP,,-54.90751,-53.727502,-46.22563
+TX-14,house,TX,14,2022-06-01,Mikal Williams,Randy Weber,,,REP,,-27.820985,-29.549712,-28.931106
+TX-15,house,TX,15,2022-06-01,Michelle Vallejo,Monica De La Cruz,,,,,12.478882,13.726623,-2.905775
+TX-16,house,TX,16,2022-06-01,Veronica Escobar,Irene Armendariz-Jackson,,,DEM,,31.536731,44.62091,35.969737
+TX-17,house,TX,17,2022-06-01,Mary Jo Woods,Pete Sessions,,,REP,,-29.73315,-29.502613,-22.894221
+TX-18,house,TX,18,2022-06-01,Sheila Jackson Lee,Carmen Maria Montiel,,,DEM,,45.509948,53.967838,49.211986
+TX-19,house,TX,19,2022-06-01,(No Democrat),Jodey C. Arrington,,,REP,REP,-49.789941,-50.838147,-46.903618
+TX-20,house,TX,20,2022-06-01,Joaquin Castro,Kyle Sinclair,,,DEM,,26.260322,33.920259,33.63932
+TX-21,house,TX,21,2022-06-01,Claudia Andreana Zapata,Chip Roy,,,REP,,-37.783474,-29.501627,-19.997758
+TX-22,house,TX,22,2022-06-01,Jamie Kaye Jordan,Troy E. Nehls,,,REP,,-39.367545,-25.573039,-16.282071
+TX-23,house,TX,23,2022-06-01,John Lira,Tony Gonzales,,,REP,,-11.383761,-4.180779,-7.281062
+TX-24,house,TX,24,2022-06-01,Jan McDowell,Beth Van Duyne,,,REP,,-40.174427,-25.235556,-12.547246
+TX-25,house,TX,25,2022-06-01,(No Democrat),Roger Williams,,,REP,REP,-39.167807,-38.420089,-31.600113
+TX-26,house,TX,26,2022-06-01,(No Democrat),Michael C. Burgess,,,REP,REP,-41.859998,-32.297995,-18.80503
+TX-27,house,TX,27,2022-06-01,Maclovio Perez Jr.,Michael Cloud,,,REP,,-20.392791,-22.524344,-22.72668
+TX-28,house,TX,28,2022-06-01,Henry Cuellar,Cassy Garcia,,,DEM,,21.818225,20.041068,7.133215
+TX-29,house,TX,29,2022-06-01,Sylvia Garcia,Robert Schafranek,,,DEM,,36.440833,51.276185,37.166153
+TX-30,house,TX,30,2022-06-01,Jasmine Crockett,James Rodgers,,,,,55.464724,57.913087,57.444896
+TX-31,house,TX,31,2022-06-01,(No Democrat),John Carter,,,REP,REP,-37.668001,-31.974581,-20.6302
+TX-32,house,TX,32,2022-06-01,Colin Allred,Antonio Swad,,,DEM,,11.846774,27.433575,33.526791
+TX-33,house,TX,33,2022-06-01,Marc Veasey,Patrick David Gillespie,,,DEM,,45.217981,53.461007,50.606084
+TX-35,house,TX,35,2022-06-01,Greg Casar,Dan McQueen,,,,,38.161671,44.923354,46.062787
+TX-36,house,TX,36,2022-06-01,Jon Haire,Brian Babin,,,REP,,-37.627711,-34.429071,-31.999308
+TX-37,house,TX,37,2022-06-01,Lloyd Doggett,Jenny Garcia Sharon,,,DEM,,29.351834,48.745226,53.816344
+TX-38,house,TX,38,2022-06-01,Duncan F. Klussmann,Wesley Hunt,,,,,-43.177172,-28.072354,-18.380787
+UT-01,house,UT,01,2022-06-01,Rick Edwin Jones,Blake D. Moore,,,REP,,-47.309754,-20.972812,-20.452559
+UT-02,house,UT,02,2022-06-01,Nick Mitchell,Chris Stewart,,,REP,,-42.201177,-20.851722,-17.800402
+UT-03,house,UT,03,2022-06-01,Glenn J. Wright,John Curtis,,,REP,,-54.211183,-27.74856,-20.364173
+UT-04,house,UT,04,2022-06-01,Darlene McDonald,Burgess Owens,,,REP,,-54.523207,-30.304255,-27.114471
+VA-01,house,VA,01,2022-06-01,Herbert C. “Herb” Jones Jr.,Rob J. Wittman,,,REP,,-20.03476,-14.507366,-6.788234
+VA-02,house,VA,02,2022-06-01,Elaine G. Luria,Jen A. Kiggans,,,DEM,,-3.485515,-5.871806,2.089294
+VA-03,house,VA,03,2022-06-01,Robert C. “Bobby” Scott,Terry T. Namkung,,,DEM,,37.967277,35.144381,38.862135
+VA-04,house,VA,04,2022-06-01,A. Donald McEachin,Leon Benjamin Sr.,,,DEM,,31.379065,32.904513,36.299633
+VA-05,house,VA,05,2022-06-01,Joshua M. Throneburg,Bob Good,,,REP,,-9.190873,-11.907215,-8.388461
+VA-05,house,VA,05,2022-10-10,Joshua M. Throneburg,Robert G. “Bob” Good,,,REP,,-9.190873,-11.907215,-8.388461
+VA-06,house,VA,06,2022-06-01,Jennifer Lewis,Ben L. Cline,,,REP,,-18.652966,-27.198825,-22.537087
+VA-06,house,VA,06,2022-10-10,Jennifer Lynn Lewis,Ben L. Cline,,,REP,,-18.652966,-27.198825,-22.537087
+VA-07,house,VA,07,2022-06-01,Abigail A. Spanberger,Yesli I. Vega,,,DEM,,3.724925,2.299231,6.861706
+VA-08,house,VA,08,2022-06-01,Donald S. Beyer Jr.,Karina Lipsman,,,DEM,,36.439862,55.554053,56.834228
+VA-08,house,VA,08,2022-10-10,Donald S. Beyer Jr.,Karina A. Lipsman,,,DEM,,36.439862,55.554053,56.834228
+VA-09,house,VA,09,2022-06-01,Taysha DeVaughan,H. Morgan Griffith,,,REP,,-29.933337,-43.156744,-42.511555
+VA-09,house,VA,09,2022-10-10,Taysha Lee DeVaughan,H. Morgan Griffith,,,REP,,-29.933337,-43.156744,-42.511555
+VA-10,house,VA,10,2022-06-01,Jennifer T. Wexton,Hung Cao,,,DEM,,-0.538932,8.129822,18.361345
+VA-11,house,VA,11,2022-06-01,Gerald E. “Gerry” Connolly,Jim Myles,,,DEM,,18.101307,36.47712,41.878409
+VA-11,house,VA,11,2022-10-10,Gerald E. “Gerry” Connolly,James G. “Jim” Myles,,,DEM,,18.101307,36.47712,41.878409
+VT-01,house,VT,01,2022-06-01,Molly Gray,Ericka Bundy Redic,,,,,36.494518,30.372853,36.598373
+VT-01,house,VT,01,2022-07-20,Becca Balint,Ericka Bundy Redic,,,,,36.494518,30.372853,36.598373
+VT-01,house,VT,01,2022-08-10,Becca Balint,Liam Madden,,,,,36.494518,30.372853,36.598373
+WA-01,house,WA,01,2022-06-01,Suzan DelBene,Vincent J. Cavaleri,,,DEM,,19.353841,28.000881,31.483495
+WA-02,house,WA,02,2022-06-01,Rick Larsen,Leif Johnson,,,DEM,,16.737147,19.507397,23.54647
+WA-02,house,WA,02,2022-08-03,Rick Larsen,Dan Matthews,,,DEM,,16.737147,19.507397,23.54647
+WA-03,house,WA,03,2022-06-01,Marie Gluesenkamp Perez,Jaime Herrera Beutler,,,,,-1.625459,-8.214255,-4.31004
+WA-03,house,WA,03,2022-08-10,Marie Gluesenkamp Perez,Joe Kent,,,,,-1.625459,-8.214255,-4.31004
+WA-04,house,WA,04,2022-06-01,(No Democrat),Dan Newhouse,,,REP,REP,-20.9183,-23.308194,-17.385203
+WA-04,house,WA,04,2022-08-07,Doug White,Dan Newhouse,,,REP,,-20.9183,-23.308194,-17.385203
+WA-05,house,WA,05,2022-06-01,Ann Marie Danimus,Cathy McMorris Rodgers,,,REP,,-11.213283,-15.308768,-10.26706
+WA-05,house,WA,05,2022-08-03,Natasha Hill,Cathy McMorris Rodgers,,,REP,,-11.213283,-15.308768,-10.26706
+WA-06,house,WA,06,2022-06-01,Derek Kilmer,Elizabeth Kreiselmaier,,,DEM,,14.848101,13.041262,17.74766
+WA-07,house,WA,07,2022-06-01,Pramila Jayapal,Paul Glumaz,,,DEM,,65.789632,76.646823,77.06758
+WA-07,house,WA,07,2022-08-11,Pramila Jayapal,Cliff Moon,,,DEM,,65.789632,76.646823,77.06758
+WA-08,house,WA,08,2022-06-01,Kim Schrier,Reagan Dunn,,,DEM,,1.029192,3.524025,6.903313
+WA-08,house,WA,08,2022-08-07,Kim Schrier,Matt Larkin,,,DEM,,1.029192,3.524025,6.903313
+WA-09,house,WA,09,2022-06-01,Adam Smith,(No Republican),,,DEM,DEM,37.515531,46.713783,45.961215
+WA-09,house,WA,09,2022-08-10,Adam Smith,Doug Basler,,,DEM,,37.515531,46.713783,45.961215
+WA-10,house,WA,10,2022-06-01,Marilyn Strickland,Keith R. Swank,,,DEM,,16.440174,14.332743,18.26142
+WI-01,house,WI,01,2022-06-01,Ann Roe,Bryan Steil,,,REP,,5.246339,-2.842469,-2.034841
+WI-02,house,WI,02,2022-06-01,Marc Pocan,Charity Barry,,,DEM,,38.80634,40.228485,42.341946
+WI-02,house,WI,02,2022-08-10,Marc Pocan,Erik Olsen,,,DEM,,38.80634,40.228485,42.341946
+WI-02,house,WI,02,2022-09-06,Mark Pocan,Erik Olsen,,,DEM,,38.80634,40.228485,42.341946
+WI-03,house,WI,03,2022-06-01,Brad Pfaff,Derrick Van Orden,,,,,11.226491,-4.78858,-4.761023
+WI-04,house,WI,04,2022-06-01,Gwen Moore,Travis Clark,,,DEM,,48.316719,52.740231,53.737818
+WI-04,house,WI,04,2022-08-10,Gwen Moore,Tim Rogers,,,DEM,,48.316719,52.740231,53.737818
+WI-05,house,WI,05,2022-06-01,Mike Van Someren,Scott Fitzgerald,,,REP,,-30.027284,-28.81229,-23.210613
+WI-06,house,WI,06,2022-06-01,(No Democrat),Glenn Grothman,,,REP,REP,-7.631528,-18.205818,-15.926715
+WI-07,house,WI,07,2022-06-01,Richard Dick Ausman,Tom Tiffany,,,REP,,-3.001781,-21.519511,-20.268539
+WI-08,house,WI,08,2022-06-01,(No Democrat),Mike Gallagher,,,REP,REP,-3.432934,-18.217342,-15.734774
+WV-01,house,WV,01,2022-06-01,Lacy Watson,Carol Miller,,,REP,,-28.289268,-45.356913,-41.549409
+WV-02,house,WV,02,2022-06-01,Barry Lee Wendell,Alexander X. Mooney,,,REP,,-26.717044,-43.281073,-37.686378
+WY-01,house,WY,01,2022-06-01,Lynnette GreyBull,Harriet Hageman,,,,,-42.321268,-51.410639,-44.960869
