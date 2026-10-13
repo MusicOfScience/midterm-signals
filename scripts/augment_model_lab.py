@@ -4,7 +4,8 @@
 This script is deliberately downstream of scripts/model_lab.py. It reads already-
 frozen checkpoint predictions and certified outcomes only to evaluate whether the
 race-poll blend improved those same forecasts relative to their structural +
-generic-ballot prior. It never changes a prediction or model coefficient.
+generic-ballot prior, and to label roster-state changes in movement forensics.
+It never changes a prediction or model coefficient.
 """
 from __future__ import annotations
 
@@ -139,6 +140,37 @@ def transition_partition(previous: dict[str, dict], current: dict[str, dict], ou
     return {key: summarize(rows) for key, rows in groups.items()}
 
 
+def roster_transitions(previous: dict[str, dict], current: dict[str, dict], outcomes: dict[str, int]) -> dict:
+    changes = []
+    for code in sorted(set(previous) & set(current) & set(outcomes)):
+        a, b = previous[code], current[code]
+        before = (a.get("dem_candidate"), a.get("rep_candidate"))
+        after = (b.get("dem_candidate"), b.get("rep_candidate"))
+        if before == after:
+            continue
+        p0, p1 = float(a["dem_probability"]), float(b["dem_probability"])
+        y = outcomes[code]
+        directed = (1 if y else -1) * (p1 - p0)
+        changes.append({
+            "race_code": code,
+            "race_type": b.get("race_type"),
+            "before": {"dem_candidate": before[0], "rep_candidate": before[1]},
+            "after": {"dem_candidate": after[0], "rep_candidate": after[1]},
+            "dem_probability_before": round(p0, 6),
+            "dem_probability_after": round(p1, 6),
+            "absolute_probability_change": round(abs(p1 - p0), 6),
+            "winner_directed_probability_change": round(directed, 6),
+            "large_movement": abs(p1 - p0) >= MOVEMENT_THRESHOLD,
+        })
+    changes.sort(key=lambda r: r["absolute_probability_change"], reverse=True)
+    return {
+        "count": len(changes),
+        "large_movement_count": sum(r["large_movement"] for r in changes),
+        "changes": changes,
+        "interpretation": "Candidate-roster changes are preserved as historical information-state changes but are labelled separately so they are not mistaken for ordinary polling/news movement.",
+    }
+
+
 def augment(payload: dict) -> dict:
     for cycle in payload.get("cycles", []):
         if cycle.get("state") != "scored":
@@ -163,6 +195,7 @@ def augment(payload: dict) -> dict:
         movement = cycle.get("movement") or {}
         if movement.get("state") == "scored":
             partitions = []
+            roster = []
             days = payload.get("checkpoints_days_to_election") or [60, 30, 14, 7, 1]
             for earlier, later in zip(days, days[1:]):
                 if earlier in by_day and later in by_day:
@@ -171,10 +204,19 @@ def augment(payload: dict) -> dict:
                         "to_days": later,
                         **transition_partition(by_day[earlier], by_day[later], outcomes),
                     })
+                    roster.append({
+                        "from_days": earlier,
+                        "to_days": later,
+                        **roster_transitions(by_day[earlier], by_day[later], outcomes),
+                    })
             movement["polling_partitions"] = partitions
+            movement["roster_transitions"] = roster
 
     payload.setdefault("metric_definitions", {})["paired_polling_component_test"] = (
         "For races with eligible race-level polls, compares the published checkpoint probability with that same race's frozen structural + generic-ballot prior before the race-poll blend. Negative Brier/log-loss delta means the race-poll component improved the paired forecasts. Outcomes are used only after both probabilities exist."
+    )
+    payload.setdefault("metric_definitions", {})["roster_transition"] = (
+        "A change in the admitted candidate pair between fixed checkpoints. These information-state changes remain in the frozen historical forecast but are labelled separately in movement forensics."
     )
     payload.setdefault("leakage_guards", []).append(
         "Paired polling-component diagnostics are computed only after the published checkpoint probabilities are frozen; certified outcomes are used solely to score the frozen full and prior probabilities."
@@ -182,6 +224,10 @@ def augment(payload: dict) -> dict:
     payload.setdefault("diagnostic_contract", {})["paired_polling_component_test"] = {
         "counterfactual": "same race, same checkpoint, same structural + generic-ballot prior, race-level poll blend removed",
         "competitive_subset": "prior probability 20-80%",
+        "model_effect": "NONE",
+    }
+    payload.setdefault("diagnostic_contract", {})["roster_transition_policy"] = {
+        "rule": "preserve frozen probability; label candidate-pair changes separately in movement diagnostics",
         "model_effect": "NONE",
     }
     return payload
