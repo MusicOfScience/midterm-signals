@@ -157,7 +157,7 @@ def admit_2018() -> tuple[list[dict], list[dict]]:
         if digest != src["sha256"]:
             raise RuntimeError(f"2018 {source_name} hash changed: {digest} != {src['sha256']}")
         provenance.append({"name": source_name, "url": src["url"], "sha256": digest})
-        for row in csv.DictReader(io.StringIO(data.decode("utf-8-sig"))):
+        for row in csv.DictReader(io.StringIO(data.decode("utf-8-sig", errors="replace"))):
             if str(row.get("year") or "") != "2018":
                 continue
             if str(row.get("stage") or "").strip().upper() not in {"", "GEN"}:
