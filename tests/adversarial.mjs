@@ -19,13 +19,15 @@ try {
   // Numerical/publication contract: a production forecast can only be exposed
   // when the complete federal race roster is accounted for and the run itself
   // reports that validation passed.
-  const [status, forecast, report, sourceStatus, signals, results] = await Promise.all([
+  const [status, forecast, report, sourceStatus, signals, results, external, fec] = await Promise.all([
     json('/data/status.json'),
     json('/data/forecast.json'),
     json('/data/run-report.json'),
     json('/data/source-status.json'),
     json('/data/signals.json'),
     json('/data/results.json'),
+    json('/data/external-forecasters.json'),
+    json('/data/fec.json'),
   ]);
 
   assert.equal(status.production_forecast, 'published');
@@ -36,6 +38,7 @@ try {
   assert.deepEqual(report.warnings, []);
   assert.equal(report.house_races, 435);
   assert.equal(report.senate_contests, status.senate_contests_accounted_for);
+  assert.equal(report.enrichment?.numerical_forecast_unchanged, true, 'context enrichment must not change numerical probabilities');
 
   assert(Array.isArray(forecast.races), 'forecast.races must be an array');
   const house = forecast.races.filter(r => r.race_type === 'house');
@@ -54,12 +57,43 @@ try {
   for (const id of ['upstream_input_mirror', 'generic_ballot', 'race_polls']) {
     assert.equal(sourceMap.get(id)?.state, 'current', `${id} is a required current numerical source`);
   }
+
+  // Third-party forecasts must always have an explicit state. Missing access is
+  // never silently converted to a neutral rating or synthetic probability.
+  const allowedExternalStates = new Set(['current', 'stale', 'unavailable', 'restricted', 'manual']);
   for (const id of ['cook', 'inside_elections', 'crystal_ball', 'silver_bulletin', 'ddhq']) {
     const state = sourceMap.get(id)?.state;
-    assert(['current', 'unavailable'].includes(state), `${id} must be explicit, never silently neutral`);
+    assert(allowedExternalStates.has(state), `${id} must be explicit, never silently neutral; got ${state}`);
   }
+  assert.equal(sourceMap.get('cook')?.state, 'restricted', 'Cook must remain an explicit licensed/access boundary unless a permitted feed is configured');
+  assert.equal(sourceMap.get('silver_bulletin')?.state, 'restricted', 'Silver Bulletin must remain an explicit subscriber/licensing boundary');
+  assert(['current','stale'].includes(sourceMap.get('inside_elections')?.state), 'Inside Elections public ratings adapter should be current or last-known-good stale');
+  assert(['manual','current','stale'].includes(sourceMap.get('crystal_ball')?.state), 'Crystal Ball must be explicitly manual or a real configured feed');
+  assert(['manual','current','stale'].includes(sourceMap.get('ddhq')?.state), 'DDHQ must be explicitly manual or a real configured feed');
+  assert((external.inside_elections?.ratings_count || 0) > 0, 'Inside Elections configured source must contain native race ratings');
+  assert.equal(external.model_effect, 'NONE', 'external forecasters may not silently alter MIDTERM SIGNALS probabilities');
+
+  // Campaign Signals is now a real structured event layer. Every item must
+  // state its model effect; contextual items must default to NONE while poll
+  // observations may say POLL INPUT only because those polls are already
+  // consumed by the separately documented quantitative poll adapter.
   assert.equal(Array.isArray(signals.signals), true);
-  assert.equal(signals.signals.length, 0, 'qualitative signals must remain empty unless explicitly imported');
+  assert(signals.signals.length > 0, 'campaign signals should contain current structured records');
+  const allowedEffects = new Set(['NONE', 'POLL INPUT']);
+  for (const signal of signals.signals) {
+    assert(signal.id, 'every signal requires a stable id');
+    assert(signal.date, `signal ${signal.id} requires a date`);
+    assert(signal.category, `signal ${signal.id} requires a category`);
+    assert(signal.description, `signal ${signal.id} requires a factual description`);
+    assert(allowedEffects.has(signal.model_effect || 'NONE'), `unexpected model effect on ${signal.id}`);
+    if (signal.category !== 'POLL') assert.equal(signal.model_effect || 'NONE', 'NONE', `${signal.category} must not affect probabilities`);
+    if (signal.category === 'RATING CHANGE') assert(signal.source, `${signal.id} rating change requires source provenance`);
+    if (signal.category === 'FUNDRAISING') assert.match(String(signal.source || ''), /^https:\/\/www\.fec\.gov\//, `${signal.id} fundraising signal must cite FEC`);
+  }
+  assert(signals.signals.some(s => s.category === 'POLL'), 'campaign signals should include structured poll observations');
+  assert((fec.matched_candidates || 0) > 0, 'official FEC adapter should match current production candidates');
+  assert(['current','stale'].includes(fec.state), `FEC adapter must be current/stale when records are published, got ${fec.state}`);
+
   assert.equal(results.phase, 'pre-election');
   assert.equal(results.state, 'unavailable');
   assert.deepEqual(results.races, []);
@@ -74,6 +108,8 @@ try {
   assert.match(homeText, /30-SECOND READ/i);
   assert.match(homeText, /HOUSE/i);
   assert.match(homeText, /SENATE/i);
+  assert.doesNotMatch(homeText, /External feeds not configured/i, 'production home page must not advertise the removed external-feed placeholder');
+  assert.doesNotMatch(homeText, /0 structured signals/i, 'production home page must not advertise the removed campaign-signal placeholder');
   assert.equal(requested.includes('/app.bundle.mjs'), false, 'home must not eagerly load the full analytical app');
   assert.equal(requested.includes('/data/bootstrap.json'), false, 'home must not eagerly load bootstrap data');
   assert.equal(requested.includes('/data/forecast.json'), false, 'home must not eagerly load the full forecast JSON');

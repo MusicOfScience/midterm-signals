@@ -16,7 +16,7 @@
             "No leakage-free 2018/2022 production replays are available yet; historical Brier/log-loss metrics are therefore withheld.",
             "Candidate-quality effects beyond incumbency are not separately estimated.",
             "Third-party and ranked-choice transfer behaviour is simplified in the chamber model.",
-            "The current production input bundle does not include validated presidential-approval, economic, FEC or licensed external-forecaster feeds.",
+            "Presidential-approval and economic-context feeds are not yet validated production inputs; FEC finance and external-forecaster data are displayed only in the separate non-model context layer.",
             "The nowcast and election-day forecast do not yet use a separate explicit time-evolution process.",
             "Correlated national error is simulated, but cross-race correlation remains deliberately simple rather than a full geographic covariance model."
         ],
@@ -24,12 +24,20 @@
     out["change_summary"] = compare_summary(out, previous, hashes)
     out["briefing"] = briefing(out)
 
-    # Compact derivative history metadata prevents the public History and race
-    # pages from downloading dozens of full immutable snapshots merely to draw
-    # a timeline. Full snapshots remain authoritative and are never rewritten.
-    from history_support import merge_history_summaries, write_history_artifacts
+    # Only canonical production runs may enter the immutable public forecast
+    # archive. Feature/hotfix branches exercise the complete pipeline but reuse
+    # already-published history so CI can never masquerade as a past forecast.
+    import os
+    from history_support import merge_history_summaries, read_history_summaries, prune_race_series_to_index, write_history_artifacts
     stamp = now.strftime("%Y-%m-%dT%H%M%SZ")
-    out["history_summaries"] = merge_history_summaries(HIST / "index.json", out, f"{stamp}.json")
+    github_actions = os.environ.get("GITHUB_ACTIONS") == "true"
+    ref_name = os.environ.get("GITHUB_REF_NAME")
+    persist_history = (not github_actions) or ref_name == "main"
+    if persist_history:
+        out["history_summaries"] = merge_history_summaries(HIST / "index.json", out, f"{stamp}.json")
+    else:
+        out["history_summaries"] = read_history_summaries(HIST / "index.json")
+        prune_race_series_to_index(HIST)
 
     errors, warnings = sanity_checks(out, previous)
     if errors:
@@ -42,10 +50,9 @@
     text = json.dumps(out, indent=2) + "\n"
     OUT.write_text(text, encoding="utf-8")
 
-    # A branch preview is an RC, not the production release. Once merged to
-    # main the exact same build labels itself PROD v1.0.
-    import os
-    release = "PROD v1.0 RC" if os.environ.get("GITHUB_REF_NAME") == "prod-v1" else "PROD v1.0"
+    # Any GitHub branch other than main is a release candidate. This prevents
+    # feature/hotfix CI output from presenting itself as a canonical PROD run.
+    release = "PROD v1.0" if (not github_actions or ref_name == "main") else "PROD v1.0 RC"
     STATUS.write_text(json.dumps({
         "schema_version":3,"project":"MIDTERM SIGNALS","release":release,"election_date":ELECTION_DATE.isoformat(),"generated_at":out["generated_at"],
         "production_forecast":"published","publication_label":f"{release} · LIVE BASELINE","model":MODEL_NAME,"simulations":SIMULATIONS,
@@ -53,12 +60,13 @@
         "qualitative_news_changes_probabilities":False,"source_issues":sum(1 for s in sources if s["state"]!="current"),"limitations":out["limitations"]
     }, indent=2)+"\n", encoding="utf-8")
 
-    (HIST / f"{stamp}.json").write_text(text, encoding="utf-8")
-    write_history_artifacts(HIST, out, f"{stamp}.json", out["history_summaries"])
+    if persist_history:
+        (HIST / f"{stamp}.json").write_text(text, encoding="utf-8")
+        write_history_artifacts(HIST, out, f"{stamp}.json", out["history_summaries"])
     route_urls = generate_static_routes(modeled, national_polls + [p for r in modeled for p in r.get("polls", [])])
     RUN_REPORT.write_text(json.dumps({
         "generated_at":out["generated_at"],"release":release,"model":MODEL_NAME,"upstream_commit":sha,"inputs_hash":inputs_hash,"checks":"passed","warnings":warnings,
-        "house_races":len(house),"senate_contests":len(senate),"generic_ballot_polls":gcb_count,"static_routes":len(route_urls),"history_summaries":len(out["history_summaries"]),"source_states":Counter(s["state"] for s in sources)
+        "house_races":len(house),"senate_contests":len(senate),"generic_ballot_polls":gcb_count,"static_routes":len(route_urls),"history_summaries":len(out["history_summaries"]),"history_persisted":persist_history,"source_states":Counter(s["state"] for s in sources)
     }, indent=2, default=dict)+"\n", encoding="utf-8")
     print(f"Built {release}: {len(house)} House + {len(senate)} Senate; GCB D-R {gcb:+.2f}; {len(route_urls)} static routes; upstream {sha[:10]}")
     if warnings:

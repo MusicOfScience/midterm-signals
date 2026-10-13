@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T02:25:15.288854Z",
+  "generated_at": "2026-10-13T03:19:04.943890Z",
   "sources": [
     {
       "id": "upstream_input_mirror",
@@ -7,7 +7,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-10-13T02:25:15.288854Z",
+      "last_success": "2026-10-13T03:18:59.459277Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -30,51 +30,62 @@
       "id": "cook",
       "label": "Cook Political Report",
       "kind": "third-party forecast",
-      "state": "unavailable",
-      "note": "No licensed automated redistribution feed configured."
+      "state": "restricted",
+      "url": "https://www.cookpolitical.com/ratings/house-race-ratings",
+      "note": "Licensed/manual boundary. No automated scraping or synthetic ratings."
     },
     {
       "id": "inside_elections",
       "label": "Inside Elections",
       "kind": "third-party forecast",
-      "state": "unavailable",
-      "note": "No licensed automated redistribution feed configured."
+      "state": "current",
+      "url": "https://insideelections.com/ratings/house/",
+      "last_success": "2026-10-13T03:19:04.943890Z",
+      "last_observation": "2026-10-01",
+      "note": "470 native race ratings via public API; no model effect."
     },
     {
       "id": "crystal_ball",
       "label": "Sabato's Crystal Ball",
       "kind": "third-party forecast",
-      "state": "unavailable",
-      "note": "No licensed automated redistribution feed configured."
+      "state": "manual",
+      "url": "https://centerforpolitics.org/crystalball/",
+      "note": "Public source linked; manual/import adapter boundary retained until a redistribution-safe feed is configured."
     },
     {
       "id": "silver_bulletin",
       "label": "Silver Bulletin",
       "kind": "third-party forecast",
-      "state": "unavailable",
-      "note": "No licensed automated redistribution feed configured."
+      "state": "restricted",
+      "url": "https://www.natesilver.net/",
+      "note": "Subscriber/licensing boundary; no paywall bypass."
     },
     {
       "id": "ddhq",
       "label": "Decision Desk HQ",
       "kind": "third-party forecast",
-      "state": "unavailable",
-      "note": "No licensed automated redistribution feed configured."
+      "state": "manual",
+      "url": "https://votes.decisiondeskhq.com/forecast/2026",
+      "note": "Public forecast linked; no undocumented scraping/API use."
     },
     {
       "id": "fec",
       "label": "Federal Election Commission",
       "kind": "campaign finance",
-      "state": "unavailable",
+      "state": "current",
       "url": "https://www.fec.gov/data/",
-      "note": "Adapter boundary implemented; current API feed/credential not configured."
+      "last_success": "2026-10-13T03:19:07.561150Z",
+      "last_observation": "2026-09-30",
+      "note": "Official bulk adapter; 849 candidate summaries matched to production candidates."
     },
     {
       "id": "campaign_signals",
       "label": "Campaign signals",
-      "kind": "qualitative intelligence",
-      "state": "unavailable",
-      "note": "No current structured signal import configured; model effect remains NONE."
+      "kind": "structured election intelligence",
+      "state": "current",
+      "last_success": "2026-10-13T03:19:04.943890Z",
+      "last_observation": "2026-10-11",
+      "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
     {
       "id": "results",

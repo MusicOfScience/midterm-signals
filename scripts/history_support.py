@@ -43,6 +43,13 @@ def _usable_summary(row: dict) -> bool:
     return bool(row.get("file") and row.get("generated_at") and isinstance(row.get("house"), (int, float)) and isinstance(row.get("senate"), (int, float)))
 
 
+def read_history_summaries(index_path: Path, limit: int = 240) -> list[dict]:
+    """Read only already-published production summaries, newest first."""
+    index = _read_json(index_path, {})
+    rows = [x for x in index.get("summaries", []) if isinstance(x, dict) and _usable_summary(x)]
+    return sorted(rows, key=lambda x: (x.get("generated_at") or "", x.get("file") or ""), reverse=True)[:limit]
+
+
 def merge_history_summaries(index_path: Path, current: dict, filename: str, limit: int = 240) -> list[dict]:
     """Return compact valid production summaries including current, newest first."""
     index = _read_json(index_path, {})
@@ -88,6 +95,34 @@ def _seed_race_series(hist_dir: Path, max_snapshots: int = 36) -> dict[str, list
     return series
 
 
+def prune_race_series_to_index(hist_dir: Path) -> None:
+    """Remove derivative points that do not correspond to published history.
+
+    This is primarily a safety rail for feature/hotfix branches. Branch builds
+    can exercise the complete forecasting pipeline but must never become part
+    of the immutable public forecast archive merely because CI ran them.
+    """
+    index = _read_json(hist_dir / "index.json", {})
+    valid_times = {x.get("generated_at") for x in index.get("summaries", []) if isinstance(x, dict) and x.get("generated_at")}
+    series_path = hist_dir / "race-series.json"
+    payload = _read_json(series_path, {})
+    if not isinstance(payload, dict) or not isinstance(payload.get("races"), dict) or not valid_times:
+        return
+    cleaned = {}
+    for code, points in payload["races"].items():
+        kept = [p for p in points if isinstance(p, dict) and p.get("generated_at") in valid_times]
+        if kept:
+            cleaned[code] = kept
+    replacement = {
+        "schema_version": 1,
+        "generated_at": index.get("generated_at"),
+        "races": cleaned,
+        "note": "Compact derivative series; immutable full snapshots remain authoritative.",
+    }
+    if replacement != payload:
+        series_path.write_text(json.dumps(replacement, separators=(",", ":")) + "\n", encoding="utf-8")
+
+
 def write_history_artifacts(hist_dir: Path, current: dict, filename: str, summaries: list[dict], *, snapshot_limit: int = 240, race_point_limit: int = 180) -> None:
     """Write compact index and race series without altering full snapshots."""
     hist_dir.mkdir(parents=True, exist_ok=True)
@@ -104,6 +139,12 @@ def write_history_artifacts(hist_dir: Path, current: dict, filename: str, summar
     series_path = hist_dir / "race-series.json"
     previous = _read_json(series_path, {})
     races: dict[str, list[dict]] = previous.get("races", {}) if isinstance(previous, dict) else {}
+    # Never perpetuate derivative points whose immutable production snapshot is
+    # no longer represented by the production history index.
+    valid_times = {x.get("generated_at") for x in summaries if isinstance(x, dict) and x.get("generated_at")}
+    if valid_times and races:
+        races = {code: [p for p in points if p.get("generated_at") in valid_times] for code, points in races.items()}
+        races = {code: points for code, points in races.items() if points}
     if not races:
         races = _seed_race_series(hist_dir)
 

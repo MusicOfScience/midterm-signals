@@ -10,13 +10,16 @@ SOURCES = [
     ("track_generic", "https://www.trackthevote.net/generic-ballot"),
     ("track_senate", "https://www.trackthevote.net/senate"),
     ("track_home", "https://www.trackthevote.net/"),
+    ("inside_house_api", "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json"),
+    ("inside_senate_api", "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json"),
+    ("fec_current_campaigns", "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"),
     ("cook_house_ratings", "https://www.cookpolitical.com/ratings/house-race-ratings"),
     ("cook_senate_ratings", "https://www.cookpolitical.com/ratings/senate-race-ratings"),
     ("house_history", "https://history.house.gov/Institution/Election-Statistics/Election-Statistics/"),
 ]
 
 def check(name, url):
-    req = urllib.request.Request(url, method="GET", headers={"User-Agent": "MIDTERM-SIGNALS-source-health/0.1 (+https://github.com/MusicOfScience/midterm-signals)"})
+    req = urllib.request.Request(url, method="GET", headers={"User-Agent": "MIDTERM-SIGNALS-source-health/1.0 (+https://github.com/MusicOfScience/midterm-signals)"})
     try:
         with urllib.request.urlopen(req, timeout=20) as response:
             status = int(response.status)
