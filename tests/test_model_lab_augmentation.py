@@ -58,6 +58,22 @@ class ModelLabAugmentationTests(unittest.TestCase):
         self.assertEqual(part["later_polled"]["n"] + part["later_unpolled"]["n"], 3)
         self.assertEqual(part["newly_polled"]["n"], 1)
 
+    def test_roster_transition_is_labelled_not_removed(self):
+        previous = {
+            "A": {"race_type": "house", "dem_candidate": "D", "rep_candidate": None, "dem_probability": .999},
+            "B": {"race_type": "house", "dem_candidate": "D2", "rep_candidate": "R2", "dem_probability": .55},
+        }
+        current = {
+            "A": {"race_type": "house", "dem_candidate": "D", "rep_candidate": "R", "dem_probability": .001},
+            "B": {"race_type": "house", "dem_candidate": "D2", "rep_candidate": "R2", "dem_probability": .50},
+        }
+        result = m.roster_transitions(previous, current, {"A": 0, "B": 1})
+        self.assertEqual(result["count"], 1)
+        self.assertEqual(result["large_movement_count"], 1)
+        self.assertEqual(result["changes"][0]["race_code"], "A")
+        self.assertEqual(result["changes"][0]["dem_probability_before"], .999)
+        self.assertEqual(result["changes"][0]["dem_probability_after"], .001)
+
 
 if __name__ == "__main__":
     unittest.main()
