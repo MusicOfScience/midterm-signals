@@ -214,7 +214,7 @@ async function boot(){
 let __ENHANCEMENTS_PROMISE=null;
 function __maybeLoadEnhancements(){
   const view=routeFromLocation().view;
-  if(!['map','history','race','builder'].includes(view))return;
+  if(view==='home')return;
   if(!__ENHANCEMENTS_PROMISE)__ENHANCEMENTS_PROMISE=import('/enhancements.bundle.mjs').catch(err=>{console.warn('MIDTERM SIGNALS v1 enhancements unavailable',err);return null});
 }
 window.addEventListener('popstate',()=>setTimeout(__maybeLoadEnhancements,0));
