@@ -28,6 +28,25 @@ FEC_RESULTS_SHA256 = "cdb258ea23803e50d752bcea19faa39b3c201eb960094bcb556c3a38c2
 FEC_HOUSE_SHEET = "8. US House Results by State"
 
 
+def canonical_roster_code(row: dict, chamber: str) -> str:
+    """Normalize House roster IDs to the same two-digit district key as all other inputs.
+
+    The dated roster mixes keys such as ``CA-5`` and ``CA-05``. Structural
+    priors, House polls and certified outcomes are normalized through
+    ``district_code``. Leaving roster keys untouched silently shrank the fixed
+    replay sample to the subset whose source spelling happened to match. Senate
+    IDs retain their source form because they encode seat class (for example
+    ``GA-S3``), not a congressional district number.
+    """
+    raw = str(row.get("district") or "").strip().upper()
+    if chamber != "house":
+        return raw
+    match = re.fullmatch(r"([A-Z]{2})-(AL|\d+)", raw)
+    if not match:
+        return ""
+    return impl.district_code(match.group(1), match.group(2))
+
+
 def _text(value) -> str:
     return "" if value is None else str(value).strip()
 
@@ -215,6 +234,9 @@ def certified_fetch(label: str, url: str, *args, **kwargs) -> bytes:
     return fec_house_winners_csv(workbook)
 
 
+# Normalize the dated House roster before scoreability is evaluated. This is a
+# schema correction only; it changes no candidate, poll, prior or model value.
+impl.roster_code = canonical_roster_code
 impl.fetch = certified_fetch
 
 if __name__ == "__main__":
