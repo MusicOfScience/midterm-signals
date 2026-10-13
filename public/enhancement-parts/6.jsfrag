@@ -1,0 +1,35 @@
+/* Accessibility hardening for controls created by the base SPA.
+   Visible labels are preferable; these names are a redundant programmatic
+   fallback for compact toolbars where visible option text is already present. */
+const v1ControlLabels={
+  raceQ:'Search races or candidates',raceChamber:'Race chamber',raceState:'Race state',raceComp:'Race competitiveness',raceParty:'Seat holder or model-favoured flip',racePolling:'Race polling availability',
+  mapChamber:'Map chamber',mapLayer:'Map data layer',candidateQ:'Search candidates',candidateParty:'Candidate party',
+  scG:'Generic ballot shift in Democratic minus Republican points',scH:'House national swing in Democratic minus Republican points',scS:'Senate national swing in Democratic minus Republican points',
+  globalSearch:'Search MIDTERM SIGNALS'
+};
+function enhanceA11yLabels(){for(const [id,label] of Object.entries(v1ControlLabels)){const el=document.getElementById(id);if(el&&!el.getAttribute('aria-label')&&!el.getAttribute('aria-labelledby'))el.setAttribute('aria-label',label)}}
+
+function archivedDelta(rows,currentAt,days,key,currentValue){
+  if(!Number.isFinite(currentValue))return null;
+  const currentTime=new Date(currentAt).valueOf();
+  if(!Number.isFinite(currentTime))return null;
+  const target=currentTime-days*86400000;
+  const candidates=rows.filter(x=>Number.isFinite(x?.[key])&&x.generated_at&&new Date(x.generated_at).valueOf()<currentTime-3600000);
+  if(!candidates.length)return null;
+  const hit=candidates.reduce((best,x)=>Math.abs(new Date(x.generated_at).valueOf()-target)<Math.abs(new Date(best.generated_at).valueOf()-target)?x:best,candidates[0]);
+  const distance=Math.abs(new Date(hit.generated_at).valueOf()-target);
+  if(distance>Math.max(18,days*10)*3600000)return null;
+  return {delta:currentValue-hit[key],at:hit.generated_at};
+}
+function deltaBadge(label,x){return `<div class="metric"><b>${x?pp(x.delta):'Unavailable'}</b><small>${esc(label)}${x?` · baseline ${new Date(x.at).toLocaleDateString()}`:''}</small></div>`}
+async function enhanceHomeHistoryDeltas(){
+  if(routeView()!=='home'||q('#homeHistoryDeltas'))return;
+  const cards=qa('.chamber-pair .chamber-card').slice(0,2);if(cards.length<2)return;
+  const [data,idx]=await Promise.all([model(),historyIndex()]);const rows=(idx.summaries||data.history_summaries||[]).filter(x=>x?.generated_at);
+  const specs=[['house',data.summary?.house?.dem_control_probability],['senate',data.summary?.senate?.dem_control_probability]];
+  cards.forEach((card,i)=>{const [key,value]=specs[i];const one=archivedDelta(rows,data.generated_at,1,key,value),seven=archivedDelta(rows,data.generated_at,7,key,value);const box=document.createElement('div');box.className='metric-line v1-history-deltas';if(i===0)box.id='homeHistoryDeltas';box.innerHTML=deltaBadge('D control vs ~1 day ago',one)+deltaBadge('D control vs ~7 days ago',seven);card.append(box)});
+}
+
+function runV1Polish(){enhanceA11yLabels();enhanceHomeHistoryDeltas().catch(err=>console.warn('history deltas',err))}
+new MutationObserver(runV1Polish).observe(document.body,{childList:true,subtree:true});
+runV1Polish();

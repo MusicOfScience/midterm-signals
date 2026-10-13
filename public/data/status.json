@@ -1,22 +1,25 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "project": "MIDTERM SIGNALS",
+  "release": "PROD v1.0 RC",
   "election_date": "2026-11-03",
-  "generated_at": "2026-10-12T14:11:40.059940Z",
+  "generated_at": "2026-10-13T02:20:16.175828Z",
   "production_forecast": "published",
-  "publication_label": "LIVE BASELINE \u00b7 MODEL v0.2",
-  "model": "MIDTERM SIGNALS baseline-v0.2",
+  "publication_label": "PROD v1.0 RC \u00b7 LIVE BASELINE",
+  "model": "MIDTERM SIGNALS baseline-v1.0",
   "simulations": 30000,
   "house_all_435_accounted_for": true,
   "senate_contests_accounted_for": 35,
-  "upstream_commit": "825afc379e34d9f2cd0b0edc444ff3fa1cd63cd0",
-  "input_sha256": "cc10e71f1ab16a749f2f5c32427555746691bfc0cd05178b1f1db94123f5645e",
+  "upstream_commit": "6c9f1f4d3f2b8379f64ab823f26c5271d4f73b15",
+  "input_sha256": "3337df346ce0f0ae4ac163cb5e9352aec15656f398a8fcf5b7bcd1f414638822",
   "qualitative_news_changes_probabilities": false,
+  "source_issues": 8,
   "limitations": [
-    "This is a transparent baseline model, not a claim of certainty.",
-    "Candidate-quality effects beyond incumbency are not yet separately estimated.",
+    "No leakage-free 2018/2022 production replays are available yet; historical Brier/log-loss metrics are therefore withheld.",
+    "Candidate-quality effects beyond incumbency are not separately estimated.",
     "Third-party and ranked-choice transfer behaviour is simplified in the chamber model.",
-    "Race polls are used only when the poll matchup matches the current major-party nominees; missing polling remains missing.",
-    "The model can be wrong together across many races; correlated national error is therefore simulated explicitly."
+    "The current production input bundle does not include validated presidential-approval, economic, FEC or licensed external-forecaster feeds.",
+    "The nowcast and election-day forecast do not yet use a separate explicit time-evolution process.",
+    "Correlated national error is simulated, but cross-race correlation remains deliberately simple rather than a full geographic covariance model."
   ]
 }

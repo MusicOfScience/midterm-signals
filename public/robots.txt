@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://midterm-signals.pages.dev/sitemap.xml

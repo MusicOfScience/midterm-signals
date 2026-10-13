@@ -1,0 +1,71 @@
+import {runScenario,filterRaces} from '/core.mjs';
+
+const esc=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+const pct=v=>Number.isFinite(v)?`${Math.round(v*100)}%`:'—';
+const pct1=v=>Number.isFinite(v)?`${(v*100).toFixed(1)}%`:'—';
+const signed=v=>Number.isFinite(v)?`${v>=0?'D +':'R +'}${Math.abs(v).toFixed(1)}`:'—';
+const pp=v=>Number.isFinite(v)?`${v>0?'+':''}${(v*100).toFixed(1)} pp`:'—';
+const fmt=v=>Number.isFinite(v)?Number(v).toFixed(1):'—';
+const q=(s,r=document)=>r.querySelector(s), qa=(s,r=document)=>[...r.querySelectorAll(s)];
+const routeView=()=>new URLSearchParams(location.search).get('view')||((location.pathname.split('/').filter(Boolean)[0])?'detail':'home');
+const safeUrl=value=>{try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)?u.href:null}catch{return null}};
+
+let modelPromise=null,historyIndexPromise=null,raceSeriesPromise=null;
+const model=()=>modelPromise??=fetch('/data/forecast.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(`forecast ${r.status}`);return r.json()});
+const historyIndex=()=>historyIndexPromise??=fetch('/data/history/index.json',{cache:'no-store'}).then(r=>r.ok?r.json():({snapshots:[],summaries:[]})).catch(()=>({snapshots:[],summaries:[]}));
+const raceSeries=()=>raceSeriesPromise??=fetch('/data/history/race-series.json',{cache:'no-store'}).then(r=>r.ok?r.json():({races:{}})).catch(()=>({races:{}}));
+
+function stateLabel(code){return ({AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming'})[code]||code}
+function uncertainty(r){return Math.abs((r.dem_probability??.5)-.5)}
+function winner(r){return (r.dem_probability??.5)>=.5?'D':'R'}
+function winp(r){const p=r.dem_probability??.5;return Math.max(p,1-p)}
+function externalEntries(r){return Object.entries(r.external_forecasters||{}).filter(([,x])=>x&&(x.rating||Number.isFinite(x.probability)))}
+function ratingSide(text){const s=String(text||'').toLowerCase();if(/\b(d|dem|democratic)\b/.test(s))return'D';if(/\b(r|rep|republican)\b/.test(s))return'R';return null}
+function disagreement(r){const ext=externalEntries(r),side=winner(r);if(!ext.length)return null;const opposed=ext.filter(([,x])=>ratingSide(x.rating)&&ratingSide(x.rating)!==side).length;if(opposed>=Math.ceil(ext.length/2))return'major';if(opposed>0)return'mild';return'consensus'}
+
+function navigateRace(code){location.href=`/?race=${encodeURIComponent(code)}`}
+
+/* ------------------------------- MAP ---------------------------------- */
+function movementAt(code,days,series,currentP){
+  const pts=(series?.races?.[code]||[]).filter(x=>Number.isFinite(x.dem_probability)&&x.generated_at).slice().sort((a,b)=>String(a.generated_at).localeCompare(String(b.generated_at)));
+  if(!pts.length)return null;
+  const now=new Date((pts.at(-1)?.generated_at)||Date.now()).valueOf();
+  if(days==='previous'){
+    const prev=pts.length>1?pts.at(-2):null;return prev?currentP-prev.dem_probability:null;
+  }
+  const target=now-Number(days)*86400000;
+  let best=null,bestDist=Infinity;
+  for(const p of pts){const t=new Date(p.generated_at).valueOf();if(t>now)continue;const d=Math.abs(t-target);if(d<bestDist){best=p;bestDist=d}}
+  return best?currentP-best.dem_probability:null;
+}
+function mapValue(r,layer,delta=null){
+  const p=r.dem_probability??.5,side=p>=.5?'D':'R',winnerP=Math.max(p,1-p),d=Number.isFinite(delta)?delta:(r.change?.dem_probability??0);
+  if(layer==='margin')return {headline:signed(r.forecast_margin_d_minus_r),detail:`${pct(winnerP)} ${side} win`};
+  if(layer==='movement')return {headline:Number.isFinite(d)?(Math.abs(d)<.00005?'No change':`${d>0?'D':'R'} ${Math.abs(d*100).toFixed(1)} pp`):'Unavailable',detail:`now ${pct(winnerP)} ${side}`};
+  if(layer==='rating')return {headline:r.rating||'Unrated',detail:`${pct(winnerP)} ${side} win`};
+  return {headline:`${pct(winnerP)} ${side}`,detail:r.rating||'Unrated'};
+}
+async function enhanceMap(){
+  const grid=q('#mapGrid'),layerSel=q('#mapLayer'),chamberSel=q('#mapChamber');
+  if(!grid||!layerSel||!chamberSel||grid.closest('[data-v1-map-ready]'))return;
+  grid.closest('.panel')?.setAttribute('data-v1-map-ready','true');
+  const data=await model();
+  const toolbar=layerSel.closest('.toolbar');
+  let period=q('#mapPeriod');
+  if(!period){period=document.createElement('select');period.id='mapPeriod';period.setAttribute('aria-label','Movement comparison period');period.innerHTML='<option value="previous">Change since previous</option><option value="7">Change since 7 days</option><option value="30">Change since 30 days</option>';const requested=new URLSearchParams(location.search).get('period');if(requested)period.value=requested;layerSel.after(period)}
+  let series=null;
+  const render=async()=>{
+    let rows=(data.races||[]).filter(r=>r.race_type===chamberSel.value).sort((a,b)=>String(a.state).localeCompare(String(b.state))||String(a.district||'').localeCompare(String(b.district||''),undefined,{numeric:true}));
+    if(grid.dataset.competitive==='true')rows=rows.filter(r=>(r.dem_probability??.5)>=.2&&(r.dem_probability??.5)<=.8);
+    const layer=layerSel.value;period.disabled=layer!=='movement';
+    if(layer==='movement'&&!series)series=await raceSeries();
+    grid.innerHTML=rows.map(r=>{const p=r.dem_probability??.5,side=p>=.5?'D':'R',cls=p>=.45&&p<=.55?'toss':side==='D'?'d-edge':'r-edge',delta=layer==='movement'?movementAt(r.race_code,period.value,series,p):null,v=mapValue(r,layer,delta);return `<button class="race-tile ${cls}" type="button" data-v1-race="${esc(r.race_code)}" aria-label="${esc(r.race_code)}, ${esc(v.headline)}, ${esc(v.detail)}"><span class="symbol">${esc(r.race_code)} · ${esc(v.headline)}</span><small>${esc(v.detail)}</small></button>`}).join('');
+  };
+  layerSel.addEventListener('change',()=>{const u=new URL(location.href);u.searchParams.set('layer',layerSel.value);history.replaceState(null,'',u);render()});
+  period.addEventListener('change',()=>{const u=new URL(location.href);u.searchParams.set('period',period.value);history.replaceState(null,'',u);render()});
+  grid.addEventListener('click',e=>{const b=e.target.closest('[data-v1-race]');if(b)navigateRace(b.dataset.v1Race)});
+  const comp=q('#mapCompetitive');
+  comp?.addEventListener('click',()=>{grid.dataset.competitive=grid.dataset.competitive==='true'?'false':'true';comp.textContent=grid.dataset.competitive==='true'?'Show all races':'Competitive only';setTimeout(render,0)});
+  await render();
+}
+

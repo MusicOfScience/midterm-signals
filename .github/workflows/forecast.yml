@@ -5,23 +5,40 @@ on:
   schedule:
     - cron: "17 0,12 * * *"
   push:
-    branches: [main]
+    branches: [main, prod-v1]
     paths-ignore:
       - "public/data/forecast.json"
+      - "public/data/bootstrap.json"
       - "public/data/status.json"
+      - "public/data/source-status.json"
+      - "public/data/search.json"
+      - "public/data/signals.json"
+      - "public/data/results.json"
+      - "public/data/run-report.json"
+      - "public/data/races.csv"
+      - "public/data/polls.csv"
       - "public/data/history/**"
+      - "public/races/**"
+      - "public/candidates/**"
+      - "public/pollsters/**"
+      - "public/sitemap.xml"
+      - "public/robots.txt"
+      - "public/app.js"
+      - "public/app.bundle.mjs"
+      - "public/enhancements.bundle.mjs"
+      - "public/styles.css"
 
 permissions:
   contents: write
 
 concurrency:
-  group: forecast-refresh
+  group: forecast-refresh-${{ github.ref_name }}
   cancel-in-progress: false
 
 jobs:
   forecast:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
@@ -32,21 +49,26 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Build forecast snapshot
-        run: python scripts/build_forecast.py
+      - name: Build forecast snapshot, routes and browser assets
+        run: |
+          python scripts/build_forecast.py
+          python scripts/make_bootstrap.py
+          python scripts/build_browser.py
       - name: Validate numerical forecast
         run: python scripts/validate_forecast.py
+      - name: Unit tests
+        run: node tests/core.test.mjs && python -m unittest tests.test_model
       - name: Validate static publication
         run: node scripts/check.mjs
-      - name: Commit forecast if changed
+      - name: Commit forecast and generated browser assets if changed
         shell: bash
         run: |
           git config user.name "midterm-signals-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public/data/forecast.json public/data/status.json public/data/history/
+          git add public/data/ public/races/ public/candidates/ public/pollsters/ public/sitemap.xml public/robots.txt public/app.js public/app.bundle.mjs public/enhancements.bundle.mjs public/styles.css
           if git diff --cached --quiet; then
-            echo "No forecast change"
+            echo "No generated publication change"
             exit 0
           fi
-          git commit -m "data: forecast refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -m "data: forecast/browser refresh $(date -u +%Y-%m-%dT%H:%MZ)"
           git push

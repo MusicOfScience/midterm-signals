@@ -1,51 +1,56 @@
 # MIDTERM SIGNALS
 
-Open, auditable probabilistic analysis for the **2026 United States midterm elections** on **3 November 2026**.
+MIDTERM SIGNALS is an open, auditable election-analysis and probabilistic forecasting project for the 2026 United States midterm elections on **3 November 2026**.
 
-**Live site:** https://midterm-signals.pages.dev
+Production site: https://midterm-signals.pages.dev
 
-## Production baseline
+## Product contract
 
-MIDTERM SIGNALS v0.2 publishes a live numerical baseline for **all 435 House races** and every 2026 Senate contest. It produces race-level Democratic/Republican win probabilities, predicted two-party vote shares, chamber seat distributions, control probabilities, tipping-point races, battleground rankings and immutable forecast history.
+The project visibly separates:
 
-The numerical pipeline consumes four public input tables from the `ElectIndex/26_us_forecast_data` repository: current race/candidate definitions, historical presidential results on the 2026 district map, generic-ballot polls and race polls. Every refresh pins those inputs to one upstream Git commit and records a combined SHA-256. MIDTERM SIGNALS does **not** consume that repository's forecast outputs or code.
+1. facts/raw observations;
+2. polls;
+3. polling aggregates;
+4. MIDTERM SIGNALS model estimates;
+5. third-party forecasts;
+6. qualitative campaign signals;
+7. user scenarios;
+8. actual results.
 
-## Model contract
+Qualitative news or LLM judgement never silently changes numerical probabilities. Missing observations are never converted to zero. Failed refreshes do not destroy the last healthy deployment.
 
-The v0.2 baseline combines:
+## PROD v1.0
 
-- district/state partisan lean from 2016, 2020 and 2024 presidential results, centred on the national result;
-- a recency-, quality- and sample-weighted 35-day generic congressional ballot;
-- a modest incumbency term;
-- nominee-matched race polling from the last 55 days when available;
-- 30,000 Monte Carlo chamber simulations with correlated national error.
+The v1.0 public application adds an integrated Forecast Centre, House/Senate centres, deep race pages, Race Explorer, accessible race grid, Polling Centre, global search, candidate pages, Campaign Signals boundary, FEC/money boundary, Scenario Lab, Build Your Own Election, immutable forecast history, source health, provenance and layered methodology.
 
-Raw observations, polling aggregation, election forecasting, third-party forecasts, qualitative campaign/news intelligence, scenarios and actual results remain separate. **Qualitative text and LLM judgement cannot silently alter numerical probabilities.**
+The official numerical baseline preserves the v0.2 prospective coefficients. v1.0 expands outputs and transparency rather than retuning to external conventional wisdom.
 
-This is a transparent baseline, not an oracle. Candidate-quality effects beyond incumbency, third-party/RCV transfer behaviour and several structural variables remain candidates for separately validated future model versions rather than hidden hand-tuning.
+## Local checks
 
-## Automation
+```bash
+npm test
+python -m py_compile scripts/build_forecast.py scripts/validate_forecast.py
+```
 
-`.github/workflows/forecast.yml` refreshes twice daily and on relevant pushes. It builds and validates the forecast, then commits only derived JSON artifacts. Cloudflare Pages deploys `public/` automatically from `main`.
+GitHub Actions additionally runs Chromium end-to-end flows, a phone viewport check and automated accessibility checks before production promotion.
+
+A networked production refresh is run by GitHub Actions:
 
 ```bash
 python scripts/build_forecast.py
 python scripts/validate_forecast.py
-node scripts/check.mjs
 ```
 
-## Repository layout
+## Key public files
 
-```text
-scripts/build_forecast.py      numerical model + pinned public inputs
-scripts/validate_forecast.py   fail-closed numerical invariants
-public/data/forecast.json      current production snapshot
-public/data/history/           immutable timestamped snapshots
-public/data/status.json        publication/run metadata
-public/                        static Cloudflare Pages application
-.github/workflows/             validation + scheduled forecast refresh
-```
+- `public/data/forecast.json`
+- `public/data/races.csv`
+- `public/data/polls.csv`
+- `public/data/source-status.json`
+- `public/data/history/`
+- `docs/METHODOLOGY.md`
+- `docs/DATA_PROVENANCE.md`
+- `docs/MODEL_CHANGELOG.md`
+- `docs/SOURCE_STATUS.md`
 
-## Deployment
-
-Cloudflare Pages production branch: `main`; output directory: `public`; no build command is required.
+Historical Brier/log-loss metrics for 2018/2022 are intentionally unavailable until leakage-free retrospective replays exist.

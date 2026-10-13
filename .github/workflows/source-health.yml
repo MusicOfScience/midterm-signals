@@ -11,13 +11,20 @@ permissions:
 jobs:
   health:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - name: Verify public upstream input routes
+      - name: Verify production upstream input routes
         shell: bash
         run: |
           set -euo pipefail
           base="https://raw.githubusercontent.com/ElectIndex/26_us_forecast_data/main"
+          failed=0
           for file in races.csv historical.csv gcb_polls.csv race_polls.csv; do
-            curl --fail --silent --show-error --location --max-time 30 "$base/$file" >/dev/null
-            echo "healthy: $file"
+            if curl --fail --silent --show-error --location --max-time 30 "$base/$file" >/dev/null; then
+              echo "CURRENT: $file"
+            else
+              echo "DEGRADED: $file"
+              failed=1
+            fi
           done
+          exit "$failed"
