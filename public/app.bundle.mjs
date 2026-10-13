@@ -219,4 +219,5 @@ function __maybeLoadEnhancements(){
 }
 window.addEventListener('popstate',()=>setTimeout(__maybeLoadEnhancements,0));
 document.addEventListener('click',()=>setTimeout(__maybeLoadEnhancements,0),{capture:true,passive:true});
+document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;const nav=document.querySelector('#primaryNav'),toggle=document.querySelector('#navToggle');if(nav?.classList.contains('open')){nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false');toggle?.focus()}});
 boot().then(()=>{document.querySelector('.site-footer')?.removeAttribute('hidden');setTimeout(__maybeLoadEnhancements,0)}).catch(err=>{console.error(err);const main=document.querySelector('#content');if(main)main.innerHTML='<div class="error-state"><h2>Application failed to load</h2><p>The static shell is available, but the interactive application could not be initialised.</p></div>'});
