@@ -51,7 +51,7 @@ def main()->None:
         if not prov.get(key): fail(f'missing provenance {key}')
     sources=f.get('source_health') or []
     if not sources: fail('source health missing')
-    allowed={'current','stale','unavailable','degraded','restricted'}
+    allowed={'current','stale','unavailable','degraded','restricted','manual'}
     if any(s.get('state') not in allowed for s in sources): fail('invalid source state')
     if f.get('model_health',{}).get('historical_backtests',{}).get('2018',{}).get('state')!='unavailable': fail('2018 backtest must remain explicitly unavailable until reconstructed')
     if f.get('model_health',{}).get('historical_backtests',{}).get('2022',{}).get('state')!='unavailable': fail('2022 backtest must remain explicitly unavailable until reconstructed')
