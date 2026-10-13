@@ -8,7 +8,6 @@ from __future__ import annotations
 
 import csv
 import io
-import re
 import tempfile
 import zipfile
 from collections import defaultdict
@@ -24,12 +23,7 @@ MEDSL_PRES_URL = (
 
 
 def strict_match_incumbents(row: dict, chamber: str, incumbents: dict) -> tuple[str, list[str], bool]:
-    """Match incumbents without surname/initial false positives.
-
-    Candidate party is a hard identity constraint. Within that party-constrained
-    pool, exact normalized aliases win. The fallback requires a surname unique
-    among same-party state incumbents plus a shared first initial.
-    """
+    """Match incumbents without surname/initial false positives."""
     st = row["_code"][:2]
     term_type = "rep" if chamber == "house" else "sen"
     named = [(n, "DEM") for n in impl.names(row, impl.D_KEYS)] + [(n, "REP") for n in impl.names(row, impl.R_KEYS)]
@@ -98,10 +92,11 @@ def alaska_2012_two_party() -> tuple[float, float]:
 def strict_structural_priors() -> dict:
     """Aggregate 2012/2016/2020 presidential returns onto 118th districts.
 
-    DRA block data remains canonical for redistricted geography. The only
-    source exception is Alaska 2012: the DRA Alaska archive lacks those fields,
-    while Alaska is at-large and therefore requires no remapping. Its exact
-    statewide 2012 D/R return is supplied from pinned MEDSL data.
+    DRA block data remains canonical for redistricted geography. Alaska 2012 is
+    supplied from exact statewide MEDSL returns because Alaska is at-large and
+    its DRA archive lacks 2012 fields. Census non-district placeholders are
+    discarded before margin calculation; the final 435-district invariant
+    ensures that no real congressional district can vanish silently.
     """
     refs = impl.latest_dra_refs()
     ak12 = alaska_2012_two_party()
@@ -150,6 +145,8 @@ def strict_structural_priors() -> dict:
 
                 for cd, vals in dsum.items():
                     rc = impl.district_code(st, cd)
+                    if not rc:
+                        continue
                     margins = {}
                     for yr, key in ((12, "earliest"), (16, "middle"), (20, "latest")):
                         if st == "AK" and yr == 12:
