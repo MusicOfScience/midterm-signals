@@ -19,6 +19,9 @@ try{
   if(data.diagnostic_contract?.movement_threshold!==0.10||data.diagnostic_contract?.confident_miss_threshold!==0.80){
     throw new Error('Fixed diagnostic thresholds drifted');
   }
+  if(data.diagnostic_contract?.paired_polling_component_test?.model_effect!=='NONE'){
+    throw new Error('Paired polling diagnostic must be evaluation-only');
+  }
 
   const requested=Number(data.summary?.requested_cycles ?? 0);
   const scored=Number(data.summary?.scored_cycles ?? 0);
@@ -46,10 +49,12 @@ try{
       throw new Error(`${year} does not expose five fully scored checkpoints`);
     }
     if(cycle.movement?.state!=='scored')throw new Error(`${year} movement diagnostics missing`);
+    if((cycle.movement?.polling_partitions||[]).length!==4)throw new Error(`${year} polling movement partitions missing`);
     for(const cp of cycle.checkpoints){
       if((cp.score?.competitive_bands||[]).length!==5)throw new Error(`${year} ${cp.days_to_election}d competitive diagnostics missing`);
       const pollN=Number(cp.score?.polling?.polled?.n||0)+Number(cp.score?.polling?.unpolled?.n||0);
       if(pollN!==cp.score?.n)throw new Error(`${year} ${cp.days_to_election}d polling partition drift`);
+      if(cp.score?.polling?.paired_component_test?.state!=='scored')throw new Error(`${year} ${cp.days_to_election}d paired polling diagnostic missing`);
       const calN=(cp.score?.calibration||[]).reduce((sum,b)=>sum+Number(b.count||0),0);
       if(calN!==cp.score?.n)throw new Error(`${year} ${cp.days_to_election}d calibration denominator drift`);
     }
@@ -62,12 +67,16 @@ try{
 
   if(await page.locator('#competitivePanel').getByText('45-55',{exact:false}).count()===0)throw new Error('Competitive diagnostics not rendered');
   if(await page.locator('#pollingPanel').getByText('Not a causal A/B test.',{exact:false}).count()===0)throw new Error('Polling caveat not rendered');
+  await page.locator('#pairedPollingPanel').getByText('Same-race component test',{exact:false}).waitFor();
+  await page.locator('#movementPollingPanel').getByText('Movement by polling status',{exact:false}).waitFor();
   if(await page.locator('#comparisonPanel').getByText('2018',{exact:false}).count()===0)throw new Error('Cross-cycle diagnostics not rendered');
 
   await page.selectOption('#diagCycle','2018');
   await page.selectOption('#diagCheckpoint','14');
   const selectedText=await page.locator('#competitivePanel').innerText();
   if(!selectedText.includes('2018')||!selectedText.includes('14 days'))throw new Error('Diagnostic controls did not update panels');
+  const pairedText=await page.locator('#pairedPollingPanel').innerText();
+  if(!pairedText.includes('2018')||!pairedText.includes('14d'))throw new Error('Paired polling panel did not follow controls');
 
   const body=await page.locator('body').innerText();
   if(!body.match(/Brier\s+0\.\d+/))throw new Error('Scored historical Brier metric is not rendered');
