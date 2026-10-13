@@ -41,6 +41,18 @@ function partitionCells(s){
   return `<td>${s.n}</td><td>${pct(s.mean_absolute_probability_change)}</td><td>${pp(s.mean_winner_directed_probability_change)}</td><td>${s.toward_eventual_winner}</td><td>${s.away_from_eventual_winner}</td><td>${s.strong_toward_eventual_winner}/${s.strong_away_from_eventual_winner}</td>`;
 }
 
+function rosterRows(cycle){
+  const transitions=cycle?.movement?.roster_transitions || [];
+  const rows=[];
+  for(const t of transitions){
+    for(const change of t.changes || []){
+      if(!change.large_movement && change.absolute_probability_change===0) continue;
+      rows.push(`<tr><td>${t.from_days}→${t.to_days}d</td><td>${esc(change.race_code)}</td><td>${esc(change.before?.dem_candidate || '—')} / ${esc(change.before?.rep_candidate || '—')}</td><td>${esc(change.after?.dem_candidate || '—')} / ${esc(change.after?.rep_candidate || '—')}</td><td>${pp(change.absolute_probability_change)}</td><td>${pp(change.winner_directed_probability_change)}</td></tr>`);
+    }
+  }
+  return rows;
+}
+
 function renderMovementPartitions(){
   const {cycle}=selection();
   const rows=cycle?.movement?.polling_partitions || [];
@@ -54,10 +66,14 @@ function renderMovementPartitions(){
     html.push(`<tr><td>Later unpolled</td>${partitionCells(r.later_unpolled)}</tr>`);
     html.push(`<tr><td>Newly polled</td>${partitionCells(r.newly_polled)}</tr>`);
   }
+  const roster=rosterRows(cycle);
   $('movementPollingPanel').innerHTML=`<h3>Movement by polling status</h3>
     <p class="method-note">This separates probability movement by whether a race had eligible race polling at the later checkpoint. “Newly polled” means zero eligible race polls at the earlier checkpoint and at least one at the later checkpoint.</p>
     <div class="table-wrap"><table class="diagnostic-table"><thead><tr><th>Transition</th><th>Status</th><th>n</th><th>Mean |move|</th><th>Mean toward winner</th><th>Toward</th><th>Away</th><th>Strong toward / away</th></tr></thead><tbody>${html.join('')}</tbody></table></div>
-    <p class="muted">Outcome direction is applied only after both checkpoint forecasts are frozen.</p>`;
+    <h3>Candidate-roster transitions</h3>
+    <p class="warning-note">A candidate-pair change can create a very large mechanical probability move under the frozen no-opponent rule. These historical forecasts are preserved, but the transition is labelled so it is not mistaken for ordinary late polling or campaign information.</p>
+    ${roster.length?`<div class="table-wrap"><table class="diagnostic-table"><thead><tr><th>Transition</th><th>Race</th><th>Before roster</th><th>After roster</th><th>|move|</th><th>Winner-directed</th></tr></thead><tbody>${roster.join('')}</tbody></table></div>`:'<p class="muted">No material roster-state movement in this cycle.</p>'}
+    <p class="muted">Outcome direction is applied only after both checkpoint forecasts are frozen. Roster transitions are diagnostic labels only; no historical probability is rewritten.</p>`;
 }
 
 function render(){
