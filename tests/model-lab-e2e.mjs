@@ -58,6 +58,16 @@ try{
   if(sourceContract?.polling_mode!=='unavailable_not_in_historical_corpus'){
     throw new Error('Polling mode must remain explicitly unavailable rather than inferred');
   }
+  const interactionContract=data.diagnostic_contract?.sparsity_interaction;
+  if(interactionContract?.model_effect!=='NONE'||interactionContract?.feature_assignment_uses_outcomes!==false){
+    throw new Error('Sparsity interaction must remain pre-outcome and evaluation-only');
+  }
+  if((interactionContract?.difficulty_bands_pp||[]).join(',')!=='0-5,>5-10,>10-20,>20'||interactionContract?.headline_competitive_threshold_pp!==10){
+    throw new Error('Sparsity interaction difficulty thresholds drifted');
+  }
+  if(!String(interactionContract?.difficulty_signal||'').includes('pre-poll')){
+    throw new Error('Sparsity interaction must define difficulty from the pre-poll prior');
+  }
 
   const requested=Number(data.summary?.requested_cycles ?? 0);
   const scored=Number(data.summary?.scored_cycles ?? 0);
@@ -73,6 +83,9 @@ try{
   }
   if(data.source_mix_cross_cycle?.state!=='scored'||(data.source_mix_cross_cycle?.cycles||[]).length!==2){
     throw new Error('House-only cross-cycle source-mix comparison missing');
+  }
+  if(data.sparsity_interaction_cross_cycle?.state!=='scored'||(data.sparsity_interaction_cross_cycle?.cycles||[]).length!==2){
+    throw new Error('House-only cross-cycle sparsity interaction comparison missing');
   }
 
   const state=(await page.locator('#labState').innerText()).trim().toUpperCase();
@@ -126,6 +139,20 @@ try{
       if(house.pollsters?.minimum_distinct_race_sources!==5||!String(house.pollsters?.ordering||'').includes('never ranked by error')){
         throw new Error(`${year} ${cp.days_to_election}d pollster reporting contract drifted`);
       }
+      const interaction=cp.score?.sparsity_interaction;
+      if(interaction?.state!=='scored'||interaction?.feature_assignment_uses_outcomes!==false){
+        throw new Error(`${year} ${cp.days_to_election}d sparsity interaction diagnostic missing or leaked`);
+      }
+      const ih=interaction.house_only;
+      if(!ih||ih.state!=='scored'||ih.n!==house.n)throw new Error(`${year} ${cp.days_to_election}d sparsity interaction House denominator drift`);
+      const diffN=(ih.by_prior_difficulty||[]).reduce((sum,row)=>sum+Number(row.n||0),0);
+      if(diffN!==ih.n)throw new Error(`${year} ${cp.days_to_election}d difficulty partition drift`);
+      for(const key of ['poll_depth_x_prior_competitiveness','source_count_x_prior_competitiveness']){
+        const total=(ih[key]||[]).reduce((sum,row)=>sum+Number(row.n||0),0);
+        if(total!==ih.n)throw new Error(`${year} ${cp.days_to_election}d interaction partition ${key} drift: ${total} != ${ih.n}`);
+      }
+      const regionN=(ih.by_region||[]).reduce((sum,row)=>sum+Number(row.n||0),0);
+      if(regionN!==ih.n)throw new Error(`${year} ${cp.days_to_election}d region partition drift: ${regionN} != ${ih.n}`);
       if(cp.score?.structural_decomposition?.state!=='scored')throw new Error(`${year} ${cp.days_to_election}d structural decomposition missing`);
       if(cp.score?.structural_decomposition_20_80?.state!=='scored')throw new Error(`${year} ${cp.days_to_election}d structural competitive decomposition missing`);
       if(Number(cp.score?.structural_decomposition?.n||0)<=0)throw new Error(`${year} ${cp.days_to_election}d structural denominator empty`);
@@ -155,6 +182,7 @@ try{
   await page.locator('#pairedPollingPanel').getByText('Same-race component test',{exact:false}).waitFor();
   await page.locator('#pollErrorPanel').getByText('Poll → result → model',{exact:false}).waitFor();
   await page.locator('#sourceMixPanel').getByText('Where is polling error concentrated?',{exact:false}).waitFor();
+  await page.locator('#sparsityInteractionPanel').getByText('Did thin polling land on the hard races?',{exact:false}).waitFor();
   await page.locator('#structuralAuditPanel').getByText('Where does forecast skill enter?',{exact:false}).waitFor();
   await page.locator('#baselineStabilityPanel').getByText('Did unstable structural history fail more often?',{exact:false}).waitFor();
   await page.locator('#movementPollingPanel').getByText('Movement by polling status',{exact:false}).waitFor();
@@ -170,6 +198,8 @@ try{
   if(!pollErrorText.includes('2018')||!pollErrorText.includes('14d'))throw new Error('Polling-error panel did not follow controls');
   const sourceMixText=await page.locator('#sourceMixPanel').innerText();
   if(!sourceMixText.includes('2018')||!sourceMixText.includes('14d'))throw new Error('Source-mix panel did not follow controls');
+  const interactionText=await page.locator('#sparsityInteractionPanel').innerText();
+  if(!interactionText.includes('2018')||!interactionText.includes('14d'))throw new Error('Sparsity interaction panel did not follow controls');
   const structuralText=await page.locator('#structuralAuditPanel').innerText();
   if(!structuralText.includes('2018')||!structuralText.includes('14d'))throw new Error('Structural panel did not follow controls');
   const stabilityText=await page.locator('#baselineStabilityPanel').innerText();
@@ -183,7 +213,7 @@ try{
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2);
   if(overflow)throw new Error('Model Lab has horizontal page overflow at phone viewport');
   if(consoleErrors.length)throw new Error(`Model Lab browser errors: ${consoleErrors.join(' | ')}`);
-  console.log(`MODEL LAB browser checks passed: desktop + mobile + ${scored}/${requested} cycles scored; scoreability + structural + baseline-stability + polling-error + source-mix audits verified.`);
+  console.log(`MODEL LAB browser checks passed: desktop + mobile + ${scored}/${requested} cycles scored; scoreability + structural + baseline-stability + polling-error + source-mix + sparsity-interaction audits verified.`);
 } finally {
   await browser.close();
 }
