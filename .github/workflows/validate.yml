@@ -36,6 +36,14 @@ jobs:
         run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab
       - name: Static publication checks
         run: node scripts/check.mjs
+      - name: Upload generated Model Lab audit artefact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-lab-audit-${{ github.run_id }}
+          path: public/data/model-lab.json
+          if-no-files-found: error
+          retention-days: 14
 
   browser:
     runs-on: ubuntu-latest
