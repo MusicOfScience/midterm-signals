@@ -15,7 +15,7 @@
 <a class="skip" href="#labContent">Skip to Model Lab</a>
 <header class="lab-header">
   <a class="lab-brand" href="/"><span class="brand-mark">M∕S</span><span>MIDTERM SIGNALS</span></a>
-  <nav aria-label="Model Lab"><a href="/">Forecast</a><a href="#replay">Replay</a><a href="#competitive">Competitive</a><a href="#calibration">Calibration</a><a href="#polling">Polling</a><a href="#movement">Movement</a><a href="#comparison">Cycles</a><a href="#failures">Failures</a><a href="#methodology">Methodology</a></nav>
+  <nav aria-label="Model Lab"><a href="/">Forecast</a><a href="#replay">Replay</a><a href="#competitive">Competitive</a><a href="#calibration">Calibration</a><a href="#polling">Polling</a><a href="#structural">Structure</a><a href="#movement">Movement</a><a href="#comparison">Cycles</a><a href="#failures">Failures</a><a href="#methodology">Methodology</a></nav>
 </header>
 <main id="labContent" class="lab-shell" tabindex="-1">
   <section class="lab-hero">
@@ -56,24 +56,29 @@
     <div id="pairedPollingPanel" class="lab-card"><p class="muted">Loading paired polling-component test…</p></div>
   </section>
 
+  <section id="structural" class="lab-section">
+    <div class="lab-section-head"><div><div class="eyebrow">05 / STRUCTURAL BASELINE</div><h2>Was the starting map already wrong?</h2></div><p>Score the structural presidential-relative-lean + incumbency stage before generic-ballot and race-poll information is added. This tests the baseline directly without treating redistricting as a foregone conclusion.</p></div>
+    <div id="structuralAuditPanel" class="lab-card"><p class="muted">Loading structural-stage decomposition…</p></div>
+  </section>
+
   <section id="movement" class="lab-section">
-    <div class="lab-section-head"><div><div class="eyebrow">05 / MOVEMENT</div><h2>Did new information move us toward the winner?</h2></div><p>Probability movement is tracked across the same races from 60 to 1 day, including large late swings and moves away from the eventual winner.</p></div>
+    <div class="lab-section-head"><div><div class="eyebrow">06 / MOVEMENT</div><h2>Did new information move us toward the winner?</h2></div><p>Probability movement is tracked across the same races from 60 to 1 day, including large late swings and moves away from the eventual winner.</p></div>
     <div id="movementPanel" class="lab-card"><p class="muted">Loading forecast movement…</p></div>
     <div id="movementPollingPanel" class="lab-card"><p class="muted">Loading movement by polling status…</p></div>
   </section>
 
   <section id="comparison" class="lab-section">
-    <div class="lab-section-head"><div><div class="eyebrow">06 / CROSS-CYCLE</div><h2>2018 was not 2022</h2></div><p>Compare aggregate trajectory, final-week behaviour and candidate explanations without pretending that descriptive differences establish causation.</p></div>
+    <div class="lab-section-head"><div><div class="eyebrow">07 / CROSS-CYCLE</div><h2>2018 was not 2022</h2></div><p>Compare aggregate trajectory, final-week behaviour and candidate explanations without pretending that descriptive differences establish causation.</p></div>
     <div id="comparisonPanel" class="lab-card"><p class="muted">Loading cross-cycle comparison…</p></div>
   </section>
 
   <section id="failures" class="lab-section">
-    <div class="lab-section-head"><div><div class="eyebrow">07 / FAILURES</div><h2>Show us the wreckage</h2></div><p>Wrong-side calls are ranked by how improbable the eventual winner looked. Confident misses use a fixed 80% threshold.</p></div>
+    <div class="lab-section-head"><div><div class="eyebrow">08 / FAILURES</div><h2>Show us the wreckage</h2></div><p>Wrong-side calls are ranked by how improbable the eventual winner looked. Confident misses use a fixed 80% threshold.</p></div>
     <div id="failurePanel" class="lab-card"><p class="muted">Loading failure analysis…</p></div>
   </section>
 
   <section id="methodology" class="lab-section">
-    <div class="lab-section-head"><div><div class="eyebrow">08 / METHODOLOGY</div><h2>Anti-leakage architecture</h2></div><p>The replay is valid only if the information boundary is valid.</p></div>
+    <div class="lab-section-head"><div><div class="eyebrow">09 / METHODOLOGY</div><h2>Anti-leakage architecture</h2></div><p>The replay is valid only if the information boundary is valid.</p></div>
     <div id="guardGrid" class="guard-grid"></div>
     <div class="lab-card contract-card"><h3>Frozen model contract</h3><dl id="contractDetails"></dl><p><a href="https://github.com/MusicOfScience/midterm-signals/blob/main/docs/MODEL_LAB.md">Read the full protocol on GitHub ↗</a></p></div>
   </section>
