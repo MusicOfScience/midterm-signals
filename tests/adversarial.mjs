@@ -79,9 +79,11 @@ try {
   assert.equal(requested.includes('/data/forecast.json'), false, 'home must not eagerly load the full forecast JSON');
 
   // Keyboard-only search must hydrate on demand, focus correctly and close.
+  // The full search module deliberately focuses after showModal() on a short
+  // timer, so assert the eventual focus contract rather than racing that timer.
   await home.keyboard.press('/');
   await home.locator('#searchDialog[open]').waitFor({ state: 'visible', timeout: 15_000 });
-  assert.equal(await home.evaluate(() => document.activeElement?.id), 'globalSearch');
+  await home.waitForFunction(() => document.activeElement?.id === 'globalSearch', null, { timeout: 1_500 });
   await home.keyboard.press('Escape');
   await home.locator('#searchDialog').waitFor({ state: 'hidden' });
   await home.close();
