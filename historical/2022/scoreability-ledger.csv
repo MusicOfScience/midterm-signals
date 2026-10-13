@@ -1,0 +1,471 @@
+race_code,race_type,admitted,exclusion_reason,incumbent_party,matched_incumbents,class_60d,class_30d,class_14d,class_7d,class_1d,outcome_party
+AK-01,house,false,multi_major_candidate_structure,DEM,Mary Sattler Peltola,excluded,excluded,excluded,excluded,excluded,DEM
+AL-01,house,true,,REP,Jerry L. Carl,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+AL-02,house,true,,REP,Barry Moore,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AL-03,house,true,,REP,Mike Rogers,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AL-04,house,true,,REP,Robert B. Aderholt,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AL-05,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AL-06,house,true,,REP,Gary J. Palmer,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+AL-07,house,true,,DEM,Terri Sewell,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+AR-01,house,true,,REP,"Eric A. ""Rick"" Crawford",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AR-02,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AR-03,house,true,,REP,Steve Womack,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AR-04,house,true,,REP,Bruce Westerman,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AZ-01,house,true,,REP,David Schweikert,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AZ-02,house,true,,DEM,Tom O’Halleran,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AZ-03,house,true,,DEM,Ruben Gallego,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+AZ-04,house,true,,DEM,Greg Stanton,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+AZ-05,house,true,,REP,Andy Biggs,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AZ-06,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AZ-07,house,true,,DEM,Raúl M. Grijalva,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+AZ-08,house,true,,REP,Debbie Lesko,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+AZ-09,house,true,,REP,Paul A. Gosar,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+CA-01,house,true,,REP,Doug LaMalfa,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-02,house,true,,DEM,Jared Huffman,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-03,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-04,house,true,,DEM,Mike Thompson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-05,house,true,,REP,Tom McClintock,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-06,house,true,,DEM,Ami Bera,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-07,house,true,,DEM,Doris O. Matsui,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-08,house,true,,DEM,John Garamendi,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-09,house,true,,DEM,Josh Harder,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-10,house,true,,DEM,Mark DeSaulnier,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+CA-11,house,true,,DEM,Nancy Pelosi,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-12,house,true,,DEM,Barbara Lee,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-13,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-14,house,true,,DEM,Eric Swalwell,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-15,house,true,,,,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+CA-16,house,true,,DEM,Anna G. Eshoo,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+CA-17,house,true,,DEM,Ro Khanna,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-18,house,true,,DEM,Zoe Lofgren,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-19,house,true,,DEM,Jimmy Panetta,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-20,house,true,,REP,Kevin McCarthy,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-21,house,true,,DEM,Jim Costa,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-22,house,true,,REP,David G. Valadao,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-23,house,true,,REP,Jay Obernolte,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-24,house,true,,DEM,Salud O. Carbajal,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-25,house,true,,DEM,Raul Ruiz,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-26,house,true,,DEM,Julia Brownley,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-27,house,true,,REP,Mike Garcia,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-28,house,true,,DEM,Judy Chu,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-29,house,true,,,,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+CA-30,house,true,,DEM,Adam B. Schiff,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+CA-31,house,true,,DEM,Grace F. Napolitano,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-32,house,true,,DEM,Brad Sherman,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-33,house,true,,DEM,Pete Aguilar,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-34,house,true,,DEM,Jimmy Gomez,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+CA-35,house,true,,DEM,Norma J. Torres,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-36,house,true,,DEM,Ted Lieu,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-37,house,true,,,,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+CA-38,house,true,,DEM,Linda T. Sánchez,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-39,house,true,,DEM,Mark Takano,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-40,house,true,,REP,Young Kim,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-41,house,true,,REP,Ken Calvert,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-42,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-43,house,true,,DEM,Maxine Waters,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-44,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-45,house,true,,REP,Michelle Steel,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-46,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-47,house,true,,DEM,Katie Porter,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-48,house,true,,REP,Darrell Issa,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CA-49,house,true,,DEM,Mike Levin,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-50,house,true,,DEM,Scott H. Peters,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-51,house,true,,DEM,Sara Jacobs,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CA-52,house,true,,DEM,Juan Vargas,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CO-01,house,true,,DEM,Diana DeGette,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CO-02,house,true,,DEM,Joe Neguse,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CO-03,house,true,,REP,Lauren Boebert,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CO-04,house,true,,REP,Ken Buck,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CO-05,house,true,,REP,Doug Lamborn,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+CO-06,house,true,,DEM,Jason Crow,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CO-07,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CO-08,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CT-01,house,true,,DEM,John B. Larson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CT-02,house,true,,DEM,Joe Courtney,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CT-03,house,true,,DEM,Rosa L. DeLauro,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CT-04,house,true,,DEM,James A. Himes,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+CT-05,house,true,,DEM,Jahana Hayes,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+DE-01,house,true,,DEM,Lisa Blunt Rochester,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+FL-01,house,true,,REP,Matt Gaetz,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-02,house,false,ambiguous_incumbency_collision,,"Al Lawson, Jr.|Neal P. Dunn",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-03,house,true,,REP,Kat Cammack,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-04,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-05,house,true,,REP,John H. Rutherford,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+FL-06,house,true,,REP,Michael Waltz,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+FL-07,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-08,house,true,,REP,Bill Posey,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-09,house,true,,DEM,Darren Soto,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+FL-10,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+FL-11,house,true,,REP,Daniel Webster,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-12,house,true,,REP,Gus M. Bilirakis,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-13,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-14,house,true,,DEM,Kathy Castor,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+FL-15,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-16,house,true,,REP,Vern Buchanan,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-17,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-18,house,true,,,,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+FL-19,house,true,,REP,Byron Donalds,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-20,house,true,,DEM,Sheila Cherfilus-McCormick,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+FL-21,house,true,,REP,Brian J. Mast,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-22,house,true,,DEM,Lois Frankel,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+FL-23,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+FL-24,house,true,,DEM,Frederica S. Wilson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+FL-25,house,true,,DEM,Debbie Wasserman Schultz,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+FL-26,house,true,,REP,Mario Diaz-Balart,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-27,house,true,,REP,Maria Elvira Salazar,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+FL-28,house,true,,REP,Carlos A. Gimenez,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+GA-01,house,true,,REP,"Earl L. ""Buddy"" Carter",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+GA-02,house,true,,DEM,"Sanford D. Bishop, Jr.",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+GA-03,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+GA-04,house,true,,DEM,"Henry C. ""Hank"" Johnson, Jr.",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+GA-05,house,true,,DEM,Nikema Williams,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+GA-06,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+GA-07,house,true,,DEM,Lucy McBath,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+GA-08,house,true,,REP,Austin Scott,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+GA-09,house,true,,REP,Andrew S. Clyde,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+GA-10,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+GA-11,house,true,,REP,Barry Loudermilk,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+GA-12,house,true,,REP,Rick W. Allen,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+GA-13,house,true,,DEM,David Scott,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+GA-14,house,true,,REP,Marjorie Taylor Greene,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+HI-01,house,true,,DEM,Ed Case,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+HI-02,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IA-01,house,true,,REP,Mariannette Miller-Meeks,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IA-02,house,true,,REP,Ashley Hinson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IA-03,house,true,,DEM,Cynthia Axne,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IA-04,house,true,,REP,Randy Feenstra,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+ID-01,house,true,,REP,Russ Fulcher,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+ID-02,house,true,,REP,Michael K. Simpson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IL-01,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-02,house,true,,DEM,Robin L. Kelly,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-03,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-04,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-05,house,true,,DEM,Mike Quigley,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-06,house,true,,DEM,Sean Casten,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-07,house,true,,DEM,Danny K. Davis,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+IL-08,house,true,,DEM,Raja Krishnamoorthi,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-09,house,true,,DEM,Janice D. Schakowsky,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-10,house,true,,DEM,Bradley Scott Schneider,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-11,house,true,,DEM,Bill Foster,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-12,house,true,,REP,Mike Bost,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IL-13,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-14,house,true,,DEM,Lauren Underwood,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IL-15,house,true,,REP,Mary E. Miller,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IL-16,house,true,,REP,Darin LaHood,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IL-17,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IN-01,house,true,,DEM,Frank J. Mrvan,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IN-02,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IN-03,house,true,,REP,Jim Banks,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IN-04,house,true,,REP,James R. Baird,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IN-05,house,true,,REP,Victoria Spartz,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IN-06,house,true,,REP,Greg Pence,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IN-07,house,true,,DEM,André Carson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+IN-08,house,true,,REP,Larry Bucshon,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+IN-09,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+KS-01,house,true,,REP,Tracey Mann,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+KS-02,house,true,,REP,Jake LaTurner,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+KS-03,house,true,,DEM,Sharice Davids,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+KS-04,house,true,,REP,Ron Estes,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+KY-01,house,true,,REP,James Comer,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+KY-02,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+KY-03,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+KY-04,house,true,,REP,Thomas Massie,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+KY-05,house,true,,REP,Harold Rogers,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+KY-06,house,true,,REP,Andy Barr,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+LA-01,house,true,,REP,Steve Scalise,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+LA-02,house,true,,DEM,Troy A. Carter,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+LA-03,house,false,multi_major_candidate_structure,REP,Clay Higgins,excluded,excluded,excluded,excluded,excluded,REP
+LA-04,house,true,,REP,Mike Johnson,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+LA-05,house,false,multi_major_candidate_structure,REP,Julia Letlow,excluded,excluded,excluded,excluded,excluded,REP
+LA-06,house,true,,REP,Garret Graves,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+MA-01,house,true,,DEM,Richard E. Neal,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MA-02,house,true,,DEM,James P. McGovern,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MA-03,house,true,,DEM,Lori Trahan,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MA-04,house,true,,DEM,Jake Auchincloss,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+MA-05,house,true,,DEM,Katherine M. Clark,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MA-06,house,true,,DEM,Seth Moulton,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MA-07,house,true,,DEM,Ayanna Pressley,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MA-08,house,true,,DEM,Stephen F. Lynch,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MA-09,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MD-01,house,true,,REP,Andy Harris,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MD-02,house,true,,DEM,C. A. Dutch Ruppersberger,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MD-03,house,true,,DEM,John P. Sarbanes,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MD-04,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MD-05,house,true,,DEM,Steny H. Hoyer,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MD-06,house,true,,DEM,David J. Trone,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MD-07,house,true,,DEM,Kweisi Mfume,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MD-08,house,true,,DEM,Jamie Raskin,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+ME-01,house,true,,DEM,Chellie Pingree,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+ME-02,house,true,,DEM,Jared F. Golden,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MI-01,house,true,,REP,Jack Bergman,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MI-02,house,true,,REP,John R. Moolenaar,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MI-03,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MI-04,house,true,,REP,Bill Huizenga,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MI-05,house,true,,REP,Tim Walberg,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MI-06,house,true,,DEM,Debbie Dingell,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MI-07,house,true,,DEM,Elissa Slotkin,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MI-08,house,true,,DEM,Daniel T. Kildee,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MI-09,house,true,,REP,Lisa C. McClain,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MI-10,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MI-11,house,true,,DEM,Haley M. Stevens,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MI-12,house,true,,DEM,Rashida Tlaib,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MI-13,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MN-01,house,true,,REP,Brad Finstad,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MN-02,house,true,,DEM,Angie Craig,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MN-03,house,true,,DEM,Dean Phillips,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MN-04,house,true,,DEM,Betty McCollum,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MN-05,house,true,,DEM,Ilhan Omar,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MN-06,house,true,,REP,Tom Emmer,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MN-07,house,true,,REP,Michelle Fischbach,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MN-08,house,true,,REP,Pete Stauber,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MO-01,house,true,,DEM,Cori Bush,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MO-02,house,true,,REP,Ann Wagner,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MO-03,house,true,,REP,Blaine Luetkemeyer,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MO-04,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MO-05,house,true,,DEM,Emanuel Cleaver,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MO-06,house,true,,REP,Sam Graves,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MO-07,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MO-08,house,true,,REP,Jason Smith,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MS-01,house,true,,REP,Trent Kelly,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MS-02,house,true,,DEM,Bennie G. Thompson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+MS-03,house,true,,REP,Michael Guest,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MS-04,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MT-01,house,false,structural_prior_unavailable_on_2022_lines,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+MT-02,house,false,structural_prior_unavailable_on_2022_lines,REP,"Matthew M. Rosendale, Sr.",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NC-01,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NC-02,house,true,,DEM,Deborah K. Ross,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NC-03,house,true,,REP,Gregory F. Murphy,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NC-04,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NC-05,house,true,,REP,Virginia Foxx,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NC-06,house,true,,DEM,Kathy E. Manning,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NC-07,house,true,,REP,David Rouzer,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NC-08,house,true,,REP,Dan Bishop,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NC-09,house,true,,REP,Richard Hudson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NC-10,house,true,,REP,Patrick T. McHenry,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NC-11,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NC-12,house,true,,DEM,Alma S. Adams,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NC-13,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NC-14,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+ND-01,house,true,,REP,Kelly Armstrong,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+NE-01,house,true,,REP,Mike Flood,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NE-02,house,true,,REP,Don Bacon,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NE-03,house,true,,REP,Adrian Smith,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NH-01,house,true,,DEM,Chris Pappas,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NH-02,house,true,,DEM,Ann Kuster,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NJ-01,house,false,structural_prior_unavailable_on_2022_lines,DEM,Donald Norcross,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NJ-02,house,false,structural_prior_unavailable_on_2022_lines,REP,Jefferson Van Drew,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NJ-03,house,false,structural_prior_unavailable_on_2022_lines,DEM,Andy Kim,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NJ-04,house,false,structural_prior_unavailable_on_2022_lines,REP,Christopher H. Smith,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NJ-05,house,false,structural_prior_unavailable_on_2022_lines,DEM,Josh Gottheimer,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NJ-06,house,false,structural_prior_unavailable_on_2022_lines,DEM,"Frank Pallone, Jr.",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NJ-07,house,false,structural_prior_unavailable_on_2022_lines,DEM,Tom Malinowski,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NJ-08,house,false,structural_prior_unavailable_on_2022_lines,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NJ-09,house,false,structural_prior_unavailable_on_2022_lines,DEM,"Bill Pascrell, Jr.",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NJ-10,house,false,structural_prior_unavailable_on_2022_lines,DEM,"Donald M. Payne, Jr.",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NJ-11,house,false,structural_prior_unavailable_on_2022_lines,DEM,Mikie Sherrill,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NJ-12,house,false,structural_prior_unavailable_on_2022_lines,DEM,Bonnie Watson Coleman,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NM-01,house,true,,DEM,Melanie A. Stansbury,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NM-02,house,true,,REP,Yvette Herrell,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NM-03,house,true,,DEM,Teresa Leger Fernandez,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NV-01,house,true,,DEM,Dina Titus,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NV-02,house,true,,REP,Mark E. Amodei,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NV-03,house,true,,DEM,Susie Lee,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NV-04,house,true,,DEM,Steven Horsford,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-01,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NY-02,house,true,,REP,Andrew R. Garbarino,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NY-03,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NY-04,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NY-05,house,true,,DEM,Gregory W. Meeks,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-06,house,true,,DEM,Grace Meng,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-07,house,true,,DEM,Nydia M. Velázquez,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-08,house,true,,DEM,Hakeem S. Jeffries,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-09,house,true,,DEM,Yvette D. Clarke,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+NY-10,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-11,house,true,,REP,Nicole Malliotakis,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NY-12,house,true,,DEM,Jerrold Nadler,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-13,house,true,,DEM,Adriano Espaillat,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+NY-14,house,true,,DEM,Alexandria Ocasio-Cortez,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-15,house,true,,DEM,Ritchie Torres,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-16,house,true,,DEM,Jamaal Bowman,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-17,house,true,,DEM,Sean Patrick Maloney,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NY-18,house,true,,DEM,Patrick Ryan,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-19,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NY-20,house,true,,DEM,Paul Tonko,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-21,house,true,,REP,Elise M. Stefanik,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NY-22,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NY-23,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NY-24,house,true,,REP,Claudia Tenney,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+NY-25,house,true,,DEM,Joseph D. Morelle,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+NY-26,house,true,,DEM,Brian Higgins,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+OH-01,house,true,,REP,Steve Chabot,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+OH-02,house,true,,REP,Brad R. Wenstrup,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OH-03,house,true,,DEM,Joyce Beatty,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+OH-04,house,true,,REP,Jim Jordan,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OH-05,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OH-06,house,true,,REP,Bill Johnson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OH-07,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OH-08,house,true,,REP,Warren Davidson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OH-09,house,true,,DEM,Marcy Kaptur,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+OH-10,house,true,,REP,Michael R. Turner,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OH-11,house,true,,DEM,Shontel M. Brown,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+OH-12,house,true,,REP,Troy Balderson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OH-13,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+OH-14,house,true,,REP,David P. Joyce,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OH-15,house,true,,REP,Mike Carey,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OK-01,house,true,,REP,Kevin Hern,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OK-02,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OK-03,house,true,,REP,Frank D. Lucas,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OK-04,house,true,,REP,Tom Cole,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OK-05,house,true,,REP,Stephanie I. Bice,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OR-01,house,true,,DEM,Suzanne Bonamici,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+OR-02,house,true,,REP,Cliff Bentz,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OR-03,house,true,,DEM,Earl Blumenauer,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+OR-04,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+OR-05,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+OR-06,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+PA-01,house,true,,REP,Brian K. Fitzpatrick,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+PA-02,house,true,,DEM,Brendan F. Boyle,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+PA-03,house,true,,DEM,Dwight Evans,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,deterministic_dem,DEM
+PA-04,house,true,,DEM,Madeleine Dean,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+PA-05,house,true,,DEM,Mary Gay Scanlon,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+PA-06,house,true,,DEM,Chrissy Houlahan,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+PA-07,house,true,,DEM,Susan Wild,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+PA-08,house,true,,DEM,Matt Cartwright,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+PA-09,house,true,,REP,Daniel Meuser,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+PA-10,house,true,,REP,Scott Perry,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+PA-11,house,true,,REP,Lloyd Smucker,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+PA-12,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+PA-13,house,true,,REP,John Joyce,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+PA-14,house,true,,REP,Guy Reschenthaler,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+PA-15,house,true,,REP,Glenn Thompson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+PA-16,house,true,,REP,Mike Kelly,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+PA-17,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+RI-01,house,true,,DEM,David N. Cicilline,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+RI-02,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+SC-01,house,true,,REP,Nancy Mace,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+SC-02,house,true,,REP,Joe Wilson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+SC-03,house,true,,REP,Jeff Duncan,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+SC-04,house,true,,REP,William R. Timmons IV,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+SC-05,house,true,,REP,Ralph Norman,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+SC-06,house,true,,DEM,James E. Clyburn,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+SC-07,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+SD-01,house,true,,REP,Dusty Johnson,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+TN-01,house,true,,REP,Diana Harshbarger,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TN-02,house,true,,REP,Tim Burchett,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TN-03,house,true,,REP,"Charles J. ""Chuck"" Fleischmann",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TN-04,house,true,,REP,Scott DesJarlais,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TN-05,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TN-06,house,true,,REP,John Rose,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TN-07,house,true,,REP,Mark E. Green,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TN-08,house,true,,REP,David Kustoff,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TN-09,house,true,,DEM,Steve Cohen,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-01,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-02,house,true,,REP,Dan Crenshaw,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-03,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-04,house,true,,REP,Pat Fallon,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-05,house,true,,REP,Lance Gooden,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-06,house,true,,REP,Jake Ellzey,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+TX-07,house,true,,DEM,Lizzie Fletcher,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-08,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-09,house,true,,DEM,Al Green,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-10,house,true,,REP,Michael T. McCaul,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-11,house,true,,REP,August Pfluger,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+TX-12,house,true,,REP,Kay Granger,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-13,house,true,,REP,Ronny Jackson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-14,house,true,,REP,"Randy K. Weber, Sr.",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-15,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-16,house,true,,DEM,Veronica Escobar,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-17,house,true,,REP,Pete Sessions,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-18,house,true,,DEM,Sheila Jackson Lee,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-19,house,true,,REP,Jodey C. Arrington,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+TX-20,house,true,,DEM,Joaquin Castro,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-21,house,true,,REP,Chip Roy,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-22,house,true,,REP,Troy E. Nehls,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-23,house,true,,REP,Tony Gonzales,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-24,house,true,,REP,Beth Van Duyne,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-25,house,true,,REP,Roger Williams,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+TX-26,house,true,,REP,Michael C. Burgess,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+TX-27,house,true,,REP,Michael Cloud,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-28,house,true,,DEM,Henry Cuellar,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-29,house,true,,DEM,Sylvia R. Garcia,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-30,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-31,house,true,,REP,John R. Carter,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+TX-32,house,true,,DEM,Colin Z. Allred,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-33,house,true,,DEM,Marc A. Veasey,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-34,house,false,ambiguous_incumbency_collision,,Mayra Flores|Vicente Gonzalez,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-35,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-36,house,true,,REP,Brian Babin,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+TX-37,house,true,,DEM,Lloyd Doggett,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+TX-38,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+UT-01,house,true,,REP,Blake D. Moore,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+UT-02,house,true,,REP,Chris Stewart,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+UT-03,house,true,,REP,John R. Curtis,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+UT-04,house,true,,REP,Burgess Owens,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+VA-01,house,true,,REP,Robert J. Wittman,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+VA-02,house,true,,DEM,Elaine G. Luria,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+VA-03,house,true,,DEM,"Robert C. ""Bobby"" Scott",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+VA-04,house,true,,DEM,A. Donald McEachin,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+VA-05,house,true,,REP,Bob Good,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+VA-06,house,true,,REP,Ben Cline,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+VA-07,house,true,,DEM,Abigail Davis Spanberger,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+VA-08,house,true,,DEM,"Donald S. Beyer, Jr.",binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+VA-09,house,true,,REP,H. Morgan Griffith,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+VA-10,house,true,,DEM,Jennifer Wexton,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+VA-11,house,true,,DEM,Gerald E. Connolly,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+VT-01,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+WA-01,house,true,,DEM,Suzan K. DelBene,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+WA-02,house,true,,DEM,Rick Larsen,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+WA-03,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+WA-04,house,true,,REP,Dan Newhouse,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+WA-05,house,true,,REP,Cathy McMorris Rodgers,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+WA-06,house,true,,DEM,Derek Kilmer,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+WA-07,house,true,,DEM,Pramila Jayapal,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+WA-08,house,true,,DEM,Kim Schrier,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+WA-09,house,true,,DEM,Adam Smith,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+WA-10,house,true,,DEM,Marilyn Strickland,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+WI-01,house,true,,REP,Bryan Steil,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+WI-02,house,true,,DEM,Mark Pocan,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+WI-03,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+WI-04,house,true,,DEM,Gwen Moore,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,DEM
+WI-05,house,true,,REP,Scott Fitzgerald,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+WI-06,house,true,,REP,Glenn Grothman,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+WI-07,house,true,,REP,Thomas P. Tiffany,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+WI-08,house,true,,REP,Mike Gallagher,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,REP
+WV-01,house,true,,REP,Carol D. Miller,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+WV-02,house,true,,REP,Alexander Mooney,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+WY-01,house,true,,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,REP
+AK-S3,senate,false,multi_major_candidate_structure,REP,Lisa Murkowski,excluded,excluded,excluded,excluded,excluded,
+AL-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+AR-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,John Boozman,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+AZ-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Mark Kelly,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+CA-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Alex Padilla,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+CO-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Michael F. Bennet,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+CT-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Richard Blumenthal,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+FL-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,Marco Rubio,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+GA-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Raphael G. Warnock,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+HI-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Brian Schatz,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+IA-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,Chuck Grassley,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+ID-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,Mike Crapo,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+IL-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Tammy Duckworth,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+IN-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,Todd Young,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+KS-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,Jerry Moran,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+KY-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,Rand Paul,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+LA-S3,senate,false,multi_major_candidate_structure,REP,John Kennedy,excluded,excluded,excluded,excluded,excluded,
+MD-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Chris Van Hollen,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+MO-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+NC-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+ND-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,John Hoeven,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+NH-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Margaret Wood Hassan,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+NV-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Catherine Cortez Masto,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+NY-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Charles E. Schumer,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+OH-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+OK-S2,senate,false,historical_poll_stream_incomplete_before_2022-10-18,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+OK-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,James Lankford,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+OR-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Ron Wyden,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+PA-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+SC-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,Tim Scott,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+SD-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,John Thune,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+UT-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,Mike Lee,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,deterministic_rep,
+VT-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,,,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+WA-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,DEM,Patty Murray,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
+WI-S3,senate,false,historical_poll_stream_incomplete_before_2022-10-18,REP,Ron Johnson,binary_dr,binary_dr,binary_dr,binary_dr,binary_dr,
