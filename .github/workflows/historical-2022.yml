@@ -8,6 +8,7 @@ on:
       - "scripts/acquire_historical_2022.py"
       - "scripts/probe_2022_poll_archive.py"
       - "scripts/probe_2022_results.py"
+      - "scripts/probe_2022_roster.py"
       - ".github/workflows/historical-2022.yml"
 
 permissions:
@@ -27,8 +28,10 @@ jobs:
         with:
           python-version: "3.12"
       - name: Compile acquisition probes
-        run: python -m py_compile scripts/acquire_historical_2022.py scripts/probe_2022_poll_archive.py scripts/probe_2022_results.py
+        run: python -m py_compile scripts/acquire_historical_2022.py scripts/probe_2022_poll_archive.py scripts/probe_2022_results.py scripts/probe_2022_roster.py
       - name: Verify 2022 poll evidence chain
         run: python scripts/probe_2022_poll_archive.py
       - name: Probe difficult official-result identities
         run: python scripts/probe_2022_results.py
+      - name: Classify dated roster scoreability
+        run: python scripts/probe_2022_roster.py
