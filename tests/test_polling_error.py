@@ -2,7 +2,6 @@ import csv
 import json
 import sys
 import unittest
-from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -36,12 +35,12 @@ class PollingErrorTests(unittest.TestCase):
             "margin": "3.0", "dem": "51.5", "rep": "48.5", "rating": "1.5", "n": "1000", "lean": "",
         }]
         checkpoint = {
-            "cutoff": "2022-10-02",
+            "cutoff": "2022-10-01",
             "predictions": [{
                 "race_code": "ZZ-01", "race_type": "house",
                 "dem_candidate": "Alice Democrat", "rep_candidate": "Bob Republican",
-                "poll_count": 1, "poll_weight": 0.2, "latest_race_poll": "2022-10-01",
-                "prior_margin": 1.0, "forecast_margin_d_minus_r": 1.4,
+                "poll_count": 1, "poll_weight": 0.27, "latest_race_poll": "2022-10-01",
+                "prior_margin": 1.0, "forecast_margin_d_minus_r": 1.54,
             }],
         }
         diag = pe.checkpoint_polling_error(checkpoint, races, polls, {"ZZ-01": 2.0})
@@ -49,7 +48,7 @@ class PollingErrorTests(unittest.TestCase):
         self.assertEqual(diag["n"], 1)
         house = diag["house_only"]
         self.assertAlmostEqual(house["raw_race_poll_aggregate"]["mean_error_d_minus_r_pp"], 1.0)
-        self.assertAlmostEqual(house["published_full_model_margin"]["mae_pp"], 0.6)
+        self.assertAlmostEqual(house["published_full_model_margin"]["mae_pp"], 0.46)
         self.assertLess(house["model_comparison"]["mae_delta_full_minus_raw_poll_pp"], 0)
 
     def test_missing_certified_margin_is_unavailable_not_zero(self):
@@ -63,12 +62,12 @@ class PollingErrorTests(unittest.TestCase):
             "margin": "3.0", "rating": "1.5", "n": "1000", "lean": "",
         }]
         checkpoint = {
-            "cutoff": "2022-10-02",
+            "cutoff": "2022-10-01",
             "predictions": [{
                 "race_code": "ZZ-01", "race_type": "house",
                 "dem_candidate": "Alice Democrat", "rep_candidate": "Bob Republican",
-                "poll_count": 1, "poll_weight": 0.2, "latest_race_poll": "2022-10-01",
-                "prior_margin": 1.0, "forecast_margin_d_minus_r": 1.4,
+                "poll_count": 1, "poll_weight": 0.27, "latest_race_poll": "2022-10-01",
+                "prior_margin": 1.0, "forecast_margin_d_minus_r": 1.54,
             }],
         }
         diag = pe.checkpoint_polling_error(checkpoint, races, polls, {})
