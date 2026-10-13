@@ -21,9 +21,10 @@ jobs:
           node-version: "22"
       - name: Python syntax and browser projection
         run: |
-          python -m py_compile scripts/build_forecast.py scripts/enrich_outputs.py scripts/run_enrichment.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py scripts/model_lab.py
+          python -m py_compile scripts/build_forecast.py scripts/enrich_outputs.py scripts/run_enrichment.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py scripts/model_lab.py scripts/augment_model_lab.py
           python scripts/make_bootstrap.py
           python scripts/model_lab.py
+          python scripts/augment_model_lab.py
           python scripts/build_browser.py
       - name: JavaScript syntax
         run: |
@@ -33,7 +34,7 @@ jobs:
           node --check public/enhancements.bundle.mjs
           node --check public/model-lab/model-lab.js
       - name: Unit tests
-        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab
+        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_augmentation
       - name: Static publication checks
         run: node scripts/check.mjs
       - name: Upload generated Model Lab audit artefact
@@ -64,6 +65,7 @@ jobs:
         run: |
           python scripts/make_bootstrap.py
           python scripts/model_lab.py
+          python scripts/augment_model_lab.py
           python scripts/build_browser.py
       - name: Start static production server
         run: |
