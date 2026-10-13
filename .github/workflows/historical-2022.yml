@@ -1,0 +1,30 @@
+name: Admit historical 2022 corpus
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [historical-2022-admission]
+    paths:
+      - "scripts/acquire_historical_2022.py"
+      - ".github/workflows/historical-2022.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: historical-2022-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  source-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile acquisition code
+        run: python -m py_compile scripts/acquire_historical_2022.py
+      - name: Probe 2022 block-level structural sources
+        run: python scripts/acquire_historical_2022.py --probe
