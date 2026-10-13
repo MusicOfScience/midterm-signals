@@ -70,6 +70,40 @@ function renderStructural(){
     <p class="muted">${cycle?.cycle} · ${checkpoint?.days_to_election}d. No coefficient changes. No post-election district field is fed into any probability.</p>`;
 }
 
+function stabilityBandLabel(key){
+  return ({stable_0_5:'0–5 pp',moderate_5_10:'>5–10 pp',high_10_15:'>10–15 pp',very_high_gt_15:'>15 pp'})[key] || key;
+}
+
+function stabilityBandRow(s){
+  if(!s || s.state!=='scored') return `<tr><th scope="row">${esc(stabilityBandLabel(s?.band||''))}</th><td>${s?.n||0}</td><td colspan="6">Unavailable</td></tr>`;
+  return `<tr><th scope="row">${esc(stabilityBandLabel(s.band))}</th><td>${s.n}</td><td>${num(s.mean_range_pp,1)} pp</td><td>${num(s.structural_plus_incumbency?.brier)}</td><td>${num(s.published_full_forecast?.brier)}</td><td class="${deltaClass(s.brier_delta_full_minus_structural)}">${num(s.brier_delta_full_minus_structural)}</td><td>${s.structural_confident_misses}</td><td>${s.full_confident_misses}</td></tr>`;
+}
+
+function unstableRaceRows(s){
+  return (s?.top_unstable||[]).slice(0,12).map(r=>`<tr><td>${esc(r.race_code)}</td><td>${num(r.range_pp,1)} pp</td><td>${pp(r.trend_earliest_to_latest_pp)}</td><td>${esc((r.relative_leans_d_minus_r||[]).map(v=>`${Number(v).toFixed(1)}`).join(' → '))}</td><td>${esc(r.winner)}</td><td>${pct(r.winner_probability_structural)}</td><td>${pct(r.winner_probability_full)}</td><td>${r.poll_count}</td></tr>`).join('');
+}
+
+function renderBaselineStability(){
+  const panel=$('baselineStabilityPanel');
+  if(!panel) return;
+  const {cycle,checkpoint}=selection();
+  const s=checkpoint?.score?.baseline_stability;
+  if(!s || s.state!=='scored'){
+    panel.innerHTML='<p class="muted">Baseline-stability diagnostic unavailable.</p>';
+    return;
+  }
+  const rows=(s.bands||[]).map(stabilityBandRow).join('');
+  const unstable=unstableRaceRows(s);
+  panel.innerHTML=`<div class="warning-note"><strong>Volatility is not redistricting.</strong> This test asks whether the three pre-election presidential relative leans were internally stable on the cycle’s own district geography. A volatile history can reflect realignment, demographic change or baseline non-stationarity. It does not prove a boundary effect.</div>
+    <h3>Did unstable structural history fail more often?</h3>
+    <p class="method-note">Bands are fixed before outcomes: 0–5, &gt;5–10, &gt;10–15 and &gt;15 percentage-point range across the three admitted presidential relative leans. Only House races with both major-party candidates are included.</p>
+    <div class="metric-grid"><div class="metric"><span>House two-party sample</span><strong>${s.n}</strong></div><div class="metric"><span>&gt;10 pp instability</span><strong>${s.high_instability_n}</strong></div><div class="metric"><span>Share &gt;10 pp</span><strong>${pct(s.high_instability_share)}</strong></div><div class="metric"><span>Band assignment</span><strong>PRE-OUTCOME</strong></div></div>
+    <div class="table-wrap"><table class="diagnostic-table"><thead><tr><th>Relative-lean range</th><th>n</th><th>Mean range</th><th>Structural Brier</th><th>Full Brier</th><th>Total Δ</th><th>Structural 80% misses</th><th>Full 80% misses</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <h3>Most unstable structural histories</h3>
+    ${unstable?`<div class="table-wrap"><table class="diagnostic-table"><thead><tr><th>Race</th><th>Range</th><th>Earliest→latest</th><th>Relative leans D−R</th><th>Winner</th><th>Winner p structure</th><th>Winner p full</th><th>Polls</th></tr></thead><tbody>${unstable}</tbody></table></div>`:'<p class="muted">No eligible unstable races.</p>'}
+    <p class="muted">${cycle?.cycle} · ${checkpoint?.days_to_election}d. For 2022, the admitted presidential inputs were reconstructed on the 118th-Congress district geography before this diagnostic; old district numbers are not carried forward as structural inputs.</p>`;
+}
+
 function partitionCells(s){
   if(!s || s.state!=='scored') return '<td>0</td><td colspan="5">Unavailable</td>';
   return `<td>${s.n}</td><td>${pct(s.mean_absolute_probability_change)}</td><td>${pp(s.mean_winner_directed_probability_change)}</td><td>${s.toward_eventual_winner}</td><td>${s.away_from_eventual_winner}</td><td>${s.strong_toward_eventual_winner}/${s.strong_away_from_eventual_winner}</td>`;
@@ -114,6 +148,7 @@ function render(){
   if(!data) return;
   renderPaired();
   renderStructural();
+  renderBaselineStability();
   renderMovementPartitions();
 }
 
@@ -127,5 +162,6 @@ fetch('/data/model-lab.json',{cache:'no-store'})
   .catch(err=>{
     if($('pairedPollingPanel')) $('pairedPollingPanel').innerHTML=`<p>Paired diagnostic unavailable: ${esc(err.message)}</p>`;
     if($('structuralAuditPanel')) $('structuralAuditPanel').innerHTML='<p>Structural-stage diagnostic unavailable.</p>';
+    if($('baselineStabilityPanel')) $('baselineStabilityPanel').innerHTML='<p>Baseline-stability diagnostic unavailable.</p>';
     if($('movementPollingPanel')) $('movementPollingPanel').innerHTML='<p>Movement partition unavailable.</p>';
   });
