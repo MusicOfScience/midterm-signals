@@ -71,12 +71,12 @@ def build_app() -> str:
         "search hydration",
     )
 
-    # Enhancement code is not part of the homepage critical path. Load it only
-    # when a route that benefits from history/map/builder enhancements is active.
+    # Enhancement code is not part of the homepage critical path. All other
+    # analytical routes may opt into the richer v1 controls after first render.
     lazy = r'''let __ENHANCEMENTS_PROMISE=null;
 function __maybeLoadEnhancements(){
   const view=routeFromLocation().view;
-  if(!['map','history','race','builder'].includes(view))return;
+  if(view==='home')return;
   if(!__ENHANCEMENTS_PROMISE)__ENHANCEMENTS_PROMISE=import('/enhancements.bundle.mjs').catch(err=>{console.warn('MIDTERM SIGNALS v1 enhancements unavailable',err);return null});
 }
 window.addEventListener('popstate',()=>setTimeout(__maybeLoadEnhancements,0));
