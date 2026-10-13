@@ -92,12 +92,10 @@ def scan(chamber: str, data: bytes) -> dict:
     disagreements=[]
     for (rc,day), rows in variants.items():
         sigs={signature(r) for r in rows}
-        # Empty independent-name differences are harmless only if D/R agree.
         dr={(s[0],s[1]) for s in sigs}
         if len(dr) != 1:
             disagreements.append({"race_code":rc,"date":day.isoformat(),"signatures":[list(s) for s in sorted(sigs)]})
             continue
-        # Choose the most complete representative; this affects metadata only.
         row=max(rows,key=lambda r:sum(bool((r.get(k) or "").strip()) for k in ("name_D1","name_R1","name_I1")))
         row["_day"]=day; row["_code"]=rc
         collapsed.append(row)
@@ -121,34 +119,42 @@ def scan(chamber: str, data: bytes) -> dict:
             if rc.startswith(EDGE_PREFIXES):
                 edge.append({
                     "checkpoint":cp.isoformat(),"race_code":rc,"class":cls,
-                    "forecastdate":row["_day"].isoformat(),
                     "D":row.get("name_D1") or "","R":row.get("name_R1") or "","I":row.get("name_I1") or "",
-                    "branch_example":row.get("branch") or "","expression_example":row.get("expression") or "",
                 })
         checkpoint_summary.append({"checkpoint":cp.isoformat(),"active_races":active,"classes":dict(counts)})
 
     return {
-        "columns": reader.fieldnames or [],
-        "branch_counts": dict(branches),
-        "expression_counts": dict(expressions),
-        "variant_race_dates": len(variants),
-        "collapsed_race_dates": len(collapsed),
         "unique_races": len(by_code),
         "date_min": min(r["_day"] for r in collapsed).isoformat(),
         "date_max": max(r["_day"] for r in collapsed).isoformat(),
         "checkpoints": checkpoint_summary,
         "nonbinary_races": {k:sorted(v) for k,v in sorted(exclusions.items())},
         "edge_cases": edge,
+        "variant_counts": {"branches":dict(branches),"expressions":dict(expressions)},
     }
 
 
 def main() -> None:
-    out={}
+    full={}
     for chamber,url in FILES.items():
-        data=fetch(url); out[chamber]={"url":url,"bytes":len(data),**scan(chamber,data)}
-    if out["house"]["unique_races"] < 435: raise RuntimeError(f"house roster universe too small: {out['house']['unique_races']}")
-    if out["senate"]["unique_races"] < 34: raise RuntimeError(f"senate roster universe too small: {out['senate']['unique_races']}")
-    print(json.dumps(out,indent=2,default=str))
+        data=fetch(url); full[chamber]=scan(chamber,data)
+    if full["house"]["unique_races"] < 435: raise RuntimeError(f"house roster universe too small: {full['house']['unique_races']}")
+    if full["senate"]["unique_races"] < 34: raise RuntimeError(f"senate roster universe too small: {full['senate']['unique_races']}")
+
+    # Deliberately concise: this log is an admission ledger, not a dump of a
+    # 70+ MB source file. It is small enough to inspect directly in CI.
+    compact={
+        chamber:{
+            "unique_races":info["unique_races"],
+            "date_min":info["date_min"],
+            "date_max":info["date_max"],
+            "checkpoints":info["checkpoints"],
+            "nonbinary_races":info["nonbinary_races"],
+            "edge_cases":info["edge_cases"],
+        }
+        for chamber,info in full.items()
+    }
+    print("ROSTER_SCOREABILITY_JSON=" + json.dumps(compact,separators=(",",":"),sort_keys=True))
 
 
 if __name__ == "__main__": main()
