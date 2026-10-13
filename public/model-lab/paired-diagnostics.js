@@ -14,10 +14,14 @@ function selection(){
   return {cycle,checkpoint};
 }
 
+function deltaClass(value){
+  return Number(value)<0?'good-delta':Number(value)>0?'bad-delta':'';
+}
+
 function pairedRow(label,s){
   if(!s || s.state!=='scored') return `<tr><th scope="row">${esc(label)}</th><td colspan="9">Unavailable</td></tr>`;
-  const brierClass=Number(s.brier_delta_with_polls_minus_prior)<0?'good-delta':'bad-delta';
-  const logClass=Number(s.log_loss_delta_with_polls_minus_prior)<0?'good-delta':'bad-delta';
+  const brierClass=deltaClass(s.brier_delta_with_polls_minus_prior);
+  const logClass=deltaClass(s.log_loss_delta_with_polls_minus_prior);
   return `<tr><th scope="row">${esc(label)}</th><td>${s.n}</td><td>${num(s.prior_brier)}</td><td>${num(s.with_race_polls_brier)}</td><td class="${brierClass}">${num(s.brier_delta_with_polls_minus_prior)}</td><td>${num(s.prior_log_loss)}</td><td>${num(s.with_race_polls_log_loss)}</td><td class="${logClass}">${num(s.log_loss_delta_with_polls_minus_prior)}</td><td>${pp(s.mean_winner_directed_probability_change)}</td><td>${s.moved_toward_eventual_winner}/${s.moved_away_from_eventual_winner}</td></tr>`;
 }
 
@@ -34,6 +38,36 @@ function renderPaired(){
     <p class="method-note">This is the stronger polling diagnostic. For each race that had eligible race-level polls, it compares the published forecast with that <strong>same race’s frozen structural + generic-ballot prior</strong> before the race-poll blend. Negative score deltas mean the poll component improved the paired forecasts.</p>
     <div class="table-wrap"><table class="diagnostic-table"><thead><tr><th>Paired sample</th><th>n</th><th>Prior Brier</th><th>With polls</th><th>Δ Brier</th><th>Prior log loss</th><th>With polls</th><th>Δ log loss</th><th>Mean move toward winner</th><th>Toward / away</th></tr></thead><tbody>${pairedRow('All polled races',all)}${pairedRow('Prior 20–80%',competitive)}</tbody></table></div>
     <p class="muted">${cycle?.cycle} · ${checkpoint?.days_to_election}d. This isolates the model component on the same races, but it remains an evaluation of the admitted polling stream rather than a causal claim about polling in general.</p>`;
+}
+
+function structuralRow(label,s){
+  if(!s || s.state!=='scored') return `<tr><th scope="row">${esc(label)}</th><td colspan="7">Unavailable</td></tr>`;
+  return `<tr><th scope="row">${esc(label)}</th><td>${s.n}</td><td>${num(s.structural_plus_incumbency?.brier)}</td><td>${num(s.structural_plus_generic_ballot?.brier)}</td><td class="${deltaClass(s.brier_delta_generic_minus_structural)}">${num(s.brier_delta_generic_minus_structural)}</td><td>${num(s.published_full_forecast?.brier)}</td><td class="${deltaClass(s.brier_delta_full_minus_prior)}">${num(s.brier_delta_full_minus_prior)}</td><td class="${deltaClass(s.brier_delta_full_minus_structural)}">${num(s.brier_delta_full_minus_structural)}</td></tr>`;
+}
+
+function structuralMissRows(s){
+  return (s?.confident_structural_misses||[]).slice(0,12).map(r=>`<tr><td>${esc(r.race_code)}</td><td>${esc(r.winner)}</td><td>${pct(r.winner_probability_structural)}</td><td>${pct(r.dem_probability_structural)}</td><td>${pct(r.dem_probability_after_generic)}</td><td>${pct(r.dem_probability_full)}</td><td>${pp(r.generic_winner_directed_change)}</td><td>${pp(r.poll_winner_directed_change)}</td></tr>`).join('');
+}
+
+function renderStructural(){
+  const panel=$('structuralAuditPanel');
+  if(!panel) return;
+  const {cycle,checkpoint}=selection();
+  const all=checkpoint?.score?.structural_decomposition;
+  const competitive=checkpoint?.score?.structural_decomposition_20_80;
+  if(!all){
+    panel.innerHTML='<p class="muted">Structural-stage diagnostic unavailable.</p>';
+    return;
+  }
+  const misses=structuralMissRows(all);
+  panel.innerHTML=`<div class="warning-note"><strong>Diagnostic, not a redistricting verdict.</strong> This scores the frozen structural presidential-relative-lean + incumbency stage before later information is added. A weak structural stage is evidence about the baseline; it does not by itself identify changed district boundaries as the cause.</div>
+    <h3>Where does forecast skill enter?</h3>
+    <p class="method-note">The same two-major-party races are carried through three stages: <strong>structural + incumbency</strong> → <strong>+ generic ballot</strong> → <strong>published full forecast</strong>. Negative Δ Brier means the newly added stage improved the same sample.</p>
+    <div class="table-wrap"><table class="diagnostic-table"><thead><tr><th>Fixed sample</th><th>n</th><th>Structural Brier</th><th>+ generic</th><th>Δ generic</th><th>Full</th><th>Δ race polls</th><th>Total Δ</th></tr></thead><tbody>${structuralRow('All two-party contests',all)}${structuralRow('Structural 20–80%',competitive)}</tbody></table></div>
+    <div class="metric-grid"><div class="metric"><span>Generic mean move toward winner</span><strong>${pp(all.generic_ballot_effect?.mean_winner_directed_probability_change)}</strong></div><div class="metric"><span>Race-poll mean move toward winner</span><strong>${pp(all.race_poll_effect?.mean_winner_directed_probability_change)}</strong></div><div class="metric"><span>Total mean move toward winner</span><strong>${pp(all.total_information_effect?.mean_winner_directed_probability_change)}</strong></div><div class="metric"><span>Confident structural misses</span><strong>${all.confident_structural_misses?.length ?? '—'}</strong></div></div>
+    <h3>Confident structural misses</h3>
+    ${misses?`<div class="table-wrap"><table class="diagnostic-table"><thead><tr><th>Race</th><th>Winner</th><th>Winner p at structure</th><th>D p structure</th><th>D p + generic</th><th>D p full</th><th>Generic move toward winner</th><th>Poll move toward winner</th></tr></thead><tbody>${misses}</tbody></table></div>`:'<p class="muted">No structural-stage miss crossed the fixed 80% confidence threshold in this selected sample.</p>'}
+    <p class="muted">${cycle?.cycle} · ${checkpoint?.days_to_election}d. No coefficient changes. No post-election district field is fed into any probability.</p>`;
 }
 
 function partitionCells(s){
@@ -79,6 +113,7 @@ function renderMovementPartitions(){
 function render(){
   if(!data) return;
   renderPaired();
+  renderStructural();
   renderMovementPartitions();
 }
 
@@ -91,5 +126,6 @@ fetch('/data/model-lab.json',{cache:'no-store'})
   })
   .catch(err=>{
     if($('pairedPollingPanel')) $('pairedPollingPanel').innerHTML=`<p>Paired diagnostic unavailable: ${esc(err.message)}</p>`;
+    if($('structuralAuditPanel')) $('structuralAuditPanel').innerHTML='<p>Structural-stage diagnostic unavailable.</p>';
     if($('movementPollingPanel')) $('movementPollingPanel').innerHTML='<p>Movement partition unavailable.</p>';
   });
