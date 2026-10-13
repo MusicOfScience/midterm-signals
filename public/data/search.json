@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T22:06:33.543187Z",
+  "generated_at": "2026-10-13T01:53:03.831899Z",
   "records": [
     {
       "type": "race",
@@ -10101,13 +10101,6 @@
       "subtitle": "Pollster",
       "key": "Ipsos",
       "terms": "Ipsos"
-    },
-    {
-      "type": "pollster",
-      "label": "J.L. Partners",
-      "subtitle": "Pollster",
-      "key": "J.L. Partners",
-      "terms": "J.L. Partners"
     },
     {
       "type": "pollster",

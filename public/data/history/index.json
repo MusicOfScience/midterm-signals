@@ -1,7 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-12T22:06:33.543187Z",
+  "generated_at": "2026-10-13T01:53:03.831899Z",
   "snapshots": [
+    "2026-10-13T015303Z.json",
     "2026-10-12T220633Z.json",
     "2026-10-12T220446Z.json",
     "2026-10-12T190126Z.json",
@@ -9,6 +10,22 @@
     "2026-10-12.json"
   ],
   "summaries": [
+    {
+      "file": "2026-10-13T015303Z.json",
+      "generated_at": "2026-10-13T01:53:03.831899Z",
+      "house": 0.9172,
+      "senate": 0.6882,
+      "house_seats": 234.7,
+      "senate_seats": 51.5,
+      "generic_ballot_d_minus_r": 7.54,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "6c9f1f4d3f2b8379f64ab823f26c5271d4f73b15",
+      "input_sha256": "3337df346ce0f0ae4ac163cb5e9352aec15656f398a8fcf5b7bcd1f414638822",
+      "changed_inputs": [
+        "gcb_polls.csv",
+        "race_polls.csv"
+      ]
+    },
     {
       "file": "2026-10-12T220633Z.json",
       "generated_at": "2026-10-12T22:06:33.543187Z",
@@ -60,20 +77,7 @@
       "upstream_commit": "825afc379e34d9f2cd0b0edc444ff3fa1cd63cd0",
       "input_sha256": "cc10e71f1ab16a749f2f5c32427555746691bfc0cd05178b1f1db94123f5645e",
       "changed_inputs": []
-    },
-    {
-      "file": "2026-10-12.json",
-      "generated_at": null,
-      "house": null,
-      "senate": null,
-      "house_seats": null,
-      "senate_seats": null,
-      "generic_ballot_d_minus_r": null,
-      "model": null,
-      "upstream_commit": null,
-      "input_sha256": null,
-      "changed_inputs": []
     }
   ],
-  "note": "Full snapshot files are immutable; summaries are derivative navigation metadata."
+  "note": "Full snapshot files are immutable; summaries are derivative navigation metadata. Legacy/non-production files may remain listed as snapshots but are excluded from the comparison summaries."
 }

@@ -1,54 +1,55 @@
 kind,race_code,pollster,sponsor,sponsor_lean,start_date,end_date,publication_date,n,population,mode,dem,rep,margin,source,model_weight
-generic_ballot,,Noble Predictive Insights,,,,2026-10-07,,2527,,,47.0,42.0,5.0,,1.96047
-generic_ballot,,The Honest Poll,,,,2026-10-06,,780,,,53.0,41.5,11.5,,0.70341
-generic_ballot,,Focaldata,,,,2026-10-05,,2553,,,49.6,42.7,6.9,,1.40862
-generic_ballot,,Ipsos,,,,2026-10-05,,3526,,,40.5,33.5,7.0,,2.70639
-generic_ballot,,YouGov,,,,2026-10-05,,1173,,,50.0,39.3,10.7,,1.56098
-generic_ballot,,Pew Research Center,,,,2026-10-04,,3917,,,44.0,36.0,8.0,,3.35818
-generic_ballot,,Morning Consult,,,,2026-10-04,,17659,,,49.9,43.2,6.7,,4.84243
-generic_ballot,,Cygnal,,R,,2026-10-02,,1500,,,51.6,42.5,9.1,,0.56139
-generic_ballot,,YouGov,,,,2026-10-02,,1572,,,54.0,45.0,9.0,,1.49581
-generic_ballot,,ActiVote,,,,2026-10-02,,1000,,,52.2,47.8,4.4,,0.56458
-generic_ballot,,Centerline Research & Strategy,,,,2026-10-01,,930,,,47.3,38.0,9.3,,0.5605
-generic_ballot,,YouGov,,,,2026-09-28,,1003,,,49.0,37.5,11.5,,0.92861
-generic_ballot,,HarrisX/Harris Poll,,,,2026-09-28,,2200,,,50.5,49.5,1.0,,0.84123
-generic_ballot,,AlphaROC,,,,2026-09-28,,1000,,,43.4,37.1,6.3,,0.4811
-generic_ballot,,Morning Consult,,,,2026-09-27,,18786,,,50.3,42.8,7.5,,3.21317
-generic_ballot,,Quinnipiac University,,,,2026-09-27,,1032,,,51.0,39.0,12.0,,1.06351
-generic_ballot,,Angus Reid Global,,,,2026-09-25,,,,,45.0,34.0,11.0,,0.23473
-generic_ballot,,McLaughlin & Associates,,R,,2026-09-22,,1000,,,48.0,43.0,5.0,,0.16577
-generic_ballot,,The Argument/Verasight,,,,2026-09-22,,1603,,,53.8,46.2,7.6,,0.60678
-generic_ballot,,Emerson College,,,,2026-09-22,,1000,,,53.2,41.9,11.3,,0.69925
-generic_ballot,,Impact Research/National Research Inc.,,,,2026-09-21,,1500,,,50.0,42.0,8.0,,0.37907
-generic_ballot,,Echelon Insights,,R,,2026-09-21,,1002,,,51.0,43.0,8.0,,0.34575
-generic_ballot,,ActiVote,,,,2026-09-21,,1000,,,52.8,47.2,5.6,,0.28229
-generic_ballot,,YouGov,,,,2026-09-21,,975,,,48.5,37.0,11.5,,0.58901
-generic_ballot,,Verasight,,,,2026-09-21,,1374,,,50.3,41.7,8.6,,0.52746
-generic_ballot,,KFF,,,,2026-09-21,,1013,,,45.0,35.0,10.0,,0.63049
-generic_ballot,,Morning Consult,,,,2026-09-20,,18336,,,49.7,42.6,7.1,,2.04223
-generic_ballot,,Ipsos,,,,2026-09-20,,1277,,,40.0,32.0,8.0,,0.63292
-generic_ballot,,Quantus Insights,,R,,2026-09-18,,1389,,,50.3,41.7,8.6,,0.15184
-generic_ballot,,John Zogby Strategies,,,,2026-09-17,,1007,,,48.0,42.0,6.0,,0.22016
-generic_ballot,,CNN/SSRS,,,,2026-09-17,,867,,,49.0,41.0,8.0,,0.49705
-generic_ballot,,Clarity Campaign Labs,,,,2026-09-16,,1046,,,50.0,43.0,7.0,,0.23099
-generic_ballot,,RMG Research,,R,,2026-09-15,,2000,,,51.5,44.5,7.0,,0.20394
-generic_ballot,,Morning Consult,,,,2026-09-15,,2102,,,46.0,43.0,3.0,,0.50459
-generic_ballot,,Emerson College,,,,2026-09-15,,1500,,,36.5,28.6,7.9,,0.55095
-generic_ballot,,Hart Research Associates/Public Opinion Strategies,,,,2026-09-15,,1000,,,50.0,45.0,5.0,,0.21207
-generic_ballot,,Big Data Poll,,R,,2026-09-15,,2633,,,49.1,38.7,10.4,,0.21342
-generic_ballot,,Marist University,,,,2026-09-15,,1280,,,53.0,41.0,12.0,,0.55604
-generic_ballot,,Bedrock Polling,,,,2026-09-14,,1004,,,48.0,42.0,6.0,,0.19951
-generic_ballot,,Beacon Research/Shaw & Company Research,,,,2026-09-14,,1211,,,51.0,44.0,7.0,,0.46481
-generic_ballot,,YouGov,,,,2026-09-14,,1051,,,47.5,39.0,8.5,,0.39342
-generic_ballot,,Ipsos,,,,2026-09-14,,1143,,,41.5,34.0,7.5,,0.41028
-generic_ballot,,The New York Times/Siena University,,,,2026-09-13,,1503,,,50.1,42.5,7.6,,0.59961
-generic_ballot,,Morning Consult,,,,2026-09-13,,18127,,,47.7,42.9,4.8,,1.30632
-generic_ballot,,The Honest Poll,,,,2026-09-13,,1392,,,50.5,41.0,9.5,,0.22058
-generic_ballot,,YouGov,,,,2026-09-11,,1750,,,54.0,46.0,8.0,,0.42022
-generic_ballot,,ActiVote,,,,2026-09-10,,1000,,,52.3,47.7,4.6,,0.14114
-generic_ballot,,YouGov,,,,2026-09-09,,1200,,,43.5,33.0,10.5,,0.30677
-generic_ballot,,Marquette University Law School,,,,2026-09-09,,583,,,50.7,40.7,10.0,,0.27914
-generic_ballot,,YouGov,,,,2026-09-08,,1015,,,45.5,36.5,9.0,,0.26491
+generic_ballot,,Morning Consult,,,,2026-10-11,,17654,,,49.6,43.1,6.5,,5.84926
+generic_ballot,,Noble Predictive Insights,,,,2026-10-07,,2527,,,47.0,42.0,5.0,,1.52369
+generic_ballot,,The Honest Poll,,,,2026-10-06,,780,,,53.0,41.5,11.5,,0.5467
+generic_ballot,,YouGov,,,,2026-10-05,,1173,,,50.0,39.3,10.7,,1.2132
+generic_ballot,,Focaldata,,,,2026-10-05,,2553,,,49.6,42.7,6.9,,1.09478
+generic_ballot,,Ipsos,,,,2026-10-05,,3526,,,40.5,33.5,7.0,,2.10342
+generic_ballot,,Pew Research Center,,,,2026-10-04,,3917,,,44.0,36.0,8.0,,2.60999
+generic_ballot,,Morning Consult,,,,2026-10-04,,17659,,,49.9,43.2,6.7,,3.76355
+generic_ballot,,Cygnal,,R,,2026-10-02,,1500,,,51.6,42.5,9.1,,0.43631
+generic_ballot,,ActiVote,,,,2026-10-02,,1000,,,52.2,47.8,4.4,,0.43879
+generic_ballot,,YouGov,,,,2026-10-02,,1572,,,54.0,45.0,9.0,,1.16255
+generic_ballot,,Centerline Research & Strategy,,,,2026-10-01,,930,,,47.3,38.0,9.3,,0.43562
+generic_ballot,,AlphaROC,,,,2026-09-28,,1000,,,43.4,37.1,6.3,,0.37391
+generic_ballot,,YouGov,,,,2026-09-28,,1003,,,49.0,37.5,11.5,,0.72172
+generic_ballot,,HarrisX/Harris Poll,,,,2026-09-28,,2200,,,50.5,49.5,1.0,,0.65381
+generic_ballot,,Morning Consult,,,,2026-09-27,,18786,,,50.3,42.8,7.5,,2.49728
+generic_ballot,,Quinnipiac University,,,,2026-09-27,,1032,,,51.0,39.0,12.0,,0.82656
+generic_ballot,,Angus Reid Global,,,,2026-09-25,,,,,45.0,34.0,11.0,,0.18244
+generic_ballot,,The Argument/Verasight,,,,2026-09-22,,1603,,,53.8,46.2,7.6,,0.47159
+generic_ballot,,McLaughlin & Associates,,R,,2026-09-22,,1000,,,48.0,43.0,5.0,,0.12884
+generic_ballot,,Emerson College,,,,2026-09-22,,1000,,,53.2,41.9,11.3,,0.54346
+generic_ballot,,ActiVote,,,,2026-09-21,,1000,,,52.8,47.2,5.6,,0.21939
+generic_ballot,,Verasight,,,,2026-09-21,,1374,,,50.3,41.7,8.6,,0.40994
+generic_ballot,,Impact Research/National Research Inc.,,,,2026-09-21,,1500,,,50.0,42.0,8.0,,0.29461
+generic_ballot,,KFF,,,,2026-09-21,,1013,,,45.0,35.0,10.0,,0.49002
+generic_ballot,,Echelon Insights,,R,,2026-09-21,,1002,,,51.0,43.0,8.0,,0.26872
+generic_ballot,,YouGov,,,,2026-09-21,,975,,,48.5,37.0,11.5,,0.45778
+generic_ballot,,Ipsos,,,,2026-09-20,,1277,,,40.0,32.0,8.0,,0.49191
+generic_ballot,,Morning Consult,,,,2026-09-20,,18336,,,49.7,42.6,7.1,,1.58722
+generic_ballot,,Quantus Insights,,R,,2026-09-18,,1389,,,50.3,41.7,8.6,,0.11801
+generic_ballot,,CNN/SSRS,,,,2026-09-17,,867,,,49.0,41.0,8.0,,0.38631
+generic_ballot,,John Zogby Strategies,,,,2026-09-17,,1007,,,48.0,42.0,6.0,,0.17111
+generic_ballot,,Clarity Campaign Labs,,,,2026-09-16,,1046,,,50.0,43.0,7.0,,0.17953
+generic_ballot,,Hart Research Associates/Public Opinion Strategies,,,,2026-09-15,,1000,,,50.0,45.0,5.0,,0.16482
+generic_ballot,,Morning Consult,,,,2026-09-15,,2102,,,46.0,43.0,3.0,,0.39217
+generic_ballot,,Emerson College,,,,2026-09-15,,1500,,,36.5,28.6,7.9,,0.4282
+generic_ballot,,Big Data Poll,,R,,2026-09-15,,2633,,,49.1,38.7,10.4,,0.16587
+generic_ballot,,Marist University,,,,2026-09-15,,1280,,,53.0,41.0,12.0,,0.43216
+generic_ballot,,RMG Research,,R,,2026-09-15,,2000,,,51.5,44.5,7.0,,0.1585
+generic_ballot,,Bedrock Polling,,,,2026-09-14,,1004,,,48.0,42.0,6.0,,0.15506
+generic_ballot,,YouGov,,,,2026-09-14,,1051,,,47.5,39.0,8.5,,0.30577
+generic_ballot,,Ipsos,,,,2026-09-14,,1143,,,41.5,34.0,7.5,,0.31887
+generic_ballot,,Beacon Research/Shaw & Company Research,,,,2026-09-14,,1211,,,51.0,44.0,7.0,,0.36125
+generic_ballot,,The Honest Poll,,,,2026-09-13,,1392,,,50.5,41.0,9.5,,0.17143
+generic_ballot,,The New York Times/Siena University,,,,2026-09-13,,1503,,,50.1,42.5,7.6,,0.46602
+generic_ballot,,Morning Consult,,,,2026-09-13,,18127,,,47.7,42.9,4.8,,1.01528
+generic_ballot,,YouGov,,,,2026-09-11,,1750,,,54.0,46.0,8.0,,0.3266
+generic_ballot,,ActiVote,,,,2026-09-10,,1000,,,52.3,47.7,4.6,,0.1097
+generic_ballot,,Marquette University Law School,,,,2026-09-09,,583,,,50.7,40.7,10.0,,0.21695
+generic_ballot,,YouGov,,,,2026-09-09,,1200,,,43.5,33.0,10.5,,0.23842
+generic_ballot,,YouGov,,,,2026-09-08,,1015,,,45.5,36.5,9.0,,0.20589
 race,AK-SEN,InsiderAdvantage,,R,,2026-10-10,,1200,,,48.2,42.6,5.6,,0.4673
 race,AK-SEN,Alaska Survey Research,,,,2026-10-03,,1512,,,47.0,45.0,2.0,,0.71815
 race,AK-SEN,The New York Times/Siena University,,,,2026-10-01,,504,,,50.1,43.1,7.0,,0.97498
@@ -60,7 +61,6 @@ race,AK-SEN,Fabrizio Ward/Impact Research,,,,2026-09-11,,800,,,46.0,41.0,5.0,,0.
 race,AK-SEN,Alaska Survey Research,,,,2026-08-23,,1495,,,50.6,49.4,1.2,,0.08023
 race,AL-SEN,RMG Research,,R,,2026-09-25,,800,,,33.0,54.0,-21.0,,0.51592
 race,AR-SEN,GrayHouse,,R,,2026-10-04,,550,,,39.0,50.0,-11.0,,0.42778
-race,AR-SEN,J.L. Partners,,,,2026-08-18,,803,,,35.0,51.0,-16.0,,0.09017
 race,FL-SEN,St. Pete Polls,,,,2026-10-07,,836,,,44.9,46.8,-1.9,,0.77559
 race,FL-SEN,YouGov,,,,2026-10-05,,3812,,,44.0,49.0,-5.0,,2.8691
 race,FL-SEN,Targoz Market Research,,,,2026-10-04,,1171,,,38.0,50.0,-12.0,,0.78224
@@ -223,7 +223,6 @@ race,NH-SEN,co/efficient,,R,,2026-09-11,,958,,,46.0,46.0,0.0,,0.11613
 race,NH-SEN,co/efficient,,R,,2026-09-11,,958,,,46.0,46.0,0.0,,0.11613
 race,NH-SEN,"Fabrizio, Lee & Associates",,R,,2026-08-30,,600,,,36.0,37.0,-1.0,,0.06554
 race,NH-SEN,University of New Hampshire,,,,2026-08-24,,1846,,,43.0,45.0,-2.0,,0.12277
-race,NH-SEN,St. Anselm,,,,2026-08-18,,1411,,,48.0,41.0,7.0,,0.07795
 race,OH-SEN,co/efficient,,R,,2026-10-06,,925,,,45.0,46.0,-1.0,,0.41027
 race,OH-SEN,co/efficient,,R,,2026-10-06,,925,,,43.0,44.0,-1.0,,0.41027
 race,OH-SEN,co/efficient,,R,,2026-10-06,,925,,,45.0,45.0,0.0,,0.41027
@@ -294,7 +293,8 @@ race,FL-22,Impact Research,,D,,2026-08-31,,,,,46.0,46.0,0.0,,0.41931
 race,FL-22,Impact Research,,D,,2026-08-31,,,,,46.0,44.0,2.0,,0.41931
 race,FL-27,Tulchin Research,,D,,2026-09-13,,600,,,46.0,47.0,-1.0,,0.4468
 race,FL-27,Bendixen & Amandi International,,D,,2026-08-30,,600,,,45.0,45.0,0.0,,0.2118
-race,GA-07,20/20 Insight,,D,,2026-08-26,,445,,,43.0,46.0,-3.0,,0.38479
+race,GA-07,20/20 Insight,,D,,2026-10-09,,457,,,47.0,45.0,2.0,,0.38994
+race,GA-07,20/20 Insight,,D,,2026-08-26,,445,,,43.0,46.0,-3.0,,0.03684
 race,GA-11,Miller Consulting Services,,D,,2026-09-11,,402,,,45.0,48.0,-3.0,,0.36572
 race,GA-11,Miller Consulting Services,,D,,2026-09-11,,402,,,42.0,40.0,2.0,,0.36572
 race,KY-06,Change Research,,D,,2026-10-05,,524,,,47.0,38.0,9.0,,0.56844
@@ -336,7 +336,6 @@ race,NE-01,Global Strategy Group,,D,,2026-09-03,,600,,,43.0,42.0,1.0,,0.6496
 race,NE-02,SurveyUSA,,,,2026-09-13,,182,,,46.0,42.0,4.0,,0.85844
 race,NH-01,University of New Hampshire,,,,2026-09-21,,707,,,46.0,42.0,4.0,,0.71325
 race,NH-02,University of New Hampshire,,,,2026-09-21,,694,,,56.0,35.0,21.0,,0.70666
-race,NH-02,St. Anselm,,,,2026-08-18,,701,,,50.0,35.0,15.0,,0.1159
 race,NJ-07,StimSight Research,,,,2026-09-12,,498,,,47.0,42.0,5.0,,0.59861
 race,NM-02,Research & Polling Inc.,,,,2026-10-09,,383,,,48.0,44.0,4.0,,0.52496
 race,NM-02,SurveyUSA,,,,2026-09-02,,554,,,46.0,43.0,3.0,,0.17771
