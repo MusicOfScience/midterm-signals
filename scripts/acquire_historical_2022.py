@@ -23,7 +23,8 @@ UA = "MIDTERM-SIGNALS historical corpus audit/1.0 (+https://github.com/MusicOfSc
 DRA_COMMIT = "7f29db811844c02ab726ffec9bb34865c73ef342"
 DRA_REPO = "dra2020/block_data"
 CENSUS_BEF = "https://www2.census.gov/programs-surveys/decennial/rdo/mapping-files/2023/118-congressional-district-bef/cd118.zip"
-FTE_2022 = "https://projects.fivethirtyeight.com/2022-general-election-forecast-data"
+FTE_FORECAST_MIRROR_COMMIT = "83f2c9867f319b921fa10ad04bc256d8106bc8f4"
+FTE_FORECAST_MIRROR = f"https://raw.githubusercontent.com/stephensond/election-night-2022/{FTE_FORECAST_MIRROR_COMMIT}/input"
 FTE_POLLS = "https://projects.fivethirtyeight.com/polls-page/data"
 MEDSL_COMMIT = "a8126c5790b8d1f438a3e63c3506cdcdc7406d9f"
 MEDSL_AL = f"https://raw.githubusercontent.com/MEDSL/2022-elections-official/{MEDSL_COMMIT}/individual_states/2022-al-local-precinct-general.zip"
@@ -178,10 +179,10 @@ def probe_structural() -> dict:
 def probe_fte() -> dict:
     outputs = {}
     for name in ("house_district_toplines_2022.csv", "senate_state_toplines_2022.csv"):
-        url = f"{FTE_2022}/{name}"
+        url = f"{FTE_FORECAST_MIRROR}/{name}"
         data = fetch(url)
         p = csv_probe(data, sample=5)
-        required = {"cycle", "branch", "expression", "forecastdate", "district", "name_D1", "name_R1"}
+        required = {"cycle", "branch", "district", "forecastdate", "expression", "name_D1", "name_R1"}
         missing = sorted(required - set(p["columns"]))
         if missing:
             raise RuntimeError(f"{name} missing roster columns: {missing}")
@@ -194,6 +195,7 @@ def probe_fte() -> dict:
         if count == 0:
             raise RuntimeError(f"{name} contains no cycle=2022 rows")
         outputs[name] = {"url": url, "sha256": sha(data), "bytes": len(data), "columns": cols, "cycle_2022_rows": count, "sample": sample}
+    outputs["forecast_mirror_commit"] = FTE_FORECAST_MIRROR_COMMIT
     return outputs
 
 
