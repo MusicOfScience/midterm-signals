@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-15",
+  "status": "PROVISIONAL_ANALYTICAL_BASELINE",
+  "purpose": "Seed hypotheses from the module specification. These labels are never empirical observations and are replaced only when governed evidence meets the relevant classification/triangulation rule.",
+  "source_type": "ANALYST_SPECIFICATION_BASELINE",
+  "forecast_effect": "NONE",
+  "states": {
+    "aggregate_wealth": "VERY STRONG",
+    "wealth_distribution": "EXTREMELY CONCENTRATED",
+    "affordability_pressure": "HIGH",
+    "real_income_pressure": "MODEST REAL LOSS",
+    "labour_market_security": "COOLING",
+    "employment_retention_security": "HEALTHY / COOLING",
+    "job_mobility_security": "WEAKENING",
+    "household_cash_flow": "COMPRESSED",
+    "financial_buffer": "THIN",
+    "credit_stress": "CONCENTRATED STRESS",
+    "consumption": "RESILIENT",
+    "current_conditions": "VERY WEAK",
+    "expectations": "PESSIMISTIC",
+    "k_shaped_economy": "CLEARLY K-SHAPED",
+    "economic_salience": "DOMINANT",
+    "incumbent_attribution": "STRONGLY NEGATIVE",
+    "partisan_deflection": "BREAKING",
+    "independent_state": "DISCONTENTED / PARTLY OPPOSITION-LEANING",
+    "electoral_economic_pressure": "HIGH"
+  },
+  "stress_type": [],
+  "notes": "Preserves the 15 October 2026 baseline exactly where possible. Labels outside formal ladders remain visibly provisional rather than coerced into a neighbouring category."
+}
