@@ -21,6 +21,13 @@ on:
       - "public/data/races.csv"
       - "public/data/polls.csv"
       - "public/data/history/**"
+      - "public/data/household/**"
+      - "public/household/**"
+      - "generated/**"
+      - "archive/**"
+      - "data/household/raw/**"
+      - "data/household/normalized/**"
+      - "data/household/revisions/**"
       - "public/races/**"
       - "public/candidates/**"
       - "public/pollsters/**"
@@ -52,10 +59,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Build forecast snapshot, audit lab, enrich context and build browser assets
+      - name: Build forecast snapshot, governed context, audit lab and browser assets
         run: |
           python scripts/build_forecast.py
           python scripts/run_enrichment.py
+          python scripts/household_state.py
           python scripts/make_bootstrap.py
           python scripts/build_model_lab.py
           python scripts/augment_model_lab.py
@@ -66,7 +74,7 @@ jobs:
       - name: Validate numerical forecast
         run: python scripts/validate_forecast.py
       - name: Unit tests
-        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_builder tests.test_model_lab_augmentation tests.test_baseline_stability tests.test_polling_error tests.test_source_mix
+        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_household_state tests.test_model_lab tests.test_model_lab_builder tests.test_model_lab_augmentation tests.test_baseline_stability tests.test_polling_error tests.test_source_mix
       - name: Validate static publication
         run: node scripts/check.mjs
       - name: Commit forecast and generated browser assets if changed
@@ -74,7 +82,7 @@ jobs:
         run: |
           git config user.name "midterm-signals-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public/data/ public/races/ public/candidates/ public/pollsters/ public/sitemap.xml public/robots.txt public/app.js public/app.bundle.mjs public/enhancements.bundle.mjs public/styles.css
+          git add public/data/ public/races/ public/candidates/ public/pollsters/ public/household/ public/sitemap.xml public/robots.txt public/app.js public/app.bundle.mjs public/enhancements.bundle.mjs public/styles.css data/household/raw/ data/household/normalized/ data/household/revisions/ generated/ archive/
           if git diff --cached --quiet; then
             echo "No generated publication change"
             exit 0
