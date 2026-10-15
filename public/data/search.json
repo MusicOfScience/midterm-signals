@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T17:10:07.423010Z",
+  "generated_at": "2026-10-15T04:37:47.088297Z",
   "records": [
     {
       "type": "race",
@@ -9880,6 +9880,13 @@
     },
     {
       "type": "pollster",
+      "label": "Christopher Newport University",
+      "subtitle": "Pollster",
+      "key": "Christopher Newport University",
+      "terms": "Christopher Newport University"
+    },
+    {
+      "type": "pollster",
       "label": "Clarity Campaign Labs",
       "subtitle": "Pollster",
       "key": "Clarity Campaign Labs",
@@ -10153,13 +10160,6 @@
     },
     {
       "type": "pollster",
-      "label": "Marquette University Law School",
-      "subtitle": "Pollster",
-      "key": "Marquette University Law School",
-      "terms": "Marquette University Law School"
-    },
-    {
-      "type": "pollster",
       "label": "Mason-Dixon Polling & Research, Inc.",
       "subtitle": "Pollster",
       "key": "Mason-Dixon Polling & Research, Inc.",
@@ -10178,13 +10178,6 @@
       "subtitle": "Pollster",
       "key": "McLaughlin & Associates",
       "terms": "McLaughlin & Associates"
-    },
-    {
-      "type": "pollster",
-      "label": "Michigan State University Institute for Public Policy and Social Research/YouGov",
-      "subtitle": "Pollster",
-      "key": "Michigan State University Institute for Public Policy and Social Research/YouGov",
-      "terms": "Michigan State University Institute for Public Policy and Social Research/YouGov"
     },
     {
       "type": "pollster",
