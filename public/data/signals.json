@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T04:37:56.446107Z",
+  "generated_at": "2026-10-15T17:00:28.985787Z",
   "signals": [
     {
       "id": "poll-national-YouGov-2026-10-12-8.7",
@@ -1306,6 +1306,20 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "fec-S6AL00518-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "AL-SEN",
+      "geography": "AL-SEN",
+      "description": "FEC summary through 2026-09-30 records $117k receipts, $106k spending and $11k cash on hand for Everett Wess.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S6AL00518/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "fec-S6AL00476-2026-09-30",
       "date": "2026-09-30",
       "category": "FUNDRAISING",
@@ -1362,6 +1376,20 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "fec-S6KY00286-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "KY-SEN",
+      "geography": "KY-SEN",
+      "description": "FEC summary through 2026-09-30 records $10.0m receipts, $11.4m spending and $2.2m cash on hand for Andy Barr.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S6KY00286/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "fec-H6MI10359-2026-09-30",
       "date": "2026-09-30",
       "category": "FUNDRAISING",
@@ -1412,6 +1440,20 @@
       "description": "FEC summary through 2026-09-30 records $92k receipts, $81k spending and $2k cash on hand for Larry Marker.",
       "source_name": "Federal Election Commission",
       "source": "https://www.fec.gov/data/candidate/S6NM01186/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "fec-S6OK04163-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "OK-SEN",
+      "geography": "OK-SEN",
+      "description": "FEC summary through 2026-09-30 records $107k receipts, $81k spending and $27k cash on hand for Jasmine Thomas.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S6OK04163/?cycle=2026&election_full=true",
       "provenance": "Official FEC current-campaign summary",
       "model_effect": "NONE",
       "importance": "high",
@@ -1527,47 +1569,6 @@
       "provenance": "Official FEC current-campaign summary",
       "model_effect": "NONE",
       "importance": "normal",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-H6NC07196-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "NC-07",
-      "geography": "NC-07",
-      "description": "FEC summary through 2026-09-30 records $376k receipts, $351k spending and $25k cash on hand for Kimberly Hardy.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/H6NC07196/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "normal",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-H6WA03275-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "WA-03",
-      "geography": "WA-03",
-      "description": "FEC summary through 2026-09-30 records $2.2m receipts, $988k spending and $1.2m cash on hand for John Braun.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/H6WA03275/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "normal",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "rating-inside-FL-16-2026-09-17-Likely Republican",
-      "date": "2026-09-17",
-      "category": "RATING CHANGE",
-      "race_code": "FL-16",
-      "geography": "FL-16",
-      "description": "Inside Elections changed FL-16 from Solid Republican to Likely Republican.",
-      "source_name": "Inside Elections",
-      "source": "https://insideelections.com/ratings/house/",
-      "provenance": "Inside Elections public ratings API",
-      "model_effect": "NONE",
       "confidence": "source-recorded"
     }
   ],

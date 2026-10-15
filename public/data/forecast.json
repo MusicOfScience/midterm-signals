@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-10-15T04:37:47.088297Z",
-  "data_refreshed_at": "2026-10-15T04:37:47.088297Z",
+  "generated_at": "2026-10-15T17:00:19.397856Z",
+  "data_refreshed_at": "2026-10-15T17:00:19.397856Z",
   "election_date": "2026-11-03",
   "days_to_election": 19,
   "summary": {
@@ -3774,8 +3774,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0042,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -3810,8 +3810,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -3846,8 +3846,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -3963,8 +3963,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.002,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -3999,8 +3999,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4035,8 +4035,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4092,8 +4092,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0016,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4128,8 +4128,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4205,8 +4205,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4262,8 +4262,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0016,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4298,8 +4298,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4455,8 +4455,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0057,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4512,8 +4512,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0016,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4669,8 +4669,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0029,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4746,8 +4746,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0016,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     }
   ],
@@ -5245,8 +5245,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5542,8 +5542,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0068,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5759,8 +5759,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0061,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -6156,8 +6156,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0043,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -6773,8 +6773,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0052,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -7430,8 +7430,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -7867,8 +7867,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0034,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -8024,8 +8024,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -8301,8 +8301,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.001,
-        "margin": 0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -8578,8 +8578,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0013,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -8815,8 +8815,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0001,
-        "margin": 0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -8872,8 +8872,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9109,8 +9109,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9166,8 +9166,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9202,8 +9202,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     }
   ],
@@ -9468,8 +9468,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0061,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9546,11 +9546,11 @@
             "party": "D",
             "fec_candidate_id": "S6AL00518",
             "fec_name": "WESS, EVERETT W",
-            "receipts": 80554.63,
-            "disbursements": 62271.98,
-            "cash_on_hand": 18282.65,
+            "receipts": 116886.85,
+            "disbursements": 105627.27,
+            "cash_on_hand": 11259.58,
             "debts_owed_by": 70643.23,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/S6AL00518/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -9569,11 +9569,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": true
+        "coverage_mismatch": false
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -9677,7 +9677,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -9759,8 +9759,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9843,7 +9843,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -10166,8 +10166,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0013,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -10450,8 +10450,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -10980,8 +10980,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11030,7 +11030,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -11134,7 +11134,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.01
+        "margin": 0.0
       }
     },
     {
@@ -11477,8 +11477,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0068,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11569,20 +11569,20 @@
             "party": "R",
             "fec_candidate_id": "S6KY00286",
             "fec_name": "BARR, GARLAND ANDY",
-            "receipts": 9981055.48,
-            "disbursements": 11368587.12,
-            "cash_on_hand": 2305546.0,
+            "receipts": 9981044.48,
+            "disbursements": 11427585.19,
+            "cash_on_hand": 2246536.93,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/S6KY00286/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -11685,8 +11685,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11830,7 +11830,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.01
+        "margin": 0.0
       }
     },
     {
@@ -12299,8 +12299,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0034,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -13003,8 +13003,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -13327,8 +13327,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.001,
-        "margin": 0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -13410,8 +13410,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -13595,7 +13595,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.02
+        "margin": 0.0
       }
     },
     {
@@ -14098,8 +14098,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -14188,8 +14188,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -14472,8 +14472,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": 0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -14555,8 +14555,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -14638,8 +14638,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15082,8 +15082,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0043,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15139,11 +15139,11 @@
             "party": "D",
             "fec_candidate_id": "S6OK04163",
             "fec_name": "THOMAS, N'KIYLA JASMINE - ANN",
-            "receipts": 57158.83,
-            "disbursements": 57639.22,
-            "cash_on_hand": 455.95,
+            "receipts": 106994.96,
+            "disbursements": 80709.93,
+            "cash_on_hand": 27221.37,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-08-05",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/S6OK04163/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -15166,7 +15166,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -15249,7 +15249,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -15393,7 +15393,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -15596,8 +15596,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15666,7 +15666,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -15790,7 +15790,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -16453,8 +16453,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0052,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16536,8 +16536,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16620,7 +16620,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -16703,7 +16703,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -16771,8 +16771,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16855,7 +16855,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -16958,8 +16958,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17042,7 +17042,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -17125,7 +17125,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -17208,7 +17208,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -17291,7 +17291,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -17374,7 +17374,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -17457,7 +17457,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -17539,8 +17539,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17610,20 +17610,20 @@
             "party": "R",
             "fec_candidate_id": "H0AR03055",
             "fec_name": "WOMACK, STEPHEN A THE HON",
-            "receipts": 1871760.74,
-            "disbursements": 1183378.23,
-            "cash_on_hand": 2404276.17,
+            "receipts": 2302158.22,
+            "disbursements": 1620935.59,
+            "cash_on_hand": 2397116.29,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H0AR03055/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17706,7 +17706,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -17809,8 +17809,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17913,8 +17913,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17983,7 +17983,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -18065,8 +18065,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18148,8 +18148,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18231,8 +18231,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18315,7 +18315,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -18397,8 +18397,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18481,7 +18481,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -18564,7 +18564,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -18633,7 +18633,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -18716,7 +18716,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -18867,8 +18867,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18937,7 +18937,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -19089,7 +19089,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -19172,7 +19172,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -19241,7 +19241,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -19461,8 +19461,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19600,7 +19600,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -19669,7 +19669,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -19752,7 +19752,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -19835,7 +19835,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -19918,7 +19918,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -20001,7 +20001,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -20084,7 +20084,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -20166,8 +20166,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20249,8 +20249,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20333,7 +20333,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -20415,8 +20415,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20499,7 +20499,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -20582,7 +20582,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -20665,7 +20665,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -20804,20 +20804,20 @@
             "party": "R",
             "fec_candidate_id": "H6CA30250",
             "fec_name": "MEYERS, SCOTT ALAN",
-            "receipts": 58294.0,
-            "disbursements": 55677.87,
-            "cash_on_hand": 2616.13,
-            "debts_owed_by": 40000.0,
-            "coverage_through": "2026-06-30",
+            "receipts": 117719.35,
+            "disbursements": 87718.88,
+            "cash_on_hand": 30000.47,
+            "debts_owed_by": 93500.0,
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6CA30250/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -20900,7 +20900,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -20983,7 +20983,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21052,7 +21052,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21204,7 +21204,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21287,7 +21287,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21425,7 +21425,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21494,7 +21494,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21632,7 +21632,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21715,7 +21715,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21778,13 +21778,27 @@
             "coverage_through": "2026-06-30",
             "source": "https://www.fec.gov/data/candidate/H4CA23011/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
+          },
+          {
+            "race_code": "CA-43",
+            "candidate": "Cristian Morales",
+            "party": "R",
+            "fec_candidate_id": "H6CA43188",
+            "fec_name": "MORALES, CRISTIAN",
+            "receipts": 13995.0,
+            "disbursements": 13664.26,
+            "cash_on_hand": 330.74,
+            "debts_owed_by": 12245.0,
+            "coverage_through": "2026-09-30",
+            "source": "https://www.fec.gov/data/candidate/H6CA43188/?cycle=2026&election_full=true",
+            "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21867,7 +21881,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21949,8 +21963,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22033,7 +22047,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -22116,7 +22130,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -22239,8 +22253,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22323,7 +22337,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -22392,7 +22406,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -22461,7 +22475,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -22531,20 +22545,20 @@
             "party": "R",
             "fec_candidate_id": "H6CA52163",
             "fec_name": "BELLE, JEFFERY MR",
-            "receipts": 25498.1,
-            "disbursements": 24134.18,
-            "cash_on_hand": 1363.92,
+            "receipts": 26323.09,
+            "disbursements": 26337.97,
+            "cash_on_hand": -14.88,
             "debts_owed_by": 7000.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6CA52163/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -22627,7 +22641,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -22696,7 +22710,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -22778,8 +22792,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22882,8 +22896,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22965,8 +22979,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0016,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23035,7 +23049,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -23118,7 +23132,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -23241,8 +23255,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23325,7 +23339,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -23381,9 +23395,9 @@
             "party": "D",
             "fec_candidate_id": "H2CT02112",
             "fec_name": "COURTNEY, JOSEPH",
-            "receipts": 760424.39,
+            "receipts": 755424.39,
             "disbursements": 508302.32,
-            "cash_on_hand": 603233.57,
+            "cash_on_hand": 598233.57,
             "debts_owed_by": 0.0,
             "coverage_through": "2026-06-30",
             "source": "https://www.fec.gov/data/candidate/H2CT02112/?cycle=2026&election_full=true",
@@ -23408,7 +23422,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -23491,7 +23505,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -23574,7 +23588,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -23656,8 +23670,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23740,7 +23754,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -23823,7 +23837,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -23905,8 +23919,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23988,8 +24002,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24071,8 +24085,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24142,20 +24156,20 @@
             "party": "R",
             "fec_candidate_id": "H6FL04105",
             "fec_name": "RUTHERFORD, JOHN",
-            "receipts": 726726.61,
-            "disbursements": 635666.02,
-            "cash_on_hand": 268730.24,
+            "receipts": 895397.86,
+            "disbursements": 841296.14,
+            "cash_on_hand": 231771.37,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-07-29",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6FL04105/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24238,7 +24252,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -24320,8 +24334,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24403,8 +24417,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24507,8 +24521,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24577,7 +24591,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -24659,8 +24673,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24742,8 +24756,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24886,8 +24900,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24969,8 +24983,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25052,8 +25066,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25176,8 +25190,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25259,8 +25273,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25342,8 +25356,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25426,7 +25440,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -25509,7 +25523,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -25591,8 +25605,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25715,8 +25729,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25799,7 +25813,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -25882,7 +25896,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -25964,8 +25978,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26047,8 +26061,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26171,8 +26185,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26254,8 +26268,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26337,8 +26351,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26421,7 +26435,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -26525,7 +26539,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.06
+        "margin": 0.0
       }
     },
     {
@@ -26594,7 +26608,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -26663,7 +26677,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -26746,7 +26760,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -26869,8 +26883,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26953,7 +26967,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27036,7 +27050,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27118,8 +27132,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27242,8 +27256,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27325,8 +27339,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27395,7 +27409,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27478,7 +27492,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27547,7 +27561,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27630,7 +27644,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27712,8 +27726,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27795,8 +27809,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27878,8 +27892,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27962,7 +27976,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28018,11 +28032,11 @@
             "party": "D",
             "fec_candidate_id": "H2ID01192",
             "fec_name": "PETERSON, KAYLEE JADE",
-            "receipts": 181023.63,
-            "disbursements": 171798.65,
-            "cash_on_hand": 14616.3,
+            "receipts": 271610.62,
+            "disbursements": 253295.62,
+            "cash_on_hand": 23706.32,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H2ID01192/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -28041,11 +28055,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28115,20 +28129,20 @@
             "party": "R",
             "fec_candidate_id": "H8ID02064",
             "fec_name": "SIMPSON, MICHAEL",
-            "receipts": 1118093.33,
-            "disbursements": 793940.47,
-            "cash_on_hand": 429358.58,
+            "receipts": 1316625.65,
+            "disbursements": 1137249.39,
+            "cash_on_hand": 284581.98,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H8ID02064/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28211,7 +28225,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28280,7 +28294,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28363,7 +28377,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28432,7 +28446,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28501,7 +28515,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28583,8 +28597,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28667,7 +28681,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28750,7 +28764,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28819,7 +28833,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28888,7 +28902,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28971,7 +28985,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -29054,7 +29068,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -29137,7 +29151,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -29219,8 +29233,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29303,7 +29317,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -29385,8 +29399,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29468,8 +29482,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29551,8 +29565,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29635,7 +29649,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -29691,11 +29705,11 @@
             "party": "D",
             "fec_candidate_id": "H6IN03294",
             "fec_name": "THOMPSON, KELLY ELIZABETH",
-            "receipts": 136340.3,
-            "disbursements": 130300.99,
-            "cash_on_hand": 6039.31,
+            "receipts": 309070.29,
+            "disbursements": 204713.31,
+            "cash_on_hand": 104356.98,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6IN03294/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -29705,11 +29719,11 @@
             "party": "R",
             "fec_candidate_id": "H0IN03198",
             "fec_name": "STUTZMAN, MARLIN A",
-            "receipts": 839564.67,
-            "disbursements": 786959.01,
-            "cash_on_hand": 101922.62,
-            "debts_owed_by": 60000.0,
-            "coverage_through": "2026-06-30",
+            "receipts": 959010.36,
+            "disbursements": 912231.69,
+            "cash_on_hand": 96095.63,
+            "debts_owed_by": 0.0,
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H0IN03198/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
@@ -29718,7 +29732,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -29801,7 +29815,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -29883,8 +29897,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29967,7 +29981,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30036,7 +30050,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30119,7 +30133,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30202,7 +30216,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30285,7 +30299,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30367,8 +30381,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30450,8 +30464,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30534,7 +30548,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30617,7 +30631,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30700,7 +30714,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30783,7 +30797,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30866,7 +30880,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30949,7 +30963,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -31152,8 +31166,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0057,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31236,7 +31250,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -31305,7 +31319,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -31388,7 +31402,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -31471,7 +31485,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -31554,7 +31568,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -31637,7 +31651,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -31706,7 +31720,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -31762,11 +31776,11 @@
             "party": "D",
             "fec_candidate_id": "H4MA03022",
             "fec_name": "MCGOVERN, JAMES P",
-            "receipts": 864676.4,
-            "disbursements": 910104.97,
-            "cash_on_hand": 348735.78,
+            "receipts": 984205.87,
+            "disbursements": 995042.04,
+            "cash_on_hand": 383328.18,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-08-12",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H4MA03022/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
@@ -31775,7 +31789,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -31858,7 +31872,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -31941,7 +31955,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32010,7 +32024,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32093,7 +32107,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32162,7 +32176,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32231,7 +32245,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32301,20 +32315,20 @@
             "party": "R",
             "fec_candidate_id": "H6MA09206",
             "fec_name": "MACALLISTER, ROBERT TYLER",
-            "receipts": 175121.55,
-            "disbursements": 140070.74,
-            "cash_on_hand": 35050.81,
+            "receipts": 212908.98,
+            "disbursements": 160637.35,
+            "cash_on_hand": 52271.63,
             "debts_owed_by": 1005.0,
-            "coverage_through": "2026-08-12",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6MA09206/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32396,8 +32410,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32480,7 +32494,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32563,7 +32577,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32632,7 +32646,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32701,7 +32715,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32783,8 +32797,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32853,7 +32867,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32936,7 +32950,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -33013,11 +33027,11 @@
             "party": "D",
             "fec_candidate_id": "H8ME01120",
             "fec_name": "PINGREE, CHELLIE M",
-            "receipts": 429634.08,
-            "disbursements": 422199.97,
-            "cash_on_hand": 423112.34,
+            "receipts": 531049.7,
+            "disbursements": 582147.17,
+            "cash_on_hand": 364580.76,
             "debts_owed_by": 20000.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H8ME01120/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -33036,11 +33050,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -33203,8 +33217,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.002,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33286,8 +33300,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33370,7 +33384,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -33452,8 +33466,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33556,8 +33570,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0016,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33640,7 +33654,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -33709,7 +33723,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -33791,8 +33805,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0013,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33874,8 +33888,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33958,7 +33972,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34040,8 +34054,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34124,7 +34138,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34207,7 +34221,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34276,7 +34290,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34399,8 +34413,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0024,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34503,8 +34517,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34573,7 +34587,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34656,7 +34670,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34739,7 +34753,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34821,8 +34835,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34905,7 +34919,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34987,8 +35001,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -35057,7 +35071,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35180,8 +35194,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0016,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -35250,7 +35264,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35333,7 +35347,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35416,7 +35430,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35499,7 +35513,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35555,11 +35569,11 @@
             "party": "D",
             "fec_candidate_id": "H4MO07156",
             "fec_name": "HESKETH, MISSI",
-            "receipts": 50539.85,
-            "disbursements": 22134.4,
-            "cash_on_hand": 33543.24,
+            "receipts": 109097.15,
+            "disbursements": 54959.0,
+            "cash_on_hand": 59275.94,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-07-15",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H4MO07156/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -35578,11 +35592,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35665,7 +35679,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35748,7 +35762,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35804,11 +35818,11 @@
             "party": "D",
             "fec_candidate_id": "H4MS02068",
             "fec_name": "THOMPSON, BENNIE G.",
-            "receipts": 770970.73,
-            "disbursements": 947613.34,
-            "cash_on_hand": 1449521.62,
+            "receipts": 928045.03,
+            "disbursements": 1195730.5,
+            "cash_on_hand": 1358478.76,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H4MS02068/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -35818,11 +35832,11 @@
             "party": "R",
             "fec_candidate_id": "H2MS02203",
             "fec_name": "ELLER, RON",
-            "receipts": 45389.56,
-            "disbursements": 46245.09,
-            "cash_on_hand": 35873.57,
+            "receipts": 64124.97,
+            "disbursements": 63092.24,
+            "cash_on_hand": 37761.83,
             "debts_owed_by": 2500.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H2MS02203/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
@@ -35831,7 +35845,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35914,7 +35928,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35997,7 +36011,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -36200,8 +36214,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -36305,7 +36319,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -36508,8 +36522,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0029,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -36578,7 +36592,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -36660,8 +36674,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0013,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -36730,7 +36744,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -36812,8 +36826,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -36895,8 +36909,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -36978,8 +36992,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": 0.025,
-        "margin": -0.4
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37047,8 +37061,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37151,8 +37165,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37234,8 +37248,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37344,8 +37358,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37428,7 +37442,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -37510,8 +37524,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37593,8 +37607,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37677,7 +37691,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -37800,8 +37814,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37904,8 +37918,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37988,7 +38002,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38091,8 +38105,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38195,8 +38209,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38279,7 +38293,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38361,8 +38375,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38444,8 +38458,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38501,11 +38515,11 @@
             "party": "D",
             "fec_candidate_id": "H6NJ04257",
             "fec_name": "PEACE, RACHEL",
-            "receipts": 34351.97,
-            "disbursements": 28988.78,
-            "cash_on_hand": 5363.19,
-            "debts_owed_by": 25692.22,
-            "coverage_through": "2026-06-30",
+            "receipts": 92650.23,
+            "disbursements": 83214.59,
+            "cash_on_hand": 9435.64,
+            "debts_owed_by": 19411.97,
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6NJ04257/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -38524,11 +38538,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38610,8 +38624,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38694,7 +38708,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38797,8 +38811,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38847,7 +38861,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38929,8 +38943,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39013,7 +39027,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39096,7 +39110,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39179,7 +39193,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39262,7 +39276,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39385,8 +39399,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39468,8 +39482,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39551,8 +39565,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39675,8 +39689,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39744,8 +39758,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39827,8 +39841,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39896,8 +39910,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39979,8 +39993,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40062,8 +40076,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40145,8 +40159,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40215,7 +40229,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40298,7 +40312,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40367,7 +40381,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40436,7 +40450,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40505,7 +40519,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40588,7 +40602,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40670,8 +40684,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40754,7 +40768,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40823,7 +40837,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40906,7 +40920,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40975,7 +40989,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -41044,7 +41058,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -41167,8 +41181,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41291,8 +41305,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41374,8 +41388,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41445,20 +41459,20 @@
             "party": "R",
             "fec_candidate_id": "H6NY20225",
             "fec_name": "AMBROSIO, RALPH",
-            "receipts": 29025.65,
-            "disbursements": 20906.84,
-            "cash_on_hand": 8118.81,
+            "receipts": 60560.07,
+            "disbursements": 48245.33,
+            "cash_on_hand": 12314.74,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6NY20225/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -41641,8 +41655,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41724,8 +41738,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41829,7 +41843,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -41912,7 +41926,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -41982,9 +41996,9 @@
             "party": "R",
             "fec_candidate_id": "H6NY25208",
             "fec_name": "MCINTYRE, VIRGINIA",
-            "receipts": 32416.43,
+            "receipts": 30023.5,
             "disbursements": 20155.38,
-            "cash_on_hand": 12261.05,
+            "cash_on_hand": 9868.12,
             "debts_owed_by": 0.0,
             "coverage_through": "2026-06-30",
             "source": "https://www.fec.gov/data/candidate/H6NY25208/?cycle=2026&election_full=true",
@@ -41995,7 +42009,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -42064,7 +42078,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -42167,8 +42181,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42237,7 +42251,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -42306,7 +42320,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -42389,7 +42403,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -42471,8 +42485,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42528,11 +42542,11 @@
             "party": "D",
             "fec_candidate_id": "H6OH06244",
             "fec_name": "KIRTLEY, ELIZABETH ANN MRS.",
-            "receipts": 1231.7,
-            "disbursements": 62.76,
-            "cash_on_hand": 1168.94,
-            "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "receipts": 10494.43,
+            "disbursements": 5671.29,
+            "cash_on_hand": 4823.14,
+            "debts_owed_by": 272.67,
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6OH06244/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -42542,11 +42556,11 @@
             "party": "R",
             "fec_candidate_id": "H4OH06165",
             "fec_name": "RULLI, MICHAEL",
-            "receipts": 1112552.83,
-            "disbursements": 913478.93,
-            "cash_on_hand": 269711.01,
+            "receipts": 1403352.45,
+            "disbursements": 1012512.44,
+            "cash_on_hand": 461477.12,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H4OH06165/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
@@ -42555,7 +42569,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -42637,8 +42651,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42720,8 +42734,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42824,8 +42838,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0016,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42907,8 +42921,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42977,7 +42991,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43060,7 +43074,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43142,8 +43156,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43225,8 +43239,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43349,8 +43363,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43432,8 +43446,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43516,7 +43530,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43585,7 +43599,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43668,7 +43682,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43771,8 +43785,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43842,20 +43856,20 @@
             "party": "R",
             "fec_candidate_id": "H6OR01308",
             "fec_name": "KAHL, BARBARA J DR DVM",
-            "receipts": 4466.06,
-            "disbursements": 3554.55,
-            "cash_on_hand": 211.69,
+            "receipts": 17320.29,
+            "disbursements": 10548.99,
+            "cash_on_hand": 6071.48,
             "debts_owed_by": 10869.62,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6OR01308/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43938,7 +43952,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -44007,7 +44021,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -44090,7 +44104,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -44172,8 +44186,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44256,7 +44270,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -44399,8 +44413,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44469,7 +44483,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -44538,7 +44552,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -44621,7 +44635,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -44704,7 +44718,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -44787,7 +44801,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -44890,8 +44904,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0013,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44973,8 +44987,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45057,7 +45071,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -45160,8 +45174,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45243,8 +45257,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45314,20 +45328,20 @@
             "party": "R",
             "fec_candidate_id": "H4PA12068",
             "fec_name": "HAYES, JAMES DR.",
-            "receipts": 40138.76,
-            "disbursements": 31302.88,
-            "cash_on_hand": 9521.39,
+            "receipts": 64890.61,
+            "disbursements": 63098.31,
+            "cash_on_hand": 2477.81,
             "debts_owed_by": 12253.08,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H4PA12068/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -45383,11 +45397,11 @@
             "party": "D",
             "fec_candidate_id": "H4PA13298",
             "fec_name": "FARNHAM, ELIZABETH RHOADS",
-            "receipts": 55347.11,
-            "disbursements": 40055.55,
-            "cash_on_hand": 16052.79,
+            "receipts": 101192.38,
+            "disbursements": 75324.74,
+            "cash_on_hand": 26628.87,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H4PA13298/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -45406,11 +45420,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -45493,7 +45507,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -45576,7 +45590,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -45658,8 +45672,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45741,8 +45755,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45846,7 +45860,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.01
+        "margin": 0.0
       }
     },
     {
@@ -45949,8 +45963,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46114,7 +46128,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.01
+        "margin": 0.0
       }
     },
     {
@@ -46182,8 +46196,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46266,7 +46280,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46349,7 +46363,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46431,8 +46445,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46501,7 +46515,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46584,7 +46598,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46688,7 +46702,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46758,20 +46772,20 @@
             "party": "R",
             "fec_candidate_id": "H0TN01118",
             "fec_name": "HARSHBARGER, DIANA",
-            "receipts": 1274193.78,
-            "disbursements": 739900.04,
-            "cash_on_hand": 1985062.87,
+            "receipts": 1511056.23,
+            "disbursements": 1040710.28,
+            "cash_on_hand": 1921115.08,
             "debts_owed_by": 1456793.0,
-            "coverage_through": "2026-07-17",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H0TN01118/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46854,7 +46868,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46924,20 +46938,20 @@
             "party": "R",
             "fec_candidate_id": "H0TN03254",
             "fec_name": "FLEISCHMANN, CHARLES J",
-            "receipts": 2330803.33,
-            "disbursements": 752330.86,
-            "cash_on_hand": 4835524.55,
+            "receipts": 2710155.85,
+            "disbursements": 879339.65,
+            "cash_on_hand": 5087868.28,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-07-17",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H0TN03254/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -47019,8 +47033,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47143,8 +47157,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47200,11 +47214,11 @@
             "party": "D",
             "fec_candidate_id": "H6TN06171",
             "fec_name": "CROLEY, MIKE",
-            "receipts": 35380.0,
-            "disbursements": 33198.88,
-            "cash_on_hand": 2430.75,
+            "receipts": 103761.52,
+            "disbursements": 81066.44,
+            "cash_on_hand": 22944.71,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-07-17",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6TN06171/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -47223,11 +47237,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47309,8 +47323,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47392,8 +47406,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47496,8 +47510,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47580,7 +47594,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -47683,8 +47697,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47767,7 +47781,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -47850,7 +47864,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -47932,8 +47946,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48015,8 +48029,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48099,7 +48113,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48155,11 +48169,11 @@
             "party": "D",
             "fec_candidate_id": "H0TX08145",
             "fec_name": "JONES, LAURA",
-            "receipts": 21980.0,
-            "disbursements": 16621.43,
-            "cash_on_hand": 7859.32,
+            "receipts": 29899.42,
+            "disbursements": 26830.45,
+            "cash_on_hand": 5569.72,
             "debts_owed_by": 2040.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H0TX08145/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -48178,11 +48192,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48305,8 +48319,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48409,8 +48423,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48493,7 +48507,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48562,7 +48576,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48645,7 +48659,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48701,11 +48715,11 @@
             "party": "D",
             "fec_candidate_id": "H6TX14181",
             "fec_name": "BARTIE, THURMAN BILL MR",
-            "receipts": 26823.19,
-            "disbursements": 27465.1,
-            "cash_on_hand": -1091.91,
+            "receipts": 36703.19,
+            "disbursements": 35516.36,
+            "cash_on_hand": 5102.17,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6TX14181/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -48715,11 +48729,11 @@
             "party": "R",
             "fec_candidate_id": "H2TX14149",
             "fec_name": "WEBER, RANDY",
-            "receipts": 972560.89,
-            "disbursements": 671254.64,
-            "cash_on_hand": 921878.46,
+            "receipts": 1080827.98,
+            "disbursements": 801099.66,
+            "cash_on_hand": 900300.53,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H2TX14149/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
@@ -48728,7 +48742,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48871,8 +48885,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0042,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48941,7 +48955,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -49023,8 +49037,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49093,7 +49107,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -49149,11 +49163,11 @@
             "party": "D",
             "fec_candidate_id": "H6TX19198",
             "fec_name": "RABLE, KYLE",
-            "receipts": 31275.77,
-            "disbursements": 20810.9,
-            "cash_on_hand": 7630.63,
+            "receipts": 46240.44,
+            "disbursements": 31417.64,
+            "cash_on_hand": 11988.56,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6TX19198/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -49172,11 +49186,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -49246,20 +49260,20 @@
             "party": "R",
             "fec_candidate_id": "H6TX20113",
             "fec_name": "BAEZ, EDGARDO RAFAEL DR",
-            "receipts": 48535.9,
-            "disbursements": 27073.41,
-            "cash_on_hand": 21462.49,
-            "debts_owed_by": 30135.0,
-            "coverage_through": "2026-06-30",
+            "receipts": 66652.14,
+            "disbursements": 60532.19,
+            "cash_on_hand": 6119.95,
+            "debts_owed_by": 40135.0,
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6TX20113/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -49341,8 +49355,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49412,20 +49426,20 @@
             "party": "R",
             "fec_candidate_id": "H6TX22283",
             "fec_name": "NEHLS, TREVER",
-            "receipts": 206463.02,
-            "disbursements": 183204.52,
-            "cash_on_hand": 23258.5,
+            "receipts": 311369.38,
+            "disbursements": 225073.83,
+            "cash_on_hand": 86295.55,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6TX22283/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49507,8 +49521,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0013,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49590,8 +49604,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49659,8 +49673,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49742,8 +49756,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49825,8 +49839,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49929,8 +49943,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50013,7 +50027,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -50096,7 +50110,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -50178,8 +50192,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50261,8 +50275,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50331,7 +50345,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -50434,8 +50448,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50538,8 +50552,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0016,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50609,11 +50623,11 @@
             "party": "R",
             "fec_candidate_id": "H6TX02079",
             "fec_name": "BABIN, BRIAN",
-            "receipts": 1006943.9,
-            "disbursements": 744500.31,
-            "cash_on_hand": 908646.24,
+            "receipts": 1164574.09,
+            "disbursements": 899438.54,
+            "cash_on_hand": 911338.2,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6TX02079/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
@@ -50621,8 +50635,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50691,7 +50705,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -50773,8 +50787,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50878,7 +50892,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -51022,7 +51036,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -51126,7 +51140,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -51250,7 +51264,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.06
+        "margin": 0.0
       }
     },
     {
@@ -51373,8 +51387,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51477,8 +51491,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.01,
-        "margin": -0.97
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51548,20 +51562,20 @@
             "party": "R",
             "fec_candidate_id": "H6VA03121",
             "fec_name": "RIVERA, EDWIN MR. JR.",
-            "receipts": 6554.63,
-            "disbursements": 4792.75,
-            "cash_on_hand": 1761.88,
+            "receipts": 14833.62,
+            "disbursements": 8668.7,
+            "cash_on_hand": 6164.92,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-07-15",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6VA03121/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -51644,7 +51658,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -51757,20 +51771,6 @@
         "candidates": [
           {
             "race_code": "VA-05",
-            "candidate": "Tom Perriello",
-            "party": "D",
-            "fec_candidate_id": "H6VA05217",
-            "fec_name": "PERRIELLO, THOMAS",
-            "receipts": 2140401.63,
-            "disbursements": 629110.16,
-            "cash_on_hand": 1511291.47,
-            "debts_owed_by": 0.0,
-            "coverage_through": "2026-07-15",
-            "source": "https://www.fec.gov/data/candidate/H6VA05217/?cycle=2026&election_full=true",
-            "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
-          },
-          {
-            "race_code": "VA-05",
             "candidate": "John McGuire",
             "party": "R",
             "fec_candidate_id": "H0VA07133",
@@ -51787,8 +51787,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51974,8 +51974,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52045,20 +52045,20 @@
             "party": "R",
             "fec_candidate_id": "H6VA08252",
             "fec_name": "SABIO, TONY",
-            "receipts": 21917.19,
-            "disbursements": 4014.03,
-            "cash_on_hand": 17903.16,
+            "receipts": 42099.44,
+            "disbursements": 25097.88,
+            "cash_on_hand": 16576.56,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-07-15",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6VA08252/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -52141,7 +52141,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -52223,8 +52223,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52293,7 +52293,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -52437,7 +52437,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.02
+        "margin": 0.0
       }
     },
     {
@@ -52520,7 +52520,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -52603,7 +52603,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -52706,8 +52706,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52789,8 +52789,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52872,8 +52872,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52956,7 +52956,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -53039,7 +53039,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -53121,8 +53121,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53205,7 +53205,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -53274,7 +53274,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -53417,8 +53417,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53487,7 +53487,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -53569,8 +53569,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53639,7 +53639,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -53721,8 +53721,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53778,11 +53778,11 @@
             "party": "D",
             "fec_candidate_id": "H6WI06191",
             "fec_name": "SMITH, BRADLEY",
-            "receipts": 166060.88,
-            "disbursements": 105780.41,
-            "cash_on_hand": 60280.47,
+            "receipts": 295060.11,
+            "disbursements": 150491.8,
+            "cash_on_hand": 144568.31,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-07-22",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6WI06191/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -53801,11 +53801,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53887,8 +53887,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53970,8 +53970,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54054,7 +54054,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -54137,7 +54137,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -54220,7 +54220,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     }
   ],
@@ -54231,7 +54231,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-10-15T04:37:47.088297Z",
+      "last_success": "2026-10-15T17:00:19.397856Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -54264,7 +54264,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-10-15T04:37:56.446107Z",
+      "last_success": "2026-10-15T17:00:28.985787Z",
       "last_observation": "2026-10-01",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -54298,7 +54298,7 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-10-15T04:37:58.851409Z",
+      "last_success": "2026-10-15T17:00:31.426527Z",
       "last_observation": "2026-09-30",
       "note": "Official bulk adapter; 849 candidate summaries matched to production candidates."
     },
@@ -54307,7 +54307,7 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-10-15T04:37:56.446107Z",
+      "last_success": "2026-10-15T17:00:28.985787Z",
       "last_observation": "2026-10-12",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
@@ -54460,11 +54460,11 @@
         "party": "D",
         "fec_candidate_id": "S6AL00518",
         "fec_name": "WESS, EVERETT W",
-        "receipts": 80554.63,
-        "disbursements": 62271.98,
-        "cash_on_hand": 18282.65,
+        "receipts": 116886.85,
+        "disbursements": 105627.27,
+        "cash_on_hand": 11259.58,
         "debts_owed_by": 70643.23,
-        "coverage_through": "2026-06-30",
+        "coverage_through": "2026-09-30",
         "source": "https://www.fec.gov/data/candidate/S6AL00518/?cycle=2026&election_full=true",
         "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
       },
@@ -55412,11 +55412,11 @@
         "party": "R",
         "fec_candidate_id": "S6KY00286",
         "fec_name": "BARR, GARLAND ANDY",
-        "receipts": 9981055.48,
-        "disbursements": 11368587.12,
-        "cash_on_hand": 2305546.0,
+        "receipts": 9981044.48,
+        "disbursements": 11427585.19,
+        "cash_on_hand": 2246536.93,
         "debts_owed_by": 0.0,
-        "coverage_through": "2026-06-30",
+        "coverage_through": "2026-09-30",
         "source": "https://www.fec.gov/data/candidate/S6KY00286/?cycle=2026&election_full=true",
         "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
       },
@@ -56462,11 +56462,11 @@
         "party": "D",
         "fec_candidate_id": "S6OK04163",
         "fec_name": "THOMAS, N'KIYLA JASMINE - ANN",
-        "receipts": 57158.83,
-        "disbursements": 57639.22,
-        "cash_on_hand": 455.95,
+        "receipts": 106994.96,
+        "disbursements": 80709.93,
+        "cash_on_hand": 27221.37,
         "debts_owed_by": 0.0,
-        "coverage_through": "2026-08-05",
+        "coverage_through": "2026-09-30",
         "source": "https://www.fec.gov/data/candidate/S6OK04163/?cycle=2026&election_full=true",
         "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
       },
@@ -56986,20 +56986,6 @@
         "debts_owed_by": 38100.66,
         "coverage_through": "2026-07-15",
         "source": "https://www.fec.gov/data/candidate/H2VA02064/?cycle=2026&election_full=true",
-        "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
-      },
-      {
-        "race_code": "VA-05",
-        "candidate": "Tom Perriello",
-        "party": "D",
-        "fec_candidate_id": "H6VA05217",
-        "fec_name": "PERRIELLO, THOMAS",
-        "receipts": 2140401.63,
-        "disbursements": 629110.16,
-        "cash_on_hand": 1511291.47,
-        "debts_owed_by": 0.0,
-        "coverage_through": "2026-07-15",
-        "source": "https://www.fec.gov/data/candidate/H6VA05217/?cycle=2026&election_full=true",
         "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
       },
       {
@@ -58522,6 +58508,20 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "fec-S6AL00518-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "AL-SEN",
+      "geography": "AL-SEN",
+      "description": "FEC summary through 2026-09-30 records $117k receipts, $106k spending and $11k cash on hand for Everett Wess.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S6AL00518/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "fec-S6AL00476-2026-09-30",
       "date": "2026-09-30",
       "category": "FUNDRAISING",
@@ -58578,6 +58578,20 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "fec-S6KY00286-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "KY-SEN",
+      "geography": "KY-SEN",
+      "description": "FEC summary through 2026-09-30 records $10.0m receipts, $11.4m spending and $2.2m cash on hand for Andy Barr.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S6KY00286/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "fec-H6MI10359-2026-09-30",
       "date": "2026-09-30",
       "category": "FUNDRAISING",
@@ -58628,6 +58642,20 @@
       "description": "FEC summary through 2026-09-30 records $92k receipts, $81k spending and $2k cash on hand for Larry Marker.",
       "source_name": "Federal Election Commission",
       "source": "https://www.fec.gov/data/candidate/S6NM01186/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "fec-S6OK04163-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "OK-SEN",
+      "geography": "OK-SEN",
+      "description": "FEC summary through 2026-09-30 records $107k receipts, $81k spending and $27k cash on hand for Jasmine Thomas.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S6OK04163/?cycle=2026&election_full=true",
       "provenance": "Official FEC current-campaign summary",
       "model_effect": "NONE",
       "importance": "high",
@@ -58743,47 +58771,6 @@
       "provenance": "Official FEC current-campaign summary",
       "model_effect": "NONE",
       "importance": "normal",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-H6NC07196-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "NC-07",
-      "geography": "NC-07",
-      "description": "FEC summary through 2026-09-30 records $376k receipts, $351k spending and $25k cash on hand for Kimberly Hardy.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/H6NC07196/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "normal",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-H6WA03275-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "WA-03",
-      "geography": "WA-03",
-      "description": "FEC summary through 2026-09-30 records $2.2m receipts, $988k spending and $1.2m cash on hand for John Braun.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/H6WA03275/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "normal",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "rating-inside-FL-16-2026-09-17-Likely Republican",
-      "date": "2026-09-17",
-      "category": "RATING CHANGE",
-      "race_code": "FL-16",
-      "geography": "FL-16",
-      "description": "Inside Elections changed FL-16 from Solid Republican to Likely Republican.",
-      "source_name": "Inside Elections",
-      "source": "https://insideelections.com/ratings/house/",
-      "provenance": "Inside Elections public ratings API",
-      "model_effect": "NONE",
       "confidence": "source-recorded"
     }
   ],
@@ -69409,7 +69396,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-10-15T04:37:47.088297Z",
+    "retrieved_at": "2026-10-15T17:00:19.397856Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -69422,21 +69409,31 @@
   ],
   "change_summary": {
     "comparable_previous_snapshot": true,
-    "house_control_probability": -0.0019,
-    "senate_control_probability": -0.0029,
-    "house_expected_dem_seats": -0.2,
+    "house_control_probability": 0.0,
+    "senate_control_probability": 0.0,
+    "house_expected_dem_seats": 0.0,
     "senate_expected_dem_seats": 0.0,
-    "generic_ballot_d_minus_r": -0.03,
-    "changed_inputs": [
-      "races.csv",
-      "race_polls.csv"
-    ],
-    "previous_generated_at": "2026-10-14T17:10:07.423010Z"
+    "generic_ballot_d_minus_r": 0.0,
+    "changed_inputs": [],
+    "previous_generated_at": "2026-10-15T04:37:47.088297Z"
   },
   "briefing": {
     "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 92% probability of House control and a 68% probability of Senate control. The current weighted generic congressional ballot is D+7.6. The House 80% Democratic-seat interval is 219–252; the Senate interval is 49–54."
   },
   "history_summaries": [
+    {
+      "file": "2026-10-15T170019Z.json",
+      "generated_at": "2026-10-15T17:00:19.397856Z",
+      "house": 0.9185,
+      "senate": 0.6772,
+      "house_seats": 234.9,
+      "senate_seats": 51.4,
+      "generic_ballot_d_minus_r": 7.57,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "f13c143ee97f5261410e118057f67db63760f2b0",
+      "input_sha256": "bbde76898b81d6d25846a6f40bed335da994d99ec5e7bf2dee08a9a4a7ea81eb",
+      "changed_inputs": []
+    },
     {
       "file": "2026-10-15T043747Z.json",
       "generated_at": "2026-10-15T04:37:47.088297Z",
