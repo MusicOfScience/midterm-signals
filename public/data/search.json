@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T04:30:57.361845Z",
+  "generated_at": "2026-10-16T16:38:50.765616Z",
   "records": [
     {
       "type": "race",
@@ -9859,6 +9859,13 @@
     },
     {
       "type": "pollster",
+      "label": "Bowling Green State University Democracy and Public Policy Research Network/YouGov",
+      "subtitle": "Pollster",
+      "key": "Bowling Green State University Democracy and Public Policy Research Network/YouGov",
+      "terms": "Bowling Green State University Democracy and Public Policy Research Network/YouGov"
+    },
+    {
+      "type": "pollster",
       "label": "Braun Research",
       "subtitle": "Pollster",
       "key": "Braun Research",
@@ -9898,6 +9905,13 @@
       "subtitle": "Pollster",
       "key": "Clarity Campaign Labs",
       "terms": "Clarity Campaign Labs"
+    },
+    {
+      "type": "pollster",
+      "label": "Concord Public Opinion Partners",
+      "subtitle": "Pollster",
+      "key": "Concord Public Opinion Partners",
+      "terms": "Concord Public Opinion Partners"
     },
     {
       "type": "pollster",
@@ -10080,6 +10094,13 @@
       "subtitle": "Pollster",
       "key": "Hart Research Associates/Public Opinion Strategies",
       "terms": "Hart Research Associates/Public Opinion Strategies"
+    },
+    {
+      "type": "pollster",
+      "label": "Hendrix College",
+      "subtitle": "Pollster",
+      "key": "Hendrix College",
+      "terms": "Hendrix College"
     },
     {
       "type": "pollster",
@@ -10458,6 +10479,13 @@
       "subtitle": "Pollster",
       "key": "The New York Times/Siena University",
       "terms": "The New York Times/Siena University"
+    },
+    {
+      "type": "pollster",
+      "label": "The Tyson Group",
+      "subtitle": "Pollster",
+      "key": "The Tyson Group",
+      "terms": "The Tyson Group"
     },
     {
       "type": "pollster",
