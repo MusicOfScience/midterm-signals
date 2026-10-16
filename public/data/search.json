@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T17:00:19.397856Z",
+  "generated_at": "2026-10-16T04:30:57.361845Z",
   "records": [
     {
       "type": "race",
@@ -9768,6 +9768,13 @@
     },
     {
       "type": "pollster",
+      "label": "AP-NORC",
+      "subtitle": "Pollster",
+      "key": "AP-NORC",
+      "terms": "AP-NORC"
+    },
+    {
+      "type": "pollster",
       "label": "Abacus Data",
       "subtitle": "Pollster",
       "key": "Abacus Data",
@@ -10146,6 +10153,13 @@
     },
     {
       "type": "pollster",
+      "label": "MDW Communications",
+      "subtitle": "Pollster",
+      "key": "MDW Communications",
+      "terms": "MDW Communications"
+    },
+    {
+      "type": "pollster",
       "label": "Maine People's Resource Center",
       "subtitle": "Pollster",
       "key": "Maine People's Resource Center",
@@ -10423,6 +10437,13 @@
       "subtitle": "Pollster",
       "key": "The Argument/Verasight",
       "terms": "The Argument/Verasight"
+    },
+    {
+      "type": "pollster",
+      "label": "The Bullfinch Group",
+      "subtitle": "Pollster",
+      "key": "The Bullfinch Group",
+      "terms": "The Bullfinch Group"
     },
     {
       "type": "pollster",

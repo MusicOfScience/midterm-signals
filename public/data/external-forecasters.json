@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T17:00:28.985787Z",
+  "generated_at": "2026-10-16T04:31:07.078978Z",
   "inside_elections": {
     "name": "Inside Elections",
     "id": "inside_elections",
@@ -10,7 +10,7 @@
       "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
       "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json"
     ],
-    "last_updated": "2026-10-01",
+    "last_updated": "2026-10-15",
     "ratings_count": 470,
     "chambers": [
       "house",
@@ -18,6 +18,270 @@
     ],
     "note": "Native public ratings imported from the API links exposed on Inside Elections ratings pages; ratings remain external and never alter MIDTERM SIGNALS probabilities.",
     "race_ratings": {
+      "PA-07": {
+        "rating": "Tilt Democrat",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Toss-up",
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "SC-01": {
+        "rating": "Lean Republican",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Likely Republican",
+        "open": true,
+        "special": false,
+        "native_scale": true
+      },
+      "WY-01": {
+        "rating": "Likely Republican",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Solid Republican",
+        "open": true,
+        "special": false,
+        "native_scale": true
+      },
+      "TX-15": {
+        "rating": "Toss-up",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Tilt Republican",
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "PA-08": {
+        "rating": "Tilt Democrat",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Toss-up",
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "NC-11": {
+        "rating": "Toss-up",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Lean Republican",
+        "open": true,
+        "special": false,
+        "native_scale": true
+      },
+      "OH-09": {
+        "rating": "Toss-up",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Tilt Republican",
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "NC-01": {
+        "rating": "Toss-up",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Tilt Republican",
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "NY-21": {
+        "rating": "Lean Republican",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Likely Republican",
+        "open": true,
+        "special": false,
+        "native_scale": true
+      },
+      "NY-19": {
+        "rating": "Solid Democrat",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Likely Democrat",
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "NJ-09": {
+        "rating": "Solid Democrat",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Likely Democrat",
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "NV-02": {
+        "rating": "Lean Republican",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Likely Republican",
+        "open": true,
+        "special": false,
+        "native_scale": true
+      },
+      "NE-02": {
+        "rating": "Lean Democrat",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Tilt Democrat",
+        "open": true,
+        "special": false,
+        "native_scale": true
+      },
+      "NE-01": {
+        "rating": "Likely Republican",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Solid Republican",
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "MT-01": {
+        "rating": "Tilt Republican",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Lean Republican",
+        "open": true,
+        "special": false,
+        "native_scale": true
+      },
+      "ME-02": {
+        "rating": "Lean Republican",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Likely Republican",
+        "open": true,
+        "special": false,
+        "native_scale": true
+      },
+      "KY-06": {
+        "rating": "Tilt Republican",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Lean Republican",
+        "open": true,
+        "special": false,
+        "native_scale": true
+      },
+      "IN-05": {
+        "rating": "Likely Republican",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Solid Republican",
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "IA-02": {
+        "rating": "Toss-up",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Tilt Republican",
+        "open": true,
+        "special": false,
+        "native_scale": true
+      },
+      "AR-02": {
+        "rating": "Likely Republican",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Solid Republican",
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "AZ-01": {
+        "rating": "Tilt Democrat",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Toss-up",
+        "open": true,
+        "special": false,
+        "native_scale": true
+      },
+      "AL-02": {
+        "rating": "Lean Republican",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/house/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
+        "updated_at": "2026-10-15",
+        "shift": "left",
+        "previous_rating": "Likely Republican",
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
       "OH-15": {
         "rating": "Likely Republican",
         "state": "current",
@@ -39,42 +303,6 @@
         "shift": "left",
         "previous_rating": "Lean Republican",
         "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "MT-01": {
-        "rating": "Lean Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-10-01",
-        "shift": "left",
-        "previous_rating": "Likely Republican",
-        "open": true,
-        "special": false,
-        "native_scale": true
-      },
-      "NY-21": {
-        "rating": "Likely Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-10-01",
-        "shift": "left",
-        "previous_rating": "Solid Republican",
-        "open": true,
-        "special": false,
-        "native_scale": true
-      },
-      "KY-06": {
-        "rating": "Lean Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-10-01",
-        "shift": "left",
-        "previous_rating": "Likely Republican",
-        "open": true,
         "special": false,
         "native_scale": true
       },
@@ -198,42 +426,6 @@
         "special": false,
         "native_scale": true
       },
-      "IA-02": {
-        "rating": "Tilt Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-09-17",
-        "shift": "left",
-        "previous_rating": "Lean Republican",
-        "open": true,
-        "special": false,
-        "native_scale": true
-      },
-      "NY-19": {
-        "rating": "Likely Democrat",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-09-17",
-        "shift": "left",
-        "previous_rating": "Lean Democrat",
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "NC-01": {
-        "rating": "Tilt Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-09-17",
-        "shift": "left",
-        "previous_rating": "Lean Republican",
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
       "TX-09": {
         "rating": "Likely Republican",
         "state": "current",
@@ -290,54 +482,6 @@
         "updated_at": "2026-09-03",
         "shift": "left",
         "previous_rating": "Solid Republican",
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "TX-15": {
-        "rating": "Tilt Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-08-20",
-        "shift": "left",
-        "previous_rating": "Lean Republican",
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "SC-01": {
-        "rating": "Likely Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-08-20",
-        "shift": "left",
-        "previous_rating": "Solid Republican",
-        "open": true,
-        "special": false,
-        "native_scale": true
-      },
-      "NV-02": {
-        "rating": "Likely Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-08-20",
-        "shift": "left",
-        "previous_rating": "Solid Republican",
-        "open": true,
-        "special": false,
-        "native_scale": true
-      },
-      "NJ-09": {
-        "rating": "Likely Democrat",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-08-20",
-        "shift": "left",
-        "previous_rating": "Lean Democrat",
         "open": false,
         "special": false,
         "native_scale": true
@@ -402,18 +546,6 @@
         "special": false,
         "native_scale": true
       },
-      "NC-11": {
-        "rating": "Lean Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-06-12",
-        "shift": "left",
-        "previous_rating": "Likely Republican",
-        "open": true,
-        "special": false,
-        "native_scale": true
-      },
       "CA-06": {
         "rating": "Lean Democrat",
         "state": "current",
@@ -458,30 +590,6 @@
         "updated_at": "2026-06-12",
         "shift": "left",
         "previous_rating": "Tilt Republican",
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "PA-08": {
-        "rating": "Toss-up",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-06-12",
-        "shift": "left",
-        "previous_rating": "Tilt Republican",
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "AL-02": {
-        "rating": "Likely Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-06-04",
-        "shift": "right",
-        "previous_rating": "Solid Democrat",
         "open": false,
         "special": false,
         "native_scale": true
@@ -954,18 +1062,6 @@
         "special": false,
         "native_scale": true
       },
-      "WY-01": {
-        "rating": "Solid Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2026-02-05",
-        "shift": "no-change",
-        "previous_rating": "Solid Republican",
-        "open": true,
-        "special": false,
-        "native_scale": true
-      },
       "MI-05": {
         "rating": "Solid Republican",
         "state": "current",
@@ -1263,30 +1359,6 @@
         "shift": "no-change",
         "previous_rating": "Solid Republican",
         "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "NE-01": {
-        "rating": "Solid Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2025-12-05",
-        "shift": "no-change",
-        "previous_rating": "Solid Republican",
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "NE-02": {
-        "rating": "Tilt Democrat",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2025-12-05",
-        "shift": "left",
-        "previous_rating": "Toss-up",
-        "open": true,
         "special": false,
         "native_scale": true
       },
@@ -1710,18 +1782,6 @@
         "special": false,
         "native_scale": true
       },
-      "AZ-01": {
-        "rating": "Toss-up",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2025-12-05",
-        "shift": "no-change",
-        "previous_rating": "Toss-up",
-        "open": true,
-        "special": false,
-        "native_scale": true
-      },
       "NY-12": {
         "rating": "Solid Democrat",
         "state": "current",
@@ -1910,18 +1970,6 @@
         "updated_at": "2025-12-05",
         "shift": "no-change",
         "previous_rating": "Solid Democrat",
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "AR-02": {
-        "rating": "Solid Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2025-12-05",
-        "shift": "no-change",
-        "previous_rating": "Solid Republican",
         "open": false,
         "special": false,
         "native_scale": true
@@ -2442,18 +2490,6 @@
         "special": false,
         "native_scale": true
       },
-      "OH-09": {
-        "rating": "Tilt Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2025-12-05",
-        "shift": "no-change",
-        "previous_rating": "Tilt Republican",
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
       "CA-27": {
         "rating": "Solid Democrat",
         "state": "current",
@@ -2906,18 +2942,6 @@
         "updated_at": "2025-12-05",
         "shift": "no-change",
         "previous_rating": "Solid Democrat",
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "PA-07": {
-        "rating": "Toss-up",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2025-12-05",
-        "shift": "no-change",
-        "previous_rating": "Toss-up",
         "open": false,
         "special": false,
         "native_scale": true
@@ -4446,18 +4470,6 @@
         "special": false,
         "native_scale": true
       },
-      "IN-05": {
-        "rating": "Solid Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2025-12-05",
-        "shift": "no-change",
-        "previous_rating": "Solid Republican",
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
       "WA-06": {
         "rating": "Solid Democrat",
         "state": "current",
@@ -4926,18 +4938,6 @@
         "special": false,
         "native_scale": true
       },
-      "ME-02": {
-        "rating": "Likely Republican",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/house/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
-        "updated_at": "2025-12-05",
-        "shift": "no-change",
-        "previous_rating": "Likely Republican",
-        "open": true,
-        "special": false,
-        "native_scale": true
-      },
       "WA-10": {
         "rating": "Solid Democrat",
         "state": "current",
@@ -5238,12 +5238,60 @@
         "special": false,
         "native_scale": true
       },
+      "FL-SEN": {
+        "rating": "Not Up This Cycle",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/senate/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json",
+        "updated_at": "2025-01-09",
+        "shift": null,
+        "previous_rating": null,
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
       "TX-SEN": {
         "rating": "Not Up This Cycle",
         "state": "current",
         "source": "https://insideelections.com/ratings/senate/",
         "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json",
         "updated_at": "2025-01-09",
+        "shift": null,
+        "previous_rating": null,
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "SC-SEN": {
+        "rating": "Not Up This Cycle",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/senate/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json",
+        "updated_at": "2023-01-06",
+        "shift": null,
+        "previous_rating": null,
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "NH-SEN": {
+        "rating": "Not Up This Cycle",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/senate/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json",
+        "updated_at": "2023-01-06",
+        "shift": null,
+        "previous_rating": null,
+        "open": false,
+        "special": false,
+        "native_scale": true
+      },
+      "KS-SEN": {
+        "rating": "Not Up This Cycle",
+        "state": "current",
+        "source": "https://insideelections.com/ratings/senate/",
+        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json",
+        "updated_at": "2023-01-06",
         "shift": null,
         "previous_rating": null,
         "open": false,
@@ -5334,18 +5382,6 @@
         "special": false,
         "native_scale": true
       },
-      "KS-SEN": {
-        "rating": "Not Up This Cycle",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/senate/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json",
-        "updated_at": "2023-01-06",
-        "shift": null,
-        "previous_rating": null,
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
       "OH-SEN": {
         "rating": "Not Up This Cycle",
         "state": "current",
@@ -5358,31 +5394,7 @@
         "special": false,
         "native_scale": true
       },
-      "NH-SEN": {
-        "rating": "Not Up This Cycle",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/senate/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json",
-        "updated_at": "2023-01-06",
-        "shift": null,
-        "previous_rating": null,
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
       "IA-SEN": {
-        "rating": "Not Up This Cycle",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/senate/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json",
-        "updated_at": "2023-01-06",
-        "shift": null,
-        "previous_rating": null,
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "SC-SEN": {
         "rating": "Not Up This Cycle",
         "state": "current",
         "source": "https://insideelections.com/ratings/senate/",
@@ -5460,18 +5472,6 @@
         "source": "https://insideelections.com/ratings/senate/",
         "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json",
         "updated_at": "2023-01-06",
-        "shift": null,
-        "previous_rating": null,
-        "open": false,
-        "special": false,
-        "native_scale": true
-      },
-      "FL-SEN": {
-        "rating": "Not Up This Cycle",
-        "state": "current",
-        "source": "https://insideelections.com/ratings/senate/",
-        "source_api": "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json",
-        "updated_at": "2025-01-09",
         "shift": null,
         "previous_rating": null,
         "open": false,
@@ -5679,7 +5679,7 @@
         "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_house_year=2026_district=all_clean.json",
         "https://insideelections.com/wp-content/themes/inside-elections/cache/ratings_latest_senate_year=2026_district=all_clean.json"
       ],
-      "last_updated": "2026-10-01",
+      "last_updated": "2026-10-15",
       "ratings_count": 470,
       "chambers": [
         "house",
