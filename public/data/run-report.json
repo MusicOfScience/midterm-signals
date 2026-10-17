@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T04:24:38.430349Z",
+  "generated_at": "2026-10-17T11:07:39.608737Z",
   "release": "PROD v1.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "upstream_commit": "067659a0703b63d426ff6f3e8bf03ba70563cb97",
@@ -10,7 +10,7 @@
   "senate_contests": 35,
   "generic_ballot_polls": 54,
   "static_routes": 497,
-  "history_summaries": 31,
+  "history_summaries": 32,
   "history_persisted": true,
   "source_states": {
     "current": 3,
@@ -22,8 +22,8 @@
     "inside_elections_state": "current",
     "inside_elections_ratings": 470,
     "fec_state": "current",
-    "fec_matched_candidates": 854,
-    "public_money_records": 203,
+    "fec_matched_candidates": 858,
+    "public_money_records": 204,
     "campaign_signals": 120,
     "access_constraints": [
       "Cook Political Report",
