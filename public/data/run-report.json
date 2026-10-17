@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T11:07:39.608737Z",
+  "generated_at": "2026-10-17T15:33:49.103328Z",
   "release": "PROD v1.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "upstream_commit": "067659a0703b63d426ff6f3e8bf03ba70563cb97",
@@ -10,7 +10,7 @@
   "senate_contests": 35,
   "generic_ballot_polls": 54,
   "static_routes": 497,
-  "history_summaries": 32,
+  "history_summaries": 33,
   "history_persisted": true,
   "source_states": {
     "current": 3,
