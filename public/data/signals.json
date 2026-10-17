@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T16:39:00.712138Z",
+  "generated_at": "2026-10-17T04:24:48.164272Z",
   "signals": [
     {
       "id": "rating-inside-PA-07-2026-10-15-Tilt Democrat",
@@ -994,30 +994,6 @@
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-national-The Bullfinch Group-2026-10-06-3.5",
-      "date": "2026-10-06",
-      "category": "POLL",
-      "geography": "National",
-      "description": "The Bullfinch Group generic-ballot observation recorded at D−R +3.5.",
-      "source_name": "The Bullfinch Group",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-national-The Honest Poll-2026-10-06-11.5",
-      "date": "2026-10-06",
-      "category": "POLL",
-      "geography": "National",
-      "description": "The Honest Poll generic-ballot observation recorded at D−R +11.5.",
-      "source_name": "The Honest Poll",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
       "id": "poll-IA-SEN-Emerson College-2026-10-06--1.6",
       "date": "2026-10-06",
       "category": "POLL",
@@ -1460,45 +1436,6 @@
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-FL-16-Public Policy Polling-2026-10-02--4.0",
-      "date": "2026-10-02",
-      "category": "POLL",
-      "race_code": "FL-16",
-      "geography": "FL-16",
-      "description": "Public Policy Polling race poll recorded at D−R -4.0 for FL-16.",
-      "source_name": "Public Policy Polling",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-OH-01-Torchlight Strategies-2026-10-02-1.6",
-      "date": "2026-10-02",
-      "category": "POLL",
-      "race_code": "OH-01",
-      "geography": "OH-01",
-      "description": "Torchlight Strategies race poll recorded at D−R +1.6 for OH-01.",
-      "source_name": "Torchlight Strategies",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-OH-01-Torchlight Strategies-2026-10-02-0.0",
-      "date": "2026-10-02",
-      "category": "POLL",
-      "race_code": "OH-01",
-      "geography": "OH-01",
-      "description": "Torchlight Strategies race poll recorded at D−R +0.0 for OH-01.",
-      "source_name": "Torchlight Strategies",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
       "id": "rating-inside-OH-15-2026-10-01-Likely Republican",
       "date": "2026-10-01",
       "category": "RATING CHANGE",
@@ -1548,6 +1485,72 @@
       "source": "https://insideelections.com/ratings/house/",
       "provenance": "Inside Elections public ratings API",
       "model_effect": "NONE",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "rating-inside-FL-13-2026-10-01-Lean Republican",
+      "date": "2026-10-01",
+      "category": "RATING CHANGE",
+      "race_code": "FL-13",
+      "geography": "FL-13",
+      "description": "Inside Elections changed FL-13 from Likely Republican to Lean Republican.",
+      "source_name": "Inside Elections",
+      "source": "https://insideelections.com/ratings/house/",
+      "provenance": "Inside Elections public ratings API",
+      "model_effect": "NONE",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "rating-inside-CA-45-2026-10-01-Likely Democrat",
+      "date": "2026-10-01",
+      "category": "RATING CHANGE",
+      "race_code": "CA-45",
+      "geography": "CA-45",
+      "description": "Inside Elections changed CA-45 from Lean Democrat to Likely Democrat.",
+      "source_name": "Inside Elections",
+      "source": "https://insideelections.com/ratings/house/",
+      "provenance": "Inside Elections public ratings API",
+      "model_effect": "NONE",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "rating-inside-CA-22-2026-10-01-Toss-up",
+      "date": "2026-10-01",
+      "category": "RATING CHANGE",
+      "race_code": "CA-22",
+      "geography": "CA-22",
+      "description": "Inside Elections changed CA-22 from Tilt Republican to Toss-up.",
+      "source_name": "Inside Elections",
+      "source": "https://insideelections.com/ratings/house/",
+      "provenance": "Inside Elections public ratings API",
+      "model_effect": "NONE",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "rating-inside-VA-05-2026-10-01-Likely Republican",
+      "date": "2026-10-01",
+      "category": "RATING CHANGE",
+      "race_code": "VA-05",
+      "geography": "VA-05",
+      "description": "Inside Elections changed VA-05 from Solid Republican to Likely Republican.",
+      "source_name": "Inside Elections",
+      "source": "https://insideelections.com/ratings/house/",
+      "provenance": "Inside Elections public ratings API",
+      "model_effect": "NONE",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "fec-S6AK00276-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "AK-SEN",
+      "geography": "AK-SEN",
+      "description": "FEC summary through 2026-09-30 records $32.6m receipts, $29.5m spending and $3.2m cash on hand for Mary Peltola.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S6AK00276/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
       "confidence": "source-recorded"
     }
   ],

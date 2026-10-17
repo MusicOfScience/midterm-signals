@@ -53,7 +53,6 @@ generic_ballot,,YouGov,,,,2026-09-14,,1051,,,47.5,39.0,8.5,,0.2531
 generic_ballot,,The Honest Poll,,,,2026-09-13,,1392,,,50.5,41.0,9.5,,0.1419
 generic_ballot,,The New York Times/Siena University,,,,2026-09-13,,1503,,,50.1,42.5,7.6,,0.38575
 generic_ballot,,Morning Consult,,,,2026-09-13,,18127,,,47.7,42.9,4.8,,0.8404
-generic_ballot,,YouGov,,,,2026-09-11,,1750,,,54.0,46.0,8.0,,0.27034
 race,AK-SEN,InsiderAdvantage,,R,,2026-10-10,,1200,,,48.2,42.6,5.6,,0.4673
 race,AK-SEN,Alaska Survey Research,,,,2026-10-03,,1512,,,47.0,45.0,2.0,,0.71815
 race,AK-SEN,The New York Times/Siena University,,,,2026-10-01,,504,,,50.1,43.1,7.0,,0.97498
@@ -408,9 +407,6 @@ race,TX-09,Public Policy Polling,,D,,2026-09-19,,560,,,39.0,45.0,-6.0,,0.24035
 race,TX-10,Change Research,,D,,2026-09-22,,613,,,41.0,48.0,-7.0,,0.61482
 race,TX-15,"Normington, Petts & Associates",,D,,2026-09-28,,400,,,51.0,44.0,7.0,,0.36481
 race,TX-15,"Normington, Petts & Associates",,D,,2026-09-28,,400,,,54.0,41.0,13.0,,0.36481
-race,TX-15,Barbara Jordan Public Policy Research and Survey Center,,,,2026-08-22,,700,,,50.0,45.0,5.0,,0.0987
-race,TX-28,Barbara Jordan Public Policy Research and Survey Center,,,,2026-08-22,,600,,,45.0,34.0,11.0,,0.65706
-race,TX-34,Barbara Jordan Public Policy Research and Survey Center,,,,2026-08-22,,700,,,45.0,42.0,3.0,,0.70971
 race,TX-35,"Normington, Petts & Associates",,D,,2026-08-31,,,,,44.0,45.0,-1.0,,0.28841
 race,UT-01,Lighthouse Research,,,,2026-09-10,,515,,,62.7,21.2,41.5,,0.60874
 race,UT-02,Lighthouse Research,,,,2026-09-24,,515,,,34.0,39.0,-5.0,,0.60874
