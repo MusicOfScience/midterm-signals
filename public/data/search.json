@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T15:33:49.103328Z",
+  "generated_at": "2026-10-18T04:31:51.617658Z",
   "records": [
     {
       "type": "race",
@@ -9905,13 +9905,6 @@
       "subtitle": "Pollster",
       "key": "Clarity Campaign Labs",
       "terms": "Clarity Campaign Labs"
-    },
-    {
-      "type": "pollster",
-      "label": "Concord Public Opinion Partners",
-      "subtitle": "Pollster",
-      "key": "Concord Public Opinion Partners",
-      "terms": "Concord Public Opinion Partners"
     },
     {
       "type": "pollster",

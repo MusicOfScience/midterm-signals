@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T15:33:58.862271Z",
+  "generated_at": "2026-10-18T04:32:01.077533Z",
   "signals": [
     {
       "id": "rating-inside-PA-07-2026-10-15-Tilt Democrat",
@@ -365,6 +365,19 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "poll-ME-02-Tulchin Research-2026-10-14-4.0",
+      "date": "2026-10-14",
+      "category": "POLL",
+      "race_code": "ME-02",
+      "geography": "ME-02",
+      "description": "Tulchin Research race poll recorded at D−R +4.0 for ME-02.",
+      "source_name": "Tulchin Research",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "poll-national-RMG Research-2026-10-13-9.5",
       "date": "2026-10-13",
       "category": "POLL",
@@ -390,24 +403,24 @@
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-national-AP-NORC-2026-10-12-9.0",
-      "date": "2026-10-12",
-      "category": "POLL",
-      "geography": "National",
-      "description": "AP-NORC generic-ballot observation recorded at D−R +9.0.",
-      "source_name": "AP-NORC",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
       "id": "poll-national-Beacon Research/Shaw & Company Research-2026-10-12-9.0",
       "date": "2026-10-12",
       "category": "POLL",
       "geography": "National",
       "description": "Beacon Research/Shaw & Company Research generic-ballot observation recorded at D−R +9.0.",
       "source_name": "Beacon Research/Shaw & Company Research",
+      "source": null,
+      "provenance": "Production generic-ballot observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-national-AP-NORC-2026-10-12-9.0",
+      "date": "2026-10-12",
+      "category": "POLL",
+      "geography": "National",
+      "description": "AP-NORC generic-ballot observation recorded at D−R +9.0.",
+      "source_name": "AP-NORC",
       "source": null,
       "provenance": "Production generic-ballot observation",
       "model_effect": "POLL INPUT",
@@ -446,6 +459,19 @@
       "geography": "MN-SEN",
       "description": "SurveyUSA race poll recorded at D−R +3.0 for MN-SEN.",
       "source_name": "SurveyUSA",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-MT-SEN-Peak Insights-2026-10-12--32.0",
+      "date": "2026-10-12",
+      "category": "POLL",
+      "race_code": "MT-SEN",
+      "geography": "MT-SEN",
+      "description": "Peak Insights race poll recorded at D−R -32.0 for MT-SEN.",
+      "source_name": "Peak Insights",
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",
@@ -826,19 +852,6 @@
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-MT-SEN-Concord Public Opinion Partners-2026-10-08--22.0",
-      "date": "2026-10-08",
-      "category": "POLL",
-      "race_code": "MT-SEN",
-      "geography": "MT-SEN",
-      "description": "Concord Public Opinion Partners race poll recorded at D−R -22.0 for MT-SEN.",
-      "source_name": "Concord Public Opinion Partners",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
       "id": "poll-TX-SEN-ReconMR/Siena Research Institute-2026-10-08-4.0",
       "date": "2026-10-08",
       "category": "POLL",
@@ -887,18 +900,6 @@
       "source_name": "Global Strategy Group",
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-national-Noble Predictive Insights-2026-10-07-5.0",
-      "date": "2026-10-07",
-      "category": "POLL",
-      "geography": "National",
-      "description": "Noble Predictive Insights generic-ballot observation recorded at D−R +5.0.",
-      "source_name": "Noble Predictive Insights",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
       "model_effect": "POLL INPUT",
       "confidence": "source-recorded"
     },
@@ -1397,45 +1398,6 @@
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-AK-SEN-Alaska Survey Research-2026-10-03-2.0",
-      "date": "2026-10-03",
-      "category": "POLL",
-      "race_code": "AK-SEN",
-      "geography": "AK-SEN",
-      "description": "Alaska Survey Research race poll recorded at D−R +2.0 for AK-SEN.",
-      "source_name": "Alaska Survey Research",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-GA-SEN-Wedgewood Polls-2026-10-03-10.0",
-      "date": "2026-10-03",
-      "category": "POLL",
-      "race_code": "GA-SEN",
-      "geography": "GA-SEN",
-      "description": "Wedgewood Polls race poll recorded at D−R +10.0 for GA-SEN.",
-      "source_name": "Wedgewood Polls",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-NC-SEN-East Carolina University Center for Survey Research-2026-10-03-7.0",
-      "date": "2026-10-03",
-      "category": "POLL",
-      "race_code": "NC-SEN",
-      "geography": "NC-SEN",
-      "description": "East Carolina University Center for Survey Research race poll recorded at D−R +7.0 for NC-SEN.",
-      "source_name": "East Carolina University Center for Survey Research",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
       "id": "rating-inside-OH-15-2026-10-01-Likely Republican",
       "date": "2026-10-01",
       "category": "RATING CHANGE",
@@ -1548,6 +1510,48 @@
       "description": "FEC summary through 2026-09-30 records $32.6m receipts, $29.5m spending and $3.2m cash on hand for Mary Peltola.",
       "source_name": "Federal Election Commission",
       "source": "https://www.fec.gov/data/candidate/S6AK00276/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "fec-S4AK00214-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "AK-SEN",
+      "geography": "AK-SEN",
+      "description": "FEC summary through 2026-09-30 records $11.2m receipts, $8.1m spending and $5.1m cash on hand for Dan Sullivan.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S4AK00214/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "fec-S6AL00518-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "AL-SEN",
+      "geography": "AL-SEN",
+      "description": "FEC summary through 2026-09-30 records $117k receipts, $106k spending and $11k cash on hand for Everett Wess.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S6AL00518/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "fec-S6AL00476-2026-09-30",
+      "date": "2026-09-30",
+      "category": "FUNDRAISING",
+      "race_code": "AL-SEN",
+      "geography": "AL-SEN",
+      "description": "FEC summary through 2026-09-30 records $4.5m receipts, $4.1m spending and $496k cash on hand for Barry Moore.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S6AL00476/?cycle=2026&election_full=true",
       "provenance": "Official FEC current-campaign summary",
       "model_effect": "NONE",
       "importance": "high",

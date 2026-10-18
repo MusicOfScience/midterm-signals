@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T15:33:58.862271Z",
+  "generated_at": "2026-10-18T04:32:01.077533Z",
   "sources": [
     {
       "id": "upstream_input_mirror",
@@ -7,7 +7,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-10-17T15:33:49.103328Z",
+      "last_success": "2026-10-18T04:31:51.617658Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -40,7 +40,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-10-17T15:33:58.862271Z",
+      "last_success": "2026-10-18T04:32:01.077533Z",
       "last_observation": "2026-10-15",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -74,7 +74,7 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-10-17T15:34:01.116193Z",
+      "last_success": "2026-10-18T04:32:03.834356Z",
       "last_observation": "2026-10-14",
       "note": "Official bulk adapter; 858 candidate summaries matched to production candidates."
     },
@@ -83,7 +83,7 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-10-17T15:33:58.862271Z",
+      "last_success": "2026-10-18T04:32:01.077533Z",
       "last_observation": "2026-10-15",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
