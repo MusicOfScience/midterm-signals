@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T04:32:01.077533Z",
+  "generated_at": "2026-10-18T15:51:40.098513Z",
   "signals": [
     {
       "id": "rating-inside-PA-07-2026-10-15-Tilt Democrat",
@@ -285,6 +285,20 @@
       "source": "https://insideelections.com/ratings/house/",
       "provenance": "Inside Elections public ratings API",
       "model_effect": "NONE",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "fec-S6MT00253-2026-10-14",
+      "date": "2026-10-14",
+      "category": "FUNDRAISING",
+      "race_code": "MT-SEN",
+      "geography": "MT-SEN",
+      "description": "FEC summary through 2026-10-14 records $191k receipts, $168k spending and $23k cash on hand for Alani Bankhead.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S6MT00253/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
       "confidence": "source-recorded"
     },
     {
@@ -1538,20 +1552,6 @@
       "description": "FEC summary through 2026-09-30 records $117k receipts, $106k spending and $11k cash on hand for Everett Wess.",
       "source_name": "Federal Election Commission",
       "source": "https://www.fec.gov/data/candidate/S6AL00518/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S6AL00476-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "AL-SEN",
-      "geography": "AL-SEN",
-      "description": "FEC summary through 2026-09-30 records $4.5m receipts, $4.1m spending and $496k cash on hand for Barry Moore.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S6AL00476/?cycle=2026&election_full=true",
       "provenance": "Official FEC current-campaign summary",
       "model_effect": "NONE",
       "importance": "high",
