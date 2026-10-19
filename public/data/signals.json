@@ -1,6 +1,32 @@
 {
-  "generated_at": "2026-10-19T04:39:43.462573Z",
+  "generated_at": "2026-10-19T18:43:17.041334Z",
   "signals": [
+    {
+      "id": "poll-OH-SEN-ActiVote-2026-10-18--0.4",
+      "date": "2026-10-18",
+      "category": "POLL",
+      "race_code": "OH-SEN",
+      "geography": "OH-SEN",
+      "description": "ActiVote race poll recorded at D−R -0.4 for OH-SEN.",
+      "source_name": "ActiVote",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-SC-SEN-Trafalgar Group-2026-10-18--3.0",
+      "date": "2026-10-18",
+      "category": "POLL",
+      "race_code": "SC-SEN",
+      "geography": "SC-SEN",
+      "description": "Trafalgar Group race poll recorded at D−R -3.0 for SC-SEN.",
+      "source_name": "Trafalgar Group",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
     {
       "id": "poll-TX-SEN-YouGov-2026-10-16-2.0",
       "date": "2026-10-16",
@@ -418,6 +444,19 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "poll-TX-SEN-University of Houston Hobby School of Public Affairs-2026-10-14-2.0",
+      "date": "2026-10-14",
+      "category": "POLL",
+      "race_code": "TX-SEN",
+      "geography": "TX-SEN",
+      "description": "University of Houston Hobby School of Public Affairs race poll recorded at D−R +2.0 for TX-SEN.",
+      "source_name": "University of Houston Hobby School of Public Affairs",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "poll-TX-SEN-InsiderAdvantage-2026-10-14--1.0",
       "date": "2026-10-14",
       "category": "POLL",
@@ -481,18 +520,6 @@
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-national-SurveyMonkey-2026-10-12-10.0",
-      "date": "2026-10-12",
-      "category": "POLL",
-      "geography": "National",
-      "description": "SurveyMonkey generic-ballot observation recorded at D−R +10.0.",
-      "source_name": "SurveyMonkey",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
       "id": "poll-national-YouGov-2026-10-12-8.7",
       "date": "2026-10-12",
       "category": "POLL",
@@ -523,6 +550,18 @@
       "geography": "National",
       "description": "AP-NORC generic-ballot observation recorded at D−R +9.0.",
       "source_name": "AP-NORC",
+      "source": null,
+      "provenance": "Production generic-ballot observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-national-SurveyMonkey-2026-10-12-10.0",
+      "date": "2026-10-12",
+      "category": "POLL",
+      "geography": "National",
+      "description": "SurveyMonkey generic-ballot observation recorded at D−R +10.0.",
+      "source_name": "SurveyMonkey",
       "source": null,
       "provenance": "Production generic-ballot observation",
       "model_effect": "POLL INPUT",
@@ -1516,48 +1555,6 @@
       "description": "FEC summary through 2026-09-30 records $138k receipts, $111k spending and $28k cash on hand for Mark Baisley.",
       "source_name": "Federal Election Commission",
       "source": "https://www.fec.gov/data/candidate/S6CO00507/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S0DE00092-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "DE-SEN",
-      "geography": "DE-SEN",
-      "description": "FEC summary through 2026-09-30 records $4.8m receipts, $2.0m spending and $5.0m cash on hand for Chris Coons.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S0DE00092/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S6DE00206-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "DE-SEN",
-      "geography": "DE-SEN",
-      "description": "FEC summary through 2026-09-30 records $177k receipts, $160k spending and $17k cash on hand for Michael Katz.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S6DE00206/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-H6FL13312-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "FL-13",
-      "geography": "FL-13",
-      "description": "FEC summary through 2026-09-30 records $2.6m receipts, $2.0m spending and $601k cash on hand for Leela Gray.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/H6FL13312/?cycle=2026&election_full=true",
       "provenance": "Official FEC current-campaign summary",
       "model_effect": "NONE",
       "importance": "high",
