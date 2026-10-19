@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T15:51:30.746546Z",
+  "generated_at": "2026-10-19T04:39:36.574599Z",
   "records": [
     {
       "type": "race",
@@ -10426,10 +10426,24 @@
     },
     {
       "type": "pollster",
+      "label": "SurveyMonkey",
+      "subtitle": "Pollster",
+      "key": "SurveyMonkey",
+      "terms": "SurveyMonkey"
+    },
+    {
+      "type": "pollster",
       "label": "SurveyUSA",
       "subtitle": "Pollster",
       "key": "SurveyUSA",
       "terms": "SurveyUSA"
+    },
+    {
+      "type": "pollster",
+      "label": "Susquehanna Polling & Research, Inc.",
+      "subtitle": "Pollster",
+      "key": "Susquehanna Polling & Research, Inc.",
+      "terms": "Susquehanna Polling & Research, Inc."
     },
     {
       "type": "pollster",
