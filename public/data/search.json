@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T18:43:10.671241Z",
+  "generated_at": "2026-10-20T04:49:26.228335Z",
   "records": [
     {
       "type": "race",
@@ -9835,13 +9835,6 @@
       "subtitle": "Pollster",
       "key": "Beacon Research/Shaw & Company Research",
       "terms": "Beacon Research/Shaw & Company Research"
-    },
-    {
-      "type": "pollster",
-      "label": "Bedrock Polling",
-      "subtitle": "Pollster",
-      "key": "Bedrock Polling",
-      "terms": "Bedrock Polling"
     },
     {
       "type": "pollster",
