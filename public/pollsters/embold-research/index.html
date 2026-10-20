@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f2eee4">
+  <meta name="description" content="Current-cycle polls from Embold Research recorded by MIDTERM SIGNALS.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Embold Research 2026 Polls · MIDTERM SIGNALS">
+  <meta property="og:description" content="Forecasts, races, polls, scenarios, history and provenance for the 2026 US midterm elections.">
+  <meta property="og:url" content="https://midterm-signals.pages.dev/pollsters/embold-research/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://midterm-signals.pages.dev/pollsters/embold-research/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Embold Research 2026 Polls · MIDTERM SIGNALS</title>
+</head>
+<body>
+<a class="skip" href="#content">Skip to analysis</a>
+<header class="site-header">
+  <div class="masthead">
+    <a class="brand" href="/?view=home" data-route="home"><span class="brand-mark">M∕S</span><span class="brand-word">MIDTERM SIGNALS</span></a>
+    <div class="header-actions">
+      <button class="command-button" id="openSearch" type="button" aria-haspopup="dialog" aria-controls="searchDialog"><span aria-hidden="true">⌕</span> Search <kbd>/</kbd></button>
+      <button class="health-chip" id="healthChip" type="button" data-route="data"><span class="health-dot"></span><span>Checking data</span></button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+    </div>
+  </div>
+  <nav id="primaryNav" class="primary-nav" aria-label="Primary">
+    <a href="/?view=forecast" data-route="forecast">Forecast</a>
+    <a href="/?view=house" data-route="house">House</a>
+    <a href="/?view=senate" data-route="senate">Senate</a>
+    <a href="/?view=races" data-route="races">Races</a>
+    <a href="/?view=map" data-route="map">Map</a>
+    <a href="/?view=polls" data-route="polls">Polls</a>
+    <a href="/?view=environment" data-route="environment">National environment</a>
+    <a href="/?view=candidates" data-route="candidates">Candidates</a>
+    <a href="/?view=money" data-route="money">Money</a>
+    <a href="/?view=signals" data-route="signals">Campaign signals</a>
+    <a href="/?view=scenarios" data-route="scenarios">Scenarios</a>
+    <a href="/?view=history" data-route="history">History</a>
+    <a href="/model-lab/">Model Lab</a>
+    <a href="/?view=data" data-route="data">Data</a>
+    <a href="/?view=methodology" data-route="methodology">Methodology</a>
+    <a href="/?view=about" data-route="about">About</a>
+  </nav>
+</header>
+<div class="context-bar" id="contextBar" aria-live="polite"><span>Loading current production forecast…</span></div>
+<main id="content" tabindex="-1"><div class="loading-screen"><div class="eyebrow">MIDTERM SIGNALS</div><h1>Loading the election model</h1><p>Reading the latest production projection.</p></div></main>
+<footer class="site-footer" hidden><div><strong>MIDTERM SIGNALS / 2026</strong><span>Facts ≠ polls ≠ forecasts ≠ scenarios ≠ results</span></div><div><a href="/?view=methodology" data-route="methodology">Methodology</a><a href="/model-lab/">Model Lab</a><a href="/?view=data" data-route="data">Data & provenance</a><a href="/data/forecast.json">Forecast JSON</a><a href="https://github.com/MusicOfScience/midterm-signals">Source code</a></div></footer>
+<dialog id="searchDialog" class="search-dialog" aria-labelledby="searchTitle">
+  <form method="dialog" class="search-shell">
+    <div class="search-head"><div><div class="eyebrow">GLOBAL SEARCH</div><h2 id="searchTitle">Jump anywhere</h2></div><button value="cancel" aria-label="Close search">×</button></div>
+    <label class="search-input-wrap"><span class="sr-only">Search races, candidates, states, pollsters or forecasters</span><input id="globalSearch" type="search" autocomplete="off" placeholder="Try MI-07, Michigan, Marist, Cook…"></label>
+    <div id="searchResults" class="search-results" role="listbox" aria-label="Search results"><p class="muted">Search races, candidates, states, pollsters and forecasters.</p></div>
+  </form>
+</dialog>
+<noscript><div class="noscript">MIDTERM SIGNALS requires JavaScript for interactive exploration. Machine-readable data remain available at <a href="/data/forecast.json">/data/forecast.json</a>.</div></noscript>
+<script>window.__MIDTERM_ROUTE__={"view":"pollster","id":"Embold Research"};</script>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

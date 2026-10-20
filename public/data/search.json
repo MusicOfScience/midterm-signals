@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T04:49:26.228335Z",
+  "generated_at": "2026-10-20T17:04:40.954313Z",
   "records": [
     {
       "type": "race",
@@ -9964,6 +9964,13 @@
     },
     {
       "type": "pollster",
+      "label": "Embold Research",
+      "subtitle": "Pollster",
+      "key": "Embold Research",
+      "terms": "Embold Research"
+    },
+    {
+      "type": "pollster",
       "label": "Emerson College",
       "subtitle": "Pollster",
       "key": "Emerson College",
@@ -10451,6 +10458,13 @@
       "subtitle": "Pollster",
       "key": "Targoz Market Research",
       "terms": "Targoz Market Research"
+    },
+    {
+      "type": "pollster",
+      "label": "The Alabama Poll",
+      "subtitle": "Pollster",
+      "key": "The Alabama Poll",
+      "terms": "The Alabama Poll"
     },
     {
       "type": "pollster",

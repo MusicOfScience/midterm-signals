@@ -60,7 +60,8 @@ race,AK-SEN,Trafalgar Group,,R,,2026-09-24,,1079,,,45.5,46.8,-1.3,,0.23285
 race,AK-SEN,co/efficient,,R,,2026-09-17,,799,,,46.0,48.0,-2.0,,0.11186
 race,AK-SEN,Alaska Survey Research,,,,2026-09-12,,1352,,,48.4,43.8,4.6,,0.22164
 race,AK-SEN,Fabrizio Ward/Impact Research,,,,2026-09-11,,800,,,46.0,41.0,5.0,,0.16164
-race,AL-SEN,RMG Research,,R,,2026-09-25,,800,,,33.0,54.0,-21.0,,0.51592
+race,AL-SEN,The Alabama Poll,,,,2026-10-16,,600,,,35.0,56.0,-21.0,,0.65706
+race,AL-SEN,RMG Research,,R,,2026-09-25,,800,,,33.0,54.0,-21.0,,0.16839
 race,AR-SEN,Hendrix College,,,,2026-10-13,,709,,,41.0,50.0,-9.0,,0.71425
 race,AR-SEN,GrayHouse,,R,,2026-10-04,,550,,,39.0,50.0,-11.0,,0.26474
 race,FL-SEN,ActiVote,,,,2026-10-15,,400,,,46.9,53.1,-6.2,,0.48931
@@ -133,9 +134,10 @@ race,KS-SEN,co/efficient,,R,,2026-09-10,,915,,,44.0,49.0,-5.0,,0.06659
 race,KS-SEN,co/efficient,,R,,2026-09-10,,915,,,45.0,51.0,-6.0,,0.06659
 race,KY-SEN,Global Strategy Group,,D,,2026-08-27,,600,,,40.0,49.0,-9.0,,0.6496
 race,LA-SEN,Hart Research Associates,,D,,2026-09-19,,500,,,44.0,48.0,-4.0,,0.593
-race,MA-SEN,YouGov,,,,2026-10-12,,800,,,56.0,29.0,27.0,,1.46227
-race,MA-SEN,MassINC Polling Group,,,,2026-09-22,,800,,,54.0,28.0,26.0,,0.26119
-race,MA-SEN,University of New Hampshire,,,,2026-09-21,,556,,,53.0,30.0,23.0,,0.20644
+race,MA-SEN,Suffolk University,,,,2026-10-18,,500,,,60.0,31.8,28.2,,0.59981
+race,MA-SEN,YouGov,,,,2026-10-12,,800,,,56.0,29.0,27.0,,1.06192
+race,MA-SEN,MassINC Polling Group,,,,2026-09-22,,800,,,54.0,28.0,26.0,,0.18968
+race,MA-SEN,University of New Hampshire,,,,2026-09-21,,556,,,53.0,30.0,23.0,,0.14992
 race,ME-SEN,InsiderAdvantage,,R,,2026-10-14,,1200,,,49.0,47.0,2.0,,0.4673
 race,ME-SEN,Suffolk University,,,,2026-10-11,,500,,,49.0,47.0,2.0,,0.51115
 race,ME-SEN,The Washington Post/George Mason University Schar School of Policy and Government,,,,2026-10-05,,800,,,50.0,46.0,4.0,,0.46954
@@ -212,6 +214,9 @@ race,MT-SEN,Quantus Insights,,R,,2026-09-15,,625,,,24.4,45.3,-20.9,,0.07993
 race,MT-SEN,Rutgers-Eagleton,,,,2026-09-07,,845,,,16.0,38.0,-22.0,,0.12064
 race,NC-SEN,SurveyUSA,,,,2026-10-11,,643,,,54.0,40.0,14.0,,1.37671
 race,NC-SEN,Trafalgar Group,,R,,2026-10-10,,1091,,,48.8,40.9,7.9,,0.52098
+race,NC-SEN,YouGov,,,,2026-10-08,,560,,,54.0,43.0,11.0,,1.04258
+race,NC-SEN,YouGov,,,,2026-10-08,,676,,,51.0,42.0,9.0,,1.14548
+race,NC-SEN,YouGov,,,,2026-10-08,,747,,,53.0,38.0,15.0,,1.20413
 race,NC-SEN,Change Research,,D,,2026-10-07,,829,,,50.0,40.0,10.0,,0.57766
 race,NC-SEN,East Carolina University Center for Survey Research,,,,2026-10-03,,810,,,50.0,43.0,7.0,,0.49834
 race,NC-SEN,Big Data Poll,,R,,2026-09-29,,642,,,50.8,38.5,12.3,,0.22231
@@ -242,6 +247,8 @@ race,NH-SEN,co/efficient,,R,,2026-09-11,,958,,,46.0,46.0,0.0,,0.11613
 race,NH-SEN,co/efficient,,R,,2026-09-11,,958,,,46.0,46.0,0.0,,0.11613
 race,NH-SEN,"Fabrizio, Lee & Associates",,R,,2026-08-30,,600,,,36.0,37.0,-1.0,,0.06554
 race,OH-SEN,ActiVote,,,,2026-10-18,,400,,,49.8,50.2,-0.4,,0.48931
+race,OH-SEN,Marist University,,,,2026-10-18,,1176,,,51.0,42.0,9.0,,2.1319
+race,OH-SEN,Marist University,,,,2026-10-18,,1176,,,48.0,44.0,4.0,,2.1319
 race,OH-SEN,Bowling Green State University Democracy and Public Policy Research Network/YouGov,,,,2026-10-09,,1000,,,48.0,42.0,6.0,,0.52496
 race,OH-SEN,co/efficient,,R,,2026-10-06,,925,,,45.0,46.0,-1.0,,0.21637
 race,OH-SEN,co/efficient,,R,,2026-10-06,,925,,,43.0,44.0,-1.0,,0.21637
@@ -262,6 +269,7 @@ race,OH-SEN,InsiderAdvantage,,R,,2026-09-09,,1200,,,47.3,41.9,5.4,,0.05841
 race,OH-SEN,Abacus Data,,,,2026-08-28,,500,,,40.0,33.0,7.0,,0.03954
 race,OH-SEN,Abacus Data,,,,2026-08-28,,306,,,46.0,41.0,5.0,,0.03093
 race,RI-SEN,Emerson College,,,,2026-10-11,,800,,,59.1,25.4,33.7,,1.60943
+race,RI-SEN,Embold Research,,,,2026-10-08,,815,,,55.0,32.0,23.0,,0.65259
 race,RI-SEN,University of New Hampshire,,,,2026-09-21,,595,,,53.0,33.0,20.0,,0.22525
 race,SC-SEN,Trafalgar Group,,R,,2026-10-18,,1095,,,45.6,48.6,-3.0,,0.55052
 race,SC-SEN,InsiderAdvantage,,R,,2026-09-29,,1200,,,45.0,46.0,-1.0,,0.16968
@@ -310,7 +318,8 @@ race,CA-48,SurveyUSA,,,,2026-09-01,,522,,,45.0,42.0,3.0,,0.18195
 race,CO-04,Impact Research,,D,,2026-09-24,,403,,,40.0,45.0,-5.0,,0.53238
 race,CO-08,McLaughlin & Associates,,R,,2026-09-17,,400,,,46.6,47.0,-0.4,,0.2698
 race,CO-08,McLaughlin & Associates,,R,,2026-09-17,,400,,,46.3,48.0,-1.7,,0.2698
-race,FL-09,SEA Polling,,D,,2026-08-30,,400,,,41.0,41.0,0.0,,0.36481
+race,FL-09,SEA Polling,,D,,2026-10-15,,,,,44.0,44.0,0.0,,0.28841
+race,FL-09,SEA Polling,,D,,2026-08-30,,400,,,41.0,41.0,0.0,,0.0314
 race,FL-13,Hart Research Associates,,D,,2026-08-27,,,,,49.0,44.0,5.0,,0.41931
 race,FL-13,Hart Research Associates,,D,,2026-08-27,,,,,44.0,43.0,1.0,,0.41931
 race,FL-13,Hart Research Associates,,D,,2026-08-27,,,,,51.0,46.0,5.0,,0.41931
@@ -392,7 +401,9 @@ race,PA-07,Franklin & Marshall College,,,,2026-09-20,,350,,,45.0,40.0,5.0,,0.501
 race,PA-10,"Susquehanna Polling & Research, Inc.",,,,2026-10-11,,300,,,49.0,46.0,3.0,,0.46461
 race,PA-10,Franklin & Marshall College,,,,2026-09-20,,378,,,47.0,44.0,3.0,,0.17021
 race,RI-01,Emerson College,,,,2026-10-11,,394,,,53.9,25.9,28.1,,1.12947
+race,RI-01,Embold Research,,,,2026-10-08,,,,,52.0,33.0,19.0,,0.36144
 race,RI-02,Emerson College,,,,2026-10-11,,406,,,55.2,39.1,16.1,,1.14654
+race,RI-02,Embold Research,,,,2026-10-08,,,,,52.0,39.0,13.0,,0.36144
 race,SC-01,co/efficient,,R,,2026-10-01,,837,,,41.0,53.0,-12.0,,0.39027
 race,SC-01,co/efficient,,R,,2026-10-01,,837,,,40.0,46.0,-6.0,,0.39027
 race,SC-01,Public Policy Polling,,D,,2026-09-10,,536,,,42.0,48.0,-6.0,,0.20039

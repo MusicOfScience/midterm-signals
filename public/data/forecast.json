@@ -2,17 +2,17 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-10-20T04:49:26.228335Z",
-  "data_refreshed_at": "2026-10-20T04:49:26.228335Z",
+  "generated_at": "2026-10-20T17:04:40.954313Z",
+  "data_refreshed_at": "2026-10-20T17:04:40.954313Z",
   "election_date": "2026-11-03",
   "days_to_election": 14,
   "summary": {
     "house": {
-      "dem_control_probability": 0.9312,
+      "dem_control_probability": 0.9314,
       "expected_dem_seats": 236.3,
       "expected_rep_seats": 198.7,
       "median_dem_seats": 235,
-      "modal_dem_seats": 233,
+      "modal_dem_seats": 234,
       "dem_seats_50_interval": [
         227,
         245
@@ -44,11 +44,11 @@
         },
         {
           "seats": 198,
-          "probability": 0.0001
+          "probability": 0.000133
         },
         {
           "seats": 199,
-          "probability": 0.0003
+          "probability": 0.000267
         },
         {
           "seats": 200,
@@ -72,19 +72,19 @@
         },
         {
           "seats": 205,
-          "probability": 0.0009
+          "probability": 0.000867
         },
         {
           "seats": 206,
-          "probability": 0.0014
+          "probability": 0.001467
         },
         {
           "seats": 207,
-          "probability": 0.0013
+          "probability": 0.001267
         },
         {
           "seats": 208,
-          "probability": 0.0025
+          "probability": 0.002467
         },
         {
           "seats": 209,
@@ -92,15 +92,15 @@
         },
         {
           "seats": 210,
-          "probability": 0.0037
+          "probability": 0.003767
         },
         {
           "seats": 211,
-          "probability": 0.004
+          "probability": 0.0039
         },
         {
           "seats": 212,
-          "probability": 0.0059
+          "probability": 0.005933
         },
         {
           "seats": 213,
@@ -108,35 +108,35 @@
         },
         {
           "seats": 214,
-          "probability": 0.0073
+          "probability": 0.0072
         },
         {
           "seats": 215,
-          "probability": 0.0074
+          "probability": 0.007467
         },
         {
           "seats": 216,
-          "probability": 0.010933
+          "probability": 0.010867
         },
         {
           "seats": 217,
-          "probability": 0.012267
+          "probability": 0.012167
         },
         {
           "seats": 218,
-          "probability": 0.0113
+          "probability": 0.011433
         },
         {
           "seats": 219,
-          "probability": 0.0135
+          "probability": 0.013267
         },
         {
           "seats": 220,
-          "probability": 0.015133
+          "probability": 0.0152
         },
         {
           "seats": 221,
-          "probability": 0.018267
+          "probability": 0.0181
         },
         {
           "seats": 222,
@@ -144,7 +144,7 @@
         },
         {
           "seats": 223,
-          "probability": 0.020633
+          "probability": 0.020333
         },
         {
           "seats": 224,
@@ -152,155 +152,155 @@
         },
         {
           "seats": 225,
-          "probability": 0.0241
+          "probability": 0.024233
         },
         {
           "seats": 226,
-          "probability": 0.025133
+          "probability": 0.024933
         },
         {
           "seats": 227,
-          "probability": 0.027733
-        },
-        {
-          "seats": 228,
           "probability": 0.027167
         },
         {
+          "seats": 228,
+          "probability": 0.0275
+        },
+        {
           "seats": 229,
-          "probability": 0.027767
+          "probability": 0.0278
         },
         {
           "seats": 230,
-          "probability": 0.0297
+          "probability": 0.029367
         },
         {
           "seats": 231,
-          "probability": 0.028333
+          "probability": 0.028367
         },
         {
           "seats": 232,
-          "probability": 0.0303
+          "probability": 0.030367
         },
         {
           "seats": 233,
-          "probability": 0.0318
+          "probability": 0.031267
         },
         {
           "seats": 234,
-          "probability": 0.031433
+          "probability": 0.0318
         },
         {
           "seats": 235,
-          "probability": 0.0299
+          "probability": 0.029667
         },
         {
           "seats": 236,
-          "probability": 0.029767
+          "probability": 0.0299
         },
         {
           "seats": 237,
-          "probability": 0.029067
+          "probability": 0.029367
         },
         {
           "seats": 238,
-          "probability": 0.0266
+          "probability": 0.0262
         },
         {
           "seats": 239,
-          "probability": 0.027467
+          "probability": 0.027367
         },
         {
           "seats": 240,
-          "probability": 0.0277
+          "probability": 0.027333
         },
         {
           "seats": 241,
-          "probability": 0.026267
+          "probability": 0.026467
         },
         {
           "seats": 242,
-          "probability": 0.026067
+          "probability": 0.0267
         },
         {
           "seats": 243,
-          "probability": 0.0255
+          "probability": 0.025467
         },
         {
           "seats": 244,
-          "probability": 0.022867
+          "probability": 0.022633
         },
         {
           "seats": 245,
-          "probability": 0.0216
+          "probability": 0.021667
         },
         {
           "seats": 246,
-          "probability": 0.0191
+          "probability": 0.019267
         },
         {
           "seats": 247,
-          "probability": 0.019767
+          "probability": 0.019733
         },
         {
           "seats": 248,
-          "probability": 0.017
-        },
-        {
-          "seats": 249,
           "probability": 0.017133
         },
         {
+          "seats": 249,
+          "probability": 0.017333
+        },
+        {
           "seats": 250,
-          "probability": 0.0165
+          "probability": 0.0162
         },
         {
           "seats": 251,
-          "probability": 0.014367
+          "probability": 0.0145
         },
         {
           "seats": 252,
-          "probability": 0.012333
+          "probability": 0.012533
         },
         {
           "seats": 253,
-          "probability": 0.012433
+          "probability": 0.012567
         },
         {
           "seats": 254,
-          "probability": 0.010267
+          "probability": 0.010467
         },
         {
           "seats": 255,
-          "probability": 0.009967
+          "probability": 0.0098
         },
         {
           "seats": 256,
-          "probability": 0.010067
+          "probability": 0.0101
         },
         {
           "seats": 257,
-          "probability": 0.008267
+          "probability": 0.0084
         },
         {
           "seats": 258,
-          "probability": 0.007667
+          "probability": 0.0077
         },
         {
           "seats": 259,
-          "probability": 0.007033
+          "probability": 0.0073
         },
         {
           "seats": 260,
-          "probability": 0.0064
+          "probability": 0.006067
         },
         {
           "seats": 261,
-          "probability": 0.0058
+          "probability": 0.006
         },
         {
           "seats": 262,
-          "probability": 0.004833
+          "probability": 0.005067
         },
         {
           "seats": 263,
@@ -308,31 +308,31 @@
         },
         {
           "seats": 264,
-          "probability": 0.004333
+          "probability": 0.004233
         },
         {
           "seats": 265,
-          "probability": 0.004
+          "probability": 0.0038
         },
         {
           "seats": 266,
-          "probability": 0.002667
+          "probability": 0.003
         },
         {
           "seats": 267,
-          "probability": 0.002467
+          "probability": 0.0025
         },
         {
           "seats": 268,
-          "probability": 0.0026
+          "probability": 0.002533
         },
         {
           "seats": 269,
-          "probability": 0.001833
+          "probability": 0.001867
         },
         {
           "seats": 270,
-          "probability": 0.002
+          "probability": 0.002033
         },
         {
           "seats": 271,
@@ -344,23 +344,23 @@
         },
         {
           "seats": 273,
-          "probability": 0.001033
+          "probability": 0.001067
         },
         {
           "seats": 274,
-          "probability": 0.0007
-        },
-        {
-          "seats": 275,
           "probability": 0.000767
         },
         {
+          "seats": 275,
+          "probability": 0.0008
+        },
+        {
           "seats": 276,
-          "probability": 0.000667
+          "probability": 0.000633
         },
         {
           "seats": 277,
-          "probability": 0.0004
+          "probability": 0.000433
         },
         {
           "seats": 278,
@@ -368,7 +368,7 @@
         },
         {
           "seats": 279,
-          "probability": 0.000667
+          "probability": 0.000633
         },
         {
           "seats": 280,
@@ -380,11 +380,11 @@
         },
         {
           "seats": 282,
-          "probability": 0.000167
+          "probability": 0.0002
         },
         {
           "seats": 283,
-          "probability": 0.0001
+          "probability": 6.7e-05
         },
         {
           "seats": 284,
@@ -392,11 +392,11 @@
         },
         {
           "seats": 285,
-          "probability": 0.000233
+          "probability": 0.000267
         },
         {
           "seats": 286,
-          "probability": 0.0002
+          "probability": 0.000167
         },
         {
           "seats": 287,
@@ -404,7 +404,7 @@
         },
         {
           "seats": 288,
-          "probability": 3.3e-05
+          "probability": 6.7e-05
         },
         {
           "seats": 289,
@@ -416,23 +416,19 @@
         },
         {
           "seats": 292,
-          "probability": 6.7e-05
+          "probability": 3.3e-05
         },
         {
           "seats": 293,
-          "probability": 3.3e-05
+          "probability": 6.7e-05
         },
         {
           "seats": 294,
           "probability": 0.0001
         },
         {
-          "seats": 297,
-          "probability": 3.3e-05
-        },
-        {
           "seats": 298,
-          "probability": 6.7e-05
+          "probability": 0.0001
         },
         {
           "seats": 302,
@@ -449,11 +445,11 @@
       ],
       "simulations": 30000,
       "control_threshold_dem": 218,
-      "rep_control_probability": 0.0688,
+      "rep_control_probability": 0.0686,
       "net_change_dem": 20.3
     },
     "senate": {
-      "dem_control_probability": 0.6845,
+      "dem_control_probability": 0.6962,
       "expected_dem_seats": 51.5,
       "expected_rep_seats": 48.5,
       "median_dem_seats": 52,
@@ -481,59 +477,59 @@
         },
         {
           "seats": 44,
-          "probability": 0.0008
+          "probability": 0.000667
         },
         {
           "seats": 45,
-          "probability": 0.003533
+          "probability": 0.003367
         },
         {
           "seats": 46,
-          "probability": 0.009667
+          "probability": 0.008967
         },
         {
           "seats": 47,
-          "probability": 0.026167
+          "probability": 0.024367
         },
         {
           "seats": 48,
-          "probability": 0.0534
+          "probability": 0.0511
         },
         {
           "seats": 49,
-          "probability": 0.087733
+          "probability": 0.0839
         },
         {
           "seats": 50,
-          "probability": 0.134033
+          "probability": 0.1313
         },
         {
           "seats": 51,
-          "probability": 0.169167
+          "probability": 0.170033
         },
         {
           "seats": 52,
-          "probability": 0.1836
+          "probability": 0.183867
         },
         {
           "seats": 53,
-          "probability": 0.160067
+          "probability": 0.165067
         },
         {
           "seats": 54,
-          "probability": 0.107933
+          "probability": 0.111
         },
         {
           "seats": 55,
-          "probability": 0.047633
+          "probability": 0.0496
         },
         {
           "seats": 56,
-          "probability": 0.013733
+          "probability": 0.014167
         },
         {
           "seats": 57,
-          "probability": 0.002133
+          "probability": 0.0022
         },
         {
           "seats": 58,
@@ -542,24 +538,24 @@
       ],
       "simulations": 30000,
       "control_threshold_dem": 51,
-      "rep_control_probability": 0.3155,
+      "rep_control_probability": 0.3038,
       "net_change_dem": 4.5,
       "fixed_not_up_dem_seats": 34
     },
     "joint_control": {
-      "dem_house_dem_senate": 0.6363,
-      "dem_house_rep_senate": 0.2949,
-      "rep_house_dem_senate": 0.0482,
-      "rep_house_rep_senate": 0.0206
+      "dem_house_dem_senate": 0.6475,
+      "dem_house_rep_senate": 0.284,
+      "rep_house_dem_senate": 0.0487,
+      "rep_house_rep_senate": 0.0199
     }
   },
   "nowcast": {
     "house": {
-      "dem_control_probability": 0.9312,
+      "dem_control_probability": 0.9314,
       "expected_dem_seats": 236.3,
       "expected_rep_seats": 198.7,
       "median_dem_seats": 235,
-      "modal_dem_seats": 233,
+      "modal_dem_seats": 234,
       "dem_seats_50_interval": [
         227,
         245
@@ -591,11 +587,11 @@
         },
         {
           "seats": 198,
-          "probability": 0.0001
+          "probability": 0.000133
         },
         {
           "seats": 199,
-          "probability": 0.0003
+          "probability": 0.000267
         },
         {
           "seats": 200,
@@ -619,19 +615,19 @@
         },
         {
           "seats": 205,
-          "probability": 0.0009
+          "probability": 0.000867
         },
         {
           "seats": 206,
-          "probability": 0.0014
+          "probability": 0.001467
         },
         {
           "seats": 207,
-          "probability": 0.0013
+          "probability": 0.001267
         },
         {
           "seats": 208,
-          "probability": 0.0025
+          "probability": 0.002467
         },
         {
           "seats": 209,
@@ -639,15 +635,15 @@
         },
         {
           "seats": 210,
-          "probability": 0.0037
+          "probability": 0.003767
         },
         {
           "seats": 211,
-          "probability": 0.004
+          "probability": 0.0039
         },
         {
           "seats": 212,
-          "probability": 0.0059
+          "probability": 0.005933
         },
         {
           "seats": 213,
@@ -655,35 +651,35 @@
         },
         {
           "seats": 214,
-          "probability": 0.0073
+          "probability": 0.0072
         },
         {
           "seats": 215,
-          "probability": 0.0074
+          "probability": 0.007467
         },
         {
           "seats": 216,
-          "probability": 0.010933
+          "probability": 0.010867
         },
         {
           "seats": 217,
-          "probability": 0.012267
+          "probability": 0.012167
         },
         {
           "seats": 218,
-          "probability": 0.0113
+          "probability": 0.011433
         },
         {
           "seats": 219,
-          "probability": 0.0135
+          "probability": 0.013267
         },
         {
           "seats": 220,
-          "probability": 0.015133
+          "probability": 0.0152
         },
         {
           "seats": 221,
-          "probability": 0.018267
+          "probability": 0.0181
         },
         {
           "seats": 222,
@@ -691,7 +687,7 @@
         },
         {
           "seats": 223,
-          "probability": 0.020633
+          "probability": 0.020333
         },
         {
           "seats": 224,
@@ -699,155 +695,155 @@
         },
         {
           "seats": 225,
-          "probability": 0.0241
+          "probability": 0.024233
         },
         {
           "seats": 226,
-          "probability": 0.025133
+          "probability": 0.024933
         },
         {
           "seats": 227,
-          "probability": 0.027733
-        },
-        {
-          "seats": 228,
           "probability": 0.027167
         },
         {
+          "seats": 228,
+          "probability": 0.0275
+        },
+        {
           "seats": 229,
-          "probability": 0.027767
+          "probability": 0.0278
         },
         {
           "seats": 230,
-          "probability": 0.0297
+          "probability": 0.029367
         },
         {
           "seats": 231,
-          "probability": 0.028333
+          "probability": 0.028367
         },
         {
           "seats": 232,
-          "probability": 0.0303
+          "probability": 0.030367
         },
         {
           "seats": 233,
-          "probability": 0.0318
+          "probability": 0.031267
         },
         {
           "seats": 234,
-          "probability": 0.031433
+          "probability": 0.0318
         },
         {
           "seats": 235,
-          "probability": 0.0299
+          "probability": 0.029667
         },
         {
           "seats": 236,
-          "probability": 0.029767
+          "probability": 0.0299
         },
         {
           "seats": 237,
-          "probability": 0.029067
+          "probability": 0.029367
         },
         {
           "seats": 238,
-          "probability": 0.0266
+          "probability": 0.0262
         },
         {
           "seats": 239,
-          "probability": 0.027467
+          "probability": 0.027367
         },
         {
           "seats": 240,
-          "probability": 0.0277
+          "probability": 0.027333
         },
         {
           "seats": 241,
-          "probability": 0.026267
+          "probability": 0.026467
         },
         {
           "seats": 242,
-          "probability": 0.026067
+          "probability": 0.0267
         },
         {
           "seats": 243,
-          "probability": 0.0255
+          "probability": 0.025467
         },
         {
           "seats": 244,
-          "probability": 0.022867
+          "probability": 0.022633
         },
         {
           "seats": 245,
-          "probability": 0.0216
+          "probability": 0.021667
         },
         {
           "seats": 246,
-          "probability": 0.0191
+          "probability": 0.019267
         },
         {
           "seats": 247,
-          "probability": 0.019767
+          "probability": 0.019733
         },
         {
           "seats": 248,
-          "probability": 0.017
-        },
-        {
-          "seats": 249,
           "probability": 0.017133
         },
         {
+          "seats": 249,
+          "probability": 0.017333
+        },
+        {
           "seats": 250,
-          "probability": 0.0165
+          "probability": 0.0162
         },
         {
           "seats": 251,
-          "probability": 0.014367
+          "probability": 0.0145
         },
         {
           "seats": 252,
-          "probability": 0.012333
+          "probability": 0.012533
         },
         {
           "seats": 253,
-          "probability": 0.012433
+          "probability": 0.012567
         },
         {
           "seats": 254,
-          "probability": 0.010267
+          "probability": 0.010467
         },
         {
           "seats": 255,
-          "probability": 0.009967
+          "probability": 0.0098
         },
         {
           "seats": 256,
-          "probability": 0.010067
+          "probability": 0.0101
         },
         {
           "seats": 257,
-          "probability": 0.008267
+          "probability": 0.0084
         },
         {
           "seats": 258,
-          "probability": 0.007667
+          "probability": 0.0077
         },
         {
           "seats": 259,
-          "probability": 0.007033
+          "probability": 0.0073
         },
         {
           "seats": 260,
-          "probability": 0.0064
+          "probability": 0.006067
         },
         {
           "seats": 261,
-          "probability": 0.0058
+          "probability": 0.006
         },
         {
           "seats": 262,
-          "probability": 0.004833
+          "probability": 0.005067
         },
         {
           "seats": 263,
@@ -855,31 +851,31 @@
         },
         {
           "seats": 264,
-          "probability": 0.004333
+          "probability": 0.004233
         },
         {
           "seats": 265,
-          "probability": 0.004
+          "probability": 0.0038
         },
         {
           "seats": 266,
-          "probability": 0.002667
+          "probability": 0.003
         },
         {
           "seats": 267,
-          "probability": 0.002467
+          "probability": 0.0025
         },
         {
           "seats": 268,
-          "probability": 0.0026
+          "probability": 0.002533
         },
         {
           "seats": 269,
-          "probability": 0.001833
+          "probability": 0.001867
         },
         {
           "seats": 270,
-          "probability": 0.002
+          "probability": 0.002033
         },
         {
           "seats": 271,
@@ -891,23 +887,23 @@
         },
         {
           "seats": 273,
-          "probability": 0.001033
+          "probability": 0.001067
         },
         {
           "seats": 274,
-          "probability": 0.0007
-        },
-        {
-          "seats": 275,
           "probability": 0.000767
         },
         {
+          "seats": 275,
+          "probability": 0.0008
+        },
+        {
           "seats": 276,
-          "probability": 0.000667
+          "probability": 0.000633
         },
         {
           "seats": 277,
-          "probability": 0.0004
+          "probability": 0.000433
         },
         {
           "seats": 278,
@@ -915,7 +911,7 @@
         },
         {
           "seats": 279,
-          "probability": 0.000667
+          "probability": 0.000633
         },
         {
           "seats": 280,
@@ -927,11 +923,11 @@
         },
         {
           "seats": 282,
-          "probability": 0.000167
+          "probability": 0.0002
         },
         {
           "seats": 283,
-          "probability": 0.0001
+          "probability": 6.7e-05
         },
         {
           "seats": 284,
@@ -939,11 +935,11 @@
         },
         {
           "seats": 285,
-          "probability": 0.000233
+          "probability": 0.000267
         },
         {
           "seats": 286,
-          "probability": 0.0002
+          "probability": 0.000167
         },
         {
           "seats": 287,
@@ -951,7 +947,7 @@
         },
         {
           "seats": 288,
-          "probability": 3.3e-05
+          "probability": 6.7e-05
         },
         {
           "seats": 289,
@@ -963,23 +959,19 @@
         },
         {
           "seats": 292,
-          "probability": 6.7e-05
+          "probability": 3.3e-05
         },
         {
           "seats": 293,
-          "probability": 3.3e-05
+          "probability": 6.7e-05
         },
         {
           "seats": 294,
           "probability": 0.0001
         },
         {
-          "seats": 297,
-          "probability": 3.3e-05
-        },
-        {
           "seats": 298,
-          "probability": 6.7e-05
+          "probability": 0.0001
         },
         {
           "seats": 302,
@@ -996,11 +988,11 @@
       ],
       "simulations": 30000,
       "control_threshold_dem": 218,
-      "rep_control_probability": 0.0688,
+      "rep_control_probability": 0.0686,
       "net_change_dem": 20.3
     },
     "senate": {
-      "dem_control_probability": 0.6845,
+      "dem_control_probability": 0.6962,
       "expected_dem_seats": 51.5,
       "expected_rep_seats": 48.5,
       "median_dem_seats": 52,
@@ -1028,59 +1020,59 @@
         },
         {
           "seats": 44,
-          "probability": 0.0008
+          "probability": 0.000667
         },
         {
           "seats": 45,
-          "probability": 0.003533
+          "probability": 0.003367
         },
         {
           "seats": 46,
-          "probability": 0.009667
+          "probability": 0.008967
         },
         {
           "seats": 47,
-          "probability": 0.026167
+          "probability": 0.024367
         },
         {
           "seats": 48,
-          "probability": 0.0534
+          "probability": 0.0511
         },
         {
           "seats": 49,
-          "probability": 0.087733
+          "probability": 0.0839
         },
         {
           "seats": 50,
-          "probability": 0.134033
+          "probability": 0.1313
         },
         {
           "seats": 51,
-          "probability": 0.169167
+          "probability": 0.170033
         },
         {
           "seats": 52,
-          "probability": 0.1836
+          "probability": 0.183867
         },
         {
           "seats": 53,
-          "probability": 0.160067
+          "probability": 0.165067
         },
         {
           "seats": 54,
-          "probability": 0.107933
+          "probability": 0.111
         },
         {
           "seats": 55,
-          "probability": 0.047633
+          "probability": 0.0496
         },
         {
           "seats": 56,
-          "probability": 0.013733
+          "probability": 0.014167
         },
         {
           "seats": 57,
-          "probability": 0.002133
+          "probability": 0.0022
         },
         {
           "seats": 58,
@@ -1089,18 +1081,18 @@
       ],
       "simulations": 30000,
       "control_threshold_dem": 51,
-      "rep_control_probability": 0.3155,
+      "rep_control_probability": 0.3038,
       "net_change_dem": 4.5,
       "fixed_not_up_dem_seats": 34
     }
   },
   "election_day_forecast": {
     "house": {
-      "dem_control_probability": 0.9312,
+      "dem_control_probability": 0.9314,
       "expected_dem_seats": 236.3,
       "expected_rep_seats": 198.7,
       "median_dem_seats": 235,
-      "modal_dem_seats": 233,
+      "modal_dem_seats": 234,
       "dem_seats_50_interval": [
         227,
         245
@@ -1132,11 +1124,11 @@
         },
         {
           "seats": 198,
-          "probability": 0.0001
+          "probability": 0.000133
         },
         {
           "seats": 199,
-          "probability": 0.0003
+          "probability": 0.000267
         },
         {
           "seats": 200,
@@ -1160,19 +1152,19 @@
         },
         {
           "seats": 205,
-          "probability": 0.0009
+          "probability": 0.000867
         },
         {
           "seats": 206,
-          "probability": 0.0014
+          "probability": 0.001467
         },
         {
           "seats": 207,
-          "probability": 0.0013
+          "probability": 0.001267
         },
         {
           "seats": 208,
-          "probability": 0.0025
+          "probability": 0.002467
         },
         {
           "seats": 209,
@@ -1180,15 +1172,15 @@
         },
         {
           "seats": 210,
-          "probability": 0.0037
+          "probability": 0.003767
         },
         {
           "seats": 211,
-          "probability": 0.004
+          "probability": 0.0039
         },
         {
           "seats": 212,
-          "probability": 0.0059
+          "probability": 0.005933
         },
         {
           "seats": 213,
@@ -1196,35 +1188,35 @@
         },
         {
           "seats": 214,
-          "probability": 0.0073
+          "probability": 0.0072
         },
         {
           "seats": 215,
-          "probability": 0.0074
+          "probability": 0.007467
         },
         {
           "seats": 216,
-          "probability": 0.010933
+          "probability": 0.010867
         },
         {
           "seats": 217,
-          "probability": 0.012267
+          "probability": 0.012167
         },
         {
           "seats": 218,
-          "probability": 0.0113
+          "probability": 0.011433
         },
         {
           "seats": 219,
-          "probability": 0.0135
+          "probability": 0.013267
         },
         {
           "seats": 220,
-          "probability": 0.015133
+          "probability": 0.0152
         },
         {
           "seats": 221,
-          "probability": 0.018267
+          "probability": 0.0181
         },
         {
           "seats": 222,
@@ -1232,7 +1224,7 @@
         },
         {
           "seats": 223,
-          "probability": 0.020633
+          "probability": 0.020333
         },
         {
           "seats": 224,
@@ -1240,155 +1232,155 @@
         },
         {
           "seats": 225,
-          "probability": 0.0241
+          "probability": 0.024233
         },
         {
           "seats": 226,
-          "probability": 0.025133
+          "probability": 0.024933
         },
         {
           "seats": 227,
-          "probability": 0.027733
-        },
-        {
-          "seats": 228,
           "probability": 0.027167
         },
         {
+          "seats": 228,
+          "probability": 0.0275
+        },
+        {
           "seats": 229,
-          "probability": 0.027767
+          "probability": 0.0278
         },
         {
           "seats": 230,
-          "probability": 0.0297
+          "probability": 0.029367
         },
         {
           "seats": 231,
-          "probability": 0.028333
+          "probability": 0.028367
         },
         {
           "seats": 232,
-          "probability": 0.0303
+          "probability": 0.030367
         },
         {
           "seats": 233,
-          "probability": 0.0318
+          "probability": 0.031267
         },
         {
           "seats": 234,
-          "probability": 0.031433
+          "probability": 0.0318
         },
         {
           "seats": 235,
-          "probability": 0.0299
+          "probability": 0.029667
         },
         {
           "seats": 236,
-          "probability": 0.029767
+          "probability": 0.0299
         },
         {
           "seats": 237,
-          "probability": 0.029067
+          "probability": 0.029367
         },
         {
           "seats": 238,
-          "probability": 0.0266
+          "probability": 0.0262
         },
         {
           "seats": 239,
-          "probability": 0.027467
+          "probability": 0.027367
         },
         {
           "seats": 240,
-          "probability": 0.0277
+          "probability": 0.027333
         },
         {
           "seats": 241,
-          "probability": 0.026267
+          "probability": 0.026467
         },
         {
           "seats": 242,
-          "probability": 0.026067
+          "probability": 0.0267
         },
         {
           "seats": 243,
-          "probability": 0.0255
+          "probability": 0.025467
         },
         {
           "seats": 244,
-          "probability": 0.022867
+          "probability": 0.022633
         },
         {
           "seats": 245,
-          "probability": 0.0216
+          "probability": 0.021667
         },
         {
           "seats": 246,
-          "probability": 0.0191
+          "probability": 0.019267
         },
         {
           "seats": 247,
-          "probability": 0.019767
+          "probability": 0.019733
         },
         {
           "seats": 248,
-          "probability": 0.017
-        },
-        {
-          "seats": 249,
           "probability": 0.017133
         },
         {
+          "seats": 249,
+          "probability": 0.017333
+        },
+        {
           "seats": 250,
-          "probability": 0.0165
+          "probability": 0.0162
         },
         {
           "seats": 251,
-          "probability": 0.014367
+          "probability": 0.0145
         },
         {
           "seats": 252,
-          "probability": 0.012333
+          "probability": 0.012533
         },
         {
           "seats": 253,
-          "probability": 0.012433
+          "probability": 0.012567
         },
         {
           "seats": 254,
-          "probability": 0.010267
+          "probability": 0.010467
         },
         {
           "seats": 255,
-          "probability": 0.009967
+          "probability": 0.0098
         },
         {
           "seats": 256,
-          "probability": 0.010067
+          "probability": 0.0101
         },
         {
           "seats": 257,
-          "probability": 0.008267
+          "probability": 0.0084
         },
         {
           "seats": 258,
-          "probability": 0.007667
+          "probability": 0.0077
         },
         {
           "seats": 259,
-          "probability": 0.007033
+          "probability": 0.0073
         },
         {
           "seats": 260,
-          "probability": 0.0064
+          "probability": 0.006067
         },
         {
           "seats": 261,
-          "probability": 0.0058
+          "probability": 0.006
         },
         {
           "seats": 262,
-          "probability": 0.004833
+          "probability": 0.005067
         },
         {
           "seats": 263,
@@ -1396,31 +1388,31 @@
         },
         {
           "seats": 264,
-          "probability": 0.004333
+          "probability": 0.004233
         },
         {
           "seats": 265,
-          "probability": 0.004
+          "probability": 0.0038
         },
         {
           "seats": 266,
-          "probability": 0.002667
+          "probability": 0.003
         },
         {
           "seats": 267,
-          "probability": 0.002467
+          "probability": 0.0025
         },
         {
           "seats": 268,
-          "probability": 0.0026
+          "probability": 0.002533
         },
         {
           "seats": 269,
-          "probability": 0.001833
+          "probability": 0.001867
         },
         {
           "seats": 270,
-          "probability": 0.002
+          "probability": 0.002033
         },
         {
           "seats": 271,
@@ -1432,23 +1424,23 @@
         },
         {
           "seats": 273,
-          "probability": 0.001033
+          "probability": 0.001067
         },
         {
           "seats": 274,
-          "probability": 0.0007
-        },
-        {
-          "seats": 275,
           "probability": 0.000767
         },
         {
+          "seats": 275,
+          "probability": 0.0008
+        },
+        {
           "seats": 276,
-          "probability": 0.000667
+          "probability": 0.000633
         },
         {
           "seats": 277,
-          "probability": 0.0004
+          "probability": 0.000433
         },
         {
           "seats": 278,
@@ -1456,7 +1448,7 @@
         },
         {
           "seats": 279,
-          "probability": 0.000667
+          "probability": 0.000633
         },
         {
           "seats": 280,
@@ -1468,11 +1460,11 @@
         },
         {
           "seats": 282,
-          "probability": 0.000167
+          "probability": 0.0002
         },
         {
           "seats": 283,
-          "probability": 0.0001
+          "probability": 6.7e-05
         },
         {
           "seats": 284,
@@ -1480,11 +1472,11 @@
         },
         {
           "seats": 285,
-          "probability": 0.000233
+          "probability": 0.000267
         },
         {
           "seats": 286,
-          "probability": 0.0002
+          "probability": 0.000167
         },
         {
           "seats": 287,
@@ -1492,7 +1484,7 @@
         },
         {
           "seats": 288,
-          "probability": 3.3e-05
+          "probability": 6.7e-05
         },
         {
           "seats": 289,
@@ -1504,23 +1496,19 @@
         },
         {
           "seats": 292,
-          "probability": 6.7e-05
+          "probability": 3.3e-05
         },
         {
           "seats": 293,
-          "probability": 3.3e-05
+          "probability": 6.7e-05
         },
         {
           "seats": 294,
           "probability": 0.0001
         },
         {
-          "seats": 297,
-          "probability": 3.3e-05
-        },
-        {
           "seats": 298,
-          "probability": 6.7e-05
+          "probability": 0.0001
         },
         {
           "seats": 302,
@@ -1537,11 +1525,11 @@
       ],
       "simulations": 30000,
       "control_threshold_dem": 218,
-      "rep_control_probability": 0.0688,
+      "rep_control_probability": 0.0686,
       "net_change_dem": 20.3
     },
     "senate": {
-      "dem_control_probability": 0.6845,
+      "dem_control_probability": 0.6962,
       "expected_dem_seats": 51.5,
       "expected_rep_seats": 48.5,
       "median_dem_seats": 52,
@@ -1569,59 +1557,59 @@
         },
         {
           "seats": 44,
-          "probability": 0.0008
+          "probability": 0.000667
         },
         {
           "seats": 45,
-          "probability": 0.003533
+          "probability": 0.003367
         },
         {
           "seats": 46,
-          "probability": 0.009667
+          "probability": 0.008967
         },
         {
           "seats": 47,
-          "probability": 0.026167
+          "probability": 0.024367
         },
         {
           "seats": 48,
-          "probability": 0.0534
+          "probability": 0.0511
         },
         {
           "seats": 49,
-          "probability": 0.087733
+          "probability": 0.0839
         },
         {
           "seats": 50,
-          "probability": 0.134033
+          "probability": 0.1313
         },
         {
           "seats": 51,
-          "probability": 0.169167
+          "probability": 0.170033
         },
         {
           "seats": 52,
-          "probability": 0.1836
+          "probability": 0.183867
         },
         {
           "seats": 53,
-          "probability": 0.160067
+          "probability": 0.165067
         },
         {
           "seats": 54,
-          "probability": 0.107933
+          "probability": 0.111
         },
         {
           "seats": 55,
-          "probability": 0.047633
+          "probability": 0.0496
         },
         {
           "seats": 56,
-          "probability": 0.013733
+          "probability": 0.014167
         },
         {
           "seats": 57,
-          "probability": 0.002133
+          "probability": 0.0022
         },
         {
           "seats": 58,
@@ -1630,7 +1618,7 @@
       ],
       "simulations": 30000,
       "control_threshold_dem": 51,
-      "rep_control_probability": 0.3155,
+      "rep_control_probability": 0.3038,
       "net_change_dem": 4.5,
       "fixed_not_up_dem_seats": 34
     }
@@ -3805,8 +3793,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.008,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -3841,8 +3829,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0079,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -3877,8 +3865,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.008,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4014,8 +4002,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0014,
-        "margin": 0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4050,8 +4038,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.008,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4086,8 +4074,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.008,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4143,8 +4131,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0068,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4179,8 +4167,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0079,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4236,8 +4224,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0069,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4313,8 +4301,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0043,
-        "margin": 0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4390,8 +4378,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0061,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4467,8 +4455,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0062,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4503,8 +4491,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0077,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4660,8 +4648,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0026,
-        "margin": 0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4797,8 +4785,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0027,
-        "margin": 0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     }
   ],
@@ -5116,8 +5104,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0039,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5313,8 +5301,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5890,7 +5878,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.001,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -6567,8 +6555,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0029,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -6581,18 +6569,18 @@
       "incumbent_party": "REP",
       "seat_holder": "REP",
       "open_seat": false,
-      "dem_probability": 0.7101,
-      "rep_probability": 0.2899,
-      "forecast_margin_d_minus_r": 2.57,
-      "dem_two_party_vote": 51.3,
-      "rep_two_party_vote": 48.7,
+      "dem_probability": 0.7754,
+      "rep_probability": 0.2246,
+      "forecast_margin_d_minus_r": 3.51,
+      "dem_two_party_vote": 51.8,
+      "rep_two_party_vote": 48.2,
       "rating": "Likely D",
       "relative_partisan_lean_d_minus_r": -10.44,
       "prior_margin": -3.6,
       "model_sigma": 4.644,
-      "poll_average_margin": 3.7,
+      "poll_average_margin": 4.82,
       "poll_weight": 0.845,
-      "poll_count": 20,
+      "poll_count": 22,
       "latest_race_poll": "2026-10-18",
       "polls": [
         {
@@ -6614,6 +6602,46 @@
           "question": null,
           "quality_input": 1.2,
           "model_weight": 0.48931
+        },
+        {
+          "kind": "race",
+          "race_code": "OH-SEN",
+          "pollster": "Marist University",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-18",
+          "publication_date": null,
+          "n": 1176,
+          "population": null,
+          "mode": null,
+          "dem": 51.0,
+          "rep": 42.0,
+          "margin": 9.0,
+          "source": null,
+          "question": null,
+          "quality_input": 2.7,
+          "model_weight": 2.1319
+        },
+        {
+          "kind": "race",
+          "race_code": "OH-SEN",
+          "pollster": "Marist University",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-18",
+          "publication_date": null,
+          "n": 1176,
+          "population": null,
+          "mode": null,
+          "dem": 48.0,
+          "rep": 44.0,
+          "margin": 4.0,
+          "source": null,
+          "question": null,
+          "quality_input": 2.7,
+          "model_weight": 2.1319
         },
         {
           "kind": "race",
@@ -7004,8 +7032,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0034,
-        "margin": -0.04
+        "dem_probability": 0.0653,
+        "margin": 0.94
       }
     },
     {
@@ -7701,8 +7729,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0022,
-        "margin": 0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -8158,8 +8186,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0046,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -8315,7 +8343,7 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0009,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -8632,8 +8660,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0027,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -8969,8 +8997,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0126,
-        "margin": -0.37
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9186,8 +9214,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9243,8 +9271,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0013,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9300,8 +9328,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0009,
-        "margin": 0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9557,8 +9585,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0034,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9614,8 +9642,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0008,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     }
   ],
@@ -9860,8 +9888,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9876,18 +9904,38 @@
       "open_seat": true,
       "dem_probability": 0.001,
       "rep_probability": 0.999,
-      "forecast_margin_d_minus_r": -21.52,
-      "dem_two_party_vote": 39.2,
-      "rep_two_party_vote": 60.8,
+      "forecast_margin_d_minus_r": -21.42,
+      "dem_two_party_vote": 39.3,
+      "rep_two_party_vote": 60.7,
       "rating": "Safe R",
       "relative_partisan_lean_d_minus_r": -29.66,
       "prior_margin": -21.67,
-      "model_sigma": 6.504,
+      "model_sigma": 6.084,
       "poll_average_margin": -21.0,
-      "poll_weight": 0.23,
-      "poll_count": 1,
-      "latest_race_poll": "2026-09-25",
+      "poll_weight": 0.369,
+      "poll_count": 2,
+      "latest_race_poll": "2026-10-16",
       "polls": [
+        {
+          "kind": "race",
+          "race_code": "AL-SEN",
+          "pollster": "The Alabama Poll",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-16",
+          "publication_date": null,
+          "n": 600,
+          "population": null,
+          "mode": null,
+          "dem": 35.0,
+          "rep": 56.0,
+          "margin": -21.0,
+          "source": null,
+          "question": null,
+          "quality_input": 1.3,
+          "model_weight": 0.65706
+        },
         {
           "kind": "race",
           "race_code": "AL-SEN",
@@ -9906,7 +9954,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.51592
+          "model_weight": 0.16839
         }
       ],
       "presidential_margin_2024": -30.88,
@@ -9965,7 +10013,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.09
+        "margin": 0.1
       }
     },
     {
@@ -10089,7 +10137,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.04
+        "margin": 0.0
       }
     },
     {
@@ -10163,16 +10211,16 @@
             "disbursements": 110837.45,
             "cash_on_hand": 27709.93,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-09-30",
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/S6CO00507/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -10255,7 +10303,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -10638,8 +10686,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0126,
-        "margin": -0.37
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -10942,8 +10990,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0034,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11552,7 +11600,7 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.001,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -11602,7 +11650,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -11705,8 +11753,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.11
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -12069,8 +12117,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0039,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -12173,8 +12221,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -12277,8 +12325,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0013,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -12293,18 +12341,38 @@
       "open_seat": false,
       "dem_probability": 0.999,
       "rep_probability": 0.001,
-      "forecast_margin_d_minus_r": 32.36,
-      "dem_two_party_vote": 66.2,
-      "rep_two_party_vote": 33.8,
+      "forecast_margin_d_minus_r": 31.67,
+      "dem_two_party_vote": 65.8,
+      "rep_two_party_vote": 34.2,
       "rating": "Safe D",
       "relative_partisan_lean_d_minus_r": 27.85,
       "prior_margin": 36.99,
-      "model_sigma": 5.874,
-      "poll_average_margin": 26.44,
-      "poll_weight": 0.439,
-      "poll_count": 3,
-      "latest_race_poll": "2026-10-12",
+      "model_sigma": 5.595,
+      "poll_average_margin": 26.97,
+      "poll_weight": 0.531,
+      "poll_count": 4,
+      "latest_race_poll": "2026-10-18",
       "polls": [
+        {
+          "kind": "race",
+          "race_code": "MA-SEN",
+          "pollster": "Suffolk University",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-18",
+          "publication_date": null,
+          "n": 500,
+          "population": null,
+          "mode": null,
+          "dem": 60.0,
+          "rep": 31.8,
+          "margin": 28.2,
+          "source": null,
+          "question": null,
+          "quality_input": 1.3,
+          "model_weight": 0.59981
+        },
         {
           "kind": "race",
           "race_code": "MA-SEN",
@@ -12323,7 +12391,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.3,
-          "model_weight": 1.46227
+          "model_weight": 1.06192
         },
         {
           "kind": "race",
@@ -12343,7 +12411,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.26119
+          "model_weight": 0.18968
         },
         {
           "kind": "race",
@@ -12363,7 +12431,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.20644
+          "model_weight": 0.14992
         }
       ],
       "presidential_margin_2024": 25.91,
@@ -12422,7 +12490,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.57
+        "margin": -0.69
       }
     },
     {
@@ -12925,8 +12993,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0046,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -13669,8 +13737,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0022,
-        "margin": 0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -14033,8 +14101,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0027,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -14137,8 +14205,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0009,
-        "margin": 0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -14322,7 +14390,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.94
+        "margin": 0.0
       }
     },
     {
@@ -14335,18 +14403,18 @@
       "incumbent_party": null,
       "seat_holder": "REP",
       "open_seat": true,
-      "dem_probability": 0.9802,
-      "rep_probability": 0.0198,
-      "forecast_margin_d_minus_r": 9.83,
-      "dem_two_party_vote": 54.9,
-      "rep_two_party_vote": 45.1,
+      "dem_probability": 0.9818,
+      "rep_probability": 0.0182,
+      "forecast_margin_d_minus_r": 10.0,
+      "dem_two_party_vote": 55.0,
+      "rep_two_party_vote": 45.0,
       "rating": "Safe D",
       "relative_partisan_lean_d_minus_r": -2.81,
       "prior_margin": 5.18,
       "model_sigma": 4.778,
-      "poll_average_margin": 10.98,
+      "poll_average_margin": 11.2,
       "poll_weight": 0.801,
-      "poll_count": 21,
+      "poll_count": 24,
       "latest_race_poll": "2026-10-11",
       "polls": [
         {
@@ -14388,6 +14456,66 @@
           "question": null,
           "quality_input": 1.2,
           "model_weight": 0.52098
+        },
+        {
+          "kind": "race",
+          "race_code": "NC-SEN",
+          "pollster": "YouGov",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-08",
+          "publication_date": null,
+          "n": 560,
+          "population": null,
+          "mode": null,
+          "dem": 54.0,
+          "rep": 43.0,
+          "margin": 11.0,
+          "source": null,
+          "question": null,
+          "quality_input": 2.3,
+          "model_weight": 1.04258
+        },
+        {
+          "kind": "race",
+          "race_code": "NC-SEN",
+          "pollster": "YouGov",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-08",
+          "publication_date": null,
+          "n": 676,
+          "population": null,
+          "mode": null,
+          "dem": 51.0,
+          "rep": 42.0,
+          "margin": 9.0,
+          "source": null,
+          "question": null,
+          "quality_input": 2.3,
+          "model_weight": 1.14548
+        },
+        {
+          "kind": "race",
+          "race_code": "NC-SEN",
+          "pollster": "YouGov",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-08",
+          "publication_date": null,
+          "n": 747,
+          "population": null,
+          "mode": null,
+          "dem": 53.0,
+          "rep": 38.0,
+          "margin": 15.0,
+          "source": null,
+          "question": null,
+          "quality_input": 2.3,
+          "model_weight": 1.20413
         },
         {
           "kind": "race",
@@ -14825,8 +14953,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.01
+        "dem_probability": 0.0016,
+        "margin": 0.17
       }
     },
     {
@@ -14915,8 +15043,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0008,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15179,8 +15307,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15262,8 +15390,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15345,8 +15473,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15359,18 +15487,18 @@
       "incumbent_party": "REP",
       "seat_holder": "REP",
       "open_seat": false,
-      "dem_probability": 0.7101,
-      "rep_probability": 0.2899,
-      "forecast_margin_d_minus_r": 2.57,
-      "dem_two_party_vote": 51.3,
-      "rep_two_party_vote": 48.7,
+      "dem_probability": 0.7754,
+      "rep_probability": 0.2246,
+      "forecast_margin_d_minus_r": 3.51,
+      "dem_two_party_vote": 51.8,
+      "rep_two_party_vote": 48.2,
       "rating": "Likely D",
       "relative_partisan_lean_d_minus_r": -10.44,
       "prior_margin": -3.6,
       "model_sigma": 4.644,
-      "poll_average_margin": 3.7,
+      "poll_average_margin": 4.82,
       "poll_weight": 0.845,
-      "poll_count": 20,
+      "poll_count": 22,
       "latest_race_poll": "2026-10-18",
       "polls": [
         {
@@ -15392,6 +15520,46 @@
           "question": null,
           "quality_input": 1.2,
           "model_weight": 0.48931
+        },
+        {
+          "kind": "race",
+          "race_code": "OH-SEN",
+          "pollster": "Marist University",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-18",
+          "publication_date": null,
+          "n": 1176,
+          "population": null,
+          "mode": null,
+          "dem": 51.0,
+          "rep": 42.0,
+          "margin": 9.0,
+          "source": null,
+          "question": null,
+          "quality_input": 2.7,
+          "model_weight": 2.1319
+        },
+        {
+          "kind": "race",
+          "race_code": "OH-SEN",
+          "pollster": "Marist University",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-18",
+          "publication_date": null,
+          "n": 1176,
+          "population": null,
+          "mode": null,
+          "dem": 48.0,
+          "rep": 44.0,
+          "margin": 4.0,
+          "source": null,
+          "question": null,
+          "quality_input": 2.7,
+          "model_weight": 2.1319
         },
         {
           "kind": "race",
@@ -15829,8 +15997,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0034,
-        "margin": -0.04
+        "dem_probability": 0.0653,
+        "margin": 0.94
       }
     },
     {
@@ -15913,7 +16081,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -15996,7 +16164,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -16011,16 +16179,16 @@
       "open_seat": false,
       "dem_probability": 0.999,
       "rep_probability": 0.001,
-      "forecast_margin_d_minus_r": 27.45,
-      "dem_two_party_vote": 63.7,
-      "rep_two_party_vote": 36.3,
+      "forecast_margin_d_minus_r": 26.99,
+      "dem_two_party_vote": 63.5,
+      "rep_two_party_vote": 36.5,
       "rating": "Safe D",
       "relative_partisan_lean_d_minus_r": 15.8,
       "prior_margin": 24.93,
-      "model_sigma": 6.125,
-      "poll_average_margin": 32.02,
-      "poll_weight": 0.356,
-      "poll_count": 2,
+      "model_sigma": 5.883,
+      "poll_average_margin": 29.65,
+      "poll_weight": 0.436,
+      "poll_count": 3,
       "latest_race_poll": "2026-10-11",
       "polls": [
         {
@@ -16042,6 +16210,26 @@
           "question": null,
           "quality_input": 2.5,
           "model_weight": 1.60943
+        },
+        {
+          "kind": "race",
+          "race_code": "RI-SEN",
+          "pollster": "Embold Research",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-08",
+          "publication_date": null,
+          "n": 815,
+          "population": null,
+          "mode": null,
+          "dem": 55.0,
+          "rep": 32.0,
+          "margin": 23.0,
+          "source": null,
+          "question": null,
+          "quality_input": 1.3,
+          "model_weight": 0.65259
         },
         {
           "kind": "race",
@@ -16120,7 +16308,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.06
+        "margin": -0.46
       }
     },
     {
@@ -16323,7 +16511,7 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0009,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -16393,7 +16581,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -16517,7 +16705,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.09
+        "margin": 0.0
       }
     },
     {
@@ -17240,8 +17428,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0029,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17323,8 +17511,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17407,7 +17595,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -17490,7 +17678,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -17558,8 +17746,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0049,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17642,7 +17830,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -17745,8 +17933,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0058,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17829,7 +18017,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -17912,7 +18100,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -17995,7 +18183,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -18051,11 +18239,11 @@
             "party": "D",
             "fec_candidate_id": "H6AL06184",
             "fec_name": "MERCER, MAURICE",
-            "receipts": 6538.96,
-            "disbursements": 4675.66,
-            "cash_on_hand": 1863.3,
-            "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "receipts": 30338.54,
+            "disbursements": 17231.53,
+            "cash_on_hand": 13107.01,
+            "debts_owed_by": 3590.0,
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6AL06184/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -18074,11 +18262,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": true
+        "coverage_mismatch": false
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -18161,7 +18349,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -18244,7 +18432,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -18326,8 +18514,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0032,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18409,8 +18597,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18493,7 +18681,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -18596,8 +18784,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0046,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18679,8 +18867,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0047,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18749,7 +18937,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -18831,8 +19019,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18914,8 +19102,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0014,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18997,8 +19185,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0049,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19081,7 +19269,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -19163,8 +19351,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0028,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19247,7 +19435,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -19330,7 +19518,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -19399,7 +19587,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -19482,7 +19670,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -19633,8 +19821,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.001,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19702,8 +19890,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19855,7 +20043,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -19938,7 +20126,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -20007,7 +20195,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -20227,8 +20415,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20366,7 +20554,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -20435,7 +20623,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -20518,7 +20706,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -20601,7 +20789,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -20684,7 +20872,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -20767,7 +20955,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -20850,7 +21038,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -20932,8 +21120,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0022,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21015,8 +21203,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0016,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21075,7 +21263,7 @@
             "receipts": 1882111.95,
             "disbursements": 1024257.4,
             "cash_on_hand": 3501724.06,
-            "debts_owed_by": 25735.17,
+            "debts_owed_by": 25737.17,
             "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6CA24303/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
@@ -21099,7 +21287,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -21181,8 +21369,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21265,7 +21453,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -21348,7 +21536,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -21431,7 +21619,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -21583,7 +21771,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -21653,20 +21841,20 @@
             "party": "R",
             "fec_candidate_id": "H2CA39151",
             "fec_name": "CHING, ERIC J",
-            "receipts": 96569.8,
-            "disbursements": 122507.96,
-            "cash_on_hand": 14302.41,
+            "receipts": 97169.8,
+            "disbursements": 127035.35,
+            "cash_on_hand": 10375.02,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-09-30",
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H2CA39151/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -21749,7 +21937,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -21832,7 +22020,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -21984,7 +22172,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -22067,7 +22255,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -22205,7 +22393,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -22288,7 +22476,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -22426,7 +22614,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -22509,7 +22697,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -22592,7 +22780,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -22662,20 +22850,20 @@
             "party": "R",
             "fec_candidate_id": "H6CA44210",
             "fec_name": "ANGEL, GENEVIEVE",
-            "receipts": 21722.18,
-            "disbursements": 10632.91,
-            "cash_on_hand": 11089.27,
+            "receipts": 21826.25,
+            "disbursements": 10882.23,
+            "cash_on_hand": 10944.02,
             "debts_owed_by": 3000.0,
-            "coverage_through": "2026-09-30",
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6CA44210/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -22757,8 +22945,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22814,11 +23002,11 @@
             "party": "D",
             "fec_candidate_id": "H6CA46116",
             "fec_name": "CORREA, LOU",
-            "receipts": 1484849.78,
-            "disbursements": 982368.84,
-            "cash_on_hand": 2369843.57,
-            "debts_owed_by": 5000.0,
-            "coverage_through": "2026-09-30",
+            "receipts": 1493328.69,
+            "disbursements": 1037296.17,
+            "cash_on_hand": 2323395.15,
+            "debts_owed_by": 0.0,
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6CA46116/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -22837,11 +23025,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -22924,7 +23112,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -23047,8 +23235,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0008,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23131,7 +23319,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -23214,7 +23402,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -23283,7 +23471,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -23366,7 +23554,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -23449,7 +23637,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -23518,7 +23706,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -23600,8 +23788,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0072,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23704,8 +23892,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0011,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23787,8 +23975,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.007,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23857,7 +24045,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -23940,7 +24128,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -24063,8 +24251,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0051,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24147,7 +24335,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -24229,8 +24417,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24313,7 +24501,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -24396,7 +24584,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -24478,8 +24666,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24562,7 +24750,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -24645,7 +24833,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -24727,8 +24915,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0032,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24810,8 +24998,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0011,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24893,8 +25081,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0066,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24976,8 +25164,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0008,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25060,7 +25248,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -25142,8 +25330,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0071,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25225,8 +25413,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0034,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25239,20 +25427,40 @@
       "incumbent_party": "DEM",
       "seat_holder": "DEM",
       "open_seat": false,
-      "dem_probability": 0.2117,
-      "rep_probability": 0.7883,
-      "forecast_margin_d_minus_r": -4.59,
-      "dem_two_party_vote": 47.7,
-      "rep_two_party_vote": 52.3,
+      "dem_probability": 0.2438,
+      "rep_probability": 0.7562,
+      "forecast_margin_d_minus_r": -3.7,
+      "dem_two_party_vote": 48.2,
+      "rep_two_party_vote": 51.8,
       "rating": "Likely R",
       "relative_partisan_lean_d_minus_r": -14.82,
       "prior_margin": -5.84,
-      "model_sigma": 5.735,
+      "model_sigma": 5.331,
       "poll_average_margin": 0.0,
-      "poll_weight": 0.213,
-      "poll_count": 1,
-      "latest_race_poll": "2026-08-30",
+      "poll_weight": 0.366,
+      "poll_count": 2,
+      "latest_race_poll": "2026-10-15",
       "polls": [
+        {
+          "kind": "race",
+          "race_code": "FL-09",
+          "pollster": "SEA Polling",
+          "sponsor": null,
+          "sponsor_lean": "D",
+          "start_date": null,
+          "end_date": "2026-10-15",
+          "publication_date": null,
+          "n": null,
+          "population": null,
+          "mode": null,
+          "dem": 44.0,
+          "rep": 44.0,
+          "margin": 0.0,
+          "source": null,
+          "question": null,
+          "quality_input": 1.3,
+          "model_weight": 0.28841
+        },
         {
           "kind": "race",
           "race_code": "FL-09",
@@ -25271,7 +25479,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.36481
+          "model_weight": 0.0314
         }
       ],
       "presidential_margin_2024": -17.93,
@@ -25329,8 +25537,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0049,
-        "margin": 0.1
+        "dem_probability": 0.0321,
+        "margin": 0.89
       }
     },
     {
@@ -25399,7 +25607,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -25481,8 +25689,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0047,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25564,8 +25772,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.005,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25708,8 +25916,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0052,
-        "margin": 0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25791,8 +25999,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.008,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25874,8 +26082,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0019,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25998,8 +26206,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0051,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26081,8 +26289,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0009,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26164,8 +26372,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0033,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26248,7 +26456,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -26331,7 +26539,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -26413,8 +26621,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0039,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26537,8 +26745,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0062,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26621,7 +26829,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -26704,7 +26912,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -26786,8 +26994,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0067,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26869,8 +27077,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.005,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26993,8 +27201,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0057,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27076,8 +27284,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.001,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27159,8 +27367,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0039,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27242,8 +27450,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27347,7 +27555,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.07
+        "margin": 0.0
       }
     },
     {
@@ -27416,7 +27624,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -27485,7 +27693,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -27568,7 +27776,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -27691,8 +27899,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0009,
-        "margin": 0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27775,7 +27983,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -27858,7 +28066,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -27940,8 +28148,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0009,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28064,8 +28272,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28147,8 +28355,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0048,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28217,7 +28425,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -28300,7 +28508,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -28369,7 +28577,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -28452,7 +28660,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -28534,8 +28742,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.008,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28617,8 +28825,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0079,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28700,8 +28908,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0068,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28757,9 +28965,9 @@
             "party": "D",
             "fec_candidate_id": "H6IA04217",
             "fec_name": "DAWSON, DAVE",
-            "receipts": 240237.71,
-            "disbursements": 176241.55,
-            "cash_on_hand": 63996.16,
+            "receipts": 245247.71,
+            "disbursements": 176251.55,
+            "cash_on_hand": 68996.16,
             "debts_owed_by": 0.0,
             "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6IA04217/?cycle=2026&election_full=true",
@@ -28784,7 +28992,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -28867,7 +29075,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -28937,20 +29145,20 @@
             "party": "R",
             "fec_candidate_id": "H8ID02064",
             "fec_name": "SIMPSON, MICHAEL",
-            "receipts": 1316625.65,
-            "disbursements": 1137249.39,
-            "cash_on_hand": 284581.98,
+            "receipts": 1409211.99,
+            "disbursements": 1213826.5,
+            "cash_on_hand": 300591.21,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-09-30",
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H8ID02064/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -29033,7 +29241,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -29102,7 +29310,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -29185,7 +29393,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -29254,7 +29462,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -29323,7 +29531,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -29405,8 +29613,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29489,7 +29697,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -29571,8 +29779,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29641,7 +29849,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -29710,7 +29918,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -29793,7 +30001,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -29876,7 +30084,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -29959,7 +30167,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -30041,8 +30249,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30125,7 +30333,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -30181,9 +30389,9 @@
             "party": "D",
             "fec_candidate_id": "H6IL16108",
             "fec_name": "NOLLEY, PAUL",
-            "receipts": 605010.4,
-            "disbursements": 316009.71,
-            "cash_on_hand": 289000.69,
+            "receipts": 603606.19,
+            "disbursements": 315951.86,
+            "cash_on_hand": 287654.33,
             "debts_owed_by": 0.0,
             "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6IL16108/?cycle=2026&election_full=true",
@@ -30207,8 +30415,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30290,8 +30498,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30373,8 +30581,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0015,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30456,8 +30664,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30540,7 +30748,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -30623,7 +30831,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -30705,8 +30913,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0021,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30789,7 +30997,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -30858,7 +31066,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -30941,7 +31149,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -31024,7 +31232,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -31107,7 +31315,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -31189,8 +31397,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0011,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31272,8 +31480,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.001,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31355,8 +31563,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31439,7 +31647,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -31522,7 +31730,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -31605,7 +31813,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -31688,7 +31896,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -31771,7 +31979,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -31954,8 +32162,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0014,
-        "margin": 0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32038,7 +32246,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -32107,7 +32315,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -32190,7 +32398,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -32273,7 +32481,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -32356,7 +32564,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -32426,7 +32634,7 @@
             "party": "R",
             "fec_candidate_id": "H6LA05234",
             "fec_name": "MIGUEZ, BLAKE",
-            "receipts": 7641695.83,
+            "receipts": 7645021.61,
             "disbursements": 5519812.61,
             "cash_on_hand": 2125209.0,
             "debts_owed_by": 2513458.06,
@@ -32439,7 +32647,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -32508,7 +32716,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -32577,7 +32785,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -32660,7 +32868,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -32743,7 +32951,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -32812,7 +33020,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -32895,7 +33103,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -32964,7 +33172,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -33033,7 +33241,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -33116,7 +33324,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -33198,8 +33406,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0021,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33282,7 +33490,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -33365,7 +33573,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -33434,7 +33642,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -33503,7 +33711,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -33585,8 +33793,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33655,7 +33863,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -33738,7 +33946,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -33842,7 +34050,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.11
+        "margin": 0.0
       }
     },
     {
@@ -34025,8 +34233,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0027,
-        "margin": 0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34108,8 +34316,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34192,7 +34400,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -34274,8 +34482,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34378,8 +34586,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0066,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34435,11 +34643,11 @@
             "party": "D",
             "fec_candidate_id": "H6MI05227",
             "fec_name": "VUKASOVICH, CHRISTIAN A",
-            "receipts": 141622.43,
-            "disbursements": 105588.95,
-            "cash_on_hand": 36034.48,
+            "receipts": 151703.92,
+            "disbursements": 112187.98,
+            "cash_on_hand": 39516.94,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-09-30",
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6MI05227/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -34458,11 +34666,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -34531,7 +34739,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -34613,8 +34821,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0051,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34696,8 +34904,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0035,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34780,7 +34988,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -34862,8 +35070,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0073,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34946,7 +35154,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -35029,7 +35237,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -35098,7 +35306,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -35221,8 +35429,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0045,
-        "margin": 0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -35325,8 +35533,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -35395,7 +35603,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -35478,7 +35686,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -35561,7 +35769,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -35643,8 +35851,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.001,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -35727,7 +35935,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -35809,8 +36017,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0044,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -35879,7 +36087,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -36002,8 +36210,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0061,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -36072,7 +36280,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -36155,7 +36363,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -36238,7 +36446,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -36321,7 +36529,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -36377,11 +36585,11 @@
             "party": "D",
             "fec_candidate_id": "H4MO07156",
             "fec_name": "HESKETH, MISSI",
-            "receipts": 50539.85,
-            "disbursements": 22134.4,
-            "cash_on_hand": 33543.24,
+            "receipts": 110697.15,
+            "disbursements": 71556.24,
+            "cash_on_hand": 44260.7,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-07-15",
+            "coverage_through": "2026-10-15",
             "source": "https://www.fec.gov/data/candidate/H4MO07156/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -36404,7 +36612,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -36460,11 +36668,11 @@
             "party": "D",
             "fec_candidate_id": "H6MO08183",
             "fec_name": "REICHARD, CHRISTOPHER",
-            "receipts": 25212.49,
-            "disbursements": 12649.6,
-            "cash_on_hand": 12562.89,
-            "debts_owed_by": 9993.63,
-            "coverage_through": "2026-09-30",
+            "receipts": 27957.64,
+            "disbursements": 21305.88,
+            "cash_on_hand": 6651.76,
+            "debts_owed_by": 7298.91,
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6MO08183/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -36483,11 +36691,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -36570,7 +36778,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -36653,7 +36861,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -36736,7 +36944,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -36819,7 +37027,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -37022,8 +37230,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0041,
-        "margin": 0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37127,7 +37335,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.1
+        "margin": 0.0
       }
     },
     {
@@ -37330,8 +37538,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0026,
-        "margin": 0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37400,7 +37608,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -37482,8 +37690,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0055,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37552,7 +37760,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -37634,8 +37842,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0021,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37717,8 +37925,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0021,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37774,11 +37982,11 @@
             "party": "D",
             "fec_candidate_id": "H6NC07196",
             "fec_name": "HARDY, KIMBERLY DR.",
-            "receipts": 376109.86,
-            "disbursements": 351027.59,
-            "cash_on_hand": 25082.27,
+            "receipts": 390475.48,
+            "disbursements": 370056.76,
+            "cash_on_hand": 20418.72,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-09-30",
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6NC07196/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -37797,11 +38005,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": 0.0048,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37869,8 +38077,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0012,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37973,8 +38181,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0028,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38056,8 +38264,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0019,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38180,8 +38388,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0059,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38264,7 +38472,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -38346,8 +38554,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0023,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38429,8 +38637,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": 0.003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38513,7 +38721,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -38636,8 +38844,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0049,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38740,8 +38948,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0012,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38824,7 +39032,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -38927,8 +39135,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0019,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39031,8 +39239,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39115,7 +39323,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -39197,8 +39405,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0064,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39280,8 +39488,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39364,7 +39572,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -39446,8 +39654,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.001,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39529,8 +39737,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39633,8 +39841,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.004,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39683,7 +39891,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -39765,8 +39973,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0009,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39849,7 +40057,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -39931,8 +40139,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40015,7 +40223,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -40119,7 +40327,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.1
+        "margin": 0.0
       }
     },
     {
@@ -40242,8 +40450,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0026,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40346,8 +40554,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40429,8 +40637,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.001,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40553,8 +40761,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0048,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40622,8 +40830,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0021,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40705,8 +40913,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0009,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40774,8 +40982,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0077,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40857,8 +41065,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0063,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40940,8 +41148,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0032,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41023,8 +41231,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0008,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41093,7 +41301,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -41176,7 +41384,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -41245,7 +41453,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -41314,7 +41522,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -41383,7 +41591,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -41466,7 +41674,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -41548,8 +41756,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0008,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41632,7 +41840,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -41701,7 +41909,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -41784,7 +41992,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -41853,7 +42061,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -41922,7 +42130,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -42019,9 +42227,9 @@
             "party": "D",
             "fec_candidate_id": "H6NY17171",
             "fec_name": "CONLEY, CAIT",
-            "receipts": 9690169.44,
+            "receipts": 9665461.1,
             "disbursements": 8521205.64,
-            "cash_on_hand": 1168963.8,
+            "cash_on_hand": 1144255.46,
             "debts_owed_by": 0.0,
             "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H6NY17171/?cycle=2026&election_full=true",
@@ -42045,8 +42253,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.003,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42169,8 +42377,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42252,8 +42460,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0016,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42336,7 +42544,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -42519,8 +42727,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0012,
-        "margin": 0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42602,8 +42810,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42706,8 +42914,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42789,8 +42997,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42873,7 +43081,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -42942,7 +43150,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -43065,8 +43273,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0045,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43135,7 +43343,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -43204,7 +43412,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -43287,7 +43495,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -43369,8 +43577,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43426,11 +43634,11 @@
             "party": "D",
             "fec_candidate_id": "H6OH06244",
             "fec_name": "KIRTLEY, ELIZABETH ANN MRS.",
-            "receipts": 10494.43,
-            "disbursements": 5671.29,
-            "cash_on_hand": 4823.14,
-            "debts_owed_by": 2322.67,
-            "coverage_through": "2026-09-30",
+            "receipts": 11431.98,
+            "disbursements": 7058.77,
+            "cash_on_hand": 4373.21,
+            "debts_owed_by": 2439.77,
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6OH06244/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -43449,11 +43657,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -43535,8 +43743,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0066,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43618,8 +43826,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43722,8 +43930,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0068,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43805,8 +44013,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.008,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43875,7 +44083,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -43958,7 +44166,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -44040,8 +44248,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0009,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44123,8 +44331,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0011,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44247,8 +44455,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0057,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44304,11 +44512,11 @@
             "party": "D",
             "fec_candidate_id": "H6OK01201",
             "fec_name": "CROISANT, JOHN THOMAS",
-            "receipts": 207748.12,
-            "disbursements": 150609.47,
-            "cash_on_hand": 57138.65,
+            "receipts": 217468.86,
+            "disbursements": 179179.74,
+            "cash_on_hand": 38289.12,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-09-30",
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6OK01201/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -44327,11 +44535,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44387,11 +44595,11 @@
             "party": "D",
             "fec_candidate_id": "H4OK02196",
             "fec_name": "WADE, BRANDON",
-            "receipts": 4290.26,
-            "disbursements": 2002.49,
-            "cash_on_hand": 86.25,
+            "receipts": 7607.79,
+            "disbursements": 3892.99,
+            "cash_on_hand": 1427.03,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-06-30",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H4OK02196/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -44410,11 +44618,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": true
+        "coverage_mismatch": false
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -44497,7 +44705,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -44580,7 +44788,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -44683,8 +44891,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0012,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44767,7 +44975,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -44850,7 +45058,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -44919,7 +45127,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -45002,7 +45210,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -45084,8 +45292,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45155,20 +45363,20 @@
             "party": "R",
             "fec_candidate_id": "H2OR01240",
             "fec_name": "RUSS, DAVID HONORABLE",
-            "receipts": 13040.84,
-            "disbursements": 27289.83,
-            "cash_on_hand": 21.01,
+            "receipts": 13165.84,
+            "disbursements": 27985.74,
+            "cash_on_hand": -549.9,
             "debts_owed_by": 2000.0,
-            "coverage_through": "2026-09-30",
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H2OR01240/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -45291,8 +45499,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0049,
-        "margin": 0.11
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45361,7 +45569,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -45430,7 +45638,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -45513,7 +45721,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -45596,7 +45804,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -45679,7 +45887,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -45782,8 +45990,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0047,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45865,8 +46073,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.008,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45949,7 +46157,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -46072,8 +46280,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0051,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46155,8 +46363,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46239,7 +46447,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -46322,7 +46530,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -46405,7 +46613,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -46488,7 +46696,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -46570,8 +46778,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46653,8 +46861,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46669,16 +46877,16 @@
       "open_seat": false,
       "dem_probability": 0.999,
       "rep_probability": 0.001,
-      "forecast_margin_d_minus_r": 31.98,
-      "dem_two_party_vote": 66.0,
-      "rep_two_party_vote": 34.0,
+      "forecast_margin_d_minus_r": 30.66,
+      "dem_two_party_vote": 65.3,
+      "rep_two_party_vote": 34.7,
       "rating": "Safe D",
       "relative_partisan_lean_d_minus_r": 24.3,
       "prior_margin": 33.29,
-      "model_sigma": 5.635,
-      "poll_average_margin": 28.1,
-      "poll_weight": 0.251,
-      "poll_count": 1,
+      "model_sigma": 5.359,
+      "poll_average_margin": 25.89,
+      "poll_weight": 0.356,
+      "poll_count": 2,
       "latest_race_poll": "2026-10-11",
       "polls": [
         {
@@ -46700,6 +46908,26 @@
           "question": null,
           "quality_input": 2.5,
           "model_weight": 1.12947
+        },
+        {
+          "kind": "race",
+          "race_code": "RI-01",
+          "pollster": "Embold Research",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-08",
+          "publication_date": null,
+          "n": null,
+          "population": null,
+          "mode": null,
+          "dem": 52.0,
+          "rep": 33.0,
+          "margin": 19.0,
+          "source": null,
+          "question": null,
+          "quality_input": 1.3,
+          "model_weight": 0.36144
         }
       ],
       "presidential_margin_2024": 22.62,
@@ -46758,7 +46986,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.1
+        "margin": -1.32
       }
     },
     {
@@ -46771,18 +46999,18 @@
       "incumbent_party": null,
       "seat_holder": "DEM",
       "open_seat": true,
-      "dem_probability": 0.9982,
-      "rep_probability": 0.0018,
-      "forecast_margin_d_minus_r": 16.4,
-      "dem_two_party_vote": 58.2,
-      "rep_two_party_vote": 41.8,
+      "dem_probability": 0.9987,
+      "rep_probability": 0.0013,
+      "forecast_margin_d_minus_r": 16.09,
+      "dem_two_party_vote": 58.0,
+      "rep_two_party_vote": 42.0,
       "rating": "Safe D",
       "relative_partisan_lean_d_minus_r": 8.52,
       "prior_margin": 16.5,
-      "model_sigma": 5.635,
-      "poll_average_margin": 16.1,
-      "poll_weight": 0.251,
-      "poll_count": 1,
+      "model_sigma": 5.359,
+      "poll_average_margin": 15.36,
+      "poll_weight": 0.356,
+      "poll_count": 2,
       "latest_race_poll": "2026-10-11",
       "polls": [
         {
@@ -46804,6 +47032,26 @@
           "question": null,
           "quality_input": 2.5,
           "model_weight": 1.14654
+        },
+        {
+          "kind": "race",
+          "race_code": "RI-02",
+          "pollster": "Embold Research",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-08",
+          "publication_date": null,
+          "n": null,
+          "population": null,
+          "mode": null,
+          "dem": 52.0,
+          "rep": 39.0,
+          "margin": 13.0,
+          "source": null,
+          "question": null,
+          "quality_input": 1.3,
+          "model_weight": 0.36144
         }
       ],
       "presidential_margin_2024": 6.97,
@@ -46861,8 +47109,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.09
+        "dem_probability": 0.0005,
+        "margin": -0.31
       }
     },
     {
@@ -47025,8 +47273,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0034,
-        "margin": 0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47094,8 +47342,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0046,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47151,11 +47399,11 @@
             "party": "D",
             "fec_candidate_id": "H6SC03090",
             "fec_name": "LEHMACHER, EUNICE",
-            "receipts": 92927.9,
-            "disbursements": 43373.98,
-            "cash_on_hand": 49553.92,
+            "receipts": 98662.38,
+            "disbursements": 76686.62,
+            "cash_on_hand": 21975.76,
             "debts_owed_by": 100.0,
-            "coverage_through": "2026-09-30",
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6SC03090/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -47174,11 +47422,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -47260,8 +47508,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47343,8 +47591,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47413,7 +47661,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -47495,8 +47743,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47600,7 +47848,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.09
+        "margin": 0.0
       }
     },
     {
@@ -47683,7 +47931,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -47766,7 +48014,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -47849,7 +48097,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -47931,8 +48179,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48035,8 +48283,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0011,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48118,8 +48366,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48201,8 +48449,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48284,8 +48532,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0011,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48388,8 +48636,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0019,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48472,7 +48720,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -48575,8 +48823,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48658,8 +48906,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48741,8 +48989,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48824,8 +49072,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48907,8 +49155,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48991,7 +49239,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -49073,8 +49321,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49197,8 +49445,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0022,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49301,8 +49549,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0008,
-        "margin": 0.09
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49385,7 +49633,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -49453,8 +49701,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49537,7 +49785,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -49619,8 +49867,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49743,8 +49991,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0043,
-        "margin": 0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49827,7 +50075,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -49909,8 +50157,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49979,7 +50227,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -50062,7 +50310,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -50145,7 +50393,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -50227,8 +50475,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0008,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50310,8 +50558,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0007,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50393,8 +50641,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0058,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50476,8 +50724,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0029,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50559,8 +50807,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50642,8 +50890,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50725,8 +50973,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0008,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50808,8 +51056,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0058,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50892,7 +51140,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -50975,7 +51223,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -51057,8 +51305,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0005,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51140,8 +51388,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0032,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51210,7 +51458,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -51292,8 +51540,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0074,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51396,8 +51644,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0069,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51479,8 +51727,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51549,7 +51797,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -51631,8 +51879,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0009,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51736,7 +51984,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.09
+        "margin": 0.0
       }
     },
     {
@@ -51879,8 +52127,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51984,7 +52232,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.09
+        "margin": 0.0
       }
     },
     {
@@ -52107,8 +52355,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0001,
-        "margin": 0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52231,8 +52479,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0056,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52335,8 +52583,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0039,
-        "margin": 0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52419,7 +52667,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -52502,7 +52750,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -52645,8 +52893,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0043,
-        "margin": 0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52750,7 +52998,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.11
+        "margin": 0.0
       }
     },
     {
@@ -52832,8 +53080,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.001,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52916,7 +53164,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -52999,7 +53247,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -53082,7 +53330,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -53151,7 +53399,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -53295,7 +53543,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.1
+        "margin": 0.0
       }
     },
     {
@@ -53378,7 +53626,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -53461,7 +53709,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -53564,8 +53812,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0057,
-        "margin": 0.11
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53647,8 +53895,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0011,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53730,8 +53978,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0064,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53814,7 +54062,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -53897,7 +54145,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -53979,8 +54227,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0004,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54063,7 +54311,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -54132,7 +54380,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -54275,8 +54523,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0054,
-        "margin": 0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54345,7 +54593,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -54427,8 +54675,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0079,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54497,7 +54745,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     },
     {
@@ -54579,8 +54827,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": 0.0003,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54636,11 +54884,11 @@
             "party": "D",
             "fec_candidate_id": "H6WI06191",
             "fec_name": "SMITH, BRADLEY",
-            "receipts": 295060.11,
-            "disbursements": 150491.8,
-            "cash_on_hand": 144568.31,
+            "receipts": 322260.9,
+            "disbursements": 230957.63,
+            "cash_on_hand": 91303.27,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-09-30",
+            "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6WI06191/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -54659,11 +54907,11 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": 0.0025,
-        "margin": 0.12
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54745,8 +54993,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54828,8 +55076,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0026,
-        "margin": 0.13
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54912,7 +55160,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -54995,7 +55243,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.12
+        "margin": 0.0
       }
     },
     {
@@ -55078,7 +55326,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.13
+        "margin": 0.0
       }
     }
   ],
@@ -55089,7 +55337,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-10-20T04:49:26.228335Z",
+      "last_success": "2026-10-20T17:04:40.954313Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -55122,7 +55370,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-10-20T04:49:33.213217Z",
+      "last_success": "2026-10-20T17:04:50.513248Z",
       "last_observation": "2026-10-15",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -55156,8 +55404,8 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-10-20T04:49:35.795473Z",
-      "last_observation": "2026-10-14",
+      "last_success": "2026-10-20T17:04:53.867431Z",
+      "last_observation": "2026-10-15",
       "note": "Official bulk adapter; 858 candidate summaries matched to production candidates."
     },
     {
@@ -55165,7 +55413,7 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-10-20T04:49:33.213217Z",
+      "last_success": "2026-10-20T17:04:50.513248Z",
       "last_observation": "2026-10-19",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
@@ -55240,7 +55488,7 @@
     "state": "current",
     "source": "Federal Election Commission",
     "mode": "official bulk data",
-    "latest_coverage": "2026-10-14",
+    "latest_coverage": "2026-10-15",
     "records": [
       {
         "race_code": "AK-01",
@@ -55560,7 +55808,7 @@
         "disbursements": 110837.45,
         "cash_on_hand": 27709.93,
         "debts_owed_by": 0.0,
-        "coverage_through": "2026-09-30",
+        "coverage_through": "2026-10-14",
         "source": "https://www.fec.gov/data/candidate/S6CO00507/?cycle=2026&election_full=true",
         "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
       },
@@ -56788,11 +57036,11 @@
         "party": "D",
         "fec_candidate_id": "H6NC07196",
         "fec_name": "HARDY, KIMBERLY DR.",
-        "receipts": 376109.86,
-        "disbursements": 351027.59,
-        "cash_on_hand": 25082.27,
+        "receipts": 390475.48,
+        "disbursements": 370056.76,
+        "cash_on_hand": 20418.72,
         "debts_owed_by": 0.0,
-        "coverage_through": "2026-09-30",
+        "coverage_through": "2026-10-14",
         "source": "https://www.fec.gov/data/candidate/H6NC07196/?cycle=2026&election_full=true",
         "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
       },
@@ -58113,6 +58361,19 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "poll-MA-SEN-Suffolk University-2026-10-18-28.2",
+      "date": "2026-10-18",
+      "category": "POLL",
+      "race_code": "MA-SEN",
+      "geography": "MA-SEN",
+      "description": "Suffolk University race poll recorded at D−R +28.2 for MA-SEN.",
+      "source_name": "Suffolk University",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "poll-OH-SEN-ActiVote-2026-10-18--0.4",
       "date": "2026-10-18",
       "category": "POLL",
@@ -58120,6 +58381,32 @@
       "geography": "OH-SEN",
       "description": "ActiVote race poll recorded at D−R -0.4 for OH-SEN.",
       "source_name": "ActiVote",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-OH-SEN-Marist University-2026-10-18-9.0",
+      "date": "2026-10-18",
+      "category": "POLL",
+      "race_code": "OH-SEN",
+      "geography": "OH-SEN",
+      "description": "Marist University race poll recorded at D−R +9.0 for OH-SEN.",
+      "source_name": "Marist University",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-OH-SEN-Marist University-2026-10-18-4.0",
+      "date": "2026-10-18",
+      "category": "POLL",
+      "race_code": "OH-SEN",
+      "geography": "OH-SEN",
+      "description": "Marist University race poll recorded at D−R +4.0 for OH-SEN.",
+      "source_name": "Marist University",
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",
@@ -58146,6 +58433,19 @@
       "geography": "GA-SEN",
       "description": "Quantus Insights race poll recorded at D−R +7.3 for GA-SEN.",
       "source_name": "Quantus Insights",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-AL-SEN-The Alabama Poll-2026-10-16--21.0",
+      "date": "2026-10-16",
+      "category": "POLL",
+      "race_code": "AL-SEN",
+      "geography": "AL-SEN",
+      "description": "The Alabama Poll race poll recorded at D−R -21.0 for AL-SEN.",
+      "source_name": "The Alabama Poll",
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",
@@ -58503,6 +58803,33 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "poll-FL-09-SEA Polling-2026-10-15-0.0",
+      "date": "2026-10-15",
+      "category": "POLL",
+      "race_code": "FL-09",
+      "geography": "FL-09",
+      "description": "SEA Polling race poll recorded at D−R +0.0 for FL-09.",
+      "source_name": "SEA Polling",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "fec-S6CO00507-2026-10-14",
+      "date": "2026-10-14",
+      "category": "FUNDRAISING",
+      "race_code": "CO-SEN",
+      "geography": "CO-SEN",
+      "description": "FEC summary through 2026-10-14 records $138k receipts, $111k spending and $28k cash on hand for Mark Baisley.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S6CO00507/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "fec-S6MT00253-2026-10-14",
       "date": "2026-10-14",
       "category": "FUNDRAISING",
@@ -58617,6 +58944,20 @@
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "fec-H6NC07196-2026-10-14",
+      "date": "2026-10-14",
+      "category": "FUNDRAISING",
+      "race_code": "NC-07",
+      "geography": "NC-07",
+      "description": "FEC summary through 2026-10-14 records $390k receipts, $370k spending and $20k cash on hand for Kimberly Hardy.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/H6NC07196/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "normal",
       "confidence": "source-recorded"
     },
     {
@@ -59132,6 +59473,58 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "poll-NC-SEN-YouGov-2026-10-08-11.0",
+      "date": "2026-10-08",
+      "category": "POLL",
+      "race_code": "NC-SEN",
+      "geography": "NC-SEN",
+      "description": "YouGov race poll recorded at D−R +11.0 for NC-SEN.",
+      "source_name": "YouGov",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-NC-SEN-YouGov-2026-10-08-9.0",
+      "date": "2026-10-08",
+      "category": "POLL",
+      "race_code": "NC-SEN",
+      "geography": "NC-SEN",
+      "description": "YouGov race poll recorded at D−R +9.0 for NC-SEN.",
+      "source_name": "YouGov",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-NC-SEN-YouGov-2026-10-08-15.0",
+      "date": "2026-10-08",
+      "category": "POLL",
+      "race_code": "NC-SEN",
+      "geography": "NC-SEN",
+      "description": "YouGov race poll recorded at D−R +15.0 for NC-SEN.",
+      "source_name": "YouGov",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-RI-SEN-Embold Research-2026-10-08-23.0",
+      "date": "2026-10-08",
+      "category": "POLL",
+      "race_code": "RI-SEN",
+      "geography": "RI-SEN",
+      "description": "Embold Research race poll recorded at D−R +23.0 for RI-SEN.",
+      "source_name": "Embold Research",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "poll-TX-SEN-ReconMR/Siena Research Institute-2026-10-08-4.0",
       "date": "2026-10-08",
       "category": "POLL",
@@ -59178,6 +59571,32 @@
       "geography": "PA-01",
       "description": "Global Strategy Group race poll recorded at D−R +0.0 for PA-01.",
       "source_name": "Global Strategy Group",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-RI-01-Embold Research-2026-10-08-19.0",
+      "date": "2026-10-08",
+      "category": "POLL",
+      "race_code": "RI-01",
+      "geography": "RI-01",
+      "description": "Embold Research race poll recorded at D−R +19.0 for RI-01.",
+      "source_name": "Embold Research",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-RI-02-Embold Research-2026-10-08-13.0",
+      "date": "2026-10-08",
+      "category": "POLL",
+      "race_code": "RI-02",
+      "geography": "RI-02",
+      "description": "Embold Research race poll recorded at D−R +13.0 for RI-02.",
+      "source_name": "Embold Research",
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",
@@ -59454,187 +59873,6 @@
       "source": "https://insideelections.com/ratings/house/",
       "provenance": "Inside Elections public ratings API",
       "model_effect": "NONE",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "rating-inside-VA-05-2026-10-01-Likely Republican",
-      "date": "2026-10-01",
-      "category": "RATING CHANGE",
-      "race_code": "VA-05",
-      "geography": "VA-05",
-      "description": "Inside Elections changed VA-05 from Solid Republican to Likely Republican.",
-      "source_name": "Inside Elections",
-      "source": "https://insideelections.com/ratings/house/",
-      "provenance": "Inside Elections public ratings API",
-      "model_effect": "NONE",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S6AK00276-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "AK-SEN",
-      "geography": "AK-SEN",
-      "description": "FEC summary through 2026-09-30 records $32.6m receipts, $29.5m spending and $3.2m cash on hand for Mary Peltola.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S6AK00276/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S4AK00214-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "AK-SEN",
-      "geography": "AK-SEN",
-      "description": "FEC summary through 2026-09-30 records $11.2m receipts, $8.1m spending and $5.1m cash on hand for Dan Sullivan.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S4AK00214/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S6AL00518-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "AL-SEN",
-      "geography": "AL-SEN",
-      "description": "FEC summary through 2026-09-30 records $117k receipts, $106k spending and $11k cash on hand for Everett Wess.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S6AL00518/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S6AL00476-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "AL-SEN",
-      "geography": "AL-SEN",
-      "description": "FEC summary through 2026-09-30 records $4.5m receipts, $4.1m spending and $496k cash on hand for Barry Moore.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S6AL00476/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S6AR00199-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "AR-SEN",
-      "geography": "AR-SEN",
-      "description": "FEC summary through 2026-09-30 records $3.7m receipts, $2.3m spending and $1.4m cash on hand for Hallie Shoffner.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S6AR00199/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S4AR00103-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "AR-SEN",
-      "geography": "AR-SEN",
-      "description": "FEC summary through 2026-09-30 records $7.0m receipts, $7.6m spending and $6.8m cash on hand for Tom Cotton.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S4AR00103/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S0CO00575-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "CO-SEN",
-      "geography": "CO-SEN",
-      "description": "FEC summary through 2026-09-30 records $9.3m receipts, $8.4m spending and $2.3m cash on hand for John Hickenlooper.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S0CO00575/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S6CO00507-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "CO-SEN",
-      "geography": "CO-SEN",
-      "description": "FEC summary through 2026-09-30 records $138k receipts, $111k spending and $28k cash on hand for Mark Baisley.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S6CO00507/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S0DE00092-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "DE-SEN",
-      "geography": "DE-SEN",
-      "description": "FEC summary through 2026-09-30 records $4.8m receipts, $2.0m spending and $5.0m cash on hand for Chris Coons.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S0DE00092/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-S6DE00206-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "DE-SEN",
-      "geography": "DE-SEN",
-      "description": "FEC summary through 2026-09-30 records $177k receipts, $160k spending and $17k cash on hand for Michael Katz.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/S6DE00206/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-H6FL13312-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "FL-13",
-      "geography": "FL-13",
-      "description": "FEC summary through 2026-09-30 records $2.6m receipts, $2.0m spending and $601k cash on hand for Leela Gray.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/H6FL13312/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "fec-H0FL13158-2026-09-30",
-      "date": "2026-09-30",
-      "category": "FUNDRAISING",
-      "race_code": "FL-13",
-      "geography": "FL-13",
-      "description": "FEC summary through 2026-09-30 records $4.1m receipts, $3.1m spending and $1.1m cash on hand for Anna Paulina Luna.",
-      "source_name": "Federal Election Commission",
-      "source": "https://www.fec.gov/data/candidate/H0FL13158/?cycle=2026&election_full=true",
-      "provenance": "Official FEC current-campaign summary",
-      "model_effect": "NONE",
-      "importance": "high",
       "confidence": "source-recorded"
     }
   ],
@@ -69607,6 +69845,13 @@
     },
     {
       "type": "pollster",
+      "label": "Embold Research",
+      "subtitle": "Pollster",
+      "key": "Embold Research",
+      "terms": "Embold Research"
+    },
+    {
+      "type": "pollster",
       "label": "Emerson College",
       "subtitle": "Pollster",
       "key": "Emerson College",
@@ -70097,6 +70342,13 @@
     },
     {
       "type": "pollster",
+      "label": "The Alabama Poll",
+      "subtitle": "Pollster",
+      "key": "The Alabama Poll",
+      "terms": "The Alabama Poll"
+    },
+    {
+      "type": "pollster",
       "label": "The Argument/Verasight",
       "subtitle": "Pollster",
       "key": "The Argument/Verasight",
@@ -70295,13 +70547,13 @@
   },
   "provenance": {
     "upstream_input_mirror": "ElectIndex/26_us_forecast_data",
-    "upstream_commit": "51ec6e27b6ab060ef676c5e912c9fe6b9663ac85",
-    "input_sha256": "7c8ba3e39923ce0bce200e980cdacf56ed260af3b1cdd4cd67a7c6c9d6fd9191",
+    "upstream_commit": "d0b76ac051632ed8425811c6258af3a5c3c99323",
+    "input_sha256": "6fce0685b6d7dd58e36b0825311e4fe610191d8c7c5bd1f38cf1f0aa86a7d820",
     "file_sha256": {
       "races.csv": "d425c8e13edf80a55167a99a9c30823a9ef7614ceccb5a99c020777680f0d906",
       "historical.csv": "eac10a99cc38742892201a41a5b93c0f01b9a4a82caa715b4f76e6f2e5fae998",
       "gcb_polls.csv": "4a2a504c0327e51fbb9236b1e4796924e019dd4758f9ad9c194218c498f8d7af",
-      "race_polls.csv": "600fdfe6275fbb4e4d208914477fac6864e2af8ca749587404b19d36cb679626"
+      "race_polls.csv": "68f42a22fb1fdcafd8338f9ebe56dd66cdd8297b17a590d6b2a154db1e8644ac"
     },
     "files": [
       "races.csv",
@@ -70309,7 +70561,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-10-20T04:49:26.228335Z",
+    "retrieved_at": "2026-10-20T17:04:40.954313Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -70322,21 +70574,35 @@
   ],
   "change_summary": {
     "comparable_previous_snapshot": true,
-    "house_control_probability": 0.0039,
-    "senate_control_probability": 0.0,
-    "house_expected_dem_seats": 0.5,
+    "house_control_probability": 0.0002,
+    "senate_control_probability": 0.0117,
+    "house_expected_dem_seats": 0.0,
     "senate_expected_dem_seats": 0.0,
-    "generic_ballot_d_minus_r": 0.13,
+    "generic_ballot_d_minus_r": 0.0,
     "changed_inputs": [
-      "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "previous_generated_at": "2026-10-19T18:43:10.671241Z"
+    "previous_generated_at": "2026-10-20T04:49:26.228335Z"
   },
   "briefing": {
-    "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 93% probability of House control and a 68% probability of Senate control. The current weighted generic congressional ballot is D+8.0. The House 80% Democratic-seat interval is 220–254; the Senate interval is 49–54."
+    "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 93% probability of House control and a 70% probability of Senate control. The current weighted generic congressional ballot is D+8.0. The House 80% Democratic-seat interval is 220–254; the Senate interval is 49–54."
   },
   "history_summaries": [
+    {
+      "file": "2026-10-20T170440Z.json",
+      "generated_at": "2026-10-20T17:04:40.954313Z",
+      "house": 0.9314,
+      "senate": 0.6962,
+      "house_seats": 236.3,
+      "senate_seats": 51.5,
+      "generic_ballot_d_minus_r": 7.99,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "d0b76ac051632ed8425811c6258af3a5c3c99323",
+      "input_sha256": "6fce0685b6d7dd58e36b0825311e4fe610191d8c7c5bd1f38cf1f0aa86a7d820",
+      "changed_inputs": [
+        "race_polls.csv"
+      ]
+    },
     {
       "file": "2026-10-20T044926Z.json",
       "generated_at": "2026-10-20T04:49:26.228335Z",

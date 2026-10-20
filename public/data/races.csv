@@ -1,6 +1,6 @@
 race_code,race_type,state,district,dem_candidate,rep_candidate,incumbent_party,seat_holder,dem_probability,rep_probability,forecast_margin_d_minus_r,rating,relative_partisan_lean_d_minus_r,poll_average_margin,poll_count,latest_race_poll
 AK-SEN,senate,AK,SEN,Mary Peltola,Dan Sullivan,REP,REP,0.5698,0.4302,0.89,Lean D,-13.18,3.9,8,2026-10-10
-AL-SEN,senate,AL,SEN,Everett Wess,Barry Moore,,REP,0.001,0.999,-21.52,Safe R,-29.66,-21.0,1,2026-09-25
+AL-SEN,senate,AL,SEN,Everett Wess,Barry Moore,,REP,0.001,0.999,-21.42,Safe R,-29.66,-21.0,2,2026-10-16
 AR-SEN,senate,AR,SEN,Hallie Shoffner,Tom Cotton,REP,REP,0.0011,0.9989,-18.69,Safe R,-30.68,-9.54,2,2026-10-13
 CO-SEN,senate,CO,SEN,John Hickenlooper,Mark Baisley,DEM,DEM,0.998,0.002,20.75,Safe D,11.62,,0,
 DE-SEN,senate,DE,SEN,Chris Coons,Michael Katz,DEM,DEM,0.999,0.001,24.82,Safe D,15.68,,0,
@@ -12,21 +12,21 @@ IL-SEN,senate,IL,SEN,Juliana Stratton,Don Tracy,,DEM,0.9983,0.0017,18.96,Safe D,
 KS-SEN,senate,KS,SEN,Adam Hamilton,Roger Marshall,REP,REP,0.4599,0.5401,-0.48,Toss-up,-16.31,1.52,14,2026-10-14
 KY-SEN,senate,KY,SEN,Charles Booker,Andy Barr,,REP,0.0017,0.9983,-19.26,Safe R,-30.01,-9.0,1,2026-08-27
 LA-SEN,senate,LA,SEN,Jamie Davis,Julia Letlow,,REP,0.0409,0.9591,-11.35,Safe R,-21.46,-4.0,1,2026-09-19
-MA-SEN,senate,MA,SEN,Ed Markey,John Deaton,DEM,DEM,0.999,0.001,32.36,Safe D,27.85,26.44,3,2026-10-12
+MA-SEN,senate,MA,SEN,Ed Markey,John Deaton,DEM,DEM,0.999,0.001,31.67,Safe D,27.85,26.97,4,2026-10-18
 ME-SEN,senate,ME,SEN,Troy Jackson,Susan Collins,REP,REP,0.8164,0.1836,4.26,Likely D,7.45,2.04,21,2026-10-14
 MI-SEN,senate,MI,SEN,Abdul El-Sayed,Mike Rogers,,DEM,0.7924,0.2076,3.91,Likely D,-0.42,2.97,33,2026-10-10
 MN-SEN,senate,MN,SEN,Peggy Flanagan,Michele Tafoya,,DEM,0.8668,0.1332,5.23,Likely D,4.9,3.6,14,2026-10-15
 MS-SEN,senate,MS,SEN,Scott Colom,Cindy Hyde-Smith,REP,REP,0.0316,0.9684,-11.94,Safe R,-21.52,-4.0,1,2026-10-14
 MT-SEN,senate,MT,SEN,Alani Bankhead,Kurt Alme,,REP,0.001,0.999,-21.22,Safe R,-19.8,-28.43,5,2026-10-12
-NC-SEN,senate,NC,SEN,Roy Cooper,Michael Whatley,,REP,0.9802,0.0198,9.83,Safe D,-2.81,10.98,21,2026-10-11
+NC-SEN,senate,NC,SEN,Roy Cooper,Michael Whatley,,REP,0.9818,0.0182,10.0,Safe D,-2.81,11.2,24,2026-10-11
 NE-SEN,senate,NE,SEN,Dan Osborn,Pete Ricketts,REP,REP,0.0243,0.9757,-12.79,Safe R,-20.79,-9.0,1,2026-09-30
 NH-SEN,senate,NH,SEN,Chris Pappas,John E. Sununu,,DEM,0.9473,0.0527,8.1,Safe D,3.74,6.74,9,2026-10-05
 NJ-SEN,senate,NJ,SEN,Cory Booker,Justin Murphy,DEM,DEM,0.9922,0.0078,17.42,Safe D,8.28,,0,
 NM-SEN,senate,NM,SEN,Ben Ray Lujan,Larry Marker,DEM,DEM,0.9891,0.0109,16.52,Safe D,7.39,,0,
-OH-SEN,senate,OH,SEN,Sherrod Brown,Jon Husted,REP,REP,0.7101,0.2899,2.57,Likely D,-10.44,3.7,20,2026-10-18
+OH-SEN,senate,OH,SEN,Sherrod Brown,Jon Husted,REP,REP,0.7754,0.2246,3.51,Likely D,-10.44,4.82,22,2026-10-18
 OK-SEN,senate,OK,SEN,Jasmine Thomas,Kevin Hern,,REP,0.001,0.999,-26.83,Safe R,-34.81,,0,
 OR-SEN,senate,OR,SEN,Jeff Merkley,David Brock Smith,DEM,DEM,0.999,0.001,24.35,Safe D,15.22,,0,
-RI-SEN,senate,RI,SEN,Jack Reed,Raymond McKay,DEM,DEM,0.999,0.001,27.45,Safe D,15.8,32.02,2,2026-10-11
+RI-SEN,senate,RI,SEN,Jack Reed,Raymond McKay,DEM,DEM,0.999,0.001,26.99,Safe D,15.8,29.65,3,2026-10-11
 SC-SEN,senate,SC,SEN,Annie Andrews,Darline Graham,REP,REP,0.168,0.832,-5.04,Likely R,-16.6,-2.49,6,2026-10-18
 SD-SEN,senate,SD,SEN,Brian Bengs,Mike Rounds,REP,REP,0.001,0.999,-22.51,Safe R,-29.35,,0,
 TN-SEN,senate,TN,SEN,Marquita Bradshaw,Bill Hagerty,REP,REP,0.001,0.999,-21.85,Safe R,-28.58,-22.1,2,2026-08-26
@@ -129,7 +129,7 @@ FL-05,house,FL,05,Rachel Grage,John Rutherford,REP,REP,0.0159,0.9841,-13.52,Safe
 FL-06,house,FL,06,Eric Yonce,Randy Fine,REP,REP,0.001,0.999,-21.63,Safe R,-28.62,,0,
 FL-07,house,FL,07,Bale Dalton,Ryan Elijah,,REP,0.3229,0.6771,-2.9,Lean R,-10.88,,0,
 FL-08,house,FL,08,Jennifer Jenkins,Mike Haridopolos,REP,REP,0.0998,0.9002,-8.08,Safe R,-15.07,,0,
-FL-09,house,FL,09,Darren Soto,Dan Green,DEM,DEM,0.2117,0.7883,-4.59,Likely R,-14.82,0.0,1,2026-08-30
+FL-09,house,FL,09,Darren Soto,Dan Green,DEM,DEM,0.2438,0.7562,-3.7,Likely R,-14.82,0.0,2,2026-10-15
 FL-10,house,FL,10,Maxwell Frost,(no Republican filed),DEM,DEM,0.999,0.001,35.76,Safe D,26.78,,0,
 FL-11,house,FL,11,James Pericola,Joe Strada,,REP,0.1563,0.8437,-6.36,Likely R,-14.35,,0,
 FL-12,house,FL,12,Kimberly Overman,Gus Bilirakis,REP,REP,0.1712,0.8288,-5.98,Likely R,-12.97,,0,
@@ -375,8 +375,8 @@ PA-14,house,PA,14,Alan Bradstock,Guy Reschenthaler,REP,REP,0.001,0.999,-26.13,Sa
 PA-15,house,PA,15,Ray Bilger,Glenn Thompson,REP,REP,0.001,0.999,-31.04,Safe R,-38.02,,0,
 PA-16,house,PA,16,Justin Wagner,Mike Kelly,REP,REP,0.007,0.993,-15.47,Safe R,-22.46,,0,
 PA-17,house,PA,17,Chris Deluzio,Tony Guy,DEM,DEM,0.9893,0.0107,14.5,Safe D,5.51,,0,
-RI-01,house,RI,01,Gabriel Amo,Kellie Keenan,DEM,DEM,0.999,0.001,31.98,Safe D,24.3,28.1,1,2026-10-11
-RI-02,house,RI,02,Seth Magaziner,Victor Mellor,,DEM,0.9982,0.0018,16.4,Safe D,8.52,16.1,1,2026-10-11
+RI-01,house,RI,01,Gabriel Amo,Kellie Keenan,DEM,DEM,0.999,0.001,30.66,Safe D,24.3,25.89,2,2026-10-11
+RI-02,house,RI,02,Seth Magaziner,Victor Mellor,,DEM,0.9987,0.0013,16.09,Safe D,8.52,15.36,2,2026-10-11
 SC-01,house,SC,01,Nancy Lacore,Jenny Costa Honeycutt,,REP,0.1294,0.8706,-5.7,Likely R,-12.4,-7.13,4,2026-10-01
 SC-02,house,SC,02,Zyon Khalifa,Joe Wilson,REP,REP,0.1481,0.8519,-6.58,Likely R,-13.57,,0,
 SC-03,house,SC,03,Eunice Lehmacher,Sheri Biggs,REP,REP,0.001,0.999,-35.19,Safe R,-42.18,,0,
