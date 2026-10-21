@@ -1,18 +1,16 @@
 {
-  "generated_at": "2026-10-21T04:44:58.836236Z",
+  "generated_at": "2026-10-21T17:11:26.389836Z",
   "release": "PROD v1.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
-  "upstream_commit": "bf918ec691338b1dec53171e62982c58dde7e3b2",
-  "inputs_hash": "d2c66111836510048541f4e1075062ba50d48bd7be8db90f5140d882068758dd",
+  "upstream_commit": "7391ae097499013041dcf91bc00c2ca07c1fa5ce",
+  "inputs_hash": "9b37fb4a01aadc4feb526ad09dcb208129439f86f231ca92f5dca942ce0663cb",
   "checks": "passed",
-  "warnings": [
-    "TX-28 probability moved 15.1pp"
-  ],
+  "warnings": [],
   "house_races": 435,
   "senate_contests": 35,
-  "generic_ballot_polls": 49,
+  "generic_ballot_polls": 52,
   "static_routes": 509,
-  "history_summaries": 40,
+  "history_summaries": 41,
   "history_persisted": true,
   "source_states": {
     "current": 3,
@@ -25,7 +23,7 @@
     "inside_elections_ratings": 470,
     "fec_state": "current",
     "fec_matched_candidates": 858,
-    "public_money_records": 200,
+    "public_money_records": 204,
     "campaign_signals": 120,
     "access_constraints": [
       "Cook Political Report",

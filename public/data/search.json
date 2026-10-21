@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T04:44:58.836236Z",
+  "generated_at": "2026-10-21T17:11:26.389836Z",
   "records": [
     {
       "type": "race",
@@ -9901,6 +9901,13 @@
     },
     {
       "type": "pollster",
+      "label": "Concord Public Opinion Partners",
+      "subtitle": "Pollster",
+      "key": "Concord Public Opinion Partners",
+      "terms": "Concord Public Opinion Partners"
+    },
+    {
+      "type": "pollster",
       "label": "Crosby for Congress",
       "subtitle": "Pollster",
       "key": "Crosby for Congress",
@@ -10524,6 +10531,13 @@
     },
     {
       "type": "pollster",
+      "label": "University of Georgia",
+      "subtitle": "Pollster",
+      "key": "University of Georgia",
+      "terms": "University of Georgia"
+    },
+    {
+      "type": "pollster",
       "label": "University of Houston Hobby School of Public Affairs",
       "subtitle": "Pollster",
       "key": "University of Houston Hobby School of Public Affairs",
@@ -10545,6 +10559,20 @@
     },
     {
       "type": "pollster",
+      "label": "University of North Florida",
+      "subtitle": "Pollster",
+      "key": "University of North Florida",
+      "terms": "University of North Florida"
+    },
+    {
+      "type": "pollster",
+      "label": "Upswing Research",
+      "subtitle": "Pollster",
+      "key": "Upswing Research",
+      "terms": "Upswing Research"
+    },
+    {
+      "type": "pollster",
       "label": "Verasight",
       "subtitle": "Pollster",
       "key": "Verasight",
@@ -10556,13 +10584,6 @@
       "subtitle": "Pollster",
       "key": "VoteNexus",
       "terms": "VoteNexus"
-    },
-    {
-      "type": "pollster",
-      "label": "Wedgewood Polls",
-      "subtitle": "Pollster",
-      "key": "Wedgewood Polls",
-      "terms": "Wedgewood Polls"
     },
     {
       "type": "pollster",
