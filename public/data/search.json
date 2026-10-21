@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T17:04:40.954313Z",
+  "generated_at": "2026-10-21T04:44:58.836236Z",
   "records": [
     {
       "type": "race",
@@ -9908,13 +9908,6 @@
     },
     {
       "type": "pollster",
-      "label": "Cygnal",
-      "subtitle": "Pollster",
-      "key": "Cygnal",
-      "terms": "Cygnal"
-    },
-    {
-      "type": "pollster",
       "label": "Cygnal Political",
       "subtitle": "Pollster",
       "key": "Cygnal Political",
@@ -9940,6 +9933,13 @@
       "subtitle": "Pollster",
       "key": "DHM Research",
       "terms": "DHM Research"
+    },
+    {
+      "type": "pollster",
+      "label": "Data for Progress",
+      "subtitle": "Pollster",
+      "key": "Data for Progress",
+      "terms": "Data for Progress"
     },
     {
       "type": "pollster",
@@ -10083,13 +10083,6 @@
     },
     {
       "type": "pollster",
-      "label": "Hart Research Associates/Public Opinion Strategies",
-      "subtitle": "Pollster",
-      "key": "Hart Research Associates/Public Opinion Strategies",
-      "terms": "Hart Research Associates/Public Opinion Strategies"
-    },
-    {
-      "type": "pollster",
       "label": "Hendrix College",
       "subtitle": "Pollster",
       "key": "Hendrix College",
@@ -10230,6 +10223,13 @@
     },
     {
       "type": "pollster",
+      "label": "National Public Affairs",
+      "subtitle": "Pollster",
+      "key": "National Public Affairs",
+      "terms": "National Public Affairs"
+    },
+    {
+      "type": "pollster",
       "label": "Neighborhood Research Corporation",
       "subtitle": "Pollster",
       "key": "Neighborhood Research Corporation",
@@ -10255,13 +10255,6 @@
       "subtitle": "Pollster",
       "key": "Opinion Diagnostics",
       "terms": "Opinion Diagnostics"
-    },
-    {
-      "type": "pollster",
-      "label": "Overton Insights",
-      "subtitle": "Pollster",
-      "key": "Overton Insights",
-      "terms": "Overton Insights"
     },
     {
       "type": "pollster",
@@ -10402,13 +10395,6 @@
       "subtitle": "Pollster",
       "key": "StimSight Research",
       "terms": "StimSight Research"
-    },
-    {
-      "type": "pollster",
-      "label": "Strategies 360",
-      "subtitle": "Pollster",
-      "key": "Strategies 360",
-      "terms": "Strategies 360"
     },
     {
       "type": "pollster",
