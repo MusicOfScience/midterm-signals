@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T04:43:17.067250Z",
+  "generated_at": "2026-10-22T17:09:55.999771Z",
   "records": [
     {
       "type": "race",
@@ -10083,6 +10083,13 @@
     },
     {
       "type": "pollster",
+      "label": "Hart Research Associates/Public Opinion Strategies",
+      "subtitle": "Pollster",
+      "key": "Hart Research Associates/Public Opinion Strategies",
+      "terms": "Hart Research Associates/Public Opinion Strategies"
+    },
+    {
+      "type": "pollster",
       "label": "Hendrix College",
       "subtitle": "Pollster",
       "key": "Hendrix College",
@@ -10230,10 +10237,24 @@
     },
     {
       "type": "pollster",
+      "label": "National Research",
+      "subtitle": "Pollster",
+      "key": "National Research",
+      "terms": "National Research"
+    },
+    {
+      "type": "pollster",
       "label": "Neighborhood Research Corporation",
       "subtitle": "Pollster",
       "key": "Neighborhood Research Corporation",
       "terms": "Neighborhood Research Corporation"
+    },
+    {
+      "type": "pollster",
+      "label": "New River Strategies/GS Strategy Group",
+      "subtitle": "Pollster",
+      "key": "New River Strategies/GS Strategy Group",
+      "terms": "New River Strategies/GS Strategy Group"
     },
     {
       "type": "pollster",
