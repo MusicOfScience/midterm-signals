@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T17:11:26.389836Z",
+  "generated_at": "2026-10-22T04:43:17.067250Z",
   "records": [
     {
       "type": "race",
@@ -9891,13 +9891,6 @@
       "subtitle": "Pollster",
       "key": "Christopher Newport University",
       "terms": "Christopher Newport University"
-    },
-    {
-      "type": "pollster",
-      "label": "Clarity Campaign Labs",
-      "subtitle": "Pollster",
-      "key": "Clarity Campaign Labs",
-      "terms": "Clarity Campaign Labs"
     },
     {
       "type": "pollster",

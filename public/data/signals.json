@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T17:11:34.411221Z",
+  "generated_at": "2026-10-22T04:43:26.722353Z",
   "signals": [
     {
       "id": "poll-GA-SEN-ActiVote-2026-10-20-8.0",
@@ -1298,18 +1298,6 @@
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-national-Morning Consult-2026-10-11-6.5",
-      "date": "2026-10-11",
-      "category": "POLL",
-      "geography": "National",
-      "description": "Morning Consult generic-ballot observation recorded at D−R +6.5.",
-      "source_name": "Morning Consult",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
       "id": "poll-IA-SEN-Marist University-2026-10-11-7.0",
       "date": "2026-10-11",
       "category": "POLL",
@@ -1551,6 +1539,19 @@
       "geography": "GA-SEN",
       "description": "Trafalgar Group race poll recorded at D−R +8.0 for GA-SEN.",
       "source_name": "Trafalgar Group",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-OH-SEN-Bowling Green State University Democracy and Public Policy Research Network/YouGov-2026-10-09-6.0",
+      "date": "2026-10-09",
+      "category": "POLL",
+      "race_code": "OH-SEN",
+      "geography": "OH-SEN",
+      "description": "Bowling Green State University Democracy and Public Policy Research Network/YouGov race poll recorded at D−R +6.0 for OH-SEN.",
+      "source_name": "Bowling Green State University Democracy and Public Policy Research Network/YouGov",
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",

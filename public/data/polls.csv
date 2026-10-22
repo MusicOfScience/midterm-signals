@@ -50,7 +50,6 @@ generic_ballot,,Ipsos,,,,2026-09-20,,1277,,,40.0,32.0,8.0,,0.29713
 generic_ballot,,Quantus Insights,,R,,2026-09-18,,1389,,,50.3,41.7,8.6,,0.07128
 generic_ballot,,CNN/SSRS,,,,2026-09-17,,867,,,49.0,41.0,8.0,,0.23335
 generic_ballot,,John Zogby Strategies,,,,2026-09-17,,1007,,,48.0,42.0,6.0,,0.10336
-generic_ballot,,Clarity Campaign Labs,,,,2026-09-16,,1046,,,50.0,43.0,7.0,,0.10844
 race,AK-SEN,Data for Progress,,D,,2026-10-16,,694,,,47.0,44.0,3.0,,0.74345
 race,AK-SEN,InsiderAdvantage,,R,,2026-10-10,,1200,,,48.2,42.6,5.6,,0.33936
 race,AK-SEN,Alaska Survey Research,,,,2026-10-03,,1512,,,47.0,45.0,2.0,,0.52153
@@ -135,7 +134,6 @@ race,KS-SEN,Global Strategy Group,,D,,2026-09-16,,800,,,47.0,43.0,4.0,,0.16855
 race,KS-SEN,Global Strategy Group,,D,,2026-09-16,,800,,,49.0,47.0,2.0,,0.16855
 race,KS-SEN,co/efficient,,R,,2026-09-10,,915,,,44.0,49.0,-5.0,,0.06659
 race,KS-SEN,co/efficient,,R,,2026-09-10,,915,,,45.0,51.0,-6.0,,0.06659
-race,KY-SEN,Global Strategy Group,,D,,2026-08-27,,600,,,40.0,49.0,-9.0,,0.6496
 race,LA-SEN,Hart Research Associates,,D,,2026-09-19,,500,,,44.0,48.0,-4.0,,0.593
 race,MA-SEN,Suffolk University,,,,2026-10-18,,500,,,60.0,31.8,28.2,,0.59981
 race,MA-SEN,YouGov,,,,2026-10-12,,800,,,56.0,29.0,27.0,,1.06192
@@ -327,9 +325,6 @@ race,FL-07,DCCC Targeting Team,,D,,2026-10-19,,414,,,44.0,47.0,-3.0,,0.37114
 race,FL-09,SEA Polling,,D,,2026-10-15,,,,,44.0,44.0,0.0,,0.28841
 race,FL-09,SEA Polling,,D,,2026-08-30,,400,,,41.0,41.0,0.0,,0.0314
 race,FL-13,Public Policy Polling,,D,,2026-10-15,,,,,47.0,46.0,1.0,,0.41931
-race,FL-13,Hart Research Associates,,D,,2026-08-27,,,,,49.0,44.0,5.0,,0.03075
-race,FL-13,Hart Research Associates,,D,,2026-08-27,,,,,44.0,43.0,1.0,,0.03075
-race,FL-13,Hart Research Associates,,D,,2026-08-27,,,,,51.0,46.0,5.0,,0.03075
 race,FL-16,Public Policy Polling,,D,,2026-10-02,,530,,,39.0,43.0,-4.0,,0.61053
 race,FL-16,SEA Polling,,D,,2026-08-29,,400,,,40.0,39.0,1.0,,0.05953
 race,FL-21,Upswing Research,,D,,2026-09-25,,402,,,38.0,49.0,-11.0,,0.36572
