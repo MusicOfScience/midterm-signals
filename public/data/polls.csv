@@ -50,8 +50,6 @@ generic_ballot,,Verasight,,,,2026-09-21,,1374,,,50.3,41.7,8.6,,0.2183
 generic_ballot,,Morning Consult,,,,2026-09-20,,18336,,,49.7,42.6,7.1,,0.84523
 generic_ballot,,Ipsos,,,,2026-09-20,,1277,,,40.0,32.0,8.0,,0.26195
 generic_ballot,,Quantus Insights,,R,,2026-09-18,,1389,,,50.3,41.7,8.6,,0.06284
-generic_ballot,,CNN/SSRS,,,,2026-09-17,,867,,,49.0,41.0,8.0,,0.20572
-generic_ballot,,John Zogby Strategies,,,,2026-09-17,,1007,,,48.0,42.0,6.0,,0.09112
 race,AK-SEN,Data for Progress,,D,,2026-10-16,,694,,,47.0,44.0,3.0,,0.74345
 race,AK-SEN,InsiderAdvantage,,R,,2026-10-10,,1200,,,48.2,42.6,5.6,,0.33936
 race,AK-SEN,Alaska Survey Research,,,,2026-10-03,,1512,,,47.0,45.0,2.0,,0.52153
@@ -123,8 +121,6 @@ race,IA-SEN,YouGov,,,,2026-09-08,,2127,,,45.0,43.0,2.0,,0.26789
 race,IA-SEN,YouGov,,,,2026-09-08,,2041,,,47.0,43.0,4.0,,0.26242
 race,IA-SEN,Emerson College,,,,2026-09-01,,750,,,45.0,49.5,-4.4,,0.12055
 race,IA-SEN,Global Strategy Group,,D,,2026-08-31,,800,,,46.0,42.0,4.0,,0.05501
-race,IA-SEN,Abacus Data,,,,2026-08-28,,323,,,48.0,41.0,7.0,,0.03013
-race,IA-SEN,Abacus Data,,,,2026-08-28,,500,,,41.0,36.0,5.0,,0.03749
 race,IL-SEN,ActiVote,,,,2026-10-20,,400,,,58.5,41.5,17.0,,0.48931
 race,IL-SEN,Public Policy Polling,,D,,2026-10-01,,569,,,49.0,36.0,13.0,,0.2297
 race,KS-SEN,InsiderAdvantage,,R,,2026-10-14,,1200,,,47.0,48.0,-1.0,,0.4673
@@ -163,8 +159,6 @@ race,ME-SEN,University of Massachusetts Lowell Center for Public Opinion/YouGov,
 race,ME-SEN,YouGov,,,,2026-09-08,,1335,,,48.0,44.0,4.0,,0.27708
 race,ME-SEN,YouGov,,,,2026-09-08,,1378,,,46.0,44.0,2.0,,0.2815
 race,ME-SEN,CNN/SSRS,,,,2026-09-06,,880,,,48.0,45.0,3.0,,0.23282
-race,ME-SEN,Abacus Data,,,,2026-08-28,,327,,,50.0,42.0,8.0,,0.03958
-race,ME-SEN,Abacus Data,,,,2026-08-28,,499,,,40.0,40.0,0.0,,0.04889
 race,MI-SEN,Marist University,,,,2026-10-18,,1185,,,50.0,48.0,2.0,,2.14004
 race,MI-SEN,Marist University,,,,2026-10-18,,1185,,,52.0,45.0,7.0,,2.14004
 race,MI-SEN,InsiderAdvantage,,R,,2026-10-10,,1200,,,47.8,45.5,2.3,,0.30503
@@ -196,9 +190,6 @@ race,MI-SEN,The Washington Post/George Mason University Schar School of Policy a
 race,MI-SEN,Trafalgar Group,,R,,2026-09-09,,1079,,,46.3,44.8,1.5,,0.06831
 race,MI-SEN,CNN/SSRS,,,,2026-09-06,,843,,,47.0,44.0,3.0,,0.18411
 race,MI-SEN,"Glengariff Group, Inc.",,,,2026-09-03,,600,,,44.4,45.8,-1.4,,0.05965
-race,MI-SEN,EPIC-MRA,,,,2026-08-28,,600,,,47.0,43.0,4.0,,0.04332
-race,MI-SEN,Abacus Data,,,,2026-08-28,,500,,,41.0,35.0,6.0,,0.03954
-race,MI-SEN,Abacus Data,,,,2026-08-28,,332,,,47.0,42.0,5.0,,0.03222
 race,MN-SEN,Trafalgar Group,,R,,2026-10-15,,1079,,,48.1,44.6,3.5,,0.54648
 race,MN-SEN,SurveyUSA,,,,2026-10-12,,718,,,45.0,42.0,3.0,,1.23974
 race,MN-SEN,"Mason-Dixon Polling & Research, Inc.",,,,2026-10-07,,800,,,47.0,43.0,4.0,,0.49525
@@ -282,8 +273,6 @@ race,OH-SEN,Quantus Insights,,R,,2026-09-23,,695,,,47.6,47.2,0.4,,0.08429
 race,OH-SEN,Trafalgar Group,,R,,2026-09-16,,1085,,,45.4,41.5,3.9,,0.08943
 race,OH-SEN,YouGov,,,,2026-09-10,,1000,,,48.0,45.0,3.0,,0.19375
 race,OH-SEN,InsiderAdvantage,,R,,2026-09-09,,1200,,,47.3,41.9,5.4,,0.0525
-race,OH-SEN,Abacus Data,,,,2026-08-28,,500,,,40.0,33.0,7.0,,0.03554
-race,OH-SEN,Abacus Data,,,,2026-08-28,,306,,,46.0,41.0,5.0,,0.0278
 race,RI-SEN,Emerson College,,,,2026-10-11,,800,,,59.1,25.4,33.7,,1.60943
 race,RI-SEN,Embold Research,,,,2026-10-08,,815,,,55.0,32.0,23.0,,0.65259
 race,RI-SEN,University of New Hampshire,,,,2026-09-21,,595,,,53.0,33.0,20.0,,0.22525
@@ -291,8 +280,6 @@ race,SC-SEN,Trafalgar Group,,R,,2026-10-18,,1095,,,45.6,48.6,-3.0,,0.55052
 race,SC-SEN,InsiderAdvantage,,R,,2026-09-29,,1200,,,45.0,46.0,-1.0,,0.16968
 race,SC-SEN,Trafalgar Group,,R,,2026-09-25,,1087,,,42.3,43.4,-1.1,,0.16091
 race,SC-SEN,InsiderAdvantage,,R,,2026-09-09,,1200,,,43.2,45.1,-1.9,,0.05841
-race,SC-SEN,Abacus Data,,,,2026-08-28,,306,,,38.0,51.0,-13.0,,0.03093
-race,SC-SEN,Abacus Data,,,,2026-08-28,,500,,,34.0,34.0,0.0,,0.03954
 race,TX-SEN,ActiVote,,,,2026-10-21,,400,,,51.0,49.0,2.0,,0.48931
 race,TX-SEN,Beacon Research/Shaw & Company Research,,,,2026-10-19,,2011,,,52.0,46.0,6.0,,2.29361
 race,TX-SEN,Beacon Research/Shaw & Company Research,,,,2026-10-19,,1398,,,49.0,49.0,0.0,,1.91235

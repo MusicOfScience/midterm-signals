@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T17:09:55.999771Z",
+  "generated_at": "2026-10-23T04:47:57.514069Z",
   "records": [
     {
       "type": "race",
@@ -9775,13 +9775,6 @@
     },
     {
       "type": "pollster",
-      "label": "Abacus Data",
-      "subtitle": "Pollster",
-      "key": "Abacus Data",
-      "terms": "Abacus Data"
-    },
-    {
-      "type": "pollster",
       "label": "ActiVote",
       "subtitle": "Pollster",
       "key": "ActiVote",
@@ -9940,13 +9933,6 @@
       "subtitle": "Pollster",
       "key": "Data for Progress",
       "terms": "Data for Progress"
-    },
-    {
-      "type": "pollster",
-      "label": "EPIC-MRA",
-      "subtitle": "Pollster",
-      "key": "EPIC-MRA",
-      "terms": "EPIC-MRA"
     },
     {
       "type": "pollster",
@@ -10129,13 +10115,6 @@
       "subtitle": "Pollster",
       "key": "Ipsos",
       "terms": "Ipsos"
-    },
-    {
-      "type": "pollster",
-      "label": "John Zogby Strategies",
-      "subtitle": "Pollster",
-      "key": "John Zogby Strategies",
-      "terms": "John Zogby Strategies"
     },
     {
       "type": "pollster",
