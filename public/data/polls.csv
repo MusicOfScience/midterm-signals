@@ -51,7 +51,6 @@ generic_ballot,,Verasight,,,,2026-09-21,,1374,,,50.3,41.7,8.6,,0.2183
 generic_ballot,,ActiVote,,,,2026-09-21,,1000,,,52.8,47.2,5.6,,0.11683
 generic_ballot,,Ipsos,,,,2026-09-20,,1277,,,40.0,32.0,8.0,,0.26195
 generic_ballot,,Morning Consult,,,,2026-09-20,,18336,,,49.7,42.6,7.1,,0.84523
-generic_ballot,,Quantus Insights,,R,,2026-09-18,,1389,,,50.3,41.7,8.6,,0.06284
 race,AK-SEN,Data for Progress,,D,,2026-10-16,,694,,,47.0,44.0,3.0,,0.74345
 race,AK-SEN,InsiderAdvantage,,R,,2026-10-10,,1200,,,48.2,42.6,5.6,,0.33936
 race,AK-SEN,Alaska Survey Research,,,,2026-10-03,,1512,,,47.0,45.0,2.0,,0.52153
@@ -349,7 +348,6 @@ race,FL-09,SEA Polling,,D,,2026-08-30,,400,,,41.0,41.0,0.0,,0.0314
 race,FL-13,Public Policy Polling,,D,,2026-10-15,,,,,47.0,46.0,1.0,,0.41931
 race,FL-14,Emerson College,,,,2026-10-14,,315,,,48.0,43.0,5.0,,1.00991
 race,FL-16,Public Policy Polling,,D,,2026-10-02,,530,,,39.0,43.0,-4.0,,0.61053
-race,FL-16,SEA Polling,,D,,2026-08-29,,400,,,40.0,39.0,1.0,,0.05953
 race,FL-21,Upswing Research,,D,,2026-09-25,,402,,,38.0,49.0,-11.0,,0.36572
 race,FL-22,Impact Research,,D,,2026-08-31,,,,,46.0,46.0,0.0,,0.41931
 race,FL-22,Impact Research,,D,,2026-08-31,,,,,46.0,44.0,2.0,,0.41931
