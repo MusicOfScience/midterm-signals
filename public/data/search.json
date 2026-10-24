@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T04:35:23.147976Z",
+  "generated_at": "2026-10-24T15:56:24.731174Z",
   "records": [
     {
       "type": "race",
@@ -10349,6 +10349,13 @@
     },
     {
       "type": "pollster",
+      "label": "SSRS",
+      "subtitle": "Pollster",
+      "key": "SSRS",
+      "terms": "SSRS"
+    },
+    {
+      "type": "pollster",
       "label": "Siena University",
       "subtitle": "Pollster",
       "key": "Siena University",
@@ -10444,6 +10451,13 @@
       "subtitle": "Pollster",
       "key": "Targoz Market Research",
       "terms": "Targoz Market Research"
+    },
+    {
+      "type": "pollster",
+      "label": "Tarrance Group",
+      "subtitle": "Pollster",
+      "key": "Tarrance Group",
+      "terms": "Tarrance Group"
     },
     {
       "type": "pollster",
