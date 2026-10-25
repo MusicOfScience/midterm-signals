@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T15:56:24.731174Z",
+  "generated_at": "2026-10-25T04:40:01.434966Z",
   "records": [
     {
       "type": "race",
@@ -9831,13 +9831,6 @@
     },
     {
       "type": "pollster",
-      "label": "Bendixen & Amandi International",
-      "subtitle": "Pollster",
-      "key": "Bendixen & Amandi International",
-      "terms": "Bendixen & Amandi International"
-    },
-    {
-      "type": "pollster",
       "label": "Big Data Poll",
       "subtitle": "Pollster",
       "key": "Big Data Poll",
@@ -9975,13 +9968,6 @@
       "subtitle": "Pollster",
       "key": "Fabrizio Ward/Impact Research",
       "terms": "Fabrizio Ward/Impact Research"
-    },
-    {
-      "type": "pollster",
-      "label": "Fabrizio, Lee & Associates",
-      "subtitle": "Pollster",
-      "key": "Fabrizio, Lee & Associates",
-      "terms": "Fabrizio, Lee & Associates"
     },
     {
       "type": "pollster",

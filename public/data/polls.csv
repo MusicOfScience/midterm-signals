@@ -257,7 +257,6 @@ race,NH-SEN,University of New Hampshire,,,,2026-09-21,,1392,,,50.0,42.0,8.0,,0.2
 race,NH-SEN,InsiderAdvantage,,R,,2026-09-17,,1200,,,47.8,39.9,7.9,,0.08043
 race,NH-SEN,co/efficient,,R,,2026-09-11,,958,,,46.0,46.0,0.0,,0.05219
 race,NH-SEN,co/efficient,,R,,2026-09-11,,958,,,46.0,46.0,0.0,,0.05219
-race,NH-SEN,"Fabrizio, Lee & Associates",,R,,2026-08-30,,600,,,36.0,37.0,-1.0,,0.02945
 race,OH-SEN,InsiderAdvantage,,R,,2026-10-22,,1200,,,47.0,44.0,3.0,,0.4673
 race,OH-SEN,Verasight,,,,2026-10-20,,531,,,47.5,43.6,3.9,,0.80778
 race,OH-SEN,Verasight,,,,2026-10-20,,535,,,45.7,43.8,1.9,,0.81082
@@ -349,7 +348,6 @@ race,CO-08,McLaughlin & Associates,,R,,2026-09-17,,400,,,46.3,48.0,-1.7,,0.2698
 race,FL-07,DCCC Targeting Team,,D,,2026-10-19,,414,,,45.0,45.0,0.0,,0.37114
 race,FL-07,DCCC Targeting Team,,D,,2026-10-19,,414,,,44.0,47.0,-3.0,,0.37114
 race,FL-09,SEA Polling,,D,,2026-10-15,,,,,44.0,44.0,0.0,,0.28841
-race,FL-09,SEA Polling,,D,,2026-08-30,,400,,,41.0,41.0,0.0,,0.0314
 race,FL-13,Public Policy Polling,,D,,2026-10-15,,,,,47.0,46.0,1.0,,0.41931
 race,FL-14,Emerson College,,,,2026-10-14,,315,,,48.0,43.0,5.0,,1.00991
 race,FL-16,Public Policy Polling,,D,,2026-10-02,,530,,,39.0,43.0,-4.0,,0.61053
@@ -359,7 +357,6 @@ race,FL-22,Impact Research,,D,,2026-08-31,,,,,46.0,44.0,2.0,,0.41931
 race,FL-25,Public Policy Polling,,D,,2026-10-22,,592,,,47.0,42.0,5.0,,0.64525
 race,FL-25,National Research,,R,,2026-10-15,,400,,,42.0,49.0,-7.0,,0.25117
 race,FL-27,Tulchin Research,,D,,2026-09-13,,600,,,46.0,47.0,-1.0,,0.4468
-race,FL-27,Bendixen & Amandi International,,D,,2026-08-30,,600,,,45.0,45.0,0.0,,0.2118
 race,GA-03,VoteNexus,,D,,2026-10-07,,301,,,45.0,50.0,-5.0,,0.31646
 race,GA-07,20/20 Insight,,D,,2026-10-09,,457,,,47.0,45.0,2.0,,0.38994
 race,GA-11,Miller Consulting Services,,D,,2026-09-11,,402,,,45.0,48.0,-3.0,,0.36572
@@ -464,7 +461,6 @@ race,SC-01,co/efficient,,R,,2026-10-01,,837,,,40.0,46.0,-6.0,,0.12738
 race,SC-01,Public Policy Polling,,D,,2026-09-10,,536,,,42.0,48.0,-6.0,,0.0654
 race,SC-01,Public Policy Polling,,D,,2026-09-10,,536,,,40.0,41.0,-1.0,,0.0654
 race,SD-01,"Mason-Dixon Polling & Research, Inc.",,,,2026-10-14,,500,,,32.0,60.0,-28.0,,0.59981
-race,SD-01,Lake Research Partners,,D,,2026-08-30,,500,,,43.0,47.0,-4.0,,0.05041
 race,TN-05,Impact Research,,D,,2026-10-01,,552,,,41.0,46.0,-5.0,,0.62307
 race,TN-09,Hart Research Associates,,D,,2026-09-03,,400,,,44.0,48.0,-4.0,,0.53039
 race,TX-02,Impact Research,,D,,2026-10-04,,501,,,37.0,46.0,-9.0,,0.59359
