@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T04:45:40.010076Z",
+  "generated_at": "2026-10-26T18:41:18.064408Z",
   "signals": [
     {
       "id": "poll-national-YouGov-2026-10-23-8.0",
@@ -314,24 +314,24 @@
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-national-YouGov-2026-10-20-7.0",
+      "id": "poll-national-Focaldata-2026-10-20-9.2",
       "date": "2026-10-20",
       "category": "POLL",
       "geography": "National",
-      "description": "YouGov generic-ballot observation recorded at D−R +7.0.",
-      "source_name": "YouGov",
+      "description": "Focaldata generic-ballot observation recorded at D−R +9.2.",
+      "source_name": "Focaldata",
       "source": null,
       "provenance": "Production generic-ballot observation",
       "model_effect": "POLL INPUT",
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-national-Focaldata-2026-10-20-9.3",
+      "id": "poll-national-YouGov-2026-10-20-7.0",
       "date": "2026-10-20",
       "category": "POLL",
       "geography": "National",
-      "description": "Focaldata generic-ballot observation recorded at D−R +9.3.",
-      "source_name": "Focaldata",
+      "description": "YouGov generic-ballot observation recorded at D−R +7.0.",
+      "source_name": "YouGov",
       "source": null,
       "provenance": "Production generic-ballot observation",
       "model_effect": "POLL INPUT",
@@ -840,24 +840,24 @@
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-national-Hart Research Associates/Public Opinion Strategies-2026-10-18-7.0",
-      "date": "2026-10-18",
-      "category": "POLL",
-      "geography": "National",
-      "description": "Hart Research Associates/Public Opinion Strategies generic-ballot observation recorded at D−R +7.0.",
-      "source_name": "Hart Research Associates/Public Opinion Strategies",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
       "id": "poll-national-Morning Consult-2026-10-18-7.3",
       "date": "2026-10-18",
       "category": "POLL",
       "geography": "National",
       "description": "Morning Consult generic-ballot observation recorded at D−R +7.3.",
       "source_name": "Morning Consult",
+      "source": null,
+      "provenance": "Production generic-ballot observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-national-Hart Research Associates/Public Opinion Strategies-2026-10-18-7.0",
+      "date": "2026-10-18",
+      "category": "POLL",
+      "geography": "National",
+      "description": "Hart Research Associates/Public Opinion Strategies generic-ballot observation recorded at D−R +7.0.",
+      "source_name": "Hart Research Associates/Public Opinion Strategies",
       "source": null,
       "provenance": "Production generic-ballot observation",
       "model_effect": "POLL INPUT",
