@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T05:03:00.088989Z",
+  "generated_at": "2026-10-27T18:00:08.943195Z",
   "records": [
     {
       "type": "race",
@@ -10157,6 +10157,13 @@
       "subtitle": "Pollster",
       "key": "McLaughlin & Associates",
       "terms": "McLaughlin & Associates"
+    },
+    {
+      "type": "pollster",
+      "label": "Michigan State University Institute for Public Policy and Social Research/YouGov",
+      "subtitle": "Pollster",
+      "key": "Michigan State University Institute for Public Policy and Social Research/YouGov",
+      "terms": "Michigan State University Institute for Public Policy and Social Research/YouGov"
     },
     {
       "type": "pollster",
