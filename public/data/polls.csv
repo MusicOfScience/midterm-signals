@@ -46,12 +46,6 @@ generic_ballot,,Change Research,,D,,2026-09-24,,2021,,,46.0,39.0,7.0,,0.17955
 generic_ballot,,McLaughlin & Associates,,R,,2026-09-22,,1000,,,48.0,43.0,5.0,,0.06048
 generic_ballot,,The Argument/Verasight,,,,2026-09-22,,1603,,,53.8,46.2,7.6,,0.2214
 generic_ballot,,Emerson College,,,,2026-09-22,,1000,,,53.2,41.9,11.3,,0.25513
-generic_ballot,,ActiVote,,,,2026-09-21,,1000,,,52.8,47.2,5.6,,0.103
-generic_ballot,,Verasight,,,,2026-09-21,,1374,,,50.3,41.7,8.6,,0.19245
-generic_ballot,,KFF,,,,2026-09-21,,1013,,,45.0,35.0,10.0,,0.23005
-generic_ballot,,Echelon Insights,,R,,2026-09-21,,1002,,,51.0,43.0,8.0,,0.12615
-generic_ballot,,YouGov,,,,2026-09-21,,975,,,48.5,37.0,11.5,,0.21491
-generic_ballot,,Impact Research/National Research Inc.,,,,2026-09-21,,1500,,,50.0,42.0,8.0,,0.13831
 race,AK-SEN,Data for Progress,,D,,2026-10-16,,694,,,47.0,44.0,3.0,,0.74345
 race,AK-SEN,InsiderAdvantage,,R,,2026-10-10,,1200,,,48.2,42.6,5.6,,0.33936
 race,AK-SEN,Alaska Survey Research,,,,2026-10-03,,1512,,,47.0,45.0,2.0,,0.52153
@@ -122,7 +116,6 @@ race,IA-SEN,Cygnal Political,,R,,2026-09-11,,500,,,42.9,42.9,0.0,,0.0499
 race,IA-SEN,YouGov,,,,2026-09-08,,2166,,,44.0,43.0,1.0,,0.23038
 race,IA-SEN,YouGov,,,,2026-09-08,,2127,,,45.0,43.0,2.0,,0.22829
 race,IA-SEN,YouGov,,,,2026-09-08,,2041,,,47.0,43.0,4.0,,0.22363
-race,IA-SEN,Emerson College,,,,2026-09-01,,750,,,45.0,49.5,-4.4,,0.10273
 race,IL-SEN,ActiVote,,,,2026-10-20,,400,,,58.5,41.5,17.0,,0.48931
 race,IL-SEN,Public Policy Polling,,D,,2026-10-01,,569,,,49.0,36.0,13.0,,0.2297
 race,KS-SEN,InsiderAdvantage,,R,,2026-10-14,,1200,,,46.6,47.7,-1.1,,0.4673
@@ -325,13 +318,11 @@ race,TX-SEN,ReconMR/Siena Research Institute,,,,2026-09-11,,614,,,49.0,43.0,6.0,
 race,TX-SEN,"Mason-Dixon Polling & Research, Inc.",,,,2026-09-10,,625,,,46.0,43.0,3.0,,0.07535
 race,TX-SEN,InsiderAdvantage,,R,,2026-09-09,,1200,,,47.1,45.6,1.5,,0.04978
 race,TX-SEN,YouGov,,,,2026-09-04,,1000,,,48.0,43.0,5.0,,0.1334
-race,TX-SEN,Fabrizio Ward/Impact Research,,,,2026-09-01,,895,,,48.0,44.0,4.0,,0.0558
 race,AR-02,Emerson College,,,,2026-10-14,,383,,,48.0,52.0,-4.0,,1.11359
 race,AZ-01,FirstStrategic Communications and Public Affairs,,,,2026-10-01,,400,,,44.4,41.6,2.8,,0.53649
 race,AZ-02,Emerson College,,,,2026-10-14,,345,,,50.0,48.0,2.0,,1.0569
 race,CA-48,Tarrance Group,,R,,2026-10-20,,410,,,47.0,44.0,3.0,,0.36934
 race,CA-48,SurveyUSA,,,,2026-10-07,,518,,,47.0,38.0,9.0,,0.61784
-race,CA-48,SurveyUSA,,,,2026-09-01,,522,,,45.0,42.0,3.0,,0.09097
 race,CO-03,DCCC Targeting Team,,D,,2026-10-21,,402,,,47.0,46.0,1.0,,0.36572
 race,CO-04,Impact Research,,D,,2026-09-24,,403,,,40.0,45.0,-5.0,,0.53238
 race,CO-05,Public Policy Polling,,D,,2026-10-20,,577,,,47.0,47.0,0.0,,0.63702

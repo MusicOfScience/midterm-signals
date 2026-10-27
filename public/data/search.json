@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T18:41:08.248580Z",
+  "generated_at": "2026-10-27T05:03:00.088989Z",
   "records": [
     {
       "type": "race",
@@ -10083,13 +10083,6 @@
     },
     {
       "type": "pollster",
-      "label": "Impact Research/National Research Inc.",
-      "subtitle": "Pollster",
-      "key": "Impact Research/National Research Inc.",
-      "terms": "Impact Research/National Research Inc."
-    },
-    {
-      "type": "pollster",
       "label": "InsiderAdvantage",
       "subtitle": "Pollster",
       "key": "InsiderAdvantage",
@@ -10101,13 +10094,6 @@
       "subtitle": "Pollster",
       "key": "Ipsos",
       "terms": "Ipsos"
-    },
-    {
-      "type": "pollster",
-      "label": "KFF",
-      "subtitle": "Pollster",
-      "key": "KFF",
-      "terms": "KFF"
     },
     {
       "type": "pollster",

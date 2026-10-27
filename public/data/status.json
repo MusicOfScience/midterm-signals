@@ -3,7 +3,7 @@
   "project": "MIDTERM SIGNALS",
   "release": "PROD v1.0",
   "election_date": "2026-11-03",
-  "generated_at": "2026-10-26T18:41:08.248580Z",
+  "generated_at": "2026-10-27T05:03:00.088989Z",
   "production_forecast": "published",
   "publication_label": "PROD v1.0 · LIVE BASELINE",
   "model": "MIDTERM SIGNALS baseline-v1.0",
@@ -22,7 +22,7 @@
     "The nowcast and election-day forecast do not yet use a separate explicit time-evolution process.",
     "Correlated national error is simulated, but cross-race correlation remains deliberately simple rather than a full geographic covariance model."
   ],
-  "enrichment_generated_at": "2026-10-26T18:41:18.064408Z",
+  "enrichment_generated_at": "2026-10-27T05:03:07.723834Z",
   "external_forecasters_automated": 1,
   "external_forecasters_tracked": 5,
   "fec_state": "current",
