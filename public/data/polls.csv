@@ -48,9 +48,6 @@ generic_ballot,,Angus Reid Global,,,,2026-09-25,,,,,45.0,34.0,11.0,,0.07089
 generic_ballot,,SSRS,,,,2026-09-25,,1273,,,44.0,37.0,7.0,,0.1357
 generic_ballot,,Change Research,,D,,2026-09-24,,2021,,,46.0,39.0,7.0,,0.14862
 generic_ballot,,GBAO,,D,,2026-09-24,,2000,,,49.0,41.0,8.0,,0.14785
-generic_ballot,,McLaughlin & Associates,,R,,2026-09-22,,1000,,,48.0,43.0,5.0,,0.05007
-generic_ballot,,The Argument/Verasight,,,,2026-09-22,,1603,,,53.8,46.2,7.6,,0.18326
-generic_ballot,,Emerson College,,,,2026-09-22,,1000,,,53.2,41.9,11.3,,0.21119
 race,AK-SEN,Data for Progress,,D,,2026-10-16,,694,,,47.0,44.0,3.0,,0.74345
 race,AK-SEN,InsiderAdvantage,,R,,2026-10-10,,1200,,,48.2,42.6,5.6,,0.33936
 race,AK-SEN,Alaska Survey Research,,,,2026-10-03,,1512,,,47.0,45.0,2.0,,0.52153
@@ -211,8 +208,6 @@ race,MN-SEN,co/efficient,,R,,2026-09-15,,833,,,46.0,47.0,-1.0,,0.07864
 race,MN-SEN,co/efficient,,R,,2026-09-15,,833,,,43.0,42.0,1.0,,0.07864
 race,MN-SEN,SurveyUSA,,,,2026-09-14,,654,,,42.0,42.0,0.0,,0.26588
 race,MN-SEN,Quantus Insights,,R,,2026-09-10,,720,,,48.9,45.4,3.5,,0.056
-race,MN-SEN,TIPP Insights,,R,,2026-09-02,,1494,,,40.0,38.0,2.0,,0.08394
-race,MN-SEN,TIPP Insights,,R,,2026-09-02,,1192,,,44.0,41.9,2.1,,0.07498
 race,MS-SEN,Change Research,,D,,2026-10-22,,842,,,40.0,43.0,-3.0,,0.72057
 race,MT-SEN,Quantus Insights,,R,,2026-10-18,,667,,,21.2,45.6,-24.4,,0.34839
 race,MT-SEN,Peak Insights,,R,,2026-10-12,,500,,,12.0,44.0,-32.0,,0.2962
@@ -421,7 +416,6 @@ race,NJ-02,Impact Research,,D,,2026-10-10,,,,,40.0,50.0,-10.0,,0.41931
 race,NJ-07,StimSight Research,,,,2026-09-12,,498,,,47.0,42.0,5.0,,0.59861
 race,NM-01,Research & Polling Inc.,,,,2026-10-09,,380,,,53.0,35.0,18.0,,0.5229
 race,NM-02,Research & Polling Inc.,,,,2026-10-09,,383,,,48.0,44.0,4.0,,0.52496
-race,NM-02,SurveyUSA,,,,2026-09-02,,554,,,46.0,43.0,3.0,,0.17771
 race,NM-03,Research & Polling Inc.,,,,2026-10-09,,362,,,53.0,39.0,14.0,,0.51037
 race,NV-02,Public Policy Polling,,D,,2026-10-13,,,,,44.0,46.0,-2.0,,0.41931
 race,NV-02,GBAO,,D,,2026-09-03,,500,,,38.0,37.0,1.0,,0.06581
@@ -434,7 +428,6 @@ race,NY-21,Siena University,,,,2026-10-06,,496,,,46.0,42.0,4.0,,0.41132
 race,NY-21,Impact Research,,D,,2026-10-04,,500,,,45.0,48.0,-3.0,,0.36698
 race,NY-21,Public Policy Polling,,D,,2026-09-10,,557,,,40.0,53.0,-13.0,,0.10773
 race,NY-21,Public Policy Polling,,D,,2026-09-10,,557,,,43.0,48.0,-5.0,,0.10773
-race,NY-21,Impact Research,,D,,2026-09-02,,500,,,44.0,47.0,-3.0,,0.06663
 race,NY-23,Public Policy Polling,,D,,2026-09-23,,626,,,35.0,52.0,-17.0,,0.66352
 race,OH-01,Quantus Insights,,R,,2026-10-21,,561,,,47.6,43.9,3.7,,0.31951
 race,OH-01,Torchlight Strategies,,R,,2026-10-02,,400,,,45.8,44.2,1.6,,0.13247
