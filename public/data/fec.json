@@ -4,7 +4,7 @@
   "mode": "official bulk data",
   "url": "https://www.fec.gov/data/",
   "bulk_url": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip",
-  "last_success": "2026-10-28T05:40:59.009411Z",
+  "last_success": "2026-10-28T18:21:03.336617Z",
   "latest_coverage": "2026-10-22",
   "matched_candidates": 860,
   "note": "Official FEC current-campaign summaries. Reporting periods travel with every dollar figure; unmatched candidates remain missing rather than guessed.",
@@ -12050,6 +12050,6 @@
       "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
     }
   ],
-  "generated_at": "2026-10-28T05:40:56.591043Z",
+  "generated_at": "2026-10-28T18:21:00.541132Z",
   "model_effect": "NONE"
 }

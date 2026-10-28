@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T05:40:48.991411Z",
+  "generated_at": "2026-10-28T18:20:50.440215Z",
   "records": [
     {
       "type": "race",
@@ -9831,6 +9831,13 @@
     },
     {
       "type": "pollster",
+      "label": "Bedrock Polling",
+      "subtitle": "Pollster",
+      "key": "Bedrock Polling",
+      "terms": "Bedrock Polling"
+    },
+    {
+      "type": "pollster",
       "label": "Big Data Poll",
       "subtitle": "Pollster",
       "key": "Big Data Poll",
@@ -9887,10 +9894,24 @@
     },
     {
       "type": "pollster",
+      "label": "Cor Strategies",
+      "subtitle": "Pollster",
+      "key": "Cor Strategies",
+      "terms": "Cor Strategies"
+    },
+    {
+      "type": "pollster",
       "label": "Crosby for Congress",
       "subtitle": "Pollster",
       "key": "Crosby for Congress",
       "terms": "Crosby for Congress"
+    },
+    {
+      "type": "pollster",
+      "label": "Cygnal",
+      "subtitle": "Pollster",
+      "key": "Cygnal",
+      "terms": "Cygnal"
     },
     {
       "type": "pollster",
@@ -10454,6 +10475,13 @@
     },
     {
       "type": "pollster",
+      "label": "The Citadel School of Humanities and Social Sciences",
+      "subtitle": "Pollster",
+      "key": "The Citadel School of Humanities and Social Sciences",
+      "terms": "The Citadel School of Humanities and Social Sciences"
+    },
+    {
+      "type": "pollster",
       "label": "The Honest Poll",
       "subtitle": "Pollster",
       "key": "The Honest Poll",
@@ -10559,6 +10587,13 @@
     },
     {
       "type": "pollster",
+      "label": "Victory Insights",
+      "subtitle": "Pollster",
+      "key": "Victory Insights",
+      "terms": "Victory Insights"
+    },
+    {
+      "type": "pollster",
       "label": "VoteNexus",
       "subtitle": "Pollster",
       "key": "VoteNexus",
@@ -10570,6 +10605,13 @@
       "subtitle": "Pollster",
       "key": "YouGov",
       "terms": "YouGov"
+    },
+    {
+      "type": "pollster",
+      "label": "YouGov Blue",
+      "subtitle": "Pollster",
+      "key": "YouGov Blue",
+      "terms": "YouGov Blue"
     },
     {
       "type": "pollster",

@@ -127,6 +127,9 @@
   <url><loc>https://midterm-signals.pages.dev/races/AZ-08/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/bernadette-greene-placentia/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/abraham-hamadeh/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/races/CA-22/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/candidates/randy-villegas/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/candidates/david-valadao/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/races/CO-03/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/dwayne-romero/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/jeff-hurd/</loc></url>
@@ -253,9 +256,6 @@
   <url><loc>https://midterm-signals.pages.dev/races/NC-09/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/richard-ojeda/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/richard-hudson/</loc></url>
-  <url><loc>https://midterm-signals.pages.dev/races/NC-10/</loc></url>
-  <url><loc>https://midterm-signals.pages.dev/candidates/ashley-bell/</loc></url>
-  <url><loc>https://midterm-signals.pages.dev/candidates/pat-harrigan/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/races/NC-11/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/jamie-ager/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/jennifer-balkcom/</loc></url>
@@ -283,6 +283,9 @@
   <url><loc>https://midterm-signals.pages.dev/races/NV-02/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/teresa-benitez-thompson/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/david-flippo/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/races/NV-03/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/candidates/susie-lee/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/candidates/marty-o-donnell/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/races/NY-01/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/christopher-gallant/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/nick-lalota/</loc></url>
@@ -398,6 +401,7 @@
   <url><loc>https://midterm-signals.pages.dev/pollsters/aspect-strategic/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/barbara-jordan-public-policy-research-and-survey-center/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/beacon-research-shaw-company-research/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/pollsters/bedrock-polling/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/big-data-poll/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/bowling-green-state-university-democracy-and-public-policy-research-network-yougov/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/braun-research/</loc></url>
@@ -406,7 +410,9 @@
   <url><loc>https://midterm-signals.pages.dev/pollsters/change-research/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/christopher-newport-university/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/concord-public-opinion-partners/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/pollsters/cor-strategies/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/crosby-for-congress/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/pollsters/cygnal/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/cygnal-political/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/cygnal-beacon-research/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/dccc-targeting-team/</loc></url>
@@ -487,6 +493,7 @@
   <url><loc>https://midterm-signals.pages.dev/pollsters/tarrance-group/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/the-alabama-poll/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/the-bullfinch-group/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/pollsters/the-citadel-school-of-humanities-and-social-sciences/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/the-honest-poll/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/the-new-york-times-siena-university/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/the-tyson-group/</loc></url>
@@ -502,8 +509,10 @@
   <url><loc>https://midterm-signals.pages.dev/pollsters/university-of-north-florida/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/upswing-research/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/verasight/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/pollsters/victory-insights/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/votenexus/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/yougov/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/pollsters/yougov-blue/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/z-to-a-research/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/co-efficient/</loc></url>
 </urlset>
