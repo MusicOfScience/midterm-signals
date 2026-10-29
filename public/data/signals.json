@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T18:21:00.541132Z",
+  "generated_at": "2026-10-29T05:47:04.221496Z",
   "signals": [
     {
       "id": "poll-FL-SEN-St. Pete Polls-2026-10-27--4.3",
@@ -1287,42 +1287,6 @@
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-national-CNN/SSRS-2026-10-18-10.0",
-      "date": "2026-10-18",
-      "category": "POLL",
-      "geography": "National",
-      "description": "CNN/SSRS generic-ballot observation recorded at D−R +10.0.",
-      "source_name": "CNN/SSRS",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-national-Hart Research Associates/Public Opinion Strategies-2026-10-18-7.0",
-      "date": "2026-10-18",
-      "category": "POLL",
-      "geography": "National",
-      "description": "Hart Research Associates/Public Opinion Strategies generic-ballot observation recorded at D−R +7.0.",
-      "source_name": "Hart Research Associates/Public Opinion Strategies",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-national-Morning Consult-2026-10-18-7.3",
-      "date": "2026-10-18",
-      "category": "POLL",
-      "geography": "National",
-      "description": "Morning Consult generic-ballot observation recorded at D−R +7.3.",
-      "source_name": "Morning Consult",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
       "id": "poll-MA-SEN-Suffolk University-2026-10-18-28.2",
       "date": "2026-10-18",
       "category": "POLL",
@@ -1541,6 +1505,45 @@
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-TX-15-Barbara Jordan Public Policy Research and Survey Center-2026-10-16-7.0",
+      "date": "2026-10-16",
+      "category": "POLL",
+      "race_code": "TX-15",
+      "geography": "TX-15",
+      "description": "Barbara Jordan Public Policy Research and Survey Center race poll recorded at D−R +7.0 for TX-15.",
+      "source_name": "Barbara Jordan Public Policy Research and Survey Center",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "rating-inside-PA-07-2026-10-15-Tilt Democrat",
+      "date": "2026-10-15",
+      "category": "RATING CHANGE",
+      "race_code": "PA-07",
+      "geography": "PA-07",
+      "description": "Inside Elections changed PA-07 from Toss-up to Tilt Democrat.",
+      "source_name": "Inside Elections",
+      "source": "https://insideelections.com/ratings/house/",
+      "provenance": "Inside Elections public ratings API",
+      "model_effect": "NONE",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "rating-inside-SC-01-2026-10-15-Lean Republican",
+      "date": "2026-10-15",
+      "category": "RATING CHANGE",
+      "race_code": "SC-01",
+      "geography": "SC-01",
+      "description": "Inside Elections changed SC-01 from Likely Republican to Lean Republican.",
+      "source_name": "Inside Elections",
+      "source": "https://insideelections.com/ratings/house/",
+      "provenance": "Inside Elections public ratings API",
+      "model_effect": "NONE",
       "confidence": "source-recorded"
     }
   ],

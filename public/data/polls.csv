@@ -206,7 +206,6 @@ race,MI-SEN,Emerson College,,,,2026-09-14,,1000,,,48.2,45.7,2.5,,0.23724
 race,MI-SEN,The Washington Post/George Mason University Schar School of Policy and Government,,,,2026-09-14,,803,,,48.0,45.0,3.0,,0.10022
 race,MI-SEN,Trafalgar Group,,R,,2026-09-09,,1079,,,46.3,44.8,1.5,,0.05519
 race,MI-SEN,CNN/SSRS,,,,2026-09-06,,843,,,47.0,44.0,3.0,,0.14875
-race,MI-SEN,"Glengariff Group, Inc.",,,,2026-09-03,,600,,,44.4,45.8,-1.4,,0.04819
 race,MN-SEN,The New York Times/Siena University,,,,2026-10-26,,752,,,54.2,40.3,13.9,,1.92439
 race,MN-SEN,Victory Insights,,R,,2026-10-22,,1194,,,47.8,44.4,3.4,,0.50923
 race,MN-SEN,Trafalgar Group,,R,,2026-10-15,,1079,,,48.1,44.6,3.5,,0.30399
@@ -254,7 +253,6 @@ race,NC-SEN,High Point University,,,,2026-09-16,,706,,,50.0,42.0,8.0,,0.17171
 race,NC-SEN,Harper Polling,,,,2026-09-15,,608,,,49.2,34.1,15.1,,0.07839
 race,NC-SEN,YouGov,,,,2026-09-15,,885,,,48.0,37.0,11.0,,0.18227
 race,NC-SEN,Trafalgar Group,,R,,2026-09-10,,1084,,,48.2,42.3,5.9,,0.04972
-race,NC-SEN,East Carolina University Center for Survey Research,,,,2026-09-03,,675,,,51.7,43.6,8.1,,0.04356
 race,NE-SEN,co/efficient,,R,,2026-09-30,,1113,,,40.0,49.0,-9.0,,0.45004
 race,NH-SEN,St. Anselm,,,,2026-10-20,,1672,,,50.0,43.0,7.0,,1.09685
 race,NH-SEN,National Public Affairs,,R,,2026-10-12,,600,,,50.0,45.0,5.0,,0.29165
@@ -420,13 +418,10 @@ race,NC-01,Neighborhood Research Corporation,,,,2026-10-06,,303,,,40.0,44.0,-4.0
 race,NC-01,GQR,,D,,2026-10-04,,500,,,47.0,39.0,8.0,,0.32953
 race,NC-01,GBAO,,D,,2026-09-11,,500,,,50.0,43.0,7.0,,0.13161
 race,NC-09,Public Policy Polling,,D,,2026-10-20,,,,,42.0,46.0,-4.0,,0.41931
-race,NC-09,Lake Research Partners,,D,,2026-09-03,,400,,,42.0,46.0,-4.0,,0.04052
 race,NC-11,Emerson College,,,,2026-10-14,,388,,,56.0,43.0,13.0,,1.12084
 race,NC-11,Public Policy Polling,,D,,2026-09-11,,531,,,47.0,44.0,3.0,,0.10519
 race,NC-11,Public Policy Polling,,D,,2026-09-11,,531,,,46.0,50.0,-4.0,,0.10519
 race,NE-01,Public Policy Polling,,D,,2026-10-20,,,,,45.0,46.0,-1.0,,0.41931
-race,NE-01,Global Strategy Group,,D,,2026-09-03,,600,,,49.0,45.0,4.0,,0.053
-race,NE-01,Global Strategy Group,,D,,2026-09-03,,600,,,43.0,42.0,1.0,,0.053
 race,NE-02,National Public Affairs,,R,,2026-10-05,,377,,,50.0,38.0,12.0,,0.35417
 race,NE-02,SurveyUSA,,,,2026-09-13,,182,,,46.0,42.0,4.0,,0.26563
 race,NH-01,St. Anselm,,,,2026-10-20,,861,,,46.0,42.0,4.0,,0.7871
@@ -439,7 +434,6 @@ race,NM-01,Research & Polling Inc.,,,,2026-10-09,,380,,,53.0,35.0,18.0,,0.5229
 race,NM-02,Research & Polling Inc.,,,,2026-10-09,,383,,,48.0,44.0,4.0,,0.52496
 race,NM-03,Research & Polling Inc.,,,,2026-10-09,,362,,,53.0,39.0,14.0,,0.51037
 race,NV-02,Public Policy Polling,,D,,2026-10-13,,,,,44.0,46.0,-2.0,,0.41931
-race,NV-02,GBAO,,D,,2026-09-03,,500,,,38.0,37.0,1.0,,0.06581
 race,NY-17,McLaughlin & Associates,,R,,2026-09-30,,400,,,47.0,50.0,-3.0,,0.2698
 race,NY-17,Emerson College,,,,2026-09-29,,400,,,47.9,45.6,2.3,,1.07895
 race,NY-18,Public Policy Polling,,D,,2026-09-30,,561,,,51.0,42.0,9.0,,0.62813
@@ -480,7 +474,6 @@ race,SC-01,Public Policy Polling,,D,,2026-09-10,,536,,,42.0,48.0,-6.0,,0.0654
 race,SC-01,Public Policy Polling,,D,,2026-09-10,,536,,,40.0,41.0,-1.0,,0.0654
 race,SD-01,"Mason-Dixon Polling & Research, Inc.",,,,2026-10-14,,500,,,32.0,60.0,-28.0,,0.59981
 race,TN-05,Impact Research,,D,,2026-10-01,,552,,,41.0,46.0,-5.0,,0.62307
-race,TN-09,Hart Research Associates,,D,,2026-09-03,,400,,,44.0,48.0,-4.0,,0.53039
 race,TX-02,Impact Research,,D,,2026-10-04,,501,,,37.0,46.0,-9.0,,0.59359
 race,TX-09,DCCC Targeting Team,,D,,2026-10-22,,490,,,47.0,48.0,-1.0,,0.40377
 race,TX-09,University of Houston Hobby School of Public Affairs,,,,2026-10-07,,677,,,42.0,48.0,-6.0,,0.31368
