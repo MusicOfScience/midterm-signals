@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T05:46:58.592869Z",
+  "generated_at": "2026-10-29T18:28:07.291964Z",
   "records": [
     {
       "type": "race",
@@ -9845,6 +9845,13 @@
     },
     {
       "type": "pollster",
+      "label": "Blueprint Polling",
+      "subtitle": "Pollster",
+      "key": "Blueprint Polling",
+      "terms": "Blueprint Polling"
+    },
+    {
+      "type": "pollster",
       "label": "Bowling Green State University Democracy and Public Policy Research Network/YouGov",
       "subtitle": "Pollster",
       "key": "Bowling Green State University Democracy and Public Policy Research Network/YouGov",
@@ -9884,6 +9891,13 @@
       "subtitle": "Pollster",
       "key": "Christopher Newport University",
       "terms": "Christopher Newport University"
+    },
+    {
+      "type": "pollster",
+      "label": "Clarity Campaign Labs",
+      "subtitle": "Pollster",
+      "key": "Clarity Campaign Labs",
+      "terms": "Clarity Campaign Labs"
     },
     {
       "type": "pollster",
@@ -10129,6 +10143,13 @@
       "subtitle": "Pollster",
       "key": "Larsen for Congress",
       "terms": "Larsen for Congress"
+    },
+    {
+      "type": "pollster",
+      "label": "Leger",
+      "subtitle": "Pollster",
+      "key": "Leger",
+      "terms": "Leger"
     },
     {
       "type": "pollster",
@@ -10535,6 +10556,13 @@
       "subtitle": "Pollster",
       "key": "Tulchin Research",
       "terms": "Tulchin Research"
+    },
+    {
+      "type": "pollster",
+      "label": "UMass Lowell",
+      "subtitle": "Pollster",
+      "key": "UMass Lowell",
+      "terms": "UMass Lowell"
     },
     {
       "type": "pollster",

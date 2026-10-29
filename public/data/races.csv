@@ -1,471 +1,471 @@
 race_code,race_type,state,district,dem_candidate,rep_candidate,incumbent_party,seat_holder,dem_probability,rep_probability,forecast_margin_d_minus_r,rating,relative_partisan_lean_d_minus_r,poll_average_margin,poll_count,latest_race_poll
-AK-SEN,senate,AK,SEN,Mary Peltola,Dan Sullivan,REP,REP,0.5809,0.4191,1.02,Lean D,-13.18,3.68,9,2026-10-16
-AL-SEN,senate,AL,SEN,Everett Wess,Barry Moore,,REP,0.001,0.999,-20.43,Safe R,-29.66,-18.76,3,2026-10-17
-AR-SEN,senate,AR,SEN,Hallie Shoffner,Tom Cotton,REP,REP,0.001,0.999,-18.98,Safe R,-30.68,-9.54,2,2026-10-13
-CO-SEN,senate,CO,SEN,John Hickenlooper,Mark Baisley,DEM,DEM,0.998,0.002,20.75,Safe D,11.62,,0,
-DE-SEN,senate,DE,SEN,Chris Coons,Michael Katz,DEM,DEM,0.999,0.001,24.81,Safe D,15.68,,0,
-FL-SEN,senate,FL,SEN,Angie Nixon,Ashley Moody,REP,REP,0.1033,0.8967,-5.87,Likely R,-10.55,-6.26,22,2026-10-27
-GA-SEN,senate,GA,SEN,Jon Ossoff,Mike Collins,DEM,DEM,0.975,0.025,9.26,Safe D,-1.77,9.68,13,2026-10-23
-IA-SEN,senate,IA,SEN,Josh Turek,Ashley Hinson,,REP,0.5365,0.4635,0.43,Toss-up,-12.16,1.45,27,2026-10-23
-ID-SEN,senate,ID,SEN,Todd Achilles,Jim Risch,REP,REP,0.001,0.999,-29.39,Safe R,-36.22,,0,
-IL-SEN,senate,IL,SEN,Juliana Stratton,Don Tracy,,DEM,0.999,0.001,19.0,Safe D,12.82,15.72,2,2026-10-20
-KS-SEN,senate,KS,SEN,Adam Hamilton,Roger Marshall,REP,REP,0.4169,0.5831,-1.02,Lean R,-16.31,1.49,13,2026-10-14
-KY-SEN,senate,KY,SEN,Charles Booker,Andy Barr,,REP,0.0011,0.9989,-22.03,Safe R,-30.01,,0,
-LA-SEN,senate,LA,SEN,Jamie Davis,Julia Letlow,,REP,0.0405,0.9595,-11.41,Safe R,-21.46,-4.0,1,2026-09-19
-MA-SEN,senate,MA,SEN,Ed Markey,John Deaton,DEM,DEM,0.999,0.001,32.01,Safe D,27.85,26.97,4,2026-10-18
-ME-SEN,senate,ME,SEN,Troy Jackson,Susan Collins,REP,REP,0.8567,0.1433,4.99,Likely D,7.45,3.11,24,2026-10-25
-MI-SEN,senate,MI,SEN,Abdul El-Sayed,Mike Rogers,,DEM,0.8132,0.1868,4.22,Likely D,-0.42,3.45,34,2026-10-22
-MN-SEN,senate,MN,SEN,Peggy Flanagan,Michele Tafoya,,DEM,0.9646,0.0354,8.43,Safe D,4.9,7.57,14,2026-10-26
-MS-SEN,senate,MS,SEN,Scott Colom,Cindy Hyde-Smith,REP,REP,0.0343,0.9657,-11.71,Safe R,-21.52,-3.0,1,2026-10-22
-MT-SEN,senate,MT,SEN,Alani Bankhead,Kurt Alme,,REP,0.001,0.999,-21.25,Safe R,-19.8,-26.18,7,2026-10-18
-NC-SEN,senate,NC,SEN,Roy Cooper,Michael Whatley,,REP,0.9834,0.0166,9.98,Safe D,-2.81,10.96,25,2026-10-25
-NE-SEN,senate,NE,SEN,Dan Osborn,Pete Ricketts,REP,REP,0.0244,0.9756,-12.84,Safe R,-20.79,-9.0,1,2026-09-30
-NH-SEN,senate,NH,SEN,Chris Pappas,John E. Sununu,,DEM,0.9475,0.0525,7.75,Safe D,3.74,6.76,11,2026-10-20
-NJ-SEN,senate,NJ,SEN,Cory Booker,Justin Murphy,DEM,DEM,0.9922,0.0078,17.41,Safe D,8.28,,0,
-NM-SEN,senate,NM,SEN,Ben Ray Lujan,Larry Marker,DEM,DEM,0.9891,0.0109,16.51,Safe D,7.39,,0,
-OH-SEN,senate,OH,SEN,Sherrod Brown,Jon Husted,REP,REP,0.7586,0.2414,3.27,Likely D,-10.44,4.6,28,2026-10-26
-OK-SEN,senate,OK,SEN,Jasmine Thomas,Kevin Hern,,REP,0.001,0.999,-26.83,Safe R,-34.81,,0,
-OR-SEN,senate,OR,SEN,Jeff Merkley,David Brock Smith,DEM,DEM,0.999,0.001,24.35,Safe D,15.22,,0,
-RI-SEN,senate,RI,SEN,Jack Reed,Raymond McKay,DEM,DEM,0.999,0.001,26.87,Safe D,15.8,29.65,3,2026-10-11
-SC-SEN,senate,SC,SEN,Annie Andrews,Darline Graham,REP,REP,0.3311,0.6689,-2.1,Lean R,-16.6,-0.06,9,2026-10-26
-SD-SEN,senate,SD,SEN,Brian Bengs,Mike Rounds,REP,REP,0.001,0.999,-22.52,Safe R,-29.35,,0,
-TN-SEN,senate,TN,SEN,Marquita Bradshaw,Bill Hagerty,REP,REP,0.0013,0.9987,-21.75,Safe R,-28.58,,0,
-TX-SEN,senate,TX,SEN,James Talarico,Ken Paxton,,REP,0.681,0.319,2.19,Lean D,-11.91,3.38,40,2026-10-26
-VA-SEN,senate,VA,SEN,Mark Warner,Bert Mizusawa,DEM,DEM,0.9869,0.0131,16.0,Safe D,6.87,,0,
-WV-SEN,senate,WV,SEN,Rachel Fetty Anderson,Shelley Moore Capito,REP,REP,0.001,0.999,-35.22,Safe R,-42.05,,0,
-WY-SEN,senate,WY,SEN,James Byrd,Harriet Hageman,,REP,0.001,0.999,-38.7,Safe R,-46.68,,0,
-AK-01,house,AK,01,Bill Hill,Nick Begich III,REP,REP,0.1623,0.8377,-6.21,Likely R,-13.18,,0,
-AL-01,house,AL,01,Clyde Jones,Jerry Carl,,REP,0.001,0.999,-26.87,Safe R,-34.85,,0,
-AL-02,house,AL,02,Shomari Figures,Rhett Marques,DEM,DEM,0.2592,0.7408,-4.07,Likely R,-13.05,,0,
-AL-03,house,AL,03,Lee McInnis,Mike Rogers,REP,REP,0.001,0.999,-38.64,Safe R,-45.62,,0,
-AL-04,house,AL,04,Amanda Pusczek,Robert Aderholt,REP,REP,0.001,0.999,-58.9,Safe R,-65.88,,0,
-AL-05,house,AL,05,Andrew Sneed,Dale Strong,REP,REP,0.001,0.999,-22.3,Safe R,-29.27,,0,
-AL-06,house,AL,06,Maurice Mercer,Gary Palmer,REP,REP,0.001,0.999,-27.77,Safe R,-34.75,,0,
-AL-07,house,AL,07,Terri Sewell,Ammie Akin,DEM,DEM,0.999,0.001,28.29,Safe D,19.31,,0,
-AR-01,house,AR,01,Terri Green,Rick Crawford,REP,REP,0.001,0.999,-37.98,Safe R,-44.96,,0,
-AR-02,house,AR,02,Chris Jones,French Hill,REP,REP,0.0935,0.9065,-7.47,Safe R,-15.55,-4.0,1,2026-10-14
-AR-03,house,AR,03,Robb Ryerse,Steve Womack,REP,REP,0.0015,0.9985,-18.65,Safe R,-25.63,,0,
-AR-04,house,AR,04,James Russell,Bruce Westerman,REP,REP,0.001,0.999,-32.31,Safe R,-39.29,,0,
-AZ-01,house,AZ,01,Amish Shah,Jay Feely,,REP,0.8155,0.1845,5.12,Likely D,-2.18,2.8,1,2026-10-01
-AZ-02,house,AZ,02,Jonathan Nez,Eli Crane,REP,REP,0.2199,0.7801,-4.37,Likely R,-13.38,2.0,1,2026-10-14
-AZ-03,house,AZ,03,Yassamin Ansari,(no Republican filed),DEM,DEM,0.999,0.001,52.29,Safe D,43.32,,0,
-AZ-04,house,AZ,04,Greg Stanton,Zuhdi Jasser,DEM,DEM,0.9954,0.0046,16.39,Safe D,7.41,,0,
-AZ-05,house,AZ,05,Elizabeth Lee,Mark Lamb,,REP,0.0335,0.9665,-11.54,Safe R,-19.52,,0,
-AZ-06,house,AZ,06,JoAnna Mendoza,Juan Ciscomani,REP,REP,0.8393,0.1607,6.25,Likely D,-0.73,,0,
-AZ-07,house,AZ,07,Adelita Grijalva,Daniel Butierez,DEM,DEM,0.999,0.001,34.33,Safe D,25.35,,0,
-AZ-08,house,AZ,08,Bernadette Greene-Placentia,Abraham Hamadeh,REP,REP,0.0758,0.9242,-9.03,Safe R,-16.01,,0,
-AZ-09,house,AZ,09,Danielle Sterbinsky,Paul Gosar,REP,REP,0.001,0.999,-23.2,Safe R,-30.18,,0,
-CA-01,house,CA,01,Mike McGuire,James Gallagher,REP,REP,0.999,0.001,20.96,Safe D,13.98,,0,
-CA-02,house,CA,02,Jared Huffman,Robin Littau,DEM,DEM,0.999,0.001,35.31,Safe D,26.34,,0,
-CA-03,house,CA,03,Amerish Bera,Robb Tucker,DEM,DEM,0.999,0.001,20.35,Safe D,11.37,,0,
+AK-SEN,senate,AK,SEN,Mary Peltola,Dan Sullivan,REP,REP,0.5798,0.4202,1.0,Lean D,-13.18,3.68,9,2026-10-16
+AL-SEN,senate,AL,SEN,Everett Wess,Barry Moore,,REP,0.001,0.999,-17.72,Safe R,-29.66,-13.99,4,2026-10-24
+AR-SEN,senate,AR,SEN,Hallie Shoffner,Tom Cotton,REP,REP,0.001,0.999,-19.02,Safe R,-30.68,-9.54,2,2026-10-13
+CO-SEN,senate,CO,SEN,John Hickenlooper,Mark Baisley,DEM,DEM,0.998,0.002,20.7,Safe D,11.62,,0,
+DE-SEN,senate,DE,SEN,Chris Coons,Michael Katz,DEM,DEM,0.999,0.001,24.76,Safe D,15.68,,0,
+FL-SEN,senate,FL,SEN,Angie Nixon,Ashley Moody,REP,REP,0.1029,0.8971,-5.87,Likely R,-10.55,-6.26,22,2026-10-27
+GA-SEN,senate,GA,SEN,Jon Ossoff,Mike Collins,DEM,DEM,0.9749,0.0251,9.25,Safe D,-1.77,9.68,13,2026-10-23
+IA-SEN,senate,IA,SEN,Josh Turek,Ashley Hinson,,REP,0.5357,0.4643,0.42,Toss-up,-12.16,1.45,27,2026-10-23
+ID-SEN,senate,ID,SEN,Todd Achilles,Jim Risch,REP,REP,0.001,0.999,-29.44,Safe R,-36.22,,0,
+IL-SEN,senate,IL,SEN,Juliana Stratton,Don Tracy,,DEM,0.999,0.001,18.96,Safe D,12.82,15.72,2,2026-10-20
+KS-SEN,senate,KS,SEN,Adam Hamilton,Roger Marshall,REP,REP,0.5403,0.4597,0.47,Toss-up,-16.31,2.4,14,2026-10-26
+KY-SEN,senate,KY,SEN,Charles Booker,Andy Barr,,REP,0.0011,0.9989,-22.09,Safe R,-30.01,,0,
+LA-SEN,senate,LA,SEN,Jamie Davis,Julia Letlow,,REP,0.0399,0.9601,-11.45,Safe R,-21.46,-4.0,1,2026-09-19
+MA-SEN,senate,MA,SEN,Ed Markey,John Deaton,DEM,DEM,0.999,0.001,31.72,Safe D,27.85,27.54,5,2026-10-18
+ME-SEN,senate,ME,SEN,Troy Jackson,Susan Collins,REP,REP,0.8579,0.1421,5.0,Likely D,7.45,3.21,25,2026-10-26
+MI-SEN,senate,MI,SEN,Abdul El-Sayed,Mike Rogers,,DEM,0.8426,0.1574,4.67,Likely D,-0.42,4.15,36,2026-10-27
+MN-SEN,senate,MN,SEN,Peggy Flanagan,Michele Tafoya,,DEM,0.9644,0.0356,8.42,Safe D,4.9,7.57,14,2026-10-26
+MS-SEN,senate,MS,SEN,Scott Colom,Cindy Hyde-Smith,REP,REP,0.0339,0.9661,-11.75,Safe R,-21.52,-3.0,1,2026-10-22
+MT-SEN,senate,MT,SEN,Alani Bankhead,Kurt Alme,,REP,0.001,0.999,-22.64,Safe R,-19.8,-26.69,8,2026-10-23
+NC-SEN,senate,NC,SEN,Roy Cooper,Michael Whatley,,REP,0.9858,0.0142,10.26,Safe D,-2.81,11.31,26,2026-10-25
+NE-SEN,senate,NE,SEN,Dan Osborn,Pete Ricketts,REP,REP,0.024,0.976,-12.88,Safe R,-20.79,-9.0,1,2026-09-30
+NH-SEN,senate,NH,SEN,Chris Pappas,John E. Sununu,,DEM,0.9479,0.0521,7.76,Safe D,3.74,6.79,12,2026-10-20
+NJ-SEN,senate,NJ,SEN,Cory Booker,Justin Murphy,DEM,DEM,0.992,0.008,17.36,Safe D,8.28,,0,
+NM-SEN,senate,NM,SEN,Ben Ray Lujan,Larry Marker,DEM,DEM,0.9889,0.0111,16.46,Safe D,7.39,,0,
+OH-SEN,senate,OH,SEN,Sherrod Brown,Jon Husted,REP,REP,0.7581,0.2419,3.27,Likely D,-10.44,4.6,28,2026-10-26
+OK-SEN,senate,OK,SEN,Jasmine Thomas,Kevin Hern,,REP,0.001,0.999,-26.88,Safe R,-34.81,,0,
+OR-SEN,senate,OR,SEN,Jeff Merkley,David Brock Smith,DEM,DEM,0.999,0.001,24.3,Safe D,15.22,,0,
+RI-SEN,senate,RI,SEN,Jack Reed,Raymond McKay,DEM,DEM,0.999,0.001,26.84,Safe D,15.8,29.65,3,2026-10-11
+SC-SEN,senate,SC,SEN,Annie Andrews,Darline Graham,REP,REP,0.3303,0.6697,-2.11,Lean R,-16.6,-0.06,9,2026-10-26
+SD-SEN,senate,SD,SEN,Brian Bengs,Mike Rounds,REP,REP,0.001,0.999,-22.57,Safe R,-29.35,,0,
+TN-SEN,senate,TN,SEN,Marquita Bradshaw,Bill Hagerty,REP,REP,0.0012,0.9988,-21.8,Safe R,-28.58,,0,
+TX-SEN,senate,TX,SEN,James Talarico,Ken Paxton,,REP,0.695,0.305,2.37,Lean D,-11.91,3.53,42,2026-10-27
+VA-SEN,senate,VA,SEN,Mark Warner,Bert Mizusawa,DEM,DEM,0.9866,0.0134,15.95,Safe D,6.87,,0,
+WV-SEN,senate,WV,SEN,Rachel Fetty Anderson,Shelley Moore Capito,REP,REP,0.001,0.999,-35.27,Safe R,-42.05,,0,
+WY-SEN,senate,WY,SEN,James Byrd,Harriet Hageman,,REP,0.001,0.999,-38.75,Safe R,-46.68,,0,
+AK-01,house,AK,01,Bill Hill,Nick Begich III,REP,REP,0.1603,0.8397,-6.26,Likely R,-13.18,,0,
+AL-01,house,AL,01,Clyde Jones,Jerry Carl,,REP,0.001,0.999,-26.92,Safe R,-34.85,,0,
+AL-02,house,AL,02,Shomari Figures,Rhett Marques,DEM,DEM,0.2117,0.7883,-4.26,Likely R,-13.05,-4.5,2,2026-10-25
+AL-03,house,AL,03,Lee McInnis,Mike Rogers,REP,REP,0.001,0.999,-38.69,Safe R,-45.62,,0,
+AL-04,house,AL,04,Amanda Pusczek,Robert Aderholt,REP,REP,0.001,0.999,-58.95,Safe R,-65.88,,0,
+AL-05,house,AL,05,Andrew Sneed,Dale Strong,REP,REP,0.001,0.999,-22.35,Safe R,-29.27,,0,
+AL-06,house,AL,06,Maurice Mercer,Gary Palmer,REP,REP,0.001,0.999,-27.82,Safe R,-34.75,,0,
+AL-07,house,AL,07,Terri Sewell,Ammie Akin,DEM,DEM,0.999,0.001,28.24,Safe D,19.31,,0,
+AR-01,house,AR,01,Terri Green,Rick Crawford,REP,REP,0.001,0.999,-38.03,Safe R,-44.96,,0,
+AR-02,house,AR,02,Chris Jones,French Hill,REP,REP,0.0924,0.9076,-7.51,Safe R,-15.55,-4.0,1,2026-10-14
+AR-03,house,AR,03,Robb Ryerse,Steve Womack,REP,REP,0.0015,0.9985,-18.71,Safe R,-25.63,,0,
+AR-04,house,AR,04,James Russell,Bruce Westerman,REP,REP,0.001,0.999,-32.36,Safe R,-39.29,,0,
+AZ-01,house,AZ,01,Amish Shah,Jay Feely,,REP,0.8137,0.1863,5.08,Likely D,-2.18,2.8,1,2026-10-01
+AZ-02,house,AZ,02,Jonathan Nez,Eli Crane,REP,REP,0.2179,0.7821,-4.41,Likely R,-13.38,2.0,1,2026-10-14
+AZ-03,house,AZ,03,Yassamin Ansari,(no Republican filed),DEM,DEM,0.999,0.001,52.24,Safe D,43.32,,0,
+AZ-04,house,AZ,04,Greg Stanton,Zuhdi Jasser,DEM,DEM,0.9952,0.0048,16.34,Safe D,7.41,,0,
+AZ-05,house,AZ,05,Elizabeth Lee,Mark Lamb,,REP,0.0329,0.9671,-11.59,Safe R,-19.52,,0,
+AZ-06,house,AZ,06,JoAnna Mendoza,Juan Ciscomani,REP,REP,0.8373,0.1627,6.19,Likely D,-0.73,,0,
+AZ-07,house,AZ,07,Adelita Grijalva,Daniel Butierez,DEM,DEM,0.999,0.001,34.28,Safe D,25.35,,0,
+AZ-08,house,AZ,08,Bernadette Greene-Placentia,Abraham Hamadeh,REP,REP,0.0746,0.9254,-9.09,Safe R,-16.01,,0,
+AZ-09,house,AZ,09,Danielle Sterbinsky,Paul Gosar,REP,REP,0.001,0.999,-23.25,Safe R,-30.18,,0,
+CA-01,house,CA,01,Mike McGuire,James Gallagher,REP,REP,0.999,0.001,20.91,Safe D,13.98,,0,
+CA-02,house,CA,02,Jared Huffman,Robin Littau,DEM,DEM,0.999,0.001,35.26,Safe D,26.34,,0,
+CA-03,house,CA,03,Amerish Bera,Robb Tucker,DEM,DEM,0.999,0.001,20.3,Safe D,11.37,,0,
 CA-04,house,CA,04,Mike Thompson,(no Republican — top-two),DEM,DEM,0.999,0.001,50.0,Safe D,16.72,,0,
-CA-05,house,CA,05,Michael Masuda,Tom McClintock,REP,REP,0.0218,0.9782,-12.72,Safe R,-19.7,,0,
-CA-06,house,CA,06,Richard Pan,Kevin Kiley,IND,IND,0.9975,0.0025,17.72,Safe D,9.74,,0,
+CA-05,house,CA,05,Michael Masuda,Tom McClintock,REP,REP,0.0213,0.9787,-12.77,Safe R,-19.7,,0,
+CA-06,house,CA,06,Richard Pan,Kevin Kiley,IND,IND,0.9975,0.0025,17.67,Safe D,9.74,,0,
 CA-07,house,CA,07,Mai Vang,(no Republican — top-two),DEM,DEM,0.999,0.001,50.0,Safe D,15.08,,0,
-CA-08,house,CA,08,John Garamendi,Rudy Recile,DEM,DEM,0.999,0.001,46.52,Safe D,37.55,,0,
-CA-09,house,CA,09,Josh Harder,John McBride,DEM,DEM,0.999,0.001,24.7,Safe D,15.72,,0,
-CA-10,house,CA,10,Mark DeSaulnier,Jeff Frese,DEM,DEM,0.999,0.001,44.94,Safe D,35.96,,0,
+CA-08,house,CA,08,John Garamendi,Rudy Recile,DEM,DEM,0.999,0.001,46.47,Safe D,37.55,,0,
+CA-09,house,CA,09,Josh Harder,John McBride,DEM,DEM,0.999,0.001,24.65,Safe D,15.72,,0,
+CA-10,house,CA,10,Mark DeSaulnier,Jeff Frese,DEM,DEM,0.999,0.001,44.89,Safe D,35.96,,0,
 CA-11,house,CA,11,Scott Wiener,(no Republican — top-two),,DEM,0.999,0.001,50.0,Safe D,72.35,,0,
 CA-12,house,CA,12,Lateefah Simon,(no Republican — top-two),DEM,DEM,0.999,0.001,50.0,Safe D,79.13,,0,
-CA-13,house,CA,13,Adam Gray,Kevin Lincoln,DEM,DEM,0.9879,0.0121,14.2,Safe D,5.22,,0,
+CA-13,house,CA,13,Adam Gray,Kevin Lincoln,DEM,DEM,0.9876,0.0124,14.15,Safe D,5.22,,0,
 CA-14,house,CA,14,Aisha Wahab,(no Republican — top-two),DEM,DEM,0.999,0.001,50.0,Safe D,39.06,,0,
-CA-15,house,CA,15,Kevin Mullin,Charles Hoelter,DEM,DEM,0.999,0.001,61.13,Safe D,52.15,,0,
-CA-16,house,CA,16,Sam Liccardo,Peter Sundin Soulé,DEM,DEM,0.999,0.001,60.23,Safe D,51.25,,0,
-CA-17,house,CA,17,Rohit Khanna,Ritesh Tandon,DEM,DEM,0.999,0.001,52.37,Safe D,43.39,,0,
-CA-18,house,CA,18,Zoe Lofgren,Shane Lewis,DEM,DEM,0.999,0.001,42.34,Safe D,33.37,,0,
-CA-19,house,CA,19,Jimmy Panetta,Peter Verbica,DEM,DEM,0.999,0.001,46.03,Safe D,37.05,,0,
-CA-20,house,CA,20,Sandra Van Scotter,Vince Fong,REP,REP,0.001,0.999,-24.72,Safe R,-31.69,,0,
-CA-21,house,CA,21,Jim Costa,Kyle Kirkland,DEM,DEM,0.9988,0.0012,19.18,Safe D,10.2,,0,
-CA-22,house,CA,22,Randy Villegas,David Valadao,REP,REP,0.9484,0.0516,10.26,Safe D,3.29,,0,
-CA-23,house,CA,23,Tessa Lynn Hodge,Jay Obernolte,REP,REP,0.0379,0.9621,-11.19,Safe R,-18.17,,0,
-CA-24,house,CA,24,Salud Carbajal,Robert Smith,DEM,DEM,0.999,0.001,35.69,Safe D,26.71,,0,
-CA-25,house,CA,25,Raul Ruiz,Joe Males,DEM,DEM,0.9977,0.0023,17.81,Safe D,8.83,,0,
-CA-26,house,CA,26,Jacqui Irwin,Samuel Gallucci,,DEM,0.999,0.001,25.53,Safe D,17.55,,0,
-CA-27,house,CA,27,George Whitesides,Jason Gibbs,DEM,DEM,0.999,0.001,21.63,Safe D,12.65,,0,
-CA-28,house,CA,28,Judy Chu,April Verlato,DEM,DEM,0.999,0.001,37.16,Safe D,28.18,,0,
+CA-15,house,CA,15,Kevin Mullin,Charles Hoelter,DEM,DEM,0.999,0.001,61.07,Safe D,52.15,,0,
+CA-16,house,CA,16,Sam Liccardo,Peter Sundin Soulé,DEM,DEM,0.999,0.001,60.18,Safe D,51.25,,0,
+CA-17,house,CA,17,Rohit Khanna,Ritesh Tandon,DEM,DEM,0.999,0.001,52.31,Safe D,43.39,,0,
+CA-18,house,CA,18,Zoe Lofgren,Shane Lewis,DEM,DEM,0.999,0.001,42.29,Safe D,33.37,,0,
+CA-19,house,CA,19,Jimmy Panetta,Peter Verbica,DEM,DEM,0.999,0.001,45.98,Safe D,37.05,,0,
+CA-20,house,CA,20,Sandra Van Scotter,Vince Fong,REP,REP,0.001,0.999,-24.77,Safe R,-31.69,,0,
+CA-21,house,CA,21,Jim Costa,Kyle Kirkland,DEM,DEM,0.9988,0.0012,19.12,Safe D,10.2,,0,
+CA-22,house,CA,22,Randy Villegas,David Valadao,REP,REP,0.9475,0.0525,10.21,Safe D,3.29,,0,
+CA-23,house,CA,23,Tessa Lynn Hodge,Jay Obernolte,REP,REP,0.0372,0.9628,-11.24,Safe R,-18.17,,0,
+CA-24,house,CA,24,Salud Carbajal,Robert Smith,DEM,DEM,0.999,0.001,35.64,Safe D,26.71,,0,
+CA-25,house,CA,25,Raul Ruiz,Joe Males,DEM,DEM,0.9976,0.0024,17.76,Safe D,8.83,,0,
+CA-26,house,CA,26,Jacqui Irwin,Samuel Gallucci,,DEM,0.999,0.001,25.48,Safe D,17.55,,0,
+CA-27,house,CA,27,George Whitesides,Jason Gibbs,DEM,DEM,0.999,0.001,21.58,Safe D,12.65,,0,
+CA-28,house,CA,28,Judy Chu,April Verlato,DEM,DEM,0.999,0.001,37.1,Safe D,28.18,,0,
 CA-29,house,CA,29,Luz Rivas,(no Republican — top-two),DEM,DEM,0.999,0.001,50.0,Safe D,39.49,,0,
-CA-30,house,CA,30,Laura Friedman,Scott Alan Meyers,DEM,DEM,0.999,0.001,52.01,Safe D,43.03,,0,
-CA-31,house,CA,31,Gilbert Cisneros,Eric Ching,DEM,DEM,0.999,0.001,25.19,Safe D,16.21,,0,
-CA-32,house,CA,32,Brad Sherman,Larry Thompson,DEM,DEM,0.999,0.001,37.21,Safe D,28.23,,0,
-CA-33,house,CA,33,Pete Aguilar,Stephanie Vargas,DEM,DEM,0.999,0.001,23.55,Safe D,14.57,,0,
+CA-30,house,CA,30,Laura Friedman,Scott Alan Meyers,DEM,DEM,0.999,0.001,51.96,Safe D,43.03,,0,
+CA-31,house,CA,31,Gilbert Cisneros,Eric Ching,DEM,DEM,0.999,0.001,25.13,Safe D,16.21,,0,
+CA-32,house,CA,32,Brad Sherman,Larry Thompson,DEM,DEM,0.999,0.001,37.16,Safe D,28.23,,0,
+CA-33,house,CA,33,Pete Aguilar,Stephanie Vargas,DEM,DEM,0.999,0.001,23.5,Safe D,14.57,,0,
 CA-34,house,CA,34,Jimmy Gomez,(no Republican — top-two),DEM,DEM,0.999,0.001,50.0,Safe D,56.95,,0,
-CA-35,house,CA,35,Norma Torres,Mike Cargile,DEM,DEM,0.999,0.001,21.37,Safe D,12.39,,0,
-CA-36,house,CA,36,Ted Lieu,Houston Brignano,DEM,DEM,0.999,0.001,50.77,Safe D,41.8,,0,
+CA-35,house,CA,35,Norma Torres,Mike Cargile,DEM,DEM,0.999,0.001,21.32,Safe D,12.39,,0,
+CA-36,house,CA,36,Ted Lieu,Houston Brignano,DEM,DEM,0.999,0.001,50.72,Safe D,41.8,,0,
 CA-37,house,CA,37,Sydney Kamlager-Dove,(no Republican — top-two),DEM,DEM,0.999,0.001,50.0,Safe D,66.01,,0,
-CA-38,house,CA,38,Hilda Solis,Pedro Casas,,DEM,0.999,0.001,25.19,Safe D,17.22,,0,
-CA-39,house,CA,39,Mark Takano,Steve Manos,DEM,DEM,0.999,0.001,23.31,Safe D,14.33,,0,
+CA-38,house,CA,38,Hilda Solis,Pedro Casas,,DEM,0.999,0.001,25.14,Safe D,17.22,,0,
+CA-39,house,CA,39,Mark Takano,Steve Manos,DEM,DEM,0.999,0.001,23.26,Safe D,14.33,,0,
 CA-40,house,CA,40,(no Democrat — top-two),Ken Calvert,REP,REP,0.001,0.999,-50.0,Safe R,-11.62,,0,
-CA-41,house,CA,41,Linda Sanchez,Mitch Clemmons,DEM,DEM,0.999,0.001,26.84,Safe D,17.86,,0,
-CA-42,house,CA,42,Robert Garcia,Brian Burley,DEM,DEM,0.999,0.001,24.23,Safe D,15.25,,0,
-CA-43,house,CA,43,Maxine Waters,Cristian Morales,DEM,DEM,0.999,0.001,63.88,Safe D,54.9,,0,
-CA-44,house,CA,44,Nanette Barragan,Genevieve Angel,DEM,DEM,0.999,0.001,50.58,Safe D,41.61,,0,
-CA-45,house,CA,45,Derek Tran,Chuong Vo,DEM,DEM,0.9925,0.0075,15.32,Safe D,6.35,,0,
-CA-46,house,CA,46,Lou Correa,David Pan,DEM,DEM,0.999,0.001,29.2,Safe D,20.22,,0,
-CA-47,house,CA,47,Dave Min,Jenny Rae Le Roux,DEM,DEM,0.999,0.001,20.83,Safe D,11.85,,0,
-CA-48,house,CA,48,Marni von Wilpert,Jim Desmond,,REP,0.9722,0.0278,10.26,Safe D,4.21,6.76,2,2026-10-20
-CA-49,house,CA,49,Mike Levin,Armen Kurdian,DEM,DEM,0.999,0.001,22.05,Safe D,13.07,,0,
-CA-50,house,CA,50,Scott Peters,Steve Cohen,DEM,DEM,0.999,0.001,28.31,Safe D,19.34,,0,
-CA-51,house,CA,51,Sara Jacobs,Ricardo Cabrera,DEM,DEM,0.999,0.001,28.88,Safe D,19.9,,0,
-CA-52,house,CA,52,Juan Vargas,Jeff Belle,DEM,DEM,0.999,0.001,31.63,Safe D,22.66,,0,
-CO-01,house,CO,01,Melat Kiros,Christy Peterson,,DEM,0.999,0.001,66.79,Safe D,58.81,,0,
-CO-02,house,CO,02,Joe Neguse,Kelley Dennison,DEM,DEM,0.999,0.001,49.63,Safe D,40.65,,0,
-CO-03,house,CO,03,Dwayne Romero,Jeff Hurd,REP,REP,0.3694,0.6306,-1.88,Lean R,-9.83,1.0,1,2026-10-21
-CO-04,house,CO,04,Eileen Laubacher,Lauren Boebert,REP,REP,0.0312,0.9688,-10.64,Safe R,-19.23,-5.0,1,2026-09-24
-CO-05,house,CO,05,Jessica Killin,Jeff Crank,REP,REP,0.4388,0.5612,-0.77,Lean R,-10.21,1.67,4,2026-10-20
-CO-06,house,CO,06,Jason Crow,Jason Clark,DEM,DEM,0.999,0.001,29.96,Safe D,20.98,,0,
-CO-07,house,CO,07,Brittany Pettersen,Tim Bennett,DEM,DEM,0.999,0.001,23.72,Safe D,14.74,,0,
-CO-08,house,CO,08,Manny Rutinel,Gabe Evans,REP,REP,0.7774,0.2226,4.19,Likely D,-0.46,-1.05,2,2026-09-17
-CT-01,house,CT,01,Luke Bronin,Amy Chai,,DEM,0.999,0.001,32.45,Safe D,24.48,,0,
-CT-02,house,CT,02,Joe Courtney,George Austin,DEM,DEM,0.9973,0.0027,17.5,Safe D,8.52,,0,
-CT-03,house,CT,03,Rosa DeLauro,Christopher Lancia,DEM,DEM,0.999,0.001,24.56,Safe D,15.58,,0,
-CT-04,house,CT,04,Jim Himes,Michael Goldstein,DEM,DEM,0.999,0.001,34.48,Safe D,25.51,,0,
-CT-05,house,CT,05,Jahana Hayes,Chris Shea,DEM,DEM,0.9912,0.0088,13.53,Safe D,6.76,6.0,1,2026-10-01
-DE-01,house,DE,01,Sarah McBride,Donyale Hall,DEM,DEM,0.999,0.001,24.66,Safe D,15.68,,0,
-FL-01,house,FL,01,Gay Valimont,Jimmy Patronis,REP,REP,0.001,0.999,-29.65,Safe R,-36.62,,0,
-FL-02,house,FL,02,Amanda Green,Austin Rogers,,REP,0.0887,0.9113,-8.5,Safe R,-16.48,,0,
-FL-03,house,FL,03,Seth Harp,Kat Cammack,REP,REP,0.0238,0.9762,-12.48,Safe R,-19.46,,0,
-FL-04,house,FL,04,LaShonda Holloway,Aaron Bean,REP,REP,0.2736,0.7264,-3.79,Likely R,-10.77,,0,
-FL-05,house,FL,05,Rachel Grage,John Rutherford,REP,REP,0.0159,0.9841,-13.53,Safe R,-20.51,,0,
-FL-06,house,FL,06,Eric Yonce,Randy Fine,REP,REP,0.001,0.999,-21.64,Safe R,-28.62,,0,
-FL-07,house,FL,07,Bale Dalton,Ryan Elijah,,REP,0.3269,0.6731,-2.41,Lean R,-10.88,-1.5,2,2026-10-19
-FL-08,house,FL,08,Jennifer Jenkins,Mike Haridopolos,REP,REP,0.0996,0.9004,-8.09,Safe R,-15.07,,0,
-FL-09,house,FL,09,Darren Soto,Dan Green,DEM,DEM,0.2172,0.7828,-4.42,Likely R,-14.82,0.0,1,2026-10-15
-FL-10,house,FL,10,Maxwell Frost,(no Republican filed),DEM,DEM,0.999,0.001,35.75,Safe D,26.78,,0,
-FL-11,house,FL,11,James Pericola,Joe Strada,,REP,0.1561,0.8439,-6.37,Likely R,-14.35,,0,
-FL-12,house,FL,12,Kimberly Overman,Gus Bilirakis,REP,REP,0.171,0.829,-5.99,Likely R,-12.97,,0,
-FL-13,house,FL,13,Leela Gray,Anna Paulina Luna,REP,REP,0.263,0.737,-3.59,Likely R,-12.04,1.0,1,2026-10-15
-FL-14,house,FL,14,Kathy Castor,Mike Beltran,DEM,DEM,0.5981,0.4019,1.41,Lean D,-8.72,5.0,1,2026-10-14
-FL-15,house,FL,15,Robert People,Laurel Lee,REP,REP,0.0456,0.9544,-10.64,Safe R,-17.62,,0,
-FL-16,house,FL,16,Kelly Kirschner,Sydney Gruters,,REP,0.2553,0.7447,-3.75,Likely R,-11.65,-4.0,1,2026-10-02
-FL-17,house,FL,17,Matthew Montavon,Greg Steube,REP,REP,0.0184,0.9816,-13.16,Safe R,-20.14,,0,
-FL-18,house,FL,18,Curtis Gibson,Scott Franklin,REP,REP,0.0947,0.9053,-8.27,Safe R,-15.25,,0,
-FL-19,house,FL,19,Victor Arias,Jim Schwartzel,,REP,0.001,0.999,-20.38,Safe R,-28.36,,0,
-FL-20,house,FL,20,Debbie Wasserman Schultz,Brent Andersen,DEM,DEM,0.999,0.001,49.57,Safe D,40.59,,0,
-FL-21,house,FL,21,James Martin,Brian Mast,REP,REP,0.0742,0.9258,-8.25,Safe R,-14.44,-11.0,1,2026-09-25
-FL-22,house,FL,22,Pia Dandiya,Casey Askar,,DEM,0.5666,0.4334,1.06,Lean D,-6.92,,0,
-FL-23,house,FL,23,Lois Frankel,Deborah Adeimy,DEM,DEM,0.999,0.001,26.46,Safe D,17.48,,0,
-FL-24,house,FL,24,Oliver Gilbert,Mayonna Te Brown,,DEM,0.999,0.001,52.33,Safe D,44.35,,0,
-FL-25,house,FL,25,Jared Moskowitz,Scott Singer,DEM,DEM,0.7691,0.2309,3.74,Likely D,-5.19,3.68,3,2026-10-27
-FL-26,house,FL,26,Nicole Locklin,Mario Diaz-Balart,REP,REP,0.1703,0.8297,-6.0,Likely R,-12.98,,0,
-FL-27,house,FL,27,Eliott Rodriguez,Maria Salazar,REP,REP,0.3232,0.6768,-2.63,Lean R,-10.06,-1.0,1,2026-09-13
-FL-28,house,FL,28,Phil Ehr,Carlos Gimenez,REP,REP,0.0222,0.9778,-12.67,Safe R,-19.65,,0,
-GA-01,house,GA,01,Amanda Hollowell,Jim Kingston,,REP,0.1195,0.8805,-7.42,Likely R,-15.4,,0,
-GA-02,house,GA,02,Sanford Bishop,Matt Day,DEM,DEM,0.9971,0.0029,17.38,Safe D,8.41,,0,
-GA-03,house,GA,03,Maura Keller,Brian Jack,REP,REP,0.001,0.999,-19.0,Safe R,-30.23,-5.0,1,2026-10-07
-GA-04,house,GA,04,Henry Johnson,James Duffie,DEM,DEM,0.999,0.001,63.39,Safe D,54.41,,0,
-GA-05,house,GA,05,Nikema Williams,John Salvesen,DEM,DEM,0.999,0.001,81.75,Safe D,72.77,,0,
-GA-06,house,GA,06,Lucy McBath,Kevin Martin,DEM,DEM,0.999,0.001,59.04,Safe D,50.06,,0,
-GA-07,house,GA,07,Tony Kozycki,Rich McCormick,REP,REP,0.0256,0.9744,-11.06,Safe R,-22.07,2.0,1,2026-10-09
-GA-08,house,GA,08,Kelly Esti,Austin Scott,REP,REP,0.001,0.999,-23.14,Safe R,-30.11,,0,
-GA-09,house,GA,09,Caitlyn Gegen,Andrew Clyde,REP,REP,0.001,0.999,-27.31,Safe R,-34.29,,0,
-GA-10,house,GA,10,Pamela DeLancy,Houston Gaines,,REP,0.0172,0.9828,-13.33,Safe R,-21.3,,0,
-GA-11,house,GA,11,Chris Harden,John Cowan,,REP,0.0222,0.9778,-11.05,Safe R,-23.63,-0.5,2,2026-09-11
-GA-12,house,GA,12,Ceretta Smith,Rick Allen,REP,REP,0.1588,0.8412,-6.3,Likely R,-13.27,,0,
-GA-13,house,GA,13,Jasmine Clark,Jonathan Chavez,,DEM,0.999,0.001,49.78,Safe D,41.8,,0,
-GA-14,house,GA,14,Shawn Harris,Clay Fuller,REP,REP,0.001,0.999,-30.62,Safe R,-37.6,,0,
-HI-01,house,HI,01,Ed Case,Adriel Lam,DEM,DEM,0.999,0.001,35.69,Safe D,26.71,,0,
-HI-02,house,HI,02,Jill Tokuda,Brenton Awa,DEM,DEM,0.999,0.001,33.42,Safe D,24.44,,0,
-IA-01,house,IA,01,Christina Bohannan,Mariannette Miller-Meeks,REP,REP,0.493,0.507,-0.11,Toss-up,-7.09,,0,
-IA-02,house,IA,02,Lindsay James,Joe Mitchell,,REP,0.5162,0.4838,0.23,Toss-up,-8.63,3.0,1,2026-10-14
-IA-03,house,IA,03,Sarah Trone Garriott,Zach Nunn,REP,REP,0.7109,0.2891,3.5,Likely D,-3.48,,0,
-IA-04,house,IA,04,Dave Dawson,Chris McGowan,,REP,0.001,0.999,-22.58,Safe R,-30.56,,0,
-ID-01,house,ID,01,Kaylee Peterson,Russ Fulcher,REP,REP,0.001,0.999,-34.65,Safe R,-44.59,-26.0,1,2026-10-22
-ID-02,house,ID,02,Elinor Gilbreath,Mike Simpson,REP,REP,0.001,0.999,-18.56,Safe R,-26.76,-15.0,1,2026-10-22
-IL-01,house,IL,01,Jonathan Jackson,Christian Maxwell,DEM,DEM,0.999,0.001,44.38,Safe D,35.4,,0,
-IL-02,house,IL,02,Donna Miller,Michael Noack,,DEM,0.999,0.001,43.61,Safe D,35.63,,0,
-IL-03,house,IL,03,Delia Ramirez,Angel Oakley,DEM,DEM,0.999,0.001,43.77,Safe D,34.79,,0,
-IL-04,house,IL,04,Patty Garcia,Lupe Castillo,,DEM,0.999,0.001,41.82,Safe D,33.84,,0,
-IL-05,house,IL,05,Mike Quigley,Tommy Hanson,DEM,DEM,0.999,0.001,47.4,Safe D,38.42,,0,
-IL-06,house,IL,06,Sean Casten,Niki Conforti,DEM,DEM,0.9944,0.0056,15.99,Safe D,7.02,,0,
-IL-07,house,IL,07,La Shawn Ford,Chad Koppie,,DEM,0.999,0.001,76.46,Safe D,68.48,,0,
-IL-08,house,IL,08,Melissa Bean,Jennifer Davis,,DEM,0.997,0.003,17.32,Safe D,9.34,,0,
-IL-09,house,IL,09,Daniel Biss,John Elleson,,DEM,0.999,0.001,46.53,Safe D,38.55,,0,
-IL-10,house,IL,10,Brad Schneider,Carl Lambrecht,DEM,DEM,0.999,0.001,32.34,Safe D,23.36,,0,
-IL-11,house,IL,11,Bill Foster,Jeff Walter,DEM,DEM,0.999,0.001,21.48,Safe D,12.51,,0,
-IL-12,house,IL,12,Julie Fortier,Mike Bost,REP,REP,0.001,0.999,-36.97,Safe R,-43.95,,0,
-IL-13,house,IL,13,Nikki Budzinski,Jeff Wilson,DEM,DEM,0.999,0.001,19.8,Safe D,10.82,,0,
-IL-14,house,IL,14,Lauren Underwood,James Marter,DEM,DEM,0.994,0.006,15.83,Safe D,6.85,,0,
-IL-15,house,IL,15,Jennifer Todd,Mary Miller,REP,REP,0.001,0.999,-33.25,Safe R,-40.23,,0,
-IL-16,house,IL,16,Paul Nolley,Darin LaHood,REP,REP,0.0058,0.9942,-15.91,Safe R,-22.89,,0,
-IL-17,house,IL,17,Eric Sorensen,Dillan Vancil,DEM,DEM,0.99,0.01,14.65,Safe D,5.67,,0,
-IN-01,house,IN,01,Frank Mrvan,Barb Regnitz,DEM,DEM,0.9685,0.0315,11.71,Safe D,2.73,,0,
-IN-02,house,IN,02,Jamee Decio,Rudy Yakym,REP,REP,0.0013,0.9987,-19.04,Safe R,-26.02,,0,
-IN-03,house,IN,03,Kelly Thompson,Marlin Stutzman,REP,REP,0.001,0.999,-24.64,Safe R,-31.61,,0,
-IN-04,house,IN,04,Drew Cox,Jim Baird,REP,REP,0.001,0.999,-23.11,Safe R,-30.09,,0,
-IN-05,house,IN,05,J.D. Ford,Victoria Spartz,REP,REP,0.0827,0.9173,-7.41,Safe R,-17.25,-2.36,2,2026-10-22
-IN-06,house,IN,06,Cynthia Wirth,Jefferson Shreve,REP,REP,0.001,0.999,-26.25,Safe R,-33.23,,0,
-IN-07,house,IN,07,Andre Carson,Patrick McAuley,DEM,DEM,0.999,0.001,51.23,Safe D,42.26,,0,
-IN-08,house,IN,08,Mary Allen,Mark Messmer,REP,REP,0.001,0.999,-28.77,Safe R,-35.75,,0,
-IN-09,house,IN,09,Brad Meyer,Erin Houchin,REP,REP,0.001,0.999,-22.78,Safe R,-29.76,,0,
-KS-01,house,KS,01,Lauren Reinhold,Tracey Mann,REP,REP,0.001,0.999,-24.67,Safe R,-31.65,,0,
-KS-02,house,KS,02,Don Coover,Derek Schmidt,REP,REP,0.0384,0.9616,-9.97,Safe R,-19.29,-3.0,1,2026-10-20
-KS-03,house,KS,03,Sharice Davids,Eric Jenkins,DEM,DEM,0.9792,0.0208,12.83,Safe D,3.85,,0,
-KS-04,house,KS,04,Katy Tyndell,Ron Estes,REP,REP,0.0042,0.9958,-16.61,Safe R,-23.59,,0,
-KY-01,house,KY,01,Drew Williams,James Comer,REP,REP,0.001,0.999,-39.84,Safe R,-46.81,,0,
-KY-02,house,KY,02,Megan Wingfield,Brett Guthrie,REP,REP,0.001,0.999,-33.89,Safe R,-40.87,,0,
-KY-03,house,KY,03,Morgan McGarvey,Maria Rodriguez,DEM,DEM,0.999,0.001,28.91,Safe D,19.93,,0,
-KY-04,house,KY,04,Melissa Strange,Ed Gallrein,,REP,0.001,0.999,-27.64,Safe R,-35.62,,0,
-KY-05,house,KY,05,Ned Pillersdorf,Harold Rogers,REP,REP,0.001,0.999,-56.53,Safe R,-63.5,,0,
-KY-06,house,KY,06,Zach Dembo,Ralph Alvarado,,REP,0.5991,0.4009,1.17,Lean D,-14.55,6.0,6,2026-10-20
-LA-01,house,LA,01,Lauren Jewett,Steve Scalise,REP,REP,0.001,0.999,-32.43,Safe R,-39.41,,0,
-LA-02,house,LA,02,Troy Carter,Peter Williams,DEM,DEM,0.999,0.001,58.89,Safe D,49.92,,0,
-LA-03,house,LA,03,John Day,Clay Higgins,REP,REP,0.001,0.999,-28.67,Safe R,-35.65,,0,
-LA-04,house,LA,04,Matthew Gromlich,Mike Johnson,REP,REP,0.001,0.999,-26.43,Safe R,-33.41,,0,
-LA-05,house,LA,05,Dan McKay,Michael Echols,,REP,0.001,0.999,-25.05,Safe R,-33.03,,0,
-LA-06,house,LA,06,"Lindsay ""Rubia"" Garcia",Blake Miguez,,DEM,0.001,0.999,-24.5,Safe R,-32.48,,0,
-MA-01,house,MA,01,Richard Neal,(no Republican filed),DEM,DEM,0.999,0.001,24.89,Safe D,15.91,,0,
-MA-02,house,MA,02,Jim McGovern,(no Republican filed),DEM,DEM,0.999,0.001,34.9,Safe D,25.92,,0,
-MA-03,house,MA,03,Lori Trahan,Gary Grossi,DEM,DEM,0.999,0.001,30.39,Safe D,21.41,,0,
-MA-04,house,MA,04,Jake Auchincloss,Thomas Stalcup,DEM,DEM,0.999,0.001,31.2,Safe D,22.22,,0,
-MA-05,house,MA,05,Katherine Clark,(no Republican filed),DEM,DEM,0.999,0.001,56.58,Safe D,47.6,,0,
-MA-06,house,MA,06,Daniel Koh,Micah Quinney Jones,,DEM,0.999,0.001,30.5,Safe D,22.52,,0,
-MA-07,house,MA,07,Ayanna Pressley,(no Republican filed),DEM,DEM,0.999,0.001,76.4,Safe D,67.42,,0,
-MA-08,house,MA,08,Stephen Lynch,Robert Gerald Burke,DEM,DEM,0.999,0.001,38.02,Safe D,29.04,,0,
-MA-09,house,MA,09,Bill Keating,Robert MacAllister,DEM,DEM,0.999,0.001,21.53,Safe D,12.55,,0,
-MD-01,house,MD,01,Dan Schwartz,Andy Harris,REP,REP,0.0547,0.9453,-10.08,Safe R,-17.06,,0,
-MD-02,house,MD,02,Johnny Olszewski,Dave Wallace,DEM,DEM,0.999,0.001,28.14,Safe D,19.16,,0,
-MD-03,house,MD,03,Sarah Elfreth,Berney Flowers,DEM,DEM,0.999,0.001,33.4,Safe D,24.42,,0,
-MD-04,house,MD,04,Glenn Ivey,George McDermott,DEM,DEM,0.999,0.001,86.54,Safe D,77.56,,0,
-MD-05,house,MD,05,Adrian Boafo,Chris Chaffee,,DEM,0.999,0.001,42.3,Safe D,34.33,,0,
-MD-06,house,MD,06,April McClain Delaney,Robin Ficker,DEM,DEM,0.9934,0.0066,15.6,Safe D,6.62,,0,
-MD-07,house,MD,07,Kweisi Mfume,Scott Collier,DEM,DEM,0.999,0.001,70.51,Safe D,61.54,,0,
-MD-08,house,MD,08,Jamie Raskin,Cheryl Riley,DEM,DEM,0.999,0.001,68.39,Safe D,59.42,,0,
-ME-01,house,ME,01,Chellie Pingree,Ronald Russell,DEM,DEM,0.999,0.001,29.25,Safe D,22.32,22.0,1,2026-09-21
-ME-02,house,ME,02,Matthew Dunlap,Paul LePage,,DEM,0.5844,0.4156,1.04,Lean D,-8.94,2.73,5,2026-10-14
-MI-01,house,MI,01,Callie Barr,Jack Bergman,REP,REP,0.0116,0.9884,-14.3,Safe R,-21.28,,0,
-MI-02,house,MI,02,Benjamin Ambrose,John Moolenaar,REP,REP,0.001,0.999,-23.05,Safe R,-30.03,,0,
-MI-03,house,MI,03,Hillary Scholten,Terri DeBoer,DEM,DEM,0.9962,0.0038,16.79,Safe D,7.81,,0,
-MI-04,house,MI,04,Sean McCann,Bill Huizenga,REP,REP,0.5997,0.4003,1.45,Lean D,-5.41,1.0,1,2026-09-16
-MI-05,house,MI,05,Christian Vukasovich,Tim Walberg,REP,REP,0.001,0.999,-19.73,Safe R,-26.71,,0,
-MI-06,house,MI,06,Debbie Dingell,Heather Smiley,DEM,DEM,0.999,0.001,33.52,Safe D,24.55,,0,
-MI-07,house,MI,07,William Lawrence,Tom Barrett,REP,REP,0.8763,0.1237,6.55,Likely D,-0.9,8.0,1,2026-10-14
-MI-08,house,MI,08,Kristen McDonald Rivet,Thomas J. Smith,DEM,DEM,0.8993,0.1007,8.05,Likely D,-0.93,,0,
-MI-09,house,MI,09,Ray Pooley,Lisa McClain,REP,REP,0.001,0.999,-25.2,Safe R,-32.17,,0,
-MI-10,house,MI,10,Christina Hines,Michael Bouchard Jr.,,REP,0.6595,0.3405,2.59,Lean D,-5.39,,0,
-MI-11,house,MI,11,Jeremy Moss,Ethan Baker,,DEM,0.999,0.001,25.15,Safe D,17.17,,0,
-MI-12,house,MI,12,Rashida Tlaib,James D. Hooper,DEM,DEM,0.999,0.001,51.06,Safe D,42.09,,0,
-MI-13,house,MI,13,Donavan McKinney,T.P. Nykoriak,,DEM,0.999,0.001,52.49,Safe D,44.51,,0,
-MN-01,house,MN,01,Jake Johnson,Brad Finstad,REP,REP,0.3392,0.6608,-2.15,Lean R,-11.71,1.43,3,2026-10-14
-MN-02,house,MN,02,Matt Little,Eric Pratt,,DEM,0.9909,0.0091,13.53,Safe D,5.98,12.0,1,2026-09-13
-MN-03,house,MN,03,Kelly Morrison,Tyler Bass,DEM,DEM,0.999,0.001,30.26,Safe D,21.28,,0,
-MN-04,house,MN,04,Betty McCollum,Paul Wikstrom,DEM,DEM,0.999,0.001,45.83,Safe D,36.85,,0,
-MN-05,house,MN,05,Ilhan Omar,John Nagel,DEM,DEM,0.999,0.001,72.65,Safe D,63.67,,0,
-MN-06,house,MN,06,Doug Chapin,Tom Emmer,REP,REP,0.0205,0.9795,-12.87,Safe R,-19.85,,0,
-MN-07,house,MN,07,Erik Osberg,Michelle Fischbach,REP,REP,0.001,0.999,-29.34,Safe R,-36.32,,0,
-MN-08,house,MN,08,Trina Swanson,Pete Stauber,REP,REP,0.1396,0.8604,-6.82,Likely R,-13.79,,0,
-MO-01,house,MO,01,Wesley Bell,Paul Berry,DEM,DEM,0.999,0.001,67.41,Safe D,58.43,,0,
-MO-02,house,MO,02,Fred Wellman,Ann Wagner,REP,REP,0.5769,0.4231,0.96,Lean D,-8.41,3.33,4,2026-10-20
-MO-03,house,MO,03,Bethany Mann,Bob Onder,REP,REP,0.001,0.999,-20.21,Safe R,-27.18,,0,
-MO-04,house,MO,04,Jordan Herrera,Mark Alford,REP,REP,0.001,0.999,-35.19,Safe R,-42.17,,0,
-MO-05,house,MO,05,Emanuel Cleaver,Rick Brattin,DEM,DEM,0.999,0.001,33.4,Safe D,24.43,,0,
-MO-06,house,MO,06,Josh Smead,Chris Stigall,,REP,0.001,0.999,-30.99,Safe R,-38.96,,0,
-MO-07,house,MO,07,Missi Hesketh,Eric Burlison,REP,REP,0.001,0.999,-36.12,Safe R,-43.1,,0,
-MO-08,house,MO,08,Christopher Reichard,Jason Smith,REP,REP,0.001,0.999,-46.79,Safe R,-53.76,,0,
-MS-01,house,MS,01,Cliff Johnson,Trent Kelly,REP,REP,0.001,0.999,-29.22,Safe R,-36.2,,0,
-MS-02,house,MS,02,Bennie Thompson,Ron Eller,DEM,DEM,0.999,0.001,31.12,Safe D,22.14,,0,
-MS-03,house,MS,03,Michael Chiaradio,Michael Guest,REP,REP,0.001,0.999,-21.37,Safe R,-28.35,,0,
-MS-04,house,MS,04,Jeffrey Hulum III,Mike Ezell,REP,REP,0.001,0.999,-35.0,Safe R,-41.98,,0,
-MT-01,house,MT,01,Sam Forstag,Aaron Flint,,REP,0.5531,0.4469,0.6,Lean D,-10.89,2.22,8,2026-10-14
-MT-02,house,MT,02,Brian Miller,Troy Downing,REP,REP,0.001,0.999,-22.71,Safe R,-29.88,-22.0,1,2026-09-07
-NC-01,house,NC,01,Don Davis,Laurie Buckhout,DEM,DEM,0.5834,0.4166,1.01,Lean D,-10.3,2.74,6,2026-10-08
-NC-02,house,NC,02,Deborah Ross,Eugene Douglass,DEM,DEM,0.999,0.001,43.63,Safe D,34.65,,0,
-NC-03,house,NC,03,Raymond Smith Jr.,Greg Murphy,REP,REP,0.199,0.801,-5.32,Likely R,-12.3,,0,
-NC-04,house,NC,04,Valerie Foushee,Max Ganorkar,DEM,DEM,0.999,0.001,55.23,Safe D,46.26,,0,
-NC-05,house,NC,05,Chuck Hubbard,Virginia Foxx,REP,REP,0.0528,0.9472,-10.2,Safe R,-17.17,,0,
-NC-06,house,NC,06,Cyril Jefferson,Addison McDowell,REP,REP,0.052,0.948,-10.25,Safe R,-17.22,,0,
-NC-07,house,NC,07,Kimberly Hardy,David Rouzer,REP,REP,0.1582,0.8418,-6.31,Likely R,-13.29,,0,
-NC-08,house,NC,08,Colby Watson,Mark Harris,REP,REP,0.0254,0.9746,-12.3,Safe R,-19.28,,0,
-NC-09,house,NC,09,Richard Ojeda,Richard Hudson,REP,REP,0.093,0.907,-7.45,Safe R,-15.59,-4.0,1,2026-10-20
-NC-10,house,NC,10,Ashley Bell,Pat Harrigan,REP,REP,0.0482,0.9518,-10.47,Safe R,-17.45,,0,
-NC-11,house,NC,11,Jamie Ager,Jennifer Balkcom,,REP,0.7363,0.2637,3.28,Likely D,-10.17,10.87,3,2026-10-14
-NC-12,house,NC,12,Alma Adams,Jack Codiga,DEM,DEM,0.999,0.001,56.98,Safe D,48.0,,0,
-NC-13,house,NC,13,Paul Barringer,Brad Knott,REP,REP,0.0566,0.9434,-9.98,Safe R,-16.96,,0,
-NC-14,house,NC,14,LaKesha Womack,Tim Moore,REP,REP,0.0835,0.9165,-8.71,Safe R,-15.69,,0,
-ND-01,house,ND,01,Trygve Hammer,Julie Fedorchak,REP,REP,0.001,0.999,-29.82,Safe R,-36.8,,0,
-NE-01,house,NE,01,Christopher Backemeyer,Mike Flood,REP,REP,0.1969,0.8031,-4.8,Likely R,-13.06,-1.0,1,2026-10-20
-NE-02,house,NE,02,Denise Powell,Brinker Harding,,REP,0.9821,0.0179,11.41,Safe D,4.8,8.57,2,2026-10-05
-NE-03,house,NE,03,Becky Stille,Adrian Smith,REP,REP,0.001,0.999,-47.15,Safe R,-54.13,,0,
-NH-01,house,NH,01,Stefany Shaheen,Anthony DiLorenzo,,DEM,0.9399,0.0601,8.33,Safe D,2.74,4.0,2,2026-10-20
-NH-02,house,NH,02,Maggie Goodlander,Lily Williams,DEM,DEM,0.9972,0.0028,14.83,Safe D,4.75,16.82,2,2026-10-20
-NJ-01,house,NJ,01,Donald Norcross,Damon Galdo,DEM,DEM,0.999,0.001,29.5,Safe D,20.52,,0,
-NJ-02,house,NJ,02,Zack Mullock,Jeff Van Drew,REP,REP,0.1608,0.8392,-5.62,Likely R,-11.24,-10.0,1,2026-10-10
-NJ-03,house,NJ,03,Herb Conaway,Michael McGuire,DEM,DEM,0.9982,0.0018,18.38,Safe D,9.4,,0,
-NJ-04,house,NJ,04,Rachel Peace,Chris Smith,REP,REP,0.001,0.999,-22.17,Safe R,-29.15,,0,
-NJ-05,house,NJ,05,Josh Gottheimer,Sean Kirrane,DEM,DEM,0.9802,0.0198,12.96,Safe D,3.98,,0,
-NJ-06,house,NJ,06,Frank Pallone,Hillary Herzig,DEM,DEM,0.9985,0.0015,18.73,Safe D,9.75,,0,
-NJ-07,house,NJ,07,Rebecca Bennett,Tom Kean Jr.,REP,REP,0.8472,0.1528,5.87,Likely D,-0.87,5.0,1,2026-09-12
-NJ-08,house,NJ,08,Rob Menendez,(no Republican filed),DEM,DEM,0.999,0.001,42.56,Safe D,33.58,,0,
-NJ-09,house,NJ,09,Nelida Pou,Rosemary Pino,DEM,DEM,0.9819,0.0181,13.19,Safe D,4.21,,0,
-NJ-10,house,NJ,10,LaMonica McIver,Carmen Bucco,DEM,DEM,0.999,0.001,61.57,Safe D,52.6,,0,
-NJ-11,house,NJ,11,Analilia Mejia,Joe Hathaway,DEM,DEM,0.9987,0.0013,18.99,Safe D,10.01,,0,
-NJ-12,house,NJ,12,Adam Hamawy,Gregg Mele,,DEM,0.999,0.001,34.35,Safe D,26.37,,0,
-NM-01,house,NM,01,Melanie Stansbury,Ndidiamaka Okpareke,DEM,DEM,0.999,0.001,21.25,Safe D,13.28,18.0,1,2026-10-09
-NM-02,house,NM,02,Gabriel Vasquez,Greg Cunningham,DEM,DEM,0.9208,0.0792,8.01,Safe D,0.26,4.0,1,2026-10-09
-NM-03,house,NM,03,Teresa Leger Fernandez,Martin Zamora,DEM,DEM,0.9967,0.0033,15.41,Safe D,6.87,14.0,1,2026-10-09
-NV-01,house,NV,01,Dina Titus,Carrie Buck,DEM,DEM,0.9811,0.0189,13.09,Safe D,4.11,,0,
-NV-02,house,NV,02,Teresa Benitez-Thompson,David Flippo,,REP,0.2014,0.7986,-4.74,Likely R,-13.58,-2.0,1,2026-10-13
-NV-03,house,NV,03,Susie Lee,Marty O'Donnell,DEM,DEM,0.9479,0.0521,10.24,Safe D,1.26,,0,
-NV-04,house,NV,04,Steven Horsford,Cody Whipple,DEM,DEM,0.9813,0.0187,13.11,Safe D,4.13,,0,
-NY-01,house,NY,01,Christopher Gallant,Nick LaLota,REP,REP,0.4105,0.5895,-1.43,Lean R,-8.4,,0,
-NY-02,house,NY,02,Patrick Halpin,Andrew Garbarino,REP,REP,0.2444,0.7556,-4.36,Likely R,-11.34,,0,
-NY-03,house,NY,03,Tom Suozzi,Mike LiPetri,DEM,DEM,0.9123,0.0877,8.54,Safe D,-0.44,,0,
-NY-04,house,NY,04,Laura Gillen,Jeanine Driscoll,DEM,DEM,0.9847,0.0153,13.62,Safe D,4.64,,0,
-NY-05,house,NY,05,Gregory Meeks,George Marsh,DEM,DEM,0.999,0.001,57.29,Safe D,48.31,,0,
-NY-06,house,NY,06,Grace Meng,Joseph Chou,DEM,DEM,0.999,0.001,21.96,Safe D,12.99,,0,
-NY-07,house,NY,07,Claire Valdez,Melvin Rivera,,DEM,0.999,0.001,59.39,Safe D,51.41,,0,
-NY-08,house,NY,08,Hakeem Jeffries,Lewis Mizrahi,DEM,DEM,0.999,0.001,57.01,Safe D,48.03,,0,
-NY-09,house,NY,09,Yvette Clarke,Joel Anabilah-Azumah,DEM,DEM,0.999,0.001,53.72,Safe D,44.74,,0,
-NY-10,house,NY,10,Brad Lander,Jennifer Moore,,DEM,0.999,0.001,72.64,Safe D,64.66,,0,
-NY-11,house,NY,11,Michael DeCillis,Nicole Malliotakis,REP,REP,0.0162,0.9838,-13.48,Safe R,-20.46,,0,
-NY-12,house,NY,12,Micah Lasher,Caroline Shinkle,,DEM,0.999,0.001,74.85,Safe D,66.87,,0,
-NY-13,house,NY,13,Darializa Avila Chevalier,Jomo Williams,,DEM,0.999,0.001,73.28,Safe D,65.3,,0,
-NY-14,house,NY,14,Alexandria Ocasio-Cortez,Diamant Hysenaj,DEM,DEM,0.999,0.001,47.86,Safe D,38.88,,0,
-NY-15,house,NY,15,Ritchie Torres,Stylo Sapaskis,DEM,DEM,0.999,0.001,64.07,Safe D,55.09,,0,
-NY-16,house,NY,16,George Latimer,Joseph Cinquemani,DEM,DEM,0.999,0.001,45.34,Safe D,36.36,,0,
-NY-17,house,NY,17,Cait Conley,Mike Lawler,REP,REP,0.9057,0.0943,7.17,Safe D,2.98,1.24,2,2026-09-30
-NY-18,house,NY,18,Pat Ryan,Jackie Auringer,DEM,DEM,0.9928,0.0072,13.35,Safe D,4.54,13.0,2,2026-09-30
-NY-19,house,NY,19,Josh Riley,Peter Oberacker,DEM,DEM,0.9628,0.0372,11.24,Safe D,2.27,,0,
-NY-20,house,NY,20,Paul Tonko,Ralph Ambrosio,DEM,DEM,0.999,0.001,24.37,Safe D,15.39,,0,
-NY-21,house,NY,21,Blake Gendebien,Anthony Constantino,,REP,0.1,0.9,-6.25,Likely R,-19.66,-1.58,5,2026-10-13
-NY-22,house,NY,22,John Mannion,Kailee Buller,DEM,DEM,0.9972,0.0028,17.48,Safe D,8.5,,0,
-NY-23,house,NY,23,Aaron Gies,Nick Langworthy,REP,REP,0.0054,0.9946,-14.55,Safe R,-20.83,-17.0,1,2026-09-23
-NY-24,house,NY,24,Alissa Ellman,Claudia Tenney,REP,REP,0.0061,0.9939,-15.79,Safe R,-22.77,,0,
-NY-25,house,NY,25,Joe Morelle,Virginia McIntyre,DEM,DEM,0.999,0.001,28.06,Safe D,19.08,,0,
-NY-26,house,NY,26,Timothy Kennedy,Dennis Hannon,DEM,DEM,0.999,0.001,29.8,Safe D,20.82,,0,
-OH-01,house,OH,01,Greg Landsman,Eric Conroy,DEM,DEM,0.833,0.167,4.97,Likely D,-2.0,2.39,3,2026-10-21
-OH-02,house,OH,02,Jennifer Mazzuckelli,David Taylor,REP,REP,0.001,0.999,-34.75,Safe R,-41.73,,0,
-OH-03,house,OH,03,Joyce Beatty,Cleophus Dulaney,DEM,DEM,0.999,0.001,50.47,Safe D,41.49,,0,
-OH-04,house,OH,04,Joshua Kolasinski,Jim Jordan,REP,REP,0.001,0.999,-35.46,Safe R,-42.44,,0,
-OH-05,house,OH,05,Brian Shaver,Bob Latta,REP,REP,0.0051,0.9949,-16.2,Safe R,-23.17,,0,
-OH-06,house,OH,06,Elizabeth Kirtley,Michael Rulli,REP,REP,0.001,0.999,-26.48,Safe R,-33.45,,0,
-OH-07,house,OH,07,Brian Poindexter,Max Miller,REP,REP,0.2711,0.7289,-3.84,Likely R,-10.82,,0,
-OH-08,house,OH,08,Vanessa Enoch,Warren Davidson,REP,REP,0.0819,0.9181,-8.77,Safe R,-15.75,,0,
-OH-09,house,OH,09,Marcy Kaptur,Derek Merrin,DEM,DEM,0.4701,0.5299,-0.43,Toss-up,-9.53,0.0,1,2026-09-23
-OH-10,house,OH,10,Kristina Knickerbocker,Mike Turner,REP,REP,0.5277,0.4723,0.39,Toss-up,-7.41,3.0,1,2026-10-13
-OH-11,house,OH,11,Shontel Brown,Mike Kirchner,DEM,DEM,0.999,0.001,65.44,Safe D,56.46,,0,
-OH-12,house,OH,12,Jerrad Christian,Troy Balderson,REP,REP,0.001,0.999,-23.15,Safe R,-30.13,,0,
-OH-13,house,OH,13,Emilia Sykes,Carey Coleman,DEM,DEM,0.9809,0.0191,13.05,Safe D,4.08,,0,
-OH-14,house,OH,14,Maria Jukic,David Joyce,REP,REP,0.0228,0.9772,-12.59,Safe R,-19.57,,0,
-OH-15,house,OH,15,Don Leonard,Mike Carey,REP,REP,0.4482,0.5518,-0.68,Lean R,-9.52,1.96,3,2026-10-12
-OK-01,house,OK,01,John Croisant,Mark Tedford,,REP,0.0117,0.9883,-14.28,Safe R,-22.25,,0,
-OK-02,house,OK,02,Brandon Wade,Josh Brecheen,REP,REP,0.001,0.999,-48.78,Safe R,-55.76,,0,
-OK-03,house,OK,03,Suzie Byrd,Frank Lucas,REP,REP,0.001,0.999,-38.33,Safe R,-45.31,,0,
-OK-04,house,OK,04,Mitchell Jacob,Tom Cole,REP,REP,0.001,0.999,-26.31,Safe R,-33.29,,0,
-OK-05,house,OK,05,Jena Nelson,Stephanie Bice,REP,REP,0.0334,0.9666,-10.49,Safe R,-19.0,-5.0,1,2026-09-20
-OR-01,house,OR,01,Suzanne Bonamici,Barbara Kahl,DEM,DEM,0.999,0.001,48.39,Safe D,39.41,,0,
-OR-02,house,OR,02,Chris Beck,Cliff Bentz,REP,REP,0.001,0.999,-20.38,Safe R,-27.36,,0,
-OR-03,house,OR,03,Maxine Dexter,Loran Ayles,DEM,DEM,0.999,0.001,56.88,Safe D,47.9,,0,
-OR-04,house,OR,04,Val Hoyle,Monique DeSpain,DEM,DEM,0.999,0.001,21.48,Safe D,12.5,,0,
-OR-05,house,OR,05,Janelle Bynum,Patti Adair,DEM,DEM,0.9976,0.0024,17.74,Safe D,8.77,,0,
-OR-06,house,OR,06,Andrea Salinas,David Russ,DEM,DEM,0.999,0.001,20.97,Safe D,12.0,,0,
-PA-01,house,PA,01,Bob Harvie,Brian Fitzpatrick,REP,REP,0.8478,0.1522,5.27,Likely D,1.33,1.43,3,2026-10-22
-PA-02,house,PA,02,Brendan Boyle,Jessica Arriaga,DEM,DEM,0.999,0.001,47.3,Safe D,38.32,,0,
-PA-03,house,PA,03,Chris Rabb,(no Republican filed),,DEM,0.999,0.001,87.2,Safe D,79.23,,0,
-PA-04,house,PA,04,Madeleine Dean,Aurora Stuski,DEM,DEM,0.999,0.001,25.62,Safe D,16.64,,0,
-PA-05,house,PA,05,Mary Gay Scanlon,Nicholas Manganaro,DEM,DEM,0.999,0.001,38.79,Safe D,29.82,,0,
-PA-06,house,PA,06,Chrissy Houlahan,Marty Young,DEM,DEM,0.999,0.001,21.17,Safe D,12.19,,0,
-PA-07,house,PA,07,Bob Brooks,Ryan Mackenzie,REP,REP,0.8154,0.1846,4.8,Likely D,-2.35,5.09,2,2026-10-22
-PA-08,house,PA,08,Paige Cognetti,Rob Bresnahan,REP,REP,0.5918,0.4082,1.24,Lean D,-7.33,4.07,2,2026-10-22
-PA-09,house,PA,09,Rachel Wallace,Dan Meuser,REP,REP,0.001,0.999,-31.09,Safe R,-38.07,,0,
-PA-10,house,PA,10,Janelle Stelson,Scott Perry,REP,REP,0.5855,0.4145,1.11,Lean D,-5.22,0.28,3,2026-10-22
-PA-11,house,PA,11,Nancy Mannion,Lloyd Smucker,REP,REP,0.0096,0.9904,-14.75,Safe R,-21.73,,0,
-PA-12,house,PA,12,Summer Lee,James Hayes,DEM,DEM,0.999,0.001,28.54,Safe D,19.57,,0,
-PA-13,house,PA,13,Beth Farnham,John Joyce,REP,REP,0.001,0.999,-38.9,Safe R,-45.88,,0,
-PA-14,house,PA,14,Alan Bradstock,Guy Reschenthaler,REP,REP,0.001,0.999,-26.14,Safe R,-33.12,,0,
-PA-15,house,PA,15,Ray Bilger,Glenn Thompson,REP,REP,0.001,0.999,-31.04,Safe R,-38.02,,0,
-PA-16,house,PA,16,Justin Wagner,Mike Kelly,REP,REP,0.007,0.993,-15.48,Safe R,-22.46,,0,
-PA-17,house,PA,17,Chris Deluzio,Tony Guy,DEM,DEM,0.9893,0.0107,14.49,Safe D,5.51,,0,
-RI-01,house,RI,01,Gabriel Amo,Kellie Keenan,DEM,DEM,0.999,0.001,30.79,Safe D,24.3,25.89,2,2026-10-11
-RI-02,house,RI,02,Seth Magaziner,Victor Mellor,,DEM,0.9986,0.0014,16.11,Safe D,8.52,15.36,2,2026-10-11
-SC-01,house,SC,01,Nancy Lacore,Jenny Costa Honeycutt,,REP,0.2974,0.7026,-2.55,Likely R,-12.4,-1.14,5,2026-10-22
-SC-02,house,SC,02,Zyon Khalifa,Joe Wilson,REP,REP,0.1478,0.8522,-6.59,Likely R,-13.57,,0,
-SC-03,house,SC,03,Eunice Lehmacher,Sheri Biggs,REP,REP,0.001,0.999,-35.2,Safe R,-42.18,,0,
-SC-04,house,SC,04,Courtney McClain,William Timmons,REP,REP,0.0058,0.9942,-15.92,Safe R,-22.89,,0,
-SC-05,house,SC,05,Mallory Dittmer,Wes Climer,,REP,0.0132,0.9868,-13.98,Safe R,-21.96,,0,
-SC-06,house,SC,06,Jim Clyburn,John Peterson,DEM,DEM,0.999,0.001,34.67,Safe D,25.69,,0,
-SC-07,house,SC,07,John Vincent,Russell Fry,REP,REP,0.0026,0.9974,-17.63,Safe R,-24.61,,0,
-SD-01,house,SD,01,Nikki Gronli,Marty Jackley,,REP,0.001,0.999,-22.98,Safe R,-29.35,-28.0,1,2026-10-14
-TN-01,house,TN,01,Kristi Burke,Diana Harshbarger,REP,REP,0.001,0.999,-50.74,Safe R,-57.72,,0,
-TN-02,house,TN,02,Michaela Barnett,Tim Burchett,REP,REP,0.001,0.999,-26.49,Safe R,-33.47,,0,
-TN-03,house,TN,03,Anna Golladay,Chuck Fleischmann,REP,REP,0.001,0.999,-28.38,Safe R,-35.35,,0,
-TN-04,house,TN,04,Victoria Broderick,Scott DesJarlais,REP,REP,0.0075,0.9925,-15.32,Safe R,-22.3,,0,
-TN-05,house,TN,05,Chaz Molder,Charlie Hatcher,,REP,0.0283,0.9717,-10.86,Safe R,-20.56,-5.0,1,2026-10-01
-TN-06,house,TN,06,Mike Croley,Johnny Garrett,,REP,0.0029,0.9971,-17.4,Safe R,-25.38,,0,
-TN-07,house,TN,07,Darden Copeland,Matt Van Epps,REP,REP,0.0095,0.9905,-14.78,Safe R,-21.76,,0,
-TN-08,house,TN,08,Heidi Kuhn,David Kustoff,REP,REP,0.0235,0.9765,-12.52,Safe R,-19.5,,0,
-TN-09,house,TN,09,Justin J. Pearson,Brent Taylor,,DEM,0.0467,0.9533,-10.57,Safe R,-18.55,,0,
-TX-01,house,TX,01,Yolanda Prince,Nathaniel Moran,REP,REP,0.001,0.999,-41.6,Safe R,-48.57,,0,
-TX-02,house,TX,02,Shaun Finnie,Steve Toth,,REP,0.0077,0.9923,-13.79,Safe R,-23.2,-9.0,1,2026-10-04
-TX-03,house,TX,03,Evan Hunt,Keith Self,REP,REP,0.0056,0.9944,-15.97,Safe R,-22.95,,0,
-TX-04,house,TX,04,Jason Pearce,Pat Fallon,REP,REP,0.0037,0.9963,-16.85,Safe R,-23.83,,0,
-TX-05,house,TX,05,Chelsey Hockett,Lance Gooden,REP,REP,0.0144,0.9856,-13.78,Safe R,-20.76,,0,
-TX-06,house,TX,06,Danny Minton,Jake Ellzey,REP,REP,0.0061,0.9939,-15.8,Safe R,-22.78,,0,
-TX-07,house,TX,07,Lizzie Fletcher,Alexander Hale,DEM,DEM,0.999,0.001,35.24,Safe D,26.26,,0,
-TX-08,house,TX,08,Laura Jones,Jessica Steinmann,,REP,0.0025,0.9975,-17.69,Safe R,-25.67,,0,
-TX-09,house,TX,09,Leticia Gutierrez,Alex Mealer,,DEM,0.1019,0.8981,-6.52,Likely R,-16.85,-3.55,3,2026-10-22
-TX-10,house,TX,10,Caitlin Rourk,Chris Gober,,REP,0.019,0.981,-11.86,Safe R,-21.21,-7.0,1,2026-09-22
-TX-11,house,TX,11,Claire Reynolds,August Pfluger,REP,REP,0.001,0.999,-26.95,Safe R,-33.92,,0,
-TX-12,house,TX,12,Heli Rodriguez Prilliman,Craig Goldman,REP,REP,0.0059,0.9941,-15.88,Safe R,-22.85,,0,
-TX-13,house,TX,13,Mark Nair,Ronny Jackson,REP,REP,0.001,0.999,-39.51,Safe R,-46.48,,0,
-TX-14,house,TX,14,Thurman Bartie,Randy Weber,REP,REP,0.0035,0.9965,-17.0,Safe R,-23.98,,0,
-TX-15,house,TX,15,Bobby Pulido,Monica De La Cruz,REP,REP,0.4925,0.5075,-0.1,Toss-up,-13.18,8.19,3,2026-10-16
-TX-16,house,TX,16,Veronica Escobar,Adam Bauman,DEM,DEM,0.999,0.001,31.04,Safe D,22.06,,0,
-TX-17,house,TX,17,Casey Shepard,Pete Sessions,REP,REP,0.015,0.985,-13.67,Safe R,-20.65,,0,
-TX-18,house,TX,18,Christian Menefee,Ronald Whitfield,DEM,DEM,0.999,0.001,67.22,Safe D,58.24,,0,
-TX-19,house,TX,19,Kyle Rable,Tom Sell,,REP,0.001,0.999,-42.96,Safe R,-50.94,,0,
-TX-20,house,TX,20,Joaquin Castro,Edgardo Baez,DEM,DEM,0.999,0.001,41.05,Safe D,32.07,,0,
-TX-21,house,TX,21,Kristin Hook,Mark Teixeira,,REP,0.0183,0.9817,-13.17,Safe R,-21.15,,0,
-TX-22,house,TX,22,Marquette Greene-Scott,Trever Nehls,,REP,0.0146,0.9854,-13.74,Safe R,-21.72,,0,
-TX-23,house,TX,23,Katy Padilla Stout,Brandon Herrera,,REP,0.2515,0.7485,-3.81,Likely R,-12.94,0.0,1,2026-10-07
-TX-24,house,TX,24,Kevin Burge,Beth Van Duyne,REP,REP,0.0769,0.9231,-8.98,Safe R,-15.96,,0,
-TX-25,house,TX,25,Dione Sims,Roger Williams,REP,REP,0.0072,0.9928,-15.42,Safe R,-22.39,,0,
-TX-26,house,TX,26,Steven Shook,Brandon Gill,REP,REP,0.0048,0.9952,-16.33,Safe R,-23.31,,0,
-TX-27,house,TX,27,Tanya Lloyd,Michael Cloud,REP,REP,0.0147,0.9853,-13.72,Safe R,-20.69,,0,
-TX-28,house,TX,28,Henry Cuellar,Tano Tijerina,DEM,DEM,0.937,0.063,8.67,Safe D,-3.9,20.0,1,2026-10-13
-TX-29,house,TX,29,Sylvia Garcia,Martha Fierro,DEM,DEM,0.999,0.001,43.44,Safe D,34.47,,0,
-TX-30,house,TX,30,Frederick Haynes III,Everett Jackson,,DEM,0.999,0.001,58.31,Safe D,50.33,,0,
-TX-31,house,TX,31,Justin Early,John Carter,REP,REP,0.0104,0.9896,-14.56,Safe R,-21.54,,0,
-TX-32,house,TX,32,Dan Barrios,Jace Yarbrough,,DEM,0.0898,0.9102,-8.45,Safe R,-16.43,,0,
-TX-33,house,TX,33,Colin Allred,Patrick Gillespie,,DEM,0.999,0.001,44.49,Safe D,36.51,,0,
-TX-34,house,TX,34,Vicente Gonzalez,Eric Flores,DEM,DEM,0.7471,0.2529,3.75,Likely D,-6.31,7.0,1,2026-10-19
-TX-35,house,TX,35,Johnny Garcia,Carlos De La Cruz,,DEM,0.5082,0.4918,0.11,Toss-up,-8.46,0.88,3,2026-10-19
-TX-36,house,TX,36,Rhonda Hart,Brian Babin,REP,REP,0.0041,0.9959,-16.63,Safe R,-23.61,,0,
-TX-37,house,TX,37,Greg Casar,Lauren Peña,DEM,DEM,0.999,0.001,68.17,Safe D,59.19,,0,
-TX-38,house,TX,38,Melissa McDonough,Jon Bonck,,REP,0.0204,0.9796,-12.89,Safe R,-20.87,,0,
-UT-01,house,UT,01,Ben McAdams,Riley Owen,,REP,0.999,0.001,34.66,Safe D,24.81,41.5,1,2026-09-10
-UT-02,house,UT,02,Peter Crosby,Blake Moore,REP,REP,0.0021,0.9979,-15.15,Safe R,-30.53,-1.68,3,2026-09-24
-UT-03,house,UT,03,Kent Udell,Celeste Maloy,REP,REP,0.001,0.999,-31.89,Safe R,-42.68,-18.1,1,2026-09-15
-UT-04,house,UT,04,Jonny Larsen,Mike Kennedy,REP,REP,0.001,0.999,-16.88,Safe R,-33.94,5.8,2,2026-09-17
-VA-01,house,VA,01,Shannon Taylor,Rob Wittman,REP,REP,0.6029,0.3971,1.28,Lean D,-5.73,1.31,4,2026-10-25
-VA-02,house,VA,02,Elaine Luria,Jen Kiggans,REP,REP,0.8572,0.1428,6.06,Likely D,0.03,3.0,1,2026-10-10
-VA-03,house,VA,03,Bobby Scott,Edwin Rivera,DEM,DEM,0.999,0.001,44.99,Safe D,36.02,,0,
-VA-04,house,VA,04,Jennifer McClellan,Robert Murray,DEM,DEM,0.999,0.001,42.87,Safe D,33.9,,0,
-VA-05,house,VA,05,Tom Perriello,John McGuire,REP,REP,0.2305,0.7695,-3.88,Likely R,-11.47,-2.93,3,2026-09-28
-VA-06,house,VA,06,Beth Macy,Ben Cline,REP,REP,0.001,0.999,-20.05,Safe R,-24.11,-30.0,1,2026-09-30
-VA-07,house,VA,07,Eugene Vindman,Doug Ollivant,DEM,DEM,0.9786,0.0214,12.76,Safe D,3.78,,0,
-VA-08,house,VA,08,Don Beyer,Tony Sabio,DEM,DEM,0.999,0.001,61.41,Safe D,52.43,,0,
-VA-09,house,VA,09,Joy Powers,Morgan Griffith,REP,REP,0.001,0.999,-36.9,Safe R,-43.87,,0,
-VA-10,house,VA,10,Suhas Subramanyam,Dave Beckwith,DEM,DEM,0.999,0.001,19.59,Safe D,10.62,,0,
-VA-11,house,VA,11,James Walkinshaw,Arthur Purves,DEM,DEM,0.999,0.001,45.75,Safe D,36.77,,0,
-VT-01,house,VT,01,Rebecca Balint,Gerald Malloy,DEM,DEM,0.999,0.001,34.96,Safe D,33.52,22.71,3,2026-09-21
-WA-01,house,WA,01,Suzan DelBene,Mary Silva,DEM,DEM,0.999,0.001,39.07,Safe D,30.09,,0,
-WA-02,house,WA,02,Rick Larsen,Edwin H. Feller,DEM,DEM,0.999,0.001,33.11,Safe D,24.13,,0,
-WA-03,house,WA,03,Marie Gluesenkamp Perez,John Braun,DEM,DEM,0.7478,0.2522,3.57,Likely D,-3.71,0.54,2,2026-10-21
-WA-04,house,WA,04,John Duresky,Amanda McKinney,,REP,0.0238,0.9762,-12.49,Safe R,-20.46,,0,
-WA-05,house,WA,05,Carmela Conroy,Michael Baumgartner,REP,REP,0.2593,0.7407,-4.07,Likely R,-11.04,,0,
-WA-06,house,WA,06,Emily Randall,Teresa Fox,DEM,DEM,0.999,0.001,28.2,Safe D,19.23,,0,
-WA-07,house,WA,07,Pramila Jayapal,Nirav Sheth,DEM,DEM,0.999,0.001,86.5,Safe D,77.52,,0,
-WA-08,house,WA,08,Kim Schrier,Spencer Meline,DEM,DEM,0.9918,0.0082,15.12,Safe D,6.14,,0,
-WA-09,house,WA,09,Adam Smith,Doug Basler,DEM,DEM,0.999,0.001,52.63,Safe D,43.65,,0,
-WA-10,house,WA,10,Marilyn Strickland,Chris D. Chung,DEM,DEM,0.999,0.001,27.41,Safe D,18.43,,0,
-WI-01,house,WI,01,Mitchell Berman,Bryan Steil,REP,REP,0.6624,0.3376,2.2,Lean D,-3.87,0.82,3,2026-10-01
-WI-02,house,WI,02,Mark Pocan,(no Republican filed),DEM,DEM,0.999,0.001,50.12,Safe D,41.15,,0,
-WI-03,house,WI,03,Rebecca Cooke,Derrick Van Orden,REP,REP,0.5163,0.4837,0.26,Toss-up,-6.72,,0,
-WI-04,house,WI,04,Gwen Moore,Tim Rogers,DEM,DEM,0.999,0.001,61.82,Safe D,52.84,,0,
-WI-05,house,WI,05,Andrew Beck,Scott Fitzgerald,REP,REP,0.006,0.994,-15.84,Safe R,-22.82,,0,
-WI-06,house,WI,06,Brad Smith,Glenn Grothman,REP,REP,0.0651,0.9349,-9.53,Safe R,-16.51,,0,
-WI-07,house,WI,07,Fred Clark,Michael Alfonso,,REP,0.0122,0.9878,-14.18,Safe R,-22.16,,0,
-WI-08,house,WI,08,Rick Crosson,Tony Wied,REP,REP,0.0695,0.9305,-9.32,Safe R,-16.3,,0,
-WV-01,house,WV,01,Vince George,Carol Miller,REP,REP,0.001,0.999,-37.39,Safe R,-44.37,,0,
-WV-02,house,WV,02,Ace Parsi,Riley Moore,REP,REP,0.001,0.999,-32.9,Safe R,-39.88,,0,
-WY-01,house,WY,01,Lisa Kinney,Chuck Gray,,REP,0.001,0.999,-38.7,Safe R,-46.68,,0,
+CA-41,house,CA,41,Linda Sanchez,Mitch Clemmons,DEM,DEM,0.999,0.001,26.79,Safe D,17.86,,0,
+CA-42,house,CA,42,Robert Garcia,Brian Burley,DEM,DEM,0.999,0.001,24.18,Safe D,15.25,,0,
+CA-43,house,CA,43,Maxine Waters,Cristian Morales,DEM,DEM,0.999,0.001,63.83,Safe D,54.9,,0,
+CA-44,house,CA,44,Nanette Barragan,Genevieve Angel,DEM,DEM,0.999,0.001,50.53,Safe D,41.61,,0,
+CA-45,house,CA,45,Derek Tran,Chuong Vo,DEM,DEM,0.9923,0.0077,15.27,Safe D,6.35,,0,
+CA-46,house,CA,46,Lou Correa,David Pan,DEM,DEM,0.999,0.001,29.14,Safe D,20.22,,0,
+CA-47,house,CA,47,Dave Min,Jenny Rae Le Roux,DEM,DEM,0.999,0.001,20.77,Safe D,11.85,,0,
+CA-48,house,CA,48,Marni von Wilpert,Jim Desmond,,REP,0.9718,0.0282,10.23,Safe D,4.21,6.76,2,2026-10-20
+CA-49,house,CA,49,Mike Levin,Armen Kurdian,DEM,DEM,0.999,0.001,22.0,Safe D,13.07,,0,
+CA-50,house,CA,50,Scott Peters,Steve Cohen,DEM,DEM,0.999,0.001,28.26,Safe D,19.34,,0,
+CA-51,house,CA,51,Sara Jacobs,Ricardo Cabrera,DEM,DEM,0.999,0.001,28.83,Safe D,19.9,,0,
+CA-52,house,CA,52,Juan Vargas,Jeff Belle,DEM,DEM,0.999,0.001,31.58,Safe D,22.66,,0,
+CO-01,house,CO,01,Melat Kiros,Christy Peterson,,DEM,0.999,0.001,66.74,Safe D,58.81,,0,
+CO-02,house,CO,02,Joe Neguse,Kelley Dennison,DEM,DEM,0.999,0.001,49.58,Safe D,40.65,,0,
+CO-03,house,CO,03,Dwayne Romero,Jeff Hurd,REP,REP,0.3668,0.6332,-1.92,Lean R,-9.83,1.0,1,2026-10-21
+CO-04,house,CO,04,Eileen Laubacher,Lauren Boebert,REP,REP,0.0307,0.9693,-10.68,Safe R,-19.23,-5.0,1,2026-09-24
+CO-05,house,CO,05,Jessica Killin,Jeff Crank,REP,REP,0.4367,0.5633,-0.79,Lean R,-10.21,1.67,4,2026-10-20
+CO-06,house,CO,06,Jason Crow,Jason Clark,DEM,DEM,0.999,0.001,29.91,Safe D,20.98,,0,
+CO-07,house,CO,07,Brittany Pettersen,Tim Bennett,DEM,DEM,0.999,0.001,23.67,Safe D,14.74,,0,
+CO-08,house,CO,08,Manny Rutinel,Gabe Evans,REP,REP,0.7754,0.2246,4.15,Likely D,-0.46,-1.05,2,2026-09-17
+CT-01,house,CT,01,Luke Bronin,Amy Chai,,DEM,0.999,0.001,32.4,Safe D,24.48,,0,
+CT-02,house,CT,02,Joe Courtney,George Austin,DEM,DEM,0.9972,0.0028,17.45,Safe D,8.52,,0,
+CT-03,house,CT,03,Rosa DeLauro,Christopher Lancia,DEM,DEM,0.999,0.001,24.51,Safe D,15.58,,0,
+CT-04,house,CT,04,Jim Himes,Michael Goldstein,DEM,DEM,0.999,0.001,34.43,Safe D,25.51,,0,
+CT-05,house,CT,05,Jahana Hayes,Chris Shea,DEM,DEM,0.991,0.009,13.49,Safe D,6.76,6.0,1,2026-10-01
+DE-01,house,DE,01,Sarah McBride,Donyale Hall,DEM,DEM,0.999,0.001,24.61,Safe D,15.68,,0,
+FL-01,house,FL,01,Gay Valimont,Jimmy Patronis,REP,REP,0.001,0.999,-29.7,Safe R,-36.62,,0,
+FL-02,house,FL,02,Amanda Green,Austin Rogers,,REP,0.0874,0.9126,-8.55,Safe R,-16.48,,0,
+FL-03,house,FL,03,Seth Harp,Kat Cammack,REP,REP,0.0233,0.9767,-12.53,Safe R,-19.46,,0,
+FL-04,house,FL,04,LaShonda Holloway,Aaron Bean,REP,REP,0.2709,0.7291,-3.84,Likely R,-10.77,,0,
+FL-05,house,FL,05,Rachel Grage,John Rutherford,REP,REP,0.0155,0.9845,-13.58,Safe R,-20.51,,0,
+FL-06,house,FL,06,Eric Yonce,Randy Fine,REP,REP,0.001,0.999,-21.69,Safe R,-28.62,,0,
+FL-07,house,FL,07,Bale Dalton,Ryan Elijah,,REP,0.3246,0.6754,-2.44,Lean R,-10.88,-1.5,2,2026-10-19
+FL-08,house,FL,08,Jennifer Jenkins,Mike Haridopolos,REP,REP,0.0982,0.9018,-8.14,Safe R,-15.07,,0,
+FL-09,house,FL,09,Darren Soto,Dan Green,DEM,DEM,0.2151,0.7849,-4.46,Likely R,-14.82,0.0,1,2026-10-15
+FL-10,house,FL,10,Maxwell Frost,(no Republican filed),DEM,DEM,0.999,0.001,35.7,Safe D,26.78,,0,
+FL-11,house,FL,11,James Pericola,Joe Strada,,REP,0.1541,0.8459,-6.42,Likely R,-14.35,,0,
+FL-12,house,FL,12,Kimberly Overman,Gus Bilirakis,REP,REP,0.1689,0.8311,-6.04,Likely R,-12.97,,0,
+FL-13,house,FL,13,Leela Gray,Anna Paulina Luna,REP,REP,0.2608,0.7392,-3.63,Likely R,-12.04,1.0,1,2026-10-15
+FL-14,house,FL,14,Kathy Castor,Mike Beltran,DEM,DEM,0.5954,0.4046,1.37,Lean D,-8.72,5.0,1,2026-10-14
+FL-15,house,FL,15,Robert People,Laurel Lee,REP,REP,0.0448,0.9552,-10.69,Safe R,-17.62,,0,
+FL-16,house,FL,16,Kelly Kirschner,Sydney Gruters,,REP,0.253,0.747,-3.79,Likely R,-11.65,-4.0,1,2026-10-02
+FL-17,house,FL,17,Matthew Montavon,Greg Steube,REP,REP,0.018,0.982,-13.21,Safe R,-20.14,,0,
+FL-18,house,FL,18,Curtis Gibson,Scott Franklin,REP,REP,0.0933,0.9067,-8.32,Safe R,-15.25,,0,
+FL-19,house,FL,19,Victor Arias,Jim Schwartzel,,REP,0.001,0.999,-20.43,Safe R,-28.36,,0,
+FL-20,house,FL,20,Debbie Wasserman Schultz,Brent Andersen,DEM,DEM,0.999,0.001,49.52,Safe D,40.59,,0,
+FL-21,house,FL,21,James Martin,Brian Mast,REP,REP,0.0733,0.9267,-8.29,Safe R,-14.44,-11.0,1,2026-09-25
+FL-22,house,FL,22,Pia Dandiya,Casey Askar,,DEM,0.5634,0.4366,1.0,Lean D,-6.92,,0,
+FL-23,house,FL,23,Lois Frankel,Deborah Adeimy,DEM,DEM,0.999,0.001,26.41,Safe D,17.48,,0,
+FL-24,house,FL,24,Oliver Gilbert,Mayonna Te Brown,,DEM,0.999,0.001,52.28,Safe D,44.35,,0,
+FL-25,house,FL,25,Jared Moskowitz,Scott Singer,DEM,DEM,0.7674,0.2326,3.71,Likely D,-5.19,3.68,3,2026-10-27
+FL-26,house,FL,26,Nicole Locklin,Mario Diaz-Balart,REP,REP,0.1683,0.8317,-6.05,Likely R,-12.98,,0,
+FL-27,house,FL,27,Eliott Rodriguez,Maria Salazar,REP,REP,0.3206,0.6794,-2.67,Lean R,-10.06,-1.0,1,2026-09-13
+FL-28,house,FL,28,Phil Ehr,Carlos Gimenez,REP,REP,0.0218,0.9782,-12.72,Safe R,-19.65,,0,
+GA-01,house,GA,01,Amanda Hollowell,Jim Kingston,,REP,0.1179,0.8821,-7.47,Likely R,-15.4,,0,
+GA-02,house,GA,02,Sanford Bishop,Matt Day,DEM,DEM,0.997,0.003,17.33,Safe D,8.41,,0,
+GA-03,house,GA,03,Maura Keller,Brian Jack,REP,REP,0.001,0.999,-19.04,Safe R,-30.23,-5.0,1,2026-10-07
+GA-04,house,GA,04,Henry Johnson,James Duffie,DEM,DEM,0.999,0.001,63.33,Safe D,54.41,,0,
+GA-05,house,GA,05,Nikema Williams,John Salvesen,DEM,DEM,0.999,0.001,81.7,Safe D,72.77,,0,
+GA-06,house,GA,06,Lucy McBath,Kevin Martin,DEM,DEM,0.999,0.001,58.99,Safe D,50.06,,0,
+GA-07,house,GA,07,Tony Kozycki,Rich McCormick,REP,REP,0.0252,0.9748,-11.1,Safe R,-22.07,2.0,1,2026-10-09
+GA-08,house,GA,08,Kelly Esti,Austin Scott,REP,REP,0.001,0.999,-23.19,Safe R,-30.11,,0,
+GA-09,house,GA,09,Caitlyn Gegen,Andrew Clyde,REP,REP,0.001,0.999,-27.36,Safe R,-34.29,,0,
+GA-10,house,GA,10,Pamela DeLancy,Houston Gaines,,REP,0.0169,0.9831,-13.38,Safe R,-21.3,,0,
+GA-11,house,GA,11,Chris Harden,John Cowan,,REP,0.0218,0.9782,-11.09,Safe R,-23.63,-0.5,2,2026-09-11
+GA-12,house,GA,12,Ceretta Smith,Rick Allen,REP,REP,0.1568,0.8432,-6.35,Likely R,-13.27,,0,
+GA-13,house,GA,13,Jasmine Clark,Jonathan Chavez,,DEM,0.999,0.001,49.73,Safe D,41.8,,0,
+GA-14,house,GA,14,Shawn Harris,Clay Fuller,REP,REP,0.001,0.999,-30.67,Safe R,-37.6,,0,
+HI-01,house,HI,01,Ed Case,Adriel Lam,DEM,DEM,0.999,0.001,35.64,Safe D,26.71,,0,
+HI-02,house,HI,02,Jill Tokuda,Brenton Awa,DEM,DEM,0.999,0.001,33.36,Safe D,24.44,,0,
+IA-01,house,IA,01,Christina Bohannan,Mariannette Miller-Meeks,REP,REP,0.4897,0.5103,-0.16,Toss-up,-7.09,,0,
+IA-02,house,IA,02,Lindsay James,Joe Mitchell,,REP,0.5135,0.4865,0.19,Toss-up,-8.63,3.0,1,2026-10-14
+IA-03,house,IA,03,Sarah Trone Garriott,Zach Nunn,REP,REP,0.708,0.292,3.45,Likely D,-3.48,,0,
+IA-04,house,IA,04,Dave Dawson,Chris McGowan,,REP,0.001,0.999,-22.63,Safe R,-30.56,,0,
+ID-01,house,ID,01,Kaylee Peterson,Russ Fulcher,REP,REP,0.001,0.999,-34.69,Safe R,-44.59,-26.0,1,2026-10-22
+ID-02,house,ID,02,Elinor Gilbreath,Mike Simpson,REP,REP,0.001,0.999,-18.6,Safe R,-26.76,-15.0,1,2026-10-22
+IL-01,house,IL,01,Jonathan Jackson,Christian Maxwell,DEM,DEM,0.999,0.001,44.33,Safe D,35.4,,0,
+IL-02,house,IL,02,Donna Miller,Michael Noack,,DEM,0.999,0.001,43.56,Safe D,35.63,,0,
+IL-03,house,IL,03,Delia Ramirez,Angel Oakley,DEM,DEM,0.999,0.001,43.72,Safe D,34.79,,0,
+IL-04,house,IL,04,Patty Garcia,Lupe Castillo,,DEM,0.999,0.001,41.77,Safe D,33.84,,0,
+IL-05,house,IL,05,Mike Quigley,Tommy Hanson,DEM,DEM,0.999,0.001,47.35,Safe D,38.42,,0,
+IL-06,house,IL,06,Sean Casten,Niki Conforti,DEM,DEM,0.9943,0.0057,15.94,Safe D,7.02,,0,
+IL-07,house,IL,07,La Shawn Ford,Chad Koppie,,DEM,0.999,0.001,76.41,Safe D,68.48,,0,
+IL-08,house,IL,08,Melissa Bean,Jennifer Davis,,DEM,0.9969,0.0031,17.27,Safe D,9.34,,0,
+IL-09,house,IL,09,Daniel Biss,John Elleson,,DEM,0.999,0.001,46.48,Safe D,38.55,,0,
+IL-10,house,IL,10,Brad Schneider,Carl Lambrecht,DEM,DEM,0.999,0.001,32.28,Safe D,23.36,,0,
+IL-11,house,IL,11,Bill Foster,Jeff Walter,DEM,DEM,0.999,0.001,21.43,Safe D,12.51,,0,
+IL-12,house,IL,12,Julie Fortier,Mike Bost,REP,REP,0.001,0.999,-37.03,Safe R,-43.95,,0,
+IL-13,house,IL,13,Nikki Budzinski,Jeff Wilson,DEM,DEM,0.999,0.001,19.75,Safe D,10.82,,0,
+IL-14,house,IL,14,Lauren Underwood,James Marter,DEM,DEM,0.9939,0.0061,15.78,Safe D,6.85,,0,
+IL-15,house,IL,15,Jennifer Todd,Mary Miller,REP,REP,0.001,0.999,-33.31,Safe R,-40.23,,0,
+IL-16,house,IL,16,Paul Nolley,Darin LaHood,REP,REP,0.0056,0.9944,-15.96,Safe R,-22.89,,0,
+IL-17,house,IL,17,Eric Sorensen,Dillan Vancil,DEM,DEM,0.9897,0.0103,14.59,Safe D,5.67,,0,
+IN-01,house,IN,01,Frank Mrvan,Barb Regnitz,DEM,DEM,0.9679,0.0321,11.66,Safe D,2.73,,0,
+IN-02,house,IN,02,Jamee Decio,Rudy Yakym,REP,REP,0.0012,0.9988,-19.09,Safe R,-26.02,,0,
+IN-03,house,IN,03,Kelly Thompson,Marlin Stutzman,REP,REP,0.001,0.999,-24.69,Safe R,-31.61,,0,
+IN-04,house,IN,04,Drew Cox,Jim Baird,REP,REP,0.001,0.999,-23.16,Safe R,-30.09,,0,
+IN-05,house,IN,05,J.D. Ford,Victoria Spartz,REP,REP,0.0818,0.9182,-7.45,Safe R,-17.25,-2.36,2,2026-10-22
+IN-06,house,IN,06,Cynthia Wirth,Jefferson Shreve,REP,REP,0.001,0.999,-26.3,Safe R,-33.23,,0,
+IN-07,house,IN,07,Andre Carson,Patrick McAuley,DEM,DEM,0.999,0.001,51.18,Safe D,42.26,,0,
+IN-08,house,IN,08,Mary Allen,Mark Messmer,REP,REP,0.001,0.999,-28.83,Safe R,-35.75,,0,
+IN-09,house,IN,09,Brad Meyer,Erin Houchin,REP,REP,0.001,0.999,-22.83,Safe R,-29.76,,0,
+KS-01,house,KS,01,Lauren Reinhold,Tracey Mann,REP,REP,0.001,0.999,-24.72,Safe R,-31.65,,0,
+KS-02,house,KS,02,Don Coover,Derek Schmidt,REP,REP,0.0379,0.9621,-10.01,Safe R,-19.29,-3.0,1,2026-10-20
+KS-03,house,KS,03,Sharice Davids,Eric Jenkins,DEM,DEM,0.9788,0.0212,12.78,Safe D,3.85,,0,
+KS-04,house,KS,04,Katy Tyndell,Ron Estes,REP,REP,0.0041,0.9959,-16.66,Safe R,-23.59,,0,
+KY-01,house,KY,01,Drew Williams,James Comer,REP,REP,0.001,0.999,-39.89,Safe R,-46.81,,0,
+KY-02,house,KY,02,Megan Wingfield,Brett Guthrie,REP,REP,0.001,0.999,-33.95,Safe R,-40.87,,0,
+KY-03,house,KY,03,Morgan McGarvey,Maria Rodriguez,DEM,DEM,0.999,0.001,28.85,Safe D,19.93,,0,
+KY-04,house,KY,04,Melissa Strange,Ed Gallrein,,REP,0.001,0.999,-27.69,Safe R,-35.62,,0,
+KY-05,house,KY,05,Ned Pillersdorf,Harold Rogers,REP,REP,0.001,0.999,-56.58,Safe R,-63.5,,0,
+KY-06,house,KY,06,Zach Dembo,Ralph Alvarado,,REP,0.5975,0.4025,1.15,Lean D,-14.55,6.0,6,2026-10-20
+LA-01,house,LA,01,Lauren Jewett,Steve Scalise,REP,REP,0.001,0.999,-32.49,Safe R,-39.41,,0,
+LA-02,house,LA,02,Troy Carter,Peter Williams,DEM,DEM,0.999,0.001,58.84,Safe D,49.92,,0,
+LA-03,house,LA,03,John Day,Clay Higgins,REP,REP,0.001,0.999,-28.73,Safe R,-35.65,,0,
+LA-04,house,LA,04,Matthew Gromlich,Mike Johnson,REP,REP,0.001,0.999,-26.48,Safe R,-33.41,,0,
+LA-05,house,LA,05,Dan McKay,Michael Echols,,REP,0.001,0.999,-25.1,Safe R,-33.03,,0,
+LA-06,house,LA,06,"Lindsay ""Rubia"" Garcia",Blake Miguez,,DEM,0.001,0.999,-24.56,Safe R,-32.48,,0,
+MA-01,house,MA,01,Richard Neal,(no Republican filed),DEM,DEM,0.999,0.001,24.84,Safe D,15.91,,0,
+MA-02,house,MA,02,Jim McGovern,(no Republican filed),DEM,DEM,0.999,0.001,34.85,Safe D,25.92,,0,
+MA-03,house,MA,03,Lori Trahan,Gary Grossi,DEM,DEM,0.999,0.001,30.33,Safe D,21.41,,0,
+MA-04,house,MA,04,Jake Auchincloss,Thomas Stalcup,DEM,DEM,0.999,0.001,31.15,Safe D,22.22,,0,
+MA-05,house,MA,05,Katherine Clark,(no Republican filed),DEM,DEM,0.999,0.001,56.52,Safe D,47.6,,0,
+MA-06,house,MA,06,Daniel Koh,Micah Quinney Jones,,DEM,0.999,0.001,30.45,Safe D,22.52,,0,
+MA-07,house,MA,07,Ayanna Pressley,(no Republican filed),DEM,DEM,0.999,0.001,76.35,Safe D,67.42,,0,
+MA-08,house,MA,08,Stephen Lynch,Robert Gerald Burke,DEM,DEM,0.999,0.001,37.97,Safe D,29.04,,0,
+MA-09,house,MA,09,Bill Keating,Robert MacAllister,DEM,DEM,0.999,0.001,21.47,Safe D,12.55,,0,
+MD-01,house,MD,01,Dan Schwartz,Andy Harris,REP,REP,0.0538,0.9462,-10.14,Safe R,-17.06,,0,
+MD-02,house,MD,02,Johnny Olszewski,Dave Wallace,DEM,DEM,0.999,0.001,28.09,Safe D,19.16,,0,
+MD-03,house,MD,03,Sarah Elfreth,Berney Flowers,DEM,DEM,0.999,0.001,33.35,Safe D,24.42,,0,
+MD-04,house,MD,04,Glenn Ivey,George McDermott,DEM,DEM,0.999,0.001,86.49,Safe D,77.56,,0,
+MD-05,house,MD,05,Adrian Boafo,Chris Chaffee,,DEM,0.999,0.001,42.25,Safe D,34.33,,0,
+MD-06,house,MD,06,April McClain Delaney,Robin Ficker,DEM,DEM,0.9932,0.0068,15.55,Safe D,6.62,,0,
+MD-07,house,MD,07,Kweisi Mfume,Scott Collier,DEM,DEM,0.999,0.001,70.46,Safe D,61.54,,0,
+MD-08,house,MD,08,Jamie Raskin,Cheryl Riley,DEM,DEM,0.999,0.001,68.34,Safe D,59.42,,0,
+ME-01,house,ME,01,Chellie Pingree,Ronald Russell,DEM,DEM,0.999,0.001,29.21,Safe D,22.32,22.0,1,2026-09-21
+ME-02,house,ME,02,Matthew Dunlap,Paul LePage,,DEM,0.5825,0.4175,1.01,Lean D,-8.94,2.73,5,2026-10-14
+MI-01,house,MI,01,Callie Barr,Jack Bergman,REP,REP,0.0113,0.9887,-14.36,Safe R,-21.28,,0,
+MI-02,house,MI,02,Benjamin Ambrose,John Moolenaar,REP,REP,0.001,0.999,-23.1,Safe R,-30.03,,0,
+MI-03,house,MI,03,Hillary Scholten,Terri DeBoer,DEM,DEM,0.9961,0.0039,16.74,Safe D,7.81,,0,
+MI-04,house,MI,04,Sean McCann,Bill Huizenga,REP,REP,0.5969,0.4031,1.41,Lean D,-5.41,1.0,1,2026-09-16
+MI-05,house,MI,05,Christian Vukasovich,Tim Walberg,REP,REP,0.001,0.999,-19.78,Safe R,-26.71,,0,
+MI-06,house,MI,06,Debbie Dingell,Heather Smiley,DEM,DEM,0.999,0.001,33.47,Safe D,24.55,,0,
+MI-07,house,MI,07,William Lawrence,Tom Barrett,REP,REP,0.8748,0.1252,6.51,Likely D,-0.9,8.0,1,2026-10-14
+MI-08,house,MI,08,Kristen McDonald Rivet,Thomas J. Smith,DEM,DEM,0.8978,0.1022,8.0,Likely D,-0.93,,0,
+MI-09,house,MI,09,Ray Pooley,Lisa McClain,REP,REP,0.001,0.999,-25.25,Safe R,-32.17,,0,
+MI-10,house,MI,10,Christina Hines,Michael Bouchard Jr.,,REP,0.6565,0.3435,2.54,Lean D,-5.39,,0,
+MI-11,house,MI,11,Jeremy Moss,Ethan Baker,,DEM,0.999,0.001,25.1,Safe D,17.17,,0,
+MI-12,house,MI,12,Rashida Tlaib,James D. Hooper,DEM,DEM,0.999,0.001,51.01,Safe D,42.09,,0,
+MI-13,house,MI,13,Donavan McKinney,T.P. Nykoriak,,DEM,0.999,0.001,52.43,Safe D,44.51,,0,
+MN-01,house,MN,01,Jake Johnson,Brad Finstad,REP,REP,0.3371,0.6629,-2.18,Lean R,-11.71,1.43,3,2026-10-14
+MN-02,house,MN,02,Matt Little,Eric Pratt,,DEM,0.9907,0.0093,13.49,Safe D,5.98,12.0,1,2026-09-13
+MN-03,house,MN,03,Kelly Morrison,Tyler Bass,DEM,DEM,0.999,0.001,30.2,Safe D,21.28,,0,
+MN-04,house,MN,04,Betty McCollum,Paul Wikstrom,DEM,DEM,0.999,0.001,45.77,Safe D,36.85,,0,
+MN-05,house,MN,05,Ilhan Omar,John Nagel,DEM,DEM,0.999,0.001,72.6,Safe D,63.67,,0,
+MN-06,house,MN,06,Doug Chapin,Tom Emmer,REP,REP,0.0201,0.9799,-12.92,Safe R,-19.85,,0,
+MN-07,house,MN,07,Erik Osberg,Michelle Fischbach,REP,REP,0.001,0.999,-29.39,Safe R,-36.32,,0,
+MN-08,house,MN,08,Trina Swanson,Pete Stauber,REP,REP,0.1378,0.8622,-6.87,Likely R,-13.79,,0,
+MO-01,house,MO,01,Wesley Bell,Paul Berry,DEM,DEM,0.999,0.001,67.36,Safe D,58.43,,0,
+MO-02,house,MO,02,Fred Wellman,Ann Wagner,REP,REP,0.5749,0.4251,0.94,Lean D,-8.41,3.33,4,2026-10-20
+MO-03,house,MO,03,Bethany Mann,Bob Onder,REP,REP,0.001,0.999,-20.26,Safe R,-27.18,,0,
+MO-04,house,MO,04,Jordan Herrera,Mark Alford,REP,REP,0.001,0.999,-35.24,Safe R,-42.17,,0,
+MO-05,house,MO,05,Emanuel Cleaver,Rick Brattin,DEM,DEM,0.999,0.001,33.35,Safe D,24.43,,0,
+MO-06,house,MO,06,Josh Smead,Chris Stigall,,REP,0.001,0.999,-31.04,Safe R,-38.96,,0,
+MO-07,house,MO,07,Missi Hesketh,Eric Burlison,REP,REP,0.001,0.999,-36.17,Safe R,-43.1,,0,
+MO-08,house,MO,08,Christopher Reichard,Jason Smith,REP,REP,0.001,0.999,-46.84,Safe R,-53.76,,0,
+MS-01,house,MS,01,Cliff Johnson,Trent Kelly,REP,REP,0.001,0.999,-29.27,Safe R,-36.2,,0,
+MS-02,house,MS,02,Bennie Thompson,Ron Eller,DEM,DEM,0.999,0.001,31.07,Safe D,22.14,,0,
+MS-03,house,MS,03,Michael Chiaradio,Michael Guest,REP,REP,0.001,0.999,-21.43,Safe R,-28.35,,0,
+MS-04,house,MS,04,Jeffrey Hulum III,Mike Ezell,REP,REP,0.001,0.999,-35.05,Safe R,-41.98,,0,
+MT-01,house,MT,01,Sam Forstag,Aaron Flint,,REP,0.5517,0.4483,0.58,Lean D,-10.89,2.22,8,2026-10-14
+MT-02,house,MT,02,Brian Miller,Troy Downing,REP,REP,0.001,0.999,-22.75,Safe R,-29.88,-22.0,1,2026-09-07
+NC-01,house,NC,01,Don Davis,Laurie Buckhout,DEM,DEM,0.5816,0.4184,0.98,Lean D,-10.3,2.74,6,2026-10-08
+NC-02,house,NC,02,Deborah Ross,Eugene Douglass,DEM,DEM,0.999,0.001,43.57,Safe D,34.65,,0,
+NC-03,house,NC,03,Raymond Smith Jr.,Greg Murphy,REP,REP,0.1967,0.8033,-5.38,Likely R,-12.3,,0,
+NC-04,house,NC,04,Valerie Foushee,Max Ganorkar,DEM,DEM,0.999,0.001,55.18,Safe D,46.26,,0,
+NC-05,house,NC,05,Chuck Hubbard,Virginia Foxx,REP,REP,0.0519,0.9481,-10.25,Safe R,-17.17,,0,
+NC-06,house,NC,06,Cyril Jefferson,Addison McDowell,REP,REP,0.0511,0.9489,-10.3,Safe R,-17.22,,0,
+NC-07,house,NC,07,Kimberly Hardy,David Rouzer,REP,REP,0.1562,0.8438,-6.36,Likely R,-13.29,,0,
+NC-08,house,NC,08,Colby Watson,Mark Harris,REP,REP,0.0249,0.9751,-12.35,Safe R,-19.28,,0,
+NC-09,house,NC,09,Richard Ojeda,Richard Hudson,REP,REP,0.0918,0.9082,-7.49,Safe R,-15.59,-4.0,1,2026-10-20
+NC-10,house,NC,10,Ashley Bell,Pat Harrigan,REP,REP,0.0474,0.9526,-10.52,Safe R,-17.45,,0,
+NC-11,house,NC,11,Jamie Ager,Jennifer Balkcom,,REP,0.7344,0.2656,3.25,Likely D,-10.17,10.87,3,2026-10-14
+NC-12,house,NC,12,Alma Adams,Jack Codiga,DEM,DEM,0.999,0.001,56.93,Safe D,48.0,,0,
+NC-13,house,NC,13,Paul Barringer,Brad Knott,REP,REP,0.0557,0.9443,-10.03,Safe R,-16.96,,0,
+NC-14,house,NC,14,LaKesha Womack,Tim Moore,REP,REP,0.0822,0.9178,-8.76,Safe R,-15.69,,0,
+ND-01,house,ND,01,Trygve Hammer,Julie Fedorchak,REP,REP,0.001,0.999,-29.88,Safe R,-36.8,,0,
+NE-01,house,NE,01,Christopher Backemeyer,Mike Flood,REP,REP,0.195,0.805,-4.84,Likely R,-13.06,-1.0,1,2026-10-20
+NE-02,house,NE,02,Denise Powell,Brinker Harding,,REP,0.9818,0.0182,11.37,Safe D,4.8,8.57,2,2026-10-05
+NE-03,house,NE,03,Becky Stille,Adrian Smith,REP,REP,0.001,0.999,-47.2,Safe R,-54.13,,0,
+NH-01,house,NH,01,Stefany Shaheen,Anthony DiLorenzo,,DEM,0.9391,0.0609,8.29,Safe D,2.74,4.0,2,2026-10-20
+NH-02,house,NH,02,Maggie Goodlander,Lily Williams,DEM,DEM,0.9971,0.0029,14.8,Safe D,4.75,16.82,2,2026-10-20
+NJ-01,house,NJ,01,Donald Norcross,Damon Galdo,DEM,DEM,0.999,0.001,29.45,Safe D,20.52,,0,
+NJ-02,house,NJ,02,Zack Mullock,Jeff Van Drew,REP,REP,0.1591,0.8409,-5.66,Likely R,-11.24,-10.0,1,2026-10-10
+NJ-03,house,NJ,03,Herb Conaway,Michael McGuire,DEM,DEM,0.9982,0.0018,18.32,Safe D,9.4,,0,
+NJ-04,house,NJ,04,Rachel Peace,Chris Smith,REP,REP,0.001,0.999,-22.22,Safe R,-29.15,,0,
+NJ-05,house,NJ,05,Josh Gottheimer,Sean Kirrane,DEM,DEM,0.9798,0.0202,12.91,Safe D,3.98,,0,
+NJ-06,house,NJ,06,Frank Pallone,Hillary Herzig,DEM,DEM,0.9985,0.0015,18.68,Safe D,9.75,,0,
+NJ-07,house,NJ,07,Rebecca Bennett,Tom Kean Jr.,REP,REP,0.8455,0.1545,5.83,Likely D,-0.87,5.0,1,2026-09-12
+NJ-08,house,NJ,08,Rob Menendez,(no Republican filed),DEM,DEM,0.999,0.001,42.51,Safe D,33.58,,0,
+NJ-09,house,NJ,09,Nelida Pou,Rosemary Pino,DEM,DEM,0.9815,0.0185,13.14,Safe D,4.21,,0,
+NJ-10,house,NJ,10,LaMonica McIver,Carmen Bucco,DEM,DEM,0.999,0.001,61.52,Safe D,52.6,,0,
+NJ-11,house,NJ,11,Analilia Mejia,Joe Hathaway,DEM,DEM,0.9987,0.0013,18.94,Safe D,10.01,,0,
+NJ-12,house,NJ,12,Adam Hamawy,Gregg Mele,,DEM,0.999,0.001,34.3,Safe D,26.37,,0,
+NM-01,house,NM,01,Melanie Stansbury,Ndidiamaka Okpareke,DEM,DEM,0.999,0.001,21.21,Safe D,13.28,18.0,1,2026-10-09
+NM-02,house,NM,02,Gabriel Vasquez,Greg Cunningham,DEM,DEM,0.9198,0.0802,7.97,Safe D,0.26,4.0,1,2026-10-09
+NM-03,house,NM,03,Teresa Leger Fernandez,Martin Zamora,DEM,DEM,0.9966,0.0034,15.37,Safe D,6.87,14.0,1,2026-10-09
+NV-01,house,NV,01,Dina Titus,Carrie Buck,DEM,DEM,0.9807,0.0193,13.04,Safe D,4.11,,0,
+NV-02,house,NV,02,Teresa Benitez-Thompson,David Flippo,,REP,0.1995,0.8005,-4.78,Likely R,-13.58,-2.0,1,2026-10-13
+NV-03,house,NV,03,Susie Lee,Marty O'Donnell,DEM,DEM,0.947,0.053,10.18,Safe D,1.26,,0,
+NV-04,house,NV,04,Steven Horsford,Cody Whipple,DEM,DEM,0.9809,0.0191,13.06,Safe D,4.13,,0,
+NY-01,house,NY,01,Christopher Gallant,Nick LaLota,REP,REP,0.4073,0.5927,-1.48,Lean R,-8.4,,0,
+NY-02,house,NY,02,Patrick Halpin,Andrew Garbarino,REP,REP,0.2419,0.7581,-4.41,Likely R,-11.34,,0,
+NY-03,house,NY,03,Tom Suozzi,Mike LiPetri,DEM,DEM,0.911,0.089,8.49,Safe D,-0.44,,0,
+NY-04,house,NY,04,Laura Gillen,Jeanine Driscoll,DEM,DEM,0.9844,0.0156,13.57,Safe D,4.64,,0,
+NY-05,house,NY,05,Gregory Meeks,George Marsh,DEM,DEM,0.999,0.001,57.24,Safe D,48.31,,0,
+NY-06,house,NY,06,Grace Meng,Joseph Chou,DEM,DEM,0.999,0.001,21.91,Safe D,12.99,,0,
+NY-07,house,NY,07,Claire Valdez,Melvin Rivera,,DEM,0.999,0.001,59.33,Safe D,51.41,,0,
+NY-08,house,NY,08,Hakeem Jeffries,Lewis Mizrahi,DEM,DEM,0.999,0.001,56.96,Safe D,48.03,,0,
+NY-09,house,NY,09,Yvette Clarke,Joel Anabilah-Azumah,DEM,DEM,0.999,0.001,53.66,Safe D,44.74,,0,
+NY-10,house,NY,10,Brad Lander,Jennifer Moore,,DEM,0.999,0.001,72.58,Safe D,64.66,,0,
+NY-11,house,NY,11,Michael DeCillis,Nicole Malliotakis,REP,REP,0.0158,0.9842,-13.54,Safe R,-20.46,,0,
+NY-12,house,NY,12,Micah Lasher,Caroline Shinkle,,DEM,0.999,0.001,74.8,Safe D,66.87,,0,
+NY-13,house,NY,13,Darializa Avila Chevalier,Jomo Williams,,DEM,0.999,0.001,73.23,Safe D,65.3,,0,
+NY-14,house,NY,14,Alexandria Ocasio-Cortez,Diamant Hysenaj,DEM,DEM,0.999,0.001,47.81,Safe D,38.88,,0,
+NY-15,house,NY,15,Ritchie Torres,Stylo Sapaskis,DEM,DEM,0.999,0.001,64.01,Safe D,55.09,,0,
+NY-16,house,NY,16,George Latimer,Joseph Cinquemani,DEM,DEM,0.999,0.001,45.29,Safe D,36.36,,0,
+NY-17,house,NY,17,Cait Conley,Mike Lawler,REP,REP,0.9046,0.0954,7.13,Safe D,2.98,1.24,2,2026-09-30
+NY-18,house,NY,18,Pat Ryan,Jackie Auringer,DEM,DEM,0.9927,0.0073,13.32,Safe D,4.54,13.0,2,2026-09-30
+NY-19,house,NY,19,Josh Riley,Peter Oberacker,DEM,DEM,0.9622,0.0378,11.19,Safe D,2.27,,0,
+NY-20,house,NY,20,Paul Tonko,Ralph Ambrosio,DEM,DEM,0.999,0.001,24.32,Safe D,15.39,,0,
+NY-21,house,NY,21,Blake Gendebien,Anthony Constantino,,REP,0.0992,0.9008,-6.27,Safe R,-19.66,-1.58,5,2026-10-13
+NY-22,house,NY,22,John Mannion,Kailee Buller,DEM,DEM,0.9972,0.0028,17.43,Safe D,8.5,,0,
+NY-23,house,NY,23,Aaron Gies,Nick Langworthy,REP,REP,0.0053,0.9947,-14.59,Safe R,-20.83,-17.0,1,2026-09-23
+NY-24,house,NY,24,Alissa Ellman,Claudia Tenney,REP,REP,0.006,0.994,-15.84,Safe R,-22.77,,0,
+NY-25,house,NY,25,Joe Morelle,Virginia McIntyre,DEM,DEM,0.999,0.001,28.01,Safe D,19.08,,0,
+NY-26,house,NY,26,Timothy Kennedy,Dennis Hannon,DEM,DEM,0.999,0.001,29.74,Safe D,20.82,,0,
+OH-01,house,OH,01,Greg Landsman,Eric Conroy,DEM,DEM,0.8316,0.1684,4.94,Likely D,-2.0,2.39,3,2026-10-21
+OH-02,house,OH,02,Jennifer Mazzuckelli,David Taylor,REP,REP,0.001,0.999,-34.8,Safe R,-41.73,,0,
+OH-03,house,OH,03,Joyce Beatty,Cleophus Dulaney,DEM,DEM,0.999,0.001,50.42,Safe D,41.49,,0,
+OH-04,house,OH,04,Joshua Kolasinski,Jim Jordan,REP,REP,0.001,0.999,-35.51,Safe R,-42.44,,0,
+OH-05,house,OH,05,Brian Shaver,Bob Latta,REP,REP,0.005,0.995,-16.25,Safe R,-23.17,,0,
+OH-06,house,OH,06,Elizabeth Kirtley,Michael Rulli,REP,REP,0.001,0.999,-26.53,Safe R,-33.45,,0,
+OH-07,house,OH,07,Brian Poindexter,Max Miller,REP,REP,0.2684,0.7316,-3.89,Likely R,-10.82,,0,
+OH-08,house,OH,08,Vanessa Enoch,Warren Davidson,REP,REP,0.0807,0.9193,-8.82,Safe R,-15.75,,0,
+OH-09,house,OH,09,Marcy Kaptur,Derek Merrin,DEM,DEM,0.4673,0.5327,-0.47,Toss-up,-9.53,0.0,1,2026-09-23
+OH-10,house,OH,10,Kristina Knickerbocker,Mike Turner,REP,REP,0.5249,0.4751,0.35,Toss-up,-7.41,3.0,1,2026-10-13
+OH-11,house,OH,11,Shontel Brown,Mike Kirchner,DEM,DEM,0.999,0.001,65.39,Safe D,56.46,,0,
+OH-12,house,OH,12,Jerrad Christian,Troy Balderson,REP,REP,0.001,0.999,-23.21,Safe R,-30.13,,0,
+OH-13,house,OH,13,Emilia Sykes,Carey Coleman,DEM,DEM,0.9805,0.0195,13.0,Safe D,4.08,,0,
+OH-14,house,OH,14,Maria Jukic,David Joyce,REP,REP,0.0224,0.9776,-12.64,Safe R,-19.57,,0,
+OH-15,house,OH,15,Don Leonard,Mike Carey,REP,REP,0.4459,0.5541,-0.71,Lean R,-9.52,1.96,3,2026-10-12
+OK-01,house,OK,01,John Croisant,Mark Tedford,,REP,0.0115,0.9885,-14.33,Safe R,-22.25,,0,
+OK-02,house,OK,02,Brandon Wade,Josh Brecheen,REP,REP,0.001,0.999,-48.83,Safe R,-55.76,,0,
+OK-03,house,OK,03,Suzie Byrd,Frank Lucas,REP,REP,0.001,0.999,-38.38,Safe R,-45.31,,0,
+OK-04,house,OK,04,Mitchell Jacob,Tom Cole,REP,REP,0.001,0.999,-26.36,Safe R,-33.29,,0,
+OK-05,house,OK,05,Jena Nelson,Stephanie Bice,REP,REP,0.0329,0.9671,-10.53,Safe R,-19.0,-5.0,1,2026-09-20
+OR-01,house,OR,01,Suzanne Bonamici,Barbara Kahl,DEM,DEM,0.999,0.001,48.33,Safe D,39.41,,0,
+OR-02,house,OR,02,Chris Beck,Cliff Bentz,REP,REP,0.001,0.999,-20.44,Safe R,-27.36,,0,
+OR-03,house,OR,03,Maxine Dexter,Loran Ayles,DEM,DEM,0.999,0.001,56.82,Safe D,47.9,,0,
+OR-04,house,OR,04,Val Hoyle,Monique DeSpain,DEM,DEM,0.999,0.001,21.42,Safe D,12.5,,0,
+OR-05,house,OR,05,Janelle Bynum,Patti Adair,DEM,DEM,0.9975,0.0025,17.69,Safe D,8.77,,0,
+OR-06,house,OR,06,Andrea Salinas,David Russ,DEM,DEM,0.999,0.001,20.92,Safe D,12.0,,0,
+PA-01,house,PA,01,Bob Harvie,Brian Fitzpatrick,REP,REP,0.8465,0.1535,5.24,Likely D,1.33,1.43,3,2026-10-22
+PA-02,house,PA,02,Brendan Boyle,Jessica Arriaga,DEM,DEM,0.999,0.001,47.25,Safe D,38.32,,0,
+PA-03,house,PA,03,Chris Rabb,(no Republican filed),,DEM,0.999,0.001,87.15,Safe D,79.23,,0,
+PA-04,house,PA,04,Madeleine Dean,Aurora Stuski,DEM,DEM,0.999,0.001,25.56,Safe D,16.64,,0,
+PA-05,house,PA,05,Mary Gay Scanlon,Nicholas Manganaro,DEM,DEM,0.999,0.001,38.74,Safe D,29.82,,0,
+PA-06,house,PA,06,Chrissy Houlahan,Marty Young,DEM,DEM,0.999,0.001,21.12,Safe D,12.19,,0,
+PA-07,house,PA,07,Bob Brooks,Ryan Mackenzie,REP,REP,0.8137,0.1863,4.77,Likely D,-2.35,5.09,2,2026-10-22
+PA-08,house,PA,08,Paige Cognetti,Rob Bresnahan,REP,REP,0.5894,0.4106,1.21,Lean D,-7.33,4.07,2,2026-10-22
+PA-09,house,PA,09,Rachel Wallace,Dan Meuser,REP,REP,0.001,0.999,-31.14,Safe R,-38.07,,0,
+PA-10,house,PA,10,Janelle Stelson,Scott Perry,REP,REP,0.5833,0.4167,1.08,Lean D,-5.22,0.28,3,2026-10-22
+PA-11,house,PA,11,Nancy Mannion,Lloyd Smucker,REP,REP,0.0094,0.9906,-14.8,Safe R,-21.73,,0,
+PA-12,house,PA,12,Summer Lee,James Hayes,DEM,DEM,0.999,0.001,28.49,Safe D,19.57,,0,
+PA-13,house,PA,13,Beth Farnham,John Joyce,REP,REP,0.001,0.999,-38.95,Safe R,-45.88,,0,
+PA-14,house,PA,14,Alan Bradstock,Guy Reschenthaler,REP,REP,0.001,0.999,-26.19,Safe R,-33.12,,0,
+PA-15,house,PA,15,Ray Bilger,Glenn Thompson,REP,REP,0.001,0.999,-31.09,Safe R,-38.02,,0,
+PA-16,house,PA,16,Justin Wagner,Mike Kelly,REP,REP,0.0068,0.9932,-15.53,Safe R,-22.46,,0,
+PA-17,house,PA,17,Chris Deluzio,Tony Guy,DEM,DEM,0.989,0.011,14.44,Safe D,5.51,,0,
+RI-01,house,RI,01,Gabriel Amo,Kellie Keenan,DEM,DEM,0.999,0.001,30.76,Safe D,24.3,25.89,2,2026-10-11
+RI-02,house,RI,02,Seth Magaziner,Victor Mellor,,DEM,0.9985,0.0015,16.08,Safe D,8.52,15.36,2,2026-10-11
+SC-01,house,SC,01,Nancy Lacore,Jenny Costa Honeycutt,,REP,0.2958,0.7042,-2.57,Likely R,-12.4,-1.14,5,2026-10-22
+SC-02,house,SC,02,Zyon Khalifa,Joe Wilson,REP,REP,0.1459,0.8541,-6.64,Likely R,-13.57,,0,
+SC-03,house,SC,03,Eunice Lehmacher,Sheri Biggs,REP,REP,0.001,0.999,-35.25,Safe R,-42.18,,0,
+SC-04,house,SC,04,Courtney McClain,William Timmons,REP,REP,0.0056,0.9944,-15.97,Safe R,-22.89,,0,
+SC-05,house,SC,05,Mallory Dittmer,Wes Climer,,REP,0.013,0.987,-14.03,Safe R,-21.96,,0,
+SC-06,house,SC,06,Jim Clyburn,John Peterson,DEM,DEM,0.999,0.001,34.62,Safe D,25.69,,0,
+SC-07,house,SC,07,John Vincent,Russell Fry,REP,REP,0.0025,0.9975,-17.68,Safe R,-24.61,,0,
+SD-01,house,SD,01,Nikki Gronli,Marty Jackley,,REP,0.001,0.999,-23.02,Safe R,-29.35,-28.0,1,2026-10-14
+TN-01,house,TN,01,Kristi Burke,Diana Harshbarger,REP,REP,0.001,0.999,-50.79,Safe R,-57.72,,0,
+TN-02,house,TN,02,Michaela Barnett,Tim Burchett,REP,REP,0.001,0.999,-26.54,Safe R,-33.47,,0,
+TN-03,house,TN,03,Anna Golladay,Chuck Fleischmann,REP,REP,0.001,0.999,-28.43,Safe R,-35.35,,0,
+TN-04,house,TN,04,Victoria Broderick,Scott DesJarlais,REP,REP,0.0073,0.9927,-15.38,Safe R,-22.3,,0,
+TN-05,house,TN,05,Chaz Molder,Charlie Hatcher,,REP,0.0279,0.9721,-10.9,Safe R,-20.56,-5.0,1,2026-10-01
+TN-06,house,TN,06,Mike Croley,Johnny Garrett,,REP,0.0028,0.9972,-17.45,Safe R,-25.38,,0,
+TN-07,house,TN,07,Darden Copeland,Matt Van Epps,REP,REP,0.0093,0.9907,-14.83,Safe R,-21.76,,0,
+TN-08,house,TN,08,Heidi Kuhn,David Kustoff,REP,REP,0.023,0.977,-12.57,Safe R,-19.5,,0,
+TN-09,house,TN,09,Justin J. Pearson,Brent Taylor,,DEM,0.0459,0.9541,-10.62,Safe R,-18.55,,0,
+TX-01,house,TX,01,Yolanda Prince,Nathaniel Moran,REP,REP,0.001,0.999,-41.65,Safe R,-48.57,,0,
+TX-02,house,TX,02,Shaun Finnie,Steve Toth,,REP,0.0075,0.9925,-13.83,Safe R,-23.2,-9.0,1,2026-10-04
+TX-03,house,TX,03,Evan Hunt,Keith Self,REP,REP,0.0055,0.9945,-16.02,Safe R,-22.95,,0,
+TX-04,house,TX,04,Jason Pearce,Pat Fallon,REP,REP,0.0036,0.9964,-16.91,Safe R,-23.83,,0,
+TX-05,house,TX,05,Chelsey Hockett,Lance Gooden,REP,REP,0.0141,0.9859,-13.83,Safe R,-20.76,,0,
+TX-06,house,TX,06,Danny Minton,Jake Ellzey,REP,REP,0.0059,0.9941,-15.85,Safe R,-22.78,,0,
+TX-07,house,TX,07,Lizzie Fletcher,Alexander Hale,DEM,DEM,0.999,0.001,35.19,Safe D,26.26,,0,
+TX-08,house,TX,08,Laura Jones,Jessica Steinmann,,REP,0.0024,0.9976,-17.74,Safe R,-25.67,,0,
+TX-09,house,TX,09,Leticia Gutierrez,Alex Mealer,,DEM,0.1009,0.8991,-6.55,Likely R,-16.85,-3.55,3,2026-10-22
+TX-10,house,TX,10,Caitlin Rourk,Chris Gober,,REP,0.0187,0.9813,-11.9,Safe R,-21.21,-7.0,1,2026-09-22
+TX-11,house,TX,11,Claire Reynolds,August Pfluger,REP,REP,0.001,0.999,-27.0,Safe R,-33.92,,0,
+TX-12,house,TX,12,Heli Rodriguez Prilliman,Craig Goldman,REP,REP,0.0057,0.9943,-15.93,Safe R,-22.85,,0,
+TX-13,house,TX,13,Mark Nair,Ronny Jackson,REP,REP,0.001,0.999,-39.56,Safe R,-46.48,,0,
+TX-14,house,TX,14,Thurman Bartie,Randy Weber,REP,REP,0.0034,0.9966,-17.05,Safe R,-23.98,,0,
+TX-15,house,TX,15,Bobby Pulido,Monica De La Cruz,REP,REP,0.4902,0.5098,-0.13,Toss-up,-13.18,8.19,3,2026-10-16
+TX-16,house,TX,16,Veronica Escobar,Adam Bauman,DEM,DEM,0.999,0.001,30.98,Safe D,22.06,,0,
+TX-17,house,TX,17,Casey Shepard,Pete Sessions,REP,REP,0.0147,0.9853,-13.72,Safe R,-20.65,,0,
+TX-18,house,TX,18,Christian Menefee,Ronald Whitfield,DEM,DEM,0.999,0.001,67.16,Safe D,58.24,,0,
+TX-19,house,TX,19,Kyle Rable,Tom Sell,,REP,0.001,0.999,-43.02,Safe R,-50.94,,0,
+TX-20,house,TX,20,Joaquin Castro,Edgardo Baez,DEM,DEM,0.999,0.001,41.0,Safe D,32.07,,0,
+TX-21,house,TX,21,Kristin Hook,Mark Teixeira,,REP,0.0179,0.9821,-13.22,Safe R,-21.15,,0,
+TX-22,house,TX,22,Marquette Greene-Scott,Trever Nehls,,REP,0.0143,0.9857,-13.79,Safe R,-21.72,,0,
+TX-23,house,TX,23,Katy Padilla Stout,Brandon Herrera,,REP,0.2493,0.7507,-3.85,Likely R,-12.94,0.0,1,2026-10-07
+TX-24,house,TX,24,Kevin Burge,Beth Van Duyne,REP,REP,0.0757,0.9243,-9.04,Safe R,-15.96,,0,
+TX-25,house,TX,25,Dione Sims,Roger Williams,REP,REP,0.007,0.993,-15.47,Safe R,-22.39,,0,
+TX-26,house,TX,26,Steven Shook,Brandon Gill,REP,REP,0.0047,0.9953,-16.38,Safe R,-23.31,,0,
+TX-27,house,TX,27,Tanya Lloyd,Michael Cloud,REP,REP,0.0144,0.9856,-13.77,Safe R,-20.69,,0,
+TX-28,house,TX,28,Henry Cuellar,Tano Tijerina,DEM,DEM,0.9361,0.0639,8.63,Safe D,-3.9,20.0,1,2026-10-13
+TX-29,house,TX,29,Sylvia Garcia,Martha Fierro,DEM,DEM,0.999,0.001,43.39,Safe D,34.47,,0,
+TX-30,house,TX,30,Frederick Haynes III,Everett Jackson,,DEM,0.999,0.001,58.26,Safe D,50.33,,0,
+TX-31,house,TX,31,Justin Early,John Carter,REP,REP,0.0102,0.9898,-14.61,Safe R,-21.54,,0,
+TX-32,house,TX,32,Dan Barrios,Jace Yarbrough,,DEM,0.0885,0.9115,-8.51,Safe R,-16.43,,0,
+TX-33,house,TX,33,Colin Allred,Patrick Gillespie,,DEM,0.999,0.001,44.44,Safe D,36.51,,0,
+TX-34,house,TX,34,Vicente Gonzalez,Eric Flores,DEM,DEM,0.7448,0.2552,3.71,Likely D,-6.31,7.0,1,2026-10-19
+TX-35,house,TX,35,Johnny Garcia,Carlos De La Cruz,,DEM,0.5059,0.4941,0.08,Toss-up,-8.46,0.88,3,2026-10-19
+TX-36,house,TX,36,Rhonda Hart,Brian Babin,REP,REP,0.004,0.996,-16.69,Safe R,-23.61,,0,
+TX-37,house,TX,37,Greg Casar,Lauren Peña,DEM,DEM,0.999,0.001,68.12,Safe D,59.19,,0,
+TX-38,house,TX,38,Melissa McDonough,Jon Bonck,,REP,0.02,0.98,-12.94,Safe R,-20.87,,0,
+UT-01,house,UT,01,Ben McAdams,Riley Owen,,REP,0.999,0.001,34.62,Safe D,24.81,41.5,1,2026-09-10
+UT-02,house,UT,02,Peter Crosby,Blake Moore,REP,REP,0.002,0.998,-15.18,Safe R,-30.53,-1.68,3,2026-09-24
+UT-03,house,UT,03,Kent Udell,Celeste Maloy,REP,REP,0.001,0.999,-31.93,Safe R,-42.68,-18.1,1,2026-09-15
+UT-04,house,UT,04,Jonny Larsen,Mike Kennedy,REP,REP,0.001,0.999,-16.92,Safe R,-33.94,5.8,2,2026-09-17
+VA-01,house,VA,01,Shannon Taylor,Rob Wittman,REP,REP,0.6009,0.3991,1.26,Lean D,-5.73,1.31,4,2026-10-25
+VA-02,house,VA,02,Elaine Luria,Jen Kiggans,REP,REP,0.8557,0.1443,6.02,Likely D,0.03,3.0,1,2026-10-10
+VA-03,house,VA,03,Bobby Scott,Edwin Rivera,DEM,DEM,0.999,0.001,44.94,Safe D,36.02,,0,
+VA-04,house,VA,04,Jennifer McClellan,Robert Murray,DEM,DEM,0.999,0.001,42.82,Safe D,33.9,,0,
+VA-05,house,VA,05,Tom Perriello,John McGuire,REP,REP,0.2287,0.7713,-3.92,Likely R,-11.47,-2.93,3,2026-09-28
+VA-06,house,VA,06,Beth Macy,Ben Cline,REP,REP,0.001,0.999,-20.09,Safe R,-24.11,-30.0,1,2026-09-30
+VA-07,house,VA,07,Eugene Vindman,Doug Ollivant,DEM,DEM,0.9781,0.0219,12.71,Safe D,3.78,,0,
+VA-08,house,VA,08,Don Beyer,Tony Sabio,DEM,DEM,0.999,0.001,61.35,Safe D,52.43,,0,
+VA-09,house,VA,09,Joy Powers,Morgan Griffith,REP,REP,0.001,0.999,-36.95,Safe R,-43.87,,0,
+VA-10,house,VA,10,Suhas Subramanyam,Dave Beckwith,DEM,DEM,0.999,0.001,19.54,Safe D,10.62,,0,
+VA-11,house,VA,11,James Walkinshaw,Arthur Purves,DEM,DEM,0.999,0.001,45.7,Safe D,36.77,,0,
+VT-01,house,VT,01,Rebecca Balint,Gerald Malloy,DEM,DEM,0.999,0.001,34.93,Safe D,33.52,22.71,3,2026-09-21
+WA-01,house,WA,01,Suzan DelBene,Mary Silva,DEM,DEM,0.999,0.001,39.01,Safe D,30.09,,0,
+WA-02,house,WA,02,Rick Larsen,Edwin H. Feller,DEM,DEM,0.999,0.001,33.05,Safe D,24.13,,0,
+WA-03,house,WA,03,Marie Gluesenkamp Perez,John Braun,DEM,DEM,0.7458,0.2542,3.54,Likely D,-3.71,0.54,2,2026-10-21
+WA-04,house,WA,04,John Duresky,Amanda McKinney,,REP,0.0233,0.9767,-12.54,Safe R,-20.46,,0,
+WA-05,house,WA,05,Carmela Conroy,Michael Baumgartner,REP,REP,0.2567,0.7433,-4.12,Likely R,-11.04,,0,
+WA-06,house,WA,06,Emily Randall,Teresa Fox,DEM,DEM,0.999,0.001,28.15,Safe D,19.23,,0,
+WA-07,house,WA,07,Pramila Jayapal,Nirav Sheth,DEM,DEM,0.999,0.001,86.45,Safe D,77.52,,0,
+WA-08,house,WA,08,Kim Schrier,Spencer Meline,DEM,DEM,0.9916,0.0084,15.06,Safe D,6.14,,0,
+WA-09,house,WA,09,Adam Smith,Doug Basler,DEM,DEM,0.999,0.001,52.58,Safe D,43.65,,0,
+WA-10,house,WA,10,Marilyn Strickland,Chris D. Chung,DEM,DEM,0.999,0.001,27.35,Safe D,18.43,,0,
+WI-01,house,WI,01,Mitchell Berman,Bryan Steil,REP,REP,0.6602,0.3398,2.17,Lean D,-3.87,0.82,3,2026-10-01
+WI-02,house,WI,02,Mark Pocan,(no Republican filed),DEM,DEM,0.999,0.001,50.07,Safe D,41.15,,0,
+WI-03,house,WI,03,Rebecca Cooke,Derrick Van Orden,REP,REP,0.513,0.487,0.21,Toss-up,-6.72,,0,
+WI-04,house,WI,04,Gwen Moore,Tim Rogers,DEM,DEM,0.999,0.001,61.77,Safe D,52.84,,0,
+WI-05,house,WI,05,Andrew Beck,Scott Fitzgerald,REP,REP,0.0058,0.9942,-15.89,Safe R,-22.82,,0,
+WI-06,house,WI,06,Brad Smith,Glenn Grothman,REP,REP,0.0641,0.9359,-9.58,Safe R,-16.51,,0,
+WI-07,house,WI,07,Fred Clark,Michael Alfonso,,REP,0.012,0.988,-14.23,Safe R,-22.16,,0,
+WI-08,house,WI,08,Rick Crosson,Tony Wied,REP,REP,0.0684,0.9316,-9.37,Safe R,-16.3,,0,
+WV-01,house,WV,01,Vince George,Carol Miller,REP,REP,0.001,0.999,-37.44,Safe R,-44.37,,0,
+WV-02,house,WV,02,Ace Parsi,Riley Moore,REP,REP,0.001,0.999,-32.96,Safe R,-39.88,,0,
+WY-01,house,WY,01,Lisa Kinney,Chuck Gray,,REP,0.001,0.999,-38.75,Safe R,-46.68,,0,
