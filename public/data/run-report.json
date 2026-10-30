@@ -1,16 +1,18 @@
 {
-  "generated_at": "2026-10-30T05:47:08.198997Z",
+  "generated_at": "2026-10-30T17:59:55.224102Z",
   "release": "PROD v1.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
-  "upstream_commit": "8523c75f9ba61d1c99a941c1238a7294fab6006a",
-  "inputs_hash": "d3eed595ff40c44d55714b47995f29b846a639a8c680eedb6fcc873a3dc7ca92",
+  "upstream_commit": "0803f70f5b5b864d47e6dfb8d9a632d2c1a221cf",
+  "inputs_hash": "56a8b65156ad12cffad4f0d9ffb0576281bf7a1fa178be54ea2cadaa0d053fbd",
   "checks": "passed",
-  "warnings": [],
+  "warnings": [
+    "MT-01 probability moved 25.2pp"
+  ],
   "house_races": 435,
   "senate_contests": 35,
-  "generic_ballot_polls": 53,
-  "static_routes": 516,
-  "history_summaries": 58,
+  "generic_ballot_polls": 56,
+  "static_routes": 521,
+  "history_summaries": 59,
   "history_persisted": true,
   "source_states": {
     "current": 3,
@@ -23,7 +25,7 @@
     "inside_elections_ratings": 470,
     "fec_state": "current",
     "fec_matched_candidates": 860,
-    "public_money_records": 198,
+    "public_money_records": 200,
     "campaign_signals": 120,
     "access_constraints": [
       "Cook Political Report",

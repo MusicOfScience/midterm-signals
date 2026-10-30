@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T05:47:08.198997Z",
+  "generated_at": "2026-10-30T17:59:55.224102Z",
   "records": [
     {
       "type": "race",
@@ -9768,6 +9768,13 @@
     },
     {
       "type": "pollster",
+      "label": "A2 Insights",
+      "subtitle": "Pollster",
+      "key": "A2 Insights",
+      "terms": "A2 Insights"
+    },
+    {
+      "type": "pollster",
       "label": "AP-NORC",
       "subtitle": "Pollster",
       "key": "AP-NORC",
@@ -10132,6 +10139,13 @@
     },
     {
       "type": "pollster",
+      "label": "Keating Research, Inc.",
+      "subtitle": "Pollster",
+      "key": "Keating Research, Inc.",
+      "terms": "Keating Research, Inc."
+    },
+    {
+      "type": "pollster",
       "label": "Lake Research Partners",
       "subtitle": "Pollster",
       "key": "Lake Research Partners",
@@ -10209,6 +10223,13 @@
     },
     {
       "type": "pollster",
+      "label": "Michigan State University Office for Survey Research/Verasight",
+      "subtitle": "Pollster",
+      "key": "Michigan State University Office for Survey Research/Verasight",
+      "terms": "Michigan State University Office for Survey Research/Verasight"
+    },
+    {
+      "type": "pollster",
       "label": "Miller Consulting Services",
       "subtitle": "Pollster",
       "key": "Miller Consulting Services",
@@ -10223,10 +10244,24 @@
     },
     {
       "type": "pollster",
+      "label": "Montana State University Billings",
+      "subtitle": "Pollster",
+      "key": "Montana State University Billings",
+      "terms": "Montana State University Billings"
+    },
+    {
+      "type": "pollster",
       "label": "Morning Consult",
       "subtitle": "Pollster",
       "key": "Morning Consult",
       "terms": "Morning Consult"
+    },
+    {
+      "type": "pollster",
+      "label": "Muhlenberg College",
+      "subtitle": "Pollster",
+      "key": "Muhlenberg College",
+      "terms": "Muhlenberg College"
     },
     {
       "type": "pollster",
@@ -10489,6 +10524,13 @@
     },
     {
       "type": "pollster",
+      "label": "The Argument/Verasight",
+      "subtitle": "Pollster",
+      "key": "The Argument/Verasight",
+      "terms": "The Argument/Verasight"
+    },
+    {
+      "type": "pollster",
       "label": "The Bullfinch Group",
       "subtitle": "Pollster",
       "key": "The Bullfinch Group",
@@ -10496,10 +10538,10 @@
     },
     {
       "type": "pollster",
-      "label": "The Citadel School of Humanities and Social Sciences",
+      "label": "The Citadel Poll",
       "subtitle": "Pollster",
-      "key": "The Citadel School of Humanities and Social Sciences",
-      "terms": "The Citadel School of Humanities and Social Sciences"
+      "key": "The Citadel Poll",
+      "terms": "The Citadel Poll"
     },
     {
       "type": "pollster",
@@ -10549,6 +10591,13 @@
       "subtitle": "Pollster",
       "key": "TrueDot",
       "terms": "TrueDot"
+    },
+    {
+      "type": "pollster",
+      "label": "Tufts",
+      "subtitle": "Pollster",
+      "key": "Tufts",
+      "terms": "Tufts"
     },
     {
       "type": "pollster",
@@ -10626,6 +10675,13 @@
       "subtitle": "Pollster",
       "key": "VoteNexus",
       "terms": "VoteNexus"
+    },
+    {
+      "type": "pollster",
+      "label": "Workbench Strategy",
+      "subtitle": "Pollster",
+      "key": "Workbench Strategy",
+      "terms": "Workbench Strategy"
     },
     {
       "type": "pollster",
