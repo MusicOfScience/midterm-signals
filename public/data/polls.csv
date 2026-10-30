@@ -52,8 +52,6 @@ generic_ballot,,Morning Consult,,,,2026-09-27,,18786,,,50.3,42.8,7.5,,0.97045
 generic_ballot,,Quinnipiac University,,,,2026-09-27,,1032,,,51.0,39.0,12.0,,0.3212
 generic_ballot,,Angus Reid Global,,,,2026-09-25,,,,,45.0,34.0,11.0,,0.07089
 generic_ballot,,SSRS,,,,2026-09-25,,1273,,,44.0,37.0,7.0,,0.1357
-generic_ballot,,Change Research,,D,,2026-09-24,,2021,,,46.0,39.0,7.0,,0.14862
-generic_ballot,,GBAO,,D,,2026-09-24,,2000,,,49.0,41.0,8.0,,0.14785
 race,AK-SEN,Data for Progress,,D,,2026-10-16,,694,,,47.0,44.0,3.0,,0.74345
 race,AK-SEN,InsiderAdvantage,,R,,2026-10-10,,1200,,,48.2,42.6,5.6,,0.33936
 race,AK-SEN,Alaska Survey Research,,,,2026-10-03,,1512,,,47.0,45.0,2.0,,0.52153
@@ -357,7 +355,6 @@ race,TX-SEN,Emerson College,,,,2026-09-14,,1000,,,47.4,46.4,1.0,,0.18172
 race,TX-SEN,ReconMR/Siena Research Institute,,,,2026-09-11,,614,,,49.0,43.0,6.0,,0.0572
 race,TX-SEN,"Mason-Dixon Polling & Research, Inc.",,,,2026-09-10,,625,,,46.0,43.0,3.0,,0.05472
 race,TX-SEN,InsiderAdvantage,,R,,2026-09-09,,1200,,,47.1,45.6,1.5,,0.03615
-race,TX-SEN,YouGov,,,,2026-09-04,,1000,,,48.0,43.0,5.0,,0.09687
 race,AL-02,Remington,,R,,2026-10-25,,642,,,46.0,48.0,-2.0,,0.42153
 race,AL-02,Remington,,R,,2026-10-25,,642,,,44.0,51.0,-7.0,,0.42153
 race,AR-02,Emerson College,,,,2026-10-14,,383,,,48.0,52.0,-4.0,,1.11359
