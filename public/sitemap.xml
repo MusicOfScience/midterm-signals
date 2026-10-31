@@ -253,9 +253,6 @@
   <url><loc>https://midterm-signals.pages.dev/races/NC-09/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/richard-ojeda/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/richard-hudson/</loc></url>
-  <url><loc>https://midterm-signals.pages.dev/races/NC-10/</loc></url>
-  <url><loc>https://midterm-signals.pages.dev/candidates/ashley-bell/</loc></url>
-  <url><loc>https://midterm-signals.pages.dev/candidates/pat-harrigan/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/races/NC-11/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/jamie-ager/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/jennifer-balkcom/</loc></url>
@@ -283,6 +280,9 @@
   <url><loc>https://midterm-signals.pages.dev/races/NV-02/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/teresa-benitez-thompson/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/david-flippo/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/races/NV-03/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/candidates/susie-lee/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/candidates/marty-o-donnell/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/races/NY-01/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/christopher-gallant/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/candidates/nick-lalota/</loc></url>
@@ -392,7 +392,6 @@
   <url><loc>https://midterm-signals.pages.dev/pollsters/alaska-survey-research/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/alpharoc/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/american-pulse-research-polling/</loc></url>
-  <url><loc>https://midterm-signals.pages.dev/pollsters/angus-reid-global/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/aspect-strategic/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/barbara-jordan-public-policy-research-and-survey-center/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/beacon-research-shaw-company-research/</loc></url>
@@ -465,7 +464,9 @@
   <url><loc>https://midterm-signals.pages.dev/pollsters/normington-petts-associates/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/onmessage-inc/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/opinion-diagnostics/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/pollsters/patinkin-research-strategies/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/peak-insights/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/pollsters/pennsylvania-state-university-mccourtney-institute-for-democracy-yougov/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/pew-research-center/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/public-opinion-strategies/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/public-policy-polling/</loc></url>
@@ -478,7 +479,6 @@
   <url><loc>https://midterm-signals.pages.dev/pollsters/research-polling-inc/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/rutgers-eagleton/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/sea-polling/</loc></url>
-  <url><loc>https://midterm-signals.pages.dev/pollsters/ssrs/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/siena-university/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/slingshot-strategies/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/st-anselm/</loc></url>
@@ -507,6 +507,7 @@
   <url><loc>https://midterm-signals.pages.dev/pollsters/tufts/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/tulchin-research/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/umass-lowell/</loc></url>
+  <url><loc>https://midterm-signals.pages.dev/pollsters/usc-democracy-and-fair-elections-lab/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/university-of-georgia/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/university-of-houston-hobby-school-of-public-affairs/</loc></url>
   <url><loc>https://midterm-signals.pages.dev/pollsters/university-of-massachusetts-lowell-center-for-public-opinion-yougov/</loc></url>

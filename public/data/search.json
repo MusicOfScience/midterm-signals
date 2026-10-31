@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T17:59:55.224102Z",
+  "generated_at": "2026-10-31T05:38:58.610162Z",
   "records": [
     {
       "type": "race",
@@ -9810,13 +9810,6 @@
     },
     {
       "type": "pollster",
-      "label": "Angus Reid Global",
-      "subtitle": "Pollster",
-      "key": "Angus Reid Global",
-      "terms": "Angus Reid Global"
-    },
-    {
-      "type": "pollster",
       "label": "Aspect Strategic",
       "subtitle": "Pollster",
       "key": "Aspect Strategic",
@@ -10321,10 +10314,24 @@
     },
     {
       "type": "pollster",
+      "label": "Patinkin Research Strategies",
+      "subtitle": "Pollster",
+      "key": "Patinkin Research Strategies",
+      "terms": "Patinkin Research Strategies"
+    },
+    {
+      "type": "pollster",
       "label": "Peak Insights",
       "subtitle": "Pollster",
       "key": "Peak Insights",
       "terms": "Peak Insights"
+    },
+    {
+      "type": "pollster",
+      "label": "Pennsylvania State University McCourtney Institute for Democracy/YouGov",
+      "subtitle": "Pollster",
+      "key": "Pennsylvania State University McCourtney Institute for Democracy/YouGov",
+      "terms": "Pennsylvania State University McCourtney Institute for Democracy/YouGov"
     },
     {
       "type": "pollster",
@@ -10409,13 +10416,6 @@
       "subtitle": "Pollster",
       "key": "SEA Polling",
       "terms": "SEA Polling"
-    },
-    {
-      "type": "pollster",
-      "label": "SSRS",
-      "subtitle": "Pollster",
-      "key": "SSRS",
-      "terms": "SSRS"
     },
     {
       "type": "pollster",
@@ -10612,6 +10612,13 @@
       "subtitle": "Pollster",
       "key": "UMass Lowell",
       "terms": "UMass Lowell"
+    },
+    {
+      "type": "pollster",
+      "label": "USC Democracy and Fair Elections Lab",
+      "subtitle": "Pollster",
+      "key": "USC Democracy and Fair Elections Lab",
+      "terms": "USC Democracy and Fair Elections Lab"
     },
     {
       "type": "pollster",
