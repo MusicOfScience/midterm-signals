@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-10-31T05:38:58.610162Z",
-  "data_refreshed_at": "2026-10-31T05:38:58.610162Z",
+  "generated_at": "2026-10-31T17:14:43.736304Z",
+  "data_refreshed_at": "2026-10-31T17:14:43.736304Z",
   "election_date": "2026-11-03",
   "days_to_election": 3,
   "summary": {
@@ -453,9 +453,9 @@
       "net_change_dem": 22.4
     },
     "senate": {
-      "dem_control_probability": 0.7869,
-      "expected_dem_seats": 52.1,
-      "expected_rep_seats": 47.9,
+      "dem_control_probability": 0.7876,
+      "expected_dem_seats": 52.2,
+      "expected_rep_seats": 47.8,
       "median_dem_seats": 52,
       "modal_dem_seats": 53,
       "dem_seats_50_interval": [
@@ -481,7 +481,7 @@
         },
         {
           "seats": 45,
-          "probability": 0.001967
+          "probability": 0.001933
         },
         {
           "seats": 46,
@@ -489,47 +489,47 @@
         },
         {
           "seats": 47,
-          "probability": 0.013233
+          "probability": 0.0132
         },
         {
           "seats": 48,
-          "probability": 0.0305
+          "probability": 0.0304
         },
         {
           "seats": 49,
-          "probability": 0.060933
+          "probability": 0.060433
         },
         {
           "seats": 50,
-          "probability": 0.101567
+          "probability": 0.1015
         },
         {
           "seats": 51,
-          "probability": 0.147433
+          "probability": 0.147033
         },
         {
           "seats": 52,
-          "probability": 0.179833
+          "probability": 0.179667
         },
         {
           "seats": 53,
-          "probability": 0.1844
+          "probability": 0.184867
         },
         {
           "seats": 54,
-          "probability": 0.1473
+          "probability": 0.147633
         },
         {
           "seats": 55,
-          "probability": 0.088567
+          "probability": 0.088933
         },
         {
           "seats": 56,
-          "probability": 0.032
+          "probability": 0.0321
         },
         {
           "seats": 57,
-          "probability": 0.006367
+          "probability": 0.0064
         },
         {
           "seats": 58,
@@ -542,13 +542,13 @@
       ],
       "simulations": 30000,
       "control_threshold_dem": 51,
-      "rep_control_probability": 0.2131,
-      "net_change_dem": 5.1,
+      "rep_control_probability": 0.2124,
+      "net_change_dem": 5.2,
       "fixed_not_up_dem_seats": 34
     },
     "joint_control": {
-      "dem_house_dem_senate": 0.7479,
-      "dem_house_rep_senate": 0.2028,
+      "dem_house_dem_senate": 0.7486,
+      "dem_house_rep_senate": 0.2021,
       "rep_house_dem_senate": 0.039,
       "rep_house_rep_senate": 0.0103
     }
@@ -1000,9 +1000,9 @@
       "net_change_dem": 22.4
     },
     "senate": {
-      "dem_control_probability": 0.7869,
-      "expected_dem_seats": 52.1,
-      "expected_rep_seats": 47.9,
+      "dem_control_probability": 0.7876,
+      "expected_dem_seats": 52.2,
+      "expected_rep_seats": 47.8,
       "median_dem_seats": 52,
       "modal_dem_seats": 53,
       "dem_seats_50_interval": [
@@ -1028,7 +1028,7 @@
         },
         {
           "seats": 45,
-          "probability": 0.001967
+          "probability": 0.001933
         },
         {
           "seats": 46,
@@ -1036,47 +1036,47 @@
         },
         {
           "seats": 47,
-          "probability": 0.013233
+          "probability": 0.0132
         },
         {
           "seats": 48,
-          "probability": 0.0305
+          "probability": 0.0304
         },
         {
           "seats": 49,
-          "probability": 0.060933
+          "probability": 0.060433
         },
         {
           "seats": 50,
-          "probability": 0.101567
+          "probability": 0.1015
         },
         {
           "seats": 51,
-          "probability": 0.147433
+          "probability": 0.147033
         },
         {
           "seats": 52,
-          "probability": 0.179833
+          "probability": 0.179667
         },
         {
           "seats": 53,
-          "probability": 0.1844
+          "probability": 0.184867
         },
         {
           "seats": 54,
-          "probability": 0.1473
+          "probability": 0.147633
         },
         {
           "seats": 55,
-          "probability": 0.088567
+          "probability": 0.088933
         },
         {
           "seats": 56,
-          "probability": 0.032
+          "probability": 0.0321
         },
         {
           "seats": 57,
-          "probability": 0.006367
+          "probability": 0.0064
         },
         {
           "seats": 58,
@@ -1089,8 +1089,8 @@
       ],
       "simulations": 30000,
       "control_threshold_dem": 51,
-      "rep_control_probability": 0.2131,
-      "net_change_dem": 5.1,
+      "rep_control_probability": 0.2124,
+      "net_change_dem": 5.2,
       "fixed_not_up_dem_seats": 34
     }
   },
@@ -1541,9 +1541,9 @@
       "net_change_dem": 22.4
     },
     "senate": {
-      "dem_control_probability": 0.7869,
-      "expected_dem_seats": 52.1,
-      "expected_rep_seats": 47.9,
+      "dem_control_probability": 0.7876,
+      "expected_dem_seats": 52.2,
+      "expected_rep_seats": 47.8,
       "median_dem_seats": 52,
       "modal_dem_seats": 53,
       "dem_seats_50_interval": [
@@ -1569,7 +1569,7 @@
         },
         {
           "seats": 45,
-          "probability": 0.001967
+          "probability": 0.001933
         },
         {
           "seats": 46,
@@ -1577,47 +1577,47 @@
         },
         {
           "seats": 47,
-          "probability": 0.013233
+          "probability": 0.0132
         },
         {
           "seats": 48,
-          "probability": 0.0305
+          "probability": 0.0304
         },
         {
           "seats": 49,
-          "probability": 0.060933
+          "probability": 0.060433
         },
         {
           "seats": 50,
-          "probability": 0.101567
+          "probability": 0.1015
         },
         {
           "seats": 51,
-          "probability": 0.147433
+          "probability": 0.147033
         },
         {
           "seats": 52,
-          "probability": 0.179833
+          "probability": 0.179667
         },
         {
           "seats": 53,
-          "probability": 0.1844
+          "probability": 0.184867
         },
         {
           "seats": 54,
-          "probability": 0.1473
+          "probability": 0.147633
         },
         {
           "seats": 55,
-          "probability": 0.088567
+          "probability": 0.088933
         },
         {
           "seats": 56,
-          "probability": 0.032
+          "probability": 0.0321
         },
         {
           "seats": 57,
-          "probability": 0.006367
+          "probability": 0.0064
         },
         {
           "seats": 58,
@@ -1630,8 +1630,8 @@
       ],
       "simulations": 30000,
       "control_threshold_dem": 51,
-      "rep_control_probability": 0.2131,
-      "net_change_dem": 5.1,
+      "rep_control_probability": 0.2124,
+      "net_change_dem": 5.2,
       "fixed_not_up_dem_seats": 34
     }
   },
@@ -4005,8 +4005,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.005,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4102,8 +4102,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0063,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4199,8 +4199,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0038,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4256,8 +4256,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0045,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4292,8 +4292,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.005,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4349,8 +4349,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0043,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4406,8 +4406,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0045,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4503,8 +4503,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0042,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4620,8 +4620,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0043,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4656,8 +4656,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0049,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4773,8 +4773,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0045,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4930,8 +4930,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0037,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4966,8 +4966,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0049,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5103,8 +5103,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.004,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5200,8 +5200,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0031,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     }
   ],
@@ -5819,8 +5819,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0043,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -6056,8 +6056,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.042,
-        "margin": 0.44
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -6433,8 +6433,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0091,
-        "margin": -0.11
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -6690,8 +6690,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.038,
-        "margin": 0.5
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -6704,20 +6704,40 @@
       "incumbent_party": null,
       "seat_holder": "REP",
       "open_seat": true,
-      "dem_probability": 0.6978,
-      "rep_probability": 0.3022,
-      "forecast_margin_d_minus_r": 2.42,
-      "dem_two_party_vote": 51.2,
-      "rep_two_party_vote": 48.8,
-      "rating": "Lean D",
+      "dem_probability": 0.706,
+      "rep_probability": 0.294,
+      "forecast_margin_d_minus_r": 2.5,
+      "dem_two_party_vote": 51.3,
+      "rep_two_party_vote": 48.7,
+      "rating": "Likely D",
       "relative_partisan_lean_d_minus_r": -11.91,
       "prior_margin": -3.85,
-      "model_sigma": 4.665,
-      "poll_average_margin": 3.63,
-      "poll_weight": 0.838,
-      "poll_count": 46,
-      "latest_race_poll": "2026-10-28",
+      "model_sigma": 4.622,
+      "poll_average_margin": 3.6,
+      "poll_weight": 0.852,
+      "poll_count": 47,
+      "latest_race_poll": "2026-10-30",
       "polls": [
+        {
+          "kind": "race",
+          "race_code": "TX-SEN",
+          "pollster": "Kreate Strategies",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-30",
+          "publication_date": null,
+          "n": 900,
+          "population": null,
+          "mode": null,
+          "dem": 48.0,
+          "rep": 45.0,
+          "margin": 3.0,
+          "source": null,
+          "question": null,
+          "quality_input": 1.3,
+          "model_weight": 0.80473
+        },
         {
           "kind": "race",
           "race_code": "TX-SEN",
@@ -6736,7 +6756,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.0,
-          "model_weight": 0.46866
+          "model_weight": 0.42126
         },
         {
           "kind": "race",
@@ -6756,7 +6776,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.48931
+          "model_weight": 0.43982
         },
         {
           "kind": "race",
@@ -6776,7 +6796,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.63883
+          "model_weight": 0.57422
         },
         {
           "kind": "race",
@@ -6796,7 +6816,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.6,
-          "model_weight": 1.71459
+          "model_weight": 1.54116
         },
         {
           "kind": "race",
@@ -6816,7 +6836,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.9,
-          "model_weight": 0.67686
+          "model_weight": 0.6084
         },
         {
           "kind": "race",
@@ -6836,7 +6856,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.76246
+          "model_weight": 0.68534
         },
         {
           "kind": "race",
@@ -6856,7 +6876,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.76246
+          "model_weight": 0.68534
         },
         {
           "kind": "race",
@@ -6876,7 +6896,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 1.0223
+          "model_weight": 0.91889
         },
         {
           "kind": "race",
@@ -6896,7 +6916,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.3,
-          "model_weight": 1.12561
+          "model_weight": 1.01176
         },
         {
           "kind": "race",
@@ -6916,7 +6936,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.33689
+          "model_weight": 0.30282
         },
         {
           "kind": "race",
@@ -6936,7 +6956,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.8,
-          "model_weight": 0.62409
+          "model_weight": 0.56096
         },
         {
           "kind": "race",
@@ -6956,7 +6976,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.8,
-          "model_weight": 0.62409
+          "model_weight": 0.56096
         },
         {
           "kind": "race",
@@ -6976,7 +6996,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 1.57916
+          "model_weight": 1.41943
         },
         {
           "kind": "race",
@@ -6996,7 +7016,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 1.31666
+          "model_weight": 1.18348
         },
         {
           "kind": "race",
@@ -7016,7 +7036,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 1.11358
+          "model_weight": 1.00094
         },
         {
           "kind": "race",
@@ -7036,7 +7056,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.48993
+          "model_weight": 0.44037
         },
         {
           "kind": "race",
@@ -7056,7 +7076,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.3,
-          "model_weight": 1.04109
+          "model_weight": 0.93578
         },
         {
           "kind": "race",
@@ -7076,7 +7096,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.34235
+          "model_weight": 0.30772
         },
         {
           "kind": "race",
@@ -7096,7 +7116,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.23195
+          "model_weight": 0.20849
         },
         {
           "kind": "race",
@@ -7116,7 +7136,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.56867
+          "model_weight": 0.51115
         },
         {
           "kind": "race",
@@ -7136,7 +7156,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.0,
-          "model_weight": 0.22152
+          "model_weight": 0.19911
         },
         {
           "kind": "race",
@@ -7156,7 +7176,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.36844
+          "model_weight": 0.33117
         },
         {
           "kind": "race",
@@ -7176,7 +7196,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.0,
-          "model_weight": 0.15925
+          "model_weight": 0.14314
         },
         {
           "kind": "race",
@@ -7196,7 +7216,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.7,
-          "model_weight": 0.86851
+          "model_weight": 0.78066
         },
         {
           "kind": "race",
@@ -7216,7 +7236,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.7,
-          "model_weight": 0.86851
+          "model_weight": 0.78066
         },
         {
           "kind": "race",
@@ -7236,7 +7256,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.22938
+          "model_weight": 0.20618
         },
         {
           "kind": "race",
@@ -7256,7 +7276,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.18874
+          "model_weight": 0.16965
         },
         {
           "kind": "race",
@@ -7276,7 +7296,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.3,
-          "model_weight": 0.9129
+          "model_weight": 0.82056
         },
         {
           "kind": "race",
@@ -7296,7 +7316,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.3,
-          "model_weight": 0.44503
+          "model_weight": 0.40002
         },
         {
           "kind": "race",
@@ -7316,7 +7336,7 @@
           "source": null,
           "question": null,
           "quality_input": 3.0,
-          "model_weight": 0.39107
+          "model_weight": 0.35151
         },
         {
           "kind": "race",
@@ -7336,7 +7356,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 0.39863
+          "model_weight": 0.35831
         },
         {
           "kind": "race",
@@ -7356,7 +7376,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 0.34114
+          "model_weight": 0.30663
         },
         {
           "kind": "race",
@@ -7376,7 +7396,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.15325
+          "model_weight": 0.13775
         },
         {
           "kind": "race",
@@ -7396,7 +7416,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.15796
+          "model_weight": 0.14198
         },
         {
           "kind": "race",
@@ -7416,7 +7436,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.0988
+          "model_weight": 0.0888
         },
         {
           "kind": "race",
@@ -7436,7 +7456,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.0798
+          "model_weight": 0.07173
         },
         {
           "kind": "race",
@@ -7456,7 +7476,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.08506
+          "model_weight": 0.07645
         },
         {
           "kind": "race",
@@ -7476,7 +7496,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.08755
+          "model_weight": 0.07869
         },
         {
           "kind": "race",
@@ -7496,7 +7516,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.12486
+          "model_weight": 0.11223
         },
         {
           "kind": "race",
@@ -7516,7 +7536,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.7,
-          "model_weight": 0.27662
+          "model_weight": 0.24864
         },
         {
           "kind": "race",
@@ -7536,7 +7556,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.14226
+          "model_weight": 0.12787
         },
         {
           "kind": "race",
@@ -7556,7 +7576,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.0614
+          "model_weight": 0.05519
         },
         {
           "kind": "race",
@@ -7576,7 +7596,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 0.17229
+          "model_weight": 0.15486
         },
         {
           "kind": "race",
@@ -7596,7 +7616,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.05423
+          "model_weight": 0.04875
         },
         {
           "kind": "race",
@@ -7616,7 +7636,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.05188
+          "model_weight": 0.04663
         },
         {
           "kind": "race",
@@ -7636,7 +7656,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.0,
-          "model_weight": 0.03427
+          "model_weight": 0.03081
         }
       ],
       "presidential_margin_2024": -13.88,
@@ -7647,8 +7667,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0083,
-        "margin": 0.12
+        "dem_probability": 0.0082,
+        "margin": 0.08
       }
     },
     {
@@ -8244,8 +8264,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0054,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9061,8 +9081,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9618,8 +9638,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0029,
-        "margin": 0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -10175,8 +10195,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0062,
-        "margin": -0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -10252,8 +10272,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0375,
-        "margin": 2.76
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -10529,8 +10549,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -10866,8 +10886,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0022,
-        "margin": -0.17
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -10923,8 +10943,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11220,8 +11240,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11277,8 +11297,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     }
   ],
@@ -11563,8 +11583,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.042,
-        "margin": 0.44
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11728,7 +11748,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -11872,7 +11892,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -11954,8 +11974,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -12038,7 +12058,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -12641,8 +12661,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0062,
-        "margin": -0.1
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -12985,8 +13005,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -13635,8 +13655,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0043,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -13685,7 +13705,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -13828,8 +13848,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -1.75
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -14252,8 +14272,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0091,
-        "margin": -0.11
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -14335,8 +14355,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -14459,8 +14479,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0375,
-        "margin": 2.76
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15247,8 +15267,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0029,
-        "margin": 0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16111,8 +16131,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16495,8 +16515,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0022,
-        "margin": -0.17
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16599,8 +16619,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16864,7 +16884,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.03
+        "margin": 0.0
       }
     },
     {
@@ -17467,8 +17487,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17557,8 +17577,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17881,8 +17901,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": 0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -17964,8 +17984,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18047,8 +18067,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18691,8 +18711,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0054,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18775,7 +18795,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -18858,7 +18878,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -19002,7 +19022,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.05
+        "margin": 0.0
       }
     },
     {
@@ -19305,8 +19325,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.038,
-        "margin": 0.5
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19375,7 +19395,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -19457,8 +19477,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19471,20 +19491,40 @@
       "incumbent_party": null,
       "seat_holder": "REP",
       "open_seat": true,
-      "dem_probability": 0.6978,
-      "rep_probability": 0.3022,
-      "forecast_margin_d_minus_r": 2.42,
-      "dem_two_party_vote": 51.2,
-      "rep_two_party_vote": 48.8,
-      "rating": "Lean D",
+      "dem_probability": 0.706,
+      "rep_probability": 0.294,
+      "forecast_margin_d_minus_r": 2.5,
+      "dem_two_party_vote": 51.3,
+      "rep_two_party_vote": 48.7,
+      "rating": "Likely D",
       "relative_partisan_lean_d_minus_r": -11.91,
       "prior_margin": -3.85,
-      "model_sigma": 4.665,
-      "poll_average_margin": 3.63,
-      "poll_weight": 0.838,
-      "poll_count": 46,
-      "latest_race_poll": "2026-10-28",
+      "model_sigma": 4.622,
+      "poll_average_margin": 3.6,
+      "poll_weight": 0.852,
+      "poll_count": 47,
+      "latest_race_poll": "2026-10-30",
       "polls": [
+        {
+          "kind": "race",
+          "race_code": "TX-SEN",
+          "pollster": "Kreate Strategies",
+          "sponsor": null,
+          "sponsor_lean": null,
+          "start_date": null,
+          "end_date": "2026-10-30",
+          "publication_date": null,
+          "n": 900,
+          "population": null,
+          "mode": null,
+          "dem": 48.0,
+          "rep": 45.0,
+          "margin": 3.0,
+          "source": null,
+          "question": null,
+          "quality_input": 1.3,
+          "model_weight": 0.80473
+        },
         {
           "kind": "race",
           "race_code": "TX-SEN",
@@ -19503,7 +19543,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.0,
-          "model_weight": 0.46866
+          "model_weight": 0.42126
         },
         {
           "kind": "race",
@@ -19523,7 +19563,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.48931
+          "model_weight": 0.43982
         },
         {
           "kind": "race",
@@ -19543,7 +19583,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.63883
+          "model_weight": 0.57422
         },
         {
           "kind": "race",
@@ -19563,7 +19603,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.6,
-          "model_weight": 1.71459
+          "model_weight": 1.54116
         },
         {
           "kind": "race",
@@ -19583,7 +19623,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.9,
-          "model_weight": 0.67686
+          "model_weight": 0.6084
         },
         {
           "kind": "race",
@@ -19603,7 +19643,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.76246
+          "model_weight": 0.68534
         },
         {
           "kind": "race",
@@ -19623,7 +19663,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.76246
+          "model_weight": 0.68534
         },
         {
           "kind": "race",
@@ -19643,7 +19683,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 1.0223
+          "model_weight": 0.91889
         },
         {
           "kind": "race",
@@ -19663,7 +19703,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.3,
-          "model_weight": 1.12561
+          "model_weight": 1.01176
         },
         {
           "kind": "race",
@@ -19683,7 +19723,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.33689
+          "model_weight": 0.30282
         },
         {
           "kind": "race",
@@ -19703,7 +19743,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.8,
-          "model_weight": 0.62409
+          "model_weight": 0.56096
         },
         {
           "kind": "race",
@@ -19723,7 +19763,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.8,
-          "model_weight": 0.62409
+          "model_weight": 0.56096
         },
         {
           "kind": "race",
@@ -19743,7 +19783,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 1.57916
+          "model_weight": 1.41943
         },
         {
           "kind": "race",
@@ -19763,7 +19803,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 1.31666
+          "model_weight": 1.18348
         },
         {
           "kind": "race",
@@ -19783,7 +19823,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 1.11358
+          "model_weight": 1.00094
         },
         {
           "kind": "race",
@@ -19803,7 +19843,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.48993
+          "model_weight": 0.44037
         },
         {
           "kind": "race",
@@ -19823,7 +19863,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.3,
-          "model_weight": 1.04109
+          "model_weight": 0.93578
         },
         {
           "kind": "race",
@@ -19843,7 +19883,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.34235
+          "model_weight": 0.30772
         },
         {
           "kind": "race",
@@ -19863,7 +19903,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.23195
+          "model_weight": 0.20849
         },
         {
           "kind": "race",
@@ -19883,7 +19923,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.56867
+          "model_weight": 0.51115
         },
         {
           "kind": "race",
@@ -19903,7 +19943,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.0,
-          "model_weight": 0.22152
+          "model_weight": 0.19911
         },
         {
           "kind": "race",
@@ -19923,7 +19963,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.36844
+          "model_weight": 0.33117
         },
         {
           "kind": "race",
@@ -19943,7 +19983,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.0,
-          "model_weight": 0.15925
+          "model_weight": 0.14314
         },
         {
           "kind": "race",
@@ -19963,7 +20003,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.7,
-          "model_weight": 0.86851
+          "model_weight": 0.78066
         },
         {
           "kind": "race",
@@ -19983,7 +20023,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.7,
-          "model_weight": 0.86851
+          "model_weight": 0.78066
         },
         {
           "kind": "race",
@@ -20003,7 +20043,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.22938
+          "model_weight": 0.20618
         },
         {
           "kind": "race",
@@ -20023,7 +20063,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.18874
+          "model_weight": 0.16965
         },
         {
           "kind": "race",
@@ -20043,7 +20083,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.3,
-          "model_weight": 0.9129
+          "model_weight": 0.82056
         },
         {
           "kind": "race",
@@ -20063,7 +20103,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.3,
-          "model_weight": 0.44503
+          "model_weight": 0.40002
         },
         {
           "kind": "race",
@@ -20083,7 +20123,7 @@
           "source": null,
           "question": null,
           "quality_input": 3.0,
-          "model_weight": 0.39107
+          "model_weight": 0.35151
         },
         {
           "kind": "race",
@@ -20103,7 +20143,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 0.39863
+          "model_weight": 0.35831
         },
         {
           "kind": "race",
@@ -20123,7 +20163,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 0.34114
+          "model_weight": 0.30663
         },
         {
           "kind": "race",
@@ -20143,7 +20183,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.15325
+          "model_weight": 0.13775
         },
         {
           "kind": "race",
@@ -20163,7 +20203,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.15796
+          "model_weight": 0.14198
         },
         {
           "kind": "race",
@@ -20183,7 +20223,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.0988
+          "model_weight": 0.0888
         },
         {
           "kind": "race",
@@ -20203,7 +20243,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.0798
+          "model_weight": 0.07173
         },
         {
           "kind": "race",
@@ -20223,7 +20263,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.08506
+          "model_weight": 0.07645
         },
         {
           "kind": "race",
@@ -20243,7 +20283,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.08755
+          "model_weight": 0.07869
         },
         {
           "kind": "race",
@@ -20263,7 +20303,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.12486
+          "model_weight": 0.11223
         },
         {
           "kind": "race",
@@ -20283,7 +20323,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.7,
-          "model_weight": 0.27662
+          "model_weight": 0.24864
         },
         {
           "kind": "race",
@@ -20303,7 +20343,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.14226
+          "model_weight": 0.12787
         },
         {
           "kind": "race",
@@ -20323,7 +20363,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.2,
-          "model_weight": 0.0614
+          "model_weight": 0.05519
         },
         {
           "kind": "race",
@@ -20343,7 +20383,7 @@
           "source": null,
           "question": null,
           "quality_input": 2.5,
-          "model_weight": 0.17229
+          "model_weight": 0.15486
         },
         {
           "kind": "race",
@@ -20363,7 +20403,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.05423
+          "model_weight": 0.04875
         },
         {
           "kind": "race",
@@ -20383,7 +20423,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.3,
-          "model_weight": 0.05188
+          "model_weight": 0.04663
         },
         {
           "kind": "race",
@@ -20403,7 +20443,7 @@
           "source": null,
           "question": null,
           "quality_input": 1.0,
-          "model_weight": 0.03427
+          "model_weight": 0.03081
         }
       ],
       "presidential_margin_2024": -13.88,
@@ -20461,8 +20501,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0083,
-        "margin": 0.12
+        "dem_probability": 0.0082,
+        "margin": 0.08
       }
     },
     {
@@ -20544,8 +20584,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20628,7 +20668,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -20711,7 +20751,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -20779,8 +20819,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0032,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20863,7 +20903,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -20986,8 +21026,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0024,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21070,7 +21110,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -21153,7 +21193,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -21236,7 +21276,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -21319,7 +21359,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -21402,7 +21442,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -21485,7 +21525,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -21588,8 +21628,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21671,8 +21711,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21755,7 +21795,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -21878,8 +21918,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0025,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21982,8 +22022,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0036,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22052,7 +22092,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -22134,8 +22174,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22217,8 +22257,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22300,8 +22340,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.003,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22384,7 +22424,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -22466,8 +22506,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -22550,7 +22590,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -22654,7 +22694,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -1.64
+        "margin": 0.0
       }
     },
     {
@@ -22723,7 +22763,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -22806,7 +22846,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -22957,8 +22997,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23026,8 +23066,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23179,7 +23219,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -23262,7 +23302,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -23331,7 +23371,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -23551,8 +23591,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23690,7 +23730,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -23759,7 +23799,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -23842,7 +23882,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -23925,7 +23965,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -24008,7 +24048,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -24091,7 +24131,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -24174,7 +24214,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -24277,8 +24317,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0154,
-        "margin": -0.17
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24360,8 +24400,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24444,7 +24484,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -24526,8 +24566,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24610,7 +24650,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -24693,7 +24733,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -24776,7 +24816,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -24928,7 +24968,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -25011,7 +25051,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -25094,7 +25134,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -25177,7 +25217,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -25329,7 +25369,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -25412,7 +25452,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -25550,7 +25590,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -25633,7 +25673,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -25771,7 +25811,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -25854,7 +25894,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -25937,7 +25977,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -26020,7 +26060,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -26102,8 +26142,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26186,7 +26226,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -26269,7 +26309,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -26412,8 +26452,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.002,
-        "margin": -0.33
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26496,7 +26536,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -26579,7 +26619,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -26648,7 +26688,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -26731,7 +26771,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -26814,7 +26854,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -26897,7 +26937,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -27000,8 +27040,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0043,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27104,8 +27144,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27268,8 +27308,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0043,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27338,7 +27378,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -27421,7 +27461,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -27544,8 +27584,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0028,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27628,7 +27668,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -27710,8 +27750,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27794,7 +27834,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -27877,7 +27917,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -27980,8 +28020,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28064,7 +28104,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -28147,7 +28187,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -28229,8 +28269,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28312,8 +28352,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28395,8 +28435,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0043,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28478,8 +28518,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28562,7 +28602,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -28685,8 +28725,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0035,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28768,8 +28808,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0023,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28872,8 +28912,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0034,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28942,7 +28982,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -29024,8 +29064,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0031,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29107,8 +29147,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0033,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29211,8 +29251,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0038,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29315,8 +29355,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0046,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29398,8 +29438,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29502,8 +29542,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0034,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29585,8 +29625,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29668,8 +29708,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0022,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29752,7 +29792,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -29835,7 +29875,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -29938,8 +29978,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30021,8 +30061,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0049,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30105,7 +30145,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -30188,7 +30228,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -30331,8 +30371,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0029,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30414,8 +30454,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0032,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30518,8 +30558,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.004,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30601,8 +30641,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30684,8 +30724,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0026,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30767,8 +30807,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30872,7 +30912,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -30941,7 +30981,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -31010,7 +31050,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -31093,7 +31133,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -31196,8 +31236,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31280,7 +31320,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -31363,7 +31403,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -31445,8 +31485,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31569,8 +31609,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31652,8 +31692,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0031,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31722,7 +31762,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -31805,7 +31845,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -31874,7 +31914,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -31957,7 +31997,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -32039,8 +32079,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.005,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32143,8 +32183,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0045,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32226,8 +32266,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0043,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32310,7 +32350,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -32414,7 +32454,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -32518,7 +32558,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -32601,7 +32641,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -32670,7 +32710,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -32753,7 +32793,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -32822,7 +32862,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -32891,7 +32931,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -32973,8 +33013,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33057,7 +33097,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -33139,8 +33179,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33209,7 +33249,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -33278,7 +33318,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -33361,7 +33401,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -33417,9 +33457,9 @@
             "party": "D",
             "fec_candidate_id": "H6IL12131",
             "fec_name": "FORTIER, JULIE DR.",
-            "receipts": 159060.74,
-            "disbursements": 125311.39,
-            "cash_on_hand": 33749.35,
+            "receipts": 161510.74,
+            "disbursements": 127866.39,
+            "cash_on_hand": 33644.35,
             "debts_owed_by": 0.0,
             "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6IL12131/?cycle=2026&election_full=true",
@@ -33444,7 +33484,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -33527,7 +33567,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -33609,8 +33649,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33693,7 +33733,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -33775,8 +33815,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33858,8 +33898,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33941,8 +33981,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34024,8 +34064,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34108,7 +34148,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -34191,7 +34231,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -34314,8 +34354,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34398,7 +34438,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -34467,7 +34507,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -34550,7 +34590,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -34633,7 +34673,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -34716,7 +34756,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -34819,8 +34859,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34902,8 +34942,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34985,8 +35025,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -35069,7 +35109,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -35152,7 +35192,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -35235,7 +35275,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -35318,7 +35358,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -35401,7 +35441,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -35604,8 +35644,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.007,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -35688,7 +35728,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -35757,7 +35797,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -35840,7 +35880,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -35923,7 +35963,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -36006,7 +36046,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -36089,7 +36129,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -36158,7 +36198,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -36227,7 +36267,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -36310,7 +36350,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -36393,7 +36433,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -36462,7 +36502,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -36545,7 +36585,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -36614,7 +36654,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -36683,7 +36723,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -36766,7 +36806,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -36848,8 +36888,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -36932,7 +36972,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -37015,7 +37055,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -37084,7 +37124,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -37153,7 +37193,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -37235,8 +37275,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37305,7 +37345,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -37388,7 +37428,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -37492,7 +37532,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.06
+        "margin": 0.0
       }
     },
     {
@@ -37675,8 +37715,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.004,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37758,8 +37798,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37842,7 +37882,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -37924,8 +37964,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38028,8 +38068,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0041,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38112,7 +38152,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -38181,7 +38221,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -38284,8 +38324,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0024,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38367,8 +38407,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0022,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38451,7 +38491,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -38533,8 +38573,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0046,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38617,7 +38657,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -38700,7 +38740,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -38769,7 +38809,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -38912,8 +38952,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0041,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39016,8 +39056,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39086,7 +39126,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -39169,7 +39209,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -39252,7 +39292,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -39334,8 +39374,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39418,7 +39458,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -39541,8 +39581,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39611,7 +39651,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -39774,8 +39814,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0045,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39844,7 +39884,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -39927,7 +39967,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -40010,7 +40050,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -40093,7 +40133,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -40149,11 +40189,11 @@
             "party": "D",
             "fec_candidate_id": "H4MO07156",
             "fec_name": "HESKETH, MISSI",
-            "receipts": 50539.85,
-            "disbursements": 22134.4,
-            "cash_on_hand": 33543.24,
+            "receipts": 65739.85,
+            "disbursements": 43641.69,
+            "cash_on_hand": 60779.19,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-07-15",
+            "coverage_through": "2026-09-30",
             "source": "https://www.fec.gov/data/candidate/H4MO07156/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -40176,7 +40216,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -40259,7 +40299,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -40342,7 +40382,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -40425,7 +40465,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -40508,7 +40548,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -40591,7 +40631,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -40854,8 +40894,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0049,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40979,7 +41019,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -41182,8 +41222,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0037,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41252,7 +41292,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -41334,8 +41374,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0036,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41404,7 +41444,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -41486,8 +41526,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41569,8 +41609,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41652,8 +41692,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0031,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41721,8 +41761,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41825,8 +41865,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41908,8 +41948,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0013,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42052,8 +42092,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0051,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42136,7 +42176,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -42218,8 +42258,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42301,8 +42341,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42385,7 +42425,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -42488,8 +42528,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0032,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42612,8 +42652,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42696,7 +42736,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -42819,8 +42859,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42943,8 +42983,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43027,7 +43067,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -43130,8 +43170,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0022,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43213,8 +43253,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43297,7 +43337,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -43379,8 +43419,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43463,7 +43503,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -43566,8 +43606,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0026,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43616,7 +43656,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -43698,8 +43738,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43782,7 +43822,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -43865,7 +43905,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -43948,7 +43988,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -44052,7 +44092,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.06
+        "margin": 0.0
       }
     },
     {
@@ -44155,8 +44195,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44259,8 +44299,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44342,8 +44382,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44446,8 +44486,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0031,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44515,8 +44555,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0013,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44598,8 +44638,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44667,8 +44707,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0049,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44750,8 +44790,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.004,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44833,8 +44873,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44916,8 +44956,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44986,7 +45026,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -45069,7 +45109,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -45138,7 +45178,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -45207,7 +45247,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -45276,7 +45316,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -45359,7 +45399,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -45441,8 +45481,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45525,7 +45565,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -45594,7 +45634,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -45677,7 +45717,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -45746,7 +45786,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -45815,7 +45855,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -45938,8 +45978,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46062,8 +46102,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46145,8 +46185,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46229,7 +46269,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -46412,8 +46452,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.002,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46495,8 +46535,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46599,8 +46639,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46682,8 +46722,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46766,7 +46806,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -46849,7 +46889,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -46992,8 +47032,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47062,7 +47102,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -47131,7 +47171,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -47214,7 +47254,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -47296,8 +47336,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47380,7 +47420,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -47462,8 +47502,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0042,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47545,8 +47585,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47649,8 +47689,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0043,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47753,8 +47793,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0045,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47823,7 +47863,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -47906,7 +47946,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -47988,8 +48028,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48071,8 +48111,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48215,8 +48255,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0042,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48298,8 +48338,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48382,7 +48422,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -48465,7 +48505,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -48548,7 +48588,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -48651,8 +48691,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48735,7 +48775,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -48818,7 +48858,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -48887,7 +48927,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -48970,7 +49010,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -49052,8 +49092,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49136,7 +49176,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -49279,8 +49319,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49349,7 +49389,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -49418,7 +49458,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -49501,7 +49541,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -49584,7 +49624,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -49667,7 +49707,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -49810,8 +49850,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0027,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49934,8 +49974,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0046,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50018,7 +50058,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -50161,8 +50201,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0031,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50244,8 +50284,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50328,7 +50368,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -50411,7 +50451,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -50494,7 +50534,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -50577,7 +50617,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -50659,8 +50699,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50742,8 +50782,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50867,7 +50907,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -50991,7 +51031,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.05
+        "margin": 0.0
       }
     },
     {
@@ -51174,8 +51214,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.003,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51243,8 +51283,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.003,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51327,7 +51367,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -51409,8 +51449,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51492,8 +51532,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51562,7 +51602,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -51644,8 +51684,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51749,7 +51789,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.05
+        "margin": 0.0
       }
     },
     {
@@ -51832,7 +51872,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -51915,7 +51955,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -51998,7 +52038,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -52080,8 +52120,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52184,8 +52224,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52267,8 +52307,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52350,8 +52390,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52433,8 +52473,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52516,8 +52556,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0013,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52600,7 +52640,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -52703,8 +52743,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52786,8 +52826,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52869,8 +52909,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52952,8 +52992,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53035,8 +53075,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53119,7 +53159,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -53201,8 +53241,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53345,8 +53385,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53449,8 +53489,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53533,7 +53573,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -53601,8 +53641,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53685,7 +53725,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -53767,8 +53807,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53911,8 +53951,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0063,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53995,7 +54035,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -54077,8 +54117,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54147,7 +54187,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -54230,7 +54270,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -54313,7 +54353,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -54395,8 +54435,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54478,8 +54518,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54582,8 +54622,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0036,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54665,8 +54705,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54748,8 +54788,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54831,8 +54871,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54914,8 +54954,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55018,8 +55058,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55102,7 +55142,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -55185,7 +55225,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -55267,8 +55307,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55350,8 +55390,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55420,7 +55460,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -55523,8 +55563,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0039,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55667,8 +55707,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0038,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55750,8 +55790,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55820,7 +55860,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -55902,8 +55942,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -56007,7 +56047,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.06
+        "margin": 0.0
       }
     },
     {
@@ -56150,8 +56190,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -56255,7 +56295,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.07
+        "margin": 0.0
       }
     },
     {
@@ -56379,7 +56419,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -56542,8 +56582,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0032,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -56646,8 +56686,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0023,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -56730,7 +56770,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -56813,7 +56853,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -56956,8 +56996,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0028,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -57061,7 +57101,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.05
+        "margin": 0.0
       }
     },
     {
@@ -57143,8 +57183,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -57227,7 +57267,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -57310,7 +57350,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -57393,7 +57433,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -57462,7 +57502,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -57606,7 +57646,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -57689,7 +57729,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -57772,7 +57812,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -57895,8 +57935,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0026,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -57978,8 +58018,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58061,8 +58101,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0041,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58145,7 +58185,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -58228,7 +58268,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -58310,8 +58350,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58394,7 +58434,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -58463,7 +58503,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -58606,8 +58646,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0032,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58676,7 +58716,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -58758,8 +58798,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.005,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58828,7 +58868,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -58910,8 +58950,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58993,8 +59033,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0016,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -59076,8 +59116,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -59159,8 +59199,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.08
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -59243,7 +59283,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -59326,7 +59366,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     },
     {
@@ -59409,7 +59449,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.08
+        "margin": 0.0
       }
     }
   ],
@@ -59420,7 +59460,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-10-31T05:38:58.610162Z",
+      "last_success": "2026-10-31T17:14:43.736304Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -59453,7 +59493,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-10-31T05:39:04.649660Z",
+      "last_success": "2026-10-31T17:14:52.730874Z",
       "last_observation": "2026-10-29",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -59487,7 +59527,7 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-10-31T05:39:06.503420Z",
+      "last_success": "2026-10-31T17:14:55.041463Z",
       "last_observation": "2026-10-22",
       "note": "Official bulk adapter; 860 candidate summaries matched to production candidates."
     },
@@ -59496,7 +59536,7 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-10-31T05:39:04.649660Z",
+      "last_success": "2026-10-31T17:14:52.730874Z",
       "last_observation": "2026-10-30",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
@@ -62402,6 +62442,19 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "poll-TX-SEN-Kreate Strategies-2026-10-30-3.0",
+      "date": "2026-10-30",
+      "category": "POLL",
+      "race_code": "TX-SEN",
+      "geography": "TX-SEN",
+      "description": "Kreate Strategies race poll recorded at D−R +3.0 for TX-SEN.",
+      "source_name": "Kreate Strategies",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "rating-inside-CA-45-2026-10-29-Solid Democrat",
       "date": "2026-10-29",
       "category": "RATING CHANGE",
@@ -63878,19 +63931,6 @@
       "geography": "MT-SEN",
       "description": "Concord Public Opinion Partners race poll recorded at D−R -28.0 for MT-SEN.",
       "source_name": "Concord Public Opinion Partners",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-OH-SEN-Echelon Insights-2026-10-23-0.0",
-      "date": "2026-10-23",
-      "category": "POLL",
-      "race_code": "OH-SEN",
-      "geography": "OH-SEN",
-      "description": "Echelon Insights race poll recorded at D−R +0.0 for OH-SEN.",
-      "source_name": "Echelon Insights",
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",
@@ -74041,6 +74081,13 @@
     },
     {
       "type": "pollster",
+      "label": "Kreate Strategies",
+      "subtitle": "Pollster",
+      "key": "Kreate Strategies",
+      "terms": "Kreate Strategies"
+    },
+    {
+      "type": "pollster",
       "label": "Lake Research Partners",
       "subtitle": "Pollster",
       "key": "Lake Research Partners",
@@ -74687,13 +74734,13 @@
   },
   "provenance": {
     "upstream_input_mirror": "ElectIndex/26_us_forecast_data",
-    "upstream_commit": "d66cc93d21d5fbefe896b7fb98d0a85b468d15d0",
-    "input_sha256": "744be364726091e8bbd31f909707f659e2e588fb49231ecf8fb8ecf5131aaca8",
+    "upstream_commit": "89a378b3cfa7052f597ce58c865a2c0ff1442b0d",
+    "input_sha256": "e904a68e09b864728f46339914b05405cbc26d5fef36c2a7ee14b45440bf0008",
     "file_sha256": {
       "races.csv": "d425c8e13edf80a55167a99a9c30823a9ef7614ceccb5a99c020777680f0d906",
       "historical.csv": "eac10a99cc38742892201a41a5b93c0f01b9a4a82caa715b4f76e6f2e5fae998",
       "gcb_polls.csv": "ed37753128d11b5a7726216b98e3e8a624fbd726a6217783b3df2d395b0e2a53",
-      "race_polls.csv": "c95dfb30f69a53fdb2f15d397eceeef38a60c443318cc8ef6334e08af3315edd"
+      "race_polls.csv": "f6e670bf25964ccc429ec1caf90827f5cbd0d0134240a7c73bde9344ada2a8de"
     },
     "files": [
       "races.csv",
@@ -74701,7 +74748,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-10-31T05:38:58.610162Z",
+    "retrieved_at": "2026-10-31T17:14:43.736304Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -74714,21 +74761,35 @@
   ],
   "change_summary": {
     "comparable_previous_snapshot": true,
-    "house_control_probability": -0.0019,
-    "senate_control_probability": 0.0061,
-    "house_expected_dem_seats": -0.3,
-    "senate_expected_dem_seats": 0.0,
-    "generic_ballot_d_minus_r": -0.08,
+    "house_control_probability": 0.0,
+    "senate_control_probability": 0.0007,
+    "house_expected_dem_seats": 0.0,
+    "senate_expected_dem_seats": 0.1,
+    "generic_ballot_d_minus_r": 0.0,
     "changed_inputs": [
-      "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "previous_generated_at": "2026-10-30T17:59:55.224102Z"
+    "previous_generated_at": "2026-10-31T05:38:58.610162Z"
   },
   "briefing": {
     "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 95% probability of House control and a 79% probability of Senate control. The current weighted generic congressional ballot is D+8.1. The House 80% Democratic-seat interval is 222–256; the Senate interval is 49–55."
   },
   "history_summaries": [
+    {
+      "file": "2026-10-31T171443Z.json",
+      "generated_at": "2026-10-31T17:14:43.736304Z",
+      "house": 0.9507,
+      "senate": 0.7876,
+      "house_seats": 238.4,
+      "senate_seats": 52.2,
+      "generic_ballot_d_minus_r": 8.05,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "89a378b3cfa7052f597ce58c865a2c0ff1442b0d",
+      "input_sha256": "e904a68e09b864728f46339914b05405cbc26d5fef36c2a7ee14b45440bf0008",
+      "changed_inputs": [
+        "race_polls.csv"
+      ]
+    },
     {
       "file": "2026-10-31T053858Z.json",
       "generated_at": "2026-10-31T05:38:58.610162Z",

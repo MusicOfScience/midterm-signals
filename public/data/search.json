@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T05:38:58.610162Z",
+  "generated_at": "2026-10-31T17:14:43.736304Z",
   "records": [
     {
       "type": "race",
@@ -10136,6 +10136,13 @@
       "subtitle": "Pollster",
       "key": "Keating Research, Inc.",
       "terms": "Keating Research, Inc."
+    },
+    {
+      "type": "pollster",
+      "label": "Kreate Strategies",
+      "subtitle": "Pollster",
+      "key": "Kreate Strategies",
+      "terms": "Kreate Strategies"
     },
     {
       "type": "pollster",

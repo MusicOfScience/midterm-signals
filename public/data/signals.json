@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T05:39:04.649660Z",
+  "generated_at": "2026-10-31T17:14:52.730874Z",
   "signals": [
     {
       "id": "poll-national-ActiVote-2026-10-30-7.0",
@@ -47,6 +47,19 @@
       "geography": "IL-SEN",
       "description": "ActiVote race poll recorded at D−R +11.2 for IL-SEN.",
       "source_name": "ActiVote",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-TX-SEN-Kreate Strategies-2026-10-30-3.0",
+      "date": "2026-10-30",
+      "category": "POLL",
+      "race_code": "TX-SEN",
+      "geography": "TX-SEN",
+      "description": "Kreate Strategies race poll recorded at D−R +3.0 for TX-SEN.",
+      "source_name": "Kreate Strategies",
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",
@@ -1529,19 +1542,6 @@
       "geography": "MT-SEN",
       "description": "Concord Public Opinion Partners race poll recorded at D−R -28.0 for MT-SEN.",
       "source_name": "Concord Public Opinion Partners",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-OH-SEN-Echelon Insights-2026-10-23-0.0",
-      "date": "2026-10-23",
-      "category": "POLL",
-      "race_code": "OH-SEN",
-      "geography": "OH-SEN",
-      "description": "Echelon Insights race poll recorded at D−R +0.0 for OH-SEN.",
-      "source_name": "Echelon Insights",
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",

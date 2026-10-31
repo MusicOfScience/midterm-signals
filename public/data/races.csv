@@ -30,7 +30,7 @@ RI-SEN,senate,RI,SEN,Jack Reed,Raymond McKay,DEM,DEM,0.999,0.001,26.9,Safe D,15.
 SC-SEN,senate,SC,SEN,Annie Andrews,Darline Graham,REP,REP,0.3648,0.6352,-1.61,Lean R,-16.6,-0.12,11,2026-10-29
 SD-SEN,senate,SD,SEN,Brian Bengs,Mike Rounds,REP,REP,0.001,0.999,-22.45,Safe R,-29.35,,0,
 TN-SEN,senate,TN,SEN,Marquita Bradshaw,Bill Hagerty,REP,REP,0.0013,0.9987,-21.67,Safe R,-28.58,,0,
-TX-SEN,senate,TX,SEN,James Talarico,Ken Paxton,,REP,0.6978,0.3022,2.42,Lean D,-11.91,3.63,46,2026-10-28
+TX-SEN,senate,TX,SEN,James Talarico,Ken Paxton,,REP,0.706,0.294,2.5,Likely D,-11.91,3.6,47,2026-10-30
 VA-SEN,senate,VA,SEN,Mark Warner,Bert Mizusawa,DEM,DEM,0.9872,0.0128,16.07,Safe D,6.87,,0,
 WV-SEN,senate,WV,SEN,Rachel Fetty Anderson,Shelley Moore Capito,REP,REP,0.001,0.999,-35.14,Safe R,-42.05,,0,
 WY-SEN,senate,WY,SEN,James Byrd,Harriet Hageman,,REP,0.001,0.999,-38.62,Safe R,-46.68,,0,

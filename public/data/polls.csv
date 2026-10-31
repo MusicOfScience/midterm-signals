@@ -340,52 +340,53 @@ race,SC-SEN,Trafalgar Group,,R,,2026-10-18,,1095,,,45.6,48.6,-3.0,,0.30623
 race,SC-SEN,InsiderAdvantage,,R,,2026-09-29,,1200,,,45.0,46.0,-1.0,,0.09439
 race,SC-SEN,Trafalgar Group,,R,,2026-09-25,,1087,,,42.3,43.4,-1.1,,0.08951
 race,SC-SEN,InsiderAdvantage,,R,,2026-09-09,,1200,,,43.2,45.1,-1.9,,0.03249
-race,TX-SEN,Quantus Insights,,R,,2026-10-28,,1207,,,48.4,49.4,-1.0,,0.46866
-race,TX-SEN,ActiVote,,,,2026-10-28,,400,,,52.1,47.9,4.2,,0.48931
-race,TX-SEN,A2 Insights,,,,2026-10-27,,631,,,50.2,47.2,3.0,,0.63883
-race,TX-SEN,CNN/SSRS,,,,2026-10-27,,923,,,49.0,43.0,6.0,,1.71459
-race,TX-SEN,Data for Progress,,D,,2026-10-26,,712,,,49.0,45.0,4.0,,0.67686
-race,TX-SEN,YouGov Blue,,,,2026-10-26,,1000,,,52.0,43.0,9.0,,0.76246
-race,TX-SEN,YouGov Blue,,,,2026-10-26,,1000,,,51.0,43.0,8.0,,0.76246
-race,TX-SEN,Barbara Jordan Public Policy Research and Survey Center,,,,2026-10-25,,2000,,,49.0,47.0,2.0,,1.0223
-race,TX-SEN,YouGov,,,,2026-10-21,,1000,,,50.0,45.0,5.0,,1.12561
-race,TX-SEN,ActiVote,,,,2026-10-21,,400,,,51.0,49.0,2.0,,0.33689
-race,TX-SEN,Verasight,,,,2026-10-20,,601,,,47.6,45.2,2.4,,0.62409
-race,TX-SEN,Verasight,,,,2026-10-20,,601,,,46.1,45.3,0.8,,0.62409
-race,TX-SEN,Beacon Research/Shaw & Company Research,,,,2026-10-19,,2011,,,52.0,46.0,6.0,,1.57916
-race,TX-SEN,Beacon Research/Shaw & Company Research,,,,2026-10-19,,1398,,,49.0,49.0,0.0,,1.31666
-race,TX-SEN,Emerson College,,,,2026-10-19,,1000,,,49.4,47.8,1.5,,1.11358
-race,TX-SEN,Slingshot Strategies,,,,2026-10-18,,969,,,51.0,47.0,4.0,,0.48993
-race,TX-SEN,YouGov,,,,2026-10-16,,1458,,,51.0,49.0,2.0,,1.04109
-race,TX-SEN,Cor Strategies,,R,,2026-10-15,,1409,,,44.0,40.0,4.0,,0.34235
-race,TX-SEN,ActiVote,,,,2026-10-14,,400,,,51.9,48.1,3.8,,0.23195
-race,TX-SEN,University of Houston Hobby School of Public Affairs,,,,2026-10-14,,2000,,,48.0,46.0,2.0,,0.56867
-race,TX-SEN,InsiderAdvantage,,R,,2026-10-14,,1200,,,48.1,48.5,-0.4,,0.22152
-race,TX-SEN,New River Strategies/GS Strategy Group,,,,2026-10-13,,934,,,49.0,44.0,5.0,,0.36844
-race,TX-SEN,Quantus Insights,,R,,2026-10-11,,854,,,46.7,47.2,-0.5,,0.15925
-race,TX-SEN,Marist University,,,,2026-10-11,,1196,,,47.0,45.0,2.0,,0.86851
-race,TX-SEN,Marist University,,,,2026-10-11,,1196,,,48.0,44.0,4.0,,0.86851
-race,TX-SEN,ReconMR/Siena Research Institute,,,,2026-10-08,,617,,,48.0,44.0,4.0,,0.22938
-race,TX-SEN,Trafalgar Group,,R,,2026-10-08,,1086,,,47.1,43.6,3.5,,0.18874
-race,TX-SEN,YouGov,,,,2026-10-05,,3623,,,50.0,44.0,6.0,,0.9129
-race,TX-SEN,YouGov,,,,2026-10-05,,861,,,50.0,47.0,3.0,,0.44503
-race,TX-SEN,The New York Times/Siena University,,,,2026-09-30,,615,,,50.8,45.1,5.7,,0.39107
-race,TX-SEN,Beacon Research/Shaw & Company Research,,,,2026-09-28,,1203,,,53.0,46.0,7.0,,0.39863
-race,TX-SEN,Beacon Research/Shaw & Company Research,,,,2026-09-28,,881,,,51.0,49.0,2.0,,0.34114
-race,TX-SEN,Guidant Polling and Strategy,,,,2026-09-28,,800,,,47.0,44.0,3.0,,0.15325
-race,TX-SEN,University of Massachusetts Lowell Center for Public Opinion/YouGov,,,,2026-09-28,,850,,,45.0,45.0,0.0,,0.15796
-race,TX-SEN,Pulse Decision Science,,R,,2026-09-27,,800,,,45.0,48.0,-3.0,,0.0988
-race,TX-SEN,Big Data Poll,,R,,2026-09-26,,698,,,46.8,44.9,1.9,,0.0798
-race,TX-SEN,Big Data Poll,,R,,2026-09-26,,793,,,46.4,43.8,2.6,,0.08506
-race,TX-SEN,Stratus Intelligence,,R,,2026-09-24,,865,,,48.0,48.0,0.0,,0.08755
-race,TX-SEN,Slingshot Strategies,,,,2026-09-22,,1007,,,49.0,44.0,5.0,,0.12486
-race,TX-SEN,Marist University,,,,2026-09-20,,1139,,,50.0,44.0,6.0,,0.27662
-race,TX-SEN,Barbara Jordan Public Policy Research and Survey Center,,,,2026-09-19,,1800,,,47.0,46.0,1.0,,0.14226
-race,TX-SEN,Trafalgar Group,,R,,2026-09-17,,1079,,,46.4,45.2,1.2,,0.0614
-race,TX-SEN,Emerson College,,,,2026-09-14,,1000,,,47.4,46.4,1.0,,0.17229
-race,TX-SEN,ReconMR/Siena Research Institute,,,,2026-09-11,,614,,,49.0,43.0,6.0,,0.05423
-race,TX-SEN,"Mason-Dixon Polling & Research, Inc.",,,,2026-09-10,,625,,,46.0,43.0,3.0,,0.05188
-race,TX-SEN,InsiderAdvantage,,R,,2026-09-09,,1200,,,47.1,45.6,1.5,,0.03427
+race,TX-SEN,Kreate Strategies,,,,2026-10-30,,900,,,48.0,45.0,3.0,,0.80473
+race,TX-SEN,Quantus Insights,,R,,2026-10-28,,1207,,,48.4,49.4,-1.0,,0.42126
+race,TX-SEN,ActiVote,,,,2026-10-28,,400,,,52.1,47.9,4.2,,0.43982
+race,TX-SEN,A2 Insights,,,,2026-10-27,,631,,,50.2,47.2,3.0,,0.57422
+race,TX-SEN,CNN/SSRS,,,,2026-10-27,,923,,,49.0,43.0,6.0,,1.54116
+race,TX-SEN,Data for Progress,,D,,2026-10-26,,712,,,49.0,45.0,4.0,,0.6084
+race,TX-SEN,YouGov Blue,,,,2026-10-26,,1000,,,52.0,43.0,9.0,,0.68534
+race,TX-SEN,YouGov Blue,,,,2026-10-26,,1000,,,51.0,43.0,8.0,,0.68534
+race,TX-SEN,Barbara Jordan Public Policy Research and Survey Center,,,,2026-10-25,,2000,,,49.0,47.0,2.0,,0.91889
+race,TX-SEN,YouGov,,,,2026-10-21,,1000,,,50.0,45.0,5.0,,1.01176
+race,TX-SEN,ActiVote,,,,2026-10-21,,400,,,51.0,49.0,2.0,,0.30282
+race,TX-SEN,Verasight,,,,2026-10-20,,601,,,47.6,45.2,2.4,,0.56096
+race,TX-SEN,Verasight,,,,2026-10-20,,601,,,46.1,45.3,0.8,,0.56096
+race,TX-SEN,Beacon Research/Shaw & Company Research,,,,2026-10-19,,2011,,,52.0,46.0,6.0,,1.41943
+race,TX-SEN,Beacon Research/Shaw & Company Research,,,,2026-10-19,,1398,,,49.0,49.0,0.0,,1.18348
+race,TX-SEN,Emerson College,,,,2026-10-19,,1000,,,49.4,47.8,1.5,,1.00094
+race,TX-SEN,Slingshot Strategies,,,,2026-10-18,,969,,,51.0,47.0,4.0,,0.44037
+race,TX-SEN,YouGov,,,,2026-10-16,,1458,,,51.0,49.0,2.0,,0.93578
+race,TX-SEN,Cor Strategies,,R,,2026-10-15,,1409,,,44.0,40.0,4.0,,0.30772
+race,TX-SEN,ActiVote,,,,2026-10-14,,400,,,51.9,48.1,3.8,,0.20849
+race,TX-SEN,University of Houston Hobby School of Public Affairs,,,,2026-10-14,,2000,,,48.0,46.0,2.0,,0.51115
+race,TX-SEN,InsiderAdvantage,,R,,2026-10-14,,1200,,,48.1,48.5,-0.4,,0.19911
+race,TX-SEN,New River Strategies/GS Strategy Group,,,,2026-10-13,,934,,,49.0,44.0,5.0,,0.33117
+race,TX-SEN,Quantus Insights,,R,,2026-10-11,,854,,,46.7,47.2,-0.5,,0.14314
+race,TX-SEN,Marist University,,,,2026-10-11,,1196,,,47.0,45.0,2.0,,0.78066
+race,TX-SEN,Marist University,,,,2026-10-11,,1196,,,48.0,44.0,4.0,,0.78066
+race,TX-SEN,ReconMR/Siena Research Institute,,,,2026-10-08,,617,,,48.0,44.0,4.0,,0.20618
+race,TX-SEN,Trafalgar Group,,R,,2026-10-08,,1086,,,47.1,43.6,3.5,,0.16965
+race,TX-SEN,YouGov,,,,2026-10-05,,3623,,,50.0,44.0,6.0,,0.82056
+race,TX-SEN,YouGov,,,,2026-10-05,,861,,,50.0,47.0,3.0,,0.40002
+race,TX-SEN,The New York Times/Siena University,,,,2026-09-30,,615,,,50.8,45.1,5.7,,0.35151
+race,TX-SEN,Beacon Research/Shaw & Company Research,,,,2026-09-28,,1203,,,53.0,46.0,7.0,,0.35831
+race,TX-SEN,Beacon Research/Shaw & Company Research,,,,2026-09-28,,881,,,51.0,49.0,2.0,,0.30663
+race,TX-SEN,Guidant Polling and Strategy,,,,2026-09-28,,800,,,47.0,44.0,3.0,,0.13775
+race,TX-SEN,University of Massachusetts Lowell Center for Public Opinion/YouGov,,,,2026-09-28,,850,,,45.0,45.0,0.0,,0.14198
+race,TX-SEN,Pulse Decision Science,,R,,2026-09-27,,800,,,45.0,48.0,-3.0,,0.0888
+race,TX-SEN,Big Data Poll,,R,,2026-09-26,,698,,,46.8,44.9,1.9,,0.07173
+race,TX-SEN,Big Data Poll,,R,,2026-09-26,,793,,,46.4,43.8,2.6,,0.07645
+race,TX-SEN,Stratus Intelligence,,R,,2026-09-24,,865,,,48.0,48.0,0.0,,0.07869
+race,TX-SEN,Slingshot Strategies,,,,2026-09-22,,1007,,,49.0,44.0,5.0,,0.11223
+race,TX-SEN,Marist University,,,,2026-09-20,,1139,,,50.0,44.0,6.0,,0.24864
+race,TX-SEN,Barbara Jordan Public Policy Research and Survey Center,,,,2026-09-19,,1800,,,47.0,46.0,1.0,,0.12787
+race,TX-SEN,Trafalgar Group,,R,,2026-09-17,,1079,,,46.4,45.2,1.2,,0.05519
+race,TX-SEN,Emerson College,,,,2026-09-14,,1000,,,47.4,46.4,1.0,,0.15486
+race,TX-SEN,ReconMR/Siena Research Institute,,,,2026-09-11,,614,,,49.0,43.0,6.0,,0.04875
+race,TX-SEN,"Mason-Dixon Polling & Research, Inc.",,,,2026-09-10,,625,,,46.0,43.0,3.0,,0.04663
+race,TX-SEN,InsiderAdvantage,,R,,2026-09-09,,1200,,,47.1,45.6,1.5,,0.03081
 race,AL-02,Remington,,R,,2026-10-25,,642,,,46.0,48.0,-2.0,,0.42153
 race,AL-02,Remington,,R,,2026-10-25,,642,,,44.0,51.0,-7.0,,0.42153
 race,AR-02,Emerson College,,,,2026-10-14,,383,,,48.0,52.0,-4.0,,1.11359
