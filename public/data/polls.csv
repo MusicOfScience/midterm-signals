@@ -1,5 +1,6 @@
 kind,race_code,pollster,sponsor,sponsor_lean,start_date,end_date,publication_date,n,population,mode,dem,rep,margin,source,model_weight
-generic_ballot,,ActiVote,,,,2026-10-30,,2000,,,53.5,46.5,7.0,,1.09413
+generic_ballot,,Big Data Poll,,R,,2026-10-30,,3214,,,51.8,39.8,12.0,,0.94316
+generic_ballot,,ActiVote,,,,2026-10-30,,2000,,,53.5,46.5,7.0,,0.63728
 generic_ballot,,The Honest Poll,,,,2026-10-29,,1158,,,53.0,40.5,12.5,,0.85707
 generic_ballot,,Ipsos,,,,2026-10-28,,1209,,,50.0,44.0,6.0,,1.58476
 generic_ballot,,Tufts,,,,2026-10-27,,1000,,,49.5,38.0,11.5,,0.70215
@@ -7,53 +8,54 @@ generic_ballot,,HarrisX/Harris Poll,,,,2026-10-26,,,,,52.0,48.0,4.0,,0.3886
 generic_ballot,,YouGov,,,,2026-10-26,,1263,,,49.3,40.7,8.6,,1.42797
 generic_ballot,,Ipsos,,,,2026-10-26,,1280,,,51.5,42.5,9.0,,1.43755
 generic_ballot,,Emerson College,,,,2026-10-26,,1000,,,52.4,42.4,10.0,,1.39849
-generic_ballot,,Leger,,,,2026-10-25,,1037,,,42.0,36.0,6.0,,1.03452
 generic_ballot,,Morning Consult,,,,2026-10-25,,17491,,,50.1,43.4,6.7,,4.24869
+generic_ballot,,Leger,,,,2026-10-25,,1037,,,42.0,36.0,6.0,,1.03452
 generic_ballot,,Cygnal,,R,,2026-10-24,,1500,,,51.5,43.1,8.4,,0.52711
-generic_ballot,,The Argument/Verasight,,,,2026-10-23,,1549,,,55.0,45.0,10.0,,0.98746
-generic_ballot,,Echelon Insights,,R,,2026-10-23,,2907,,,51.0,46.0,5.0,,1.03836
 generic_ballot,,YouGov,,,,2026-10-23,,1749,,,53.0,45.0,8.0,,1.39095
+generic_ballot,,Echelon Insights,,R,,2026-10-23,,2907,,,51.0,46.0,5.0,,1.03836
+generic_ballot,,The Argument/Verasight,,,,2026-10-23,,1549,,,55.0,45.0,10.0,,0.98746
+generic_ballot,,Targoz Market Research,,,,2026-10-22,,1118,,,49.0,46.0,3.0,,0.54178
+generic_ballot,,ActiVote,,,,2026-10-21,,1000,,,53.7,46.3,7.4,,0.25557
 generic_ballot,,Clarity Campaign Labs,,,,2026-10-21,,1016,,,52.0,44.0,8.0,,0.48493
-generic_ballot,,ActiVote,,,,2026-10-21,,1000,,,53.7,46.3,7.4,,0.43879
 generic_ballot,,Morning Consult,,,,2026-10-20,,2050,,,48.0,42.0,6.0,,1.06143
 generic_ballot,,Pennsylvania State University McCourtney Institute for Democracy/YouGov,,,,2026-10-20,,724,,,47.0,43.0,4.0,,0.38436
 generic_ballot,,YouGov,,,,2026-10-20,,1312,,,49.0,42.0,7.0,,0.99721
 generic_ballot,,Bedrock Polling,,,,2026-10-20,,1279,,,52.0,44.0,8.0,,0.51086
 generic_ballot,,Focaldata,,,,2026-10-20,,1549,,,51.0,41.8,9.2,,0.66277
 generic_ballot,,Marist University,,,,2026-10-20,,1289,,,52.0,43.0,9.0,,1.18857
-generic_ballot,,Verasight,,,,2026-10-19,,1824,,,52.0,41.0,11.0,,0.8328
-generic_ballot,,The New York Times/Siena University,,,,2026-10-19,,3494,,,51.3,40.3,11.0,,2.07403
 generic_ballot,,Ipsos,,,,2026-10-19,,1679,,,43.5,32.0,11.5,,1.0592
 generic_ballot,,Echelon Insights,,R,,2026-10-19,,1010,,,50.0,45.0,5.0,,0.47568
-generic_ballot,,Morning Consult,,,,2026-10-18,,17706,,,50.4,43.1,7.3,,2.75007
+generic_ballot,,Verasight,,,,2026-10-19,,1824,,,52.0,41.0,11.0,,0.8328
+generic_ballot,,The New York Times/Siena University,,,,2026-10-19,,3494,,,51.3,40.3,11.0,,2.07403
 generic_ballot,,CNN/SSRS,,,,2026-10-18,,1206,,,49.0,39.0,10.0,,0.97049
 generic_ballot,,Hart Research Associates/Public Opinion Strategies,,,,2026-10-18,,1000,,,52.0,45.0,7.0,,0.39823
-generic_ballot,,ActiVote,,,,2026-10-14,,1000,,,53.3,46.7,6.6,,0.28229
-generic_ballot,,Ipsos,,,,2026-10-13,,2032,,,51.0,43.0,8.0,,0.79839
+generic_ballot,,Morning Consult,,,,2026-10-18,,17706,,,50.4,43.1,7.3,,2.75007
+generic_ballot,,ActiVote,,,,2026-10-14,,1000,,,53.3,46.7,6.6,,0.16442
 generic_ballot,,RMG Research,,R,,2026-10-13,,2000,,,52.5,43.0,9.5,,0.27946
-generic_ballot,,AP-NORC,,,,2026-10-12,,925,,,45.0,36.0,9.0,,0.58236
-generic_ballot,,Beacon Research/Shaw & Company Research,,,,2026-10-12,,1202,,,54.0,45.0,9.0,,0.63458
+generic_ballot,,Ipsos,,,,2026-10-13,,2032,,,51.0,43.0,8.0,,0.79839
 generic_ballot,,SurveyMonkey,,,,2026-10-12,,17649,,,55.0,45.0,10.0,,1.35134
+generic_ballot,,Beacon Research/Shaw & Company Research,,,,2026-10-12,,1202,,,54.0,45.0,9.0,,0.63458
 generic_ballot,,YouGov,,,,2026-10-12,,1021,,,48.7,40.0,8.7,,0.53137
+generic_ballot,,AP-NORC,,,,2026-10-12,,925,,,45.0,36.0,9.0,,0.58236
 generic_ballot,,Morning Consult,,,,2026-10-11,,17654,,,49.6,43.1,6.5,,1.76661
 generic_ballot,,Cygnal Political,,R,,2026-10-10,,1500,,,51.0,42.0,9.0,,0.21816
 generic_ballot,,TrueDot,,,,2026-10-09,,974,,,49.0,42.0,7.0,,0.2229
 generic_ballot,,Noble Predictive Insights,,,,2026-10-07,,2527,,,47.0,42.0,5.0,,0.46019
-generic_ballot,,The Bullfinch Group,,,,2026-10-06,,1200,,,39.0,35.5,3.5,,0.24143
 generic_ballot,,The Honest Poll,,,,2026-10-06,,780,,,53.0,41.5,11.5,,0.16511
+generic_ballot,,The Bullfinch Group,,,,2026-10-06,,1200,,,39.0,35.5,3.5,,0.24143
 generic_ballot,,Ipsos,,,,2026-10-05,,3526,,,40.5,33.5,7.0,,0.63528
 generic_ballot,,YouGov,,,,2026-10-05,,1173,,,50.0,39.3,10.7,,0.36641
 generic_ballot,,Focaldata,,,,2026-10-05,,2553,,,49.6,42.7,6.9,,0.33065
 generic_ballot,,University of Massachusetts Lowell Center for Public Opinion/YouGov,,,,2026-10-04,,1000,,,52.0,43.0,9.0,,0.16482
-generic_ballot,,Pew Research Center,,,,2026-10-04,,3917,,,44.0,36.0,8.0,,0.78828
 generic_ballot,,Morning Consult,,,,2026-10-04,,17659,,,49.9,43.2,6.7,,1.13668
+generic_ballot,,Pew Research Center,,,,2026-10-04,,3917,,,44.0,36.0,8.0,,0.78828
 generic_ballot,,Cygnal Political,,R,,2026-10-02,,1500,,,51.6,42.5,9.1,,0.13178
-generic_ballot,,ActiVote,,,,2026-10-02,,1000,,,52.2,47.8,4.4,,0.13252
 generic_ballot,,YouGov,,,,2026-10-02,,1572,,,54.0,45.0,9.0,,0.35112
+generic_ballot,,ActiVote,,,,2026-10-02,,1000,,,52.2,47.8,4.4,,0.07719
 generic_ballot,,Centerline Research & Strategy,,,,2026-10-01,,930,,,47.3,38.0,9.3,,0.13157
 generic_ballot,,TIPP Insights,,,,2026-10-01,,1328,,,46.0,42.0,4.0,,0.18534
-generic_ballot,,HarrisX/Harris Poll,,,,2026-09-28,,2200,,,50.5,49.5,1.0,,0.19746
 generic_ballot,,YouGov,,,,2026-09-28,,1003,,,49.0,37.5,11.5,,0.21798
+generic_ballot,,HarrisX/Harris Poll,,,,2026-09-28,,2200,,,50.5,49.5,1.0,,0.19746
 generic_ballot,,AlphaROC,,,,2026-09-28,,1000,,,43.4,37.1,6.3,,0.11293
 generic_ballot,,Morning Consult,,,,2026-09-27,,18786,,,50.3,42.8,7.5,,0.75424
 generic_ballot,,Quinnipiac University,,,,2026-09-27,,1032,,,51.0,39.0,12.0,,0.24964
@@ -74,18 +76,20 @@ race,AL-SEN,RMG Research,,R,,2026-09-25,,800,,,33.0,54.0,-21.0,,0.10991
 race,AR-SEN,GrayHouse,,R,,2026-10-28,,509,,,39.0,55.0,-16.0,,0.41153
 race,AR-SEN,Hendrix College,,,,2026-10-13,,709,,,41.0,50.0,-9.0,,0.321
 race,AR-SEN,GrayHouse,,R,,2026-10-04,,550,,,39.0,50.0,-11.0,,0.11898
+race,FL-SEN,Stetson University Center for Public Opinion Research,,,,2026-10-30,,859,,,45.0,49.0,-4.0,,0.78619
 race,FL-SEN,Big Data Poll,,R,,2026-10-30,,1067,,,44.7,51.6,-6.9,,0.54343
 race,FL-SEN,Big Data Poll,,R,,2026-10-30,,1122,,,44.5,50.9,-6.4,,0.55726
-race,FL-SEN,InsiderAdvantage,,R,,2026-10-29,,1200,,,43.0,49.0,-6.0,,0.44304
+race,FL-SEN,InsiderAdvantage,,R,,2026-10-29,,1200,,,42.7,48.5,-5.8,,0.44304
+race,FL-SEN,The Political Matrix/The Listener Group,,,,2026-10-28,,500,,,35.8,41.8,-6.0,,0.53914
 race,FL-SEN,St. Pete Polls,,,,2026-10-27,,916,,,44.7,49.0,-4.3,,0.69185
-race,FL-SEN,ActiVote,,,,2026-10-27,,400,,,47.0,53.0,-6.0,,0.41698
+race,FL-SEN,ActiVote,,,,2026-10-27,,400,,,47.0,53.0,-6.0,,0.24287
 race,FL-SEN,The New York Times/Siena University,,,,2026-10-25,,813,,,44.3,50.4,-6.0,,1.53267
 race,FL-SEN,Echelon Insights,,R,,2026-10-23,,515,,,43.0,51.0,-8.0,,0.46773
 race,FL-SEN,Workbench Strategy,,D,,2026-10-22,,800,,,47.0,49.0,-2.0,,0.33677
 race,FL-SEN,co/efficient,,R,,2026-10-20,,1014,,,42.0,48.0,-6.0,,0.25204
 race,FL-SEN,co/efficient,,R,,2026-10-20,,1014,,,40.0,48.0,-8.0,,0.25204
 race,FL-SEN,University of North Florida,,,,2026-10-19,,1471,,,45.0,49.0,-4.0,,0.57229
-race,FL-SEN,ActiVote,,,,2026-10-15,,400,,,46.9,53.1,-6.2,,0.21991
+race,FL-SEN,ActiVote,,,,2026-10-15,,400,,,46.9,53.1,-6.2,,0.12809
 race,FL-SEN,YouGov,,,,2026-10-15,,825,,,42.0,51.0,-9.0,,0.66737
 race,FL-SEN,MDW Communications,,,,2026-10-10,,2351,,,42.4,47.6,-5.2,,0.44775
 race,FL-SEN,Stetson University Center for Public Opinion Research,,,,2026-10-09,,716,,,41.0,52.0,-11.0,,0.23426
@@ -101,7 +105,7 @@ race,FL-SEN,St. Pete Polls,,,,2026-09-17,,913,,,44.8,45.2,-0.4,,0.08186
 race,FL-SEN,Quantus Insights,,R,,2026-09-10,,733,,,43.0,50.4,-7.4,,0.0254
 race,FL-SEN,Change Research,,D,,2026-09-09,,1107,,,47.0,47.0,0.0,,0.05447
 race,GA-SEN,Echelon Insights,,R,,2026-10-23,,508,,,55.0,40.0,15.0,,0.67471
-race,GA-SEN,ActiVote,,,,2026-10-20,,400,,,54.0,46.0,8.0,,0.41698
+race,GA-SEN,ActiVote,,,,2026-10-20,,400,,,54.0,46.0,8.0,,0.24287
 race,GA-SEN,Quantus Insights,,R,,2026-10-17,,755,,,52.7,45.4,7.3,,0.26918
 race,GA-SEN,University of Georgia,,,,2026-10-15,,1000,,,48.0,40.0,8.0,,0.55371
 race,GA-SEN,Trafalgar Group,,R,,2026-10-09,,1101,,,51.0,43.0,8.0,,0.26168
@@ -142,8 +146,8 @@ race,IA-SEN,Cygnal Political,,R,,2026-09-11,,500,,,42.9,42.9,0.0,,0.03624
 race,IA-SEN,YouGov,,,,2026-09-08,,2166,,,44.0,43.0,1.0,,0.1673
 race,IA-SEN,YouGov,,,,2026-09-08,,2127,,,45.0,43.0,2.0,,0.16579
 race,IA-SEN,YouGov,,,,2026-09-08,,2041,,,47.0,43.0,4.0,,0.1624
-race,IL-SEN,ActiVote,,,,2026-10-30,,400,,,55.6,44.4,11.2,,0.48931
-race,IL-SEN,ActiVote,,,,2026-10-20,,400,,,58.5,41.5,17.0,,0.28709
+race,IL-SEN,ActiVote,,,,2026-10-30,,400,,,55.6,44.4,11.2,,0.285
+race,IL-SEN,ActiVote,,,,2026-10-20,,400,,,58.5,41.5,17.0,,0.16722
 race,IL-SEN,Public Policy Polling,,D,,2026-10-01,,569,,,49.0,36.0,13.0,,0.13477
 race,KS-SEN,Emerson College,,,,2026-10-28,,800,,,49.5,47.1,2.4,,1.60943
 race,KS-SEN,The Washington Post/George Mason University Schar School of Policy and Government,,,,2026-10-26,,801,,,54.0,44.0,10.0,,0.68239
@@ -194,7 +198,6 @@ race,ME-SEN,Quantus Insights,,R,,2026-09-15,,621,,,47.4,47.6,-0.2,,0.03581
 race,ME-SEN,University of Massachusetts Lowell Center for Public Opinion/YouGov,,,,2026-09-14,,650,,,48.0,43.0,5.0,,0.06907
 race,ME-SEN,YouGov,,,,2026-09-08,,1335,,,48.0,44.0,4.0,,0.13854
 race,ME-SEN,YouGov,,,,2026-09-08,,1378,,,46.0,44.0,2.0,,0.14075
-race,ME-SEN,CNN/SSRS,,,,2026-09-06,,880,,,48.0,45.0,3.0,,0.11641
 race,MI-SEN,CNN/SSRS,,,,2026-10-27,,768,,,49.0,42.0,7.0,,1.64966
 race,MI-SEN,Mitchell Research & Communications,,,,2026-10-27,,636,,,51.0,44.0,7.0,,0.67649
 race,MI-SEN,Upswing Research,,D,,2026-10-25,,505,,,50.0,45.0,5.0,,0.36844
@@ -233,7 +236,6 @@ race,MI-SEN,InsiderAdvantage,,R,,2026-09-17,,1200,,,46.6,44.7,1.9,,0.05538
 race,MI-SEN,Emerson College,,,,2026-09-14,,1000,,,48.2,45.7,2.5,,0.18172
 race,MI-SEN,The Washington Post/George Mason University Schar School of Policy and Government,,,,2026-09-14,,803,,,48.0,45.0,3.0,,0.07677
 race,MI-SEN,Trafalgar Group,,R,,2026-09-09,,1079,,,46.3,44.8,1.5,,0.04227
-race,MI-SEN,CNN/SSRS,,,,2026-09-06,,843,,,47.0,44.0,3.0,,0.11394
 race,MN-SEN,SurveyUSA,,,,2026-10-28,,714,,,48.0,41.0,7.0,,1.45073
 race,MN-SEN,The New York Times/Siena University,,,,2026-10-26,,752,,,54.2,40.3,13.9,,1.72974
 race,MN-SEN,Victory Insights,,R,,2026-10-22,,1194,,,47.8,44.4,3.4,,0.45772
@@ -263,7 +265,7 @@ race,NC-SEN,Quantus Insights,,R,,2026-10-25,,722,,,51.7,42.9,8.8,,0.36247
 race,NC-SEN,Quantus Insights,,R,,2026-10-25,,722,,,52.4,43.4,9.0,,0.36247
 race,NC-SEN,Harper Polling,,,,2026-10-20,,600,,,51.6,42.0,9.6,,0.5033
 race,NC-SEN,Harper Polling,,,,2026-10-20,,600,,,49.4,39.1,10.3,,0.5033
-race,NC-SEN,ActiVote,,,,2026-10-20,,400,,,56.9,43.1,13.8,,0.3748
+race,NC-SEN,ActiVote,,,,2026-10-20,,400,,,56.9,43.1,13.8,,0.21831
 race,NC-SEN,High Point University,,,,2026-10-20,,620,,,54.0,40.0,14.0,,0.98605
 race,NC-SEN,SurveyUSA,,,,2026-10-11,,643,,,54.0,40.0,14.0,,0.65262
 race,NC-SEN,Trafalgar Group,,R,,2026-10-10,,1091,,,48.8,40.9,7.9,,0.24696
@@ -298,34 +300,35 @@ race,NH-SEN,University of New Hampshire,,,,2026-09-21,,1392,,,50.0,42.0,8.0,,0.2
 race,NH-SEN,InsiderAdvantage,,R,,2026-09-17,,1200,,,47.8,39.9,7.9,,0.08043
 race,NH-SEN,co/efficient,,R,,2026-09-11,,958,,,46.0,46.0,0.0,,0.05219
 race,NH-SEN,co/efficient,,R,,2026-09-11,,958,,,46.0,46.0,0.0,,0.05219
-race,OH-SEN,Suffolk University,,,,2026-10-26,,500,,,46.6,43.8,2.8,,0.59981
-race,OH-SEN,Echelon Insights,,R,,2026-10-23,,508,,,47.0,47.0,0.0,,0.57498
-race,OH-SEN,InsiderAdvantage,,R,,2026-10-22,,1200,,,46.7,44.4,2.3,,0.37755
-race,OH-SEN,Verasight,,,,2026-10-20,,531,,,47.5,43.6,3.9,,0.65263
-race,OH-SEN,Verasight,,,,2026-10-20,,535,,,45.7,43.8,1.9,,0.65509
-race,OH-SEN,Beacon Research/Shaw & Company Research,,,,2026-10-19,,1592,,,52.0,47.0,5.0,,1.56316
-race,OH-SEN,Beacon Research/Shaw & Company Research,,,,2026-10-19,,2005,,,53.0,46.0,7.0,,1.75424
-race,OH-SEN,ActiVote,,,,2026-10-18,,400,,,49.8,50.2,-0.4,,0.3194
-race,OH-SEN,Marist University,,,,2026-10-18,,1176,,,51.0,42.0,9.0,,1.39161
-race,OH-SEN,Marist University,,,,2026-10-18,,1176,,,48.0,44.0,4.0,,1.39161
-race,OH-SEN,New River Strategies/GS Strategy Group,,,,2026-10-13,,959,,,49.0,43.0,6.0,,0.41535
-race,OH-SEN,Bowling Green State University Democracy and Public Policy Research Network/YouGov,,,,2026-10-09,,1000,,,48.0,42.0,6.0,,0.34267
-race,OH-SEN,co/efficient,,R,,2026-10-06,,925,,,45.0,46.0,-1.0,,0.14124
-race,OH-SEN,co/efficient,,R,,2026-10-06,,925,,,43.0,44.0,-1.0,,0.14124
-race,OH-SEN,co/efficient,,R,,2026-10-06,,925,,,45.0,45.0,0.0,,0.14124
-race,OH-SEN,CNN/SSRS,,,,2026-10-05,,760,,,49.0,43.0,6.0,,0.5356
-race,OH-SEN,The New York Times/Siena University,,,,2026-10-01,,616,,,48.8,46.1,2.7,,0.45927
-race,OH-SEN,YouGov,,,,2026-09-30,,3777,,,49.0,45.0,4.0,,0.79432
-race,OH-SEN,InsiderAdvantage,,R,,2026-09-29,,1200,,,43.8,42.5,1.3,,0.11076
-race,OH-SEN,Big Data Poll,,R,,2026-09-27,,735,,,45.2,41.2,4.0,,0.09609
-race,OH-SEN,Big Data Poll,,R,,2026-09-27,,680,,,46.3,42.6,3.7,,0.09242
-race,OH-SEN,Marist University,,,,2026-09-27,,1298,,,51.0,43.0,8.0,,0.47717
-race,OH-SEN,Suffolk University,,,,2026-09-27,,500,,,46.6,44.0,2.6,,0.12779
-race,OH-SEN,Quantus Insights,,R,,2026-09-23,,695,,,47.3,46.8,0.5,,0.06121
-race,OH-SEN,Quantus Insights,,R,,2026-09-23,,695,,,47.6,47.2,0.4,,0.06121
-race,OH-SEN,Trafalgar Group,,R,,2026-09-16,,1085,,,45.4,41.5,3.9,,0.06494
-race,OH-SEN,YouGov,,,,2026-09-10,,1000,,,48.0,45.0,3.0,,0.1407
-race,OH-SEN,InsiderAdvantage,,R,,2026-09-09,,1200,,,47.3,41.9,5.4,,0.03813
+race,OH-SEN,ActiVote,,,,2026-10-31,,400,,,50.2,49.8,0.4,,0.285
+race,OH-SEN,Suffolk University,,,,2026-10-26,,500,,,46.6,43.8,2.8,,0.45945
+race,OH-SEN,Echelon Insights,,R,,2026-10-23,,508,,,47.0,47.0,0.0,,0.44042
+race,OH-SEN,InsiderAdvantage,,R,,2026-10-22,,1200,,,46.7,44.4,2.3,,0.28919
+race,OH-SEN,Verasight,,,,2026-10-20,,531,,,47.5,43.6,3.9,,0.49991
+race,OH-SEN,Verasight,,,,2026-10-20,,535,,,45.7,43.8,1.9,,0.50178
+race,OH-SEN,Beacon Research/Shaw & Company Research,,,,2026-10-19,,1592,,,52.0,47.0,5.0,,1.19736
+race,OH-SEN,Beacon Research/Shaw & Company Research,,,,2026-10-19,,2005,,,53.0,46.0,7.0,,1.34372
+race,OH-SEN,ActiVote,,,,2026-10-18,,400,,,49.8,50.2,-0.4,,0.1425
+race,OH-SEN,Marist University,,,,2026-10-18,,1176,,,51.0,42.0,9.0,,1.06595
+race,OH-SEN,Marist University,,,,2026-10-18,,1176,,,48.0,44.0,4.0,,1.06595
+race,OH-SEN,New River Strategies/GS Strategy Group,,,,2026-10-13,,959,,,49.0,43.0,6.0,,0.31815
+race,OH-SEN,Bowling Green State University Democracy and Public Policy Research Network/YouGov,,,,2026-10-09,,1000,,,48.0,42.0,6.0,,0.26248
+race,OH-SEN,co/efficient,,R,,2026-10-06,,925,,,45.0,46.0,-1.0,,0.10819
+race,OH-SEN,co/efficient,,R,,2026-10-06,,925,,,43.0,44.0,-1.0,,0.10819
+race,OH-SEN,co/efficient,,R,,2026-10-06,,925,,,45.0,45.0,0.0,,0.10819
+race,OH-SEN,CNN/SSRS,,,,2026-10-05,,760,,,49.0,43.0,6.0,,0.41026
+race,OH-SEN,The New York Times/Siena University,,,,2026-10-01,,616,,,48.8,46.1,2.7,,0.3518
+race,OH-SEN,YouGov,,,,2026-09-30,,3777,,,49.0,45.0,4.0,,0.60844
+race,OH-SEN,InsiderAdvantage,,R,,2026-09-29,,1200,,,43.8,42.5,1.3,,0.08484
+race,OH-SEN,Big Data Poll,,R,,2026-09-27,,735,,,45.2,41.2,4.0,,0.0736
+race,OH-SEN,Big Data Poll,,R,,2026-09-27,,680,,,46.3,42.6,3.7,,0.0708
+race,OH-SEN,Marist University,,,,2026-09-27,,1298,,,51.0,43.0,8.0,,0.3655
+race,OH-SEN,Suffolk University,,,,2026-09-27,,500,,,46.6,44.0,2.6,,0.09788
+race,OH-SEN,Quantus Insights,,R,,2026-09-23,,695,,,47.3,46.8,0.5,,0.04689
+race,OH-SEN,Quantus Insights,,R,,2026-09-23,,695,,,47.6,47.2,0.4,,0.04689
+race,OH-SEN,Trafalgar Group,,R,,2026-09-16,,1085,,,45.4,41.5,3.9,,0.04975
+race,OH-SEN,YouGov,,,,2026-09-10,,1000,,,48.0,45.0,3.0,,0.10778
+race,OH-SEN,InsiderAdvantage,,R,,2026-09-09,,1200,,,47.3,41.9,5.4,,0.02921
 race,RI-SEN,Emerson College,,,,2026-10-11,,800,,,59.1,25.4,33.7,,1.60943
 race,RI-SEN,Embold Research,,,,2026-10-08,,815,,,55.0,32.0,23.0,,0.65259
 race,RI-SEN,University of New Hampshire,,,,2026-09-21,,595,,,53.0,33.0,20.0,,0.22525
@@ -342,7 +345,7 @@ race,SC-SEN,Trafalgar Group,,R,,2026-09-25,,1087,,,42.3,43.4,-1.1,,0.08951
 race,SC-SEN,InsiderAdvantage,,R,,2026-09-09,,1200,,,43.2,45.1,-1.9,,0.03249
 race,TX-SEN,Kreate Strategies,,,,2026-10-30,,900,,,48.0,45.0,3.0,,0.80473
 race,TX-SEN,Quantus Insights,,R,,2026-10-28,,1207,,,48.4,49.4,-1.0,,0.42126
-race,TX-SEN,ActiVote,,,,2026-10-28,,400,,,52.1,47.9,4.2,,0.43982
+race,TX-SEN,ActiVote,,,,2026-10-28,,400,,,52.1,47.9,4.2,,0.25617
 race,TX-SEN,A2 Insights,,,,2026-10-27,,631,,,50.2,47.2,3.0,,0.57422
 race,TX-SEN,CNN/SSRS,,,,2026-10-27,,923,,,49.0,43.0,6.0,,1.54116
 race,TX-SEN,Data for Progress,,D,,2026-10-26,,712,,,49.0,45.0,4.0,,0.6084
@@ -350,7 +353,7 @@ race,TX-SEN,YouGov Blue,,,,2026-10-26,,1000,,,52.0,43.0,9.0,,0.68534
 race,TX-SEN,YouGov Blue,,,,2026-10-26,,1000,,,51.0,43.0,8.0,,0.68534
 race,TX-SEN,Barbara Jordan Public Policy Research and Survey Center,,,,2026-10-25,,2000,,,49.0,47.0,2.0,,0.91889
 race,TX-SEN,YouGov,,,,2026-10-21,,1000,,,50.0,45.0,5.0,,1.01176
-race,TX-SEN,ActiVote,,,,2026-10-21,,400,,,51.0,49.0,2.0,,0.30282
+race,TX-SEN,ActiVote,,,,2026-10-21,,400,,,51.0,49.0,2.0,,0.17638
 race,TX-SEN,Verasight,,,,2026-10-20,,601,,,47.6,45.2,2.4,,0.56096
 race,TX-SEN,Verasight,,,,2026-10-20,,601,,,46.1,45.3,0.8,,0.56096
 race,TX-SEN,Beacon Research/Shaw & Company Research,,,,2026-10-19,,2011,,,52.0,46.0,6.0,,1.41943
@@ -359,7 +362,7 @@ race,TX-SEN,Emerson College,,,,2026-10-19,,1000,,,49.4,47.8,1.5,,1.00094
 race,TX-SEN,Slingshot Strategies,,,,2026-10-18,,969,,,51.0,47.0,4.0,,0.44037
 race,TX-SEN,YouGov,,,,2026-10-16,,1458,,,51.0,49.0,2.0,,0.93578
 race,TX-SEN,Cor Strategies,,R,,2026-10-15,,1409,,,44.0,40.0,4.0,,0.30772
-race,TX-SEN,ActiVote,,,,2026-10-14,,400,,,51.9,48.1,3.8,,0.20849
+race,TX-SEN,ActiVote,,,,2026-10-14,,400,,,51.9,48.1,3.8,,0.12144
 race,TX-SEN,University of Houston Hobby School of Public Affairs,,,,2026-10-14,,2000,,,48.0,46.0,2.0,,0.51115
 race,TX-SEN,InsiderAdvantage,,R,,2026-10-14,,1200,,,48.1,48.5,-0.4,,0.19911
 race,TX-SEN,New River Strategies/GS Strategy Group,,,,2026-10-13,,934,,,49.0,44.0,5.0,,0.33117
@@ -442,6 +445,7 @@ race,ME-02,Impact Research,,D,,2026-09-12,,500,,,49.0,49.0,0.0,,0.10766
 race,ME-02,Impact Research,,D,,2026-09-12,,500,,,45.0,49.0,-4.0,,0.10766
 race,MI-04,GBAO,,D,,2026-09-16,,500,,,47.0,46.0,1.0,,0.55527
 race,MI-07,Emerson College,,,,2026-10-14,,314,,,53.0,45.0,8.0,,1.0083
+race,MI-13,Center for Strategic Politics,,D,,2026-10-30,,310,,,69.0,19.0,50.0,,0.32116
 race,MN-01,Public Policy Polling,,D,,2026-10-14,,,,,43.0,43.0,0.0,,0.41931
 race,MN-01,SurveyUSA,,,,2026-10-12,,565,,,46.0,44.0,2.0,,1.15998
 race,MN-01,GBAO,,D,,2026-09-21,,500,,,47.0,46.0,1.0,,0.1629

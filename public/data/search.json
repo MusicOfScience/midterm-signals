@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T17:14:43.736304Z",
+  "generated_at": "2026-11-01T06:01:41.548536Z",
   "records": [
     {
       "type": "race",
@@ -9873,6 +9873,13 @@
     },
     {
       "type": "pollster",
+      "label": "Center for Strategic Politics",
+      "subtitle": "Pollster",
+      "key": "Center for Strategic Politics",
+      "terms": "Center for Strategic Politics"
+    },
+    {
+      "type": "pollster",
       "label": "Centerline Research & Strategy",
       "subtitle": "Pollster",
       "key": "Centerline Research & Strategy",
@@ -10563,6 +10570,13 @@
       "subtitle": "Pollster",
       "key": "The New York Times/Siena University",
       "terms": "The New York Times/Siena University"
+    },
+    {
+      "type": "pollster",
+      "label": "The Political Matrix/The Listener Group",
+      "subtitle": "Pollster",
+      "key": "The Political Matrix/The Listener Group",
+      "terms": "The Political Matrix/The Listener Group"
     },
     {
       "type": "pollster",
