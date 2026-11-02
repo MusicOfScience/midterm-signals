@@ -1,6 +1,18 @@
 {
-  "generated_at": "2026-11-02T06:00:08.717369Z",
+  "generated_at": "2026-11-02T21:42:14.024309Z",
   "signals": [
+    {
+      "id": "poll-national-Morning Consult-2026-11-01-7.9",
+      "date": "2026-11-01",
+      "category": "POLL",
+      "geography": "National",
+      "description": "Morning Consult generic-ballot observation recorded at D−R +7.9.",
+      "source_name": "Morning Consult",
+      "source": null,
+      "provenance": "Production generic-ballot observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
     {
       "id": "poll-national-AtlasIntel-2026-11-01-14.1",
       "date": "2026-11-01",
@@ -10,6 +22,19 @@
       "source_name": "AtlasIntel",
       "source": null,
       "provenance": "Production generic-ballot observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-AK-SEN-InsiderAdvantage-2026-11-01-0.2",
+      "date": "2026-11-01",
+      "category": "POLL",
+      "race_code": "AK-SEN",
+      "geography": "AK-SEN",
+      "description": "InsiderAdvantage race poll recorded at D−R +0.2 for AK-SEN.",
+      "source_name": "InsiderAdvantage",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",
       "confidence": "source-recorded"
     },
@@ -118,6 +143,19 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "poll-OH-SEN-Trafalgar Group-2026-11-01-1.5",
+      "date": "2026-11-01",
+      "category": "POLL",
+      "race_code": "OH-SEN",
+      "geography": "OH-SEN",
+      "description": "Trafalgar Group race poll recorded at D−R +1.5 for OH-SEN.",
+      "source_name": "Trafalgar Group",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "poll-TX-SEN-The New York Times/Siena University-2026-11-01-7.1",
       "date": "2026-11-01",
       "category": "POLL",
@@ -144,12 +182,12 @@
       "confidence": "source-recorded"
     },
     {
-      "id": "poll-TX-SEN-AtlasIntel-2026-11-01-6.0",
+      "id": "poll-TX-SEN-AtlasIntel-2026-11-01-5.9",
       "date": "2026-11-01",
       "category": "POLL",
       "race_code": "TX-SEN",
       "geography": "TX-SEN",
-      "description": "AtlasIntel race poll recorded at D−R +6.0 for TX-SEN.",
+      "description": "AtlasIntel race poll recorded at D−R +5.9 for TX-SEN.",
       "source_name": "AtlasIntel",
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
@@ -164,6 +202,19 @@
       "geography": "TX-SEN",
       "description": "The New York Times/Siena University race poll recorded at D−R +12.2 for TX-SEN.",
       "source_name": "The New York Times/Siena University",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-IA-SEN-GrayHouse-2026-10-31--2.0",
+      "date": "2026-10-31",
+      "category": "POLL",
+      "race_code": "IA-SEN",
+      "geography": "IA-SEN",
+      "description": "GrayHouse race poll recorded at D−R -2.0 for IA-SEN.",
+      "source_name": "GrayHouse",
       "source": null,
       "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",
@@ -317,6 +368,18 @@
       "geography": "National",
       "description": "Hart Research Associates/Public Opinion Strategies generic-ballot observation recorded at D−R +7.0.",
       "source_name": "Hart Research Associates/Public Opinion Strategies",
+      "source": null,
+      "provenance": "Production generic-ballot observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-national-TIPP Insights-2026-10-30-10.0",
+      "date": "2026-10-30",
+      "category": "POLL",
+      "geography": "National",
+      "description": "TIPP Insights generic-ballot observation recorded at D−R +10.0.",
+      "source_name": "TIPP Insights",
       "source": null,
       "provenance": "Production generic-ballot observation",
       "model_effect": "POLL INPUT",
@@ -1154,6 +1217,32 @@
       "confidence": "source-recorded"
     },
     {
+      "id": "poll-NH-SEN-National Public Affairs-2026-10-29-6.0",
+      "date": "2026-10-29",
+      "category": "POLL",
+      "race_code": "NH-SEN",
+      "geography": "NH-SEN",
+      "description": "National Public Affairs race poll recorded at D−R +6.0 for NH-SEN.",
+      "source_name": "National Public Affairs",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
+      "id": "poll-NH-SEN-National Public Affairs-2026-10-29-5.0",
+      "date": "2026-10-29",
+      "category": "POLL",
+      "race_code": "NH-SEN",
+      "geography": "NH-SEN",
+      "description": "National Public Affairs race poll recorded at D−R +5.0 for NH-SEN.",
+      "source_name": "National Public Affairs",
+      "source": null,
+      "provenance": "Production nominee-matched race-poll observation",
+      "model_effect": "POLL INPUT",
+      "confidence": "source-recorded"
+    },
+    {
       "id": "poll-OH-SEN-YouGov-2026-10-29-2.0",
       "date": "2026-10-29",
       "category": "POLL",
@@ -1459,94 +1548,6 @@
       "source_name": "HarrisX/Harris Poll",
       "source": null,
       "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-national-YouGov-2026-10-26-8.6",
-      "date": "2026-10-26",
-      "category": "POLL",
-      "geography": "National",
-      "description": "YouGov generic-ballot observation recorded at D−R +8.6.",
-      "source_name": "YouGov",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-national-Ipsos-2026-10-26-9.0",
-      "date": "2026-10-26",
-      "category": "POLL",
-      "geography": "National",
-      "description": "Ipsos generic-ballot observation recorded at D−R +9.0.",
-      "source_name": "Ipsos",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-national-Emerson College-2026-10-26-10.0",
-      "date": "2026-10-26",
-      "category": "POLL",
-      "geography": "National",
-      "description": "Emerson College generic-ballot observation recorded at D−R +10.0.",
-      "source_name": "Emerson College",
-      "source": null,
-      "provenance": "Production generic-ballot observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-KS-SEN-The Washington Post/George Mason University Schar School of Policy and Government-2026-10-26-10.0",
-      "date": "2026-10-26",
-      "category": "POLL",
-      "race_code": "KS-SEN",
-      "geography": "KS-SEN",
-      "description": "The Washington Post/George Mason University Schar School of Policy and Government race poll recorded at D−R +10.0 for KS-SEN.",
-      "source_name": "The Washington Post/George Mason University Schar School of Policy and Government",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-KS-SEN-CNN/SSRS-2026-10-26-4.0",
-      "date": "2026-10-26",
-      "category": "POLL",
-      "race_code": "KS-SEN",
-      "geography": "KS-SEN",
-      "description": "CNN/SSRS race poll recorded at D−R +4.0 for KS-SEN.",
-      "source_name": "CNN/SSRS",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-KS-SEN-The Washington Post/George Mason University Schar School of Policy and Government-2026-10-26-9.0",
-      "date": "2026-10-26",
-      "category": "POLL",
-      "race_code": "KS-SEN",
-      "geography": "KS-SEN",
-      "description": "The Washington Post/George Mason University Schar School of Policy and Government race poll recorded at D−R +9.0 for KS-SEN.",
-      "source_name": "The Washington Post/George Mason University Schar School of Policy and Government",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
-      "model_effect": "POLL INPUT",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "poll-ME-SEN-CNN/SSRS-2026-10-26-4.0",
-      "date": "2026-10-26",
-      "category": "POLL",
-      "race_code": "ME-SEN",
-      "geography": "ME-SEN",
-      "description": "CNN/SSRS race poll recorded at D−R +4.0 for ME-SEN.",
-      "source_name": "CNN/SSRS",
-      "source": null,
-      "provenance": "Production nominee-matched race-poll observation",
       "model_effect": "POLL INPUT",
       "confidence": "source-recorded"
     }
