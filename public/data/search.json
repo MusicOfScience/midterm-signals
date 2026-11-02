@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T17:55:42.164495Z",
+  "generated_at": "2026-11-02T05:59:58.781011Z",
   "records": [
     {
       "type": "race",
@@ -9817,6 +9817,13 @@
     },
     {
       "type": "pollster",
+      "label": "AtlasIntel",
+      "subtitle": "Pollster",
+      "key": "AtlasIntel",
+      "terms": "AtlasIntel"
+    },
+    {
+      "type": "pollster",
       "label": "Barbara Jordan Public Policy Research and Survey Center",
       "subtitle": "Pollster",
       "key": "Barbara Jordan Public Policy Research and Survey Center",
@@ -10181,6 +10188,13 @@
     },
     {
       "type": "pollster",
+      "label": "Lincoln Park Strategies",
+      "subtitle": "Pollster",
+      "key": "Lincoln Park Strategies",
+      "terms": "Lincoln Park Strategies"
+    },
+    {
+      "type": "pollster",
       "label": "MDW Communications",
       "subtitle": "Pollster",
       "key": "MDW Communications",
@@ -10384,13 +10398,6 @@
     },
     {
       "type": "pollster",
-      "label": "Quinnipiac University",
-      "subtitle": "Pollster",
-      "key": "Quinnipiac University",
-      "terms": "Quinnipiac University"
-    },
-    {
-      "type": "pollster",
       "label": "RMG Research",
       "subtitle": "Pollster",
       "key": "RMG Research",
@@ -10419,10 +10426,10 @@
     },
     {
       "type": "pollster",
-      "label": "Rutgers-Eagleton",
+      "label": "Research Co.",
       "subtitle": "Pollster",
-      "key": "Rutgers-Eagleton",
-      "terms": "Rutgers-Eagleton"
+      "key": "Research Co.",
+      "terms": "Research Co."
     },
     {
       "type": "pollster",
