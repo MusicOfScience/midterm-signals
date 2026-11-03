@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-11-03T06:46:16.252144Z",
-  "data_refreshed_at": "2026-11-03T06:46:16.252144Z",
+  "generated_at": "2026-11-03T19:29:32.482043Z",
+  "data_refreshed_at": "2026-11-03T19:29:32.482043Z",
   "election_date": "2026-11-03",
   "days_to_election": 0,
   "summary": {
@@ -4330,8 +4330,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0039,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4387,8 +4387,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4423,8 +4423,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4520,8 +4520,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4617,8 +4617,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4674,8 +4674,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4710,8 +4710,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4767,8 +4767,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -4884,8 +4884,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0024,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5021,8 +5021,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0356,
-        "margin": -0.49
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5057,8 +5057,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5214,8 +5214,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0049,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5250,8 +5250,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5407,8 +5407,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.002,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -5504,8 +5504,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     }
   ],
@@ -6143,8 +6143,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.024,
-        "margin": 0.29
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -6440,8 +6440,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0462,
-        "margin": 0.56
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -6737,8 +6737,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0046,
-        "margin": 0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -7214,8 +7214,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0577,
-        "margin": 0.75
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -8031,8 +8031,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0132,
-        "margin": -0.17
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9148,8 +9148,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0109,
-        "margin": -0.17
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -9785,8 +9785,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0034,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -10742,8 +10742,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0023,
-        "margin": 0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -10839,8 +10839,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11476,8 +11476,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0135,
-        "margin": -0.27
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11913,8 +11913,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0082,
-        "margin": -0.33
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -11970,8 +11970,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -12327,8 +12327,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -12384,8 +12384,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -12721,8 +12721,8 @@
       "external_forecasters": {},
       "money": null,
       "change": {
-        "dem_probability": 0.0002,
-        "margin": -0.32
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     }
   ],
@@ -13067,8 +13067,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0462,
-        "margin": 0.56
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -13232,7 +13232,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -13376,7 +13376,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.06
+        "margin": 0.0
       }
     },
     {
@@ -13520,7 +13520,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.62
+        "margin": 0.0
       }
     },
     {
@@ -13603,7 +13603,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -14286,8 +14286,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0135,
-        "margin": -0.27
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -14670,8 +14670,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0002,
-        "margin": -0.32
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15340,8 +15340,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.024,
-        "margin": 0.29
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -15390,7 +15390,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -15553,8 +15553,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -1.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16077,8 +16077,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0577,
-        "margin": 0.75
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16160,8 +16160,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16304,8 +16304,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -16509,7 +16509,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.05
+        "margin": 0.0
       }
     },
     {
@@ -17192,8 +17192,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0034,
-        "margin": -0.06
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18196,8 +18196,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": 0.0023,
-        "margin": 0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18680,8 +18680,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0082,
-        "margin": -0.33
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -18784,8 +18784,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19029,7 +19029,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": 0.04
+        "margin": 0.0
       }
     },
     {
@@ -19692,8 +19692,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0053,
-        "margin": 0.67
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -19782,8 +19782,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20186,8 +20186,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0006,
-        "margin": 0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20269,8 +20269,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -20352,8 +20352,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21216,8 +21216,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0132,
-        "margin": -0.17
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21300,7 +21300,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21383,7 +21383,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21527,7 +21527,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -21870,8 +21870,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0046,
-        "margin": 0.07
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -21940,7 +21940,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -22043,8 +22043,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": 0.33
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23207,8 +23207,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0109,
-        "margin": -0.17
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23290,8 +23290,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23374,7 +23374,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -23457,7 +23457,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -23525,8 +23525,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23609,7 +23609,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -23732,8 +23732,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -23816,7 +23816,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -23899,7 +23899,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -23982,7 +23982,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -24065,7 +24065,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -24148,7 +24148,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -24231,7 +24231,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -24334,8 +24334,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24418,7 +24418,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -24501,7 +24501,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -24624,8 +24624,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24728,8 +24728,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -24798,7 +24798,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -24881,7 +24881,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -24963,8 +24963,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25046,8 +25046,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0013,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25130,7 +25130,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -25212,8 +25212,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25296,7 +25296,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -25400,7 +25400,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -25469,7 +25469,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -25552,7 +25552,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -25703,8 +25703,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -25773,7 +25773,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -25925,7 +25925,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -26008,7 +26008,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -26077,7 +26077,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -26297,8 +26297,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -26436,7 +26436,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -26505,7 +26505,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -26588,7 +26588,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -26671,7 +26671,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -26754,7 +26754,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -26837,7 +26837,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -26920,7 +26920,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27023,8 +27023,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27106,8 +27106,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -27190,7 +27190,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27273,7 +27273,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27356,7 +27356,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27439,7 +27439,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -27522,7 +27522,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27674,7 +27674,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27757,7 +27757,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -27840,7 +27840,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -27923,7 +27923,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28075,7 +28075,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -28158,7 +28158,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28296,7 +28296,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -28379,7 +28379,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -28517,7 +28517,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -28600,7 +28600,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28683,7 +28683,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -28766,7 +28766,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -28848,8 +28848,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -28932,7 +28932,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -29015,7 +29015,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -29158,7 +29158,7 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -29242,7 +29242,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -29325,7 +29325,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -29394,7 +29394,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -29477,7 +29477,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -29560,7 +29560,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -29643,7 +29643,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -29746,8 +29746,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -29850,8 +29850,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30014,8 +30014,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0024,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30084,7 +30084,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -30167,7 +30167,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -30290,8 +30290,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30374,7 +30374,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30457,7 +30457,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30540,7 +30540,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30623,7 +30623,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -30726,8 +30726,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -30810,7 +30810,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -30893,7 +30893,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -30975,8 +30975,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31058,8 +31058,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31141,8 +31141,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31224,8 +31224,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31308,7 +31308,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -31431,8 +31431,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31514,8 +31514,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31618,8 +31618,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0016,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31688,7 +31688,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -31770,8 +31770,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31853,8 +31853,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -31957,8 +31957,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32061,8 +32061,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32144,8 +32144,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32248,8 +32248,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32331,8 +32331,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32414,8 +32414,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32498,7 +32498,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32581,7 +32581,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32684,8 +32684,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32767,8 +32767,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -32851,7 +32851,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -32934,7 +32934,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -33077,8 +33077,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33160,8 +33160,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33264,8 +33264,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33347,8 +33347,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33430,8 +33430,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33513,8 +33513,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -33618,7 +33618,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -33687,7 +33687,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -33756,7 +33756,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -33839,7 +33839,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -33942,8 +33942,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34026,7 +34026,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -34109,7 +34109,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -34191,8 +34191,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34315,8 +34315,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34398,8 +34398,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34468,7 +34468,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34551,7 +34551,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34620,7 +34620,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34703,7 +34703,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -34785,8 +34785,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34889,8 +34889,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -34972,8 +34972,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -35056,7 +35056,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35160,7 +35160,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -35264,7 +35264,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35347,7 +35347,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35416,7 +35416,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35499,7 +35499,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -35568,7 +35568,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -35637,7 +35637,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -35719,8 +35719,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -35803,7 +35803,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -35886,7 +35886,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -35955,7 +35955,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -36024,7 +36024,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -36107,7 +36107,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -36190,7 +36190,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -36273,7 +36273,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -36356,7 +36356,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -36439,7 +36439,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -36521,8 +36521,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -36604,8 +36604,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -36687,8 +36687,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -36771,7 +36771,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -36854,7 +36854,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -36937,7 +36937,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -37060,8 +37060,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37144,7 +37144,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -37213,7 +37213,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -37296,7 +37296,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -37379,7 +37379,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -37462,7 +37462,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -37565,8 +37565,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37648,8 +37648,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37731,8 +37731,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -37815,7 +37815,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -37898,7 +37898,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -37981,7 +37981,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38064,7 +38064,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38147,7 +38147,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -38350,8 +38350,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0049,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -38434,7 +38434,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38503,7 +38503,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -38586,7 +38586,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38669,7 +38669,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38752,7 +38752,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38835,7 +38835,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38904,7 +38904,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -38973,7 +38973,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39056,7 +39056,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39139,7 +39139,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39208,7 +39208,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39291,7 +39291,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -39360,7 +39360,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -39429,7 +39429,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39512,7 +39512,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39594,8 +39594,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -39678,7 +39678,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39761,7 +39761,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -39830,7 +39830,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -39899,7 +39899,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -39981,8 +39981,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40051,7 +40051,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -40134,7 +40134,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40258,7 +40258,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -40461,7 +40461,7 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": 0.0003,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -40544,8 +40544,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40628,7 +40628,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40711,7 +40711,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40814,8 +40814,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -40898,7 +40898,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -40967,7 +40967,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -41070,8 +41070,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0011,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41153,8 +41153,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41237,7 +41237,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -41319,8 +41319,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0019,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41403,7 +41403,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -41486,7 +41486,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -41576,7 +41576,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -41719,8 +41719,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41823,8 +41823,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -41893,7 +41893,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -41976,7 +41976,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -42059,7 +42059,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -42141,8 +42141,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42225,7 +42225,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -42348,8 +42348,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42418,7 +42418,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -42601,8 +42601,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0356,
-        "margin": -0.49
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -42671,7 +42671,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -42754,7 +42754,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -42837,7 +42837,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -42920,7 +42920,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43003,7 +43003,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43086,7 +43086,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43169,7 +43169,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43252,7 +43252,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43335,7 +43335,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43418,7 +43418,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -43681,8 +43681,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0923,
-        "margin": -1.37
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -43786,7 +43786,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -43989,8 +43989,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.002,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44059,7 +44059,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -44141,8 +44141,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44211,7 +44211,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -44293,8 +44293,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44376,8 +44376,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44459,8 +44459,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44528,8 +44528,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44632,8 +44632,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44715,8 +44715,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44859,8 +44859,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0031,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -44943,7 +44943,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -45025,8 +45025,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45108,8 +45108,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45192,7 +45192,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -45295,8 +45295,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45419,8 +45419,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45503,7 +45503,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -45646,8 +45646,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45790,8 +45790,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -45874,7 +45874,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -45977,8 +45977,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46061,7 +46061,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46144,7 +46144,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46226,8 +46226,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46310,7 +46310,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46413,8 +46413,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46463,7 +46463,7 @@
       "money": null,
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46545,8 +46545,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -46629,7 +46629,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -46712,7 +46712,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46795,7 +46795,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -46899,7 +46899,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -47002,8 +47002,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47107,7 +47107,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -47189,8 +47189,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47293,8 +47293,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47362,8 +47362,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0005,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47445,8 +47445,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47514,8 +47514,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47597,8 +47597,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47680,8 +47680,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47763,8 +47763,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -47833,7 +47833,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -47916,7 +47916,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -47985,7 +47985,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48054,7 +48054,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48123,7 +48123,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48206,7 +48206,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48288,8 +48288,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48372,7 +48372,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48441,7 +48441,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48524,7 +48524,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48593,7 +48593,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48662,7 +48662,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -48785,8 +48785,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48909,8 +48909,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -48992,8 +48992,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49076,7 +49076,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -49259,8 +49259,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49343,7 +49343,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -49446,8 +49446,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49529,8 +49529,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49613,7 +49613,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -49696,7 +49696,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -49839,8 +49839,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -49909,7 +49909,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -49978,7 +49978,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -50061,7 +50061,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -50143,8 +50143,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50227,7 +50227,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -50309,8 +50309,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50392,8 +50392,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50496,8 +50496,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50600,8 +50600,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50670,7 +50670,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -50753,7 +50753,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -50835,8 +50835,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -50918,8 +50918,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51062,8 +51062,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51145,8 +51145,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51229,7 +51229,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -51312,7 +51312,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -51395,7 +51395,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -51498,8 +51498,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51582,7 +51582,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -51665,7 +51665,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -51734,7 +51734,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -51817,7 +51817,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -51899,8 +51899,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -51983,7 +51983,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -52126,7 +52126,7 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
+        "dem_probability": 0.0,
         "margin": 0.0
       }
     },
@@ -52196,7 +52196,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -52265,7 +52265,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -52348,7 +52348,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -52431,7 +52431,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -52514,7 +52514,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -52657,8 +52657,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0013,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52781,8 +52781,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0024,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -52865,7 +52865,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -53008,8 +53008,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53091,8 +53091,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53175,7 +53175,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -53258,7 +53258,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -53341,7 +53341,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -53424,7 +53424,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -53506,8 +53506,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53589,8 +53589,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -53714,7 +53714,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.01
+        "margin": 0.0
       }
     },
     {
@@ -53837,8 +53837,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54021,8 +54021,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0015,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54090,8 +54090,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0013,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54174,7 +54174,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -54256,8 +54256,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54339,8 +54339,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -54409,7 +54409,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -54492,7 +54492,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -54596,7 +54596,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.01
+        "margin": 0.0
       }
     },
     {
@@ -54679,7 +54679,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -54762,7 +54762,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -54845,7 +54845,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -54927,8 +54927,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55031,8 +55031,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55114,8 +55114,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55197,8 +55197,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55280,8 +55280,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55363,8 +55363,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0006,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55447,7 +55447,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -55550,8 +55550,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55633,8 +55633,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55716,8 +55716,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55799,8 +55799,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55882,8 +55882,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -55966,7 +55966,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -56049,7 +56049,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -56192,8 +56192,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -56296,8 +56296,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -56380,7 +56380,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -56448,8 +56448,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -56532,7 +56532,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -56614,8 +56614,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -56758,8 +56758,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0039,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -56842,7 +56842,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -56924,8 +56924,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -56994,7 +56994,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -57077,7 +57077,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -57160,7 +57160,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -57242,8 +57242,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -57325,8 +57325,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -57429,8 +57429,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -57512,8 +57512,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -57595,8 +57595,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -57678,8 +57678,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -57761,8 +57761,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -57865,8 +57865,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -57949,7 +57949,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -58032,7 +58032,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -58114,8 +58114,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58197,8 +58197,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58267,7 +58267,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -58370,8 +58370,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58514,8 +58514,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0017,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58597,8 +58597,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58667,7 +58667,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -58749,8 +58749,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0003,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -58854,7 +58854,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -58997,8 +58997,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.05
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -59102,7 +59102,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -59226,7 +59226,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -59389,8 +59389,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0014,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -59493,8 +59493,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0009,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -59577,7 +59577,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -59660,7 +59660,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -59803,8 +59803,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.02
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -59908,7 +59908,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.02
+        "margin": 0.0
       }
     },
     {
@@ -59990,8 +59990,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -60074,7 +60074,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -60157,7 +60157,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -60240,7 +60240,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -60309,7 +60309,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -60453,7 +60453,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.01
+        "margin": 0.0
       }
     },
     {
@@ -60536,7 +60536,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -60619,7 +60619,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -60742,8 +60742,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -60825,8 +60825,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0004,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -60908,8 +60908,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0018,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -60992,7 +60992,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -61075,7 +61075,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -61157,8 +61157,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -61241,7 +61241,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -61310,7 +61310,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -61453,8 +61453,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0012,
-        "margin": -0.01
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -61523,7 +61523,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -61605,8 +61605,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0021,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -61675,7 +61675,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     },
     {
@@ -61757,8 +61757,8 @@
         "coverage_mismatch": true
       },
       "change": {
-        "dem_probability": -0.0001,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -61840,8 +61840,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0008,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -61923,8 +61923,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0002,
-        "margin": -0.04
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -62006,8 +62006,8 @@
         "coverage_mismatch": false
       },
       "change": {
-        "dem_probability": -0.0007,
-        "margin": -0.03
+        "dem_probability": 0.0,
+        "margin": 0.0
       }
     },
     {
@@ -62090,7 +62090,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -62173,7 +62173,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.03
+        "margin": 0.0
       }
     },
     {
@@ -62256,7 +62256,7 @@
       },
       "change": {
         "dem_probability": 0.0,
-        "margin": -0.04
+        "margin": 0.0
       }
     }
   ],
@@ -62267,7 +62267,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-11-03T06:46:16.252144Z",
+      "last_success": "2026-11-03T19:29:32.482043Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -62300,7 +62300,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-11-03T06:46:25.383663Z",
+      "last_success": "2026-11-03T19:29:42.007170Z",
       "last_observation": "2026-10-29",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -62334,7 +62334,7 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-11-03T06:46:28.108364Z",
+      "last_success": "2026-11-03T19:29:44.446250Z",
       "last_observation": "2026-10-22",
       "note": "Official bulk adapter; 860 candidate summaries matched to production candidates."
     },
@@ -62343,7 +62343,7 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-11-03T06:46:25.383663Z",
+      "last_success": "2026-11-03T19:29:42.007170Z",
       "last_observation": "2026-11-02",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
@@ -77720,7 +77720,7 @@
   },
   "provenance": {
     "upstream_input_mirror": "ElectIndex/26_us_forecast_data",
-    "upstream_commit": "9383ecc3d0403ea14ab9117382b3637a4ad46dc9",
+    "upstream_commit": "24db84ab8ef5dcf68f3e3994a29ded9dccc7840c",
     "input_sha256": "b696421b6525cb2d13b88842f8b00b5b06787baa9d53bf42e85ea59f8cd34420",
     "file_sha256": {
       "races.csv": "d425c8e13edf80a55167a99a9c30823a9ef7614ceccb5a99c020777680f0d906",
@@ -77734,7 +77734,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-11-03T06:46:16.252144Z",
+    "retrieved_at": "2026-11-03T19:29:32.482043Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -77747,21 +77747,31 @@
   ],
   "change_summary": {
     "comparable_previous_snapshot": true,
-    "house_control_probability": -0.0025,
-    "senate_control_probability": 0.0104,
-    "house_expected_dem_seats": -0.3,
+    "house_control_probability": 0.0,
+    "senate_control_probability": 0.0,
+    "house_expected_dem_seats": 0.0,
     "senate_expected_dem_seats": 0.0,
-    "generic_ballot_d_minus_r": -0.03,
-    "changed_inputs": [
-      "gcb_polls.csv",
-      "race_polls.csv"
-    ],
-    "previous_generated_at": "2026-11-02T21:42:07.062888Z"
+    "generic_ballot_d_minus_r": 0.0,
+    "changed_inputs": [],
+    "previous_generated_at": "2026-11-03T06:46:16.252144Z"
   },
   "briefing": {
     "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 96% probability of House control and a 82% probability of Senate control. The current weighted generic congressional ballot is D+8.4. The House 80% Democratic-seat interval is 222–257; the Senate interval is 50–55."
   },
   "history_summaries": [
+    {
+      "file": "2026-11-03T192932Z.json",
+      "generated_at": "2026-11-03T19:29:32.482043Z",
+      "house": 0.9568,
+      "senate": 0.815,
+      "house_seats": 239.2,
+      "senate_seats": 52.3,
+      "generic_ballot_d_minus_r": 8.4,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "24db84ab8ef5dcf68f3e3994a29ded9dccc7840c",
+      "input_sha256": "b696421b6525cb2d13b88842f8b00b5b06787baa9d53bf42e85ea59f8cd34420",
+      "changed_inputs": []
+    },
     {
       "file": "2026-11-03T064616Z.json",
       "generated_at": "2026-11-03T06:46:16.252144Z",
