@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T21:42:07.062888Z",
+  "generated_at": "2026-11-03T06:46:16.252144Z",
   "records": [
     {
       "type": "race",
@@ -9796,13 +9796,6 @@
     },
     {
       "type": "pollster",
-      "label": "AlphaROC",
-      "subtitle": "Pollster",
-      "key": "AlphaROC",
-      "terms": "AlphaROC"
-    },
-    {
-      "type": "pollster",
       "label": "American Pulse Research & Polling",
       "subtitle": "Pollster",
       "key": "American Pulse Research & Polling",
@@ -10146,6 +10139,13 @@
     },
     {
       "type": "pollster",
+      "label": "John Zogby Strategies",
+      "subtitle": "Pollster",
+      "key": "John Zogby Strategies",
+      "terms": "John Zogby Strategies"
+    },
+    {
+      "type": "pollster",
       "label": "Keating Research, Inc.",
       "subtitle": "Pollster",
       "key": "Keating Research, Inc.",
@@ -10433,6 +10433,13 @@
     },
     {
       "type": "pollster",
+      "label": "Resonance Research",
+      "subtitle": "Pollster",
+      "key": "Resonance Research",
+      "terms": "Resonance Research"
+    },
+    {
+      "type": "pollster",
       "label": "SEA Polling",
       "subtitle": "Pollster",
       "key": "SEA Polling",
@@ -10493,6 +10500,13 @@
       "subtitle": "Pollster",
       "key": "Suffolk University",
       "terms": "Suffolk University"
+    },
+    {
+      "type": "pollster",
+      "label": "Survey 160",
+      "subtitle": "Pollster",
+      "key": "Survey 160",
+      "terms": "Survey 160"
     },
     {
       "type": "pollster",
