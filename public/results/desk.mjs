@@ -68,7 +68,7 @@ function summary(){
     ?"Vote counts available for "+t.reporting+" contests; all uncalled leads remain provisional."
     :feed?.state==="source_unavailable"?"Results feed unavailable; forecasts shown for orientation only."
     :"Awaiting verified vote counts. Showing the frozen model as a geographic index.";
-  $("feedClock").textContent="Source snapshot: "+date(feed?.source_updated_at)+" · Checked: "+date(feed?.fetched_at)+" · Model frozen: 3 Nov 2026 19:29 UTC · Sources: The People's Tally (CC BY 4.0) / official state offices via Open America";
+  $("feedClock").textContent="Stored publisher: "+(feed?.source||"unavailable")+" · Published at: "+date(feed?.source_updated_at)+" · Fetched at: "+date(feed?.fetched_at)+" · Frozen model: 3 Nov 2026 19:29 UTC · Race calls: civicAPI, not AP";
 }
 async function refresh(){
   if($("refresh").disabled)return;

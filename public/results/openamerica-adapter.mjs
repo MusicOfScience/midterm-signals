@@ -46,7 +46,7 @@ export function combineFeeds(feeds){
       const prior=grouped.get(key)||[];prior.push({...items[0],_feed:feed.source||"unknown"});grouped.set(key,prior);
     }
   }
-  const priority={thepeoplestally:2,openamerica:1};
+  const priority={civicAPI:3,thepeoplestally:2,openamerica:1};
   const races=[];
   for(const [key,choices] of grouped){
     if(ambiguous.has(key))continue;

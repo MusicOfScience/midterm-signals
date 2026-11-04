@@ -35,7 +35,7 @@ function chart(rows){
 }
 function ledger(data){
  const list=[],cache=data.sources?.[0];
- list.push({name:"GitHub stored snapshot",state:cache?.races?.some(r=>r.votes_total>0)?"Votes stored":"No stored votes yet",asOf:cache?.source_updated_at});
+ list.push({name:"Stored national snapshot · "+(cache?.source||"unknown"),state:cache?.races?.some(r=>r.votes_total>0)?cache.races.filter(r=>r.votes_total>0).length+" races with published vote counts":"No stored votes yet",asOf:cache?.source_updated_at});
  for(const o of data.sourceChecks||[])list.push({name:o.name,state:o.success?(o.published?"Returns published":"Reachable; no returns published"):"Unavailable from this browser",asOf:o.asOf});
  $("sourceLedger").replaceChildren(...list.map(item=>{
   const row=n("div",null,"source-row");row.append(n("strong",item.name),n("span",item.state+(item.asOf?" · "+ageLabel(item.asOf).label:" · source time unavailable")));return row;
@@ -44,7 +44,23 @@ function ledger(data){
 function header(data){
  const info=analyse(data.rows||[]),age=ageLabel(data.feed?.source_updated_at),badge=$("freshnessFlag");
  const label=!info.seen?"NO OBSERVED COUNTS":age.state==="unknown"?"COUNTS PRESENT · AGE UNKNOWN":"COUNTS · "+age.label.toUpperCase();
- badge.className="pill "+(info.seen?age.state:"unknown");badge.textContent=label;ledger(data);
+ badge.className="pill "+(info.seen?age.state:"unknown");badge.textContent=label;
+ const alert=$("coverageAlert"),title=$("coverageAlertTitle"),message=$("coverageAlertText");
+ const coverage=Math.round(100*info.seen/(info.tracked||470));
+ if(info.seen===0){
+   alert.className="coverage-alert stale";title.textContent="No national results have reached this dashboard.";
+   message.textContent="That is a feed failure or coverage gap, not evidence that no votes have been counted. Use AP-backed newsroom results for national race calls.";
+ }else if(age.state==="stale"||age.state==="unknown"){
+   alert.className="coverage-alert stale";title.textContent="The stored count may be stale ("+coverage+"% of tracked races report votes).";
+   message.textContent="Refreshing this page does not make old results current. Compare the source timestamp with independently published AP results.";
+ }else if(info.seen<info.tracked){
+   alert.className="coverage-alert";title.textContent="Partial national reporting: "+info.seen+" of "+info.tracked+" tracked races have votes.";
+   message.textContent="civicAPI counts and calls may differ from AP/DDHQ coverage. The percentage measures races with votes, not ballots counted. Missing races are not zero-vote results.";
+ }else{
+   alert.className="coverage-alert ok";title.textContent="All tracked races have reported some votes.";
+   message.textContent="Returns remain unofficial. One reported vote is not a completed count. civicAPI calls are independent of AP decisions.";
+ }
+ ledger(data);
 }
 function selection(data){
  const rows=data.rows||[],state=$("state").value,layer=$("mapLayer").value;
