@@ -56,6 +56,8 @@ export function combineFeeds(feeds){
       if(aVotes!==bVotes)return Number(bVotes)-Number(aVotes);
       const ta=Date.parse(a.source_updated_at||""),tb=Date.parse(b.source_updated_at||"");
       if(Number.isFinite(ta)&&Number.isFinite(tb)&&Math.abs(tb-ta)>3600000)return tb-ta;
+      if(!Number.isFinite(ta)&&Number.isFinite(tb))return 1;
+      if(!Number.isFinite(tb)&&Number.isFinite(ta))return -1;
       return (priority[b._feed]||0)-(priority[a._feed]||0);
     });
     races.push(ranked[0]);

@@ -106,6 +106,7 @@ jobs:
           node tests/model-lab-e2e.mjs
           node tests/results-e2e.mjs
           node tests/results-v2-e2e.mjs
+          node tests/results-live-fixture-e2e.mjs
       - name: Adversarial production-readiness checks
         env:
           BASE_URL: http://127.0.0.1:4173
