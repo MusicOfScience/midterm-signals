@@ -65,6 +65,18 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
+  results_source_smoke:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify civicAPI actually publishes 2026 House and Senate votes
+        run: python -m scripts.refresh_results_civic --dry-run --strict-live --min-house 150 --min-senate 10
+
   browser:
     runs-on: ubuntu-latest
     timeout-minutes: 20

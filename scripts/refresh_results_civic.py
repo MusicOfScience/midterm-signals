@@ -226,6 +226,8 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true", help="Inspect public source without changing repository data")
     parser.add_argument("--strict-live", action="store_true", help="Fail when no 2026 vote counts exist")
+    parser.add_argument("--min-house", type=int, default=0, help="Require this many freshly sourced House contests")
+    parser.add_argument("--min-senate", type=int, default=0, help="Require this many freshly sourced Senate contests")
     parser.add_argument("--fixture-house", type=Path)
     parser.add_argument("--fixture-senate", type=Path)
     args = parser.parse_args()
@@ -262,6 +264,11 @@ def main() -> None:
     }))
     if args.strict_live and reporting == 0:
         raise SystemExit("Critical: licensed national provider returned zero published votes; refuse live claim.")
+    source_house = sum(r["votes_total"] > 0 for r in normalise_office(documents["house"], "house")) if "house" in documents else 0
+    source_senate = sum(r["votes_total"] > 0 for r in normalise_office(documents["senate"], "senate")) if "senate" in documents else 0
+    if source_house < args.min_house or source_senate < args.min_senate:
+        raise SystemExit(f"Source coverage below minimum: {source_house} House and {source_senate} Senate; required {args.min_house}/{args.min_senate}")
+
     if not args.dry_run:
         print("Snapshot:", publish(payload))
 

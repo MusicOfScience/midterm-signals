@@ -120,3 +120,40 @@ map is not blocked by third-party scripts or CDN outages.
 Safety/quality gates include Node analytics tests, ambiguous-source collision
 tests, a mobile Playwright map/race-lens test, a no-observations fallback test,
 accessibility checks and the pre-existing production model CI suite.
+
+
+## National source recovery / 4 November 2026
+
+The results source defect was confirmed against live AP-backed newsroom coverage:
+the original People's Tally results JSON remained empty while House and Senate
+results were available elsewhere. GitHub's published workflow history showed
+no recorded runs of the standalone results-ingestion workflow after v1/v2 were
+merged, so a scheduled trigger alone could not be relied upon for initial
+publication. This is a **critical source-pipeline defect**.
+
+The corrected design prioritises civicAPI, using its published 2026 aggregate
+House (race ID 87524) and Senate (race ID 87528) records. The civicAPI site
+permits both personal and public reuse without a key, with attribution.
+Counts and calls are from civicAPI's own decision desk, **not AP**.
+
+The server-side adapter is scripts/refresh_results_civic.py. It validates
+the 2026 election, suppresses test data, excludes malformed/negative vote
+counts, preserves source and fetch timestamps separately, retains last good
+results if one upstream endpoint fails, and prevents wrong special/regular
+Senate joins. The workflow now triggers once on a main-branch code merge,
+then on a five-minute best-effort GitHub Actions schedule. Snapshot-only
+commits do not retrigger the workflow. No model coefficient or forecast
+history is changed.
+
+To avoid approving a dashboard that only appears operational, the pull-request
+test job verifies actual upstream coverage of at least 150 live House contests
+and 10 Senate contests. That threshold is election-night-specific; it does not
+mean all other contests have zero votes, and it is distinct from the percentage
+of ballots reported. If the live provider cannot meet that minimum, the PR
+should **not** be merged based on synthetic tests alone.
+
+The Results Desk also provides external AP-backed national results links. These
+are independent newsroom references, not scraped or rebadged AP data. AP's
+programmatic election-results feed is paid/licensed; five-minute Github Actions
+polling is not equivalent to network real-time reporting. Source freshness is
+shown from the provider's timestamps rather than browser reload time.
