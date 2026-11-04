@@ -68,7 +68,7 @@ function summary(){
     ?"Vote counts available for "+t.reporting+" contests; all uncalled leads remain provisional."
     :feed?.state==="source_unavailable"?"Results feed unavailable; forecasts shown for orientation only."
     :"Awaiting verified vote counts. Showing the frozen model as a geographic index.";
-  $("feedClock").textContent="Source snapshot: "+date(feed?.source_updated_at)+" · Checked: "+date(feed?.fetched_at)+" · Model frozen: 3 Nov 2026 19:29 UTC · Sources: The People's Tally (CC BY 4.0) / official state offices via Open America";
+  $("feedClock").textContent="Stored publisher: "+(feed?.source||"unavailable")+" · Published at: "+date(feed?.source_updated_at)+" · Fetched at: "+date(feed?.fetched_at)+" · Frozen model: 3 Nov 2026 19:29 UTC · Race calls: civicAPI, not AP";
 }
 async function refresh(){
   if($("refresh").disabled)return;
@@ -99,6 +99,8 @@ async function refresh(){
     const sourceChecks=requests.map((r,i)=>({name:sourceNames[i],success:r.status==="fulfilled",
       published:r.status==="fulfilled"&&(i===0?Object.keys(r.value?.races||{}).length:Object.keys(r.value?.races||{}).length)>0,
       asOf:r.status==="fulfilled"?(r.value.generated_at||r.value.as_of||null):null,
+      health:r.status==="fulfilled"&&i>0?{live:r.value.live===true,stale:r.value.stale===true,counting:r.value.counting===true,final:r.value.final===true,
+       races:typeof r.value.counts?.races==="number"?r.value.counts.races:null}:null,
       note:r.status==="fulfilled"?"Responded":"Not reachable from this browser"}));
     window.__MS_RESULTS__={rows,feed,sources,sourceChecks};
     window.dispatchEvent(new Event("ms:results-updated"));

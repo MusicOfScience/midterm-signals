@@ -49,6 +49,15 @@ const official=normaliseOpenAmerica({api:1,year:2026,office:"House",as_of:"2026-
 assert.equal(official.races[0].model_code,"AK-01");
 assert.equal(official.races[0].called,false);
 assert.equal(official.races[0].votes_total,150);
+assert.equal(official.races[0].source_updated_at,null,"Global as_of must not impersonate per-race update timestamp");
+assert.equal(official.races[0].feed_updated_at,"2026-11-04T02:00:00Z");
+const stateFlags=normaliseOpenAmerica({api:1,year:2026,office:"House",as_of:"2026-11-04T02:25:00Z",
+  live:false,stale:true,counting:true,final:false,counts:{races:1,reporting:0},
+  races:{"GA-04":{pct_in:79.4,cands:[{n:"D",p:"D",v:1400},{n:"R",p:"R",v:1200}]}}});
+assert.equal(stateFlags.health.stale,true);
+assert.equal(stateFlags.races[0].reporting_unit,"counties");
+assert.equal(stateFlags.races[0].source_updated_at,null);
+
 const merged=combineFeeds([normaliseClient({races:{}}),official]);
 assert.equal(merged.races.length,1);
 assert.equal(merged.races[0].source_name,"Official state election offices via Open America");

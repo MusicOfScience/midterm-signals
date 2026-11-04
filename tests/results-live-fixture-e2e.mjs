@@ -7,7 +7,7 @@ try{
  const page=await browser.newPage({viewport:{width:1280,height:920}});
  page.route("https://thepeoplestally.com/**",route=>route.fulfill({
    status:200,contentType:"application/json",body:JSON.stringify({generated_at:"2026-11-03T20:00:00Z",
-     races:{"H-PA-07":{cands:[{name:"Older D",party:"D",votes:1100,winner:false},{name:"Older R",party:"R",votes:900,winner:false}],src:"PA test archive",asof:"2026-11-03T20:00:00Z",called_by:""}}})
+     races:{"H-VA-01":{cands:[{name:"Older D",party:"D",votes:1100,winner:false},{name:"Older R",party:"R",votes:900,winner:false}],src:"VA test archive",asof:"2026-11-03T20:00:00Z",called_by:""}}})
  }));
  page.route("https://openamerica.io/elections/results.json?year=2026&office=House",route=>route.fulfill({
   status:200,contentType:"application/json",headers:{"access-control-allow-origin":"*"},
@@ -22,7 +22,7 @@ try{
   }})
  }));
  await page.goto(base+"/results/",{waitUntil:"domcontentloaded"});
- await page.waitForFunction(()=>document.querySelector("#mReporting")?.textContent?.startsWith("2 /"),null,{timeout:30000});
+ await page.waitForFunction(()=>document.querySelector("#mReporting")?.textContent?.startsWith("3 /"),null,{timeout:30000});
  await page.locator("#state").selectOption("PA");
  await page.waitForFunction(()=>
    document.querySelector("#state")?.value==="PA" &&
@@ -41,15 +41,19 @@ try{
      throw new Error("PA live-count test did not settle: "+JSON.stringify(diag)+" / "+e.message);
    });
  const content=await page.locator("#raceRows").innerText();
- assert.match(content,/3,400/,"Fresher official count should supersede older tally");
- assert.doesNotMatch(content,/2,000/,"Stale publisher count must not be mistaken for the newer feed");
+ assert.match(content,/3,400/,"Open America official count should fill a district absent from the national publisher");
+ assert.doesNotMatch(content,/2,000/,"A different state must not leak into Pennsylvania rows");
  assert.doesNotMatch(content,/6,100/,"PA filter must not contain a different state's Senate votes");
  await page.locator("#state").selectOption("GA");
  const senateText=await page.locator("#raceRows").innerText();
  assert.match(senateText,/6,100/,"Georgia statewide Senate counts should appear");
  await page.locator("#state").selectOption("PA");
  assert.match(senateText,/Uncalled/,"Official feed supplies no named calls");
- assert.match(await page.locator("#countQuality").innerText(),/2 \/ 470/);
+ assert.match(await page.locator("#countQuality").innerText(),/3 \/ 470/);
+ await page.locator("#state").selectOption("VA");
+ const virginia=await page.locator("#raceRows").innerText();
+ assert.match(virginia,/2,000/,"Older publisher counts may be shown for an otherwise uncovered race, with provider attribution");
+ await page.locator("#state").selectOption("PA");
  const PA=page.locator("#raceRows tr").filter({hasText:"PA-07"});
  await PA.locator("button.inspect-race").click();
  const lens=await page.locator("#raceLensContent").innerText();

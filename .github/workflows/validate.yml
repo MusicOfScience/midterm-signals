@@ -25,7 +25,7 @@ jobs:
           node-version: "22"
       - name: Python syntax and browser projection
         run: |
-          python -m py_compile scripts/build_forecast.py scripts/enrich_outputs.py scripts/run_enrichment.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py scripts/model_lab.py scripts/build_model_lab.py scripts/augment_model_lab.py scripts/baseline_stability.py scripts/polling_error.py scripts/source_mix.py scripts/sparsity_interaction.py scripts/refresh_results.py
+          python -m py_compile scripts/build_forecast.py scripts/enrich_outputs.py scripts/run_enrichment.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py scripts/model_lab.py scripts/build_model_lab.py scripts/augment_model_lab.py scripts/baseline_stability.py scripts/polling_error.py scripts/source_mix.py scripts/sparsity_interaction.py scripts/refresh_results.py scripts/refresh_results_civic.py
           python scripts/make_bootstrap.py
           python scripts/build_model_lab.py
           python scripts/augment_model_lab.py
@@ -53,7 +53,7 @@ jobs:
           node --check public/results/geo-map.mjs
           node --check public/results/v2-upgrade.mjs
       - name: Unit tests
-        run: node tests/core.test.mjs && node tests/results-core.test.mjs && node tests/v2-core.test.mjs && python -m unittest tests.test_results_feed tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_builder tests.test_model_lab_augmentation tests.test_baseline_stability tests.test_polling_error tests.test_source_mix tests.test_sparsity_interaction
+        run: node tests/core.test.mjs && node tests/results-core.test.mjs && node tests/v2-core.test.mjs && python -m unittest tests.test_results_feed tests.test_results_civic tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_builder tests.test_model_lab_augmentation tests.test_baseline_stability tests.test_polling_error tests.test_source_mix tests.test_sparsity_interaction
       - name: Static publication checks
         run: node scripts/check.mjs
       - name: Upload generated Model Lab audit artefact
@@ -64,6 +64,18 @@ jobs:
           path: public/data/model-lab.json
           if-no-files-found: error
           retention-days: 14
+
+  results_source_smoke:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify civicAPI actually publishes 2026 House and Senate votes
+        run: python -m scripts.refresh_results_civic --dry-run --strict-live --min-house 150 --min-senate 10
 
   browser:
     runs-on: ubuntu-latest
