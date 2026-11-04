@@ -24,7 +24,7 @@ export function stateInsight(rows,state,layer="coverage") {
   const counted=all.filter(r=>r.votes!==null);
   const withMargin=counted.filter(r=>hasTwoParty(r));
   const observedD=withMargin.reduce((s,r)=>s+r.observed.candidates.filter(c=>c.party==="D").reduce((n,c)=>n+(Number(c.votes)||0),0),0);
-  const observedR=withMargin.reduce((s,r)=>s+r.observed.candidates.filter(c=>c.party==="R").reduce((n,c)=>n+(Number(c.votes)||0),0);
+  const observedR=withMargin.reduce((s,r)=>s+r.observed.candidates.filter(c=>c.party==="R").reduce((n,c)=>n+(Number(c.votes)||0),0),0);
   const margin=observedD+observedR>0?100*(observedD-observedR)/(observedD+observedR):null;
   const pct=all.length?100*counted.length/all.length:null;
   const ambiguous=all.some(r=>r.observed===null&&r.votes===null&&r.ambiguous);
