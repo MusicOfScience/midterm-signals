@@ -22,7 +22,7 @@ function row(r){
     status.append(node("span",(r.lead?.name||r.lead?.party||"Count reported")+" leads","status-text"));
     status.append(node("small","Uncalled · counting lead only"));
   }else{status.append(node("span","No votes reported","unavailable"))}
-  if(o?.source_url?.startsWith("https://")){const link=node("a","Source","");link.href=o.source_url;link.target="_blank";link.rel="noopener noreferrer";status.append(node("small","")).append(link)}
+  if(o?.source_url?.startsWith("https://")){const link=node("a","Source","");link.href=o.source_url;link.target="_blank";link.rel="noopener noreferrer";const sourceWrap=node("small","");sourceWrap.append(link);status.append(sourceWrap)}
   const inspect=node("button","Inspect race","inspect-race");inspect.type="button";inspect.dataset.race=r.id;const inspectWrap=node("small","");inspectWrap.append(inspect);status.append(inspectWrap);
   cell(tr,fmt(r.votes),"numeric");
   cell(tr,signed(r.observed_margin),"numeric");
