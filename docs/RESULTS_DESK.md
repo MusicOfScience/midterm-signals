@@ -73,3 +73,50 @@ vote-method batch tracking, complete official certification lineage, 2024
 baseline reconciliation following redistricting, and precinct-level analysis
 should be separate evidence-backed phases. This first release intentionally
 does not pretend to have those inputs.
+
+## Results Desk v2.0: geographic and analytical publication
+
+The v2 interface adds an entirely local geographic state-outline visualisation,
+selectable coverage/House/Senate layers, source-status ledger, a provisional
+two-party comparison scatterplot, and a candidate-level race inspection lens.
+The geometry is PublicaMundi's published US States GeoJSON (originally public
+geographic boundary data; 2017 state outline edition), stored locally so the
+map is not blocked by third-party scripts or CDN outages.
+
+**Methodological limits, displayed in the UI:**
+
+- State map shading for **coverage** is the share of *tracked contests* with
+  at least one published vote. It is *not* the percentage of ballots, precincts
+  or voters counted.
+- State map **House D−R** sums only known Democratic and Republican votes across
+  those congressional districts with published returns. Missing districts
+  remain missing. This number does not project statewide or national outcomes.
+- State map **Senate D−R** reports only the matched statewide contest. A state
+  with overlapping regular and special Senate races but a single model key is
+  deliberately withheld pending a contest-specific crosswalk.
+- A race's **D−R discrepancy** is (currently reported two-party margin − frozen
+  predicted two-party margin). Unfinished counts, differential vote-method
+  timing and missing precinct data can produce large provisional gaps.
+- The **headline median discrepancy** is withheld unless at least *five*
+  comparable races have provider-reported *95% or more reporting units*; even
+  then it remains a provisional descriptive statistic, not a Brier score,
+  certified result or national swing.
+- The scatterplot only plots races with both a known two-party margin and a
+  frozen prediction; missing observations are never converted to a zero.
+- Data freshness refers to a source result timestamp, not merely the time
+  the browser requested a page. Missing or unparseable timestamps are labelled
+  unknown.
+- The source arbiter preserves all candidate votes from **one** provider per
+  race, never averages provider vote totals and never trusts an unsourced call.
+  A documented timestamp more than an hour newer can supersede a stale
+  counterpart, while explicit called winners retain priority.
+- Counts from Open America are a **browser-only** direct read with its required
+  original attribution. They are not persisted as a repackaged feed.
+- The map represents *states*, not true 2026 congressional district
+  boundaries. States with recent redistricting must not be shown against
+  incorrect historic district polygons. The district table remains the
+  authoritative geographic granularity for each congressional contest.
+
+Safety/quality gates include Node analytics tests, ambiguous-source collision
+tests, a mobile Playwright map/race-lens test, a no-observations fallback test,
+accessibility checks and the pre-existing production model CI suite.
