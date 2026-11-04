@@ -4,7 +4,7 @@
   "mode": "official bulk data",
   "url": "https://www.fec.gov/data/",
   "bulk_url": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip",
-  "last_success": "2026-11-04T06:19:53.256489Z",
+  "last_success": "2026-11-04T11:48:07.611968Z",
   "latest_coverage": "2026-10-22",
   "matched_candidates": 860,
   "note": "Official FEC current-campaign summaries. Reporting periods travel with every dollar figure; unmatched candidates remain missing rather than guessed.",
@@ -3992,8 +3992,8 @@
       "fec_candidate_id": "H6GA07221",
       "fec_name": "KOZYCKI, ANTHONY LAWRENCE",
       "receipts": 922117.45,
-      "disbursements": 429685.67,
-      "cash_on_hand": 492431.78,
+      "disbursements": 431822.9,
+      "cash_on_hand": 490294.55,
       "debts_owed_by": 716702.32,
       "coverage_through": "2026-10-14",
       "source": "https://www.fec.gov/data/candidate/H6GA07221/?cycle=2026&election_full=true",
@@ -10193,7 +10193,7 @@
       "party": "R",
       "fec_candidate_id": "H8TX05144",
       "fec_name": "GOODEN, LANCE",
-      "receipts": 1526218.36,
+      "receipts": 1526518.36,
       "disbursements": 899736.9,
       "cash_on_hand": 1343838.42,
       "debts_owed_by": 20000.0,
@@ -12050,6 +12050,6 @@
       "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
     }
   ],
-  "generated_at": "2026-11-04T06:19:50.906622Z",
+  "generated_at": "2026-11-04T11:48:06.027178Z",
   "model_effect": "NONE"
 }
