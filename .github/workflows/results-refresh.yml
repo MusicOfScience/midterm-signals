@@ -1,0 +1,46 @@
+name: Publish observed 2026 election results
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/10 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: midterm-observed-results
+  cancel-in-progress: false
+
+jobs:
+  results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check parser/analysis invariants
+        run: |
+          python -m unittest tests.test_results_feed
+          node tests/results-core.test.mjs
+      - name: Fetch published CC BY 4.0 observations
+        run: python scripts/refresh_results.py
+      - name: Publish only if the checked snapshot changed
+        run: |
+          git add public/data/observed-results.json
+          if git diff --cached --quiet; then
+            echo "No substantive vote update"
+            exit 0
+          fi
+          git config user.name "midterm-signals-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "data: update observed 2026 election results"
+          git pull --rebase origin main
+          git push origin HEAD:main

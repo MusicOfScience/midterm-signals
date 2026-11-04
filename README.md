@@ -4,6 +4,8 @@ MIDTERM SIGNALS is an open, auditable election-analysis and probabilistic foreca
 
 Production site: https://midterm-signals.pages.dev
 
+**2026 Results Desk:** https://midterm-signals.pages.dev/results/ — House districts, Senate races, source-attributed observed counts, calls versus leads, frozen-model comparison and CSV export. See docs/RESULTS_DESK.md.
+
 ## Product contract
 
 The project visibly separates:
