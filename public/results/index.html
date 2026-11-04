@@ -28,7 +28,7 @@
     <div class="coverage-links"><a href="https://www.abc.net.au/news/2026-11-04/us-midterm-election-results-2026/107235570" target="_blank" rel="noopener noreferrer">ABC / AP live results</a><a href="https://www.theguardian.com/us-news/ng-interactive/2026/nov/03/midterm-elections-full-results-senate-house-governor-races" target="_blank" rel="noopener noreferrer">Guardian / AP tracker</a></div>
   </section>
   <section class="readout-head" aria-label="Election night intelligence">
-    <div class="readout-title"><span class="eyebrow">Election intelligence / v2.1</span><h2>Reading the count, not just colouring the map</h2></div>
+    <div class="readout-title"><span class="eyebrow">Election intelligence / v3.0</span><h2>Reading the count, not just colouring the map</h2></div>
     <div class="readout-right"><span class="pill" id="freshnessFlag">SOURCE STATUS PENDING</span><a class="share-link" id="shareView" href="#">Copy a link to this view</a></div>
   </section>
   <section aria-label="Counting summary" class="metrics">
@@ -36,6 +36,49 @@
     <article><span>House: called D / R</span><strong id="mHouse">—</strong><small>Only explicitly sourced race calls</small></article>
     <article><span>Senate: called D / R</span><strong id="mSenate">—</strong><small>Contested seats only, not control of chamber</small></article>
     <article><span>Current counting leads</span><strong id="mLeads">—</strong><small>Democratic / Republican; not projected winners</small></article>
+  </section>
+  <section class="congress-board" aria-labelledby="congressTitle">
+    <div class="congress-heading">
+      <div><div class="eyebrow">Control of Congress / projected next chamber</div><h2 id="congressTitle">Seats secured by calls, not merely counting leads</h2><p>Projected membership of the next Congress based on <strong>civicAPI calls</strong> and Senate holdover seats. Counts are unofficial and not certifications. An uncalled lead never becomes a seat won.</p></div>
+      <span id="controlClock" class="control-clock" role="status">Checking source time…</span>
+    </div>
+    <div class="chamber-grid">
+      <article class="chamber-card" aria-labelledby="senateControlTitle">
+        <div class="chamber-top"><div class="eyebrow">Upper chamber / 100 seats</div><h3 id="senateControlTitle">Senate</h3><p class="control-verdict" id="senateVerdict">Awaiting results…</p></div>
+        <div class="seat-summary">
+          <div class="dside"><span>Democratic-aligned*</span><strong id="senateD">34</strong></div>
+          <div class="majority-label">51 for D majority</div>
+          <div class="rside"><span>Republican</span><strong id="senateR">31</strong></div>
+        </div>
+        <div id="senateSegments" class="seat-band" role="img" aria-label="Senate seats by holdover, call and unresolved status"></div>
+        <div class="band-key"><span><i class="legend-dem"></i> D-aligned seats</span><span><i class="legend-pending"></i> Uncalled</span><span><i class="legend-rep"></i> R seats</span></div>
+        <p id="senateBreakdown" class="chamber-breakdown">34 holdovers include 32 Democrats and two allied independents; 31 Republican holdovers.</p>
+        <p id="senateUncalled" class="chamber-pending">35 seats contested; source calls pending.</p>
+        <p class="chamber-rule">*Includes two independent senators caucusing with Democrats. At 50–50, the Republican vice-president holds the casting vote.</p>
+      </article>
+      <article class="chamber-card" aria-labelledby="houseControlTitle">
+        <div class="chamber-top"><div class="eyebrow">Lower chamber / 435 seats</div><h3 id="houseControlTitle">House of Representatives</h3><p class="control-verdict" id="houseVerdict">Awaiting results…</p></div>
+        <div class="seat-summary"><div class="dside"><span>Democratic calls</span><strong id="houseD">0</strong></div><div class="majority-label">218 to win</div><div class="rside"><span>Republican calls</span><strong id="houseR">0</strong></div></div>
+        <div id="houseSegments" class="seat-band" role="img" aria-label="House seats by source call and unresolved status"></div>
+        <div class="band-key"><span><i class="legend-dem"></i> D calls</span><span><i class="legend-pending"></i> Uncalled</span><span><i class="legend-rep"></i> R calls</span></div>
+        <p id="houseBreakdown" class="chamber-breakdown">All 435 seats were contested. No pre-allocated holdovers.</p>
+        <p id="houseUncalled" class="chamber-pending">Awaiting confirmed provider calls.</p>
+        <p class="chamber-rule">Leaders in uncalled races are tracked separately. A network race call is a projection, not an official state certification.</p>
+      </article>
+    </div>
+    <div class="newsroom-compare" aria-labelledby="newsroomTitle">
+      <div class="compare-heading">
+        <div><div class="eyebrow">Independent reference / point in time</div><h3 id="newsroomTitle">Guardian versus civicAPI</h3></div>
+        <span id="compareState" class="compare-state">Reference loading…</span>
+      </div>
+      <p id="compareExplanation" class="compare-explanation">A dated user-provided Guardian screenshot is an archival newsroom checkpoint, not a live AP feed.</p>
+      <div class="compare-scroller"><table class="compare-table"><caption>Call counts by independent publisher, at separately recorded times</caption>
+        <thead><tr><th scope="col">Chamber</th><th scope="col">Snapshot</th><th scope="col">Dem-aligned</th><th scope="col">Republican</th><th scope="col">Races called</th></tr></thead>
+        <tbody id="compareRows"><tr><td colspan="5">Waiting for two source snapshots…</td></tr></tbody>
+      </table></div>
+      <p id="compareDelta" class="compare-delta">Differences are only displayed for source timestamps within a 15-minute comparison window.</p>
+      <p class="compare-note">The reference captures <a href="https://www.theguardian.com/us-news/ng-interactive/2026/nov/03/midterm-elections-full-results-senate-house-governor-races" target="_blank" rel="noopener noreferrer">Guardian-published aggregate counts</a> at 19:38 AEDT, 4 November 2026, from a user-supplied screenshot. There is <strong>no licensed AP race-level feed</strong>; consequently this audit cannot identify the individual House districts behind a call-count difference. <a href="https://www.dailypress.senate.gov/on-the-floor/senate-facts/" target="_blank" rel="noopener noreferrer">Senate composition source</a>.</p>
+    </div>
   </section>
   <section class="atlas-wrap" aria-labelledby="atlasTitle">
     <div class="atlas-intro">
@@ -84,4 +127,5 @@
 <footer><a href="/">MIDTERM SIGNALS</a><span>Facts ≠ polls ≠ forecasts ≠ scenarios ≠ results</span><span>civicAPI (attribution required); The People's Tally (CC BY 4.0); Open America (official state counts); state geometry: PublicaMundi.</span></footer>
 <script type="module" src="/results/desk.mjs"></script>
 <script type="module" src="/results/v2-upgrade.mjs"></script>
+<script type="module" src="/results/control-board.mjs"></script>
 </body></html>

@@ -68,3 +68,46 @@ main{max-width:1240px;padding:2rem 1.25rem 4rem;margin:auto}.eyebrow{text-transf
 .coverage-alert.ok{background:#e9eee6;border-color:#a9b9ad}
 .coverage-alert.stale{background:#f3dfd9;border-color:#bd8373}
 @media(max-width:590px){.coverage-alert{padding:.75rem}.coverage-links{flex-direction:column;gap:.5rem}}
+
+
+/* Results Desk v3: parliamentary control & independent timestamped calls */
+.congress-board{margin:1.4rem 0 2rem}
+.congress-heading{display:flex;justify-content:space-between;gap:1rem;align-items:start;flex-wrap:wrap;margin:0 0 1.15rem}
+.congress-heading h2{font-size:clamp(1.15rem,2.4vw,1.65rem);line-height:1.25}
+.congress-heading p{font-size:.84rem;color:var(--muted);max-width:74ch;margin:.45rem 0 0}
+.control-clock{font-size:.73rem;max-width:31ch;color:#51534e;border:1px solid var(--line);border-radius:6px;padding:.55rem .65rem;background:var(--soft)}
+.chamber-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.chamber-card{min-width:0;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:1.2rem}
+.chamber-card h3{font-size:1.55rem;letter-spacing:-.04em;line-height:1.25;margin:.25rem 0}
+.chamber-top{min-height:6rem}.control-verdict{font-size:.86rem;font-weight:750;color:#333e38;margin:.45rem 0 1rem}
+.seat-summary{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:.3rem;align-items:end;margin:.7rem 0 .35rem}
+.seat-summary span{font-size:.78rem;display:block;color:var(--muted);font-weight:700}
+.seat-summary strong{font-size:clamp(2.2rem,5vw,3.5rem);letter-spacing:-.065em;line-height:1.2;font-variant-numeric:tabular-nums}
+.dside strong{color:var(--blue)}.rside{text-align:right}.rside strong{color:var(--red)}
+.majority-label{text-align:center;font-size:.67rem;color:var(--muted);padding-bottom:.6rem;max-width:9ch}
+.seat-band{display:flex;height:20px;overflow:hidden;border-radius:3px;background:#99958e;box-shadow:inset 0 0 0 1px #b6b2ab}
+.seat-band>span{display:block;flex-grow:0;flex-shrink:0;height:100%;min-width:0}
+.seat-band>span.Dhold{background:#7395ad}.seat-band>span.Dcalled{background:#315d82}
+.seat-band>span.Rhold{background:#c78d85}.seat-band>span.Rcalled{background:#9c453e}
+.seat-band>span.unresolved{background:#aaa9a6}.seat-band>span.other{background:#716b87}
+.band-key{display:flex;gap:.8rem;flex-wrap:wrap;margin:.55rem 0 .9rem;font-size:.72rem;color:var(--muted)}
+.band-key span{display:inline-flex;align-items:center;gap:.25rem}
+.band-key i{display:inline-block;width:9px;height:9px;border-radius:2px}
+.legend-dem{background:var(--blue)}.legend-pending{background:#aaa9a6}.legend-rep{background:var(--red)}
+.chamber-breakdown,.chamber-pending{font-size:.84rem;margin:.3rem 0}
+.chamber-breakdown{font-weight:650}.chamber-pending{color:var(--muted)}
+.chamber-rule{font-size:.73rem;color:#555a57;border-top:1px solid var(--line);padding-top:.7rem;margin:.85rem 0 0}
+.newsroom-compare{margin-top:1rem;border:1px solid var(--line);border-radius:10px;background:var(--soft);padding:1.1rem 1.25rem}
+.compare-heading{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.6rem}
+.compare-heading h3{font-size:1.2rem;letter-spacing:-.02em;margin:.1rem 0}
+.compare-state{font-size:.7rem;font-weight:750;color:#5e5547;border:1px solid #c0b49d;border-radius:50px;padding:.3rem .65rem}
+.compare-explanation,.compare-note{font-size:.78rem;max-width:110ch;color:var(--muted);margin:.65rem 0}
+.compare-scroller{overflow-x:auto}
+.compare-table{width:100%;border-collapse:collapse;font-size:.84rem;font-variant-numeric:tabular-nums;min-width:440px}
+.compare-table thead{background:#e9e4d9}
+.compare-table th,.compare-table td{padding:.55rem .6rem;text-align:right;border-bottom:1px solid var(--line)}
+.compare-table th:first-child,.compare-table td:first-child,.compare-table th:nth-child(2),.compare-table td:nth-child(2){text-align:left}
+.compare-table td:first-child{font-weight:750}.compare-table td:nth-child(2){font-size:.78rem;color:#444640}
+.compare-delta{font-size:.8rem;font-weight:700;margin:.75rem 0 0}
+@media(max-width:850px){.chamber-grid{grid-template-columns:1fr}.chamber-top{min-height:0}.seat-summary strong{font-size:clamp(2.4rem,9vw,3.5rem)}}
+@media(max-width:590px){.chamber-card{padding:.85rem}.congress-heading{gap:.45rem}.seat-summary span{font-size:.72rem}.majority-label{font-size:.65rem}.newsroom-compare{padding:.85rem}.compare-table{font-size:.78rem}.compare-table td,.compare-table th{padding:.45rem .48rem}}
