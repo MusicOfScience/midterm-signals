@@ -18,7 +18,7 @@ try{
  page.route("https://openamerica.io/elections/results.json?year=2026&office=Senate",route=>route.fulfill({
   status:200,contentType:"application/json",headers:{"access-control-allow-origin":"*"},
   body:JSON.stringify({api:1,year:2026,office:"Senate",as_of:asof,races:{
-   "PA":{pct_in:85,total:6100,cands:[{n:"Senate D",p:"D",v:3200},{n:"Senate R",p:"R",v:2900}]}
+   "GA":{pct_in:85,total:6100,cands:[{n:"Senate D",p:"D",v:3200},{n:"Senate R",p:"R",v:2900}]}
   }})
  }));
  await page.goto(base+"/results/",{waitUntil:"domcontentloaded"});
@@ -27,8 +27,12 @@ try{
  const content=await page.locator("#raceRows").innerText();
  assert.match(content,/3,400/,"Fresher official count should supersede older tally");
  assert.doesNotMatch(content,/2,000/,"Stale publisher count must not be mistaken for the newer feed");
- assert.match(content,/6,100/,"Statewide Senate counts should appear");
- assert.match(content,/Uncalled/,"Official feed supplies no named calls");
+ assert.doesNotMatch(content,/6,100/,"PA filter must not contain a different state's Senate votes");
+ await page.locator("#state").selectOption("GA");
+ const senateText=await page.locator("#raceRows").innerText();
+ assert.match(senateText,/6,100/,"Georgia statewide Senate counts should appear");
+ await page.locator("#state").selectOption("PA");
+ assert.match(senateText,/Uncalled/,"Official feed supplies no named calls");
  assert.match(await page.locator("#countQuality").innerText(),/2 \/ 470/);
  const PA=page.locator("#raceRows tr").filter({hasText:"PA-07"});
  await PA.locator("button.inspect-race").click();
