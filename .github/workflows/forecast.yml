@@ -35,7 +35,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: forecast-refresh-${{ github.ref_name }}
+  # Serialise all writes to main between forecast and election-result publishers.
+  group: midterm-publication-${{ github.ref_name }}
   cancel-in-progress: false
 
 jobs:
@@ -81,4 +82,20 @@ jobs:
             exit 0
           fi
           git commit -m "data: forecast/browser refresh $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push
+          # A PR merge or operator push can still advance the branch mid-build.
+          # Rebase on top of the latest remote before publishing generated files.
+          for attempt in 1 2 3; do
+            git fetch origin "$GITHUB_REF_NAME"
+            if ! git rebase "origin/$GITHUB_REF_NAME"; then
+              git rebase --abort
+              echo "A generated-file conflict requires manual review; never force-push." >&2
+              exit 1
+            fi
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then
+              exit 0
+            fi
+            echo "Remote advanced again; retrying normal push, attempt $attempt/3" >&2
+            sleep $((attempt * 2))
+          done
+          echo "Failed to publish without rewriting history" >&2
+          exit 1

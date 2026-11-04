@@ -32,7 +32,7 @@ try{
  assert.match(await page.locator("#senateUncalled").innerText(),/34 uncalled/);
  assert.match(await page.locator("#compareDelta").innerText(),/civicAPI − Guardian/);
  assert.equal(await page.locator("#compareRows tr").count(),4);
- assert.equal(await page.locator("#senateSegments span").count(),3);
+ assert.equal(await page.locator("#senateSegments span").count(),4);
  assert.equal(await page.locator("#houseSegments span").count(),2);
  const width=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
  assert(width<4,"Control board must not overflow 390px mobile layout: "+width);

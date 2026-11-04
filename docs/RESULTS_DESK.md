@@ -166,3 +166,57 @@ Rechecked https://openamerica.io/elections/api/ in full. This is a *direct brows
 Open America updates its state adapters every minute on election night and recommends 60-second polling, respecting its caching and conditional request headers. It supports CORS without credentials. The `pct_in` metric varies by state: counties in GA, ID, MI, UT and WA; localities in VA; towns/cities in RI; and a statewide percentage reused across districts in TX and IN. It therefore never represents a comparable national share of ballots counted. `final` refers to all available precincts reporting, not certification.
 
 Open America asks for permission before repackaging live counts as an independent results service. The dashboard accesses its feed directly in the user's browser with source attribution; it does not store or republish Open America as a wholesale mirror.
+
+
+## v3: newsroom-grade congressional seat accounting and evidence reconciliation
+
+**2026 election-night holdovers** (only the 35 contested Senate seats are
+counted again): 32 Democrats + two independent senators who caucus with
+Democrats = 34 Democratic-aligned seats not on the ballot; 31 Republicans.
+Evidence: U.S. Senate Daily Press (2026 party lineup), Senate.gov, Ballotpedia
+and https://watch.vote/midterms/2026/balance-of-power .
+The independent caucus designation is known for the holdovers ONLY; never
+assume an incoming independent winner caucuses with Democrats without evidence.
+
+The v3 control board displays the next Congress's **called seat totals**:
+- House: all 435 seats contested; 218 called seats needed for majority.
+- Senate: 34/31 holdovers + explicitly attributed election-night calls;
+  51 Democratic-aligned seats for control; a 50–50 tie is broken by the
+  Republican vice-president.
+- Uncalled counting leads appear separately, never in the secured seats.
+- Calls are *projected winners by civicAPI*, not certified elections, not
+  incumbent senators' present chamber composition. Unknown/other candidates
+  occupy a separate category; no automatic two-party assignment.
+- An incomplete count cannot masquerade as 0 and duplicated race keys are
+  excluded from the control tally.
+- Seat-band segments always total 435/100 exactly.
+
+**Independent newsroom checkpoint**:
+The user provided a Guardian live-results screenshot at 19:38 AEDT
+(08:38 UTC), 4 November 2026: House 225 D, 137 R, 362 races called;
+Senate 54 Democratic-aligned including independents, 44 Republicans,
+33 of 35 contested races called.
+These *aggregates only* are stored in
+\`public/data/newsroom-checkpoints.json\` with fixed provenance. No Guardian
+screenshot image, programme text or AP-proprietary per-race feed is hosted.
+An aggregate reconciliation is computed *only* if the civicAPI
+\`source_updated_at\` is within 15 minutes of the captured newsroom
+reference. Outside that window, the historical figures remain labelled
+but numerical deltas are withheld. A difference in total calls alone cannot
+identify the races, distinguish calling standards from elapsed time, or
+establish which service is correct. No licensed AP feed is available.
+
+**Publishing race hardening**:
+Forecast and observed-result GitHub Actions now use the same
+\`midterm-publication-main\` concurrency group. Bot commits are followed by
+fetch/rebase and bounded push retries rather than a blind push that can
+fail when another worker publishes. Conflicts fail closed; the pipeline
+never force-pushes or rewrites observed election history.
+Results run at a best-effort five-minute schedule. An Actions scheduled
+job is not equivalent to a TV newsroom's sub-minute update service.
+
+**Test changes**:
+The no-observations browser tests now intercept same-origin source JSON
+with a deliberately empty fixture; they must not presume production has no
+votes. Dedicated browser tests cover actual non-zero calls, 390px
+mobile rendering, semantics and source-time guards.
