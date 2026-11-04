@@ -7,6 +7,7 @@ on:
   push:
     branches: [main, prod-v1]
     paths-ignore:
+      - "public/data/observed-results.json"
       - "public/data/forecast.json"
       - "public/data/bootstrap.json"
       - "public/data/status.json"
@@ -82,6 +83,18 @@ jobs:
             exit 0
           fi
           git commit -m "data: forecast/browser refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+          # Build tools also modify local tracked and untracked auxiliary files
+          # that are intentionally NOT part of the published artifact commit.
+          # A clean worktree is mandatory before git rebase; otherwise it
+          # fails even when the observed-results publisher was serialised.
+          # Preserve those auxiliary files in an ephemeral local stash rather
+          # than discarding them or adding them to the publication commit.
+          git status --short
+          git stash push --include-untracked -m "auxiliary forecast build outputs (unpublished)"
+          if ! git diff --quiet || ! git diff --cached --quiet; then
+            echo "Forecast worktree still dirty after stashing; refusing to publish." >&2
+            exit 1
+          fi
           # A PR merge or operator push can still advance the branch mid-build.
           # Rebase on top of the latest remote before publishing generated files.
           for attempt in 1 2 3; do
