@@ -49,7 +49,7 @@ function makeTiles() {
     if(!summary.total)continue;
     const b=node("button",code,(summary.reported?"has-count ":"")+"");
     b.type="button";b.dataset.state=code;b.title=name+": "+summary.reported+"/"+summary.total+" races with counts";
-    b.setAttribute("aria-label",b.title);b.addEventListener("click",()=>setState(ui.state===code?"all":code));frag.append(b);
+    b.setAttribute("aria-label",code+" — "+b.title);b.addEventListener("click",()=>setState(ui.state===code?"all":code));frag.append(b);
   }
   $("stateTiles").replaceChildren(frag);
   $("coverage").textContent="Dot = at least one contest with reported votes";

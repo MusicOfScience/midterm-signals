@@ -37,7 +37,7 @@ try {
   await page.addScriptTag({content:axe.source});
   const result=await page.evaluate(async()=>axe.run(document));
   const severe=result.violations.filter(v=>["serious","critical"].includes(v.impact));
-  assert.equal(severe.length,0,"Results Desk has serious accessibility issues: "+JSON.stringify(severe.map(v=>v.id)));
+  assert.equal(severe.length,0,"Results Desk has serious accessibility issues: "+JSON.stringify(severe.map(v=>({id:v.id,nodes:v.nodes.slice(0,5).map(n=>({target:n.target,html:n.html}))}))));
   console.log("Results Desk mobile browser, fallback, filters, CSV and accessibility tests passed");
 } finally {
   await browser.close();
