@@ -24,6 +24,22 @@ try{
  await page.goto(base+"/results/",{waitUntil:"domcontentloaded"});
  await page.waitForFunction(()=>document.querySelector("#mReporting")?.textContent?.startsWith("2 /"),null,{timeout:30000});
  await page.locator("#state").selectOption("PA");
+ await page.waitForFunction(()=>
+   document.querySelector("#state")?.value==="PA" &&
+   document.querySelector("#rowCount")?.textContent?.match(/^\d+ of 470 races$/) &&
+   document.querySelector("#raceRows")?.textContent?.includes("PA-07") &&
+   document.querySelector("#raceRows")?.textContent?.includes("3,400"),
+   null,{timeout:12000}).catch(async e=>{
+     const diag=await page.evaluate(()=>({
+       status:document.querySelector("#feedStatus")?.textContent,
+       selection:document.querySelector("#state")?.value,
+       rowCount:document.querySelector("#rowCount")?.textContent,
+       reporting:document.querySelector("#mReporting")?.textContent,
+       sourceLedger:document.querySelector("#sourceLedger")?.textContent,
+       matchingRows:[...document.querySelectorAll("#raceRows tr")].filter(x=>/PA-07|GA-SEN/.test(x.textContent)).map(x=>x.textContent.slice(0,250))
+     }));
+     throw new Error("PA live-count test did not settle: "+JSON.stringify(diag)+" / "+e.message);
+   });
  const content=await page.locator("#raceRows").innerText();
  assert.match(content,/3,400/,"Fresher official count should supersede older tally");
  assert.doesNotMatch(content,/2,000/,"Stale publisher count must not be mistaken for the newer feed");
