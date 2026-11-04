@@ -69,12 +69,12 @@ def race_key(seat: str, office: str) -> tuple[str, str, str] | None:
         if not re.fullmatch(r"[A-Z]{2}-(?:\d{1,2}|AL)", key):
             return None
         value = model_code("H-" + key)
-        return (value, "house", key[:2]) if value else None
+        return value if value else None
     if office == "senate":
         if not re.fullmatch(r"[A-Z]{2}(?:-(?:SP|SPECIAL))?", key):
             return None
         value = model_code("S-" + key)
-        return (value, "senate", key[:2]) if value else None
+        return value if value else None
     return None
 
 
