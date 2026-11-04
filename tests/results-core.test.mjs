@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import {modelKeyFromSource,twoPartyMargin,assemble,totals,filterRows,exportCsv,signed} from "../public/results/desk-core.mjs";
 import {normaliseClient} from "../public/results/live-adapter.mjs";
+import {normaliseOpenAmerica,combineFeeds} from "../public/results/openamerica-adapter.mjs";
 assert.equal(modelKeyFromSource("H-PA-07"),"PA-07");
 assert.equal(modelKeyFromSource("H-AK-00"),"AK-01");
 assert.equal(modelKeyFromSource("H-CA-00"),null);
@@ -42,3 +43,13 @@ assert.equal(live.races[0].model_code,"PA-07");
 const misleading=normaliseClient({races:{"S-OH-sp":{cands:[{name:"D",party:"D",votes:500,winner:true}],called_by:""}}});
 assert.equal(misleading.races[0].called,false,"Winner flag without named caller is not a call");
 console.log("Results Desk JavaScript invariants passed");
+
+const official=normaliseOpenAmerica({api:1,year:2026,office:"House",as_of:"2026-11-04T02:00:00Z",
+  races:{"AK-00":{leader:"D",called:false,winner:"",total:150,cands:[{n:"D",p:"D",v:100},{n:"R",p:"R",v:50}]}}});
+assert.equal(official.races[0].model_code,"AK-01");
+assert.equal(official.races[0].called,false);
+assert.equal(official.races[0].votes_total,150);
+const merged=combineFeeds([normaliseClient({races:{}}),official]);
+assert.equal(merged.races.length,1);
+assert.equal(merged.races[0].source_name,"Official state election offices via Open America");
+assert.throws(()=>normaliseOpenAmerica({api:1,year:2024,office:"House",races:{}}));

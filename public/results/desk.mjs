@@ -66,7 +66,7 @@ function summary(){
     ?"Vote counts available for "+t.reporting+" contests; all uncalled leads remain provisional."
     :feed?.state==="source_unavailable"?"Results feed unavailable; forecasts shown for orientation only."
     :"Awaiting verified vote counts. Showing the frozen model as a geographic index.";
-  $("feedClock").textContent="Source snapshot: "+date(feed?.source_updated_at)+" · Checked: "+date(feed?.fetched_at)+" · Model frozen: 3 Nov 2026 19:29 UTC · Publisher: The People's Tally (CC BY 4.0)";
+  $("feedClock").textContent="Source snapshot: "+date(feed?.source_updated_at)+" · Checked: "+date(feed?.fetched_at)+" · Model frozen: 3 Nov 2026 19:29 UTC · Sources: The People's Tally (CC BY 4.0) / official state offices via Open America";
 }
 async function refresh(){
   $("refresh").disabled=true;
@@ -76,14 +76,18 @@ async function refresh(){
     feed=cached;
     // Opportunistic direct refresh; if the third-party site blocks CORS or fails,
     // we do not replace the last checked snapshot with an error or empty result.
-    try{
-      const raw=await json("https://thepeoplestally.com/data/results.json");
-      if(raw&&raw.races&&Object.keys(raw.races).length) {
-        const {normaliseClient}=await import("./live-adapter.mjs");
-        const next=normaliseClient(raw);
-        if(next.races.length>=feed.races.length)feed=next;
-      }
-    }catch(_){ /* same-origin publication remains authoritative fallback */ }
+    const {normaliseClient}=await import("./live-adapter.mjs");
+    const {normaliseOpenAmerica,combineFeeds}=await import("./openamerica-adapter.mjs");
+    const requests=await Promise.allSettled([
+      json("https://thepeoplestally.com/data/results.json"),
+      json("https://openamerica.io/elections/results.json?year=2026&office=House"),
+      json("https://openamerica.io/elections/results.json?year=2026&office=Senate")
+    ]);
+    const sources=[cached];
+    if(requests[0].status==="fulfilled")try{sources.push(normaliseClient(requests[0].value))}catch(_){}
+    for(const index of [1,2])if(requests[index].status==="fulfilled")
+      try{sources.push(normaliseOpenAmerica(requests[index].value))}catch(_){}
+    feed=combineFeeds(sources);
     rows=assemble(forecast,feed);loaded=true;summary();makeTiles();redraw();
   }catch(e){$("feedStatus").textContent="Could not load results snapshot: "+e.message;$("feedClock").textContent="The stored forecasts remain available in the archive."}
   finally{$("refresh").disabled=false}

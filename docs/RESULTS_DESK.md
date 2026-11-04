@@ -18,7 +18,12 @@ and the 35 Senate contests in the MIDTERM SIGNALS pre-election model. Contrast
 - **Normalised same-origin snapshot:** public/data/observed-results.json
 - **Frozen model:** public/data/history/2026-11-03T192932Z.json, created
   3 November 2026 at 19:29:32 UTC. Never backfill observed outcomes into it.
-- GitHub Action runs a public-source adapter every 10 minutes while enabled.
+- Secondary source (browser display only): official state election offices via
+  Open America, https://openamerica.io/elections/api/ (22 states at initial
+  publication; explicit partial coverage, no race calls). The source permits
+  direct browser display with attribution; its live feed is NOT repackaged as
+  a GitHub-hosted results service.
+- GitHub Action runs the People's Tally public-source adapter every 10 minutes while enabled.
   A browser may refresh direct from the public source if CORS is available;
   failed or empty direct fetches never erase the last checked snapshot.
 - The source's election-night update cadence does not guarantee complete
