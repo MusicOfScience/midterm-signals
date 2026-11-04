@@ -2,6 +2,7 @@
 // of state-office counts. Do not republish its complete feed as a data service.
 import {modelKeyFromSource} from "./desk-core.mjs";
 const expectedOffice={House:"house",Senate:"senate"};
+const reportingUnits={GA:"counties",ID:"counties",MI:"counties",UT:"counties",WA:"counties",VA:"localities",RI:"cities and towns",TX:"one statewide value repeated across House races",IN:"one statewide value repeated across House races"};
 export function normaliseOpenAmerica(raw){
   if(!raw||raw.api!==1||raw.year!==2026||!expectedOffice[raw.office]||
      !raw.races||typeof raw.races!=="object"||Array.isArray(raw.races))
@@ -23,11 +24,16 @@ export function normaliseOpenAmerica(raw){
       state:code.slice(0,2),candidates,votes_total:total,leader,called:false,winner:null,called_by:null,
       source_name:"Official state election offices via Open America",
       source_url:"https://openamerica.io/elections/api/",
-      source_updated_at:typeof raw.as_of==="string"?raw.as_of:null,
-      reporting_unit_pct:typeof v.pct_in==="number"?v.pct_in:null});
+      // raw.as_of is the most recent update across *all* states; NOT a race-level timestamp.
+      source_updated_at:null,feed_updated_at:typeof raw.as_of==="string"?raw.as_of:null,
+      reporting_unit_pct:typeof v.pct_in==="number"?v.pct_in:null,
+      reporting_unit:reportingUnits[code.slice(0,2)]||"state-defined reporting units"});
   }
   return {schema_version:1,source:"openamerica",source_updated_at:raw.as_of||null,
-    fetched_at:new Date().toISOString(),state:races.some(r=>r.votes_total>0)?"reporting":"awaiting_results",races};
+    fetched_at:new Date().toISOString(),state:races.some(r=>r.votes_total>0)?"reporting":"awaiting_results",
+    health:{counting:raw.counting===true,live:raw.live===true,stale:raw.stale===true,final:raw.final===true,
+      reporting:typeof raw.counts?.reporting==="number"?raw.counts.reporting:null,
+      races:typeof raw.counts?.races==="number"?raw.counts.races:null},races};
 }
 // Preserve the fact that two different contests can share a model identifier.
 // Never combine counts across different feeds, never average two providers,

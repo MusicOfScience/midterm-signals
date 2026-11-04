@@ -157,3 +157,12 @@ are independent newsroom references, not scraped or rebadged AP data. AP's
 programmatic election-results feed is paid/licensed; five-minute Github Actions
 polling is not equivalent to network real-time reporting. Source freshness is
 shown from the provider's timestamps rather than browser reload time.
+
+
+## Open America API contract audit (4 November 2026)
+
+Rechecked https://openamerica.io/elections/api/ in full. This is a *direct browser* source, not the national live feed. It covers 22 states, with no race calls. Its `counting`, `live`, `stale`, `final`, `as_of` and `counts` fields are now exposed through the source ledger. Critically, `as_of` is the timestamp of the **newest state feed anywhere in the response**; it must never be silently assigned as the refresh time of each race. The adapter now keeps it at feed level only.
+
+Open America updates its state adapters every minute on election night and recommends 60-second polling, respecting its caching and conditional request headers. It supports CORS without credentials. The `pct_in` metric varies by state: counties in GA, ID, MI, UT and WA; localities in VA; towns/cities in RI; and a statewide percentage reused across districts in TX and IN. It therefore never represents a comparable national share of ballots counted. `final` refers to all available precincts reporting, not certification.
+
+Open America asks for permission before repackaging live counts as an independent results service. The dashboard accesses its feed directly in the user's browser with source attribution; it does not store or republish Open America as a wholesale mirror.

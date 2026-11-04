@@ -99,6 +99,8 @@ async function refresh(){
     const sourceChecks=requests.map((r,i)=>({name:sourceNames[i],success:r.status==="fulfilled",
       published:r.status==="fulfilled"&&(i===0?Object.keys(r.value?.races||{}).length:Object.keys(r.value?.races||{}).length)>0,
       asOf:r.status==="fulfilled"?(r.value.generated_at||r.value.as_of||null):null,
+      health:r.status==="fulfilled"&&i>0?{live:r.value.live===true,stale:r.value.stale===true,counting:r.value.counting===true,final:r.value.final===true,
+       races:typeof r.value.counts?.races==="number"?r.value.counts.races:null}:null,
       note:r.status==="fulfilled"?"Responded":"Not reachable from this browser"}));
     window.__MS_RESULTS__={rows,feed,sources,sourceChecks};
     window.dispatchEvent(new Event("ms:results-updated"));

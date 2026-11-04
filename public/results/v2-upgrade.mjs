@@ -36,7 +36,14 @@ function chart(rows){
 function ledger(data){
  const list=[],cache=data.sources?.[0];
  list.push({name:"Stored national snapshot · "+(cache?.source||"unknown"),state:cache?.races?.some(r=>r.votes_total>0)?cache.races.filter(r=>r.votes_total>0).length+" races with published vote counts":"No stored votes yet",asOf:cache?.source_updated_at});
- for(const o of data.sourceChecks||[])list.push({name:o.name,state:o.success?(o.published?"Returns published":"Reachable; no returns published"):"Unavailable from this browser",asOf:o.asOf});
+ for(const o of data.sourceChecks||[]){
+  const health=o.health;
+  const status=health
+   ?(health.stale?"Provider reports STALE":health.live?"Provider reports LIVE":health.final?"All available precincts reported (NOT certified)":health.counting?"Counting; provider freshness not live":"No votes in this feed")
+   :o.success?(o.published?"Returns published":"Reachable; no returns published"):"Unavailable from this browser";
+  list.push({name:o.name,state:status+(health?.races!==null&&health?.races!==undefined?" · "+health.races+" source races":""),
+    asOf:o.asOf});
+ }
  $("sourceLedger").replaceChildren(...list.map(item=>{
   const row=n("div",null,"source-row");row.append(n("strong",item.name),n("span",item.state+(item.asOf?" · "+ageLabel(item.asOf).label:" · source time unavailable")));return row;
  }));
@@ -101,6 +108,9 @@ function details(row){
  items.push(n("p","Frozen model: "+signedMargin(row.forecast_margin)+" predicted margin, "+(row.dem_probability===null?"unknown":percent(100*row.dem_probability))+" Democratic probability."));
  items.push(n("p",row.votes===null?"No observed votes supplied.":"Observed "+num(row.votes)+" votes, D−R "+signedMargin(row.observed_margin)+". "+(row.called?"Called by "+row.called_by+".":"Uncalled; any leader is provisional.")));
  items.push(n("p",status.text));
+ if(row.observed?.reporting_unit_pct!==null&&row.observed?.reporting_unit_pct!==undefined){
+   items.push(n("p","Reporting metric: "+row.observed.reporting_unit_pct+"% of "+(row.observed.reporting_unit||"source-defined reporting units")+". Not a verified percentage of all ballots counted."));
+ }
  const candidates=row.observed?.candidates||[];
  if(candidates.length){
   const table=n("table"),head=n("thead"),hr=n("tr");for(const label of ["Candidate","Party","Votes"])hr.append(n("th",label));head.append(hr);table.append(head);
