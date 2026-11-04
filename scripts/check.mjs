@@ -12,7 +12,7 @@ if(stateGeo?.type!=='FeatureCollection'||stateGeo.features?.length<50||stateGeo.
 
 
 const newsroom=JSON.parse(await readFile('public/data/newsroom-checkpoints.json','utf8'));
-if(newsroom?.reference_type?.includes("automatically refreshed")||newsroom?.source_race_level_available!==false)
+if(!newsroom?.reference_type?.includes("NOT an automatically refreshed")||newsroom?.source_race_level_available!==false)
  throw new Error('A screenshot cannot be silently advertised as a licensed live race-level feed');
 if(newsroom?.captured_at!=='2026-11-04T08:38:00Z')
  throw new Error('The user-provided Guardian reference has been altered without a new source');
