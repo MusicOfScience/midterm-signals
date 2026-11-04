@@ -2,7 +2,11 @@ name: Validate MIDTERM SIGNALS
 
 on:
   push:
+    branches:
+      - main
+      - prod-v1
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
