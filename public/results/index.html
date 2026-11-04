@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f2eee4">
+<meta name="description" content="2026 US midterm election results, state and congressional-district drill-down, and pre-election forecast comparisons with full data provenance.">
+<title>Results Desk | MIDTERM SIGNALS</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/results/results.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to results</a>
+<header class="mast">
+  <div class="brand"><a href="/">M∕S <strong>MIDTERM SIGNALS</strong></a><span class="tag">2026 / RESULTS DESK</span></div>
+  <nav aria-label="Section"><a href="/">Forecast centre</a><a href="/?view=house">House</a><a href="/?view=senate">Senate</a><a href="/model-lab/">Model Lab</a><a aria-current="page" href="/results/">Results</a></nav>
+</header>
+<main id="main">
+  <div class="eyebrow">Observed vote / forecast accountability</div>
+  <h1>Election Results <em>&amp; Swing Analysis</em></h1>
+  <p class="intro">State-by-state and district-by-district returns, compared with the frozen pre-election MIDTERM SIGNALS model. Counting leads are <strong>not</strong> race calls. Missing feeds are <strong>not</strong> zero votes.</p>
+  <section class="status" aria-live="polite">
+    <div><span class="eyebrow">Data provenance</span><p id="feedStatus">Loading verified results snapshots…</p><small id="feedClock"></small></div>
+    <div class="status-action"><button id="refresh" type="button">Refresh now</button><a href="https://thepeoplestally.com/open-data/" target="_blank" rel="noopener noreferrer">Results source and licence</a></div>
+  </section>
+  <section aria-label="Counting summary" class="metrics">
+    <article><span>Races with reported votes</span><strong id="mReporting">—</strong><small id="mUniverse">Across all tracked federal races</small></article>
+    <article><span>House: called D / R</span><strong id="mHouse">—</strong><small>Only explicitly sourced race calls</small></article>
+    <article><span>Senate: called D / R</span><strong id="mSenate">—</strong><small>Contested seats only, not control of chamber</small></article>
+    <article><span>Current counting leads</span><strong id="mLeads">—</strong><small>Democratic / Republican; not projected winners</small></article>
+  </section>
+  <section class="workspace" aria-labelledby="browseTitle">
+    <div class="section-heading"><div><div class="eyebrow">Geographic explorer</div><h2 id="browseTitle">Browse the count</h2></div><p id="coverage">Source coverage by state</p></div>
+    <div class="state-tiles" id="stateTiles" aria-label="Select a state; dots indicate races with vote counts"></div>
+    <form class="filters" id="filters" role="search">
+      <label>Chamber<select id="chamber"><option value="all">House + Senate</option><option value="house">US House</option><option value="senate">US Senate</option></select></label>
+      <label>State<select id="state"><option value="all">All states</option></select></label>
+      <label>Search race or candidate<input id="query" type="search" placeholder="PA-07, Georgia, Collins…" autocomplete="off"></label>
+      <label>Sort by<select id="sort"><option value="status">Reported / called first</option><option value="closest">Closest model forecast</option><option value="gap">Largest observed model gap</option><option value="votes">Most votes counted</option><option value="id">Race code</option></select></label>
+      <label class="check"><input id="reported" type="checkbox"> Races with votes only</label>
+      <button class="subtle" id="export" type="button">Export filtered CSV</button>
+    </form>
+    <div class="table-head"><h3>Race monitor</h3><span id="rowCount" aria-live="polite"></span></div>
+    <div class="scroll-table"><table><caption>Live or last published available vote counts, model forecast and provisional discrepancy</caption>
+    <thead><tr><th scope="col">Race</th><th scope="col">Observed status</th><th scope="col" class="numeric">Votes counted</th><th scope="col" class="numeric">Observed D−R</th><th scope="col" class="numeric">Frozen model D−R</th><th scope="col" class="numeric">Difference</th></tr></thead><tbody id="raceRows"><tr><td colspan="6">Loading races…</td></tr></tbody></table></div>
+  </section>
+  <section class="method" aria-labelledby="readThis">
+    <h2 id="readThis">Read before interpreting</h2>
+    <p><strong>Observed D−R</strong> is the Democratic-minus-Republican margin calculated from the two parties’ recorded votes. <strong>Difference</strong> subtracts the pre-election model's predicted D−R margin from the observed margin, in percentage points. Where votes are incomplete, both numbers are provisional and should <em>not</em> be interpreted as final swings or forecast errors.</p>
+    <p>Third-party and independent contests may have no valid two-party comparison; those cells remain blank. Senate races are statewide; House races are congressional districts. The model's Senate forecasts concern only seats being contested, while control of the Senate also depends on holdover seats.</p>
+    <p>Observed results are a separate data boundary. This page never modifies past forecasts or re-estimates model parameters. <a href="/data/history/2026-11-03T192932Z.json">Frozen election-eve forecast</a> · <a href="/data/observed-results.json">Normalised results JSON</a> · <a href="https://github.com/MusicOfScience/midterm-signals/blob/main/docs/RESULTS_DESK.md">Methodology / source contract</a>.</p>
+  </section>
+</main>
+<footer><a href="/">MIDTERM SIGNALS</a><span>Facts ≠ polls ≠ forecasts ≠ scenarios ≠ results</span><span>The People's Tally (CC BY 4.0); official state election offices via Open America (direct browser read only).</span></footer>
+<script type="module" src="/results/desk.mjs"></script>
+</body></html>

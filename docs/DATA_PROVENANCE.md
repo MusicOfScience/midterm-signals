@@ -48,4 +48,4 @@ Campaign Signals is a separate data layer. The default model effect is `NONE`. A
 
 ## Results
 
-Results are a separate post-election layer. No live result is implied until an authoritative/licensed adapter is configured. The final pre-election forecast archive must remain immutable after observed results arrive.
+Results are a separate post-election layer. The Results Desk ingests the CC BY 4.0 public results snapshot of The People’s Tally (https://thepeoplestally.com/open-data/), which attributes counts to election offices and calls to named services. The normalised public/data/observed-results.json carries source/fetch timestamps and per-race provenance. Not all states or races necessarily report; incomplete counts never imply a forecast validation result. The frozen 3 November 2026, 19:29:32 UTC forecast remains at public/data/history/2026-11-03T192932Z.json and cannot be re-estimated using results. See docs/RESULTS_DESK.md.

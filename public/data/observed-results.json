@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source": "thepeoplestally",
+  "source_title": "The People's Tally, 2026 US midterms",
+  "source_url": "https://thepeoplestally.com/open-data/",
+  "source_licence": "CC BY 4.0",
+  "source_updated_at": null,
+  "fetched_at": null,
+  "state": "awaiting_results",
+  "races": []
+}
