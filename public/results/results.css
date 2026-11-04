@@ -111,3 +111,5 @@ main{max-width:1240px;padding:2rem 1.25rem 4rem;margin:auto}.eyebrow{text-transf
 .compare-delta{font-size:.8rem;font-weight:700;margin:.75rem 0 0}
 @media(max-width:850px){.chamber-grid{grid-template-columns:1fr}.chamber-top{min-height:0}.seat-summary strong{font-size:clamp(2.4rem,9vw,3.5rem)}}
 @media(max-width:590px){.chamber-card{padding:.85rem}.congress-heading{gap:.45rem}.seat-summary span{font-size:.72rem}.majority-label{font-size:.65rem}.newsroom-compare{padding:.85rem}.compare-table{font-size:.78rem}.compare-table td,.compare-table th{padding:.45rem .48rem}}
+
+.compare-scroller:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
