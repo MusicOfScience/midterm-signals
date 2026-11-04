@@ -9,7 +9,7 @@ const PALETTE={missing:"#d7d4cb",low:"#c7dce3",mid:"#7daec0",high:"#357c95",full
 const stateByName={Alabama:"AL",Alaska:"AK",Arizona:"AZ",Arkansas:"AR",California:"CA",Colorado:"CO",Connecticut:"CT",Delaware:"DE",Florida:"FL",Georgia:"GA",Hawaii:"HI",Idaho:"ID",Illinois:"IL",Indiana:"IN",Iowa:"IA",Kansas:"KS",Kentucky:"KY",Louisiana:"LA",Maine:"ME",Maryland:"MD",Massachusetts:"MA",Michigan:"MI",Minnesota:"MN",Mississippi:"MS",Missouri:"MO",Montana:"MT",Nebraska:"NE",Nevada:"NV",NewHampshire:"NH",NewJersey:"NJ",NewMexico:"NM",NewYork:"NY",NorthCarolina:"NC",NorthDakota:"ND",Ohio:"OH",Oklahoma:"OK",Oregon:"OR",Pennsylvania:"PA",RhodeIsland:"RI",SouthCarolina:"SC",SouthDakota:"SD",Tennessee:"TN",Texas:"TX",Utah:"UT",Vermont:"VT",Virginia:"VA",Washington:"WA",WestVirginia:"WV",Wisconsin:"WI",Wyoming:"WY","District of Columbia":"DC"};
 const compactName=name=>String(name||"").replaceAll(" ","");
 export function project([lon,lat],state){
-  if(state==="AK")return [25+(lon+180)*4.3,442+(73-lat)*3.1];
+  if(state==="AK")return [25+((lon>0?lon-360:lon)+180)*4.3,442+(73-lat)*3.1];
   if(state==="HI")return [295+(lon+162)*12.2,453+(23-lat)*10.8];
   return [56+(lon+125)*15.1,25+(50-lat)*16.0];
 }

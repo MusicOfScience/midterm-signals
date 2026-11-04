@@ -29,32 +29,40 @@ export function normaliseOpenAmerica(raw){
   return {schema_version:1,source:"openamerica",source_updated_at:raw.as_of||null,
     fetched_at:new Date().toISOString(),state:races.some(r=>r.votes_total>0)?"reporting":"awaiting_results",races};
 }
+// Preserve the fact that two different contests can share a model identifier.
+// Never combine counts across different feeds, never average two providers,
+// and never turn a counting leader into a called winner.
 export function combineFeeds(feeds){
-  const all=new Map(),priority={thepeoplestally:2,openamerica:1};
+  const grouped=new Map(),ambiguous=new Set();
   for(const feed of feeds){
     if(!feed||!Array.isArray(feed.races))continue;
-    const within=new Map();
-    for(const r of feed.races){
-      const entries=within.get(r.model_code)||[];entries.push(r);within.set(r.model_code,entries);
+    const local=new Map();
+    for(const item of feed.races){
+      if(!item||!item.model_code)continue;
+      const arr=local.get(item.model_code)||[];arr.push(item);local.set(item.model_code,arr);
     }
-    for(const [key,entries] of within){
-      const choices=all.get(key)||[];
-      if(entries.length>1){all.set(key,entries);continue}
-      if(choices.length>1)continue;
-      choices.push({...entries[0],_feed:feed.source});
-      all.set(key,choices);
+    for(const [key,items] of local){
+      if(items.length>1){ambiguous.add(key);continue}
+      const prior=grouped.get(key)||[];prior.push({...items[0],_feed:feed.source||"unknown"});grouped.set(key,prior);
     }
   }
+  const priority={thepeoplestally:2,openamerica:1};
   const races=[];
-  for(const choices of all.values()){
-    if(choices.length===1){races.push(choices[0]);continue}
-    const reported=choices.filter(r=>r.votes_total>0);
-    const pool=reported.length?reported:choices;
-    const best=[...pool].sort((a,b)=>(priority[b._feed]||0)-(priority[a._feed]||0))[0];
-    races.push(best);
+  for(const [key,choices] of grouped){
+    if(ambiguous.has(key))continue;
+    const ranked=choices.slice().sort((a,b)=>{
+      if(Boolean(a.called)!==Boolean(b.called))return Number(b.called)-Number(a.called);
+      const aVotes=a.votes_total>0,bVotes=b.votes_total>0;
+      if(aVotes!==bVotes)return Number(bVotes)-Number(aVotes);
+      const ta=Date.parse(a.source_updated_at||""),tb=Date.parse(b.source_updated_at||"");
+      if(Number.isFinite(ta)&&Number.isFinite(tb)&&Math.abs(tb-ta)>3600000)return tb-ta;
+      return (priority[b._feed]||0)-(priority[a._feed]||0);
+    });
+    races.push(ranked[0]);
   }
-  const actual=feeds.filter(f=>f&&f.races?.length);
-  return {schema_version:1,source:actual.map(f=>f.source).join(" + ")||"unavailable",
-    fetched_at:new Date().toISOString(),source_updated_at:actual.map(f=>f.source_updated_at).filter(Boolean).sort().at(-1)||null,
-    state:races.some(r=>r.votes_total>0)?"reporting":"awaiting_results",races};
+  const used=feeds.filter(f=>f&&f.races?.length);
+  const timestamps=used.map(f=>f.source_updated_at).filter(x=>x&&Number.isFinite(Date.parse(x))).sort();
+  return {schema_version:1,source:used.map(f=>f.source).join(" + ")||"unavailable",
+    fetched_at:new Date().toISOString(),source_updated_at:timestamps.at(-1)||null,
+    state:races.some(r=>r.votes_total>0)?"reporting":"awaiting_results",ambiguous_keys:[...ambiguous],races};
 }
