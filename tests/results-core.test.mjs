@@ -3,6 +3,7 @@ import {modelKeyFromSource,twoPartyMargin,assemble,totals,filterRows,exportCsv,s
 import {normaliseClient} from "../public/results/live-adapter.mjs";
 assert.equal(modelKeyFromSource("H-PA-07"),"PA-07");
 assert.equal(modelKeyFromSource("H-AK-00"),"AK-01");
+assert.equal(modelKeyFromSource("H-CA-00"),null);
 assert.equal(modelKeyFromSource("S-OH-sp"),"OH-SEN");
 assert.equal(modelKeyFromSource("G-TX"),null);
 assert.equal(twoPartyMargin([{party:"D",votes:60},{party:"R",votes:40}]),20);

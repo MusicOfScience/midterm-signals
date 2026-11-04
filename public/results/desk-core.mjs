@@ -4,7 +4,7 @@ export const FROZEN_FORECAST = "/data/history/2026-11-03T192932Z.json";
 
 export function modelKeyFromSource(id) {
   const h=/^H-([A-Z]{2})-(\d{1,2}|AL|00)$/i.exec(String(id||""));
-  if(h)return h[1].toUpperCase()+"-"+(h[2].toUpperCase()==="AL"||h[2]==="00"?"01":h[2].padStart(2,"0"));
+  if(h){const state=h[1].toUpperCase(),district=h[2].toUpperCase();if(district==="AL"||district==="00")return ["AK","DE","ND","SD","VT","WY"].includes(state)?state+"-01":null;const n=Number(district);return n>=1&&n<=53?state+"-"+String(n).padStart(2,"0"):null}
   const s=/^S-([A-Z]{2})(?:-(sp|special))?$/i.exec(String(id||""));
   if(s)return s[1].toUpperCase()+"-SEN";
   return null;
