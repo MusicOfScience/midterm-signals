@@ -21,6 +21,11 @@ try{
    "GA":{pct_in:85,total:6100,cands:[{n:"Senate D",p:"D",v:3200},{n:"Senate R",p:"R",v:2900}]}
   }})
  }));
+ await page.route("**/data/observed-results.json*",r=>r.fulfill({
+  status:200,contentType:"application/json",body:JSON.stringify({
+    schema_version:1,source:"civicAPI",fetched_at:null,source_updated_at:null,
+    state:"awaiting_results",races:[]})
+ }));
  await page.goto(base+"/results/",{waitUntil:"domcontentloaded"});
  await page.waitForFunction(()=>document.querySelector("#mReporting")?.textContent?.startsWith("3 /"),null,{timeout:30000});
  await page.locator("#state").selectOption("PA");
