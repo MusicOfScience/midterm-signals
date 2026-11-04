@@ -21,7 +21,7 @@ jobs:
           node-version: "22"
       - name: Python syntax and browser projection
         run: |
-          python -m py_compile scripts/build_forecast.py scripts/enrich_outputs.py scripts/run_enrichment.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py scripts/model_lab.py scripts/build_model_lab.py scripts/augment_model_lab.py scripts/baseline_stability.py scripts/polling_error.py scripts/source_mix.py scripts/sparsity_interaction.py
+          python -m py_compile scripts/build_forecast.py scripts/enrich_outputs.py scripts/run_enrichment.py scripts/history_support.py scripts/make_bootstrap.py scripts/build_browser.py scripts/validate_forecast.py scripts/model_lab.py scripts/build_model_lab.py scripts/augment_model_lab.py scripts/baseline_stability.py scripts/polling_error.py scripts/source_mix.py scripts/sparsity_interaction.py scripts/refresh_results.py
           python scripts/make_bootstrap.py
           python scripts/build_model_lab.py
           python scripts/augment_model_lab.py
@@ -41,8 +41,12 @@ jobs:
           node --check public/model-lab/polling-error-panel.js
           node --check public/model-lab/source-mix-panel.js
           node --check public/model-lab/sparsity-interaction-panel.js
+          node --check public/results/desk.mjs
+          node --check public/results/desk-core.mjs
+          node --check public/results/live-adapter.mjs
+          node --check public/results/openamerica-adapter.mjs
       - name: Unit tests
-        run: node tests/core.test.mjs && python -m unittest tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_builder tests.test_model_lab_augmentation tests.test_baseline_stability tests.test_polling_error tests.test_source_mix tests.test_sparsity_interaction
+        run: node tests/core.test.mjs && node tests/results-core.test.mjs && python -m unittest tests.test_results_feed tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_builder tests.test_model_lab_augmentation tests.test_baseline_stability tests.test_polling_error tests.test_source_mix tests.test_sparsity_interaction
       - name: Static publication checks
         run: node scripts/check.mjs
       - name: Upload generated Model Lab audit artefact
@@ -97,6 +101,7 @@ jobs:
         run: |
           node tests/e2e.mjs
           node tests/model-lab-e2e.mjs
+          node tests/results-e2e.mjs
       - name: Adversarial production-readiness checks
         env:
           BASE_URL: http://127.0.0.1:4173
