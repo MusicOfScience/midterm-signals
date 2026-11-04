@@ -54,6 +54,8 @@ jobs:
           node --check public/results/v2-upgrade.mjs
           node --check public/results/control-core.mjs
           node --check public/results/control-board.mjs
+      - name: Forecast publisher concurrency regression
+        run: node tests/forecast-publish-git.test.mjs
       - name: Unit tests
         run: node tests/core.test.mjs && node tests/results-core.test.mjs && node tests/v2-core.test.mjs && node tests/control-core.test.mjs && python -m unittest tests.test_results_feed tests.test_results_civic tests.test_model tests.test_enrichment tests.test_model_lab tests.test_model_lab_builder tests.test_model_lab_augmentation tests.test_baseline_stability tests.test_polling_error tests.test_source_mix tests.test_sparsity_interaction
       - name: Static publication checks

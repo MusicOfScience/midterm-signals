@@ -7,6 +7,18 @@ const requiredResults=['public/results/index.html','public/results/v2-core.mjs',
 for(const path of requiredResults)await access(path,constants.R_OK);
 const v2Html=await readFile('public/results/index.html','utf8');
 for(const marker of ['Election Results','The US electoral atlas','Count completeness','Forecast discrepancy','raceLens','sourceLedger','mapLayer','v2-upgrade.mjs','control-board.mjs','congressTitle','senateSegments','houseSegments','compareRows'])if(!v2Html.includes(marker))throw new Error('Results Desk v2 component missing: '+marker);
+// Prevent reintroducing the post-merge dirty-worktree forecast publishing failure.
+const forecastAction=await readFile('.github/workflows/forecast.yml','utf8');
+const resultsAction=await readFile('.github/workflows/results-refresh.yml','utf8');
+const lock="midterm-publication-${{ github.ref_name }}";
+if(!forecastAction.includes(lock)||!resultsAction.includes(lock))
+ throw new Error('Forecast and results publishing jobs must share a serialisation lock');
+if(!forecastAction.includes('git stash push --include-untracked')||
+   !forecastAction.includes('git rebase "origin/$GITHUB_REF_NAME"'))
+ throw new Error('Forecast publication must clean auxiliary build files and rebase safely');
+if(!forecastAction.includes('public/data/observed-results.json'))
+ throw new Error('Results-only data updates should not rerun forecast model');
+
 const stateGeo=JSON.parse(await readFile('public/results/states.geojson','utf8'));
 if(stateGeo?.type!=='FeatureCollection'||stateGeo.features?.length<50||stateGeo.features?.length>52)throw new Error('US state-outline geometry is incomplete or unrecognized');
 

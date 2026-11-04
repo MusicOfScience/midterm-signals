@@ -220,3 +220,22 @@ The no-observations browser tests now intercept same-origin source JSON
 with a deliberately empty fixture; they must not presume production has no
 votes. Dedicated browser tests cover actual non-zero calls, 390px
 mobile rendering, semantics and source-time guards.
+
+
+## 4 November 2026: forecast publisher post-merge incident
+
+The Results Desk v3 merge completed and the live Results Desk validated.
+The first forecast-workflow push nevertheless failed at `git rebase` with
+`error: cannot rebase: You have unstaged changes`. The forecast computation,
+unit tests and publication checks had already passed; only its final push
+failed. The shared workflow concurrency group worked, but the forecasting
+build left auxiliary worktree files outside its intended publication commit.
+
+The publication workflow now stashes those **local, unpublished** tracked and
+untracked files before fetching and rebasing onto the new main branch. It
+checks for a clean worktree, never force-pushes, and fails closed on true
+merge conflicts. The forecast workflow also excludes changes confined to
+`public/data/observed-results.json` from its push trigger. An isolated
+Git regression test simulates a competing results push and confirms that
+both generated forecast and observed results survive without incorporating
+the local auxiliary build files.
