@@ -44,7 +44,7 @@ export async function drawStateMap(container,{rows,layer="coverage",selected="al
  let geo;
  try {const r=await fetch("/results/states.geojson",{cache:"force-cache"});if(!r.ok)throw new Error("Map geography unavailable");geo=await r.json()}
  catch(e){container.textContent="State outline map unavailable. The accessible state selector below remains usable.";return}
- const visual=svg("svg",{viewBox:"0 0 1000 535",role:"img","aria-label":"Interactive US state map. Select a state to filter the House and Senate results."});
+ const visual=svg("svg",{viewBox:"0 0 1000 535",role:"group","aria-label":"US state selection map. Focus a state outline and press Enter to filter results."});
  const frag=document.createDocumentFragment();
  for(const feature of geo.features||[]){
    const name=feature?.properties?.name||"";
