@@ -5,7 +5,7 @@ let rows=[],feed=null,forecast=null,loaded=false;
 const ui={chamber:"all",state:"all",query:"",sort:"status",reported:false};
 const fmt=n=>n===null?"—":new Intl.NumberFormat("en-US").format(n);
 const date=v=>{if(!v)return "Not published";const d=new Date(v);return Number.isFinite(d.getTime())?d.toLocaleString("en-AU",{timeZone:"Australia/Melbourne",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit",hour12:false,timeZoneName:"short"}):String(v)};
-async function json(path) {const r=await fetch(path,{cache:"no-store"});if(!r.ok)throw new Error("HTTP "+r.status+" from "+path);return r.json()}
+async function json(path) {const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);try{const r=await fetch(path,{cache:"no-store",signal:controller.signal});if(!r.ok)throw new Error("HTTP "+r.status+" from "+path);return await r.json()}finally{clearTimeout(timer)}}
 function node(tag,text,className){const el=document.createElement(tag);el.textContent=text??"";if(className)el.className=className;return el}
 function cell(tr,value,kind){const td=node("td",value,kind||"");tr.append(td);return td}
 function row(r){
@@ -69,11 +69,14 @@ function summary(){
   $("feedClock").textContent="Source snapshot: "+date(feed?.source_updated_at)+" · Checked: "+date(feed?.fetched_at)+" · Model frozen: 3 Nov 2026 19:29 UTC · Sources: The People's Tally (CC BY 4.0) / official state offices via Open America";
 }
 async function refresh(){
+  if($("refresh").disabled)return;
   $("refresh").disabled=true;
   try {
     // The checked, same-origin snapshot is the reproducible fallback.
     const cached=await json("/data/observed-results.json?ts="+Date.now());
     feed=cached;
+    // Render reproducible same-origin data immediately; cross-origin feeds may be slow.
+    rows=assemble(forecast,feed);loaded=true;summary();makeTiles();redraw();
     // Opportunistic direct refresh; if the third-party site blocks CORS or fails,
     // we do not replace the last checked snapshot with an error or empty result.
     const {normaliseClient}=await import("./live-adapter.mjs");
