@@ -28,11 +28,11 @@ export function twoPartyMargin(candidates) {
 export function assemble(forecast, observed) {
   if(!Array.isArray(forecast?.races)||forecast.races.length<435)
     throw new Error("The frozen pre-election forecast is missing or incomplete.");
-  const indexed=new Map();
+  const indexed=new Map(), ambiguous=new Set(observed?.ambiguous_keys||[]);
   for(const o of observed?.races||[]) {
     if(!o||typeof o.model_code!=="string")continue;
     // An ambiguous pair of Senate special and regular contests must never be silently joined.
-    if(indexed.has(o.model_code))indexed.set(o.model_code,null);
+    if(indexed.has(o.model_code)){indexed.set(o.model_code,null);ambiguous.add(o.model_code)}
     else indexed.set(o.model_code,o);
   }
   return forecast.races.filter(r=>r.race_type==="house"||r.race_type==="senate").map(r=>{
@@ -45,7 +45,7 @@ export function assemble(forecast, observed) {
     return {id:r.race_code,office:r.race_type,state:r.state,district:r.district,
       candidateD:r.dem_candidate||"",candidateR:r.rep_candidate||"",
       forecast_margin:predicted,dem_probability:finite(r.dem_probability),
-      rating:r.rating||"",votes,observed:o,
+      rating:r.rating||"",votes,observed:o,ambiguous:ambiguous.has(r.race_code),
       lead:lead||null,called:Boolean(o?.called&&o?.called_by),
       winner:o?.called&&o?.called_by?o.winner:null,called_by:o?.called_by||null,
       observed_margin:margin,gap};

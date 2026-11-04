@@ -3,6 +3,13 @@ import { constants } from 'node:fs';
 
 const required=['public/index.html','public/styles.css','public/app.js','public/core.mjs','public/model-lab/index.html','public/model-lab/model-lab.js','public/model-lab/model-lab.css','public/data/model-lab.json','scripts/build_forecast.py','scripts/validate_forecast.py','scripts/model_lab.py','wrangler.toml','docs/METHODOLOGY.md','docs/MODEL_LAB.md','docs/DATA_PROVENANCE.md','docs/MODEL_CHANGELOG.md','docs/SOURCE_STATUS.md'];
 for(const file of required)await access(file,constants.R_OK);
+const requiredResults=['public/results/index.html','public/results/v2-core.mjs','public/results/v2-upgrade.mjs','public/results/geo-map.mjs','public/results/states.geojson'];
+for(const path of requiredResults)await access(path,constants.R_OK);
+const v2Html=await readFile('public/results/index.html','utf8');
+for(const marker of ['Election Results','The US electoral atlas','Count completeness','Forecast discrepancy','raceLens','sourceLedger','mapLayer','v2-upgrade.mjs'])if(!v2Html.includes(marker))throw new Error('Results Desk v2 component missing: '+marker);
+const stateGeo=JSON.parse(await readFile('public/results/states.geojson','utf8'));
+if(stateGeo?.type!=='FeatureCollection'||stateGeo.features?.length<50||stateGeo.features?.length>52)throw new Error('US state-outline geometry is incomplete or unrecognized');
+
 const html=await readFile('public/index.html','utf8');
 for(const marker of ['MIDTERM SIGNALS','Forecast','House','Senate','Races','Map','Polls','National environment','Candidates','Money','Campaign signals','Scenarios','History','Model Lab','Data','Methodology','About','GLOBAL SEARCH','Facts ≠ polls ≠ forecasts ≠ scenarios ≠ results'])if(!html.includes(marker))throw new Error(`Missing product marker: ${marker}`);
 const app=(await Promise.all(['public/app-parts/1.jsfrag','public/app-parts/2.jsfrag','public/app-parts/3.jsfrag','public/app-parts/4.jsfrag','public/app-parts/5.jsfrag'].map(f=>readFile(f,'utf8')))).join('');

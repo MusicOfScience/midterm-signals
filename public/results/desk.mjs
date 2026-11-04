@@ -22,7 +22,8 @@ function row(r){
     status.append(node("span",(r.lead?.name||r.lead?.party||"Count reported")+" leads","status-text"));
     status.append(node("small","Uncalled · counting lead only"));
   }else{status.append(node("span","No votes reported","unavailable"))}
-  if(o?.source_url?.startsWith("https://")){const link=node("a","Source","");link.href=o.source_url;link.target="_blank";link.rel="noopener noreferrer";status.append(node("small","")).append(link)}
+  if(o?.source_url?.startsWith("https://")){const link=node("a","Source","");link.href=o.source_url;link.target="_blank";link.rel="noopener noreferrer";const sourceWrap=node("small","");sourceWrap.append(link);status.append(sourceWrap)}
+  const inspect=node("button","Inspect race","inspect-race");inspect.type="button";inspect.dataset.race=r.id;const inspectWrap=node("small","");inspectWrap.append(inspect);status.append(inspectWrap);
   cell(tr,fmt(r.votes),"numeric");
   cell(tr,signed(r.observed_margin),"numeric");
   cell(tr,signed(r.forecast_margin),"numeric");
@@ -38,6 +39,7 @@ function redraw() {
   else for(const r of selected)frag.append(row(r));
   $("raceRows").replaceChildren(frag);
   for(const button of $("stateTiles").querySelectorAll("button"))button.classList.toggle("active",button.dataset.state===ui.state);
+  window.dispatchEvent(new Event("ms:results-filtered"));
 }
 function setState(state){$("state").value=state;redraw()}
 function makeTiles() {
@@ -77,6 +79,7 @@ async function refresh(){
     feed=cached;
     // Render reproducible same-origin data immediately; cross-origin feeds may be slow.
     rows=assemble(forecast,feed);loaded=true;summary();makeTiles();redraw();
+    window.__MS_RESULTS__={rows,feed,sources:[cached],sourceChecks:[]};window.dispatchEvent(new Event("ms:results-updated"));
     // Opportunistic direct refresh; if the third-party site blocks CORS or fails,
     // we do not replace the last checked snapshot with an error or empty result.
     const {normaliseClient}=await import("./live-adapter.mjs");
@@ -92,6 +95,13 @@ async function refresh(){
       try{sources.push(normaliseOpenAmerica(requests[index].value))}catch(_){}
     feed=combineFeeds(sources);
     rows=assemble(forecast,feed);loaded=true;summary();makeTiles();redraw();
+    const sourceNames=["The People's Tally direct","Open America / House","Open America / Senate"];
+    const sourceChecks=requests.map((r,i)=>({name:sourceNames[i],success:r.status==="fulfilled",
+      published:r.status==="fulfilled"&&(i===0?Object.keys(r.value?.races||{}).length:Object.keys(r.value?.races||{}).length)>0,
+      asOf:r.status==="fulfilled"?(r.value.generated_at||r.value.as_of||null):null,
+      note:r.status==="fulfilled"?"Responded":"Not reachable from this browser"}));
+    window.__MS_RESULTS__={rows,feed,sources,sourceChecks};
+    window.dispatchEvent(new Event("ms:results-updated"));
   }catch(e){$("feedStatus").textContent="Could not load results snapshot: "+e.message;$("feedClock").textContent="The stored forecasts remain available in the archive."}
   finally{$("refresh").disabled=false}
 }

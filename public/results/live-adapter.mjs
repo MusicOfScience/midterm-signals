@@ -14,7 +14,8 @@ export function normaliseClient(raw){
     const winner=caller?candidates.find(c=>c.winner)||null:null;
     out.push({race_id:id,model_code:key,chamber:id.startsWith("H-")?"house":"senate",state:key.slice(0,2),
       candidates,votes_total:total,leader,called:Boolean(winner),winner,called_by:winner?caller:null,
-      source_url:typeof item.url==="string"&&item.url.startsWith("https://")?item.url:null,source_name:item.src||"The People's Tally"});
+      source_url:typeof item.url==="string"&&item.url.startsWith("https://")?item.url:null,source_name:item.src||"The People's Tally",
+      source_updated_at:typeof item.asof==="string"?item.asof:raw.generated_at||null});
   }
   return {schema_version:1,source:"thepeoplestally",source_updated_at:raw.generated_at||null,
     fetched_at:new Date().toISOString(),state:out.some(r=>r.votes_total)?"reporting":"awaiting_results",races:out};

@@ -18,16 +18,41 @@
 <main id="main">
   <div class="eyebrow">Observed vote / forecast accountability</div>
   <h1>Election Results <em>&amp; Swing Analysis</em></h1>
-  <p class="intro">State-by-state and district-by-district returns, compared with the frozen pre-election MIDTERM SIGNALS model. Counting leads are <strong>not</strong> race calls. Missing feeds are <strong>not</strong> zero votes.</p>
+  <p class="intro">An election-night research desk: 435 House districts and 35 Senate contests, an interactive state map, auditable counts and a frozen election-eve model. <strong>Reported leads are not projected winners.</strong> Source gaps remain visible rather than being silently filled.</p>
   <section class="status" aria-live="polite">
     <div><span class="eyebrow">Data provenance</span><p id="feedStatus">Loading verified results snapshots…</p><small id="feedClock"></small></div>
     <div class="status-action"><button id="refresh" type="button">Refresh now</button><a href="https://thepeoplestally.com/open-data/" target="_blank" rel="noopener noreferrer">Results source and licence</a></div>
+  </section>
+  <section class="readout-head" aria-label="Election night intelligence">
+    <div class="readout-title"><span class="eyebrow">Election intelligence / v2.0</span><h2>Reading the count, not just colouring the map</h2></div>
+    <div class="readout-right"><span class="pill" id="freshnessFlag">SOURCE STATUS PENDING</span><a class="share-link" id="shareView" href="#">Copy a link to this view</a></div>
   </section>
   <section aria-label="Counting summary" class="metrics">
     <article><span>Races with reported votes</span><strong id="mReporting">—</strong><small id="mUniverse">Across all tracked federal races</small></article>
     <article><span>House: called D / R</span><strong id="mHouse">—</strong><small>Only explicitly sourced race calls</small></article>
     <article><span>Senate: called D / R</span><strong id="mSenate">—</strong><small>Contested seats only, not control of chamber</small></article>
     <article><span>Current counting leads</span><strong id="mLeads">—</strong><small>Democratic / Republican; not projected winners</small></article>
+  </section>
+  <section class="atlas-wrap" aria-labelledby="atlasTitle">
+    <div class="atlas-intro">
+      <div><div class="eyebrow">Geographic intelligence / state boundaries</div><h2 id="atlasTitle">The US electoral atlas</h2><p>State outlines show <strong>reporting coverage</strong> or provisional aggregated vote margins. Choose a state to inspect its House districts and Senate contest below.</p></div>
+      <label class="map-layer-label">Map layer <select id="mapLayer"><option value="coverage">Races with counts / tracked races</option><option value="house">House · observed two-party D−R</option><option value="senate">Senate · observed two-party D−R</option></select></label>
+    </div>
+    <div class="atlas-grid">
+      <div class="map-frame"><div id="stateMap" class="state-map" role="region" aria-label="US election reporting map"><p>Loading state outlines…</p></div><div class="map-legend"><span class="swatch swatch-missing"></span>Not reported / no covered race <span class="swatch swatch-low"></span>Partial <span class="swatch swatch-high"></span>More reporting <span class="swatch swatch-full"></span>All tracked contests have votes</div><p class="map-credit">State outlines: <a href="https://github.com/PublicaMundi/MappingAPI/blob/master/data/geojson/us-states.json" target="_blank" rel="noopener noreferrer">PublicaMundi US States GeoJSON</a>. Not congressional-district boundaries; not a uniform precinct-completion map.</p></div>
+      <div class="atlas-sidebar">
+        <div class="eyebrow">Selection briefing</div><h3 id="selectedTitle">United States</h3>
+        <div class="selection-stats"><div><span>Tracked races</span><strong id="selectTracked">470</strong></div><div><span>With votes</span><strong id="selectReporting">—</strong></div><div><span>Called</span><strong id="selectCalled">—</strong></div></div>
+        <p id="selectInterpretation" class="interpretation">Loading observation coverage…</p>
+        <h4>Reporting by source</h4><div id="sourceLedger" class="source-ledger" aria-live="polite"><p>Checking feeds…</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="research-grid" aria-labelledby="researchTitle">
+    <div class="research-title"><div class="eyebrow">Signals / not projections</div><h2 id="researchTitle">What the returns can actually tell us</h2></div>
+    <article class="research-card"><h3>Count completeness</h3><div id="countQuality">Awaiting observations…</div></article>
+    <article class="research-card"><h3>Forecast discrepancy</h3><div id="discrepancy">Awaiting observations…</div></article>
+    <article class="research-card wide"><h3>Forecast versus observed two-party margin</h3><div id="marginScatter">Only reported races with a comparable Democratic and Republican vote are plotted. No results have been supplied yet.</div></article>
   </section>
   <section class="workspace" aria-labelledby="browseTitle">
     <div class="section-heading"><div><div class="eyebrow">Geographic explorer</div><h2 id="browseTitle">Browse the count</h2></div><p id="coverage">Source coverage by state</p></div>
@@ -44,6 +69,7 @@
     <div class="scroll-table"><table><caption>Live or last published available vote counts, model forecast and provisional discrepancy</caption>
     <thead><tr><th scope="col">Race</th><th scope="col">Observed status</th><th scope="col" class="numeric">Votes counted</th><th scope="col" class="numeric">Observed D−R</th><th scope="col" class="numeric">Frozen model D−R</th><th scope="col" class="numeric">Difference</th></tr></thead><tbody id="raceRows"><tr><td colspan="6">Loading races…</td></tr></tbody></table></div>
   </section>
+  <section class="race-lens" id="raceLens" aria-labelledby="lensTitle" hidden><div class="section-heading"><div><div class="eyebrow">Observation and model boundary</div><h2 id="lensTitle">Race detail</h2></div><button id="closeLens" class="subtle" type="button">Close</button></div><div id="raceLensContent"></div></section>
   <section class="method" aria-labelledby="readThis">
     <h2 id="readThis">Read before interpreting</h2>
     <p><strong>Observed D−R</strong> is the Democratic-minus-Republican margin calculated from the two parties’ recorded votes. <strong>Difference</strong> subtracts the pre-election model's predicted D−R margin from the observed margin, in percentage points. Where votes are incomplete, both numbers are provisional and should <em>not</em> be interpreted as final swings or forecast errors.</p>
@@ -51,6 +77,7 @@
     <p>Observed results are a separate data boundary. This page never modifies past forecasts or re-estimates model parameters. <a href="/data/history/2026-11-03T192932Z.json">Frozen election-eve forecast</a> · <a href="/data/observed-results.json">Normalised results JSON</a> · <a href="https://github.com/MusicOfScience/midterm-signals/blob/main/docs/RESULTS_DESK.md">Methodology / source contract</a>.</p>
   </section>
 </main>
-<footer><a href="/">MIDTERM SIGNALS</a><span>Facts ≠ polls ≠ forecasts ≠ scenarios ≠ results</span><span>The People's Tally (CC BY 4.0); official state election offices via Open America (direct browser read only).</span></footer>
+<footer><a href="/">MIDTERM SIGNALS</a><span>Facts ≠ polls ≠ forecasts ≠ scenarios ≠ results</span><span>The People's Tally (CC BY 4.0); official state election offices via Open America (direct browser read only). Geographic map from PublicaMundi, 2017 outline dataset.</span></footer>
 <script type="module" src="/results/desk.mjs"></script>
+<script type="module" src="/results/v2-upgrade.mjs"></script>
 </body></html>
