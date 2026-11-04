@@ -9,7 +9,12 @@ try {
   // Exercising the no-results/no-network fallback is intentional, not a fixture of votes.
   await page.route("https://thepeoplestally.com/**",route=>route.abort());
   await page.route("https://openamerica.io/**",route=>route.abort());
-  await page.goto(base+"/results/",{waitUntil:"domcontentloaded"});
+  await page.route("**/data/observed-results.json*",r=>r.fulfill({
+  status:200,contentType:"application/json",body:JSON.stringify({
+    schema_version:1,source:"civicAPI",fetched_at:null,source_updated_at:null,
+    state:"awaiting_results",races:[]})
+ }));
+ await page.goto(base+"/results/",{waitUntil:"domcontentloaded"});
   await page.waitForFunction(()=>document.querySelector("#mReporting")?.textContent?.includes(" / 470"),null,{timeout:30000});
   assert.match(await page.title(),/Results Desk/);
   assert.match(await page.locator("#feedStatus").innerText(),/Awaiting verified vote counts/i);

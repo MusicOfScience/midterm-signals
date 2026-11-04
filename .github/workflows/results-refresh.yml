@@ -6,10 +6,12 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'public/data/observed-results.json'
-      - 'public/data/history/**'
-      - 'public/data/forecast.json'
+    # Publish on source/workflow changes after merge; cron covers regular updates.
+    paths:
+      - '.github/workflows/results-refresh.yml'
+      - 'scripts/refresh_results_civic.py'
+      - 'scripts/refresh_results.py'
+      - 'tests/test_results_civic.py'
   schedule:
     - cron: "*/5 * * * *"
 
@@ -17,7 +19,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: midterm-observed-results
+  # Same group as forecast workflow: no simultaneous generated-data pushes.
+  group: midterm-publication-${{ github.ref_name }}
   cancel-in-progress: false
 
 jobs:
@@ -50,5 +53,18 @@ jobs:
           git config user.name "midterm-signals-bot"
           git config user.email "actions@users.noreply.github.com"
           git commit -m "data: update observed 2026 election results"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort
+              echo "Conflicting results changes require source review; never force-push." >&2
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Remote changed during observed-results publication; retrying $attempt/3" >&2
+            sleep $((attempt * 2))
+          done
+          echo "Could not publish observed results safely" >&2
+          exit 1

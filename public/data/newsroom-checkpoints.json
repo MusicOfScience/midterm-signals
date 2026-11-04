@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "reference_id": "guardian-user-screenshot-2026-11-04-1938-aedt",
+  "publisher": "The Guardian",
+  "publisher_context": "Guardian live results graphic; separate newsroom race-call service",
+  "reference_type": "User-supplied screenshot of published national totals; manual archival checkpoint, NOT an automatically refreshed AP API feed",
+  "captured_at": "2026-11-04T08:38:00Z",
+  "capture_timezone": "Australia/Melbourne",
+  "source_url": "https://www.theguardian.com/us-news/ng-interactive/2026/nov/03/midterm-elections-full-results-senate-house-governor-races",
+  "house": {
+    "D": 225,
+    "R": 137,
+    "called": 362,
+    "total": 435
+  },
+  "senate": {
+    "D": 54,
+    "R": 44,
+    "called": 33,
+    "contested": 35,
+    "total": 100,
+    "includedIndependentCaucusD": 2
+  },
+  "source_race_level_available": false,
+  "notes": "The screenshot contains aggregate calls only; it cannot identify which races differ from civicAPI. This is a fixed historical reference, not live newsroom data."
+}

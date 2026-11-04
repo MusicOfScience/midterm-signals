@@ -9,6 +9,11 @@ try{
  await page.route("https://openamerica.io/**",r=>r.abort());
  const errors=[];
  page.on("pageerror",err=>errors.push(String(err)));
+ await page.route("**/data/observed-results.json*",r=>r.fulfill({
+  status:200,contentType:"application/json",body:JSON.stringify({
+    schema_version:1,source:"civicAPI",fetched_at:null,source_updated_at:null,
+    state:"awaiting_results",races:[]})
+ }));
  await page.goto(base+"/results/",{waitUntil:"domcontentloaded"});
  await page.waitForFunction(()=>document.querySelector("#mReporting")?.textContent?.includes("/ 470"),null,{timeout:30000});
  await page.locator("#stateMap svg path").first().waitFor({timeout:15000});
