@@ -9,7 +9,7 @@ const current=()=>window.__MS_RESULTS__||latest;
 function chart(rows){
  const cell=$("marginScatter"),compared=rows.filter(r=>r.votes!==null&&Number.isFinite(r.observed_margin)&&Number.isFinite(r.forecast_margin));
  if(compared.length<3){cell.replaceChildren(n("p","Only "+compared.length+" comparable races currently reporting. Three are required before a plot is published. No missing returns are imputed."));return}
- const subset=[...compared].sort((a,b)=>Math.abs(b.gap)-Math.abs(a.gap)).slice(0,250);
+ const subset=[...compared];
  const limit=Math.max(10,...subset.flatMap(r=>[Math.abs(r.observed_margin),Math.abs(r.forecast_margin)]));
  const span=Math.min(100,Math.ceil(limit/10)*10),W=760,H=276,pad={l:54,r:30,t:24,b:45};
  const X=v=>pad.l+(v+span)/(2*span)*(W-pad.l-pad.r),Y=v=>H-pad.b-(v+span)/(2*span)*(H-pad.t-pad.b);
@@ -31,7 +31,7 @@ function chart(rows){
  }
  create("text",{x:W/2,y:H-7,"font-size":12,fill:"#343733","text-anchor":"middle"},"Frozen predicted D−R (pp)");
  create("text",{x:17,y:H/2,"font-size":12,fill:"#343733","text-anchor":"middle",transform:"rotate(-90 17 "+H/2+")"},"Observed D−R (pp)");
- cell.replaceChildren(svg,n("p",subset.length+" races plotted (maximum 250). Dashed diagonal = agreement with the model. Incomplete counts are not final forecast errors.","chart-key"));
+ cell.replaceChildren(svg,n("p",subset.length+" races plotted (complete comparable universe). Blue points show more Democratic votes than the model predicted, red more Republican. Dashed diagonal = agreement. Incomplete counts are not final forecast errors.","chart-key"));
 }
 function ledger(data){
  const list=[],cache=data.sources?.[0];

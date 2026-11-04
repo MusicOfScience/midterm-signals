@@ -18,7 +18,7 @@ try{
  assert.match(await page.locator("#discrepancy").innerText(),/WITHHELD/);
  assert.match(await page.locator("#marginScatter").innerText(),/Only 0 comparable races/);
  await page.locator("#mapLayer").selectOption("senate");
- assert.match(await page.locator(".map-caption").innerText(),/Senate/i);
+ await page.waitForFunction(()=>document.querySelector(".map-caption")?.textContent?.includes("Senate"),null,{timeout:15000});
  await page.locator("#stateMap svg path[data-state=PA]").click();
  assert.equal(await page.locator("#state").inputValue(),"PA");
  assert.match(await page.locator("#selectedTitle").innerText(),/Pennsylvania/);

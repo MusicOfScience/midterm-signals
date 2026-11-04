@@ -2,7 +2,6 @@
 // congressional district boundaries are intentionally not implied.
 import {stateInsight,signedMargin} from "./v2-core.mjs";
 const NS="http://www.w3.org/2000/svg";
-export const FIPS_TO_STATE={};
 const PALETTE={missing:"#d7d4cb",low:"#c7dce3",mid:"#7daec0",high:"#357c95",full:"#15546d",
   dem1:"#a6bfd3",dem2:"#648fb0",dem3:"#315d82",
   rep1:"#d4b0a6",rep2:"#bb7569",rep3:"#9c453e"};
