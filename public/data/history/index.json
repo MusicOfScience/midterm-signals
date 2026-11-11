@@ -1,7 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-10T19:42:40.084823Z",
+  "generated_at": "2026-11-11T06:16:48.446574Z",
   "snapshots": [
+    "2026-11-11T061648Z.json",
     "2026-11-10T194240Z.json",
     "2026-11-10T071609Z.json",
     "2026-11-09T222034Z.json",
@@ -89,6 +90,19 @@
     "2026-10-12.json"
   ],
   "summaries": [
+    {
+      "file": "2026-11-11T061648Z.json",
+      "generated_at": "2026-11-11T06:16:48.446574Z",
+      "house": 0.9568,
+      "senate": 0.815,
+      "house_seats": 239.2,
+      "senate_seats": 52.3,
+      "generic_ballot_d_minus_r": 8.4,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "24db84ab8ef5dcf68f3e3994a29ded9dccc7840c",
+      "input_sha256": "b696421b6525cb2d13b88842f8b00b5b06787baa9d53bf42e85ea59f8cd34420",
+      "changed_inputs": []
+    },
     {
       "file": "2026-11-10T194240Z.json",
       "generated_at": "2026-11-10T19:42:40.084823Z",
