@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-11-11T19:34:27.884598Z",
-  "data_refreshed_at": "2026-11-11T19:34:27.884598Z",
+  "generated_at": "2026-11-12T07:08:26.270082Z",
+  "data_refreshed_at": "2026-11-12T07:08:26.270082Z",
   "election_date": "2026-11-03",
   "days_to_election": 0,
   "summary": {
@@ -50283,8 +50283,8 @@
             "party": "D",
             "fec_candidate_id": "H6OH07168",
             "fec_name": "POINDEXTER, BRIAN",
-            "receipts": 3720341.61,
-            "disbursements": 2926666.41,
+            "receipts": 3720150.35,
+            "disbursements": 2926975.15,
             "cash_on_hand": 793675.2,
             "debts_owed_by": 0.0,
             "coverage_through": "2026-10-14",
@@ -62267,7 +62267,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-11-11T19:34:27.884598Z",
+      "last_success": "2026-11-12T07:08:26.270082Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -62300,7 +62300,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-11-11T19:34:35.850244Z",
+      "last_success": "2026-11-12T07:08:36.339512Z",
       "last_observation": "2026-10-29",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -62334,7 +62334,7 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-11-11T19:34:37.648466Z",
+      "last_success": "2026-11-12T07:08:39.136783Z",
       "last_observation": "2026-10-22",
       "note": "Official bulk adapter; 860 candidate summaries matched to production candidates."
     },
@@ -62343,7 +62343,7 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-11-11T19:34:35.850244Z",
+      "last_success": "2026-11-12T07:08:36.339512Z",
       "last_observation": "2026-11-02",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
@@ -64414,8 +64414,8 @@
         "party": "D",
         "fec_candidate_id": "H6OH07168",
         "fec_name": "POINDEXTER, BRIAN",
-        "receipts": 3720341.61,
-        "disbursements": 2926666.41,
+        "receipts": 3720150.35,
+        "disbursements": 2926975.15,
         "cash_on_hand": 793675.2,
         "debts_owed_by": 0.0,
         "coverage_through": "2026-10-14",
@@ -77734,7 +77734,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-11-11T19:34:27.884598Z",
+    "retrieved_at": "2026-11-12T07:08:26.270082Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -77753,12 +77753,25 @@
     "senate_expected_dem_seats": 0.0,
     "generic_ballot_d_minus_r": 0.0,
     "changed_inputs": [],
-    "previous_generated_at": "2026-11-11T06:16:48.446574Z"
+    "previous_generated_at": "2026-11-11T19:34:27.884598Z"
   },
   "briefing": {
     "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 96% probability of House control and a 82% probability of Senate control. The current weighted generic congressional ballot is D+8.4. The House 80% Democratic-seat interval is 222–257; the Senate interval is 50–55."
   },
   "history_summaries": [
+    {
+      "file": "2026-11-12T070826Z.json",
+      "generated_at": "2026-11-12T07:08:26.270082Z",
+      "house": 0.9568,
+      "senate": 0.815,
+      "house_seats": 239.2,
+      "senate_seats": 52.3,
+      "generic_ballot_d_minus_r": 8.4,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "24db84ab8ef5dcf68f3e3994a29ded9dccc7840c",
+      "input_sha256": "b696421b6525cb2d13b88842f8b00b5b06787baa9d53bf42e85ea59f8cd34420",
+      "changed_inputs": []
+    },
     {
       "file": "2026-11-11T193427Z.json",
       "generated_at": "2026-11-11T19:34:27.884598Z",
