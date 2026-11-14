@@ -4,7 +4,7 @@
   "mode": "official bulk data",
   "url": "https://www.fec.gov/data/",
   "bulk_url": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip",
-  "last_success": "2026-11-14T06:20:33.832556Z",
+  "last_success": "2026-11-14T17:59:55.298498Z",
   "latest_coverage": "2026-10-22",
   "matched_candidates": 860,
   "note": "Official FEC current-campaign summaries. Reporting periods travel with every dollar figure; unmatched candidates remain missing rather than guessed.",
@@ -435,10 +435,10 @@
       "party": "R",
       "fec_candidate_id": "S6MN00556",
       "fec_name": "TAFOYA, MICHELE",
-      "receipts": 12501785.59,
-      "disbursements": 9682729.8,
-      "cash_on_hand": 2819386.89,
-      "debts_owed_by": 442060.19,
+      "receipts": 46625.58,
+      "disbursements": 44745.68,
+      "cash_on_hand": 2211.0,
+      "debts_owed_by": 0.0,
       "coverage_through": "2026-10-14",
       "source": "https://www.fec.gov/data/candidate/S6MN00556/?cycle=2026&election_full=true",
       "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
@@ -7519,7 +7519,7 @@
       "party": "R",
       "fec_candidate_id": "H0NJ07261",
       "fec_name": "KEAN, THOMAS H. JR.",
-      "receipts": 6128373.01,
+      "receipts": 6131673.01,
       "disbursements": 4811253.77,
       "cash_on_hand": 1365405.91,
       "debts_owed_by": 0.0,
@@ -11355,8 +11355,8 @@
       "party": "D",
       "fec_candidate_id": "H4VA07234",
       "fec_name": "VINDMAN, YEVGENY 'EUGENE'",
-      "receipts": 16339249.68,
-      "disbursements": 11248587.96,
+      "receipts": 16339333.68,
+      "disbursements": 11248671.96,
       "cash_on_hand": 5225595.46,
       "debts_owed_by": 0.0,
       "coverage_through": "2026-10-14",
@@ -12050,6 +12050,6 @@
       "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
     }
   ],
-  "generated_at": "2026-11-14T06:20:31.101173Z",
+  "generated_at": "2026-11-14T17:59:52.720665Z",
   "model_effect": "NONE"
 }
