@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-11-18T20:29:35.865213Z",
-  "data_refreshed_at": "2026-11-18T20:29:35.865213Z",
+  "generated_at": "2026-11-19T07:23:56.280946Z",
+  "data_refreshed_at": "2026-11-19T07:23:56.280946Z",
   "election_date": "2026-11-03",
   "days_to_election": 0,
   "summary": {
@@ -46616,16 +46616,16 @@
             "party": "R",
             "fec_candidate_id": "H4NJ10135",
             "fec_name": "BUCCO, CARMEN",
-            "receipts": 8931.33,
-            "disbursements": 6638.74,
-            "cash_on_hand": 2292.59,
+            "receipts": 8986.33,
+            "disbursements": 8986.33,
+            "cash_on_hand": 0.0,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-10-14",
+            "coverage_through": "2026-11-23",
             "source": "https://www.fec.gov/data/candidate/H4NJ10135/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -62267,7 +62267,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-11-18T20:29:35.865213Z",
+      "last_success": "2026-11-19T07:23:56.280946Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -62300,7 +62300,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-11-18T20:29:45.455981Z",
+      "last_success": "2026-11-19T07:24:04.239567Z",
       "last_observation": "2026-10-29",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -62334,8 +62334,8 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-11-18T20:29:47.613813Z",
-      "last_observation": "2026-10-22",
+      "last_success": "2026-11-19T07:24:06.497391Z",
+      "last_observation": "2026-11-23",
       "note": "Official bulk adapter; 860 candidate summaries matched to production candidates."
     },
     {
@@ -62343,7 +62343,7 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-11-18T20:29:45.455981Z",
+      "last_success": "2026-11-19T07:24:04.239567Z",
       "last_observation": "2026-11-02",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
@@ -62418,7 +62418,7 @@
     "state": "current",
     "source": "Federal Election Commission",
     "mode": "official bulk data",
-    "latest_coverage": "2026-10-22",
+    "latest_coverage": "2026-11-23",
     "records": [
       {
         "race_code": "AK-01",
@@ -77734,7 +77734,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-11-18T20:29:35.865213Z",
+    "retrieved_at": "2026-11-19T07:23:56.280946Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -77753,12 +77753,25 @@
     "senate_expected_dem_seats": 0.0,
     "generic_ballot_d_minus_r": 0.0,
     "changed_inputs": [],
-    "previous_generated_at": "2026-11-17T07:53:21.614385Z"
+    "previous_generated_at": "2026-11-18T20:29:35.865213Z"
   },
   "briefing": {
     "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 96% probability of House control and a 82% probability of Senate control. The current weighted generic congressional ballot is D+8.4. The House 80% Democratic-seat interval is 222–257; the Senate interval is 50–55."
   },
   "history_summaries": [
+    {
+      "file": "2026-11-19T072356Z.json",
+      "generated_at": "2026-11-19T07:23:56.280946Z",
+      "house": 0.9568,
+      "senate": 0.815,
+      "house_seats": 239.2,
+      "senate_seats": 52.3,
+      "generic_ballot_d_minus_r": 8.4,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "24db84ab8ef5dcf68f3e3994a29ded9dccc7840c",
+      "input_sha256": "b696421b6525cb2d13b88842f8b00b5b06787baa9d53bf42e85ea59f8cd34420",
+      "changed_inputs": []
+    },
     {
       "file": "2026-11-18T202935Z.json",
       "generated_at": "2026-11-18T20:29:35.865213Z",
