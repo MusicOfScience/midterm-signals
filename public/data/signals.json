@@ -1,6 +1,20 @@
 {
-  "generated_at": "2026-11-20T20:16:15.415655Z",
+  "generated_at": "2026-11-21T07:05:26.488719Z",
   "signals": [
+    {
+      "id": "fec-S8MS00261-2026-11-20",
+      "date": "2026-11-20",
+      "category": "FUNDRAISING",
+      "race_code": "MS-SEN",
+      "geography": "MS-SEN",
+      "description": "FEC summary through 2026-11-20 records $4.6m receipts, $3.7m spending and $1.4m cash on hand for Cindy Hyde-Smith.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S8MS00261/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
     {
       "id": "poll-national-Ipsos-2026-11-02-7.5",
       "date": "2026-11-02",
@@ -1532,19 +1546,6 @@
       "race_code": "NC-09",
       "geography": "NC-09",
       "description": "Inside Elections changed NC-09 from Solid Republican to Likely Republican.",
-      "source_name": "Inside Elections",
-      "source": "https://insideelections.com/ratings/house/",
-      "provenance": "Inside Elections public ratings API",
-      "model_effect": "NONE",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "rating-inside-NC-03-2026-10-29-Likely Republican",
-      "date": "2026-10-29",
-      "category": "RATING CHANGE",
-      "race_code": "NC-03",
-      "geography": "NC-03",
-      "description": "Inside Elections changed NC-03 from Solid Republican to Likely Republican.",
       "source_name": "Inside Elections",
       "source": "https://insideelections.com/ratings/house/",
       "provenance": "Inside Elections public ratings API",

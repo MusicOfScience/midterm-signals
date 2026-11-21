@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-11-20T20:16:05.403101Z",
-  "data_refreshed_at": "2026-11-20T20:16:05.403101Z",
+  "generated_at": "2026-11-21T07:05:18.887939Z",
+  "data_refreshed_at": "2026-11-21T07:05:18.887939Z",
   "election_date": "2026-11-03",
   "days_to_election": 0,
   "summary": {
@@ -18776,12 +18776,12 @@
             "disbursements": 3720843.06,
             "cash_on_hand": 1395723.78,
             "debts_owed_by": 60000.0,
-            "coverage_through": "2026-10-14",
+            "coverage_through": "2026-11-20",
             "source": "https://www.fec.gov/data/candidate/S8MS00261/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -56505,9 +56505,9 @@
             "party": "D",
             "fec_candidate_id": "H6TX13159",
             "fec_name": "NAIR, MARK",
-            "receipts": 137623.75,
-            "disbursements": 134800.08,
-            "cash_on_hand": 2823.67,
+            "receipts": 137526.81,
+            "disbursements": 134479.13,
+            "cash_on_hand": 3047.68,
             "debts_owed_by": 0.0,
             "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6TX13159/?cycle=2026&election_full=true",
@@ -62267,7 +62267,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-11-20T20:16:05.403101Z",
+      "last_success": "2026-11-21T07:05:18.887939Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -62300,7 +62300,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-11-20T20:16:15.415655Z",
+      "last_success": "2026-11-21T07:05:26.488719Z",
       "last_observation": "2026-10-29",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -62334,7 +62334,7 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-11-20T20:16:17.624351Z",
+      "last_success": "2026-11-21T07:05:29.109431Z",
       "last_observation": "2026-11-23",
       "note": "Official bulk adapter; 860 candidate summaries matched to production candidates."
     },
@@ -62343,8 +62343,8 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-11-20T20:16:15.415655Z",
-      "last_observation": "2026-11-02",
+      "last_success": "2026-11-21T07:05:26.488719Z",
+      "last_observation": "2026-11-20",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
     {
@@ -63872,7 +63872,7 @@
         "disbursements": 3720843.06,
         "cash_on_hand": 1395723.78,
         "debts_owed_by": 60000.0,
-        "coverage_through": "2026-10-14",
+        "coverage_through": "2026-11-20",
         "source": "https://www.fec.gov/data/candidate/S8MS00261/?cycle=2026&election_full=true",
         "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
       },
@@ -65337,6 +65337,20 @@
     "note": "Official FEC current-campaign summaries. Reporting periods travel with every dollar figure; unmatched candidates remain missing rather than guessed."
   },
   "campaign_signals": [
+    {
+      "id": "fec-S8MS00261-2026-11-20",
+      "date": "2026-11-20",
+      "category": "FUNDRAISING",
+      "race_code": "MS-SEN",
+      "geography": "MS-SEN",
+      "description": "FEC summary through 2026-11-20 records $4.6m receipts, $3.7m spending and $1.4m cash on hand for Cindy Hyde-Smith.",
+      "source_name": "Federal Election Commission",
+      "source": "https://www.fec.gov/data/candidate/S8MS00261/?cycle=2026&election_full=true",
+      "provenance": "Official FEC current-campaign summary",
+      "model_effect": "NONE",
+      "importance": "high",
+      "confidence": "source-recorded"
+    },
     {
       "id": "poll-national-Ipsos-2026-11-02-7.5",
       "date": "2026-11-02",
@@ -66868,19 +66882,6 @@
       "race_code": "NC-09",
       "geography": "NC-09",
       "description": "Inside Elections changed NC-09 from Solid Republican to Likely Republican.",
-      "source_name": "Inside Elections",
-      "source": "https://insideelections.com/ratings/house/",
-      "provenance": "Inside Elections public ratings API",
-      "model_effect": "NONE",
-      "confidence": "source-recorded"
-    },
-    {
-      "id": "rating-inside-NC-03-2026-10-29-Likely Republican",
-      "date": "2026-10-29",
-      "category": "RATING CHANGE",
-      "race_code": "NC-03",
-      "geography": "NC-03",
-      "description": "Inside Elections changed NC-03 from Solid Republican to Likely Republican.",
       "source_name": "Inside Elections",
       "source": "https://insideelections.com/ratings/house/",
       "provenance": "Inside Elections public ratings API",
@@ -77734,7 +77735,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-11-20T20:16:05.403101Z",
+    "retrieved_at": "2026-11-21T07:05:18.887939Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -77753,12 +77754,25 @@
     "senate_expected_dem_seats": 0.0,
     "generic_ballot_d_minus_r": 0.0,
     "changed_inputs": [],
-    "previous_generated_at": "2026-11-20T07:13:58.125999Z"
+    "previous_generated_at": "2026-11-20T20:16:05.403101Z"
   },
   "briefing": {
     "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 96% probability of House control and a 82% probability of Senate control. The current weighted generic congressional ballot is D+8.4. The House 80% Democratic-seat interval is 222–257; the Senate interval is 50–55."
   },
   "history_summaries": [
+    {
+      "file": "2026-11-21T070518Z.json",
+      "generated_at": "2026-11-21T07:05:18.887939Z",
+      "house": 0.9568,
+      "senate": 0.815,
+      "house_seats": 239.2,
+      "senate_seats": 52.3,
+      "generic_ballot_d_minus_r": 8.4,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "24db84ab8ef5dcf68f3e3994a29ded9dccc7840c",
+      "input_sha256": "b696421b6525cb2d13b88842f8b00b5b06787baa9d53bf42e85ea59f8cd34420",
+      "changed_inputs": []
+    },
     {
       "file": "2026-11-20T201605Z.json",
       "generated_at": "2026-11-20T20:16:05.403101Z",
