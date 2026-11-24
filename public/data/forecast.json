@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-11-23T23:52:17.222127Z",
-  "data_refreshed_at": "2026-11-23T23:52:17.222127Z",
+  "generated_at": "2026-11-24T09:52:40.841912Z",
+  "data_refreshed_at": "2026-11-24T09:52:40.841912Z",
   "election_date": "2026-11-03",
   "days_to_election": 0,
   "summary": {
@@ -36164,8 +36164,8 @@
             "fec_candidate_id": "H6IL12131",
             "fec_name": "FORTIER, JULIE DR.",
             "receipts": 161510.74,
-            "disbursements": 127866.39,
-            "cash_on_hand": 33644.35,
+            "disbursements": 127846.39,
+            "cash_on_hand": 33664.35,
             "debts_owed_by": 0.0,
             "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H6IL12131/?cycle=2026&election_full=true",
@@ -37871,8 +37871,8 @@
             "party": "D",
             "fec_candidate_id": "H6KY02068",
             "fec_name": "WINGFIELD, MEGAN",
-            "receipts": 9584.49,
-            "disbursements": 7832.25,
+            "receipts": 18055.19,
+            "disbursements": 16284.34,
             "cash_on_hand": 1270.59,
             "debts_owed_by": 0.0,
             "coverage_through": "2026-10-14",
@@ -49063,16 +49063,16 @@
             "party": "R",
             "fec_candidate_id": "H6NY20225",
             "fec_name": "AMBROSIO, RALPH",
-            "receipts": 61545.17,
-            "disbursements": 54202.52,
-            "cash_on_hand": 7342.65,
+            "receipts": 72115.77,
+            "disbursements": 71955.01,
+            "cash_on_hand": 160.76,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-10-14",
+            "coverage_through": "2026-12-31",
             "source": "https://www.fec.gov/data/candidate/H6NY20225/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -52335,16 +52335,16 @@
             "party": "R",
             "fec_candidate_id": "H6PA04169",
             "fec_name": "STUSKI, AURORA",
-            "receipts": 9750.0,
-            "disbursements": 10103.75,
-            "cash_on_hand": 2353.74,
+            "receipts": 12435.5,
+            "disbursements": 14645.87,
+            "cash_on_hand": 497.12,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-10-14",
+            "coverage_through": "2026-11-23",
             "source": "https://www.fec.gov/data/candidate/H6PA04169/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -62267,7 +62267,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-11-23T23:52:17.222127Z",
+      "last_success": "2026-11-24T09:52:40.841912Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -62300,7 +62300,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-11-23T23:52:28.164154Z",
+      "last_success": "2026-11-24T09:52:51.103928Z",
       "last_observation": "2026-10-29",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -62334,7 +62334,7 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-11-23T23:52:30.999654Z",
+      "last_success": "2026-11-24T09:52:53.512125Z",
       "last_observation": "2026-12-31",
       "note": "Official bulk adapter; 860 candidate summaries matched to production candidates."
     },
@@ -62343,7 +62343,7 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-11-23T23:52:28.164154Z",
+      "last_success": "2026-11-24T09:52:51.103928Z",
       "last_observation": "2026-11-20",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
@@ -77735,7 +77735,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-11-23T23:52:17.222127Z",
+    "retrieved_at": "2026-11-24T09:52:40.841912Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -77754,12 +77754,25 @@
     "senate_expected_dem_seats": 0.0,
     "generic_ballot_d_minus_r": 0.0,
     "changed_inputs": [],
-    "previous_generated_at": "2026-11-23T07:35:57.341109Z"
+    "previous_generated_at": "2026-11-23T23:52:17.222127Z"
   },
   "briefing": {
     "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 96% probability of House control and a 82% probability of Senate control. The current weighted generic congressional ballot is D+8.4. The House 80% Democratic-seat interval is 222–257; the Senate interval is 50–55."
   },
   "history_summaries": [
+    {
+      "file": "2026-11-24T095240Z.json",
+      "generated_at": "2026-11-24T09:52:40.841912Z",
+      "house": 0.9568,
+      "senate": 0.815,
+      "house_seats": 239.2,
+      "senate_seats": 52.3,
+      "generic_ballot_d_minus_r": 8.4,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "24db84ab8ef5dcf68f3e3994a29ded9dccc7840c",
+      "input_sha256": "b696421b6525cb2d13b88842f8b00b5b06787baa9d53bf42e85ea59f8cd34420",
+      "changed_inputs": []
+    },
     {
       "file": "2026-11-23T235217Z.json",
       "generated_at": "2026-11-23T23:52:17.222127Z",
