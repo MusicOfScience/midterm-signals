@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "model": "MIDTERM SIGNALS baseline-v1.0",
   "production_forecast": "published",
-  "generated_at": "2026-11-25T08:30:53.324970Z",
-  "data_refreshed_at": "2026-11-25T08:30:53.324970Z",
+  "generated_at": "2026-11-26T08:14:53.414162Z",
+  "data_refreshed_at": "2026-11-26T08:14:53.414162Z",
   "election_date": "2026-11-03",
   "days_to_election": 0,
   "summary": {
@@ -25608,9 +25608,9 @@
             "party": "D",
             "fec_candidate_id": "H8CA01109",
             "fec_name": "THOMPSON, MIKE MR.",
-            "receipts": 5482944.34,
+            "receipts": 5484944.34,
             "disbursements": 5290993.22,
-            "cash_on_hand": 1401439.52,
+            "cash_on_hand": 1403439.52,
             "debts_owed_by": 15495.24,
             "coverage_through": "2026-10-14",
             "source": "https://www.fec.gov/data/candidate/H8CA01109/?cycle=2026&election_full=true",
@@ -32471,11 +32471,11 @@
             "party": "D",
             "fec_candidate_id": "H6FL19277",
             "fec_name": "ARIAS, VICTOR M.",
-            "receipts": 69983.08,
-            "disbursements": 54565.93,
-            "cash_on_hand": 15417.15,
+            "receipts": 74394.41,
+            "disbursements": 71895.6,
+            "cash_on_hand": 2498.81,
             "debts_owed_by": 36454.0,
-            "coverage_through": "2026-10-14",
+            "coverage_through": "2026-11-23",
             "source": "https://www.fec.gov/data/candidate/H6FL19277/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -32494,7 +32494,7 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -44916,11 +44916,11 @@
             "party": "D",
             "fec_candidate_id": "H4NC12100",
             "fec_name": "ADAMS, ALMA SHEALEY",
-            "receipts": 483374.93,
-            "disbursements": 572787.62,
-            "cash_on_hand": 483996.68,
+            "receipts": 537278.93,
+            "disbursements": 671866.41,
+            "cash_on_hand": 438821.89,
             "debts_owed_by": 0.0,
-            "coverage_through": "2026-10-14",
+            "coverage_through": "2026-11-23",
             "source": "https://www.fec.gov/data/candidate/H4NC12100/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -44939,7 +44939,7 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -46117,11 +46117,11 @@
             "party": "D",
             "fec_candidate_id": "H6NJ04257",
             "fec_name": "PEACE, RACHEL",
-            "receipts": 102316.72,
-            "disbursements": 86494.28,
-            "cash_on_hand": 15822.44,
-            "debts_owed_by": 19611.97,
-            "coverage_through": "2026-10-14",
+            "receipts": 125587.22,
+            "disbursements": 114489.75,
+            "cash_on_hand": 11097.47,
+            "debts_owed_by": 12600.0,
+            "coverage_through": "2026-11-23",
             "source": "https://www.fec.gov/data/candidate/H6NJ04257/?cycle=2026&election_full=true",
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           },
@@ -46140,7 +46140,7 @@
             "bulk_source": "https://www.fec.gov/files/bulk-downloads/2026/webl26.zip"
           }
         ],
-        "coverage_mismatch": false
+        "coverage_mismatch": true
       },
       "change": {
         "dem_probability": 0.0,
@@ -55171,8 +55171,8 @@
             "party": "D",
             "fec_candidate_id": "H6TN07286",
             "fec_name": "COPELAND, DARDEN HUNTER",
-            "receipts": 1257202.49,
-            "disbursements": 1183516.61,
+            "receipts": 1260502.49,
+            "disbursements": 1186816.61,
             "cash_on_hand": 73685.88,
             "debts_owed_by": 165000.0,
             "coverage_through": "2026-10-14",
@@ -62267,7 +62267,7 @@
       "kind": "public Git repository",
       "state": "current",
       "url": "https://github.com/ElectIndex/26_us_forecast_data",
-      "last_success": "2026-11-25T08:30:53.324970Z",
+      "last_success": "2026-11-26T08:14:53.414162Z",
       "note": "Pinned by commit before each model run."
     },
     {
@@ -62300,7 +62300,7 @@
       "kind": "third-party forecast",
       "state": "current",
       "url": "https://insideelections.com/ratings/house/",
-      "last_success": "2026-11-25T08:30:59.601471Z",
+      "last_success": "2026-11-26T08:15:01.258516Z",
       "last_observation": "2026-10-29",
       "note": "470 native race ratings via public API; no model effect."
     },
@@ -62334,7 +62334,7 @@
       "kind": "campaign finance",
       "state": "current",
       "url": "https://www.fec.gov/data/",
-      "last_success": "2026-11-25T08:31:01.083574Z",
+      "last_success": "2026-11-26T08:15:03.576927Z",
       "last_observation": "2026-12-31",
       "note": "Official bulk adapter; 860 candidate summaries matched to production candidates."
     },
@@ -62343,7 +62343,7 @@
       "label": "Campaign signals",
       "kind": "structured election intelligence",
       "state": "current",
-      "last_success": "2026-11-25T08:30:59.601471Z",
+      "last_success": "2026-11-26T08:15:01.258516Z",
       "last_observation": "2026-11-20",
       "note": "120 structured records. Poll inputs are labelled; qualitative/external/FEC context defaults to model effect NONE."
     },
@@ -77735,7 +77735,7 @@
       "gcb_polls.csv",
       "race_polls.csv"
     ],
-    "retrieved_at": "2026-11-25T08:30:53.324970Z",
+    "retrieved_at": "2026-11-26T08:14:53.414162Z",
     "note": "MIDTERM SIGNALS consumes factual/curated election inputs from the upstream repository, not its forecast probabilities. Numerical transformations and simulations are performed here."
   },
   "limitations": [
@@ -77754,12 +77754,25 @@
     "senate_expected_dem_seats": 0.0,
     "generic_ballot_d_minus_r": 0.0,
     "changed_inputs": [],
-    "previous_generated_at": "2026-11-24T22:25:38.917395Z"
+    "previous_generated_at": "2026-11-25T08:30:53.324970Z"
   },
   "briefing": {
     "thirty_second_read": "MIDTERM SIGNALS gives Democrats a 96% probability of House control and a 82% probability of Senate control. The current weighted generic congressional ballot is D+8.4. The House 80% Democratic-seat interval is 222–257; the Senate interval is 50–55."
   },
   "history_summaries": [
+    {
+      "file": "2026-11-26T081453Z.json",
+      "generated_at": "2026-11-26T08:14:53.414162Z",
+      "house": 0.9568,
+      "senate": 0.815,
+      "house_seats": 239.2,
+      "senate_seats": 52.3,
+      "generic_ballot_d_minus_r": 8.4,
+      "model": "MIDTERM SIGNALS baseline-v1.0",
+      "upstream_commit": "24db84ab8ef5dcf68f3e3994a29ded9dccc7840c",
+      "input_sha256": "b696421b6525cb2d13b88842f8b00b5b06787baa9d53bf42e85ea59f8cd34420",
+      "changed_inputs": []
+    },
     {
       "file": "2026-11-25T083053Z.json",
       "generated_at": "2026-11-25T08:30:53.324970Z",
